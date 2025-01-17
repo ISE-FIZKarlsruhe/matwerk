@@ -6,7 +6,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ontology: <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@prefix ontology1: <http://xmlns.com/foaf/0.1/name https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix ontology1: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @base <http://www.w3.org/2002/07/owl#> .
 
 [ rdf:type owl:Ontology
