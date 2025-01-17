@@ -40,6 +40,6 @@ extra_javascript:
 nav:
 - Home: index.md
 - Data Model: data_model.md
-- Ontology: ontology.md
+- Ontology: /matwerk/ontology/
 - Sample Queries: queries.md
 - SPARQL Endpoint: /matwerk/shmarql/
