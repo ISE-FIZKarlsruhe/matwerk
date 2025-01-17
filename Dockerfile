@@ -13,6 +13,6 @@ COPY docs /src/docs
 COPY mkdocs.yml /src/mkdocs.yml
 RUN mkdocs build
 
-RUN rm -r /src/site/ontology
+RUN mkdir /src/site/ontology
 COPY --from=widoco /public /src/site/ontology
 RUN cp /src/site/ontology/index-en.html /src/site/ontology/index.html
