@@ -41,5 +41,7 @@ nav:
 - Home: index.md
 - Data Model: data_model.md
 - Ontology: /matwerk/ontology/
-- Sample Queries: queries.md
+- Sample Queries:
+    - General Queries: general_queries.md
+    - IUC Queries: IUC_related_queries.md
 - SPARQL Endpoint: /matwerk/shmarql/
