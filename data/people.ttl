@@ -7,6 +7,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ontology: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix ontology1: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix msekg: <https://purls.helmholtz-metadaten.de/msekg/> .
+@prefix mwo: <https://nfdi.fiz-karlsruhe.de/mwo/> .
 @base <http://www.w3.org/2002/07/owl#> .
 
 [ rdf:type owl:Ontology
