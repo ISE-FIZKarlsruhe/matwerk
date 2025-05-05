@@ -11,7 +11,7 @@ nav:
   - SPARQL Endpoint: /matwerk/shmarql/
   - Resources:
     - Ontology:
-		  - Photovoltaics Ontology: resource/174532964695599
+      - Photovoltaics Ontology: resource/174532964695599
       - Open Innovation Environment domain ontologies, models module: resource/174532964695598
       - Open Innovation Environment domain ontologies, software products module: resource/174532964695597
       - Open Innovation Environment domain ontologies, materials models module: resource/174532964695596
