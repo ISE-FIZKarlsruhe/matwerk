@@ -2,6 +2,32 @@
 
 ## General questions with the corresponding SPARQL queries
 
+### What are all the types of entities (concepts) in the Chemotion-KG?
+This query retrieves a distinct list of all entity types (concepts) present in the knowledge graph.
+
+```sparql
+SELECT DISTINCT ?Concept
+WHERE {
+  [] a ?Concept
+}
+LIMIT 999
+```
+
+---
+
+### How many entities exist for each concept in the Chemotion-KG?
+This query counts the number of entities associated with each concept and orders them by frequency.
+
+```sparql
+SELECT ?Concept (COUNT(?entity) AS ?count)
+WHERE {
+  ?entity a ?Concept .
+}
+GROUP BY ?Concept
+ORDER BY DESC(?count)
+LIMIT 999
+```
+
 ### Who is working with Researcher "Ebrahim Norouzi" in the same group? Return the ORCID IDs?
 
 ```sparql
