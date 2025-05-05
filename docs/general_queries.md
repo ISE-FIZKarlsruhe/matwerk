@@ -2,7 +2,7 @@
 
 ## General questions with the corresponding SPARQL queries
 
-### What are all the types of entities (concepts) in the Chemotion-KG?
+### What are the entitiy types in the MSE-KG?
 This query retrieves a distinct list of all entity types (concepts) present in the knowledge graph.
 
 ```sparql
@@ -15,7 +15,7 @@ LIMIT 999
 
 ---
 
-### How many entities exist for each concept in the Chemotion-KG?
+### How many entities exist for each concept in the MSE-KG?
 This query counts the number of entities associated with each concept and orders them by frequency.
 
 ```sparql
