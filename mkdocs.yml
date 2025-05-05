@@ -11,4 +11,102 @@ nav:
   - SPARQL Endpoint: /matwerk/shmarql/
   - Resources:
     - Ontology:
+		  - Photovoltaics Ontology: resource/174532964695599
+      - Open Innovation Environment domain ontologies, models module: resource/174532964695598
+      - Open Innovation Environment domain ontologies, software products module: resource/174532964695597
+      - Open Innovation Environment domain ontologies, materials models module: resource/174532964695596
+      - Open Innovation Environment domain ontologies, manufacturing processes module: resource/174532964695595
+      - Open Innovation Environment domain ontologies, characterisation methods: resource/174532964695594
+      - Chemical Information Ontology: resource/174532964695593
+      - Chemical Methods Ontology: resource/174532964695592
+      - Ontology of Scientific Experiments: resource/174532964695591
+      - tribAIn Ontology: resource/174532964695590
+      - Material Science and Engineering Ontology (MSEO): resource/17453296469559
       - NFDI Core Ontology: resource/174532964695587
+      - Material properties ontology: resource/174532964695586
+      - The Open Provenance Model for Workflows: resource/174532964695585
+      - Metadata4Ing Ontology: resource/174532964695584
+      - Materials Vocabulary: resource/174532964695583
+      - Characterisation Methodology Domain Ontology (CHAMEO): resource/174532964695582
+      - Standards-Specific Ontology Standard: resource/174532964695581
+      - Additive Manufacturing Ontology: resource/174532964695580
+      - eNanoMapper ontology: resource/17453296469558
+      - MatoLab Brinell Test Ontology: resource/174532964695579
+      - Building Material Ontology: resource/174532964695578
+      - Virtual Materials Marketplace (VIMMP) Ontology: resource/174532964695577
+      - Ontology for Simulation, Modelling, and Optimization: resource/174532964695576
+      - Smart Applications REFerence: resource/174532964695575
+      - P-PLAN Ontology: resource/174532964695574
+      - Ontology to describe Workflows in Linked Data: resource/174532964695573
+      - Web Annotation Ontology: resource/174532964695572
+      - Quantities, Units, Dimensions, and Types Ontology: resource/174532964695571
+      - NCI Thesaurus OBO Edition: resource/174532964695570
+      - Virtual Materials Marketplace (VIMMP) Ontologies: resource/17453296469557
+      - Ontology for Biomedical Investigations: resource/174532964695569
+      - Quantities, Units, Dimensions, Values: resource/174532964695568
+      - Ontology of units of Measure: resource/174532964695567
+      - Units of measurement ontology: resource/174532964695566
+      - Phenotype And Trait Ontology: resource/174532964695565
+      - Open Energy Ontology: resource/174532964695564
+      - Chemical Entities of Biological Interest: resource/174532964695563
+      - Information Artifact Ontology: resource/174532964695562
+      - EMMO Battery Interface Ontology: resource/174532964695561
+      - Metal Alloy: resource/174532964695560
+      - MatOnto Ontology (MATONTO): resource/17453296469556
+      - Periodic Table Ontology: resource/174532964695559
+      - FreeClassOWL Ontology: resource/174532964695558
+      - Simple Knowledge Organization System (SKOS) version of Materials Data Vocabulary: resource/174532964695557
+      - The Devices, Experimental scaffolds and Biomaterials Ontology: resource/174532964695556
+      - Materials Design Ontology: resource/174532964695554
+      - Dislocation Ontology: resource/174532964695553
+      - Materials And Molecules Basic Ontology: resource/174532964695552
+      - Aditive Manufacturing Ontology (AMONTOLOGY): resource/17453296469555
+      - eNanoMapper: resource/174532964695549
+      - NanoParticle Ontology: resource/174532964695548
+      - Semantic Materials, Manufacturing, and Design: resource/174532964695547
+      - ELSSI-EMD ontology: resource/174532964695546
+      - SLACKS ontology: resource/174532964695545
+      - ONTORULE steel ontology: resource/174532964695544
+      - PREMAP ontology: resource/174532964695543
+      - Plinius ontology: resource/174532964695542
+      - Materials Ontology: resource/174532964695541
+      - Materials Design Ontology (MDO): resource/17453296469554
+      - EMMO Atomistic and Electronic Modelling: resource/174532964695538
+      - EMMO Mappings ontology: resource/174532964695537
+      - EMMO Datamodel ontology: resource/174532964695536
+      - CIF Core Ontology: resource/174532964695535
+      - EMMO Crystallography: resource/174532964695534
+      - Battery Value Chain Ontology Ontology: resource/174532964695533
+      - EMMO General Process Ontology: resource/174532964695532
+      - PROV Ontology: resource/174532964695531
+      - Laser Powder Bed Fusion Ontology: resource/174532964695530
+      - Dislocation Ontology (DISO): resource/17453296469553
+      - Matolab Tensile Test Ontology: resource/174532964695529
+      - Baden WÃ¼rttemberg Material Digital Domain Ontology: resource/174532964695528
+      - Baden WÃ¼rttemberg Material Digital Domain Mid Level Ontology: resource/174532964695527
+      - Common Core Ontology: resource/174532964695526
+      - Material Science and Engineering Ontology: resource/174532964695525
+      - SMART-Protocols: resource/174532964695524
+      - Semantic Sensor Network Ontology: resource/174532964695523
+      - Descriptive Ontology for Linguistic and Cog- nitive Engineering: resource/174532964695522
+      - Suggested Upper Merged Ontology: resource/174532964695521
+      - Basic Formal Ontology: resource/174532964695520
+      - MaterialsMine (MM): resource/17453296469552
+      - EMMO Microstructure: resource/174532964695519
+      - EMMO Mechanical Testing: resource/174532964695518
+      - Elementary Multiperspective Material Ontology: resource/174532964695517
+      - PMD Core Ontology: resource/174532964695516
+      - Characterisation Methodology Domain Ontology (CHAMEO): resource/174532964695514
+      - Chemical Methods Ontology (CHMO): resource/174532964695513
+      - Materials And Molecules Basic Ontology (MAMBO): resource/174532964695512
+      - Reference Dataset Ontology: resource/1745329646955110
+      - NanoParticle Ontology for Cancer Nanotechnology Research (NPO): resource/174532964695511
+      - Material Science Lab Equipment Ontology: resource/1745329646955109
+      - PRovenance Information in MAterials science: resource/1745329646955108
+      - Planar Defects Ontology: resource/1745329646955107
+      - Line Defect Ontology: resource/1745329646955106
+      - Crystallographic Defect Core Ontology: resource/1745329646955105
+      - Point Defects Ontology: resource/1745329646955104
+      - Materials Data Science Ontology: resource/1745329646955100
+      - PMD Core Ontology: resource/174532964695510
+      - Elemental Multiperspective Material Ontology (EMMO): resource/17453296469551
