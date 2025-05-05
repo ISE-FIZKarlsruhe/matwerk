@@ -9,3 +9,6 @@ nav:
       - General Queries: general_queries.md
       - IUC Queries: IUC_related_queries.md
   - SPARQL Endpoint: /matwerk/shmarql/
+  - Resources:
+    - Ontology:
+      - NFDI Core Ontology: resource/174532964695587
