@@ -30,6 +30,7 @@ GROUP BY ?Concept ?label
 ORDER BY DESC(?count)
 LIMIT 999
 ```
+
 ---
 ### What are the ontologies present in the MSE-KG?
 
