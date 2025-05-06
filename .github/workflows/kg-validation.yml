@@ -26,6 +26,10 @@ jobs:
 
 #           java -jar robot.jar reason  --catalog main/catalog-v001.xml --reasoner elk --input main/shapes/shape1-data.ttl --output shape1-data-reasoned.ttl
 
+           # no punning
+           python3 -m pyshacl  -s main/shapes/shape2.ttl matwerk.ttl
+
+           # no orphaned textual entities
            python3 -m pyshacl  -s main/shapes/shape1.ttl matwerk.ttl
 
 
