@@ -12,25 +12,21 @@ jobs:
     - uses: actions/checkout@v3
       with:
         ref: main
-        path: main
+        path: main 
     - name: Validate entire knowledge graph data against SHACL shapes 
       run: |
-
            # retrieve complete KG
            curl -v https://nfdi.fiz-karlsruhe.de/matwerk/sparql --data query='CONSTRUCT {%0A%20 %3Fs %3Fp %3Fo .%0A}%0AWHERE {%0A%20 %3Fs %3Fp %3Fo .%0A}%0A' -H "accept: text/turtle"  > matwerk.ttl
 
            pip install pyshacl
 
-#           curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
-#           #java -jar robot.jar --version
+           #curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
+           #java -jar robot.jar --version
 
-#           java -jar robot.jar reason  --catalog main/catalog-v001.xml --reasoner elk --input main/shapes/shape1-data.ttl --output shape1-data-reasoned.ttl
+           #java -jar robot.jar reason  --catalog main/catalog-v001.xml --reasoner elk --input main/shapes/shape1-data.ttl --output shape1-data-reasoned.ttl
 
            # no punning
            python3 -m pyshacl  -s main/shapes/shape2.ttl matwerk.ttl
 
            # no orphaned textual entities
            python3 -m pyshacl  -s main/shapes/shape1.ttl matwerk.ttl
-
-
-
