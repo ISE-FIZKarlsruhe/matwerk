@@ -1,8 +1,0 @@
-select ?slabel ?s where { 
-  values ?o { <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003> } 
-  ?s ?p ?o .
-  optional {
-    ?s rdfs:label ?slabel .    
-  }
-  
-}

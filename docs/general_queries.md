@@ -2,32 +2,178 @@
 
 ## General questions with the corresponding SPARQL queries
 
-### What are the entitiy types in the MSE-KG?
-This query retrieves a distinct list of all entity types (concepts) present in the knowledge graph.
+### What are the entitiy types (concepts) present in the MSE-KG?
 
 ```sparql
-SELECT DISTINCT ?Concept
+SELECT DISTINCT ?Concept ?label
 WHERE {
   [] a ?Concept
+  optional {
+    ?Concept rdfs:label ?label .    
+  }
 }
 LIMIT 999
 ```
 
 ---
-
 ### How many entities exist for each concept in the MSE-KG?
-This query counts the number of entities associated with each concept and orders them by frequency.
 
 ```sparql
-SELECT ?Concept (COUNT(?entity) AS ?count)
+SELECT ?Concept ?label (COUNT(?entity) AS ?count)
 WHERE {
   ?entity a ?Concept .
+  optional {
+    ?Concept rdfs:label ?label .    
+  }
 }
-GROUP BY ?Concept
+GROUP BY ?Concept ?label
 ORDER BY DESC(?count)
 LIMIT 999
 ```
+---
+### What are the ontologies present in the MSE-KG?
 
+```sparql
+select DISTINCT ?slabel ?s where { 
+  # Selects distinct ontology labels (?slabel) and their corresponding ontology IRIs (?s)
+
+  ?s a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023> .
+  # ?s is an instance of the class NFDI_0000023 (representing an ontology in the MSE-KG)
+
+  ?s <http://purl.obolibrary.org/obo/IAO_0000235> ?label .
+  # The ontology ?s has an annotation or reference (?label) via the IAO_0000235 property (e.g., 'is about')
+
+  ?label a <http://purl.obolibrary.org/obo/IAO_0000590> .
+  # The linked resource ?label is an instance of IAO_0000590 (typically used to represent ontology terms)
+
+  ?label rdfs:label ?slabel . 
+  # Retrieves the human-readable label (?slabel) of the ontology term
+}
+```
+
+---
+### What are the softwares present in the MSE-KG?
+
+```sparql
+select ?slabel ?s where { 
+  # Selects the label (?slabel) and IRI (?s) of software-related resources
+
+  values ?o { 
+    # Defines a list of ontology terms (?o) that are relevant to software in the MSE-KG
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198> 
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001045>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001046>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001048>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000218>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000140>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010039>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010040>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010041>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000222>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001049>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001044>
+  }
+
+  ?s ?p ?o .
+  # Matches any triple where the object ?o is one of the listed software-related ontology terms
+
+  optional {
+    ?s rdfs:label ?slabel .
+    # Tries to retrieve a human-readable label (?slabel) for the subject ?s, if available
+  }
+}
+
+```
+
+---
+### What are the services present in the MSE-KG?
+
+```sparql
+select DISTINCT ?slabel ?s 
+where { 
+  # Selects distinct labels (?slabel) and IRIs (?s) for services in the MSE-KG
+
+  ?s a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> .
+  # ?s is an instance of NFDI_0000232, which represents a 'service'
+
+  ?s <http://purl.obolibrary.org/obo/IAO_0000235> ?label .
+  # The service ?s is linked to a resource ?label via the IAO_0000235 property (typically 'is about' or similar)
+
+  ?label <http://purl.obolibrary.org/obo/OBI_0002135> ?slabel .
+  # The linked resource ?label has a label (?slabel) provided via the OBI_0002135 property (e.g., 'has output')
+
+}
+```
+
+---
+### What are the organizations present in the MSE-KG?
+
+```sparql
+select ?slabel ?s where { 
+  # Selects the label (?slabel) and IRI (?s) of organization-related resources
+
+  values ?o { 
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003> 
+    # NFDI_0000003 represents the class for 'organization' in the ontology
+  } 
+
+  ?s ?p ?o .
+  # Matches any triple where the object ?o is the organization class,
+  # and binds the subject (?s) that is related to it via some property (?p)
+
+  optional {
+    ?s rdfs:label ?slabel .    
+    # Optionally retrieves a human-readable label (?slabel) for the subject ?s
+  }
+}
+```
+
+---
+### What are the events present in the MSE-KG?
+
+```sparql
+select ?slabel ?s where { 
+  # Selects the label (?slabel) and IRI (?s) of event-related resources
+
+  values ?o { 
+    # Defines a set of ontology terms (?o) that represent various types of events
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010020>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010023>
+    <http://purls.helmholtz-metadaten.de/mwo/MWO_0001000>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010021>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010022>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001043>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010027>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010025>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010024>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010026>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010019>
+  }
+
+  ?s ?p ?o .
+  # Matches any resource ?s related to one of the listed event classes (?o) via some property ?p
+
+  ?s <http://purl.obolibrary.org/obo/IAO_0000235> ?label .
+  # The event resource ?s is linked to a related entity ?label via the IAO_0000235 property (e.g., 'is about')
+
+  ?label a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
+  # The linked entity ?label is typed as NFDI_0001019, indicating it's a valid representation (e.g., of an event descriptor)
+
+  ?label <http://purl.obolibrary.org/obo/OBI_0002135> ?slabel .
+  # Retrieves the human-readable label (?slabel) of the event via the OBI_0002135 property (e.g., 'has output')
+}
+```
+
+---
+### What are the - present in the MSE-KG?
+
+```sparql
+
+```
+
+---
 ### Who is working with Researcher "Ebrahim Norouzi" in the same group? Return the ORCID IDs?
 
 ```sparql

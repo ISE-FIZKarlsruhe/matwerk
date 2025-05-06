@@ -7,7 +7,8 @@ The **MSE Knowledge Graph v2.0** is an updated version that is BFO-compliant, al
 
 ## Navigation
 
-- [SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/shmarql/){:target="_blank"}
+- [SHMARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/shmarql/){:target="_blank"}
+- [SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql){:target="_blank"}
 - [The MatWerk ontology (MWO)](https://ise-fizkarlsruhe.github.io/mwo/){:target="_blank"}
 - [The NFDI Core Ontology (NFDIcore)](https://ise-fizkarlsruhe.github.io/nfdicore/){:target="_blank"}
 - [Data collection spreadsheets](https://drive.google.com/file/d/1GS5vKDWDPXeNWJX6UMZk78gq0gaVQ2RW/view){:target="_blank"}
