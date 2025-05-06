@@ -168,6 +168,19 @@ select ?slabel ?s where {
 
 ---
 ### What are the - present in the MSE-KG?
+TODO:
+people
+datasets
+data portals
+instruments
+larg scale facilities
+metadata
+ontologies
+collabrations
+publications
+MatWerk-TA
+MatWerk-IUC
+MatWerk-PP
 
 ```sparql
 
