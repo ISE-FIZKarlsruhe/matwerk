@@ -1,0 +1,45 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <http://schema.org/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wds: <http://www.wikidata.org/entity/statement/>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dbr: <http://dbpedia.org/resource/>
+PREFIX rico: <https://www.ica.org/standards/RiC/ontology#>
+PREFIX geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX virtrdfdata: <http://www.openlinksw.com/virtrdf-data-formats#>
+PREFIX virtrdf: <http://www.openlinksw.com/schemas/virtrdf#>
+PREFIX shmarql: <https://shmarql.com/>
+PREFIX cto: <https://nfdi4culture.de/ontology#>
+PREFIX nfdi4culture: <https://nfdi4culture.de/id/>
+PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
+PREFIX factgrid: <https://database.factgrid.de/entity/>
+
+
+select ?slabel ?s where { 
+  values ?o { <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198> 
+              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121>
+              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001045>
+              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001046>
+              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001048>
+              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000218>
+              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000140>
+              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010039>
+              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010040>
+              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010041>
+              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000222>
+              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001049>
+              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001044>} 
+  ?s ?p ?o .
+  optional {
+    ?s rdfs:label ?slabel .    
+  }
+  
+} limit 999

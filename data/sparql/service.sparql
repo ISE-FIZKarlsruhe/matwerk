@@ -1,0 +1,6 @@
+select DISTINCT ?slabel ?s 
+where { 
+  ?s a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> .
+  ?s <http://purl.obolibrary.org/obo/IAO_0000235> ?label .
+  ?label <http://purl.obolibrary.org/obo/OBI_0002135> ?slabel .
+} 
