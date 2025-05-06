@@ -1,5 +1,7 @@
 # Welcome to the Materials Science and Engineering Knowledge Graph (MSE KG)
 Last update: 06.05.2025
+Number of entities: 9608
+Number of triples: 43534
 
 ## Introduction
 
