@@ -1,3 +1,5 @@
+[![shacl validation](https://github.com/ISE-FIZKarlsruhe/matwerk/actions/workflows/kg-validation.yml/badge.svg)](https://github.com/ISE-FIZKarlsruhe/matwerk/actions/workflows/kg-validation.yml)
+
 # matwerk
 
 Matwerk
