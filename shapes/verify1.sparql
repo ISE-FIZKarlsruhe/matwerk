@@ -1,0 +1,17 @@
+##### OCRID must be IRI, not literal
+#  
+#  we don't what ORCIDs as literals used together with our resources
+#
+#  OCDIS always should be IRIs 
+# 
+#  Remark: some other ontologies or KGs are using ORCIDS as literals, we do not cover theses cases. 
+#  That's why we filter ?s to begin with our namespace.
+#
+
+SELECT ?s ?p ?o "Literals should not contain sole ORCID (OCRID must be IRI, not literal)" WHERE {
+  ?s ?p ?o .
+  FILTER regex(str(?s),"^https://purls.helmholtz-metadaten.de/msekg") .
+  FILTER isLiteral(?o) .
+  FILTER regex(str(?o), "^https://orcid.org/\\d{4}-\\d{4}-\\d{4}-\\d{3}[0-9X]{1}$")
+}
+
