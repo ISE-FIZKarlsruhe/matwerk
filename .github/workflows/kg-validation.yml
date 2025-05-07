@@ -23,7 +23,7 @@ jobs:
            java -jar robot.jar --version
 
            # OCRID must be IRI, not literal
-           java -jar robot verify --input matwerk.ttl --queries main/shapes/verify1.sparql
+           java -jar robot.jar verify --input matwerk.ttl --queries main/shapes/verify1.sparql
 
 
 
