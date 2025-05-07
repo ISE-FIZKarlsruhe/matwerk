@@ -18,15 +18,7 @@ jobs:
            # retrieve complete KG
            curl -v https://nfdi.fiz-karlsruhe.de/matwerk/sparql --data query='CONSTRUCT {%0A%20 %3Fs %3Fp %3Fo .%0A}%0AWHERE {%0A%20 %3Fs %3Fp %3Fo .%0A}%0A' -H "accept: text/turtle"  > matwerk.ttl
 
-           # for SPARQL based verification we need to retrieve robot.jar
-           curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
-           java -jar robot.jar --version
-
-           # OCRID must be IRI, not literal
-           java -jar robot.jar verify --input matwerk.ttl --queries main/shapes/verify1.sparql
-
-
-
+           ########################################################
            # for SHACL based validation we need to install pyshacl
            pip install pyshacl
 
@@ -36,4 +28,13 @@ jobs:
            # no orphaned textual entities
            python3 -m pyshacl  -s main/shapes/shape1.ttl matwerk.ttl
 
+
+
+           ########################################################
+           # for SPARQL based verification we need to retrieve robot.jar
+           curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
+           #java -jar robot.jar --version
+
+           # OCRID must be IRI, not literal
+           java -jar robot.jar verify --input matwerk.ttl --queries main/shapes/verify1.sparql
 
