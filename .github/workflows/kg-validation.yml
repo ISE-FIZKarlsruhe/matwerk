@@ -21,7 +21,13 @@ jobs:
            ########################################################
            # for SHACL based validation we need to install pyshacl
            pip install pyshacl
+           
+           # no roles without realizations
+           python3 -m pyshacl  -s main/shapes/shape4.ttl matwerk.ttl
 
+           # no roles without bearers
+           python3 -m pyshacl  -s main/shapes/shape3.ttl matwerk.ttl
+          
            # no punning
            python3 -m pyshacl  -s main/shapes/shape2.ttl matwerk.ttl
 
