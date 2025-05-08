@@ -1,15 +1,54 @@
 [![shacl validation](https://github.com/ISE-FIZKarlsruhe/matwerk/actions/workflows/kg-validation.yml/badge.svg)](https://github.com/ISE-FIZKarlsruhe/matwerk/actions/workflows/kg-validation.yml)
 
-# matwerk
+# MatWerk Knowledge Graph
 
-Matwerk
+This repository contains the ontology and data that form the **MatWerk Knowledge Graph** for [NFDI-MatWerk](https://nfdi-matwerk.de/), a consortium of the National Research Data Infrastructure (NFDI) focused on materials science and engineering.
 
-For testing, you can run:
+---
+
+## 🔍 Live Deployment
+
+You can explore the deployed version of the knowledge graph here:
+
+👉 [https://nfdi.fiz-karlsruhe.de/matwerk/](https://nfdi.fiz-karlsruhe.de/matwerk/)
+
+---
+
+## 🚀 Quick Start (Test Environment)
+
+To run a local test instance using Docker:
 
 ```shell
-docker run --rm -it -p 8000:8000 -e DEBUG=1  \
-    -e MOUNT=/matwerk/ -e DATA_LOAD_PATHS=/data/ -e PREFIXES_FILEPATH=/data/people.ttl \
-    ghcr.io/ise-fizkarlsruhe/matwerk:latest
+docker run --rm -it -p 8000:8000 -e DEBUG=1      -e MOUNT=/matwerk/ -e DATA_LOAD_PATHS=/data/ -e PREFIXES_FILEPATH=/data/all.ttl     ghcr.io/ise-fizkarlsruhe/matwerk:latest
 ```
 
-Now you can view the test site on: [https://localhost:8000/matwerk/](https://localhost:8000/matwerk/)
+After starting, you can access it at:
+
+🔗 [https://localhost:8000/matwerk/](https://localhost:8000/matwerk/)
+
+---
+
+## 📁 Directory Structure
+
+```bash
+📦matwerk/
+ ┣ 📂data/             # Combined TTL file for local testing
+ ┣ 📂shapes/           # SHACL shapes
+ ┣ 📄Dockerfile        # Docker configuration (if building locally)
+ ┗ 📄README.md         # This file
+```
+
+---
+
+## ⚙️ Technologies Used
+
+- **ROBOT** for ontology templating and management
+- **SHACL** for validation of instance data
+- **BFO**, **IAO**, and NFDI Ontologies for modeling
+- **SHMARQL** for serving and querying the data (via Docker)
+
+---
+
+## 📫 Contact
+
+For questions or support, please create issues or contact Ebrahim Norouzi `ebrahim.norouzi@fiz-karlsruhe.de`.
