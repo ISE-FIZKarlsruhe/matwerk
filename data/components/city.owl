@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000235 -->
+
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000235"/>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007 -->
+
+    <ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000303 -->
+
+    <Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000303"/>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106 -->
+
+    <Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393152291 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152291">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742192"/>
+        <rdfs:label>Stuttgart_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513931522910 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522910">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421911"/>
+        <rdfs:label>Freiburg_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513931522911 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522911">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421912"/>
+        <rdfs:label>Karlsruhe_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513931522912 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522912">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421913"/>
+        <rdfs:label>Halle (Saale)_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513931522913 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522913">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421914"/>
+        <rdfs:label>Kaiserslautern_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513931522914 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522914">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421915"/>
+        <rdfs:label>Bremen_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513931522915 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522915">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421916"/>
+        <rdfs:label>Braunschweig_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513931522916 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522916">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421917"/>
+        <rdfs:label>Jülich_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513931522917 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522917">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421918"/>
+        <rdfs:label>Saarbrücken_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513931522918 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522918">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421919"/>
+        <rdfs:label>Dresden_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513931522919 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522919">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742191"/>
+        <rdfs:label>Dusseldorf_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393152292 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152292">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742193"/>
+        <rdfs:label>Berlin_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393152293 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152293">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742194"/>
+        <rdfs:label>Kiel_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393152294 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152294">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742195"/>
+        <rdfs:label>Eggenstein-Leopoldshafen_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393152295 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152295">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742196"/>
+        <rdfs:label>Aachen_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393152296 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152296">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742197"/>
+        <rdfs:label>Bochum_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393152297 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152297">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742198"/>
+        <rdfs:label>Paderborn_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393152298 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152298">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742199"/>
+        <rdfs:label>Darmstadt_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393152299 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152299">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421910"/>
+        <rdfs:label>Clausthal-Zellerfeld_</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393742191 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742191">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522919"/>
+        <rdfs:label>Dusseldorf</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513937421910 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421910">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152299"/>
+        <rdfs:label>Clausthal-Zellerfeld</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513937421911 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421911">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522910"/>
+        <rdfs:label>Freiburg</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513937421912 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421912">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522911"/>
+        <rdfs:label>Karlsruhe</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513937421913 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421913">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522912"/>
+        <rdfs:label>Halle (Saale)</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513937421914 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421914">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522913"/>
+        <rdfs:label>Kaiserslautern</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513937421915 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421915">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522914"/>
+        <rdfs:label>Bremen</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513937421916 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421916">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522915"/>
+        <rdfs:label>Braunschweig</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513937421917 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421917">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522916"/>
+        <rdfs:label>Jülich</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513937421918 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421918">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522917"/>
+        <rdfs:label>Saarbrücken</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513937421919 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421919">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522918"/>
+        <rdfs:label>Dresden</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393742192 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742192">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152291"/>
+        <rdfs:label>Stuttgart</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393742193 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742193">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152292"/>
+        <rdfs:label>Berlin</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393742194 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742194">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152293"/>
+        <rdfs:label>Kiel</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393742195 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742195">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152294"/>
+        <rdfs:label>Eggenstein-Leopoldshafen</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393742196 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742196">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152295"/>
+        <rdfs:label>Aachen</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393742197 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742197">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152296"/>
+        <rdfs:label>Bochum</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393742198 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742198">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152297"/>
+        <rdfs:label>Paderborn</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451393742199 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742199">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152298"/>
+        <rdfs:label>Darmstadt</rdfs:label>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+

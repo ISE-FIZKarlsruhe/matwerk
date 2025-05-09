@@ -1,0 +1,892 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000056 -->
+
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000056"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000235 -->
+
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000235"/>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142 -->
+
+    <ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142"/>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194 -->
+
+    <ObjectProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000194"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054 -->
+
+    <Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451558370462 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451558370462"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451558370464 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451558370464"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174515632127111 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515632127111"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174516196088841 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516196088841"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451645451332 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451645451332"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453296656311 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453296656311">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994277"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453298765741"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453302652831"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453306512851"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453315869421"/>
+        <ontology:NFDI_0000142 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451558370462"/>
+        <ontology:NFDI_0000194 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453319483821"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532966563110 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532966563110">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994286"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532987657410"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533026528310"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829838"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532966563111 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532966563111">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994287"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532987657411"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533026528311"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829839"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532966563112 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532966563112">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994288"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532987657412"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533026528312"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533078298310"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532966563113 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532966563113">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994289"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532987657413"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533026528313"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453306512855"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829841"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453315869424"/>
+        <ontology:NFDI_0000142 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174516196088841"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532966563114 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532966563114">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994290"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532987657414"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533026528314"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453306512856"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532966563115 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532966563115">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994291"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532987657415"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533026528315"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829842"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532966563116 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532966563116">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994292"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532987657416"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533026528316"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829843"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532966563117 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532966563117">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994293"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532987657417"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533026528317"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829844"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532966563118 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532966563118">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994294"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532987657418"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533026528318"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829845"/>
+        <ontology:NFDI_0000194 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17467133417161"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532966563119 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532966563119">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994295"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174515632127111"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532987657419"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533026528319"/>
+        <ontology:NFDI_0000142 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451558370464"/>
+        <ontology:NFDI_0000194 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451645451332"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453296656312 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453296656312">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994278"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453298765742"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453302652832"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453306512852"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829831"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453315869422"/>
+        <ontology:NFDI_0000142 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453313402244"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532966563120 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532966563120">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994296"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532987657420"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533026528320"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453306512858"/>
+        <ontology:NFDI_0000194 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451645451332"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453296656313 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453296656313">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994279"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453298765743"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453302652833"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829832"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453296656314 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453296656314">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994280"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453298765744"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453302652834"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829833"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453315869423"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453296656315 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453296656315">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994281"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453298765745"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453302652835"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829834"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453296656316 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453296656316">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994282"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453298765746"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453302652836"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829835"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453296656317 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453296656317">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994283"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453298765747"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453302652837"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453307829836"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453296656318 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453296656318">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994284"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453298765748"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453302652838"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453306512853"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453296656319 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453296656319">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117452994285"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453298765749"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453302652839"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453306512854"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453298765741 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453298765741"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657410 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657410"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657411 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657411"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657412 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657412"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657413 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657413"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657414 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657414"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657415 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657415"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657416 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657416"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657417 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657417"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657418 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657418"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657419 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657419"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453298765742 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453298765742"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657420 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657420"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453298765743 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453298765743"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453298765744 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453298765744"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453298765745 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453298765745"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453298765746 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453298765746"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453298765747 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453298765747"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453298765748 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453298765748"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453298765749 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453298765749"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453302652831 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453302652831"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528310 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528310"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528311 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528311"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528312 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528312"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528313 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528313"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528314 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528314"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528315 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528315"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528316 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528316"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528317 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528317"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528318 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528318"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528319 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528319"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453302652832 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453302652832"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528320 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528320"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453302652833 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453302652833"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453302652834 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453302652834"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453302652835 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453302652835"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453302652836 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453302652836"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453302652837 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453302652837"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453302652838 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453302652838"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453302652839 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453302652839"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453306512851 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453306512851"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453306512852 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453306512852"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453306512853 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453306512853"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453306512854 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453306512854"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453306512855 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453306512855"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453306512856 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453306512856"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453306512858 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453306512858"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829831 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829831"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174533078298310 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533078298310"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829832 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829832"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829833 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829833"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829834 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829834"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829835 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829835"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829836 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829836"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829838 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829838"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829839 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829839"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829841 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829841"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829842 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829842"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829843 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829843"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829844 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829844"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453307829845 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829845"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453313402244 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453313402244"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453315869421 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453315869421"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453315869422 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453315869422"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453315869423 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453315869423"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453315869424 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453315869424"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453319483821 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453319483821"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994277 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994277"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994278 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994278"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994279 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994279"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994280 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994280"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994281 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994281"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994282 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994282"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994283 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994283"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994284 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994284"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994285 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994285"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994286 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994286"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994287 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994287"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994288 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994288"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994289 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994289"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994290 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994290"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994291 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994291"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994292 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994292"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994293 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994293"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994294 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994294"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994295 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994295"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/1746117452994296 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746117452994296"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17467133417161 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467133417161"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
+
