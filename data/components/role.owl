@@ -230,6 +230,12 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513943908630 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513943908630"/>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451394390864 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451394390864"/>
@@ -239,6 +245,12 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174513943908640 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513943908640"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513943908642 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513943908642"/>
     
 
 
@@ -22092,6 +22104,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677596209424">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118"/>
         <obo:BFO_0000054 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174677574236224"/>
+        <obo:BFO_0000197 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908617"/>
         <rdfs:label>PersonRole 24</rdfs:label>
     </NamedIndividual>
     
@@ -22548,6 +22561,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467759620948">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118"/>
         <obo:BFO_0000054 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17467757423628"/>
+        <obo:BFO_0000197 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908630"/>
         <rdfs:label>PersonRole 8</rdfs:label>
     </NamedIndividual>
     
@@ -22558,6 +22572,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467759620949">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118"/>
         <obo:BFO_0000054 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17467757423629"/>
+        <obo:BFO_0000197 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908642"/>
         <rdfs:label>PersonRole 9</rdfs:label>
     </NamedIndividual>
     

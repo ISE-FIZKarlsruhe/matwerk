@@ -34,6 +34,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000063 -->
+
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000063"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000235 -->
 
     <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000235"/>
@@ -51,12 +57,6 @@
     
 
 
-    <!-- http://purls.helmholtz-metadaten.de/mwo/MWO_0001019 -->
-
-    <Class rdf:about="http://purls.helmholtz-metadaten.de/mwo/MWO_0001019"/>
-    
-
-
     <!-- http://purls.helmholtz-metadaten.de/mwo/MWO_0001022 -->
 
     <Class rdf:about="http://purls.helmholtz-metadaten.de/mwo/MWO_0001022"/>
@@ -69,6 +69,12 @@
     
 
 
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002 -->
+
+    <Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -77,6 +83,34 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purls.helmholtz-metadaten.de/mwo/MWO_0001019 -->
+
+    <NamedIndividual rdf:about="http://purls.helmholtz-metadaten.de/mwo/MWO_0001019">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454035079851"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540350798510"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540350798511"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540350798512"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540350798513"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540350798514"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540350798515"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540350798516"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540350798517"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540350798518"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540350798519"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454035079852"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540350798520"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454035079853"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454035079854"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454035079855"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454035079856"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454035079857"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454035079858"/>
+        <obo:BFO_0000063 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454035079859"/>
+    </NamedIndividual>
     
 
 

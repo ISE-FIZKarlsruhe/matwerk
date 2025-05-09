@@ -241,6 +241,12 @@
     
 
 
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040 -->
+
+    <Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040"/>
+    
+
+
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001043 -->
 
     <Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001043">
@@ -423,15 +429,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040 -->
-
-    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040">
-        <ontology:NFDI_0001007 rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040"/>
-        <rdfs:label>Jun. Prof. Dr.</rdfs:label>
-    </NamedIndividual>
     
 
 
@@ -2135,6 +2132,16 @@
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001048"/>
         <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17467208847629"/>
         <rdfs:label>Materials Microstructural</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17467927655511 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467927655511">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040"/>
+        <ontology:NFDI_0001007 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17467927655511"/>
+        <rdfs:label>Jun. Prof. Dr.</rdfs:label>
     </NamedIndividual>
 </rdf:RDF>
 

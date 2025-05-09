@@ -45,15 +45,15 @@
     
 
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102 -->
+    <!-- http://purls.helmholtz-metadaten.de/mwo/MWO_0001022 -->
 
-    <Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
+    <Class rdf:about="http://purls.helmholtz-metadaten.de/mwo/MWO_0001022"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17458299010501 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102 -->
 
-    <Class rdf:about="https://purls.helmholtz-metadaten.de/msekg/17458299010501"/>
+    <Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
     
 
 
@@ -3540,6 +3540,15 @@
         <obo:BFO_0000196 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746117749608304"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746359141244205"/>
         <rdfs:label>ContactPoint 305</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17458299010501 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17458299010501">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001022"/>
+        <obo:BFO_0000196 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17466859510761"/>
     </NamedIndividual>
     
 

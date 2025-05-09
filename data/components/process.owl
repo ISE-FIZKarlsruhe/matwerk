@@ -243,6 +243,12 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513943908642 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513943908642"/>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/174513943908643 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513943908643"/>
@@ -16140,6 +16146,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236224">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
         <obo:BFO_0000055 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174677596209424"/>
+        <obo:BFO_0000057 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908617"/>
         <rdfs:label>matwerk project process 24</rdfs:label>
     </NamedIndividual>
     
@@ -16596,6 +16603,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423628">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
         <obo:BFO_0000055 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17467759620948"/>
+        <obo:BFO_0000057 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908630"/>
         <rdfs:label>matwerk project process 8</rdfs:label>
     </NamedIndividual>
     
@@ -16606,6 +16614,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423629">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
         <obo:BFO_0000055 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17467759620949"/>
+        <obo:BFO_0000057 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908642"/>
         <rdfs:label>matwerk project process 9</rdfs:label>
     </NamedIndividual>
     
