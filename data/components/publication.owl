@@ -2749,7 +2749,7 @@
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532522931930"/>
         <ontology:NFDI_0000191 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174635732584496"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174516779743824"/>
-        <rdfs:label>Supplemental material for &quot;Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces&quot;, Results in Surfaces and Interfaces, 2022, DOI: 10.5281/zenodo.10850978 (2024).</rdfs:label>
+        <rdfs:label>Supplemental material for &quot;Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces&quot;, Results in Surfaces and Interfaces, 2022, DOI: https://zenodo.org/records/10850978 (2024).</rdfs:label>
     </NamedIndividual>
     
 

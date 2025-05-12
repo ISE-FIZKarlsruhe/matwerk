@@ -1,7 +1,7 @@
 #	TYPE	label	Value	temporal region	denoted by	has file format	has acronym	has url	is quality measured as	has measurement datum	is about	Domain	Range
 ID	TYPE	A rdfs:label	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007	I http://purl.obolibrary.org/obo/BFO_0000199	I http://purl.obolibrary.org/obo/IAO_0000235	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132	A https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010015	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008	I http://purl.obolibrary.org/obo/IAO_0000417	I http://purls.helmholtz-metadaten.de/mwo/MWO_0001116	I http://purl.obolibrary.org/obo/IAO_0000136	DOMAIN	RANGE
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007	data property												
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008	data property												http://www.w3.org/2001/XMLSchema#anyURI
+https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008	data property												xsd:anyURI
 https://purls.helmholtz-metadaten.de/msekg/17451391861361	http://purl.obolibrary.org/obo/IAO_0020016	Sarath	Sarath										
 https://purls.helmholtz-metadaten.de/msekg/17451398105881	http://purl.obolibrary.org/obo/IAO_0020016	Angelika	Angelika										
 https://purls.helmholtz-metadaten.de/msekg/17451391861362	http://purl.obolibrary.org/obo/IAO_0020016	Felix	Felix										
@@ -335,7 +335,7 @@ https://purls.helmholtz-metadaten.de/msekg/174513925571122	https://nfdi.fiz-karl
 https://purls.helmholtz-metadaten.de/msekg/174513925571123	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001042	1277	1277										
 https://purls.helmholtz-metadaten.de/msekg/17451392697731	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 1						https://www.mpie.de					
 https://purls.helmholtz-metadaten.de/msekg/17451392697732	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 2						https://www.mib.uni-stuttgart.de/dae/					
-https://purls.helmholtz-metadaten.de/msekg/17451392697733	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 3						www.bam.de					
+https://purls.helmholtz-metadaten.de/msekg/17451392697733	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 3						https://www.bam.de					
 https://purls.helmholtz-metadaten.de/msekg/17451392697734	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 4						https://www.tf.uni-kiel.de/matwis/instmat/de					
 https://purls.helmholtz-metadaten.de/msekg/17451392697735	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 5						https://www.fiz-karlsruhe.de/en					
 https://purls.helmholtz-metadaten.de/msekg/17451392697736	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 6						https://www.fz-juelich.de/de/ias/ias-9					
@@ -568,27 +568,27 @@ https://purls.helmholtz-metadaten.de/msekg/17451563212715	https://nfdi.fiz-karls
 https://purls.helmholtz-metadaten.de/msekg/17451563212716	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 33						https://doi.org/10.5281/zenodo.6787085					
 https://purls.helmholtz-metadaten.de/msekg/17451563212717	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 34						https://doi.org/10.5281/zenodo.6778336					
 https://purls.helmholtz-metadaten.de/msekg/17451563212718	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 35						https://doi.org/10.5281/zenodo.7625259					
-https://purls.helmholtz-metadaten.de/msekg/17451563212719	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 36						https://zenodo.org/records/7764161					
+https://purls.helmholtz-metadaten.de/msekg/17451563212719	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 36						https://https://zenodo.org//records/7764161					
 https://purls.helmholtz-metadaten.de/msekg/174515632127110	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 37						http://hdl.handle.net/21.11102/7f78d0ed-4855-4fdf-b764-0bea725f8821					
 https://purls.helmholtz-metadaten.de/msekg/174515632127111	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 38						https://git.rwth-aachen.de/nfdi-matwerk/ta-wsd/user-journey-indentation/-/tree/main/Indentation					
 https://purls.helmholtz-metadaten.de/msekg/174515632127112	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 39						https://doi.org/10.5281/zenodo.13937987					
-https://purls.helmholtz-metadaten.de/msekg/174515632127113	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 40						https://zenodo.org/records/10663833					
-https://purls.helmholtz-metadaten.de/msekg/174515632127114	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 41						https://zenodo.org/records/10043614					
+https://purls.helmholtz-metadaten.de/msekg/174515632127113	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 40						https://https://zenodo.org//records/10663833					
+https://purls.helmholtz-metadaten.de/msekg/174515632127114	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 41						https://https://zenodo.org//records/10043614					
 https://purls.helmholtz-metadaten.de/msekg/174515632127115	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 42						http://hdl.handle.net/21.11102/4781e163-229d-4a2a-91c2-75e107c21730					
-https://purls.helmholtz-metadaten.de/msekg/174515632127116	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 43						https://zenodo.org/records/10850978					
-https://purls.helmholtz-metadaten.de/msekg/174515632127117	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 44						https://zenodo.org/records/10850991					
-https://purls.helmholtz-metadaten.de/msekg/174515632127118	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 45						https://zenodo.org/records/11353699					
-https://purls.helmholtz-metadaten.de/msekg/174515632127119	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 46						https://zenodo.org/records/11224127					
+https://purls.helmholtz-metadaten.de/msekg/174515632127116	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 43						https://https://zenodo.org//records/10850978					
+https://purls.helmholtz-metadaten.de/msekg/174515632127117	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 44						https://https://zenodo.org//records/10850991					
+https://purls.helmholtz-metadaten.de/msekg/174515632127118	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 45						https://https://zenodo.org//records/11353699					
+https://purls.helmholtz-metadaten.de/msekg/174515632127119	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 46						https://https://zenodo.org//records/11224127					
 https://purls.helmholtz-metadaten.de/msekg/174515632127120	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 47						https://doi.org/10.18419/DARUS-3366					
-https://purls.helmholtz-metadaten.de/msekg/174515632127121	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 48						https://zenodo.org/records/4047774					
-https://purls.helmholtz-metadaten.de/msekg/174515632127122	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 49						https://zenodo.org/records/5000611					
+https://purls.helmholtz-metadaten.de/msekg/174515632127121	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 48						https://https://zenodo.org//records/4047774					
+https://purls.helmholtz-metadaten.de/msekg/174515632127122	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037	url 49						https://https://zenodo.org//records/5000611					
 https://purls.helmholtz-metadaten.de/msekg/17451567752591	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 50						https://doi.org/10.1016/j.msea.2019.138295					
 https://purls.helmholtz-metadaten.de/msekg/17451567752592	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 51						https://doi.org/10.1098/rspa.2020.0568					
 https://purls.helmholtz-metadaten.de/msekg/17451567752593	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 52						https://doi.org/10.1002/nme.6869					
 https://purls.helmholtz-metadaten.de/msekg/17451567752594	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 53						https://doi.org/10.3389/fmats.2019.00075					
 https://purls.helmholtz-metadaten.de/msekg/17451567752595	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 54						https://doi.org/10.1016/j.msea.2018.01.033; https://doi.org/10.1007/s10853-020-05740-x					
 https://purls.helmholtz-metadaten.de/msekg/17451567752596	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 55						https://doi.org/10.5281/zenodo.7625259					
-https://purls.helmholtz-metadaten.de/msekg/17451567752597	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 56						10.5281/zenodo.11668375					
+https://purls.helmholtz-metadaten.de/msekg/17451567752597	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 56						https://zenodo.org/records/13820070					
 https://purls.helmholtz-metadaten.de/msekg/17451567752598	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 57						https://arxiv.org/abs/2302.12545					
 https://purls.helmholtz-metadaten.de/msekg/17451594912141	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000	Calphy	Calphy										
 https://purls.helmholtz-metadaten.de/msekg/17451594912142	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000	Melting temperature computational workflow	Melting temperature computational workflow										
@@ -1063,7 +1063,7 @@ https://purls.helmholtz-metadaten.de/msekg/174516157165737	https://nfdi.fiz-karl
 https://purls.helmholtz-metadaten.de/msekg/174516157165738	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 95						http://micro.stanford.edu/MDpp					
 https://purls.helmholtz-metadaten.de/msekg/174516157165739	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 96						https://thermocalc.com/					
 https://purls.helmholtz-metadaten.de/msekg/174516157165740	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 97						https://openphase-solutions.com/					
-https://purls.helmholtz-metadaten.de/msekg/174516157165741	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 98						www.mooseframework.org					
+https://purls.helmholtz-metadaten.de/msekg/174516157165741	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 98						https://mooseframework.inl.gov/					
 https://purls.helmholtz-metadaten.de/msekg/174516157165742	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 99						https://www.3ds.com/products-services/simulia/products/abaqus/					
 https://purls.helmholtz-metadaten.de/msekg/174516157165743	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 100						http://www.fenicsProject collabration.org/					
 https://purls.helmholtz-metadaten.de/msekg/174516157165744	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 101						https://damask.mpie.de/					
@@ -1613,7 +1613,7 @@ https://purls.helmholtz-metadaten.de/msekg/17451677974381	https://nfdi.fiz-karls
 https://purls.helmholtz-metadaten.de/msekg/17451677974382	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 423						https://doi.org/10.5281/zenodo.11668376					
 https://purls.helmholtz-metadaten.de/msekg/17451677974383	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 424						https://doi.org/10.5281/zenodo.10043614					
 https://purls.helmholtz-metadaten.de/msekg/17451677974384	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 425						https://events.fairmat-nfdi.Europe/event/9/abstracts/63/					
-https://purls.helmholtz-metadaten.de/msekg/17451677974385	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 426						https://zenodo.org/records/10600183					
+https://purls.helmholtz-metadaten.de/msekg/17451677974385	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 426						https://https://zenodo.org//records/10600183					
 https://purls.helmholtz-metadaten.de/msekg/17451677974386	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 427						https://git.rwth-aachen.de/nfdi-matwerk/ta-oms/mste					
 https://purls.helmholtz-metadaten.de/msekg/17451677974387	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 428						https://github.com/OCDO					
 https://purls.helmholtz-metadaten.de/msekg/17451677974388	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 429						https://doi.org/10.5281/zenodo.10805535					
@@ -1621,21 +1621,21 @@ https://purls.helmholtz-metadaten.de/msekg/17451677974389	https://nfdi.fiz-karls
 https://purls.helmholtz-metadaten.de/msekg/174516779743810	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 431						https://doi.org/10.5281/zenodo.10805574					
 https://purls.helmholtz-metadaten.de/msekg/174516779743811	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 432						https://doi.org/10.5281/zenodo.10806186					
 https://purls.helmholtz-metadaten.de/msekg/174516779743812	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 433						https://purls.helmholtz-metadaten.de/mwo/					
-https://purls.helmholtz-metadaten.de/msekg/174516779743813	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 434						https://doi.org/10.5281/zenodo.8146527					
+https://purls.helmholtz-metadaten.de/msekg/174516779743813	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 434						https://doi.org/https://zenodo.org/records/13823873					
 https://purls.helmholtz-metadaten.de/msekg/174516779743814	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 435						https://doi.org/10.5281/zenodo.11615370					
 https://purls.helmholtz-metadaten.de/msekg/174516779743815	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 436						https://doi.org/10.18154/RWTH-2023-10438					
 https://purls.helmholtz-metadaten.de/msekg/174516779743816	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 437						https://doi.org/10.5281/zenodo.11351884					
 https://purls.helmholtz-metadaten.de/msekg/174516779743817	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 438						https://doi.org/10.1145/3555776.3578739					
-https://purls.helmholtz-metadaten.de/msekg/174516779743818	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 439						n/a					
+https://purls.helmholtz-metadaten.de/msekg/174516779743818	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 439						https://link.springer.com/article/10.1007/s00521-024-10674-5					
 https://purls.helmholtz-metadaten.de/msekg/174516779743819	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 440						https://purls.helmholtz-metadaten.de/emg					
 https://purls.helmholtz-metadaten.de/msekg/174516779743820	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 441						https://codebase.helmholtz.cloud/em_glossary/em_glossary_owl					
-https://purls.helmholtz-metadaten.de/msekg/174516779743821	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 442						10.5445/IR/1000171443					
-https://purls.helmholtz-metadaten.de/msekg/174516779743822	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 443						10.5281/zenodo.10663833					
+https://purls.helmholtz-metadaten.de/msekg/174516779743821	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 442						https://publikationen.bibliothek.kit.edu/1000171443					
+https://purls.helmholtz-metadaten.de/msekg/174516779743822	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 443						https://zenodo.org/records/10663833					
 https://purls.helmholtz-metadaten.de/msekg/174516779743823	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 444						https://Europenis.org/Europenis2024/events/research-data-management/					
-https://purls.helmholtz-metadaten.de/msekg/174516779743824	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 445						10.5281/zenodo.10850978					
-https://purls.helmholtz-metadaten.de/msekg/174516779743825	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 446						10.5281/zenodo.10850990					
-https://purls.helmholtz-metadaten.de/msekg/174516779743826	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 447						https://zenodo.org/records/11353699					
-https://purls.helmholtz-metadaten.de/msekg/174516779743827	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 448						https://zenodo.org/records/11224127					
+https://purls.helmholtz-metadaten.de/msekg/174516779743824	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 445						https://zenodo.org/records/10850978					
+https://purls.helmholtz-metadaten.de/msekg/174516779743825	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 446						https://zenodo.org/records/10854149					
+https://purls.helmholtz-metadaten.de/msekg/174516779743826	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 447						https://https://zenodo.org//records/11353699					
+https://purls.helmholtz-metadaten.de/msekg/174516779743827	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 448						https://https://zenodo.org//records/11224127					
 https://purls.helmholtz-metadaten.de/msekg/174516779743828	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 449						https://doi.org/10.5281/zenodo.11545280					
 https://purls.helmholtz-metadaten.de/msekg/174516779743829	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 450						https://doi.org/10.5281/zenodo.11616049					
 https://purls.helmholtz-metadaten.de/msekg/174516779743830	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 451						https://doi.org/10.5281/zenodo.11615371					
@@ -1659,7 +1659,7 @@ https://purls.helmholtz-metadaten.de/msekg/174516779743847	https://nfdi.fiz-karl
 https://purls.helmholtz-metadaten.de/msekg/174516779743848	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 469						https://doi.org/10.5445/IR/1000160373					
 https://purls.helmholtz-metadaten.de/msekg/174516779743849	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 470						https://nfdi.inventum.de/widget/preview/af17682d-fcf7-4065-95cd-f57099ea51e9/650d6f12b28ee650d6f12b28ef?_LANG=en					
 https://purls.helmholtz-metadaten.de/msekg/174516779743850	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 471						https://publikationen.bibliothek.kit.edu/1000160126					
-https://purls.helmholtz-metadaten.de/msekg/174516779743851	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 472						10.5281/ZENODO.8146527					
+https://purls.helmholtz-metadaten.de/msekg/174516779743851	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 472						https://zenodo.org/records/13823873					
 https://purls.helmholtz-metadaten.de/msekg/174516779743852	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 473						https://doi.org/10.52825/cordi.v1i.278					
 https://purls.helmholtz-metadaten.de/msekg/174516779743853	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 474						https://publikationen.bibliothek.kit.edu/1000168783					
 https://purls.helmholtz-metadaten.de/msekg/174516779743854	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 475						https://doi.org/10.5445/IR/1000159210					
@@ -1669,13 +1669,13 @@ https://purls.helmholtz-metadaten.de/msekg/174516779743857	https://nfdi.fiz-karl
 https://purls.helmholtz-metadaten.de/msekg/174516779743858	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 479						https://publikationen.bibliothek.kit.edu/1000162287					
 https://purls.helmholtz-metadaten.de/msekg/174516779743859	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 480						https://doi.org/10.5445/IR/1000160844					
 https://purls.helmholtz-metadaten.de/msekg/174516779743860	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 481						https://publikationen.bibliothek.kit.edu/1000160931					
-https://purls.helmholtz-metadaten.de/msekg/174516779743861	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 482						https://zenodo.org/record/8384001					
+https://purls.helmholtz-metadaten.de/msekg/174516779743861	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 482						https://https://zenodo.org//record/8384001					
 https://purls.helmholtz-metadaten.de/msekg/174516779743862	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 483						https://materials-data-science-and-informatics.github.io/Dislocation-Ontology-Suite/DISO/docs/index-en.html					
 https://purls.helmholtz-metadaten.de/msekg/174516779743863	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 484						https://mecanano.com/mecanano-wg3-research-data-management-workshop/					
 https://purls.helmholtz-metadaten.de/msekg/174516779743864	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 485						https://dgm.de/mse/2022/program					
-https://purls.helmholtz-metadaten.de/msekg/174516779743865	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 486						https://zenodo.org/doi/10.5281/zenodo.10566837					
+https://purls.helmholtz-metadaten.de/msekg/174516779743865	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 486						https://https://zenodo.org//doi/10.5281/zenodo.10566837					
 https://purls.helmholtz-metadaten.de/msekg/174516779743866	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 487						https://dvm-wissen.de/de/betriebsfestigkeit-2023/293-BF-2023-113.html?sp=undefined					
-https://purls.helmholtz-metadaten.de/msekg/174516779743867	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 488						https://zenodo.org/record/8385605					
+https://purls.helmholtz-metadaten.de/msekg/174516779743867	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 488						https://https://zenodo.org//record/8385605					
 https://purls.helmholtz-metadaten.de/msekg/174516779743868	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 489						https://publikationen.bibliothek.kit.edu/1000158866					
 https://purls.helmholtz-metadaten.de/msekg/174516779743869	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 490						https://doi.org/10.5445/IR/1000151569					
 https://purls.helmholtz-metadaten.de/msekg/174516779743870	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 491						https://doi.org/10.5445/IR/1000160853					
@@ -1685,10 +1685,10 @@ https://purls.helmholtz-metadaten.de/msekg/174516779743873	https://nfdi.fiz-karl
 https://purls.helmholtz-metadaten.de/msekg/174516779743874	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 495						https://nfdi-matwerk.de/about/nfdi-matwerk/contact					
 https://purls.helmholtz-metadaten.de/msekg/174516779743875	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 496						https://publikationen.bibliothek.kit.edu/1000164659					
 https://purls.helmholtz-metadaten.de/msekg/174516779743876	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 497						https://publikationen.bibliothek.kit.edu/1000164658					
-https://purls.helmholtz-metadaten.de/msekg/174516779743877	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 498						https://zenodo.org/doi/10.5281/zenodo.11351884					
+https://purls.helmholtz-metadaten.de/msekg/174516779743877	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 498						https://https://zenodo.org//doi/10.5281/zenodo.11351884					
 https://purls.helmholtz-metadaten.de/msekg/174516779743878	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 499						https://demo.fiz-karlsruhe.de/matwerk/					
 https://purls.helmholtz-metadaten.de/msekg/174516779743879	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 500						https://www.tib-op.org/ojs/index.php/CoRDI/article/view/371					
-https://purls.helmholtz-metadaten.de/msekg/174516779743880	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 501						https://zenodo.org/doi/10.5281/zenodo.10600183					
+https://purls.helmholtz-metadaten.de/msekg/174516779743880	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 501						https://https://zenodo.org//doi/10.5281/zenodo.10600183					
 https://purls.helmholtz-metadaten.de/msekg/174516779743881	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 502						https://www.youtube.com/watch?v=SVSTrcipwm0					
 https://purls.helmholtz-metadaten.de/msekg/174516779743882	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 503						https://publikationen.bibliothek.kit.edu/1000160341					
 https://purls.helmholtz-metadaten.de/msekg/174516779743883	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	url 504						https://www.tib-op.org/ojs/index.php/CoRDI/article/view/348					
@@ -1751,7 +1751,7 @@ https://purls.helmholtz-metadaten.de/msekg/174516786594524	http://purl.obolibrar
 https://purls.helmholtz-metadaten.de/msekg/174516786594525	http://purl.obolibrary.org/obo/IAO_0000305	The MDMC-NEP Glossary of Terms	The MDMC-NEP Glossary of Terms										
 https://purls.helmholtz-metadaten.de/msekg/174516786594526	http://purl.obolibrary.org/obo/IAO_0000305	FAIR Digital Objects: FAIRtilizer for the Digital Harvest	FAIR Digital Objects: FAIRtilizer for the Digital Harvest										
 https://purls.helmholtz-metadaten.de/msekg/174516786594527	http://purl.obolibrary.org/obo/IAO_0000305	FAIR data of surfaces and interfaces in an oxidation-free environment 	FAIR data of surfaces and interfaces in an oxidation-free environment 										
-https://purls.helmholtz-metadaten.de/msekg/174516786594528	http://purl.obolibrary.org/obo/IAO_0000305	Supplemental material for "Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces", Results in Surfaces and Interfaces, 2022, DOI: 10.5281/zenodo.10850978 (2024).	Supplemental material for "Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces", Results in Surfaces and Interfaces, 2022, DOI: 10.5281/zenodo.10850978 (2024).										
+https://purls.helmholtz-metadaten.de/msekg/174516786594528	http://purl.obolibrary.org/obo/IAO_0000305	Supplemental material for "Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces", Results in Surfaces and Interfaces, 2022, DOI: https://zenodo.org/records/10850978 (2024).	Supplemental material for "Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces", Results in Surfaces and Interfaces, 2022, DOI: https://zenodo.org/records/10850978 (2024).										
 https://purls.helmholtz-metadaten.de/msekg/174516786594529	http://purl.obolibrary.org/obo/IAO_0000305	Supplemental material for "Molecular dynamics simulation of nanoindentation in Al and Fe", Applied Surf. Sci., 2021, DOI: 10.5281/zenodo.10850991 (2024).	Supplemental material for "Molecular dynamics simulation of nanoindentation in Al and Fe", Applied Surf. Sci., 2021, DOI: 10.5281/zenodo.10850991 (2024).										
 https://purls.helmholtz-metadaten.de/msekg/174516786594530	http://purl.obolibrary.org/obo/IAO_0000305	Three-Dimensional Characterization of Deformation-induced Damage in Dual Phase Steel using Deep Learning	Three-Dimensional Characterization of Deformation-induced Damage in Dual Phase Steel using Deep Learning										
 https://purls.helmholtz-metadaten.de/msekg/174516786594531	http://purl.obolibrary.org/obo/IAO_0000305	Automated Segmentation of Large Image Datasets using Artificial Intelligence for Microstructure Characterisation and Damage Analysis	Automated Segmentation of Large Image Datasets using Artificial Intelligence for Microstructure Characterisation and Damage Analysis										
@@ -2326,7 +2326,7 @@ https://purls.helmholtz-metadaten.de/msekg/1745330265283104	https://nfdi.fiz-kar
 https://purls.helmholtz-metadaten.de/msekg/1745330265283105	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018	captures the provenance information in the materials science domain	captures the provenance information in the materials science domain										
 https://purls.helmholtz-metadaten.de/msekg/1745330265283106	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018	describing Materials Science Laboratory Equipment	describing Materials Science Laboratory Equipment										
 https://purls.helmholtz-metadaten.de/msekg/1745330265283107	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018	The Reference Datasets Ontology (RDO) represents concepts, which are relevant for the description of a reference dataset (in any domain), including standard, reference material and bibliographic reference, documentation, license, etc. on  a general level.	The Reference Datasets Ontology (RDO) represents concepts, which are relevant for the description of a reference dataset (in any domain), including standard, reference material and bibliographic reference, documentation, license, etc. on  a general level.										
-https://purls.helmholtz-metadaten.de/msekg/17453306512851	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 560						https://zenodo.org/record/6513745#.YvS4gNJBwUH					
+https://purls.helmholtz-metadaten.de/msekg/17453306512851	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 560						https://https://zenodo.org//record/6513745#.YvS4gNJBwUH					
 https://purls.helmholtz-metadaten.de/msekg/17453306512852	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 561						https://github.com/Materials-Consortia/OPTIMADE					
 https://purls.helmholtz-metadaten.de/msekg/17453306512853	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 562						https://github.com/Exabyte-io/esse					
 https://purls.helmholtz-metadaten.de/msekg/17453306512854	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 563						https://gitlab.com/ElectronicStructureLibrary/escdf/escdf-specifications					
@@ -2391,7 +2391,7 @@ https://purls.helmholtz-metadaten.de/msekg/174533065128653	https://nfdi.fiz-karl
 https://purls.helmholtz-metadaten.de/msekg/174533065128654	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 622						https://databus.dbpedia.org/ontologies/purl.org/wild--vocab/2022.03.04-103146					
 https://purls.helmholtz-metadaten.de/msekg/174533065128655	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 623						http://vocab.linkeddata.es/p-plan/index.html					
 https://purls.helmholtz-metadaten.de/msekg/174533065128656	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 624						https://labs.etsi.org/rep/saref/saref-core/-/tree/develop-v3.1.1					
-https://purls.helmholtz-metadaten.de/msekg/174533065128657	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 625						https://zenodo.org/record/5084394#.Y-DOjK3MJPY					
+https://purls.helmholtz-metadaten.de/msekg/174533065128657	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 625						https://https://zenodo.org//record/5084394#.Y-DOjK3MJPY					
 https://purls.helmholtz-metadaten.de/msekg/174533065128658	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 626						https://matportal.org/ontologies/BUILDMAT					
 https://purls.helmholtz-metadaten.de/msekg/174533065128659	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 627						https://matportal.org/ontologies/MOL_BRINELL					
 https://purls.helmholtz-metadaten.de/msekg/174533065128660	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030	url 628						https://www.niso.org/standards-committees/ssos					
@@ -2433,7 +2433,7 @@ https://purls.helmholtz-metadaten.de/msekg/17453307829843	https://nfdi.fiz-karls
 https://purls.helmholtz-metadaten.de/msekg/17453307829844	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022	url 664						https://www.izus.uni-stuttgart.de/fokus/engmeta					
 https://purls.helmholtz-metadaten.de/msekg/17453307829845	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022	url 665						https://fairmat-experimental.github.io/nexus-fairmat-proposal/9636feecb79bb32b828b1a9804269573256d7696/index.html					
 https://purls.helmholtz-metadaten.de/msekg/17453307829846	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022	url 666						https://materials-data-science-and-informatics.github.io/dislocation-ontology/					
-https://purls.helmholtz-metadaten.de/msekg/17453307829847	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022	url 667						w3id.org/mdo/full/1.0/					
+https://purls.helmholtz-metadaten.de/msekg/17453307829847	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022	url 667						https://liusemweb.github.io/mdo/full/1.0/					
 https://purls.helmholtz-metadaten.de/msekg/17453312603731	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141	Creative Commons Attribution 4.0 International Public License	Creative Commons Attribution 4.0 International Public License										
 https://purls.helmholtz-metadaten.de/msekg/17453312603732	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141	MIT License	MIT License										
 https://purls.helmholtz-metadaten.de/msekg/17453312603733	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141	CC-BY (https://creativecommons.org/licenses/by/3.0/)	CC-BY (https://creativecommons.org/licenses/by/3.0/)										
@@ -2844,7 +2844,7 @@ https://purls.helmholtz-metadaten.de/msekg/17461107691089	https://nfdi.fiz-karls
 https://purls.helmholtz-metadaten.de/msekg/174611076910810	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 691						https://matwerk.datamanager.kit.edu/mapping-service-ui.html					
 https://purls.helmholtz-metadaten.de/msekg/174611076910811	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 692						https://kit-data-manager.github.io/webpage/wap-server/index.html					
 https://purls.helmholtz-metadaten.de/msekg/174611076910812	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 693						https://matwerk.datamanager.kit.edu/evoks/en/					
-https://purls.helmholtz-metadaten.de/msekg/174611076910813	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 694						Demo https://kit-data-manager.github.io/visualization-graph-web-component/?path=/story/components-visualizationcomponent--exclude-some-properties					
+https://purls.helmholtz-metadaten.de/msekg/174611076910813	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 694						https://kit-data-manager.github.io/visualization-graph-web-component/?path=/story/components-visualizationcomponent--exclude-some-properties					
 https://purls.helmholtz-metadaten.de/msekg/174611076910814	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 695						https://matwerk.datamanager.kit.edu/repo-management.html					
 https://purls.helmholtz-metadaten.de/msekg/174611076910815	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 696						https://github.com/kit-data-manager/Metadata-Schemas-for-Materials-Science					
 https://purls.helmholtz-metadaten.de/msekg/174611076910816	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 697						https://github.com/kit-data-manager/Metadata-Schemas-for-Materials-Science/blob/main/TEM/TEM_schema.json					
@@ -2853,14 +2853,14 @@ https://purls.helmholtz-metadaten.de/msekg/174611076910818	https://nfdi.fiz-karl
 https://purls.helmholtz-metadaten.de/msekg/174611076910819	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 700						https://github.com/kit-data-manager/Metadata-Schemas-for-Materials-Science/blob/main/SEM-FIB_Tomography/SEM_FIB_Tomography_acquisition_Dataset_Schema.json					
 https://purls.helmholtz-metadaten.de/msekg/174611076910820	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 701						https://github.com/kit-data-manager/Metadata-Schemas-for-Materials-Science/tree/main/Reference_Dataset_Zenodo					
 https://purls.helmholtz-metadaten.de/msekg/174611076910821	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 702						https://github.com/kit-data-manager/Metadata-Schemas-for-Materials-Science/blob/gh-pages/docs/sample_interface/sample_schema.js					
-https://purls.helmholtz-metadaten.de/msekg/174611076910822	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 703						DOI: 10.5445/IR/1000168464					
+https://purls.helmholtz-metadaten.de/msekg/174611076910822	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 703						https://publikationen.bibliothek.kit.edu/1000168464					
 https://purls.helmholtz-metadaten.de/msekg/174611076910823	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 704						https://www.scc.kit.edu/en/research/11843.php					
 https://purls.helmholtz-metadaten.de/msekg/174611076910824	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 705						https://about.coscine.de/en/					
 https://purls.helmholtz-metadaten.de/msekg/174611076910825	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 706						https://doi.org/10.5281/zenodo.10566837					
 https://purls.helmholtz-metadaten.de/msekg/174611076910826	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 707						https://doi.org/10.5281/zenodo.11668376					
 https://purls.helmholtz-metadaten.de/msekg/174611076910827	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 708						https://doi.org/10.5281/zenodo.10527452					
 https://purls.helmholtz-metadaten.de/msekg/174611076910828	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 709						https://doi.org/10.5281/zenodo.8362043					
-https://purls.helmholtz-metadaten.de/msekg/174611076910829	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 710						https://doi.org/10.5281/zenodo.8146527					
+https://purls.helmholtz-metadaten.de/msekg/174611076910829	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 710						https://doi.org/https://zenodo.org/records/13823873					
 https://purls.helmholtz-metadaten.de/msekg/174611076910830	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 711						https://github.com/pyiron/pyiron_base					
 https://purls.helmholtz-metadaten.de/msekg/174611076910831	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 712						https://github.com/eisenforschung/CompositionSpace					
 https://purls.helmholtz-metadaten.de/msekg/174611076910832	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000244	url 713						https://github.com/pyiron/pyiron_atomistics					
@@ -4642,16 +4642,16 @@ https://purls.helmholtz-metadaten.de/msekg/1746359633099115	https://nfdi.fiz-kar
 https://purls.helmholtz-metadaten.de/msekg/1746359633099116	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 294											
 https://purls.helmholtz-metadaten.de/msekg/1746359633099117	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 295											
 https://purls.helmholtz-metadaten.de/msekg/1746359633099118	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 296						https://orcid.org/0000-0001-5135-4325					
-https://purls.helmholtz-metadaten.de/msekg/1746359633099119	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 297						www.sfb-transregio103.de					
-https://purls.helmholtz-metadaten.de/msekg/1746359633099120	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 298						www.sfb1394.rwth-aachen.de					
+https://purls.helmholtz-metadaten.de/msekg/1746359633099119	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 297						https://www.sfb-transregio103.de/					
+https://purls.helmholtz-metadaten.de/msekg/1746359633099120	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 298						https://www.sfb1394.rwth-aachen.de					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099121	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 299						http://www.trr285.de/					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099122	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 300						http://www.sfb1261.de/index.php/en					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099123	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 301						http://www.tu-darmstadt.de/sfb270					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099124	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 302						http://www.sfb1368.uni-hannover.de/nocache/de/forschung/arbeitsgruppen/modellbildung					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099125	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 303						http://www.simtech.uni-stuttgart.de/exc/research/pn/pn3/pn3-1					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099126	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 304						http://www.livmats.uni-freiburg.de/en					
-https://purls.helmholtz-metadaten.de/msekg/1746359633099127	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 305						www.fraunhofer-materials-data-space.de www.digitaleslaborbuch.de					
-https://purls.helmholtz-metadaten.de/msekg/1746359633099128	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 306						www.grk2078.kit.edu					
+https://purls.helmholtz-metadaten.de/msekg/1746359633099127	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 305						https://www.materials.fraunhofer.de/de/strategische-initativen/materials-data-space-					
+https://purls.helmholtz-metadaten.de/msekg/1746359633099128	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 306						https://www.grk2078.kit.edu/					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099129	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 307						https://tu-freiberg.de/fakult4/imfd/mimm/erc-projekt-mudilingo					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099130	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 308						http://www.Europesmat.net/					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099131	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 309											
@@ -4659,9 +4659,9 @@ https://purls.helmholtz-metadaten.de/msekg/1746359633099132	https://nfdi.fiz-kar
 https://purls.helmholtz-metadaten.de/msekg/1746359633099133	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 311						http://www.fz-juelich.de/iek/iek-2/DE/Forschung/Metadaten					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099134	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 312						http://www.uni-kl.de/en/ame					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099135	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 313						http://www.iwt-bremen.de/					
-https://purls.helmholtz-metadaten.de/msekg/1746359633099136	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 314						http://www.bam.de/Navigation/EN/About-us/Organisation/Organisation-Chart/President/Department-5/Division-52/division52.html					
+https://purls.helmholtz-metadaten.de/msekg/1746359633099136	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 314						http://https://www.bam.de/Navigation/EN/About-us/Organisation/Organisation-Chart/President/Department-5/Division-52/division52.html					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099137	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 315						http://www.ptb.de/					
-https://purls.helmholtz-metadaten.de/msekg/1746359633099138	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 316						http://www.fraunhofer-materials-data-space.de/					
+https://purls.helmholtz-metadaten.de/msekg/1746359633099138	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 316						http://https://www.materials.fraunhofer.de/de/strategische-initativen/materials-data-space-/					
 https://purls.helmholtz-metadaten.de/msekg/1746359633099139	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 317											
 https://purls.helmholtz-metadaten.de/msekg/1746359633099140	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 318											
 https://purls.helmholtz-metadaten.de/msekg/1746359633099141	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	RoleWebsite 319											
@@ -5059,7 +5059,7 @@ https://purls.helmholtz-metadaten.de/msekg/17463831395923	http://purl.obolibrary
 https://purls.helmholtz-metadaten.de/msekg/17463831395924	http://purl.obolibrary.org/obo/IAO_0000590	Prof. Dr. Martina Zimmermann, Prof. Dr. Frank Mücklich	Prof. Dr. Martina Zimmermann, Prof. Dr. Frank Mücklich										
 https://purls.helmholtz-metadaten.de/msekg/17463831395925	http://purl.obolibrary.org/obo/IAO_0000590	Dr. Tilmann Hickel, Prof. Dr. Ruth Schwaiger, Prof. Dr. Philipp Slusallek	Dr. Tilmann Hickel, Prof. Dr. Ruth Schwaiger, Prof. Dr. Philipp Slusallek										
 https://purls.helmholtz-metadaten.de/msekg/17464549612561	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 737						https://github.com/					
-https://purls.helmholtz-metadaten.de/msekg/17464549612562	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 738						zenodo.org					
+https://purls.helmholtz-metadaten.de/msekg/17464549612562	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 738						https://zenodo.org/					
 https://purls.helmholtz-metadaten.de/msekg/17464549612563	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 739						https://datadryad.org/stash					
 https://purls.helmholtz-metadaten.de/msekg/17464549612564	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 740						https://osf.io/					
 https://purls.helmholtz-metadaten.de/msekg/17464549612565	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223	url 741						https://figshare.com/					
