@@ -7014,7 +7014,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451567752595">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
-        <ontology:NFDI_0001008>https://doi.org/10.1016/j.msea.2018.01.033; https://doi.org/10.1007/s10853-020-05740-x</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://doi.org/10.1016/j.msea.2018.01.033</ontology:NFDI_0001008>
         <rdfs:label>url 54</rdfs:label>
     </NamedIndividual>
     
@@ -11692,7 +11692,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1745161571657100">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <ontology:NFDI_0001008>https://materialsProject collabration.github.io/custodian/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://materialsProjectcollabration.github.io/custodian/</ontology:NFDI_0001008>
         <rdfs:label>url 157</rdfs:label>
     </NamedIndividual>
     
@@ -11872,7 +11872,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1745161571657117">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <ontology:NFDI_0001008>https://www.firedrakeProject collabration.org/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://www.firedrakeproject.org/</ontology:NFDI_0001008>
         <rdfs:label>url 174</rdfs:label>
     </NamedIndividual>
     
@@ -12042,7 +12042,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1745161571657132">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <ontology:NFDI_0001008>https://hybrid3-Database Software.readthedocs.io/en/latest/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://hybrid3-DatabaseSoftware.readthedocs.io/en/latest/</ontology:NFDI_0001008>
         <rdfs:label>url 189</rdfs:label>
     </NamedIndividual>
     
@@ -12182,7 +12182,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516157165722">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <ontology:NFDI_0001008>https://sxrepo.mpie.de/Project collabrations/sphinx/wiki</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://sxrepo.mpie.de/Projectcollabrations/sphinx/wiki</ontology:NFDI_0001008>
         <rdfs:label>url 79</rdfs:label>
     </NamedIndividual>
     
@@ -12262,7 +12262,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451615716573">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <ontology:NFDI_0001008>http://Project collabrations.ce.berkeley.edu/feap/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>http://Projectcollabrations.ce.berkeley.edu/feap/</ontology:NFDI_0001008>
         <rdfs:label>url 60</rdfs:label>
     </NamedIndividual>
     
@@ -12412,7 +12412,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516157165743">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <ontology:NFDI_0001008>http://www.fenicsProject collabration.org/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>http://www.fenicsProjectcollabration.org/</ontology:NFDI_0001008>
         <rdfs:label>url 100</rdfs:label>
     </NamedIndividual>
     
@@ -12772,7 +12772,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516157165776">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <ontology:NFDI_0001008>https://matbench.materialsProject collabration.org/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://matbench.materialsProjectcollabration.org/</ontology:NFDI_0001008>
         <rdfs:label>url 133</rdfs:label>
     </NamedIndividual>
     
@@ -13022,7 +13022,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516157165799">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <ontology:NFDI_0001008>https://materialsProject collabration.github.io/fireworks/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://materialsProjectcollabration.github.io/fireworks/</ontology:NFDI_0001008>
         <rdfs:label>url 156</rdfs:label>
     </NamedIndividual>
     
@@ -13422,7 +13422,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516176277623">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001113"/>
-        <ontology:NFDI_0001008>https://gitlab.com/siesta-Project collabration/siesta</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://gitlab.com/siesta-Projectcollabration/siesta</ontology:NFDI_0001008>
         <rdfs:label>url 215</rdfs:label>
     </NamedIndividual>
     
@@ -13672,7 +13672,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516176277646">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001113"/>
-        <ontology:NFDI_0001008>https://github.com/materialsProject collabration/pymatgen</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://github.com/materialsProjectcollabration/pymatgen</ontology:NFDI_0001008>
         <rdfs:label>url 238</rdfs:label>
     </NamedIndividual>
     
@@ -13882,7 +13882,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516176277665">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001113"/>
-        <ontology:NFDI_0001008>https://github.com/materialsProject collabration/matbench</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://github.com/materialsProjectcollabration/matbench</ontology:NFDI_0001008>
         <rdfs:label>url 257</rdfs:label>
     </NamedIndividual>
     
@@ -14202,7 +14202,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516176277695">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001113"/>
-        <ontology:NFDI_0001008>https://gitlab.dune-Project collabration.org/dune-fem/dune-fem</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://gitlab.dune-Projectcollabration.org/dune-fem/dune-fem</ontology:NFDI_0001008>
         <rdfs:label>url 287</rdfs:label>
     </NamedIndividual>
     
@@ -15072,7 +15072,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516230525327">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022"/>
-        <ontology:NFDI_0001008>https://docs.fenicsProject collabration.org/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://docs.fenicsProjectcollabration.org/</ontology:NFDI_0001008>
         <rdfs:label>url 342</rdfs:label>
     </NamedIndividual>
     
@@ -15112,7 +15112,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516230525330">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022"/>
-        <ontology:NFDI_0001008>https://aiida.readthedocs.io/Project collabrations/aiida-core/en/latest/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://www.aiida.net/news/posts/2022-04-27-aiida-2-release</ontology:NFDI_0001008>
         <rdfs:label>url 345</rdfs:label>
     </NamedIndividual>
     
@@ -15452,7 +15452,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516230525361">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022"/>
-        <ontology:NFDI_0001008>https://api.materialsProject collabration.org/docs</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://api.materialsProjectcollabration.org/docs</ontology:NFDI_0001008>
         <rdfs:label>url 376</rdfs:label>
     </NamedIndividual>
     
@@ -20692,7 +20692,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453210360133">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001107"/>
-        <ontology:NFDI_0001008>https://github.com/materialsProject collabration</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://github.com/materialsProjectcollabration</ontology:NFDI_0001008>
         <rdfs:label>url 539</rdfs:label>
     </NamedIndividual>
     
@@ -25137,7 +25137,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533065128637">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030"/>
-        <ontology:NFDI_0001008>https://github.com/Project collabrationDebbie/Ontology_DEB</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://github.com/ProjectcollabrationDebbie/Ontology_DEB</ontology:NFDI_0001008>
         <rdfs:label>url 605</rdfs:label>
     </NamedIndividual>
     
@@ -25217,7 +25217,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533065128644">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030"/>
-        <ontology:NFDI_0001008>https://ftp.ebi.ac.uk/pub/Database Softwares/chebi/ontology/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://ftp.ebi.ac.uk/pub/DatabaseSoftwares/chebi/ontology/</ontology:NFDI_0001008>
         <rdfs:label>url 612</rdfs:label>
     </NamedIndividual>
     
@@ -25677,7 +25677,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533078298310">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022"/>
-        <ontology:NFDI_0001008>https://citrineinformatics.github.io/pif-documentation/index.html</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://citrineinformatics.github.io/pif-documentation</ontology:NFDI_0001008>
         <rdfs:label>url 660</rdfs:label>
     </NamedIndividual>
     
@@ -25777,7 +25777,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453307829843">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022"/>
-        <ontology:NFDI_0001008>http://icatProject collabration-contrib.github.io/CSMD/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>http://icatProjectcollabration-contrib.github.io/CSMD/</ontology:NFDI_0001008>
         <rdfs:label>url 663</rdfs:label>
     </NamedIndividual>
     
@@ -60701,7 +60701,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174645496125611">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <ontology:NFDI_0001008>https://www.ccpnc.ac.uk/Database Software/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://www.ccpnc.ac.uk/DatabaseSoftware/</ontology:NFDI_0001008>
         <rdfs:label>url 747</rdfs:label>
     </NamedIndividual>
     
@@ -60751,7 +60751,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174645496125616">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <ontology:NFDI_0001008>https://materialsProject collabration.org/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://materialsProjectcollabration.org/</ontology:NFDI_0001008>
         <rdfs:label>url 752</rdfs:label>
     </NamedIndividual>
     

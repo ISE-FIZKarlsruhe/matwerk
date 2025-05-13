@@ -10,6 +10,7 @@ docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encodin
     %ROBOT_IMAGE% robot merge -i %SRC% --inputs "data/components/*.owl" --output %COMPONENTSDIR%/all_NotReasoned.owl
 
 ::powershell -Command "(Get-Content 'data\all_NotReasoned.owl' -Raw) -replace '<ontology:NFDI_0001008>(.*?)</ontology:NFDI_0001008>', '<ontology:NFDI_0001008 rdf:resource=\"$1\"/>' | Set-Content 'data\all_NotReasoned.owl'"
+powershell -Command "(Get-Content 'data\all_NotReasoned.owl' -Raw) -replace '<ontology:NFDI_0001008>', '<ontology:NFDI_0001008 rdf:datatype=\"http://www.w3.org/2001/XMLSchema#anyURI\">' | Set-Content 'data\all_NotReasoned.owl'"
 
 docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
     %ROBOT_IMAGE% robot explain --input %COMPONENTSDIR%/all_NotReasoned.owl -M inconsistency --explanation %VALIDATIONSDIR%/inconsistency.md
@@ -28,7 +29,7 @@ docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encodin
     %ROBOT_IMAGE% robot reason --reasoner hermit --input %COMPONENTSDIR%/all.owl --output %COMPONENTSDIR%/all_reasoned_hermit.owl
 
 docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
-    %ROBOT_IMAGE% robot convert --input %COMPONENTSDIR%/all.owl --output %COMPONENTSDIR%/all.ttl
+    %ROBOT_IMAGE% robot convert --input %COMPONENTSDIR%/all_reasoned_hermit.owl --output %COMPONENTSDIR%/all.ttl
 
 
 python3 -m pyshacl  -s shapes/shape4.ttl %COMPONENTSDIR%/all.ttl > %VALIDATIONSDIR%/shape4.md
