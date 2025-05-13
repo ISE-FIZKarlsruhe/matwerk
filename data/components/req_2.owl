@@ -12872,7 +12872,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516157165785">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <ontology:NFDI_0001008>https://www.simphony-Project collabration.Europe/en/about-simphony.html</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://www.simphony-Projectcollabration.Europe/en/about-simphony.html</ontology:NFDI_0001008>
         <rdfs:label>url 142</rdfs:label>
     </NamedIndividual>
     
@@ -25407,7 +25407,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533065128661">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030"/>
-        <ontology:NFDI_0001008>https://github.com/stream-Project collabration/ontology</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://github.com/stream-Projectcollabration/ontology</ontology:NFDI_0001008>
         <rdfs:label>url 629</rdfs:label>
     </NamedIndividual>
     
