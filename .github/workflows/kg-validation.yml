@@ -19,28 +19,33 @@ jobs:
            curl -v https://nfdi.fiz-karlsruhe.de/matwerk/sparql --data query='CONSTRUCT {%0A%20 %3Fs %3Fp %3Fo .%0A}%0AWHERE {%0A%20 %3Fs %3Fp %3Fo .%0A}%0A' -H "accept: text/turtle"  > matwerk.ttl
 
            ########################################################
+           # we need to retrieve robot.jar
+           curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
+           #java -jar robot.jar --version
+
+           # reasoning to materialize sublclasses, subproperties, inverse prperties, etc.
+           java -jar reason.jar --reasoner hermit --axiom-generators "SubClass SubDataProperty ClassAssertion EquivalentObjectProperty PropertyAssertion InverseObjectProperties SubObjectProperty" --include-indirect true --input matwerk.ttl --output reasoned.ttl 
+
+           ########################################################
            # for SHACL based validation we need to install pyshacl
            pip install pyshacl
            
            # no roles without realizations
-           python3 -m pyshacl  -s main/shapes/shape4.ttl matwerk.ttl
+           python3 -m pyshacl  -s main/shapes/shape4.ttl reasoned.ttl
 
            # no roles without bearers
-           python3 -m pyshacl  -s main/shapes/shape3.ttl matwerk.ttl
+           python3 -m pyshacl  -s main/shapes/shape3.ttl reasoned.ttl
           
            # no punning
-           python3 -m pyshacl  -s main/shapes/shape2.ttl matwerk.ttl
+           python3 -m pyshacl  -s main/shapes/shape2.ttl reasoned.ttl
 
            # no orphaned textual entities
-           python3 -m pyshacl  -s main/shapes/shape1.ttl matwerk.ttl
+           python3 -m pyshacl  -s main/shapes/shape1.ttl reasoned.ttl
 
 
-
-           ########################################################
-           # for SPARQL based verification we need to retrieve robot.jar
-           curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
-           #java -jar robot.jar --version
-
+           #######################################################
+           # SPARQL based verification
+           
            # OCRID must be IRI, not literal
-           java -jar robot.jar verify --input matwerk.ttl --queries main/shapes/verify1.sparql
+           java -jar robot.jar verify --input reasoned.ttl --queries main/shapes/verify1.sparql
 
