@@ -24,7 +24,9 @@ jobs:
            #java -jar robot.jar --version
 
            # reasoning to materialize sublclasses, subproperties, inverse prperties, etc.
-           java -Xmx16G -jar robot.jar -vvv reason --reasoner hermit --axiom-generators "SubClass SubDataProperty ClassAssertion EquivalentObjectProperty PropertyAssertion InverseObjectProperties SubObjectProperty" --include-indirect true --input matwerk.ttl --output reasoned.ttl 
+           #java -Xmx16G -jar robot.jar -vvv reason --reasoner hermit --axiom-generators "SubClass SubDataProperty ClassAssertion EquivalentObjectProperty PropertyAssertion InverseObjectProperties SubObjectProperty" --include-indirect true --input matwerk.ttl --output reasoned.ttl 
+           java -Xmx16G -jar robot.jar -vvv reason --reasoner hermit --axiom-generators "InverseObjectProperties" --include-indirect true --input matwerk.ttl --output reasoned.ttl 
+      
 
            ########################################################
            # for SHACL based validation we need to install pyshacl
