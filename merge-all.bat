@@ -23,7 +23,8 @@ docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encodin
     %ROBOT_IMAGE% robot explain --reasoner hermit --input %COMPONENTSDIR%/all_NotReasoned.owl -M inconsistency --explanation %VALIDATIONSDIR%/inconsistency_hermit.md
 
 docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
-    %ROBOT_IMAGE% robot reason --reasoner hermit --input %COMPONENTSDIR%/all_NotReasoned.owl --output %COMPONENTSDIR%/all_reasoned_hermit.owl
+    %ROBOT_IMAGE% robot reason --reasoner hermit --input %COMPONENTSDIR%/all_NotReasoned.owl --output %COMPONENTSDIR%/all.ttl
+::    %ROBOT_IMAGE% robot reason --reasoner hermit --input %COMPONENTSDIR%/all_NotReasoned.owl --axiom-generators "SubClass EquivalentClass DisjointClasses ClassAssertion PropertyAssertion SubObjectProperty EquivalentObjectProperty InverseObjectProperties ObjectPropertyDomain ObjectPropertyRange ObjectPropertyCharacteristic SubDataProperty EquivalentDataProperties DataPropertyCharacteristic" --include-indirect true reduce --output %COMPONENTSDIR%/all.ttl
 
 docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
     %ROBOT_IMAGE% robot convert --input %COMPONENTSDIR%/all_reasoned_hermit.owl --output %COMPONENTSDIR%/all.ttl

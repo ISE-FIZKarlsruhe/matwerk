@@ -41,7 +41,7 @@ curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vT-wK5CmuPc5ZXyNybym28y
 
 echo Downloading the metadata ontology
 curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vT-wK5CmuPc5ZXyNybym28yJPJ9z2H51Ry2SvWs4DXc_HcgwqRHOwdrz0oFhr9_D1MOxvGZS-Wb3YQE/pub?gid=278046522&single=true&output=tsv" -o %COMPONENTSDIR%\metadata.tsv
-curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vT-wK5CmuPc5ZXyNybym28yJPJ9z2H51Ry2SvWs4DXc_HcgwqRHOwdrz0oFhr9_D1MOxvGZS-Wb3YQE/pub?gid=2006199416&single=true&output=tsv" -o %COMPONENTSDIR%\ontology.tsv
+::curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vT-wK5CmuPc5ZXyNybym28yJPJ9z2H51Ry2SvWs4DXc_HcgwqRHOwdrz0oFhr9_D1MOxvGZS-Wb3YQE/pub?gid=2006199416&single=true&output=tsv" -o %COMPONENTSDIR%\ontology.tsv
 
 echo Downloading the matwerkta matwerkiuc matwerkpp
 curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vT-wK5CmuPc5ZXyNybym28yJPJ9z2H51Ry2SvWs4DXc_HcgwqRHOwdrz0oFhr9_D1MOxvGZS-Wb3YQE/pub?gid=1489640604&single=true&output=tsv" -o %COMPONENTSDIR%\matwerkta.tsv
@@ -112,7 +112,7 @@ docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encodin
 
 echo running the ROBOT for software
 docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
-    %ROBOT_IMAGE% robot merge -i %SRC% -i %COMPONENTSDIR%/req_1.owl -i %COMPONENTSDIR%/req_2.owl -i %COMPONENTSDIR%/process.owl template --template %COMPONENTSDIR%/software.tsv --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" --output %COMPONENTSDIR%/software.owl
+    %ROBOT_IMAGE% robot merge -i %SRC% -i %COMPONENTSDIR%/req_1.owl -i %COMPONENTSDIR%/req_2.owl -i %COMPONENTSDIR%/publication.owl -i %COMPONENTSDIR%/process.owl template --template %COMPONENTSDIR%/software.tsv --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" --output %COMPONENTSDIR%/software.owl
 docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
     %ROBOT_IMAGE% robot explain --reasoner hermit --input %COMPONENTSDIR%/software.owl -M inconsistency --explanation %REASONER%/software_inconsistency.md 
 
@@ -142,11 +142,11 @@ docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encodin
 docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
     %ROBOT_IMAGE% robot explain --reasoner hermit --input %COMPONENTSDIR%/metadata.owl -M inconsistency --explanation %REASONER%/metadata_inconsistency.md 
 
-echo running the ROBOT for ontology
-docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
-    %ROBOT_IMAGE% robot merge -i %SRC% -i %COMPONENTSDIR%/req_1.owl -i %COMPONENTSDIR%/req_2.owl -i %COMPONENTSDIR%/publication.owl -i %COMPONENTSDIR%/organization.owl -i %COMPONENTSDIR%/process.owl template --template %COMPONENTSDIR%/ontology.tsv --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" --output %COMPONENTSDIR%/ontology.owl
-docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
-    %ROBOT_IMAGE% robot explain --reasoner hermit --input %COMPONENTSDIR%/ontology.owl -M inconsistency --explanation %REASONER%/ontology_inconsistency.md 
+::echo running the ROBOT for ontology
+::docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
+::    %ROBOT_IMAGE% robot merge -i %SRC% -i %COMPONENTSDIR%/req_1.owl -i %COMPONENTSDIR%/req_2.owl -i %COMPONENTSDIR%/publication.owl -i %COMPONENTSDIR%/organization.owl -i %COMPONENTSDIR%/process.owl template --template %COMPONENTSDIR%/ontology.tsv --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" --output %COMPONENTSDIR%/ontology.owl
+::docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
+::    %ROBOT_IMAGE% robot explain --reasoner hermit --input %COMPONENTSDIR%/ontology.owl -M inconsistency --explanation %REASONER%/ontology_inconsistency.md 
 
 
 echo running the ROBOT for matwerkta

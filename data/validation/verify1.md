@@ -1,605 +1,612 @@
-2025-05-13 10:14:30,963 DEBUG org.obolibrary.robot.IOHelper - Loading ontology data/all.ttl with catalog file null
-2025-05-13 10:14:30,966 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyManager
-2025-05-13 10:14:30,967 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyManager
-2025-05-13 10:14:30,967 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyManager
-2025-05-13 10:14:30,967 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyManager
-2025-05-13 10:14:30,979 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLDataFactory
-2025-05-13 10:14:30,979 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLDataFactory
-2025-05-13 10:14:30,979 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLDataFactory
-2025-05-13 10:14:30,980 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLDataFactory
-2025-05-13 10:14:30,984 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@674658f7
-2025-05-13 10:14:30,996 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
-2025-05-13 10:14:30,996 DEBUG org.semanticweb.owlapi.utilities.Injector - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
-2025-05-13 10:14:30,996 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
-2025-05-13 10:14:30,997 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
-2025-05-13 10:14:30,997 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
-2025-05-13 10:14:30,998 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
-2025-05-13 10:14:30,998 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
-2025-05-13 10:14:31,016 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[org.semanticweb.owlapi.rio.RioRDFaParserFactory@9ed238c, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@239b0f9d, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@60f7cc1d, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@5827af16, org.semanticweb.owlapi.rio.RioTrixParserFactory@5b080f3a, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@7be58f16, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@45cff11c, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@5b64c4b7, org.semanticweb.owlapi.rio.RioTurtleParserFactory@7d3430a7, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@33e01298, org.semanticweb.owlapi.rio.RioN3ParserFactory@1433046b, org.semanticweb.owlapi.rio.RioTrigParserFactory@20b5f2ac, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@636e8cc, org.semanticweb.owlapi.rio.RioJsonParserFactory@2f9a01c1, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@1c80e49b, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@78fb9a67, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@652a7737, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@36676c1a]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
-2025-05-13 10:14:31,017 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyFactory
-2025-05-13 10:14:31,017 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyFactory
-2025-05-13 10:14:31,018 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyFactory
-2025-05-13 10:14:31,018 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyFactory
-2025-05-13 10:14:31,021 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@1de5f0ef]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
-2025-05-13 10:14:31,021 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
-2025-05-13 10:14:31,021 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
-2025-05-13 10:14:31,021 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
-2025-05-13 10:14:31,022 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
-2025-05-13 10:14:31,026 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@7383eae2, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@107ed6fc, org.semanticweb.owlapi.rio.RioJsonStorerFactory@2e029d61, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@48c35007, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@6d0b5baf, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@297ea53a, org.semanticweb.owlapi.rio.RioN3StorerFactory@482d776b, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@132ddbab, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@346a361, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@7a48e6e2, org.semanticweb.owlapi.rio.RioTrixStorerFactory@5bf22f18, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@1643d68f, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@186978a6, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@267f474e, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@18245eb0, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@72a85671, org.semanticweb.owlapi.rio.RioTrigStorerFactory@acb0951, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@7c7d3c46, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@24fb6a80, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@4052274f]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
-2025-05-13 10:14:31,213 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.binary.BinaryRDFParserFactory
-2025-05-13 10:14:31,213 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.n3.N3ParserFactory
-2025-05-13 10:14:31,214 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.nquads.NQuadsParserFactory
-2025-05-13 10:14:31,215 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.ntriples.NTriplesParserFactory
-2025-05-13 10:14:31,215 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.rdfjson.RDFJSONParserFactory
-2025-05-13 10:14:31,215 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.rdfxml.RDFXMLParserFactory
-2025-05-13 10:14:31,217 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.trix.TriXParserFactory
-2025-05-13 10:14:31,218 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.turtle.TurtleParserFactory
-2025-05-13 10:14:31,219 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.turtlestar.TurtleStarParserFactory
-2025-05-13 10:14:31,219 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.trig.TriGParserFactory
-2025-05-13 10:14:31,220 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.trigstar.TriGStarParserFactory
-2025-05-13 10:14:31,221 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.jsonld.JSONLDParserFactory
-2025-05-13 10:14:31,221 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.ndjsonld.NDJSONLDParserFactory
-2025-05-13 10:14:31,236 DEBUG org.eclipse.rdf4j.rio.DatatypeHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.datatypes.XMLSchemaDatatypeHandler
-2025-05-13 10:14:31,237 DEBUG org.eclipse.rdf4j.rio.DatatypeHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.datatypes.RDFDatatypeHandler
-2025-05-13 10:14:31,237 DEBUG org.eclipse.rdf4j.rio.DatatypeHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.datatypes.DBPediaDatatypeHandler
-2025-05-13 10:14:31,238 DEBUG org.eclipse.rdf4j.rio.DatatypeHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.datatypes.VirtuosoGeometryDatatypeHandler
-2025-05-13 10:14:31,238 DEBUG org.eclipse.rdf4j.rio.DatatypeHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.datatypes.GeoSPARQLDatatypeHandler
-2025-05-13 10:14:31,242 DEBUG org.eclipse.rdf4j.rio.LanguageHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.languages.RFC3066LanguageHandler
-2025-05-13 10:14:31,243 DEBUG org.eclipse.rdf4j.rio.LanguageHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.languages.BCP47LanguageHandler
-2025-05-13 10:14:31,337 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x2, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
-2025-05-13 10:14:31,338 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x3, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000031)
-2025-05-13 10:14:31,338 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x4, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x5)
-2025-05-13 10:14:31,339 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x6, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,339 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x7, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x8)
-2025-05-13 10:14:31,341 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x10, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
-2025-05-13 10:14:31,341 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x11, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000031)
-2025-05-13 10:14:31,342 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x12, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x13)
-2025-05-13 10:14:31,342 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x14, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,343 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x15, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x16)
-2025-05-13 10:14:31,345 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x18, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,345 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x19, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
-2025-05-13 10:14:31,346 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x21, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,346 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x22, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
-2025-05-13 10:14:31,350 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x24, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,351 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x25, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
-2025-05-13 10:14:31,351 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x27, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000029)
-2025-05-13 10:14:31,352 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x28, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000040)
-2025-05-13 10:14:31,353 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x30, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,353 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x31, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x32)
-2025-05-13 10:14:31,354 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x34, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,355 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x35, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x36)
-2025-05-13 10:14:31,360 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x38, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,361 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x39, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x40)
-2025-05-13 10:14:31,362 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x42, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,362 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x43, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x44)
-2025-05-13 10:14:31,368 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x46, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,368 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x47, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x48)
-2025-05-13 10:14:31,369 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x50, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,369 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x51, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x52)
-2025-05-13 10:14:31,373 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x54, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000029)
-2025-05-13 10:14:31,374 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x55, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000040)
-2025-05-13 10:14:31,374 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x57, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,374 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x58, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
-2025-05-13 10:14:31,380 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x60, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
-2025-05-13 10:14:31,381 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x61, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x62)
-2025-05-13 10:14:31,381 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x63, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,382 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x64, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x65)
-2025-05-13 10:14:31,383 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x67, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
-2025-05-13 10:14:31,383 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x68, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x69)
-2025-05-13 10:14:31,383 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x70, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,384 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x71, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x72)
-2025-05-13 10:14:31,385 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x74, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,385 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x75, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x76)
-2025-05-13 10:14:31,386 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x78, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,386 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x79, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x80)
-2025-05-13 10:14:31,387 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x82, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,388 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x83, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
-2025-05-13 10:14:31,390 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x85, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,390 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x86, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
-2025-05-13 10:14:31,391 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x88, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,391 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x89, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x90)
-2025-05-13 10:14:31,412 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x92, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
-2025-05-13 10:14:31,413 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x93, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x94)
-2025-05-13 10:14:31,415 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x96, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
-2025-05-13 10:14:31,415 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x97, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x98)
-2025-05-13 10:14:31,418 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x100, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003)
-2025-05-13 10:14:31,419 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x101, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x102)
-2025-05-13 10:14:31,425 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x104, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
-2025-05-13 10:14:31,425 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x105, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x106)
-2025-05-13 10:14:31,438 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x108, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
-2025-05-13 10:14:31,438 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x109, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x110)
-2025-05-13 10:14:31,476 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x135, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000009)
-2025-05-13 10:14:31,476 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x136, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000018)
-2025-05-13 10:14:31,476 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x137, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000026)
-2025-05-13 10:14:31,478 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x142, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,479 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x143, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
-2025-05-13 10:14:31,491 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x168, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000018)
-2025-05-13 10:14:31,492 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x169, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000026)
-2025-05-13 10:14:31,494 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x173, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000029)
-2025-05-13 10:14:31,494 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x174, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000040)
-2025-05-13 10:14:31,495 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x177, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000029)
-2025-05-13 10:14:31,495 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x178, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000140)
-2025-05-13 10:14:31,501 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x188, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,501 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x189, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
-2025-05-13 10:14:31,502 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x192, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,503 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x193, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
-2025-05-13 10:14:31,505 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x196, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000038)
-2025-05-13 10:14:31,505 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x197, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000148)
-2025-05-13 10:14:31,506 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x202, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000029)
-2025-05-13 10:14:31,506 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x203, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000040)
-2025-05-13 10:14:31,507 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x204, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000140)
-2025-05-13 10:14:31,509 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x209, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000142)
-2025-05-13 10:14:31,510 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x210, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000147)
-2025-05-13 10:14:31,524 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x217, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000002)
-2025-05-13 10:14:31,524 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x218, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000120)
-2025-05-13 10:14:31,524 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x219, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000121)
-2025-05-13 10:14:31,525 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x220, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000122)
-2025-05-13 10:14:31,525 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x221, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000123)
-2025-05-13 10:14:31,526 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x222, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000124)
-2025-05-13 10:14:31,526 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x223, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000125)
-2025-05-13 10:14:31,526 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x224, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000423)
-2025-05-13 10:14:31,526 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x225, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000428)
-2025-05-13 10:14:31,532 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x229, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000103)
-2025-05-13 10:14:31,532 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x230, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000226)
-2025-05-13 10:14:31,532 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x231, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000227)
-2025-05-13 10:14:31,532 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x232, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000228)
-2025-05-13 10:14:31,532 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x233, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000229)
-2025-05-13 10:14:31,533 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x234, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/OMO_0001000)
-2025-05-13 10:14:31,537 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x237, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000410)
-2025-05-13 10:14:31,537 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x238, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000420)
-2025-05-13 10:14:31,538 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x239, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000421)
-2025-05-13 10:14:31,553 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x245, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0060009)
-2025-05-13 10:14:31,553 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x246, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x247)
-2025-05-13 10:14:31,555 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x249, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purls.helmholtz-metadaten.de/mwo/MWO_0001019)
-2025-05-13 10:14:31,560 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x251, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001039)
-2025-05-13 10:14:31,561 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x252, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x253)
-2025-05-13 10:14:31,564 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x256, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002)
-2025-05-13 10:14:31,564 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x257, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x258)
-2025-05-13 10:14:31,565 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x261, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purls.helmholtz-metadaten.de/mwo/MWO_0001051)
-2025-05-13 10:14:31,566 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x262, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x263)
-2025-05-13 10:14:31,566 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x264, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x265)
-2025-05-13 10:14:31,567 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x267, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purls.helmholtz-metadaten.de/mwo/MWO_0001030)
-2025-05-13 10:14:31,567 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x268, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x269)
-2025-05-13 10:14:31,568 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x270, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x271)
-2025-05-13 10:14:31,574 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x273, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purls.helmholtz-metadaten.de/mwo/MWO_0001051)
-2025-05-13 10:14:31,575 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x274, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x275)
-2025-05-13 10:14:31,575 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x276, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x277)
-2025-05-13 10:14:31,584 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x279, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,584 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x280, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x281)
-2025-05-13 10:14:31,584 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x282, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x283)
-2025-05-13 10:14:31,597 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x287, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008)
-2025-05-13 10:14:31,598 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x288, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232)
-2025-05-13 10:14:31,601 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x290, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000141)
-2025-05-13 10:14:31,601 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x291, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x292)
-2025-05-13 10:14:31,602 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x294, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000030)
-2025-05-13 10:14:31,602 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x295, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x296)
-2025-05-13 10:14:31,603 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x298, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003)
-2025-05-13 10:14:31,603 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x299, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x300)
-2025-05-13 10:14:31,604 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x302, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003)
-2025-05-13 10:14:31,604 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x303, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x304)
-2025-05-13 10:14:31,605 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x306, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x307)
-2025-05-13 10:14:31,605 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x308, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,606 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x309, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000030)
-2025-05-13 10:14:31,606 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x310, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x311)
-2025-05-13 10:14:31,610 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x316, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
-2025-05-13 10:14:31,610 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x317, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x318)
-2025-05-13 10:14:31,611 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x320, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131)
-2025-05-13 10:14:31,611 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x321, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x322)
-2025-05-13 10:14:31,611 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x324, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
-2025-05-13 10:14:31,611 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x325, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x326)
-2025-05-13 10:14:31,613 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x328, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
-2025-05-13 10:14:31,613 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x329, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x330)
-2025-05-13 10:14:31,614 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x332, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
-2025-05-13 10:14:31,614 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x333, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x334)
-2025-05-13 10:14:31,615 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x336, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000011)
-2025-05-13 10:14:31,616 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x337, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x338)
-2025-05-13 10:14:31,616 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x339, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x340)
-2025-05-13 10:14:31,619 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x342, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000027)
-2025-05-13 10:14:31,619 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x343, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x344)
-2025-05-13 10:14:31,622 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x346, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,622 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x347, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x348)
-2025-05-13 10:14:31,623 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x350, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:31,623 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x351, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x352)
-2025-05-13 10:14:31,625 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x355, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
-2025-05-13 10:14:31,625 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x356, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x357)
-2025-05-13 10:14:31,628 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x360, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
-2025-05-13 10:14:31,629 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x361, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x362)
-2025-05-13 10:14:31,629 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x363, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x364)
-2025-05-13 10:14:31,629 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x366, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
-2025-05-13 10:14:31,630 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x367, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x368)
-2025-05-13 10:14:31,631 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x372, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
-2025-05-13 10:14:31,631 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x373, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x374)
-2025-05-13 10:14:31,634 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x376, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
-2025-05-13 10:14:31,634 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x377, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x378)
-2025-05-13 10:14:31,638 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x380, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
-2025-05-13 10:14:31,638 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x381, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x382)
-2025-05-13 10:14:31,639 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x384, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000104)
-2025-05-13 10:14:31,639 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x385, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x386)
-2025-05-13 10:14:31,640 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x389, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000033)
-2025-05-13 10:14:31,640 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x390, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x391)
-2025-05-13 10:14:31,644 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x394, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000030)
-2025-05-13 10:14:31,645 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x395, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x396)
-2025-05-13 10:14:31,645 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x399, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,646 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x400, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x401)
-2025-05-13 10:14:31,646 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x403, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,646 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x404, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x405)
-2025-05-13 10:14:31,648 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x407, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000023)
-2025-05-13 10:14:31,649 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x408, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x409)
-2025-05-13 10:14:31,650 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x411, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000023)
-2025-05-13 10:14:31,650 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x412, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x413)
-2025-05-13 10:14:31,651 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x415, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
-2025-05-13 10:14:31,651 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x416, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x417)
-2025-05-13 10:14:31,651 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x419, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
-2025-05-13 10:14:31,652 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x420, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x421)
-2025-05-13 10:14:31,653 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x423, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000141)
-2025-05-13 10:14:31,653 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x424, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x425)
-2025-05-13 10:14:31,654 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x428, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000300)
-2025-05-13 10:14:31,654 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x429, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x430)
-2025-05-13 10:14:31,656 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x432, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022)
-2025-05-13 10:14:31,656 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x433, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x434)
-2025-05-13 10:14:31,657 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x436, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
-2025-05-13 10:14:31,657 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x437, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x438)
-2025-05-13 10:14:31,662 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x440, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000033)
-2025-05-13 10:14:31,662 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x441, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x442)
-2025-05-13 10:14:31,676 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x444, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000203)
-2025-05-13 10:14:31,676 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x445, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x446)
-2025-05-13 10:14:31,679 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x449, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
-2025-05-13 10:14:31,680 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x450, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x451)
-2025-05-13 10:14:31,682 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x453, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
-2025-05-13 10:14:31,682 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x454, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x455)
-2025-05-13 10:14:31,699 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x457, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x458)
-2025-05-13 10:14:31,699 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x460, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000040)
-2025-05-13 10:14:31,700 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x461, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x462)
-2025-05-13 10:14:31,700 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x464, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0000915)
-2025-05-13 10:14:31,701 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x465, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x466)
-2025-05-13 10:14:31,709 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x467, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x468)
-2025-05-13 10:14:31,709 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x470, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0000950)
-2025-05-13 10:14:31,710 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x471, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x472)
-2025-05-13 10:14:31,710 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x473, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x474)
-2025-05-13 10:14:31,710 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x475, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x476)
-2025-05-13 10:14:31,713 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x479, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,714 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x480, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x481)
-2025-05-13 10:14:31,716 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x483, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,716 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x484, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x485)
-2025-05-13 10:14:31,717 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x486, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x487)
-2025-05-13 10:14:31,718 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x489, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,719 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x490, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x491)
-2025-05-13 10:14:31,729 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x495, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:31,730 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x496, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ir4i71r5x497)
-2025-05-13 10:14:31,731 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x499, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020027)
-2025-05-13 10:14:31,732 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x500, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020097)
-2025-05-13 10:14:31,732 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x501, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020100)
-2025-05-13 10:14:31,732 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x502, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020107)
-2025-05-13 10:14:31,732 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x503, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020109)
-2025-05-13 10:14:31,733 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x504, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020110)
-2025-05-13 10:14:31,733 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x505, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020111)
-2025-05-13 10:14:31,734 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x507, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020006)
-2025-05-13 10:14:31,734 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x508, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020007)
-2025-05-13 10:14:31,734 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x509, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020008)
-2025-05-13 10:14:31,734 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x510, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020009)
-2025-05-13 10:14:31,735 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x511, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020010)
-2025-05-13 10:14:31,735 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x512, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020011)
-2025-05-13 10:14:31,736 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x513, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020012)
-2025-05-13 10:14:31,736 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x514, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020013)
-2025-05-13 10:14:31,736 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x515, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020014)
-2025-05-13 10:14:31,737 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x516, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020015)
-2025-05-13 10:14:31,737 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x517, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020016)
-2025-05-13 10:14:31,737 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x518, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020017)
-2025-05-13 10:14:31,738 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x519, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020018)
-2025-05-13 10:14:31,738 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x520, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020019)
-2025-05-13 10:14:31,739 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x522, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020117)
-2025-05-13 10:14:31,739 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x523, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020118)
-2025-05-13 10:14:31,739 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x524, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020119)
-2025-05-13 10:14:31,740 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x525, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020120)
-2025-05-13 10:14:31,740 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x526, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020121)
-2025-05-13 10:14:31,741 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x527, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020122)
-2025-05-13 10:14:31,741 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x528, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020123)
-2025-05-13 10:14:31,741 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x529, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020124)
-2025-05-13 10:14:31,741 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x530, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020125)
-2025-05-13 10:14:32,037 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Parsed: 10000 triples
-2025-05-13 10:14:32,524 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Parsed: 20000 triples
-2025-05-13 10:14:32,985 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Parsed: 30000 triples
-2025-05-13 10:14:33,354 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Parsed: 40000 triples
-2025-05-13 10:14:33,552 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x532, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
-2025-05-13 10:14:33,553 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x533, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
-2025-05-13 10:14:33,553 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x534, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000031)
-2025-05-13 10:14:33,553 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x536, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000006)
-2025-05-13 10:14:33,553 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x537, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000029)
-2025-05-13 10:14:33,553 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x538, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000140)
-2025-05-13 10:14:33,553 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x540, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000008)
-2025-05-13 10:14:33,554 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x541, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000011)
-2025-05-13 10:14:33,554 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x542, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
-2025-05-13 10:14:33,554 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x543, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
-2025-05-13 10:14:33,554 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x545, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000009)
-2025-05-13 10:14:33,554 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x546, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000018)
-2025-05-13 10:14:33,554 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x547, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000026)
-2025-05-13 10:14:33,554 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x548, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000028)
-2025-05-13 10:14:33,554 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x550, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000142)
-2025-05-13 10:14:33,554 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x551, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000146)
-2025-05-13 10:14:33,554 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ir4i71r5x552, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000147)
-2025-05-13 10:14:33,556 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Total number of triples: 45921
-2025-05-13 10:14:33,564 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
-2025-05-13 10:14:33,568 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193>)
-2025-05-13 10:14:33,572 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
-2025-05-13 10:14:33,573 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118>)
-2025-05-13 10:14:33,573 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
-2025-05-13 10:14:33,574 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114>)
-2025-05-13 10:14:33,574 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>
-2025-05-13 10:14:33,574 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000139>)
-2025-05-13 10:14:33,584 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
-2025-05-13 10:14:33,584 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026>)
-2025-05-13 10:14:33,586 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:33,587 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:33,588 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:33,588 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
-2025-05-13 10:14:33,590 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:33,590 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:33,591 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:33,591 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:33,591 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
-2025-05-13 10:14:33,591 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:33,591 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:33,591 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>))
-2025-05-13 10:14:33,595 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000029>
-2025-05-13 10:14:33,595 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000040>
-2025-05-13 10:14:33,595 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
-2025-05-13 10:14:33,596 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000031>
-2025-05-13 10:14:33,596 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:33,596 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:33,596 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>))
-2025-05-13 10:14:33,596 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:33,596 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
-2025-05-13 10:14:33,596 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:33,596 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:34,311 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000009>
-2025-05-13 10:14:34,311 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000018>
-2025-05-13 10:14:34,311 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000026>
-2025-05-13 10:14:34,311 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000028>
-2025-05-13 10:14:34,312 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000142>
-2025-05-13 10:14:34,312 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000146>
-2025-05-13 10:14:34,313 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000147>
-2025-05-13 10:14:34,313 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:34,313 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
-2025-05-13 10:14:34,313 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000031>
-2025-05-13 10:14:34,313 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000006>
-2025-05-13 10:14:34,313 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000029>
-2025-05-13 10:14:34,313 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000140>
-2025-05-13 10:14:34,313 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000008>
-2025-05-13 10:14:34,314 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000011>
-2025-05-13 10:14:34,314 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,314 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
-2025-05-13 10:14:34,322 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
-2025-05-13 10:14:34,322 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014>)
-2025-05-13 10:14:34,323 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000104>
-2025-05-13 10:14:34,325 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153>) <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000224>)
-2025-05-13 10:14:34,329 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,330 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232>)
-2025-05-13 10:14:34,330 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:34,330 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>)
-2025-05-13 10:14:34,331 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
-2025-05-13 10:14:34,331 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115>)
-2025-05-13 10:14:34,331 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
-2025-05-13 10:14:34,331 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115>)
-2025-05-13 10:14:34,331 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
-2025-05-13 10:14:34,332 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115>)
-2025-05-13 10:14:34,332 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115>)))
-2025-05-13 10:14:34,332 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
-2025-05-13 10:14:34,332 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002>)
-2025-05-13 10:14:34,333 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
-2025-05-13 10:14:34,333 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>)
-2025-05-13 10:14:34,335 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000040>
-2025-05-13 10:14:34,335 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0000915>
-2025-05-13 10:14:34,335 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>)
-2025-05-13 10:14:34,335 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000915> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>)))
-2025-05-13 10:14:34,336 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0000950>
-2025-05-13 10:14:34,336 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>)
-2025-05-13 10:14:34,336 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000950> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>)))
-2025-05-13 10:14:34,336 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000915> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000950> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>)))))
-2025-05-13 10:14:34,336 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0001029> <https://w3id.org/pmd/co/PMD_0000915>)
-2025-05-13 10:14:34,337 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0001030> <https://w3id.org/pmd/co/PMD_0000950>)
-2025-05-13 10:14:34,338 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,338 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> <http://purl.obolibrary.org/obo/BFO_0000004>)
-2025-05-13 10:14:34,338 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)
-2025-05-13 10:14:34,339 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001030>
-2025-05-13 10:14:34,339 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)
-2025-05-13 10:14:34,345 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectMinCardinality(2 <http://purl.obolibrary.org/obo/BFO_0000057> <http://purl.obolibrary.org/obo/BFO_0000004>)
-2025-05-13 10:14:34,346 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001051>
-2025-05-13 10:14:34,346 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> <http://purl.obolibrary.org/obo/BFO_0000004>)
-2025-05-13 10:14:34,347 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)
-2025-05-13 10:14:34,348 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001051>
-2025-05-13 10:14:34,348 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> <http://purl.obolibrary.org/obo/BFO_0000004>)
-2025-05-13 10:14:34,348 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)
-2025-05-13 10:14:34,348 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002>
-2025-05-13 10:14:34,348 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000132> <http://purls.helmholtz-metadaten.de/mwo/MWO_0001002>)
-2025-05-13 10:14:34,349 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001039>
-2025-05-13 10:14:34,349 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> <http://purls.helmholtz-metadaten.de/mwo/MWO_0001002>)
-2025-05-13 10:14:34,349 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001019>
-2025-05-13 10:14:34,351 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>
-2025-05-13 10:14:34,351 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000178> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000007>)
-2025-05-13 10:14:34,351 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>
-2025-05-13 10:14:34,351 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000110>)
-2025-05-13 10:14:34,352 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:34,352 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000030>
-2025-05-13 10:14:34,352 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/IAO_0000030>)
-2025-05-13 10:14:34,352 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153>) <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000224>)
-2025-05-13 10:14:34,352 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008>
-2025-05-13 10:14:34,352 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232>
-2025-05-13 10:14:34,352 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000141>
-2025-05-13 10:14:34,352 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>)
-2025-05-13 10:14:34,353 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000030>
-2025-05-13 10:14:34,353 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>)
-2025-05-13 10:14:34,353 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0060009>
-2025-05-13 10:14:34,353 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131>)
-2025-05-13 10:14:34,353 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
-2025-05-13 10:14:34,353 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>)
-2025-05-13 10:14:34,353 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131>
-2025-05-13 10:14:34,353 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
-2025-05-13 10:14:34,353 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000019>)
-2025-05-13 10:14:34,354 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000019>)))
-2025-05-13 10:14:34,355 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
-2025-05-13 10:14:34,355 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>)
-2025-05-13 10:14:34,356 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,356 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> <https://w3id.org/pmd/co/PMD_0000014>)
-2025-05-13 10:14:34,357 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,357 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000015> <http://purl.obolibrary.org/obo/BFO_0000040>)
-2025-05-13 10:14:34,357 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000016> <http://purl.obolibrary.org/obo/BFO_0000040>)
-2025-05-13 10:14:34,358 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000027>
-2025-05-13 10:14:34,358 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> <http://purl.obolibrary.org/obo/IAO_0000098>)
-2025-05-13 10:14:34,359 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
-2025-05-13 10:14:34,359 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>)
-2025-05-13 10:14:34,360 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000011>
-2025-05-13 10:14:34,360 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000227>)
-2025-05-13 10:14:34,360 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000059> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001002>)
-2025-05-13 10:14:34,361 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,361 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> <https://w3id.org/pmd/co/PMD_0000014>)
-2025-05-13 10:14:34,362 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000410>
-2025-05-13 10:14:34,362 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000420>
-2025-05-13 10:14:34,362 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000421>
-2025-05-13 10:14:34,362 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,362 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> <https://w3id.org/pmd/co/PMD_0000014>)
-2025-05-13 10:14:34,363 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020117>
-2025-05-13 10:14:34,363 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020118>
-2025-05-13 10:14:34,363 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020119>
-2025-05-13 10:14:34,363 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020120>
-2025-05-13 10:14:34,363 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020121>
-2025-05-13 10:14:34,363 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020122>
-2025-05-13 10:14:34,363 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020123>
-2025-05-13 10:14:34,363 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020124>
-2025-05-13 10:14:34,363 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020125>
-2025-05-13 10:14:34,364 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000033>
-2025-05-13 10:14:34,364 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153>) <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000224>)
-2025-05-13 10:14:34,365 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000023>
-2025-05-13 10:14:34,365 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>)
-2025-05-13 10:14:34,365 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,365 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000021>)
-2025-05-13 10:14:34,366 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000023>
-2025-05-13 10:14:34,366 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000101>)
-2025-05-13 10:14:34,366 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000030>
-2025-05-13 10:14:34,366 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153>) <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000224>)
-2025-05-13 10:14:34,366 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,366 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>)
-2025-05-13 10:14:34,366 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000141>
-2025-05-13 10:14:34,366 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000152>) <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000101>)
-2025-05-13 10:14:34,366 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
-2025-05-13 10:14:34,366 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000101>)
-2025-05-13 10:14:34,367 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
-2025-05-13 10:14:34,367 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118>)
-2025-05-13 10:14:34,369 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:34,369 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:34,369 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,369 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
-2025-05-13 10:14:34,369 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
-2025-05-13 10:14:34,370 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114>)
-2025-05-13 10:14:34,370 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022>
-2025-05-13 10:14:34,370 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002>)
-2025-05-13 10:14:34,370 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000300>
-2025-05-13 10:14:34,370 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198>)
-2025-05-13 10:14:34,370 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000033>
-2025-05-13 10:14:34,370 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000178> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000148>)
-2025-05-13 10:14:34,370 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000203>
-2025-05-13 10:14:34,370 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131>)
-2025-05-13 10:14:34,371 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
-2025-05-13 10:14:34,371 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>)
-2025-05-13 10:14:34,371 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
-2025-05-13 10:14:34,371 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>)
-2025-05-13 10:14:34,371 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000103>
-2025-05-13 10:14:34,371 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000226>
-2025-05-13 10:14:34,371 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000227>
-2025-05-13 10:14:34,371 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000228>
-2025-05-13 10:14:34,371 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000229>
-2025-05-13 10:14:34,371 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/OMO_0001000>
-2025-05-13 10:14:34,372 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:34,372 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:34,373 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:34,373 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020006>
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020007>
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020008>
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020009>
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020010>
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020011>
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020012>
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020013>
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020014>
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020015>
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020016>
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020017>
-2025-05-13 10:14:34,374 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020018>
-2025-05-13 10:14:34,375 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020019>
-2025-05-13 10:14:34,377 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000029>
-2025-05-13 10:14:34,377 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000040>
-2025-05-13 10:14:34,378 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:34,378 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:34,379 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:34,379 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:34,379 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
-2025-05-13 10:14:34,380 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:34,380 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:34,380 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>))
-2025-05-13 10:14:34,381 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,381 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
-2025-05-13 10:14:34,382 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000142>
-2025-05-13 10:14:34,382 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000147>
-2025-05-13 10:14:34,382 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020027>
-2025-05-13 10:14:34,382 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020097>
-2025-05-13 10:14:34,382 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020100>
-2025-05-13 10:14:34,382 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020107>
-2025-05-13 10:14:34,383 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020109>
-2025-05-13 10:14:34,383 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020110>
-2025-05-13 10:14:34,383 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020111>
-2025-05-13 10:14:34,384 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000009>
-2025-05-13 10:14:34,385 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000018>
-2025-05-13 10:14:34,385 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000026>
-2025-05-13 10:14:34,385 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,385 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
-2025-05-13 10:14:34,385 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
-2025-05-13 10:14:34,385 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000031>
-2025-05-13 10:14:34,385 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
-2025-05-13 10:14:34,385 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
-2025-05-13 10:14:34,386 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>))
-2025-05-13 10:14:34,386 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,386 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
-2025-05-13 10:14:34,386 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000029>
-2025-05-13 10:14:34,386 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000040>
-2025-05-13 10:14:34,386 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000029>
-2025-05-13 10:14:34,386 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000140>
-2025-05-13 10:14:34,387 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000018>
-2025-05-13 10:14:34,387 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000026>
-2025-05-13 10:14:34,387 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,387 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
-2025-05-13 10:14:34,387 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000029>
-2025-05-13 10:14:34,387 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000040>
-2025-05-13 10:14:34,387 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000140>
-2025-05-13 10:14:34,387 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,387 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
-2025-05-13 10:14:34,387 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
-2025-05-13 10:14:34,387 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
-2025-05-13 10:14:34,388 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000038>
-2025-05-13 10:14:34,388 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000148>
-2025-05-13 10:14:34,388 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000002>
-2025-05-13 10:14:34,388 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000120>
-2025-05-13 10:14:34,388 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000121>
-2025-05-13 10:14:34,388 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000122>
-2025-05-13 10:14:34,388 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000123>
-2025-05-13 10:14:34,388 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000124>
-2025-05-13 10:14:34,388 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000125>
-2025-05-13 10:14:34,388 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000423>
-2025-05-13 10:14:34,388 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000428>
-2025-05-13 10:14:34,506 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Loaded OntologyID(OntologyIRI(<http://purls.helmholtz-metadaten.de/mwo/mwo.owl>) VersionIRI(<http://purls.helmholtz-metadaten.de/mwo/mwo.owl/3.0.0>))
-2025-05-13 10:14:34,507 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - owlParse: timing=3260
-2025-05-13 10:14:34,508 DEBUG org.semanticweb.owlapi.rio.RioParserImpl - rioParse: timing=3264
-2025-05-13 10:14:34,612 WARN  uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007 in punning not allowed [Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>)), Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>))]
-2025-05-13 10:14:34,818 DEBUG org.apache.jena.util.FileManager - Add location: LocatorFile
-2025-05-13 10:14:34,819 DEBUG org.apache.jena.util.FileManager - Add location: ClassLoaderLocator
-2025-05-13 10:14:34,823 DEBUG org.apache.jena.util.LocationMapper - Failed to find configuration: file:location-mapping.rdf;file:location-mapping.n3;file:location-mapping.ttl;file:etc/location-mapping.rdf;file:etc/location-mapping.n3;file:etc/location-mapping.ttl
-2025-05-13 10:14:34,824 DEBUG org.apache.jena.util.FileManager - Add location: LocatorFile
-2025-05-13 10:14:34,826 DEBUG org.apache.jena.util.FileManager - Add location: LocatorURL
-2025-05-13 10:14:34,826 DEBUG org.apache.jena.util.FileManager - Add location: ClassLoaderLocator
-2025-05-13 10:14:34,836 DEBUG org.apache.jena.riot.system.stream.JenaIOEnvironment - Failed to find configuration: location-mapping.ttl;location-mapping.rdf;etc/location-mapping.rdf;etc/location-mapping.ttl
-2025-05-13 10:14:35,116 DEBUG org.apache.jena.info - System architecture: 64 bit
-2025-05-13 10:14:35,147 DEBUG org.apache.jena.shared.LockMRSW - Lock : main
-2025-05-13 10:14:35,149 DEBUG org.apache.jena.shared.LockMRSW - Lock : main
-2025-05-13 10:14:37,057 DEBUG org.obolibrary.robot.QueryOperation - Converted ontology to model - took 1.904 seconds
-2025-05-13 10:14:37,058 INFO  org.obolibrary.robot.QueryOperation - Named graph added: http://purls.helmholtz-metadaten.de/mwo/mwo.owl
-2025-05-13 10:14:37,061 DEBUG org.obolibrary.robot.QueryOperation - Loaded ontology into Jena dataset - took 2.41 seconds
-FAIL Rule shapes/verify1.sparql: 47 violation(s)
+2025-05-16 14:52:10,369 DEBUG org.obolibrary.robot.IOHelper - Loading ontology data/all.ttl with catalog file null
+2025-05-16 14:52:10,374 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyManager
+2025-05-16 14:52:10,375 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyManager
+2025-05-16 14:52:10,376 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyManager
+2025-05-16 14:52:10,376 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyManager
+2025-05-16 14:52:10,421 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLDataFactory
+2025-05-16 14:52:10,422 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLDataFactory
+2025-05-16 14:52:10,423 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLDataFactory
+2025-05-16 14:52:10,423 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLDataFactory
+2025-05-16 14:52:10,435 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@674658f7
+2025-05-16 14:52:10,460 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2025-05-16 14:52:10,461 DEBUG org.semanticweb.owlapi.utilities.Injector - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2025-05-16 14:52:10,461 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2025-05-16 14:52:10,462 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
+2025-05-16 14:52:10,463 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
+2025-05-16 14:52:10,463 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
+2025-05-16 14:52:10,464 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.io.OWLParserFactory
+2025-05-16 14:52:10,505 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[org.semanticweb.owlapi.rio.RioRDFaParserFactory@9ed238c, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@239b0f9d, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@60f7cc1d, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@5827af16, org.semanticweb.owlapi.rio.RioTrixParserFactory@5b080f3a, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@7be58f16, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@45cff11c, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@5b64c4b7, org.semanticweb.owlapi.rio.RioTurtleParserFactory@7d3430a7, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@33e01298, org.semanticweb.owlapi.rio.RioN3ParserFactory@1433046b, org.semanticweb.owlapi.rio.RioTrigParserFactory@20b5f2ac, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@636e8cc, org.semanticweb.owlapi.rio.RioJsonParserFactory@2f9a01c1, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@1c80e49b, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@78fb9a67, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@652a7737, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@36676c1a]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2025-05-16 14:52:10,506 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyFactory
+2025-05-16 14:52:10,507 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyFactory
+2025-05-16 14:52:10,507 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyFactory
+2025-05-16 14:52:10,507 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLOntologyFactory
+2025-05-16 14:52:10,511 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@1de5f0ef]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2025-05-16 14:52:10,514 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
+2025-05-16 14:52:10,515 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
+2025-05-16 14:52:10,516 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
+2025-05-16 14:52:10,517 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading URL for service jar:file:/tools/robot.jar!/META-INF/services/org.semanticweb.owlapi.model.OWLStorerFactory
+2025-05-16 14:52:10,525 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@7383eae2, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@107ed6fc, org.semanticweb.owlapi.rio.RioJsonStorerFactory@2e029d61, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@48c35007, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@6d0b5baf, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@297ea53a, org.semanticweb.owlapi.rio.RioN3StorerFactory@482d776b, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@132ddbab, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@346a361, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@7a48e6e2, org.semanticweb.owlapi.rio.RioTrixStorerFactory@5bf22f18, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@1643d68f, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@186978a6, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@267f474e, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@18245eb0, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@72a85671, org.semanticweb.owlapi.rio.RioTrigStorerFactory@acb0951, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@7c7d3c46, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@24fb6a80, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@4052274f]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2025-05-16 14:52:10,886 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.binary.BinaryRDFParserFactory
+2025-05-16 14:52:10,890 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.n3.N3ParserFactory
+2025-05-16 14:52:10,891 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.nquads.NQuadsParserFactory
+2025-05-16 14:52:10,892 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.ntriples.NTriplesParserFactory
+2025-05-16 14:52:10,893 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.rdfjson.RDFJSONParserFactory
+2025-05-16 14:52:10,894 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.rdfxml.RDFXMLParserFactory
+2025-05-16 14:52:10,895 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.trix.TriXParserFactory
+2025-05-16 14:52:10,895 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.turtle.TurtleParserFactory
+2025-05-16 14:52:10,897 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.turtlestar.TurtleStarParserFactory
+2025-05-16 14:52:10,898 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.trig.TriGParserFactory
+2025-05-16 14:52:10,898 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.trigstar.TriGStarParserFactory
+2025-05-16 14:52:10,899 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.jsonld.JSONLDParserFactory
+2025-05-16 14:52:10,899 DEBUG org.eclipse.rdf4j.rio.RDFParserRegistry - Registered service class org.eclipse.rdf4j.rio.ndjsonld.NDJSONLDParserFactory
+2025-05-16 14:52:10,922 DEBUG org.eclipse.rdf4j.rio.DatatypeHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.datatypes.XMLSchemaDatatypeHandler
+2025-05-16 14:52:10,923 DEBUG org.eclipse.rdf4j.rio.DatatypeHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.datatypes.RDFDatatypeHandler
+2025-05-16 14:52:10,923 DEBUG org.eclipse.rdf4j.rio.DatatypeHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.datatypes.DBPediaDatatypeHandler
+2025-05-16 14:52:10,924 DEBUG org.eclipse.rdf4j.rio.DatatypeHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.datatypes.VirtuosoGeometryDatatypeHandler
+2025-05-16 14:52:10,924 DEBUG org.eclipse.rdf4j.rio.DatatypeHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.datatypes.GeoSPARQLDatatypeHandler
+2025-05-16 14:52:10,936 DEBUG org.eclipse.rdf4j.rio.LanguageHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.languages.RFC3066LanguageHandler
+2025-05-16 14:52:10,937 DEBUG org.eclipse.rdf4j.rio.LanguageHandlerRegistry - Registered service class org.eclipse.rdf4j.rio.languages.BCP47LanguageHandler
+2025-05-16 14:52:11,173 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx2, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
+2025-05-16 14:52:11,174 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx3, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000031)
+2025-05-16 14:52:11,175 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx4, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx5)
+2025-05-16 14:52:11,175 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx6, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,176 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx7, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx8)
+2025-05-16 14:52:11,178 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx10, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
+2025-05-16 14:52:11,178 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx11, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000031)
+2025-05-16 14:52:11,178 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx12, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx13)
+2025-05-16 14:52:11,179 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx14, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,179 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx15, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx16)
+2025-05-16 14:52:11,181 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx18, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:11,182 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx19, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
+2025-05-16 14:52:11,194 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx21, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:11,195 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx22, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
+2025-05-16 14:52:11,207 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx24, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:11,208 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx25, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
+2025-05-16 14:52:11,209 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx27, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000029)
+2025-05-16 14:52:11,216 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx28, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000040)
+2025-05-16 14:52:11,226 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx30, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,226 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx31, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx32)
+2025-05-16 14:52:11,227 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx34, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,228 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx35, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx36)
+2025-05-16 14:52:11,259 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx40, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,259 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx41, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx42)
+2025-05-16 14:52:11,260 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx44, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,260 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx45, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx46)
+2025-05-16 14:52:11,276 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx50, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,276 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx51, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx52)
+2025-05-16 14:52:11,277 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx54, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,277 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx55, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx56)
+2025-05-16 14:52:11,293 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx58, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000029)
+2025-05-16 14:52:11,293 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx59, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000040)
+2025-05-16 14:52:11,293 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx61, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:11,294 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx62, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
+2025-05-16 14:52:11,299 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx64, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
+2025-05-16 14:52:11,300 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx65, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx66)
+2025-05-16 14:52:11,300 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx67, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,301 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx68, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx69)
+2025-05-16 14:52:11,302 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx71, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
+2025-05-16 14:52:11,303 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx72, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx73)
+2025-05-16 14:52:11,303 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx74, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,303 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx75, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx76)
+2025-05-16 14:52:11,304 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx79, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,305 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx80, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx81)
+2025-05-16 14:52:11,306 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx84, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,306 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx85, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx86)
+2025-05-16 14:52:11,312 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx88, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:11,312 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx89, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
+2025-05-16 14:52:11,314 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx91, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:11,314 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx92, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
+2025-05-16 14:52:11,316 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx94, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:11,316 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx95, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx96)
+2025-05-16 14:52:11,374 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx103, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
+2025-05-16 14:52:11,375 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx104, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx105)
+2025-05-16 14:52:11,378 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx109, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
+2025-05-16 14:52:11,378 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx110, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx111)
+2025-05-16 14:52:11,390 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx119, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003)
+2025-05-16 14:52:11,391 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx120, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx121)
+2025-05-16 14:52:11,413 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx135, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
+2025-05-16 14:52:11,413 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx136, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx137)
+2025-05-16 14:52:11,443 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx161, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
+2025-05-16 14:52:11,445 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx162, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx163)
+2025-05-16 14:52:11,813 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx189, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000009)
+2025-05-16 14:52:11,814 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx190, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000018)
+2025-05-16 14:52:11,814 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx191, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000026)
+2025-05-16 14:52:11,836 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx196, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:11,837 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx197, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
+2025-05-16 14:52:11,960 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx222, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000018)
+2025-05-16 14:52:11,961 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx223, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000026)
+2025-05-16 14:52:12,023 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx227, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000029)
+2025-05-16 14:52:12,023 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx228, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000040)
+2025-05-16 14:52:12,024 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx231, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000029)
+2025-05-16 14:52:12,024 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx232, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000140)
+2025-05-16 14:52:12,068 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx242, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:12,069 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx243, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
+2025-05-16 14:52:12,082 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx246, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:12,082 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx247, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
+2025-05-16 14:52:12,103 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx250, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000038)
+2025-05-16 14:52:12,104 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx251, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000148)
+2025-05-16 14:52:12,120 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx256, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000029)
+2025-05-16 14:52:12,121 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx257, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000040)
+2025-05-16 14:52:12,121 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx258, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000140)
+2025-05-16 14:52:12,159 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx263, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000142)
+2025-05-16 14:52:12,160 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx264, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000147)
+2025-05-16 14:52:12,281 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx271, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000002)
+2025-05-16 14:52:12,281 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx272, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000120)
+2025-05-16 14:52:12,281 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx273, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000121)
+2025-05-16 14:52:12,282 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx274, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000122)
+2025-05-16 14:52:12,282 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx275, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000123)
+2025-05-16 14:52:12,282 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx276, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000124)
+2025-05-16 14:52:12,282 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx277, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000125)
+2025-05-16 14:52:12,282 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx278, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000423)
+2025-05-16 14:52:12,282 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx279, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000428)
+2025-05-16 14:52:12,283 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Parsed: 10000 triples
+2025-05-16 14:52:12,310 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx283, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000103)
+2025-05-16 14:52:12,311 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx284, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000226)
+2025-05-16 14:52:12,311 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx285, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000227)
+2025-05-16 14:52:12,311 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx286, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000228)
+2025-05-16 14:52:12,315 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx287, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000229)
+2025-05-16 14:52:12,315 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx288, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/OMO_0001000)
+2025-05-16 14:52:12,333 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx291, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000410)
+2025-05-16 14:52:12,333 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx292, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000420)
+2025-05-16 14:52:12,333 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx293, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000421)
+2025-05-16 14:52:12,437 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx299, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0060009)
+2025-05-16 14:52:12,438 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx300, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx301)
+2025-05-16 14:52:12,439 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx303, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purls.helmholtz-metadaten.de/mwo/MWO_0001019)
+2025-05-16 14:52:12,454 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx305, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001039)
+2025-05-16 14:52:12,454 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx306, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx307)
+2025-05-16 14:52:12,459 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx310, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002)
+2025-05-16 14:52:12,460 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx311, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx312)
+2025-05-16 14:52:12,461 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx315, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purls.helmholtz-metadaten.de/mwo/MWO_0001051)
+2025-05-16 14:52:12,461 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx316, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx317)
+2025-05-16 14:52:12,461 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx318, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx319)
+2025-05-16 14:52:12,466 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx321, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purls.helmholtz-metadaten.de/mwo/MWO_0001030)
+2025-05-16 14:52:12,466 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx322, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx323)
+2025-05-16 14:52:12,467 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx324, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx325)
+2025-05-16 14:52:12,528 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx327, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purls.helmholtz-metadaten.de/mwo/MWO_0001051)
+2025-05-16 14:52:12,529 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx328, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx329)
+2025-05-16 14:52:12,529 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx330, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx331)
+2025-05-16 14:52:12,543 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx333, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:12,544 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx334, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx335)
+2025-05-16 14:52:12,544 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx336, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx337)
+2025-05-16 14:52:12,558 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx341, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008)
+2025-05-16 14:52:12,560 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx342, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232)
+2025-05-16 14:52:12,567 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx344, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000141)
+2025-05-16 14:52:12,567 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx345, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx346)
+2025-05-16 14:52:12,568 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx348, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000141)
+2025-05-16 14:52:12,568 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx349, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx350)
+2025-05-16 14:52:12,578 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx352, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000030)
+2025-05-16 14:52:12,579 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx353, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx354)
+2025-05-16 14:52:12,605 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx356, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003)
+2025-05-16 14:52:12,605 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx357, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx358)
+2025-05-16 14:52:12,610 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx360, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003)
+2025-05-16 14:52:12,610 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx361, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx362)
+2025-05-16 14:52:12,618 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx364, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx365)
+2025-05-16 14:52:12,618 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx366, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:12,618 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx367, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000030)
+2025-05-16 14:52:12,618 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx368, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx369)
+2025-05-16 14:52:12,649 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx374, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
+2025-05-16 14:52:12,650 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx375, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx376)
+2025-05-16 14:52:12,654 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx378, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131)
+2025-05-16 14:52:12,662 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx379, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx380)
+2025-05-16 14:52:12,663 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx382, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
+2025-05-16 14:52:12,664 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx383, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx384)
+2025-05-16 14:52:12,671 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx386, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
+2025-05-16 14:52:12,672 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx387, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx388)
+2025-05-16 14:52:12,681 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx390, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
+2025-05-16 14:52:12,681 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx391, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx392)
+2025-05-16 14:52:12,685 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx394, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000011)
+2025-05-16 14:52:12,686 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx395, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx396)
+2025-05-16 14:52:12,686 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx397, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx398)
+2025-05-16 14:52:12,704 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx400, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000027)
+2025-05-16 14:52:12,705 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx401, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx402)
+2025-05-16 14:52:12,720 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx404, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:12,722 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx405, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx406)
+2025-05-16 14:52:12,726 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx408, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:12,726 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx409, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx410)
+2025-05-16 14:52:12,747 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx413, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
+2025-05-16 14:52:12,748 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx414, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx415)
+2025-05-16 14:52:12,765 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx418, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
+2025-05-16 14:52:12,765 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx419, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx420)
+2025-05-16 14:52:12,765 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx421, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx422)
+2025-05-16 14:52:12,765 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx424, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
+2025-05-16 14:52:12,765 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx425, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx426)
+2025-05-16 14:52:12,766 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx430, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
+2025-05-16 14:52:12,766 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx431, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx432)
+2025-05-16 14:52:12,788 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx434, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
+2025-05-16 14:52:12,789 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx435, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx436)
+2025-05-16 14:52:12,808 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx438, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
+2025-05-16 14:52:12,809 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx439, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx440)
+2025-05-16 14:52:12,815 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx442, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000104)
+2025-05-16 14:52:12,815 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx443, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx444)
+2025-05-16 14:52:12,822 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx447, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000033)
+2025-05-16 14:52:12,822 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx448, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx449)
+2025-05-16 14:52:12,841 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx452, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000030)
+2025-05-16 14:52:12,842 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx453, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx454)
+2025-05-16 14:52:12,845 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx457, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:12,848 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx458, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx459)
+2025-05-16 14:52:12,853 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx461, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:12,854 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx462, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx463)
+2025-05-16 14:52:12,856 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx465, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000023)
+2025-05-16 14:52:12,857 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx466, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx467)
+2025-05-16 14:52:12,859 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx469, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000023)
+2025-05-16 14:52:12,859 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx470, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx471)
+2025-05-16 14:52:12,862 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx473, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
+2025-05-16 14:52:12,862 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx474, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx475)
+2025-05-16 14:52:12,867 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx477, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
+2025-05-16 14:52:12,871 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx478, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx479)
+2025-05-16 14:52:12,875 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx481, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000141)
+2025-05-16 14:52:12,876 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx482, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx483)
+2025-05-16 14:52:12,880 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx486, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000300)
+2025-05-16 14:52:12,880 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx487, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx488)
+2025-05-16 14:52:12,888 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx490, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022)
+2025-05-16 14:52:12,888 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx491, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx492)
+2025-05-16 14:52:12,906 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx494, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102)
+2025-05-16 14:52:12,909 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx495, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx496)
+2025-05-16 14:52:12,923 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx498, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/IAO_0000033)
+2025-05-16 14:52:12,923 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx499, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx500)
+2025-05-16 14:52:12,957 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx502, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000203)
+2025-05-16 14:52:12,959 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx503, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx504)
+2025-05-16 14:52:12,962 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx507, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
+2025-05-16 14:52:12,962 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx508, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx509)
+2025-05-16 14:52:12,973 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx511, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229)
+2025-05-16 14:52:12,974 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx512, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx513)
+2025-05-16 14:52:13,017 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx515, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx516)
+2025-05-16 14:52:13,018 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx518, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000040)
+2025-05-16 14:52:13,018 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx519, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx520)
+2025-05-16 14:52:13,018 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx522, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0000915)
+2025-05-16 14:52:13,018 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx523, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx524)
+2025-05-16 14:52:13,019 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx525, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx526)
+2025-05-16 14:52:13,019 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx528, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0000950)
+2025-05-16 14:52:13,019 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx529, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx530)
+2025-05-16 14:52:13,019 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx531, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx532)
+2025-05-16 14:52:13,020 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx533, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx534)
+2025-05-16 14:52:13,023 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx537, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:13,023 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx538, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx539)
+2025-05-16 14:52:13,025 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx541, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:13,035 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx542, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx543)
+2025-05-16 14:52:13,041 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx544, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx545)
+2025-05-16 14:52:13,041 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx547, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:13,041 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx548, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx549)
+2025-05-16 14:52:13,066 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx553, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:13,066 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx554, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, _:node1ircp9jrnx555)
+2025-05-16 14:52:13,068 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx557, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020027)
+2025-05-16 14:52:13,068 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx558, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020097)
+2025-05-16 14:52:13,068 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx559, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020100)
+2025-05-16 14:52:13,068 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx560, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020107)
+2025-05-16 14:52:13,069 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx561, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020109)
+2025-05-16 14:52:13,069 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx562, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020110)
+2025-05-16 14:52:13,069 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx563, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020111)
+2025-05-16 14:52:13,071 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx565, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020006)
+2025-05-16 14:52:13,071 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx566, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020007)
+2025-05-16 14:52:13,071 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx567, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020008)
+2025-05-16 14:52:13,072 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx568, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020009)
+2025-05-16 14:52:13,072 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx569, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020010)
+2025-05-16 14:52:13,072 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx570, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020011)
+2025-05-16 14:52:13,072 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx571, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020012)
+2025-05-16 14:52:13,072 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx572, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020013)
+2025-05-16 14:52:13,072 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx573, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020014)
+2025-05-16 14:52:13,072 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx574, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020015)
+2025-05-16 14:52:13,072 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx575, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020016)
+2025-05-16 14:52:13,072 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx576, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020017)
+2025-05-16 14:52:13,072 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx577, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020018)
+2025-05-16 14:52:13,072 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx578, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020019)
+2025-05-16 14:52:13,073 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx580, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020117)
+2025-05-16 14:52:13,073 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx581, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020118)
+2025-05-16 14:52:13,073 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx582, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020119)
+2025-05-16 14:52:13,073 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx583, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020120)
+2025-05-16 14:52:13,073 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx584, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020121)
+2025-05-16 14:52:13,073 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx585, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020122)
+2025-05-16 14:52:13,073 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx586, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020123)
+2025-05-16 14:52:13,074 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx587, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020124)
+2025-05-16 14:52:13,074 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx588, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, https://w3id.org/pmd/co/PMD_0020125)
+2025-05-16 14:52:13,092 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Parsed: 20000 triples
+2025-05-16 14:52:13,993 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Parsed: 30000 triples
+2025-05-16 14:52:15,085 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Parsed: 40000 triples
+2025-05-16 14:52:16,229 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Parsed: 50000 triples
+2025-05-16 14:52:16,905 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Parsed: 60000 triples
+2025-05-16 14:52:17,550 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Parsed: 70000 triples
+2025-05-16 14:52:17,845 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx590, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000004)
+2025-05-16 14:52:17,845 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx591, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000020)
+2025-05-16 14:52:17,845 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx592, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000031)
+2025-05-16 14:52:17,846 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx594, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000006)
+2025-05-16 14:52:17,846 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx595, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000029)
+2025-05-16 14:52:17,846 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx596, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000140)
+2025-05-16 14:52:17,846 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx598, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000008)
+2025-05-16 14:52:17,846 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx599, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000011)
+2025-05-16 14:52:17,846 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx600, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000015)
+2025-05-16 14:52:17,846 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx601, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000035)
+2025-05-16 14:52:17,846 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx603, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000009)
+2025-05-16 14:52:17,846 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx604, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000018)
+2025-05-16 14:52:17,847 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx605, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000026)
+2025-05-16 14:52:17,847 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx606, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000028)
+2025-05-16 14:52:17,847 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx608, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000142)
+2025-05-16 14:52:17,847 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx609, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000146)
+2025-05-16 14:52:17,847 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - Implicitly typing list=(_:node1ircp9jrnx610, http://www.w3.org/1999/02/22-rdf-syntax-ns#first, http://purl.obolibrary.org/obo/BFO_0000147)
+2025-05-16 14:52:17,849 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Total number of triples: 75665
+2025-05-16 14:52:17,867 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
+2025-05-16 14:52:17,967 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193>)
+2025-05-16 14:52:17,974 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
+2025-05-16 14:52:17,975 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118>)
+2025-05-16 14:52:17,977 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
+2025-05-16 14:52:18,000 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114>)
+2025-05-16 14:52:18,015 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>
+2025-05-16 14:52:18,016 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000139>)
+2025-05-16 14:52:18,036 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
+2025-05-16 14:52:18,037 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026>)
+2025-05-16 14:52:18,043 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:18,050 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:18,052 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:18,052 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
+2025-05-16 14:52:18,054 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:18,054 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:18,055 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:18,055 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:18,055 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
+2025-05-16 14:52:18,055 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:18,055 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:18,055 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>))
+2025-05-16 14:52:18,059 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000029>
+2025-05-16 14:52:18,059 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000040>
+2025-05-16 14:52:18,060 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
+2025-05-16 14:52:18,060 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000031>
+2025-05-16 14:52:18,060 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:18,060 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:18,060 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>))
+2025-05-16 14:52:18,060 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:18,060 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
+2025-05-16 14:52:18,063 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:18,063 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:19,549 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000142>
+2025-05-16 14:52:19,549 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000146>
+2025-05-16 14:52:19,549 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000147>
+2025-05-16 14:52:19,550 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000009>
+2025-05-16 14:52:19,550 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000018>
+2025-05-16 14:52:19,550 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000026>
+2025-05-16 14:52:19,550 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000028>
+2025-05-16 14:52:19,551 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:19,551 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
+2025-05-16 14:52:19,551 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000031>
+2025-05-16 14:52:19,551 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000006>
+2025-05-16 14:52:19,552 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000029>
+2025-05-16 14:52:19,552 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000140>
+2025-05-16 14:52:19,552 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000008>
+2025-05-16 14:52:19,552 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000011>
+2025-05-16 14:52:19,552 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,552 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
+2025-05-16 14:52:19,568 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
+2025-05-16 14:52:19,568 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014>)
+2025-05-16 14:52:19,569 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000104>
+2025-05-16 14:52:19,569 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153>) <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000224>)
+2025-05-16 14:52:19,573 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,573 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232>)
+2025-05-16 14:52:19,574 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:19,574 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>)
+2025-05-16 14:52:19,575 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
+2025-05-16 14:52:19,576 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115>)
+2025-05-16 14:52:19,576 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
+2025-05-16 14:52:19,576 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115>)
+2025-05-16 14:52:19,577 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
+2025-05-16 14:52:19,579 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115>)
+2025-05-16 14:52:19,579 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115>)))
+2025-05-16 14:52:19,580 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
+2025-05-16 14:52:19,580 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002>)
+2025-05-16 14:52:19,581 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
+2025-05-16 14:52:19,581 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>)
+2025-05-16 14:52:19,587 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000040>
+2025-05-16 14:52:19,588 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0000915>
+2025-05-16 14:52:19,588 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>)
+2025-05-16 14:52:19,588 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000915> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>)))
+2025-05-16 14:52:19,588 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0000950>
+2025-05-16 14:52:19,588 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>)
+2025-05-16 14:52:19,588 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000950> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>)))
+2025-05-16 14:52:19,589 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000040> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000915> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>))) ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> ObjectIntersectionOf(<https://w3id.org/pmd/co/PMD_0000950> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000199> <http://purl.obolibrary.org/obo/BFO_0000008>)))))
+2025-05-16 14:52:19,589 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0001029> <https://w3id.org/pmd/co/PMD_0000915>)
+2025-05-16 14:52:19,589 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0001030> <https://w3id.org/pmd/co/PMD_0000950>)
+2025-05-16 14:52:19,590 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,590 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> <http://purl.obolibrary.org/obo/BFO_0000004>)
+2025-05-16 14:52:19,590 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)
+2025-05-16 14:52:19,591 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001030>
+2025-05-16 14:52:19,591 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)
+2025-05-16 14:52:19,598 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectMinCardinality(2 <http://purl.obolibrary.org/obo/BFO_0000057> <http://purl.obolibrary.org/obo/BFO_0000004>)
+2025-05-16 14:52:19,599 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001051>
+2025-05-16 14:52:19,599 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> <http://purl.obolibrary.org/obo/BFO_0000004>)
+2025-05-16 14:52:19,600 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)
+2025-05-16 14:52:19,600 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001051>
+2025-05-16 14:52:19,600 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> <http://purl.obolibrary.org/obo/BFO_0000004>)
+2025-05-16 14:52:19,600 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001>)
+2025-05-16 14:52:19,600 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002>
+2025-05-16 14:52:19,600 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000132> <http://purls.helmholtz-metadaten.de/mwo/MWO_0001002>)
+2025-05-16 14:52:19,601 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001039>
+2025-05-16 14:52:19,612 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000056> <http://purls.helmholtz-metadaten.de/mwo/MWO_0001002>)
+2025-05-16 14:52:19,613 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001019>
+2025-05-16 14:52:19,626 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>
+2025-05-16 14:52:19,627 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000178> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000007>)
+2025-05-16 14:52:19,627 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>
+2025-05-16 14:52:19,628 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000110>)
+2025-05-16 14:52:19,629 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:19,629 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000030>
+2025-05-16 14:52:19,629 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectUnionOf(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/IAO_0000030>)
+2025-05-16 14:52:19,629 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153>) <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000224>)
+2025-05-16 14:52:19,630 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000008>
+2025-05-16 14:52:19,630 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232>
+2025-05-16 14:52:19,630 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000141>
+2025-05-16 14:52:19,630 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>)
+2025-05-16 14:52:19,630 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000141>
+2025-05-16 14:52:19,630 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>)
+2025-05-16 14:52:19,631 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000030>
+2025-05-16 14:52:19,631 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>)
+2025-05-16 14:52:19,631 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0060009>
+2025-05-16 14:52:19,631 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectAllValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131>)
+2025-05-16 14:52:19,631 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
+2025-05-16 14:52:19,631 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>)
+2025-05-16 14:52:19,631 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131>
+2025-05-16 14:52:19,632 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
+2025-05-16 14:52:19,632 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000019>)
+2025-05-16 14:52:19,632 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> ObjectIntersectionOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102> ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000019>)))
+2025-05-16 14:52:19,632 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
+2025-05-16 14:52:19,632 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>)
+2025-05-16 14:52:19,632 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,632 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> <https://w3id.org/pmd/co/PMD_0000014>)
+2025-05-16 14:52:19,633 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,633 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000015> <http://purl.obolibrary.org/obo/BFO_0000040>)
+2025-05-16 14:52:19,633 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://w3id.org/pmd/co/PMD_0000016> <http://purl.obolibrary.org/obo/BFO_0000040>)
+2025-05-16 14:52:19,633 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000027>
+2025-05-16 14:52:19,633 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> <http://purl.obolibrary.org/obo/IAO_0000098>)
+2025-05-16 14:52:19,633 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
+2025-05-16 14:52:19,633 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>)
+2025-05-16 14:52:19,633 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000011>
+2025-05-16 14:52:19,634 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000227>)
+2025-05-16 14:52:19,645 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000059> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001002>)
+2025-05-16 14:52:19,661 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,677 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> <https://w3id.org/pmd/co/PMD_0000014>)
+2025-05-16 14:52:19,677 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000410>
+2025-05-16 14:52:19,677 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000420>
+2025-05-16 14:52:19,677 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000421>
+2025-05-16 14:52:19,678 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,678 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> <https://w3id.org/pmd/co/PMD_0000014>)
+2025-05-16 14:52:19,678 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020117>
+2025-05-16 14:52:19,678 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020118>
+2025-05-16 14:52:19,679 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020119>
+2025-05-16 14:52:19,679 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020120>
+2025-05-16 14:52:19,679 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020121>
+2025-05-16 14:52:19,679 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020122>
+2025-05-16 14:52:19,679 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020123>
+2025-05-16 14:52:19,679 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020124>
+2025-05-16 14:52:19,679 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020125>
+2025-05-16 14:52:19,680 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000033>
+2025-05-16 14:52:19,680 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153>) <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000224>)
+2025-05-16 14:52:19,681 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000023>
+2025-05-16 14:52:19,681 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>)
+2025-05-16 14:52:19,681 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,681 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000055> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000021>)
+2025-05-16 14:52:19,681 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000023>
+2025-05-16 14:52:19,682 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000101>)
+2025-05-16 14:52:19,682 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000030>
+2025-05-16 14:52:19,682 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000153>) <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000224>)
+2025-05-16 14:52:19,682 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,682 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000057> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>)
+2025-05-16 14:52:19,682 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000141>
+2025-05-16 14:52:19,682 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(ObjectInverseOf(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000152>) <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000101>)
+2025-05-16 14:52:19,682 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
+2025-05-16 14:52:19,682 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000054> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000101>)
+2025-05-16 14:52:19,682 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
+2025-05-16 14:52:19,682 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118>)
+2025-05-16 14:52:19,695 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:19,695 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:19,695 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,695 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
+2025-05-16 14:52:19,696 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102>
+2025-05-16 14:52:19,696 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000196> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114>)
+2025-05-16 14:52:19,696 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000022>
+2025-05-16 14:52:19,696 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000136> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002>)
+2025-05-16 14:52:19,696 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000300>
+2025-05-16 14:52:19,696 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198>)
+2025-05-16 14:52:19,696 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000033>
+2025-05-16 14:52:19,696 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000178> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000148>)
+2025-05-16 14:52:19,697 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000203>
+2025-05-16 14:52:19,697 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/IAO_0000219> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131>)
+2025-05-16 14:52:19,697 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
+2025-05-16 14:52:19,697 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>)
+2025-05-16 14:52:19,697 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000229>
+2025-05-16 14:52:19,697 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectSomeValuesFrom(<http://purl.obolibrary.org/obo/BFO_0000197> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>)
+2025-05-16 14:52:19,698 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000103>
+2025-05-16 14:52:19,698 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000226>
+2025-05-16 14:52:19,698 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000227>
+2025-05-16 14:52:19,698 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000228>
+2025-05-16 14:52:19,698 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000229>
+2025-05-16 14:52:19,698 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/OMO_0001000>
+2025-05-16 14:52:19,709 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:19,710 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:19,710 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:19,710 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020006>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020007>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020008>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020009>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020010>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020011>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020012>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020013>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020014>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020015>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020016>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020017>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020018>
+2025-05-16 14:52:19,711 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020019>
+2025-05-16 14:52:19,712 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000029>
+2025-05-16 14:52:19,712 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000040>
+2025-05-16 14:52:19,712 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:19,712 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:19,712 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:19,712 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>))
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000142>
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000147>
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020027>
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020097>
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020100>
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020107>
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020109>
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020110>
+2025-05-16 14:52:19,713 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <https://w3id.org/pmd/co/PMD_0020111>
+2025-05-16 14:52:19,725 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000009>
+2025-05-16 14:52:19,725 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000018>
+2025-05-16 14:52:19,725 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000026>
+2025-05-16 14:52:19,726 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,726 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
+2025-05-16 14:52:19,726 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
+2025-05-16 14:52:19,726 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000031>
+2025-05-16 14:52:19,726 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000004>
+2025-05-16 14:52:19,726 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>)
+2025-05-16 14:52:19,726 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: ObjectIntersectionOf(<http://purl.obolibrary.org/obo/BFO_0000004> ObjectComplementOf(<http://purl.obolibrary.org/obo/BFO_0000006>))
+2025-05-16 14:52:19,726 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,726 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000020>
+2025-05-16 14:52:19,726 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000029>
+2025-05-16 14:52:19,726 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000140>
+2025-05-16 14:52:19,727 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000029>
+2025-05-16 14:52:19,727 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000040>
+2025-05-16 14:52:19,727 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000018>
+2025-05-16 14:52:19,727 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000026>
+2025-05-16 14:52:19,727 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,727 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
+2025-05-16 14:52:19,727 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000029>
+2025-05-16 14:52:19,727 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000040>
+2025-05-16 14:52:19,727 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000140>
+2025-05-16 14:52:19,727 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,727 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
+2025-05-16 14:52:19,727 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000015>
+2025-05-16 14:52:19,728 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000035>
+2025-05-16 14:52:19,728 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000038>
+2025-05-16 14:52:19,728 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/BFO_0000148>
+2025-05-16 14:52:19,728 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000002>
+2025-05-16 14:52:19,728 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000120>
+2025-05-16 14:52:19,728 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000121>
+2025-05-16 14:52:19,728 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000122>
+2025-05-16 14:52:19,728 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000123>
+2025-05-16 14:52:19,728 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000124>
+2025-05-16 14:52:19,728 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000125>
+2025-05-16 14:52:19,728 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000423>
+2025-05-16 14:52:19,728 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.OptimisedListTranslator - list: <http://purl.obolibrary.org/obo/IAO_0000428>
+2025-05-16 14:52:20,031 DEBUG org.semanticweb.owlapi.rdf.rdfxml.parser.TripleLogger - Loaded OntologyID(OntologyIRI(<http://purls.helmholtz-metadaten.de/mwo/mwo.owl>) VersionIRI(<http://purls.helmholtz-metadaten.de/mwo/mwo.owl/3.0.0>))
+2025-05-16 14:52:20,032 DEBUG org.semanticweb.owlapi.rio.RioParserImpl$RioParserRDFHandler - owlParse: timing=9089
+2025-05-16 14:52:20,037 DEBUG org.semanticweb.owlapi.rio.RioParserImpl - rioParse: timing=9096
+2025-05-16 14:52:20,344 WARN  uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl - Illegal redeclarations of entities: reuse of entity https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007 in punning not allowed [Declaration(ObjectProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>)), Declaration(DataProperty(<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>))]
+2025-05-16 14:52:20,658 DEBUG org.apache.jena.util.FileManager - Add location: LocatorFile
+2025-05-16 14:52:20,659 DEBUG org.apache.jena.util.FileManager - Add location: ClassLoaderLocator
+2025-05-16 14:52:20,664 DEBUG org.apache.jena.util.LocationMapper - Failed to find configuration: file:location-mapping.rdf;file:location-mapping.n3;file:location-mapping.ttl;file:etc/location-mapping.rdf;file:etc/location-mapping.n3;file:etc/location-mapping.ttl
+2025-05-16 14:52:20,664 DEBUG org.apache.jena.util.FileManager - Add location: LocatorFile
+2025-05-16 14:52:20,665 DEBUG org.apache.jena.util.FileManager - Add location: LocatorURL
+2025-05-16 14:52:20,666 DEBUG org.apache.jena.util.FileManager - Add location: ClassLoaderLocator
+2025-05-16 14:52:20,678 DEBUG org.apache.jena.riot.system.stream.JenaIOEnvironment - Failed to find configuration: location-mapping.ttl;location-mapping.rdf;etc/location-mapping.rdf;etc/location-mapping.ttl
+2025-05-16 14:52:21,011 DEBUG org.apache.jena.info - System architecture: 64 bit
+2025-05-16 14:52:21,042 DEBUG org.apache.jena.shared.LockMRSW - Lock : main
+2025-05-16 14:52:21,044 DEBUG org.apache.jena.shared.LockMRSW - Lock : main
+2025-05-16 14:52:25,857 DEBUG org.obolibrary.robot.QueryOperation - Converted ontology to model - took 4.807 seconds
+2025-05-16 14:52:25,857 INFO  org.obolibrary.robot.QueryOperation - Named graph added: http://purls.helmholtz-metadaten.de/mwo/mwo.owl
+2025-05-16 14:52:25,859 DEBUG org.obolibrary.robot.QueryOperation - Loaded ontology into Jena dataset - took 5.406 seconds
+FAIL Rule shapes/verify1.sparql: 58 violation(s)

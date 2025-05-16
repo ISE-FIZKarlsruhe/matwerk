@@ -53,17 +53,18 @@ select DISTINCT ?slabel ?s where {
 ```
 
 ---
-### What are the softwares present in the MSE-KG?
+### What are the softwares present in the MSE-KG? What are the license, programming language, repository URL and publication of these softwares?
 
 ```sparql
-select ?slabel ?s where { 
-  # Selects the label (?slabel) and IRI (?s) of software-related resources
+# This query retrieves software resources.
 
-  values ?o { 
-    # Defines a list of ontology terms (?o) that are relevant to software in the MSE-KG
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198> 
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001045>
+SELECT ?software ?softwareLabel_ ?licenseLabel ?languageLabel ?repositoryURL ?publicationLabel WHERE {
+
+  # Restrict the types of software entities to a predefined list of classes
+  VALUES ?o { 
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198>  # E.g., Software tool
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121>  # Software application
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001045>  # Etc.
     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001046>
     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001048>
     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000218>
@@ -76,69 +77,134 @@ select ?slabel ?s where {
     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001044>
   }
 
-  ?s ?p ?o .
-  # Matches any triple where the object ?o is one of the listed software-related ontology terms
+  # Match any subject (?software) that is an instance of one of the software-related classes
+  ?software a ?o .
+  # Get the literal or resource used to label the software
+  ?software <http://purl.obolibrary.org/obo/IAO_0000235> ?softwareLabel .
 
-  optional {
-    ?s rdfs:label ?slabel .
-    # Tries to retrieve a human-readable label (?slabel) for the subject ?s, if available
+  # The label resource must be an instance of 'label entity'
+  ?softwareLabel a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000> .
+  # Try to extract a human-readable label for the software
+  OPTIONAL { ?softwareLabel rdfs:label ?softwareLabel_ . }
+
+  # Optionally, retrieve the associated license and its label
+  OPTIONAL {
+    ?software <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142> ?license .
+    ?license rdfs:label ?licenseLabel .
+  }
+  # Optionally, retrieve the Programming Language and its label
+  OPTIONAL {
+    ?software <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187> ?language .
+    ?language rdfs:label ?languageLabel .
+  }
+  # Optionally, retrieve the related publication and its label
+  OPTIONAL {
+    ?software <http://purl.obolibrary.org/obo/IAO_0000235> ?publication .
+    ?publication a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190> .
+    ?publication rdfs:label ?publicationLabel .
+  }
+  # Optionally, retrieve the repository link
+  OPTIONAL {
+    ?software <http://purl.obolibrary.org/obo/IAO_0000235> ?repository .
+    ?repository a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001113> .
+    ?repository <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repositoryURL .
   }
 }
 
+# Limit results to 999 rows
+LIMIT 999
 ```
 
 ---
-### What are the services present in the MSE-KG?
+### What are the services present in the MSE-KG? What are the service URL, documentation URL and code URL of these services?
 
 ```sparql
-select DISTINCT ?slabel ?s 
-where { 
-  # Selects distinct labels (?slabel) and IRIs (?s) for services in the MSE-KG
+# This query retrieves service resources and related metadata from the MSE-KG.
 
-  ?s a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> .
-  # ?s is an instance of NFDI_0000232, which represents a 'service'
+SELECT DISTINCT ?service ?serviceLabel_ ?serviceURL ?docURL ?codeURL WHERE {
 
-  ?s <http://purl.obolibrary.org/obo/IAO_0000235> ?label .
-  # The service ?s is linked to a resource ?label via the IAO_0000235 property (typically 'is about' or similar)
+  # ?service is a resource of type Service
+  ?service a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> .
 
-  ?label <http://purl.obolibrary.org/obo/OBI_0002135> ?slabel .
-  # The linked resource ?label has a label (?slabel) provided via the OBI_0002135 property (e.g., 'has output')
+  # The label resource for the service
+  ?service <http://purl.obolibrary.org/obo/IAO_0000235> ?serviceLabel .
+  ?serviceLabel a <http://purl.obolibrary.org/obo/IAO_0000590> .
+  OPTIONAL { ?serviceLabel rdfs:label ?serviceLabel_ . }
+
+
+  # Service link (URL)
+  OPTIONAL {
+    ?service <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> ?URL .
+    ?URL <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?serviceURL .
+  }
+
+  # Documentation link
+  OPTIONAL {
+    ?service <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> ?URL .
+    ?URL <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?docURL .
+  }
+
+  # Source code link
+  OPTIONAL {
+    ?service <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> ?URL .
+    ?URL <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?codeURL .
+  }
 
 }
+LIMIT 999
+
 ```
 
 ---
-### What are the organizations present in the MSE-KG?
+### What are the organizations present in the MSE-KG? What are the acronym, city, rorID of these organizations?
 
 ```sparql
-select ?slabel ?s where { 
-  # Selects the label (?slabel) and IRI (?s) of organization-related resources
+# This query retrieves organization entities and their metadata from the MSE-KG.
 
-  values ?o { 
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003> 
-    # NFDI_0000003 represents the class for 'organization' in the ontology
-  } 
+SELECT ?org ?label_en ?acronym ?city ?rorID WHERE {
 
-  ?s ?p ?o .
-  # Matches any triple where the object ?o is the organization class,
-  # and binds the subject (?s) that is related to it via some property (?p)
+  # Restrict to entities of type 'organization'
+  ?org a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003> .
 
-  optional {
-    ?s rdfs:label ?slabel .    
-    # Optionally retrieves a human-readable label (?slabel) for the subject ?s
+  # English label
+  OPTIONAL {
+    ?org rdfs:label ?label_en .
+  }
+
+
+  # Acronym
+  OPTIONAL {
+    ?org <http://purl.obolibrary.org/obo/IAO_0000235> ?acr .
+    ?acr a <http://purl.obolibrary.org/obo/IAO_0000605> .
+    ?acr rdfs:label ?acronym .
+  }
+
+  # City
+  OPTIONAL {
+    ?org <http://purl.obolibrary.org/obo/BFO_0000171> ?c .
+    ?c a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106> .
+    ?c rdfs:label ?city .
+  }
+
+
+  # ROR ID
+  OPTIONAL {
+    ?org <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> ?ID .
+    ?ID <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?rorID .
   }
 }
+LIMIT 999
+
 ```
 
 ---
-### What are the events present in the MSE-KG?
+### What are the events present in the MSE-KG? What are the URL, associated organization and participating consortia of these events?
 
 ```sparql
-select ?slabel ?s where { 
-  # Selects the label (?slabel) and IRI (?s) of event-related resources
+SELECT ?event ?contributionLabel ?eventURL ?orgLabel ?consortiumLabel WHERE {
 
-  values ?o { 
-    # Defines a set of ontology terms (?o) that represent various types of events
+  # Restrict to known event types
+  VALUES ?eventType {
     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018>
     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010020>
     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010023>
@@ -153,37 +219,426 @@ select ?slabel ?s where {
     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010019>
   }
 
-  ?s ?p ?o .
-  # Matches any resource ?s related to one of the listed event classes (?o) via some property ?p
+  # Find resources typed as one of the event types
+  ?event a ?eventType .
 
-  ?s <http://purl.obolibrary.org/obo/IAO_0000235> ?label .
-  # The event resource ?s is linked to a related entity ?label via the IAO_0000235 property (e.g., 'is about')
+  # Retrieve event contribution label (main label)
+  OPTIONAL {
+    ?event <http://purl.obolibrary.org/obo/IAO_0000235> ?contributionLabelNode .
+    ?contributionLabelNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
+    ?contributionLabelNode rdfs:label ?contributionLabel .
+  }
 
-  ?label a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
-  # The linked entity ?label is typed as NFDI_0001019, indicating it's a valid representation (e.g., of an event descriptor)
 
-  ?label <http://purl.obolibrary.org/obo/OBI_0002135> ?slabel .
-  # Retrieves the human-readable label (?slabel) of the event via the OBI_0002135 property (e.g., 'has output')
+  # Link (URL / PID)
+  OPTIONAL {
+    ?event <http://purl.obolibrary.org/obo/IAO_0000235> ?URL .
+    ?URL <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?eventURL .
+  }
+
+  # Associated organization
+  OPTIONAL {
+    ?event <http://purl.obolibrary.org/obo/BFO_0000057> ?org .
+    ?org a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003> .
+    ?org rdfs:label ?orgLabel .
+  }
+
+  # Participating consortia (multiple possible)
+  OPTIONAL {
+    ?event <http://purl.obolibrary.org/obo/BFO_0000057> ?consortium .
+    ?consortium a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000006> .
+    ?consortium rdfs:label ?consortiumLabel .
+  }
+
 }
+LIMIT 999
+
 ```
 
 ---
-### What are the - present in the MSE-KG?
-TODO:
-people
-datasets
-data portals
-instruments
-larg scale facilities
-metadata
-ontologies
-collabrations
-publications
-MatWerk-TA
-MatWerk-IUC
-MatWerk-PP
+### What are the people present in the MSE-KG? What are the email addresses and ORCID IDs of these people?
 
 ```sparql
+SELECT ?person ?label ?email ?orcid WHERE {
+
+  # Filter to only retrieve individuals (persons)
+  ?person a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> .
+  # NFDI_0000004 represents the class 'Person' in the MSE ontology
+
+  # Retrieve the main label of the person
+  OPTIONAL {
+    ?person rdfs:label ?label .
+  }
+
+  # Retrieve the title (e.g., Dr., Prof.)
+  OPTIONAL {
+    ?person <http://purl.obolibrary.org/obo/IAO_0000235> ?title .
+    FILTER (LANG(?title) = "" || LANG(?title) = "en")
+  }
+
+  # E-mail
+  OPTIONAL {
+    ?person <http://purl.obolibrary.org/obo/IAO_0000235> ?emailNode .
+    ?emailNode a <http://purl.obolibrary.org/obo/IAO_0000429> .
+    ?emailNode rdfs:label ?email .
+  }
+
+
+  # ORCID ID
+  OPTIONAL {
+    ?person <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> ?id .
+    ?id <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?orcid .
+  }
+
+}
+LIMIT 999
+
+```
+
+---
+### What are the datasets present in the MSE-KG? What are creators, creator's affiliations and link of these datasets?
+
+```sparql
+SELECT ?dataset ?title ?creatorLabel ?creatorAffiliationLabel ?link
+WHERE {
+  # Dataset type
+  ?dataset a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> .
+
+  # Dataset title
+  OPTIONAL {
+    ?dataset <http://purl.obolibrary.org/obo/IAO_0000235> ?titleNode .
+    ?titleNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
+    ?titleNode rdfs:label ?title .
+  }
+
+  # Creator(s)
+  OPTIONAL {
+    ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creator .
+    ?creator a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001032> .
+    ?creator rdfs:label ?creatorLabel .
+  }
+
+  # Creator affiliation(s)
+  OPTIONAL {
+    ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creatorAffiliation .
+    ?creatorAffiliation a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033> .
+    ?creatorAffiliation rdfs:label ?creatorAffiliationLabel .
+  }
+
+  # Link (URL or PID)
+  OPTIONAL {
+    ?dataset <http://purl.obolibrary.org/obo/IAO_0000235> ?linkNode .
+    ?linkNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?link .
+  }
+
+}
+LIMIT 999
+
+```
+
+---
+### What are the data portals present in the MSE-KG? What are the links, repositories and contactpoint names or email addresses or websites of these data portals?
+
+```sparql
+data portals
+SELECT ?portal ?name ?link ?repository ?contactpointName ?Email ?Website
+WHERE {
+  # Identify resources of type Data Portal
+  ?portal a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123> .
+
+  # Portal name
+  OPTIONAL {
+    ?portal <http://purl.obolibrary.org/obo/IAO_0000235> ?nameNode .
+    ?nameNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
+    ?nameNode rdfs:label ?title .
+  }
+
+  # Link (URL or PID)
+  OPTIONAL {
+    ?portal <http://purl.obolibrary.org/obo/IAO_0000235> ?linkNode .
+    ?linkNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?link .
+  }
+
+  # Link to repository
+  OPTIONAL {
+    ?portal <http://purl.obolibrary.org/obo/IAO_0000235> ?repositoryNode .
+    ?repositoryNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repository .
+  }
+
+  # Participates in contacting process
+  OPTIONAL {
+    ?portal <http://purl.obolibrary.org/obo/BFO_0000056> ?contactingProcess .
+    ?contactingProcess <http://purl.obolibrary.org/obo/BFO_0000057> ?contactpoint .
+    ?contactingProcess <http://purl.obolibrary.org/obo/BFO_0000055> ?contactpointRole .
+    
+    ?contactpoint <http://purl.obolibrary.org/obo/IAO_0000235> ?contactpointNode .
+    OPTIONAL {?contactpointNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
+              ?contactpointNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?contactpointName
+             }
+    
+    ?contactpointRole <http://purl.obolibrary.org/obo/IAO_0000235> ?EmailWebsite .
+    OPTIONAL {?EmailWebsite a <http://purl.obolibrary.org/obo/IAO_0000429> .
+              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?Email
+             }
+    OPTIONAL {?EmailWebsite a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223> .
+              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?Website
+             }
+  }
+
+}
+LIMIT 999
+
+```
+
+---
+### What are the instruments present in the MSE-KG? What are the contactpoint names or email addresses or websites of these instruments?
+
+```sparql
+SELECT DISTINCT ?instrument ?name ?contactpointName ?Email ?Website
+WHERE {
+  ?instrument a <https://w3id.org/pmd/co/PMD_0000602> .
+
+  OPTIONAL {
+    ?instrument <http://purl.obolibrary.org/obo/IAO_0000235> ?instrumentNode .
+    ?instrumentNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
+    ?instrumentNode rdfs:label ?name .
+  }
+
+
+  # Contacting process
+  OPTIONAL {
+    ?instrument <http://purl.obolibrary.org/obo/BFO_0000056> ?contactingProcess .
+    ?contactingProcess <http://purl.obolibrary.org/obo/BFO_0000057> ?contactpoint .
+    ?contactingProcess <http://purl.obolibrary.org/obo/BFO_0000055> ?contactpointRole .
+    
+    ?contactpoint <http://purl.obolibrary.org/obo/IAO_0000235> ?contactpointNode .
+    OPTIONAL {?contactpointNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
+              ?contactpointNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?contactpointName
+             }
+    
+    ?contactpointRole <http://purl.obolibrary.org/obo/IAO_0000235> ?EmailWebsite .
+    OPTIONAL {?EmailWebsite a <http://purl.obolibrary.org/obo/IAO_0000429> .
+              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?Email
+             }
+    OPTIONAL {?EmailWebsite a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223> .
+              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?Website
+             }
+  }
+
+}
+
+```
+
+---
+### What are the larg scale facilities present in the MSE-KG? What are the of acronyms, organization or emial or website of providersof these larg scale facilities?
+
+```sparql
+SELECT ?facility ?name ?acronym ?orgLabel ?Email ?Website
+WHERE {
+  ?facility a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001027> .
+
+  OPTIONAL {
+    ?facility <http://purl.obolibrary.org/obo/IAO_0000235> ?facilityNode .
+    ?facilityNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
+    ?facilityNode rdfs:label ?name .
+  }
+  # Acronym
+  OPTIONAL {
+    ?facility <http://purl.obolibrary.org/obo/IAO_0000235> ?acr .
+    ?acr a <http://purl.obolibrary.org/obo/IAO_0000605> .
+    ?acr rdfs:label ?acronym .
+  }
+
+  # Output Process
+  OPTIONAL {
+    ?facility <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023> ?outputProcess .
+    ?outputProcess <http://purl.obolibrary.org/obo/BFO_0000057> ?org .
+    ?outputProcess <http://purl.obolibrary.org/obo/BFO_0000055> ?Role .
+    
+    OPTIONAL {?org a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003> .
+              ?org rdfs:label ?orgLabel .
+             }
+    
+    ?Role a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000230> .
+    ?Role <http://purl.obolibrary.org/obo/IAO_0000235> ?EmailWebsite .
+    OPTIONAL {?EmailWebsite a <http://purl.obolibrary.org/obo/IAO_0000429> .
+              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?Email
+             }
+    OPTIONAL {?EmailWebsite a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223> .
+              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?Website
+             }
+  }
+}
+LIMIT 999
+
+```
+
+---
+### What are the present metadata in the MSE-KG? What are the names and repository links of these metadata?
+
+```sparql
+SELECT ?metadata ?name ?repoLink
+WHERE {
+  ?metadata a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054> .
+
+  OPTIONAL {
+    ?metadata <http://purl.obolibrary.org/obo/IAO_0000235> ?metadataNode .
+    ?metadataNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
+    ?metadataNode rdfs:label ?name .
+  }
+
+  OPTIONAL {
+    ?metadata <http://purl.obolibrary.org/obo/IAO_0000235> ?Link .
+    ?Link <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repoLink
+  			}
+  OPTIONAL {
+    ?metadata <http://purl.obolibrary.org/obo/IAO_0000235> ?Link .
+    ?Link <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?docLink
+  			}
+ 
+}
+
+```
+
+---
+### What are the ontologies present in the MSE-KG? What are the name and links of these ontologies?
+
+```sparql
+SELECT ?ontology ?name ?repoLink
+WHERE {
+  ?ontology a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023> .
+
+  OPTIONAL {
+    ?ontology <http://purl.obolibrary.org/obo/IAO_0000235> ?ontologyNode .
+    ?ontologyNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
+    ?ontologyNode rdfs:label ?name .
+  }
+
+  OPTIONAL {
+    ?ontology <http://purl.obolibrary.org/obo/IAO_0000235> ?Link .
+    ?Link <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repoLink
+  			}
+  OPTIONAL {
+    ?ontology <http://purl.obolibrary.org/obo/IAO_0000235> ?Link .
+    ?Link <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?docLink
+  			}
+ 
+}
+LIMIT 999
+
+```
+
+---
+### What are the international collabrations present in the MSE-KG? What are the of these international collabrations?
+
+```sparql
+SELECT ?int_colaborations ?name 
+WHERE {
+  VALUES ?o { 
+  <http://purls.helmholtz-metadaten.de/mwo/MWO_0001005>
+  <http://purls.helmholtz-metadaten.de/mwo/MWO_0001004>
+  <http://purls.helmholtz-metadaten.de/mwo/MWO_0001006>
+  <http://purls.helmholtz-metadaten.de/mwo/MWO_0001007>
+  }
+  ?int_colaborations a ?o .
+
+  OPTIONAL { ?int_colaborations <http://purl.obolibrary.org/obo/IAO_0000235> ?nameNode . 
+           ?nameNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
+           ?nameNode rdfs:label ?name .
+           }
+}
+LIMIT 999
+
+```
+
+---
+### What are the publications present in the MSE-KG? What are the DOI, authors and authors affiliations of these publications?
+
+```sparql
+SELECT ?publications ?name ?DOI ?authorsLabel ?authorsAffiliationLabel
+WHERE {
+  ?publications a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190> .
+
+  OPTIONAL { ?publications rdfs:label ?name .
+           }
+  
+  OPTIONAL {
+    ?publications <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> ?DOINode .
+    ?DOINode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?DOI
+  			}
+  
+  # Authors
+  OPTIONAL {
+    ?publications <http://purl.obolibrary.org/obo/BFO_0000178> ?authors .
+    ?authors a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001030> .
+    ?authors rdfs:label ?authorsLabel .
+  }
+
+  # Authors Affiliation
+  OPTIONAL {
+    ?publications <http://purl.obolibrary.org/obo/BFO_0000178> ?authorsAffiliation .
+    ?authorsAffiliation a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033> .
+    ?authorsAffiliation rdfs:label ?authorsAffiliationLabel .
+  }
+}
+LIMIT 999
+```
+
+---
+### What are the Task Areas in MatWerk which are present in the MSE-KG?
+
+```sparql
+SELECT ?ta ?label ?description
+WHERE {
+  ?ta_organization a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001022> .
+  ?ta_organization <http://purl.obolibrary.org/obo/BFO_0000056> ?ta_process .
+  ?ta_process <http://purl.obolibrary.org/obo/BFO_0000059> ?ta .
+  ?ta a <http://purl.obolibrary.org/obo/IAO_0000005> .
+
+  OPTIONAL { ?ta rdfs:label ?label . }
+  OPTIONAL { ?ta <http://purl.obolibrary.org/obo/IAO_0000235> ?descriptionNode . 
+           ?descriptionNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018> .
+           ?descriptionNode rdfs:label ?description .
+           }
+}
+LIMIT 999
+```
+
+---
+### What are the Infrastructure Use Cases in MatWerk which are present in the MSE-KG?
+
+```sparql
+SELECT ?iuc ?label ?name
+WHERE {
+  ?iuc a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001026> .
+
+  OPTIONAL { ?iuc rdfs:label ?label . }
+  OPTIONAL { ?iuc <http://purl.obolibrary.org/obo/IAO_0000235> ?nameNode . 
+           ?nameNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
+           ?nameNode rdfs:label ?name .
+           }
+  #OPTIONAL { ?iuc <http://purl.obolibrary.org/obo/BFO_0000178> ?mainTask . }
+  #OPTIONAL { ?iuc <http://purl.obolibrary.org/obo/BFO_0000178> ?relatedTA . }
+  #OPTIONAL { ?iuc <http://purl.obolibrary.org/obo/BFO_0000056> ?project . }
+}
+LIMIT 999
+
+```
+
+---
+### What are the Participant Projects in MatWerk which are present in the MSE-KG?
+
+```sparql
+SELECT ?pp ?label ?name 
+WHERE {
+  ?pp a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001029> .
+
+  OPTIONAL { ?pp rdfs:label ?label . }
+  OPTIONAL { ?pp <http://purl.obolibrary.org/obo/IAO_0000235> ?nameNode . 
+           ?nameNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
+           ?nameNode rdfs:label ?name .
+           }
+}
 
 ```
 
@@ -191,216 +646,59 @@ MatWerk-PP
 ### Who is working with Researcher "Ebrahim Norouzi" in the same group? Return the ORCID IDs?
 
 ```sparql
-# Who is working with Researcher "Ebrahim Norouzi" in the same group? Return the ORCID IDs.
 
-PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-
-SELECT ?person ?personlabel ?orcidid
-WHERE {
-    # Find the researcher with the name "Ebrahim Norouzi"
-    ?researcher rdfs:label ?researcherlabel FILTER REGEX (?researcherlabel, "ebrahim norouzi", "i")
-
-    # Get the affiliation of the researcher
-    ?researcher mwo:hasAffiliation ?Affiliation .
-
-    # Find persons with the same affiliation but different from the researcher
-    ?person mwo:hasAffiliation ?Affiliation FILTER (?person != ?researcher) .
-
-    # Get the label of the person
-    ?person rdfs:label ?personlabel .
-
-    # Get the ORCID ID of the person
-    ?person mwo:hasORCID ?orcidid .
-}
 ```
 
 ### What is the email address of the contact point of "NOMAD" DataPortal?
 
 ```sparql
-# What is the email address of the contactpoint of "NOMAD" DataPortal?
 
-PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
-
-SELECT ?resource ?contactpointemail 
-WHERE {
-    ?resource rdf:type nfdicore:DataPortal .            # Get the entities of type nfdicore:DataPortal
-    ?resource rdfs:label ?label FILTER CONTAINS(?label, "NOMAD")  # Filter data portals with labels containing "NOMAD"
-    ?resource mwo:hasContactPoint ?contactpoint.        # Get the contact point of the data portal
-    ?contactpoint mwo:emailAddress ?contactpointemail . # Get the email address of the contact point
-}
 ```
 
 ### What is "Molecular Dynamics" Software? List the programming language, documentation page, repository, and license information.
 
 ```sparql
-# What are "Molecular Dynamics" Software? List the programming language, documentation page, repository, and license information.
 
-PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
-PREFIX swo: <http://www.ebi.ac.uk/swo/>
-
-SELECT DISTINCT ?resource ?label ?programminglanguagelabel ?documentationurl ?websiteurl ?licenseinfo
-WHERE {
-    ?resource rdf:type nfdicore:Software .                   # Get the entities of type nfdicore:Software
-    ?resource rdfs:label ?label .                            # Get the label of the programming language
-    ?resource mwo:usesMethod ?method .                       # Get the methods used by the software
-    ?method rdfs:label ?methodlabel  FILTER CONTAINS(?methodlabel , "molecular dynamics")  # Filter label of the methods containing "Molecular Dynamics"
-    ?resource nfdicore:programmingLanguage ?programminglanguage .  # Get the programming language used by the software
-    ?programminglanguage rdfs:label ?programminglanguagelabel .   # Get the label of the programming language
-    ?resource mwo:hasDocumentation ?documentation .          # Get the documentation of the software
-    ?documentation nfdicore:url ?documentationurl .          # Get the label of the documentation
-    ?resource mwo:hasWebsite ?website .                      # Get the website of the software
-    ?website nfdicore:url ?websiteurl .                      # Get the label of the website
-    ?resource swo:has_license ?license .                     # Get the license associated with the software
-    ?license rdfs:label ?licenseinfo .                       # Get the label of the license
-} GROUP BY ?label
 ```
 
 ### What are the ontologies in the nanomaterials domain?
 
 ```sparql
-# What are the ontologies in nanomaterials domain?
 
-PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
-
-SELECT ?resource ?resourcelabel ?website
-WHERE {
-    ?resource rdf:type mwo:SemanticResource .                    # Get the entities of type mwo:SemanticResource
-    ?resource mwo:description ?description FILTER CONTAINS(?description, "nanomaterials")  # Filter resources with descriptions containing "nanomaterials"
-    ?resource rdfs:label ?resourcelabel .                        # Get the label of the resource
-    ?resource mwo:hasRepository ?repositoryentity .              # Get the entity representing the repository of the resource
-    ?repositoryentity nfdicore:url ?website .                    # Get the URL of the website/repository
-}
 ```
 
 ### What software is used to produce the data in the Materials Cloud repository?
 
 ```sparql
-# What are the software used to produce the data in the Materials Cloud repository?
 
-PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
-
-SELECT ?resource ?related_resource ?relatedresourcelabel
-WHERE {
-    ?resource rdf:type nfdicore:DataPortal .                        # Get the entities of type nfdicore:DataPortal
-    ?resource rdfs:label ?label FILTER CONTAINS(?label, "Materials Cloud")  # Filter resources with labels containing "Materials Cloud"
-    ?resource mwo:hasRelatedResource ?related_resource .            # Get the related resource of the data portal
-    ?related_resource rdfs:label ?relatedresourcelabel .          # Get the label of the related resource
-}
 ```
 
 ### What are the organizations in the KG that are categorized as a Public University in Wikidata?
 
 ```sparql
-# What are the organizations in the KG that are categorized as a Public University in Wikidata?
 
-PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX wd: <http://www.wikidata.org/entity/>
-
-SELECT DISTINCT ?organisation ?organisationlabel ?wikidataorganisation
-WHERE {
-    ?organisation rdf:type nfdicore:Organization .                 # Get the entities of type nfdicore:Organization
-    ?organisation rdfs:label ?organisationlabel .                  # Get the label of the organizations
-    ?organisation owl:sameAs ?wikidataorganisation .               # Get the equivalent Wikidata entity
-    SERVICE <https://query.wikidata.org/sparql> {
-        ?wikidataorganisation wdt:P31/wdt:P279* wd:Q875538 .        # Check if the Wikidata entity is categorized as a Public University
-    }
-}
 ```
 
 ### Give me the contact point of Elemental Multiperspective Material Ontology (EMMO) and the related projects.
 
 ```sparql
-# Give me the contact point of Elemental Multiperspective Material Ontology (EMMO) and the related projects.
 
-PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
-PREFIX wdt: <http://www.wikidata.org/prop/direct/>
-PREFIX wd: <http://www.wikidata.org/entity/>
-
-SELECT ?project ?projectlabel ?contactpointemail
-WHERE {
-    ?resource rdf:type mwo:SemanticResource .                # Get the entities of type mwo:SemanticResource
-    ?resource rdfs:label "Elemental Multiperspective Material Ontology (EMMO)" .   # Filter entities with a specific label
-    ?resource nfdicore:relatedProject ?project .              # Get the related projects of the resource
-    ?project rdfs:label ?projectlabel .                       # Get the label of the projects
-    ?resource mwo:hasContactPoint ?contactpoint .             # Get the contact point of the resource
-    ?contactpoint mwo:emailAddress ?contactpointemail .       # Get the email address of the contact point
-}
 ```
 
 ### List all ontologies with the Creative Commons Attribution 4.0 license.
 
 ```sparql
-# List all ontologies with the Creative Commons Attribution 4.0 license?
 
-PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
-PREFIX swo: <http://www.ebi.ac.uk/swo/>
-
-SELECT ?resource ?resourcelabel
-WHERE {
-    ?resource rdf:type mwo:SemanticResource .                     # Get the entities of type mwo:SemanticResource
-    ?resource rdfs:label ?resourcelabel .                          # Get the label of the resources
-    ?resource swo:has_license ?license .                           # Get the license associated with the resource
-    ?license owl:sameAs <http://www.wikidata.org/entity/Q20007257> .  # Check if the license is Creative Commons Attribution 4.0
-}
 ```
 
 ### List people who have expertise in Information Service Engineering and the lecture they give.
 
 ```sparql
-# List people who have expertise in Information Service Engineering and the lecture they give.
 
-PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-
-SELECT ?person ?personlabel ?resourcewebsite
-WHERE {
-    ?person mwo:hasExpertiseIn ?expertise .                          # Get people who have expertise in a specific area
-    ?expertise rdfs:label ?label FILTER CONTAINS(?label, "Information Service Engineering")  # Filter by expertise label
-    ?resource mwo:hasLecturer ?person .                              # Get the resources where the person is a lecturer
-    ?person rdfs:label ?personlabel .                                # Get the label of the person
-    ?resource rdfs:label ?resourcelabel .                            # Get the label of the resources
-    ?resource mwo:hasWebsite ?resourcewebsiteentity .                # Get the website of the resources
-    ?resourcewebsiteentity nfdicore:url ?resourcewebsite .           # Get the URL of the website
-}
 ```
 
 ### List software that is written in Python with a GNU General Public License.
 
 ```sparql
-# List software written in Python with a GNU General Public License
 
-PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
-PREFIX swo: <http://www.ebi.ac.uk/swo/>
-
-SELECT ?resource ?resourcelabel
-WHERE {
-    ?resource rdf:type nfdicore:Software .                           # Filter entities of type nfdicore:Software
-    ?resource rdfs:label ?resourcelabel .                             # Get the label of the resources
-    ?resource nfdicore:programmingLanguage ?programminglanguage .    # Get the programming language used by the resource
-    ?programminglanguage owl:sameAs <http://www.wikidata.org/entity/Q28865> .  # Check if the programming language is Python
-    ?resource swo:has_license ?license .                              # Get the license associated with the resource
-    ?license owl:sameAs <http://www.wikidata.org/entity/Q7603> .      # Check if the license is GNU General Public License
-}
 ```

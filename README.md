@@ -19,12 +19,12 @@ You can explore the deployed version of the knowledge graph here:
 To run a local test instance using Docker:
 
 ```shell
-docker run --rm -it -p 8000:8000 -e DEBUG=1      -e MOUNT=/matwerk/ -e DATA_LOAD_PATHS=/data/ -e PREFIXES_FILEPATH=/data/all.ttl     ghcr.io/ise-fizkarlsruhe/matwerk:latest
+docker run --rm -it -p 8000:8000 -e DEBUG=1      -e MOUNT=/matwerk/ -e DATA_LOAD_PATHS=/data/all.ttl -e PREFIXES_FILEPATH=/data/all.ttl     ghcr.io/ise-fizkarlsruhe/matwerk:latest
 ```
 
 After starting, you can access it at:
 
-🔗 [https://localhost:8000/matwerk/](https://localhost:8000/matwerk/)
+🔗 [http://127.0.0.1:8000/matwerk/](http://127.0.0.1:8000/matwerk/)
 
 ---
 

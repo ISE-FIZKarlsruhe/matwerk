@@ -111,48 +111,6 @@
     
 
 
-    <!-- http://pyiron.org/potentials-workshop-2022/intro.html -->
-
-    <NamedIndividual rdf:about="http://pyiron.org/potentials-workshop-2022/intro.html"/>
-    
-
-
-    <!-- http://pyiron.org/swimm-workshop-2021/README.html -->
-
-    <NamedIndividual rdf:about="http://pyiron.org/swimm-workshop-2021/README.html"/>
-    
-
-
-    <!-- https://open.hpi.de/courses/semanticweb2017 -->
-
-    <NamedIndividual rdf:about="https://open.hpi.de/courses/semanticweb2017"/>
-    
-
-
-    <!-- https://open.hpi.de/courses/knowledgegraphs2020?locale=de -->
-
-    <NamedIndividual rdf:about="https://open.hpi.de/courses/knowledgegraphs2020?locale=de"/>
-    
-
-
-    <!-- https://open.hpi.de/courses/semanticweb2016?locale=de -->
-
-    <NamedIndividual rdf:about="https://open.hpi.de/courses/semanticweb2016?locale=de"/>
-    
-
-
-    <!-- https://open.hpi.de/courses/semanticweb?locale=de -->
-
-    <NamedIndividual rdf:about="https://open.hpi.de/courses/semanticweb?locale=de"/>
-    
-
-
-    <!-- https://open.hpi.de/courses/semweb2015?locale=de -->
-
-    <NamedIndividual rdf:about="https://open.hpi.de/courses/semweb2015?locale=de"/>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174513921413977 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513921413977"/>
@@ -171,15 +129,15 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516786594532 -->
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532522931934 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594532"/>
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532522931934"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516786594533 -->
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532522931935 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594533"/>
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532522931935"/>
     
 
 
@@ -190,7 +148,7 @@
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454003205451"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453996624321"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453997104631"/>
-        <obo:IAO_0000235 rdf:resource="https://www.mib.uni-stuttgart.de/teaching/course-offerings/dapro/"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453998656061"/>
     </NamedIndividual>
     
 
@@ -204,7 +162,7 @@
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540032054510"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453996624329"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539971046310"/>
-        <obo:IAO_0000235 rdf:resource="https://www.youtube.com/c/MaterialsCloud/"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453998656079"/>
     </NamedIndividual>
     
 
@@ -216,9 +174,9 @@
         <obo:BFO_0000057 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451394390861"/>
         <obo:BFO_0000057 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451394390867"/>
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540032054511"/>
-        <obo:IAO_0000235 rdf:resource="http://pyiron.org/potentials-workshop-2022/intro.html"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539966243210"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539971046311"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539986560710"/>
     </NamedIndividual>
     
 
@@ -231,7 +189,7 @@
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540032054512"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539966243211"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539971046312"/>
-        <obo:IAO_0000235 rdf:resource="https://pyiron.org/phasediagram-workshop-2020/Introduction.html"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539986560711"/>
     </NamedIndividual>
     
 
@@ -245,7 +203,7 @@
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540032054513"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539966243212"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539971046313"/>
-        <obo:IAO_0000235 rdf:resource="https://pyiron.org/potentials-workshop-2021/README.html"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539986560712"/>
     </NamedIndividual>
     
 
@@ -256,9 +214,9 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
         <obo:BFO_0000057 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451394390861"/>
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540032054514"/>
-        <obo:IAO_0000235 rdf:resource="http://pyiron.org/swimm-workshop-2021/README.html"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539966243213"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539971046314"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174539986560713"/>
     </NamedIndividual>
     
 
@@ -270,7 +228,7 @@
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454003205452"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453996624322"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453997104632"/>
-        <obo:IAO_0000235 rdf:resource="https://www.mib.uni-stuttgart.de/teaching/course-offerings/dapro-ms/"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453998656071"/>
     </NamedIndividual>
     
 
@@ -282,7 +240,7 @@
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454003205453"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513921413977"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453997104633"/>
-        <obo:IAO_0000235 rdf:resource="https://www.youtube.com/c/ISEFIZKarlsruhe/about"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453998656072"/>
     </NamedIndividual>
     
 
@@ -292,9 +250,9 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453327909884">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454003205454"/>
-        <obo:IAO_0000235 rdf:resource="https://open.hpi.de/courses/knowledgegraphs2020?locale=de"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453996624324"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453997104634"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453998656073"/>
     </NamedIndividual>
     
 
@@ -304,9 +262,9 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453327909885">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454003205455"/>
-        <obo:IAO_0000235 rdf:resource="https://open.hpi.de/courses/semanticweb2017"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453996624325"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453997104635"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453998656074"/>
     </NamedIndividual>
     
 
@@ -316,9 +274,9 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453327909886">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454003205456"/>
-        <obo:IAO_0000235 rdf:resource="https://open.hpi.de/courses/semanticweb2016?locale=de"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453996624326"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453997104636"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453998656075"/>
     </NamedIndividual>
     
 
@@ -328,9 +286,9 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453327909887">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454003205457"/>
-        <obo:IAO_0000235 rdf:resource="https://open.hpi.de/courses/semweb2015?locale=de"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453996624327"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453997104637"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453998656076"/>
     </NamedIndividual>
     
 
@@ -340,9 +298,9 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453327909888">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"/>
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454003205458"/>
-        <obo:IAO_0000235 rdf:resource="https://open.hpi.de/courses/semanticweb?locale=de"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453996624327"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453997104638"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453998656077"/>
     </NamedIndividual>
     
 
@@ -355,7 +313,7 @@
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454003205459"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453996624328"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453997104639"/>
-        <obo:IAO_0000235 rdf:resource="https://www.youtube.com/c/pyironIDE"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453998656078"/>
     </NamedIndividual>
     
 
@@ -1692,7 +1650,7 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010019"/>
         <obo:BFO_0000057 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454012367762"/>
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540032054660"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174516786594533"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532522931935"/>
         <ontology:NFDI_0000152 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454023638643"/>
     </NamedIndividual>
     
@@ -1742,7 +1700,7 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010019"/>
         <obo:BFO_0000057 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454012367762"/>
         <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174540032054663"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174516786594532"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532522931934"/>
         <ontology:NFDI_0000152 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454023638642"/>
     </NamedIndividual>
     
@@ -2900,6 +2858,90 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453998656061 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453998656061"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453998656071 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453998656071"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174539986560710 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174539986560710"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174539986560711 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174539986560711"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174539986560712 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174539986560712"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174539986560713 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174539986560713"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453998656072 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453998656072"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453998656073 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453998656073"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453998656074 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453998656074"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453998656075 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453998656075"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453998656076 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453998656076"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453998656077 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453998656077"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453998656078 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453998656078"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17453998656079 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453998656079"/>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17454003205451 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454003205451"/>
@@ -3935,48 +3977,6 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17454023638644 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454023638644"/>
-    
-
-
-    <!-- https://pyiron.org/phasediagram-workshop-2020/Introduction.html -->
-
-    <NamedIndividual rdf:about="https://pyiron.org/phasediagram-workshop-2020/Introduction.html"/>
-    
-
-
-    <!-- https://pyiron.org/potentials-workshop-2021/README.html -->
-
-    <NamedIndividual rdf:about="https://pyiron.org/potentials-workshop-2021/README.html"/>
-    
-
-
-    <!-- https://www.mib.uni-stuttgart.de/teaching/course-offerings/dapro-ms/ -->
-
-    <NamedIndividual rdf:about="https://www.mib.uni-stuttgart.de/teaching/course-offerings/dapro-ms/"/>
-    
-
-
-    <!-- https://www.mib.uni-stuttgart.de/teaching/course-offerings/dapro/ -->
-
-    <NamedIndividual rdf:about="https://www.mib.uni-stuttgart.de/teaching/course-offerings/dapro/"/>
-    
-
-
-    <!-- https://www.youtube.com/c/pyironIDE -->
-
-    <NamedIndividual rdf:about="https://www.youtube.com/c/pyironIDE"/>
-    
-
-
-    <!-- https://www.youtube.com/c/ISEFIZKarlsruhe/about -->
-
-    <NamedIndividual rdf:about="https://www.youtube.com/c/ISEFIZKarlsruhe/about"/>
-    
-
-
-    <!-- https://www.youtube.com/c/MaterialsCloud/ -->
-
-    <NamedIndividual rdf:about="https://www.youtube.com/c/MaterialsCloud/"/>
 </rdf:RDF>
 
 
