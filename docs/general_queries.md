@@ -42,13 +42,12 @@ SELECT ?software ?softwareLabel_ ?licenseLabel ?languageLabel ?repositoryURL ?pu
 
   # Match any subject (?software) that is an instance of one of the software-related classes
   ?software a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198> .
-  # Get the literal or resource used to label the software
-  ?software <http://purl.obolibrary.org/obo/IAO_0000235> ?softwareLabel .
-
-  # The label resource must be an instance of 'label entity'
-  ?softwareLabel a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000> .
+  
   # Try to extract a human-readable label for the software
-  OPTIONAL { ?softwareLabel rdfs:label ?softwareLabel_ . }
+  OPTIONAL { 
+    ?software <http://purl.obolibrary.org/obo/IAO_0000235> ?softwareLabel .
+    ?softwareLabel a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000> .
+    ?softwareLabel rdfs:label ?softwareLabel_ . }
 
   # Optionally, retrieve the associated license and its label
   OPTIONAL {
