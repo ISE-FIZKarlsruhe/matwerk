@@ -31,26 +31,6 @@ ORDER BY DESC(?count)
 LIMIT 999
 ```
 
----
-### What are the ontologies present in the MSE-KG?
-
-```sparql
-select DISTINCT ?slabel ?s where { 
-  # Selects distinct ontology labels (?slabel) and their corresponding ontology IRIs (?s)
-
-  ?s a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023> .
-  # ?s is an instance of the class NFDI_0000023 (representing an ontology in the MSE-KG)
-
-  ?s <http://purl.obolibrary.org/obo/IAO_0000235> ?label .
-  # The ontology ?s has an annotation or reference (?label) via the IAO_0000235 property (e.g., 'is about')
-
-  ?label a <http://purl.obolibrary.org/obo/IAO_0000590> .
-  # The linked resource ?label is an instance of IAO_0000590 (typically used to represent ontology terms)
-
-  ?label rdfs:label ?slabel . 
-  # Retrieves the human-readable label (?slabel) of the ontology term
-}
-```
 
 ---
 ### What are the softwares present in the MSE-KG? What are the license, programming language, repository URL and publication of these softwares?
@@ -504,25 +484,19 @@ WHERE {
 ### What are the ontologies present in the MSE-KG? What are the name and links of these ontologies?
 
 ```sparql
-SELECT ?ontology ?name ?repoLink
+SELECT ?ontology ?ontoname ?repoLink
 WHERE {
   ?ontology a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023> .
-
   OPTIONAL {
-    ?ontology <http://purl.obolibrary.org/obo/IAO_0000235> ?ontologyNode .
-    ?ontologyNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
-    ?ontologyNode rdfs:label ?name .
+    ?ontology <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ?ontologyTitle .
+    ?ontologyTitle a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
+    ?ontologyTitle <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?ontoname.
   }
-
-  OPTIONAL {
-    ?ontology <http://purl.obolibrary.org/obo/IAO_0000235> ?Link .
-    ?Link <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repoLink
-  			}
-  OPTIONAL {
-    ?ontology <http://purl.obolibrary.org/obo/IAO_0000235> ?Link .
-    ?Link <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?docLink
-  			}
- 
+   OPTIONAL {
+    ?ontology <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ?ontologyRepo .
+    ?ontologyRepo a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030> .
+    ?ontologyRepo <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repoLink.
+  }
 }
 LIMIT 999
 
