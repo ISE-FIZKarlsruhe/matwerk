@@ -5,6 +5,7 @@ set VALIDATIONSDIR=data/validation
 set SRC=ontology/mwo-full.owl
 set ROBOT_IMAGE=obolibrary/robot
 set ONTBASE=https://nfdi.fiz-karlsruhe.de/ontology
+set KONCLUDE_IMAGE=konclude/konclude
 
 docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
     %ROBOT_IMAGE% robot merge -i %SRC% --inputs "data/components/*.owl" --output %COMPONENTSDIR%/all_NotReasoned.owl
@@ -28,6 +29,10 @@ docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encodin
 
 docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
     %ROBOT_IMAGE% robot convert --input %COMPONENTSDIR%/all_reasoned_hermit.owl --output %COMPONENTSDIR%/all.ttl
+
+REM Mount current directory and run Konclude reasoner
+docker run --rm -v %cd%:/data konclude/konclude realize ^
+    -i /data/%COMPONENTSDIR%/all_NotReasoned.owl -o /data/%COMPONENTSDIR%/konclude/classification-result.owl
 
 python3 -m pyshacl  -s shapes/shape4.ttl %COMPONENTSDIR%/all.ttl > %VALIDATIONSDIR%/shape4.md
 

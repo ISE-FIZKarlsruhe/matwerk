@@ -1,0 +1,4 @@
+construct {?s <http://www.w3.org/2002/07/owl#inverseOf> ?o}
+where {
+    ?s <http://purl.obolibrary.org/obo/BFO_0000050> ?o .
+}
