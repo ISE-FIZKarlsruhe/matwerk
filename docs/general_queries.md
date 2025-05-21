@@ -40,25 +40,8 @@ LIMIT 999
 
 SELECT ?software ?softwareLabel_ ?licenseLabel ?languageLabel ?repositoryURL ?publicationLabel WHERE {
 
-  # Restrict the types of software entities to a predefined list of classes
-  VALUES ?o { 
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198>  # E.g., Software tool
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121>  # Software application
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001045>  # Etc.
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001046>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001048>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000218>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000140>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010039>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010040>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010041>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000222>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001049>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001044>
-  }
-
   # Match any subject (?software) that is an instance of one of the software-related classes
-  ?software a ?o .
+  ?software a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198> .
   # Get the literal or resource used to label the software
   ?software <http://purl.obolibrary.org/obo/IAO_0000235> ?softwareLabel .
 
@@ -183,24 +166,8 @@ LIMIT 999
 ```sparql
 SELECT ?event ?contributionLabel ?eventURL ?orgLabel ?consortiumLabel WHERE {
 
-  # Restrict to known event types
-  VALUES ?eventType {
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010020>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010023>
-    <http://purls.helmholtz-metadaten.de/mwo/MWO_0001000>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010021>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010022>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001043>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010027>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010025>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010024>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010026>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010019>
-  }
-
   # Find resources typed as one of the event types
-  ?event a ?eventType .
+  ?event a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018> .
 
   # Retrieve event contribution label (main label)
   OPTIONAL {
@@ -508,13 +475,8 @@ LIMIT 999
 ```sparql
 SELECT ?int_colaborations ?name 
 WHERE {
-  VALUES ?o { 
-  <http://purls.helmholtz-metadaten.de/mwo/MWO_0001005>
-  <http://purls.helmholtz-metadaten.de/mwo/MWO_0001004>
-  <http://purls.helmholtz-metadaten.de/mwo/MWO_0001006>
-  <http://purls.helmholtz-metadaten.de/mwo/MWO_0001007>
-  }
-  ?int_colaborations a ?o .
+
+  ?int_colaborations a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001003> .
 
   OPTIONAL { ?int_colaborations <http://purl.obolibrary.org/obo/IAO_0000235> ?nameNode . 
            ?nameNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
