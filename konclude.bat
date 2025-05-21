@@ -24,4 +24,16 @@ docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encodin
     --input %COMPONENTSDIR%/inverse/inverse_all.ttl ^
     --output %COMPONENTSDIR%/all.ttl
 
+python3 -m pyshacl  -s shapes/shape4.ttl %COMPONENTSDIR%/all.ttl > %VALIDATIONSDIR%/shape4.md
 
+echo  no roles without bearers
+python3 -m pyshacl  -s shapes/shape3.ttl %COMPONENTSDIR%/all.ttl > %VALIDATIONSDIR%/shape3.md
+
+echo  no punning
+python3 -m pyshacl  -s shapes/shape2.ttl %COMPONENTSDIR%/all.ttl  > %VALIDATIONSDIR%/shape2.md
+
+echo  no orphaned textual entities
+python3 -m pyshacl  -s shapes/shape1.ttl %COMPONENTSDIR%/all.ttl > %VALIDATIONSDIR%/shape1.md
+
+docker run --rm -v %cd%:/work -w /work -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" ^
+    %ROBOT_IMAGE% robot verify --input %COMPONENTSDIR%/all.ttl --queries shapes/verify1.sparql --output-dir data/validation/ -vvv > %VALIDATIONSDIR%/verify1.md
