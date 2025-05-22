@@ -5,6 +5,5 @@ nav:
   - Home: index.md
   - Sample Queries:
     - General Queries: general_queries.md
-    - IUC Queries: IUC_related_queries.md
     - Statistics: statistics.md
   - SPARQL Endpoint: /matwerk/shmarql/
