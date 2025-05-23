@@ -389,12 +389,6 @@
     
 
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198 -->
-
-    <Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
-    
-
-
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000206 -->
 
     <Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000206"/>
@@ -15541,7 +15535,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451625714551 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451625714551">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>LAMMPS</ontology:NFDI_0001007>
         <rdfs:label>LAMMPS</rdfs:label>
     </NamedIndividual>
@@ -15551,7 +15545,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145510 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145510">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>pybind11</ontology:NFDI_0001007>
         <rdfs:label>pybind11</rdfs:label>
     </NamedIndividual>
@@ -15561,7 +15555,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145511 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145511">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>Fireworks</ontology:NFDI_0001007>
         <rdfs:label>Fireworks</rdfs:label>
     </NamedIndividual>
@@ -15571,7 +15565,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145512 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145512">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>Open Materials Database Software</ontology:NFDI_0001007>
         <rdfs:label>Open Materials Database Software</rdfs:label>
     </NamedIndividual>
@@ -15581,7 +15575,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145513 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145513">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>oqmd</ontology:NFDI_0001007>
         <rdfs:label>oqmd</rdfs:label>
     </NamedIndividual>
@@ -15591,7 +15585,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145514 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145514">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>HybridD3</ontology:NFDI_0001007>
         <rdfs:label>HybridD3</rdfs:label>
     </NamedIndividual>
@@ -15601,7 +15595,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145515 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145515">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>RO-Crate 1.1 specification</ontology:NFDI_0001007>
         <rdfs:label>RO-Crate 1.1 specification</rdfs:label>
     </NamedIndividual>
@@ -15611,7 +15605,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145516 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145516">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>Computational Material Sample Ontology</ontology:NFDI_0001007>
         <rdfs:label>Computational Material Sample Ontology</rdfs:label>
     </NamedIndividual>
@@ -15621,7 +15615,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145517 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145517">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>Aluminum Elastic Modulus</ontology:NFDI_0001007>
         <rdfs:label>Aluminum Elastic Modulus</rdfs:label>
     </NamedIndividual>
@@ -15631,7 +15625,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145518 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145518">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>Elastic Constant Demo Data</ontology:NFDI_0001007>
         <rdfs:label>Elastic Constant Demo Data</rdfs:label>
     </NamedIndividual>
@@ -15641,7 +15635,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145519 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145519">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001008>https://doi.org/10.25910/yk0y-0217</ontology:NFDI_0001008>
         <rdfs:label>url 382</rdfs:label>
     </NamedIndividual>
@@ -15651,7 +15645,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451625714552 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451625714552">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>h5py</ontology:NFDI_0001007>
         <rdfs:label>h5py</rdfs:label>
     </NamedIndividual>
@@ -15661,7 +15655,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145520 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145520">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>Aiida</ontology:NFDI_0001007>
         <rdfs:label>Aiida</rdfs:label>
     </NamedIndividual>
@@ -15671,7 +15665,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145521 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145521">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>pylammpsmpi</ontology:NFDI_0001007>
         <rdfs:label>pylammpsmpi</rdfs:label>
     </NamedIndividual>
@@ -15681,7 +15675,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145522 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145522">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>Pyscal</ontology:NFDI_0001007>
         <rdfs:label>Pyscal</rdfs:label>
     </NamedIndividual>
@@ -15691,7 +15685,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145523 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145523">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>Mendeleev</ontology:NFDI_0001007>
         <rdfs:label>Mendeleev</rdfs:label>
     </NamedIndividual>
@@ -15701,7 +15695,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451625714553 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451625714553">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>ASE</ontology:NFDI_0001007>
         <rdfs:label>ASE</rdfs:label>
     </NamedIndividual>
@@ -15711,7 +15705,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451625714554 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451625714554">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>VTK</ontology:NFDI_0001007>
         <rdfs:label>VTK</rdfs:label>
     </NamedIndividual>
@@ -15721,7 +15715,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451625714555 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451625714555">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>ParaView</ontology:NFDI_0001007>
         <rdfs:label>ParaView</rdfs:label>
     </NamedIndividual>
@@ -15731,7 +15725,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451625714556 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451625714556">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>ImageJ</ontology:NFDI_0001007>
         <rdfs:label>ImageJ</rdfs:label>
     </NamedIndividual>
@@ -15741,7 +15735,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451625714557 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451625714557">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>ImageJ2</ontology:NFDI_0001007>
         <rdfs:label>ImageJ2</rdfs:label>
     </NamedIndividual>
@@ -15751,7 +15745,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451625714558 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451625714558">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>Fiji</ontology:NFDI_0001007>
         <rdfs:label>Fiji</rdfs:label>
     </NamedIndividual>
@@ -15761,7 +15755,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451625714559 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451625714559">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <ontology:NFDI_0001007>Nextmol</ontology:NFDI_0001007>
         <rdfs:label>Nextmol</rdfs:label>
     </NamedIndividual>
