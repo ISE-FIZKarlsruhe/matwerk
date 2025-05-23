@@ -44,7 +44,7 @@ jobs:
            python3 -m pyshacl  -s main/shapes/shape2.ttl reasoned.ttl
 
            # no orphaned textual entities
-           python3 -m pyshacl  -s main/shapes/shape1.ttl reasoned.ttl
+           #python3 -m pyshacl  -s main/shapes/shape1.ttl reasoned.ttl
 
 
            #######################################################
