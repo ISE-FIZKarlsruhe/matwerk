@@ -1,5 +1,6 @@
 #	TYPE	label	Value
 ID	TYPE	A rdfs:label	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007
+https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007	owl:DataProperty		
 https://purls.helmholtz-metadaten.de/msekg/17451597693901	http://purl.obolibrary.org/obo/IAO_0000605	FEAP	FEAP
 https://purls.helmholtz-metadaten.de/msekg/17451597693902	http://purl.obolibrary.org/obo/IAO_0000605	VTK	VTK
 https://purls.helmholtz-metadaten.de/msekg/17451597693903	http://purl.obolibrary.org/obo/IAO_0000605	VASP	VASP

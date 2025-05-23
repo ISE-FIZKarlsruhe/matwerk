@@ -1,5 +1,6 @@
 #	TYPE	Label	denoted by	Value
 ID	TYPE	A rdfs:label	I http://purl.obolibrary.org/obo/IAO_0000235	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007
+https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007	owl:DataProperty			
 https://purls.helmholtz-metadaten.de/msekg/17451393742191	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Dusseldorf	Dusseldorf_	
 https://purls.helmholtz-metadaten.de/msekg/17451393742192	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Stuttgart	Stuttgart_	
 https://purls.helmholtz-metadaten.de/msekg/17451393742193	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Berlin	Berlin_	
