@@ -6,7 +6,7 @@ COPY ./data/all.ttl /data/ontology.ttl
 
 RUN java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar -ontFile /data/ontology.ttl -outFolder public -uniteSections -includeAnnotationProperties -lang en-de -getOntologyMetadata -noPlaceHolderText -rewriteAll -webVowl
 
-FROM ghcr.io/epoz/shmarql:v0.55
+FROM ghcr.io/epoz/shmarql:v0.56
 
 COPY data /data
 COPY docs /src/docs
