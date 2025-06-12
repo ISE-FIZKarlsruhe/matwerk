@@ -1,0 +1,20 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:    <http://www.example.org/#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+#   
+#  "an ontology variant should be always contiuant part of ontology
+#
+ex:OntoVariantShape
+    a sh:NodeShape ;
+    sh:targetClass <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000024> ;    # nfdi:ontology_variant
+    sh:property [
+        sh:path <http://purl.obolibrary.org/obo/BFO_0000176> ;       # bfo:continuant part of
+        sh:minCount 1 ;
+		sh:class <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023>;
+        sh:message "an 'ontology variant' (NFDI_0000024) must always 'continuant part of' (BFO_0000176) an 'ontology' (NFDI_0000023)"
+    ] ;
+    .
