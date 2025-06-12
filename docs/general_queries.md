@@ -487,6 +487,53 @@ LIMIT 999
 ```
 
 ---
+### What are the ontologies present in the MSE-KG? What are the name and links of these ontologies?
+
+```sparql
+SELECT ?ontology ?ontoname ?repoLink
+WHERE {
+  ?ontology a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023> .
+  OPTIONAL {
+    ?ontology <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ?ontologyTitle .
+    ?ontologyTitle a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
+    ?ontologyTitle <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?ontoname.
+  }
+   OPTIONAL {
+    ?ontology <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ?ontologyRepo .
+    ?ontologyRepo a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030> .
+    ?ontologyRepo <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repoLink.
+  }
+}
+LIMIT 999
+
+```
+
+---
+### List the ontologies can be downloaded in turtle serialization format, along with the links
+
+```sparql
+SELECT ?ontology ?ontoname ?filelink
+WHERE {
+  ?ontology a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023> .
+    ?ontology <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ?ontologyTitle .
+    ?ontologyTitle a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
+    ?ontologyTitle <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?ontoname.
+    ?ontology <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ?ontologyRepo .
+    ?ontologyRepo a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030> .
+  
+    ?file a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000027> .
+    ?file <http://purl.obolibrary.org/obo/BFO_0000176> ?ontologyRepo .
+    
+    ?extens <http://purl.obolibrary.org/obo/IAO_0000136> ?file .
+    ?extens a <http://edamontology.org/format_3255> .
+    ?file <http://www.w3.org/ns/dcat#downloadURL> ?downlURL .
+    ?downlURL <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?filelink .
+}
+LIMIT 999
+
+```
+
+---
 ### What are the publications present in the MSE-KG? What are the DOI, authors and authors affiliations of these publications?
 
 ```sparql
