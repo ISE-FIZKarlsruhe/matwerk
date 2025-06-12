@@ -1,0 +1,61 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:    <http://www.example.org/#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+#
+#  Every ontology release version is part of an ontology, and is subject of ontology version number/IRI. 
+# The latter should take into account, that ontology version can also be subject of file data items.
+# 
+
+#shape in case we have no file which "is about" ontology
+
+ex:filesIfNotExist
+    sh:path <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ; 
+    sh:maxCount 1 ;
+    sh:qualifiedValueShape [
+          sh:path <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ; 
+       sh:class (<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001053> <http://purl.obolibrary.org/obo/IAO_0000129>) ; #version IRI/version NUMBER
+        sh:message "an 'ontology release version' (NFDI_0000026) should always 'is subject of' (NFDI_0000226) ontology version number/IRI"
+    ] ;
+    sh:qualifiedMinCount 1 ;
+.
+
+#shape in case we have at least one file which "is about" ontology
+
+ex:filesIfExist
+   sh:path <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ; 
+    sh:minCount 2 ;
+    sh:qualifiedValueShape [
+         sh:path <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ; 
+       sh:class (<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001053> <http://purl.obolibrary.org/obo/IAO_0000129> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000027>) ; #version IRI/version NUMBER/file data item
+        sh:message "an 'ontology release version' (NFDI_0000026) should always 'is subject of' (NFDI_0000226) ontology version number/IRI, additionally can be subject of file data item"
+    ] ;
+    sh:qualifiedMinCount 1 ;
+.
+
+#ontology version should be continuant part of ontology
+
+ex:partOfOnto
+        sh:path <http://purl.obolibrary.org/obo/BFO_0000176> ;       # bfo:is continuant part
+        sh:minCount 1 ;
+     sh:qualifiedValueShape [
+         sh:class <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023>;
+        sh:message "an 'ontology release version' (NFDI_0000026) should always 'continuant part of' (BFO_0000176) ontology  (NFDI_0000023)"
+    ] ;
+.
+
+#main shape
+
+  ex:OntoVersionShape
+    a sh:NodeShape ;
+    sh:targetClass <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000026> ;    # nfdi:ontology version
+
+    sh:property ex:partOfOnto ;
+ sh:or (
+        [ sh:property ex:filesIfExist]
+        [ sh:property ex:filesIfNotExist]
+    )
+.  
