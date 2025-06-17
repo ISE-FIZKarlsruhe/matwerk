@@ -33,6 +33,15 @@ jobs:
            ########################################################
            # for SHACL based validation we need to install pyshacl
            pip install pyshacl
+
+           # every ontology release version is subject of ontology version number/IRI. 
+           python3 -m pyshacl  -s main/shapes/shape7.ttl reasoned.ttl
+
+           # an ontology version should be always contiuant part of ontology
+           python3 -m pyshacl  -s main/shapes/shape6.ttl reasoned.ttl
+
+           # an ontology variant should be always contiuant part of ontology
+           python3 -m pyshacl  -s main/shapes/shape5.ttl reasoned.ttl
            
            # no roles without realizations
            python3 -m pyshacl  -s main/shapes/shape4.ttl reasoned.ttl
