@@ -6,7 +6,7 @@
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 
 #
-#  Every ontology release version is part of an ontology, and is subject of ontology version number/IRI. 
+# Every ontology release version is subject of ontology version number/IRI. 
 # The latter should take into account, that ontology version can also be subject of file data items.
 # 
 
@@ -36,16 +36,6 @@ ex:filesIfExist
     sh:qualifiedMinCount 1 ;
 .
 
-#ontology version should be continuant part of ontology
-
-ex:partOfOnto
-        sh:path <http://purl.obolibrary.org/obo/BFO_0000176> ;       # bfo:is continuant part
-        sh:minCount 1 ;
-     sh:qualifiedValueShape [
-         sh:class <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023>;
-        sh:message "an 'ontology release version' (NFDI_0000026) should always 'continuant part of' (BFO_0000176) ontology  (NFDI_0000023)"
-    ] ;
-.
 
 #main shape
 
@@ -53,7 +43,6 @@ ex:partOfOnto
     a sh:NodeShape ;
     sh:targetClass <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000026> ;    # nfdi:ontology version
 
-    sh:property ex:partOfOnto ;
  sh:or (
         [ sh:property ex:filesIfExist]
         [ sh:property ex:filesIfNotExist]
