@@ -23,33 +23,32 @@ jobs:
       - name: Install pySHACL
         run: pip install pyshacl
 
-      - name: Find and validate new TTL file
-        id: validate
+      - name: Extract changed TTL file path
+        id: findfile
         run: |
-          changed_file=$(git diff-tree --no-commit-id --name-only -r ${{ github.sha }} | grep '^Submissions/.*/graph_.*\.ttl$' || echo "")
-          if [[ "$changed_file" == "" ]]; then
-            echo "No TTL submission file changed. Exiting."
-            exit 0
-          fi
+          CHANGED=$(git show --pretty="" --name-only | grep '^Submissions/.*/graph_.*\.ttl$' | head -n 1 || echo "")
+          echo "Found changed file: $CHANGED"
+          echo "changed_file=$CHANGED" >> $GITHUB_OUTPUT
 
-          echo "Changed RDF file: $changed_file"
+      - name: Run SHACL validation
+        if: steps.findfile.outputs.changed_file != ''
+        run: |
+          changed_file="${{ steps.findfile.outputs.changed_file }}"
           shape_path="Submissions/shapes/$(basename $(dirname "$changed_file")).ttl"
-          if [[ ! -f "$shape_path" ]]; then
-            echo "SHACL shape not found for: $shape_path"
-            exit 1
-          fi
-
           result_file="${changed_file/graph_/validation_}"
           result_file="${result_file%.ttl}.md"
 
           echo "Running SHACL validation..."
           python -m pyshacl -s "$shape_path" "$changed_file" > "$result_file"
-          echo "Generated validation: $result_file"
+
+          echo "Validation result file: $result_file"
+          echo "result_file=$result_file" >> $GITHUB_ENV
 
       - name: Commit and push validation result
+        if: env.result_file != ''
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add Submissions/**/validation_*.md
-          git commit -m "Add validation report for RDF submission"
+          git add "$result_file"
+          git commit -m "Add validation result for RDF submission"
           git push
