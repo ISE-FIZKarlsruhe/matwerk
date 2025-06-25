@@ -15,7 +15,7 @@ GRAPH <https://purls.helmholtz-metadaten.de/msekg/Person/1750853087151/> {
     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211> <https://purls.helmholtz-metadaten.de/msekg/1750853499598239> ;
     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> <https://purls.helmholtz-metadaten.de/msekg/1750853499598850> ;
     <http://purl.obolibrary.org/obo/BFO_0000056> <https://purls.helmholtz-metadaten.de/msekg/1750853499598438> ;
-    <http://purl.org/dc/terms/modified> "2025-06-25T12:19:20.202Z"^^xsd:dateTime ;
+    <http://purl.org/dc/terms/modified> "2025-06-25T12:44:36.357Z"^^xsd:dateTime ;
     <http://www.w3.org/ns/prov#wasUpdatedBy> "norouzi.iut@gmail.com" .
 
 <https://purls.helmholtz-metadaten.de/msekg/1750853499598794> rdfs:label "Ebrahim" .
