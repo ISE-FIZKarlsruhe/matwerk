@@ -1,0 +1,31 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+
+GRAPH <https://purls.helmholtz-metadaten.de/msekg/Person/1750858402135/> {
+<https://purls.helmholtz-metadaten.de/msekg/1750858402135951> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Dr. Ebrahim Norouzi" ;
+    <http://purl.obolibrary.org/obo/IAO_0000235> <https://purls.helmholtz-metadaten.de/msekg/1750858402135346> ;
+    <http://purl.obolibrary.org/obo/IAO_0000235> <https://purls.helmholtz-metadaten.de/msekg/1750858402135853> ;
+    <http://purl.obolibrary.org/obo/IAO_0000235> <https://purls.helmholtz-metadaten.de/msekg/1750858402135168> ;
+    <http://purl.obolibrary.org/obo/IAO_0000235> <https://purls.helmholtz-metadaten.de/msekg/1750858402135310> ;
+    <http://purl.obolibrary.org/obo/IAO_0000235> <https://purls.helmholtz-metadaten.de/msekg/1750858402135300> ;
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211> <https://purls.helmholtz-metadaten.de/msekg/1750858402135579> ;
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211> <https://purls.helmholtz-metadaten.de/msekg/1750858402135943> ;
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> <https://purls.helmholtz-metadaten.de/msekg/1750858402135604> ;
+    <http://purl.obolibrary.org/obo/BFO_0000056> <https://purls.helmholtz-metadaten.de/msekg/1750858402135597> ;
+    <http://purl.obolibrary.org/obo/IAO_0000117> "norouzi.iut@gmail.com" ;
+    <http://purl.org/dc/terms/created> "2025-06-25T13:33:22.135Z"^^xsd:dateTime .
+
+<https://purls.helmholtz-metadaten.de/msekg/1750858402135346> rdfs:label "Dr." .
+<https://purls.helmholtz-metadaten.de/msekg/1750858402135853> rdfs:label "Ebrahim" .
+<https://purls.helmholtz-metadaten.de/msekg/1750858402135168> rdfs:label "Norouzi" .
+<https://purls.helmholtz-metadaten.de/msekg/1750858402135310> rdfs:label "ebrahim.norouzi@fiz-karlsruhe.de" .
+<https://purls.helmholtz-metadaten.de/msekg/1750858402135300> rdfs:label "ebrahim.norouzi@rub.de" .
+<https://purls.helmholtz-metadaten.de/msekg/1750858402135579> rdfs:label "Information Service Engineering" .
+<https://purls.helmholtz-metadaten.de/msekg/1750858402135943> rdfs:label "Materials Informatic" .
+<https://purls.helmholtz-metadaten.de/msekg/1750858402135604> rdfs:label "orcid 38" .
+<https://purls.helmholtz-metadaten.de/msekg/1750858402135597> rdfs:label "matwerk project process 50" .
+}
