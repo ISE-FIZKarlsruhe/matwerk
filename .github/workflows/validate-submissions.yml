@@ -30,11 +30,16 @@ jobs:
           echo "Changed file: $CHANGED"
           echo "changed_file=$CHANGED" >> $GITHUB_OUTPUT
 
-
       - name: Run SHACL validation
         if: steps.findfile.outputs.changed_file != ''
         run: |
           changed_file="${{ steps.findfile.outputs.changed_file }}"
+          
+          if [ ! -f "$changed_file" ]; then
+            echo "🚫 File was deleted: $changed_file — skipping validation."
+            exit 0
+          fi
+      
           shape_path="Submissions/shapes/$(basename $(dirname "$changed_file")).ttl"
           tmp_trig_file="${changed_file%.ttl}.trig"
           result_file="${changed_file/graph_/validation_}"
@@ -49,11 +54,17 @@ jobs:
           echo "result_file=$result_file" >> $GITHUB_ENV
 
 
+      - name: Show Git status (debug)
+        run: |
+          git status
+          ls -lh Submissions/*/
+
       - name: Commit and push validation result
         if: env.result_file != ''
         run: |
+          echo "🔁 Committing ${{ env.result_file }}"
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add "$result_file"
-          git commit -m "Add validation result for RDF submission"
+          git add "${{ env.result_file }}"
+          git commit -m "Add/update validation result: ${filename}"
           git push
