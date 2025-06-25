@@ -71,3 +71,4 @@ jobs:
             echo "🔁 Committing $result_file"
             git commit -m "Update validation result for $result_file"
             git push
+          fi
