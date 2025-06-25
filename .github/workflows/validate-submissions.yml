@@ -44,7 +44,7 @@ jobs:
           cp "$changed_file" "$tmp_trig_file"
       
           echo "Running SHACL validation..."
-          python -m pyshacl -s "$shape_path" -df trig -sf turtle -f human "$tmp_trig_file" > "$result_file"
+          python -m pyshacl -s "$shape_path" -df auto -sf turtle -f human "$tmp_trig_file" > "$result_file"
       
           echo "result_file=$result_file" >> $GITHUB_ENV
 
