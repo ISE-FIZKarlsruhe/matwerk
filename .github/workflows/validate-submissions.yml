@@ -23,12 +23,13 @@ jobs:
       - name: Install pySHACL
         run: pip install pyshacl
 
-      - name: Detect changed TTL file
+      - name: Detect changed TTL file from commit message
         id: findfile
         run: |
-          CHANGED=$(git log -m -1 --name-only --pretty=format: | grep '^Submissions/.*/graph_.*\.ttl$' | head -n 1 || echo "")
+          CHANGED=$(git log -1 --pretty=%B | grep -o 'Submissions/.*/graph_.*\.ttl' || echo "")
           echo "Changed file: $CHANGED"
           echo "changed_file=$CHANGED" >> $GITHUB_OUTPUT
+
 
       - name: Run SHACL validation
         if: steps.findfile.outputs.changed_file != ''
