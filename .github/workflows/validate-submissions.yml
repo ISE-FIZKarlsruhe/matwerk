@@ -35,13 +35,20 @@ jobs:
         if: steps.findfile.outputs.changed_file != ''
         run: |
           changed_file="${{ steps.findfile.outputs.changed_file }}"
+          
+          # If the file is .ttl, switch to .trig for validation
+          changed_file_trig="${changed_file%.ttl}.trig"
+      
+          # Use base folder name to select shape
           shape_path="Submissions/shapes/$(basename $(dirname "$changed_file")).ttl"
-          result_file="${changed_file/graph_/validation_}"
-          result_file="${result_file%.ttl}.md"
-
-          echo "Running SHACL validation on $changed_file..."
-          python -m pyshacl -s "$shape_path" -df auto "$changed_file" > "$result_file"
-
+      
+          # Define the output result file
+          result_file="${changed_file_trig/graph_/validation_}"
+          result_file="${result_file%.trig}.md"
+      
+          echo "Running SHACL validation on $changed_file_trig..."
+          python -m pyshacl -s "$shape_path" -df auto -sf turtle -f human "$changed_file_trig" > "$result_file"
+      
           echo "result_file=$result_file" >> $GITHUB_ENV
 
       - name: Commit and push validation result
