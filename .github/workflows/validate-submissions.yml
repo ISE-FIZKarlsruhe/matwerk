@@ -30,41 +30,43 @@ jobs:
           echo "Changed file: $CHANGED"
           echo "changed_file=$CHANGED" >> $GITHUB_OUTPUT
 
+      - name: Skip if file was deleted
+        id: check_exists
+        run: |
+          FILE="${{ steps.findfile.outputs.changed_file }}"
+          if [ -f "$FILE" ]; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+          else
+            echo "File does not exist. Likely deleted. Skipping validation."
+            echo "exists=false" >> $GITHUB_OUTPUT
+
       - name: Run SHACL validation
-        if: steps.findfile.outputs.changed_file != ''
+        if: steps.check_exists.outputs.exists == 'true'
         run: |
           changed_file="${{ steps.findfile.outputs.changed_file }}"
-          
-          if [ ! -f "$changed_file" ]; then
-            echo "🚫 File was deleted: $changed_file — skipping validation."
-            exit 0
-          fi
-      
           shape_path="Submissions/shapes/$(basename $(dirname "$changed_file")).ttl"
           tmp_trig_file="${changed_file%.ttl}.trig"
           result_file="${changed_file/graph_/validation_}"
           result_file="${result_file%.ttl}.md"
-      
-          echo "Converting $changed_file to $tmp_trig_file for SHACL validation..."
+
+          echo "Converting $changed_file to $tmp_trig_file..."
           cp "$changed_file" "$tmp_trig_file"
-      
+
           echo "Running SHACL validation..."
           python -m pyshacl -s "$shape_path" -df auto -sf turtle -f human "$tmp_trig_file" > "$result_file"
-      
+
           echo "result_file=$result_file" >> $GITHUB_ENV
 
-
-      - name: Show Git status (debug)
-        run: |
-          git status
-          ls -lh Submissions/*/
-
-      - name: Commit and push validation result
+      - name: Commit and push validation result (only if changed)
         if: env.result_file != ''
         run: |
-          echo "🔁 Committing ${{ env.result_file }}"
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add "${{ env.result_file }}"
-          git commit -m "Add/update validation result: ${filename}"
-          git push
+          git add "$result_file"
+
+          if git diff --cached --quiet; then
+            echo "✅ No changes to commit for $result_file."
+          else
+            echo "🔁 Committing $result_file"
+            git commit -m "Update validation result for $result_file"
+            git push
