@@ -3,7 +3,7 @@ name: Validate RDF Submissions
 on:
   push:
     paths:
-      - 'Submissions/**.ttl'
+      - 'Submissions/**/*.ttl'
     branches:
       - main
 
@@ -26,10 +26,9 @@ jobs:
       - name: Detect changed TTL file
         id: findfile
         run: |
-          CHANGED=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '^Submissions/.*/graph_.*\.ttl$' | head -n 1 || echo "")
+          CHANGED=$(git log -m -1 --name-only --pretty=format: | grep '^Submissions/.*/graph_.*\.ttl$' | head -n 1 || echo "")
           echo "Changed file: $CHANGED"
           echo "changed_file=$CHANGED" >> $GITHUB_OUTPUT
-
 
       - name: Run SHACL validation
         if: steps.findfile.outputs.changed_file != ''
@@ -39,10 +38,9 @@ jobs:
           result_file="${changed_file/graph_/validation_}"
           result_file="${result_file%.ttl}.md"
 
-          echo "Running SHACL validation..."
+          echo "Running SHACL validation on $changed_file..."
           python -m pyshacl -s "$shape_path" "$changed_file" > "$result_file"
 
-          echo "Validation result file: $result_file"
           echo "result_file=$result_file" >> $GITHUB_ENV
 
       - name: Commit and push validation result
