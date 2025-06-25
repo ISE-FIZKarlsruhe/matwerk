@@ -21,7 +21,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install pySHACL
-        run: pip install pyshacl
+        run: pip install --upgrade git+https://github.com/RDFLib/pySHACL.git
 
       - name: Detect changed TTL file from commit message
         id: findfile
