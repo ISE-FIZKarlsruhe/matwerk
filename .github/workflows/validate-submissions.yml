@@ -39,6 +39,7 @@ jobs:
           else
             echo "File does not exist. Likely deleted. Skipping validation."
             echo "exists=false" >> $GITHUB_OUTPUT
+          fi
 
       - name: Run SHACL validation
         if: steps.check_exists.outputs.exists == 'true'
