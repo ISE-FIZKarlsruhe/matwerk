@@ -40,7 +40,7 @@ jobs:
           result_file="${result_file%.ttl}.md"
 
           echo "Running SHACL validation on $changed_file..."
-          python -m pyshacl -s "$shape_path" "$changed_file" > "$result_file"
+          python -m pyshacl -s "$shape_path" -df trig "$changed_file" > "$result_file"
 
           echo "result_file=$result_file" >> $GITHUB_ENV
 
