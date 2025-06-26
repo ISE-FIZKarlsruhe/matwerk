@@ -50,28 +50,35 @@ jobs:
           TSV_LIST=$(echo "$CHANGED" | tr '\n' ',' | sed 's/,$//')
           echo "tsv_files=$TSV_LIST" >> "$GITHUB_OUTPUT"
 
-      - name: Run SHACL Validation
-        if: env.ttl_file != ''
+      - name: Set TTL file as output
+        id: extract
         run: |
-          ttl_file="${{ env.ttl_file }}"
+          TTL_FILE="Submissions/Person/$(basename ${{ steps.findfiles.outputs.tsv_files }} .tsv).ttl"
+          echo "ttl_file=$TTL_FILE" >> $GITHUB_OUTPUT
+          echo "ttl_file=$TTL_FILE" >> $GITHUB_ENV
+      - name: Run SHACL Validation
+        if: steps.extract.outputs.ttl_file != ''
+        run: |
+          ttl_file="${{ steps.extract.outputs.ttl_file }}"
           result_file="${ttl_file%.ttl}.md"
           shape_file="Submissions/shapes/$(basename $(dirname "$ttl_file")).ttl"
-
+      
           python -m pyshacl -s "$shape_file" -df auto -sf turtle -f human "$ttl_file" > "$result_file"
-
+      
           echo "result_file=$result_file" >> $GITHUB_ENV
-
+          echo "result_file=$result_file" >> $GITHUB_OUTPUT
       - name: Commit and Push TTL and Validation Result
-        if: env.result_file != ''
+        if: steps.extract.outputs.ttl_file != '' && steps.extract.outputs.result_file != ''
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add "${{ env.ttl_file }}"
-          git add "${{ env.result_file }}"
-
+          git add "${{ steps.extract.outputs.ttl_file }}"
+          git add "${{ steps.extract.outputs.result_file }}"
+      
           if git diff --cached --quiet; then
             echo "No changes to commit."
           else
-            git commit -m "Add TTL and validation for ${{ env.ttl_file }}"
+            git commit -m "Add TTL and validation for ${{ steps.extract.outputs.ttl_file }}"
             git push
           fi
+
