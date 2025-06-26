@@ -47,24 +47,8 @@ jobs:
           echo "📁 TSV files detected:"
           echo "$CHANGED"
       
-          # Join newline-separated file list into comma-separated string
-          TSV_LIST=$(echo "$CHANGED" | paste -sd "," -)
+          TSV_LIST=$(echo "$CHANGED" | tr '\n' ',' | sed 's/,$//')
           echo "tsv_files=$TSV_LIST" >> "$GITHUB_OUTPUT"
-            - name: Generate TTL using ROBOT merge
-              if: steps.findtsv.outputs.changed_file != ''
-              run: |
-                changed_file="${{ steps.findtsv.outputs.changed_file }}"
-                base_name=$(basename "$changed_file" .tsv)
-                dir_name=$(dirname "$changed_file")
-                ttl_file="$dir_name/${base_name}.ttl"
-      
-                java -Xmx16G -jar robot.jar merge \
-                  -i /data/components/req_1.owl \
-                  -i /data/components/req_2.owl \
-                  --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" \
-                  --output "$ttl_file"
-      
-                echo "ttl_file=$ttl_file" >> $GITHUB_ENV
 
       - name: Run SHACL Validation
         if: env.ttl_file != ''
