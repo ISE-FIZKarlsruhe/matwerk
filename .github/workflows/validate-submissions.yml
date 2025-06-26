@@ -6,6 +6,9 @@ on:
       - 'Submissions/**/*.ttl'
     branches:
       - main
+    paths-ignore:
+      - 'Submissions/**'
+      - '.github/**'
 
 jobs:
   validate-shacl:
