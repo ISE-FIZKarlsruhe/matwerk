@@ -64,7 +64,10 @@ jobs:
           BASENAME=$(basename "$TSV_FILE" .tsv)
           DIRNAME=$(dirname "$TSV_FILE")
 
-          TTL_FILE="${DIRNAME}/${BASENAME}.ttl"
+          ttl_output="${tsv_file%.tsv}.ttl"
+          
+
+          mkdir -p "$(dirname "$TTL_FILE")"
 
           java -Xmx4G -jar robot.jar merge \
             -i data/components/req_1.owl \
