@@ -67,8 +67,8 @@ jobs:
           TTL_FILE="${DIRNAME}/${BASENAME}.ttl"
 
           java -Xmx4G -jar robot.jar merge \
-            -i /data/components/req_1.owl \
-            -i /data/components/req_2.owl \
+            -i data/components/req_1.owl \
+            -i data/components/req_2.owl \
             --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" \
             -o "$TTL_FILE"
       
