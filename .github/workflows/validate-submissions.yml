@@ -56,12 +56,6 @@ jobs:
           TTL_FILE="Submissions/Person/$(basename ${{ steps.findtsv.outputs.tsv_files }} .tsv).ttl"
           echo "ttl_file=$TTL_FILE" >> $GITHUB_OUTPUT
           echo "ttl_file=$TTL_FILE" >> $GITHUB_ENV
-      
-      - name: Detect changed TSV file
-        id: findfile
-        run: |
-          CHANGED=$(git log -1 --name-only --pretty=format: | grep 'Submissions/.*/[0-9]\+\.tsv' || echo "")
-          echo "changed_file=${CHANGED}" >> "$GITHUB_OUTPUT"
 
       - name: Run ROBOT merge to generate TTL
         if: steps.extract.outputs.ttl_file != ''
