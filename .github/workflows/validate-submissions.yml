@@ -34,51 +34,37 @@ jobs:
       - name: Detect Changed TSV File
         id: findtsv
         run: |
-            echo "🔍 Checking for changed TSV files in latest commit..."
-        
-            # Capture changed files from latest commit
-            CHANGED=$(git log -1 --name-only --pretty=format: | grep 'Submissions/.*/[0-9]\+\.tsv' || echo "")
-        
-            # Print raw value for debugging
-            echo "🧪 Raw CHANGED output:"
-            echo "$CHANGED"
-        
-            # Clean newline characters (pick first file if multiple, or just remove newline)
-            CHANGED_CLEANED=$(echo "$CHANGED" | head -n 1 | tr -d '\n')
-            echo "🧪 Cleaned CHANGED file: $CHANGED_CLEANED"
-        
-            # Handle empty result
-            if [[ -z "$CHANGED_CLEANED" ]]; then
-              echo "⚠️ No changed TSV file detected. Exiting early..."
-              echo "changed_file=" >> "$GITHUB_OUTPUT"
-              echo "changed_file=" >> "$GITHUB_ENV"
-              exit 0
-            fi
-        
-            # Export as output and environment variable
-            echo "✅ TSV file detected: $CHANGED_CLEANED"
-            echo "changed_file=$CHANGED_CLEANED" >> "$GITHUB_OUTPUT"
-            
-            # Safe way to store it in GITHUB_ENV (multi-line-safe)
-            echo "changed_file<<EOF" >> "$GITHUB_ENV"
-            echo "$CHANGED_CLEANED" >> "$GITHUB_ENV"
-            echo "EOF" >> "$GITHUB_ENV"
-
-      - name: Generate TTL using ROBOT merge
-        if: steps.findtsv.outputs.changed_file != ''
-        run: |
-          changed_file="${{ steps.findtsv.outputs.changed_file }}"
-          base_name=$(basename "$changed_file" .tsv)
-          dir_name=$(dirname "$changed_file")
-          ttl_file="$dir_name/${base_name}.ttl"
-
-          java -Xmx16G -jar robot.jar merge \
-            -i /data/components/req_1.owl \
-            -i /data/components/req_2.owl \
-            --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" \
-            --output "$ttl_file"
-
-          echo "ttl_file=$ttl_file" >> $GITHUB_ENV
+          echo "🔍 Detecting all .tsv files changed in the last commit..."
+      
+          CHANGED=$(git log -1 --name-only --pretty=format: | grep 'Submissions/.*/[0-9]\+\.tsv' || echo "")
+      
+          if [[ -z "$CHANGED" ]]; then
+            echo "⚠️ No .tsv files found in commit."
+            echo "tsv_files=" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+      
+          echo "📁 TSV files detected:"
+          echo "$CHANGED"
+      
+          # Join newline-separated file list into comma-separated string
+          TSV_LIST=$(echo "$CHANGED" | paste -sd "," -)
+          echo "tsv_files=$TSV_LIST" >> "$GITHUB_OUTPUT"
+            - name: Generate TTL using ROBOT merge
+              if: steps.findtsv.outputs.changed_file != ''
+              run: |
+                changed_file="${{ steps.findtsv.outputs.changed_file }}"
+                base_name=$(basename "$changed_file" .tsv)
+                dir_name=$(dirname "$changed_file")
+                ttl_file="$dir_name/${base_name}.ttl"
+      
+                java -Xmx16G -jar robot.jar merge \
+                  -i /data/components/req_1.owl \
+                  -i /data/components/req_2.owl \
+                  --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" \
+                  --output "$ttl_file"
+      
+                echo "ttl_file=$ttl_file" >> $GITHUB_ENV
 
       - name: Run SHACL Validation
         if: env.ttl_file != ''
