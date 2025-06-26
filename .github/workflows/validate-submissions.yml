@@ -53,9 +53,10 @@ jobs:
       - name: Set TTL file as output
         id: extract
         run: |
-          TTL_FILE="Submissions/Person/$(basename ${{ steps.findfiles.outputs.tsv_files }} .tsv).ttl"
+          TTL_FILE="Submissions/Person/$(basename ${{ steps.findtsv.outputs.tsv_files }} .tsv).ttl"
           echo "ttl_file=$TTL_FILE" >> $GITHUB_OUTPUT
           echo "ttl_file=$TTL_FILE" >> $GITHUB_ENV
+      
       - name: Run SHACL Validation
         if: steps.extract.outputs.ttl_file != ''
         run: |
