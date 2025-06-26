@@ -34,9 +34,35 @@ jobs:
       - name: Detect Changed TSV File
         id: findtsv
         run: |
-          CHANGED=$(git log -1 --name-only --pretty=format: | grep 'Submissions/.*/[0-9]\+\.tsv' || echo "")
-          echo "changed_file=${CHANGED}" >> "$GITHUB_ENV"
-          echo "changed_file=${CHANGED//$'\n'/}" >> "$GITHUB_OUTPUT"
+            echo "🔍 Checking for changed TSV files in latest commit..."
+        
+            # Capture changed files from latest commit
+            CHANGED=$(git log -1 --name-only --pretty=format: | grep 'Submissions/.*/[0-9]\+\.tsv' || echo "")
+        
+            # Print raw value for debugging
+            echo "🧪 Raw CHANGED output:"
+            echo "$CHANGED"
+        
+            # Clean newline characters (pick first file if multiple, or just remove newline)
+            CHANGED_CLEANED=$(echo "$CHANGED" | head -n 1 | tr -d '\n')
+            echo "🧪 Cleaned CHANGED file: $CHANGED_CLEANED"
+        
+            # Handle empty result
+            if [[ -z "$CHANGED_CLEANED" ]]; then
+              echo "⚠️ No changed TSV file detected. Exiting early..."
+              echo "changed_file=" >> "$GITHUB_OUTPUT"
+              echo "changed_file=" >> "$GITHUB_ENV"
+              exit 0
+            fi
+        
+            # Export as output and environment variable
+            echo "✅ TSV file detected: $CHANGED_CLEANED"
+            echo "changed_file=$CHANGED_CLEANED" >> "$GITHUB_OUTPUT"
+            
+            # Safe way to store it in GITHUB_ENV (multi-line-safe)
+            echo "changed_file<<EOF" >> "$GITHUB_ENV"
+            echo "$CHANGED_CLEANED" >> "$GITHUB_ENV"
+            echo "EOF" >> "$GITHUB_ENV"
 
       - name: Generate TTL using ROBOT merge
         if: steps.findtsv.outputs.changed_file != ''
