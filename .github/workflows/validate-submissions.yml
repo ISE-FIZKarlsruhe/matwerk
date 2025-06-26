@@ -35,7 +35,8 @@ jobs:
         id: findtsv
         run: |
           CHANGED=$(git log -1 --name-only --pretty=format: | grep 'Submissions/.*/[0-9]\+\.tsv' || echo "")
-          echo "changed_file=$CHANGED" >> $GITHUB_OUTPUT
+          echo "changed_file=${CHANGED}" >> "$GITHUB_ENV"
+          echo "changed_file=${CHANGED//$'\n'/}" >> "$GITHUB_OUTPUT"
 
       - name: Generate TTL using ROBOT merge
         if: steps.findtsv.outputs.changed_file != ''
