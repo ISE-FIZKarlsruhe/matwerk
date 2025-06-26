@@ -1,77 +1,89 @@
-name: Validate RDF Submissions
+name: TSV to TTL Conversion & SHACL Validation
 
 on:
   push:
+    branches: [main]
     paths:
-      - 'Submissions/**/*.ttl'
-    branches:
-      - main
+      - 'Submissions/**/*.tsv'
     paths-ignore:
-      - 'Submissions/**'
       - '.github/**'
 
 jobs:
-  validate-shacl:
+  process-tsv:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+
+      - name: Download Robot Tool
+        run: |
+          curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
+
+      - name: Set up Python and pySHACL
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
-      - name: Install pySHACL
-        run: pip install --upgrade git+https://github.com/RDFLib/pySHACL.git
+      - run: pip install --upgrade git+https://github.com/RDFLib/pySHACL.git
 
-      - name: Detect changed TTL file from commit message
-        id: findfile
+      - name: Detect Changed TSV File
+        id: findtsv
         run: |
-          CHANGED=$(git log -1 --pretty=%B | grep -o 'Submissions/.*/graph_.*\.ttl' || echo "")
+          CHANGED=$(git log -1 --name-only --pretty=format: | grep 'Submissions/.*/[0-9]\+\.tsv' || echo "")
           echo "Changed file: $CHANGED"
           echo "changed_file=$CHANGED" >> $GITHUB_OUTPUT
 
-      - name: Skip if file was deleted
-        id: check_exists
+      - name: Generate TTL using ROBOT merge with req_1.owl and req_2.owl
+        if: steps.findtsv.outputs.changed_file != ''
         run: |
-          FILE="${{ steps.findfile.outputs.changed_file }}"
-          if [ -f "$FILE" ]; then
-            echo "exists=true" >> $GITHUB_OUTPUT
-          else
-            echo "File does not exist. Likely deleted. Skipping validation."
-            echo "exists=false" >> $GITHUB_OUTPUT
-          fi
+          changed_file="${{ steps.findtsv.outputs.changed_file }}"
+          base_name=$(basename "$changed_file" .tsv)
+          dir_name=$(dirname "$changed_file")
+          ttl_file="$dir_name/${base_name}.ttl"
 
-      - name: Run SHACL validation
-        if: steps.check_exists.outputs.exists == 'true'
+          echo "Generating $ttl_file by merging requirements..."
+          
+          java -Xmx16G -jar robot.jar merge \
+            -i /data/components/req_1.owl \
+            -i /data/components/req_2.owl \
+            --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" \
+            --output "$ttl_file"
+
+          echo "ttl_file=$ttl_file" >> $GITHUB_ENV
+
+      - name: SHACL Validation
+        if: env.ttl_file != ''
         run: |
-          changed_file="${{ steps.findfile.outputs.changed_file }}"
-          shape_path="Submissions/shapes/$(basename $(dirname "$changed_file")).ttl"
-          tmp_trig_file="${changed_file%.ttl}.trig"
-          result_file="${changed_file/graph_/validation_}"
-          result_file="${result_file%.ttl}.md"
+          ttl_file="${{ env.ttl_file }}"
+          trig_file="${ttl_file%.ttl}.trig"
+          result_file="${ttl_file%.ttl}.md"
+          shape_file="Submissions/shapes/$(basename $(dirname "$ttl_file")).ttl"
 
-          echo "Converting $changed_file to $tmp_trig_file..."
-          cp "$changed_file" "$tmp_trig_file"
+          echo "Converting $ttl_file to $trig_file..."
+          cp "$ttl_file" "$trig_file"
 
           echo "Running SHACL validation..."
-          python -m pyshacl -s "$shape_path" -df auto -sf turtle -f human "$tmp_trig_file" > "$result_file"
+          python -m pyshacl -s "$shape_file" -df auto -sf turtle -f human "$trig_file" > "$result_file"
 
           echo "result_file=$result_file" >> $GITHUB_ENV
 
-      - name: Commit and push validation result (only if changed)
+      - name: Commit & Push TTL and Validation Result
         if: env.result_file != ''
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add "$result_file"
+          git add "${{ env.ttl_file }}"
+          git add "${{ env.result_file }}"
 
           if git diff --cached --quiet; then
-            echo "✅ No changes to commit for $result_file."
+            echo "No changes to commit."
           else
-            echo "🔁 Committing $result_file"
-            git commit -m "Update validation result for $result_file"
+            git commit -m "Added TTL and validation for ${{ env.ttl_file }}"
             git push
           fi
