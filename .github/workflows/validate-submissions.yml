@@ -73,7 +73,7 @@ jobs:
             -i data/components/req_1.owl \
             -i data/components/req_2.owl \
             --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" \
-            -o "$TTL_FILE"
+            -o "$TTL_FILE" -vvv
       
       - name: Run SHACL Validation
         if: env.ttl_file != ''
