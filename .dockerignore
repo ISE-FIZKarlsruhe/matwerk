@@ -1,0 +1,33 @@
+# Ignore Windows batch scripts
+*.bat
+
+# Ignore temporary, backup, and build files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swm
+*.swo
+
+# Ignore .nohup and related
+nohup.out
+.nohup
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore virtual environments
+venv/
+.env/
+.env
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore documentation build
+/site
+public/

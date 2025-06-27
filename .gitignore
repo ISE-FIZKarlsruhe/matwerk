@@ -1,0 +1,33 @@
+# Ignore Windows batch scripts
+*.bat
+
+# Ignore nohup output
+nohup.out
+.nohup
+
+# Ignore Python cache and virtual environments
+__pycache__/
+*.py[cod]
+*.pyo
+venv/
+.env/
+.env
+
+# Ignore IDE and editor config files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore OS-specific junk
+.DS_Store
+Thumbs.db
+
+# Ignore compiled/intermediate artifacts
+*.log
+*.tmp
+*.bak
+
+# Ignore documentation and site builds
+/site/
+public/
