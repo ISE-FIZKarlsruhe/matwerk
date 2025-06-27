@@ -27,71 +27,67 @@ jobs:
 
       - run: pip install --upgrade git+https://github.com/RDFLib/pySHACL.git
 
+      - name: Download ROBOT Tool
+        run: |
+          curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
+
       - name: Detect Changed TSV File
         id: findtsv
         run: |
-          echo "🔍 Detecting all .tsv files changed in the last commit..."
-
+          echo "🔍 Detecting latest .tsv file changed in commit..."
           CHANGED=$(git log -1 --name-only --pretty=format: | grep 'Submissions/.*/[0-9]\+\.tsv' | tail -n 1 || echo "")
-
           if [[ -z "$CHANGED" ]]; then
-            echo "⚠️ No .tsv files found in commit."
+            echo "⚠️ No .tsv file found in latest commit."
             echo "tsv_file=" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-
-          echo "✅ TSV file detected: $CHANGED"
+          echo "✅ Detected TSV file: $CHANGED"
           echo "tsv_file=$CHANGED" >> "$GITHUB_OUTPUT"
 
-      - name: Run ROBOT to convert TSV to TTL
+      - name: Run ROBOT to generate TTL and save log
         if: steps.findtsv.outputs.tsv_file != ''
         run: |
           TSV_FILE="${{ steps.findtsv.outputs.tsv_file }}"
           BASENAME=$(basename "$TSV_FILE" .tsv)
           DIRNAME=$(dirname "$TSV_FILE")
-          TTL_FILE="$DIRNAME/$BASENAME.ttl"
-          LOG_FILE="$DIRNAME/$BASENAME.txt"
+          TTL_FILE="${DIRNAME}/${BASENAME}.ttl"
+          LOG_FILE="${DIRNAME}/${BASENAME}.txt"
 
-          echo "🚀 Running ROBOT with TSV: $TSV_FILE"
+          echo "📦 Running ROBOT for $TSV_FILE -> $TTL_FILE"
+          java -Xmx4G -jar robot.jar merge \
+            -i data/components/req_1.owl \
+            -i data/components/req_2.owl \
+            --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" \
+            template --template "$TSV_FILE" \
+            -o "$TTL_FILE" -vvv \
+            2>&1 | tee "$LOG_FILE"
 
-          docker run --rm -v "$PWD:/work" -w "/work" \
-            -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" \
-            obolibrary/robot robot merge \
-              -i data/components/req_1.owl \
-              -i data/components/req_2.owl \
-              --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" \
-              template --template "$TSV_FILE" \
-              -o "$TTL_FILE" -vvv 2>&1 | tee "$LOG_FILE"
-
-          echo "ttl_file=$TTL_FILE" >> "$GITHUB_ENV"
-          echo "log_file=$LOG_FILE" >> "$GITHUB_ENV"
+          echo "ttl_file=$TTL_FILE" >> $GITHUB_ENV
+          echo "log_file=$LOG_FILE" >> $GITHUB_ENV
 
       - name: Run SHACL Validation
         if: env.ttl_file != ''
         run: |
-          result_file="${{ env.ttl_file%.ttl }}.md"
-          shape_file="Submissions/shapes/$(basename $(dirname "${{ env.ttl_file }}")).ttl"
+          result_file="${ttl_file%.ttl}.md"
+          shape_file="Submissions/shapes/$(basename $(dirname "$ttl_file")).ttl"
 
-          echo "📂 Validating file: ${{ env.ttl_file }}"
-          ls -l "${{ env.ttl_file }}" || echo "⚠️ TTL file not found!"
+          echo "🔍 Validating: $ttl_file"
+          python -m pyshacl -s "$shape_file" -df auto -sf turtle -f human "$ttl_file" > "$result_file"
 
-          python -m pyshacl -s "$shape_file" -df auto -sf turtle -f human "${{ env.ttl_file }}" > "$result_file"
+          echo "result_file=$result_file" >> $GITHUB_ENV
 
-          echo "result_file=$result_file" >> "$GITHUB_ENV"
-
-      - name: Commit and Push Generated Files
-        if: env.ttl_file != ''
+      - name: Commit and Push TTL, Log, and Validation
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add "${{ env.ttl_file }}"
-          git add "${{ env.ttl_file%.ttl }}.md"
-          git add "${{ env.ttl_file%.ttl }}.txt"
+          git add "$ttl_file" || echo "⚠️ TTL not found"
+          git add "$log_file" || echo "⚠️ Log not found"
+          git add "$result_file" || echo "⚠️ Validation not found"
 
           if git diff --cached --quiet; then
             echo "✅ No changes to commit."
           else
-            git commit -m "Add TTL, validation, and log for ${{ env.ttl_file }}"
+            git commit -m "Add TTL, log, and validation for ${{ steps.findtsv.outputs.tsv_file }}"
             git push
           fi
