@@ -20,10 +20,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Download Robot Tool
-        run: |
-          curl -L -o robot.jar "https://github.com/ontodev/robot/releases/latest/download/robot.jar"
-
       - name: Set up Python and Install pySHACL
         uses: actions/setup-python@v4
         with:
@@ -35,72 +31,67 @@ jobs:
         id: findtsv
         run: |
           echo "🔍 Detecting all .tsv files changed in the last commit..."
-      
-          CHANGED=$(git log -1 --name-only --pretty=format: | grep 'Submissions/.*/[0-9]\+\.tsv' || echo "")
-      
+
+          CHANGED=$(git log -1 --name-only --pretty=format: | grep 'Submissions/.*/[0-9]\+\.tsv' | tail -n 1 || echo "")
+
           if [[ -z "$CHANGED" ]]; then
             echo "⚠️ No .tsv files found in commit."
-            echo "tsv_files=" >> "$GITHUB_OUTPUT"
+            echo "tsv_file=" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-      
-          echo "📁 TSV files detected:"
-          echo "$CHANGED"
-      
-          TSV_LIST=$(echo "$CHANGED" | tr '\n' ',' | sed 's/,$//')
-          echo "tsv_files=$TSV_LIST" >> "$GITHUB_OUTPUT"
 
-      - name: Set TTL file as output
-        id: extract
-        run: |
-          TTL_FILE="Submissions/Person/$(basename ${{ steps.findtsv.outputs.tsv_files }} .tsv).ttl"
-          echo "ttl_file=$TTL_FILE" >> $GITHUB_OUTPUT
-          echo "ttl_file=$TTL_FILE" >> $GITHUB_ENV
+          echo "✅ TSV file detected: $CHANGED"
+          echo "tsv_file=$CHANGED" >> "$GITHUB_OUTPUT"
 
-      - name: Run ROBOT merge to generate TTL
-        if: steps.extract.outputs.ttl_file != ''
+      - name: Run ROBOT to convert TSV to TTL
+        if: steps.findtsv.outputs.tsv_file != ''
         run: |
-          TSV_FILE="${{ steps.findtsv.outputs.changed_file }}"
+          TSV_FILE="${{ steps.findtsv.outputs.tsv_file }}"
           BASENAME=$(basename "$TSV_FILE" .tsv)
           DIRNAME=$(dirname "$TSV_FILE")
+          TTL_FILE="$DIRNAME/$BASENAME.ttl"
+          LOG_FILE="$DIRNAME/$BASENAME.txt"
 
-          ttl_output="${tsv_file%.tsv}.ttl"
-          
+          echo "🚀 Running ROBOT with TSV: $TSV_FILE"
 
-          mkdir -p "$(dirname "$TTL_FILE")"
+          docker run --rm -v "$PWD:/work" -w "/work" \
+            -e "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8" \
+            obolibrary/robot robot merge \
+              -i data/components/req_1.owl \
+              -i data/components/req_2.owl \
+              --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" \
+              template --template "$TSV_FILE" \
+              -o "$TTL_FILE" -vvv 2>&1 | tee "$LOG_FILE"
 
-          java -Xmx4G -jar robot.jar merge \
-            -i data/components/req_1.owl \
-            -i data/components/req_2.owl \
-            --prefix "nfdicore: https://nfdi.fiz-karlsruhe.de/ontology/" \
-            -o "$TTL_FILE" -vvv
-      
+          echo "ttl_file=$TTL_FILE" >> "$GITHUB_ENV"
+          echo "log_file=$LOG_FILE" >> "$GITHUB_ENV"
+
       - name: Run SHACL Validation
         if: env.ttl_file != ''
         run: |
-          ttl_file="${{ env.ttl_file }}"
-          result_file="${ttl_file%.ttl}.md"
-          shape_file="Submissions/shapes/$(basename $(dirname "$ttl_file")).ttl"
-      
-          echo "📂 Validating file: $ttl_file"
-          ls -l "$ttl_file" || echo "⚠️ TTL file not found!"
-          
-          python -m pyshacl -s "$shape_file" -df auto -sf turtle -f human "$ttl_file" > "$result_file"
-      
+          result_file="${{ env.ttl_file%.ttl }}.md"
+          shape_file="Submissions/shapes/$(basename $(dirname "${{ env.ttl_file }}")).ttl"
+
+          echo "📂 Validating file: ${{ env.ttl_file }}"
+          ls -l "${{ env.ttl_file }}" || echo "⚠️ TTL file not found!"
+
+          python -m pyshacl -s "$shape_file" -df auto -sf turtle -f human "${{ env.ttl_file }}" > "$result_file"
+
           echo "result_file=$result_file" >> "$GITHUB_ENV"
 
-      - name: Commit and Push TTL and Validation Result
-        if: steps.extract.outputs.ttl_file != '' && steps.extract.outputs.result_file != ''
+      - name: Commit and Push Generated Files
+        if: env.ttl_file != ''
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add "${{ steps.extract.outputs.ttl_file }}"
-          git add "${{ steps.extract.outputs.result_file }}"
-      
+
+          git add "${{ env.ttl_file }}"
+          git add "${{ env.ttl_file%.ttl }}.md"
+          git add "${{ env.ttl_file%.ttl }}.txt"
+
           if git diff --cached --quiet; then
-            echo "No changes to commit."
+            echo "✅ No changes to commit."
           else
-            git commit -m "Add TTL and validation for ${{ steps.extract.outputs.ttl_file }}"
+            git commit -m "Add TTL, validation, and log for ${{ env.ttl_file }}"
             git push
           fi
-
