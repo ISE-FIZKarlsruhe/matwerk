@@ -48,11 +48,12 @@ RUN java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar \
 # ==========================
 # Stage 2: Run Shmarql
 # ==========================
-#FROM ghcr.io/epoz/shmarql:v0.56
+FROM ghcr.io/epoz/shmarql:v0.56
 
-#COPY data /data
-#COPY docs /src/docs
-#COPY mkdocs.yml a.yml
-#RUN python -m shmarql docs_build -f a.yml
+COPY --from=widoco /app/data /data
+COPY --from=widoco /app/docs /src/docs
+COPY --from=widoco /app/mkdocs.yml /a.yml
 
-#RUN mkdir /src/site/ontology
+RUN python -m shmarql docs_build -f a.yml
+
+RUN mkdir /src/site/ontology
