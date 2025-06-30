@@ -4,12 +4,12 @@ set -e
 COMPONENTSDIR=data/components
 REASONER=data/components/reasoner
 SRC=ontology/mwo-full.owl
-ROBOT_IMAGE=obolibrary/robot
 ONTBASE=https://nfdi.fiz-karlsruhe.de/ontology
 
 mkdir -p "$COMPONENTSDIR" "$REASONER"
 
-echo "Downloading Google Sheets as TSV files..."
+echo "📥 Downloading TSV files from Google Sheets..."
+
 declare -A files=(
     [req_1]=394894036
     [req_2]=0
@@ -37,34 +37,100 @@ declare -A files=(
 
 for name in "${!files[@]}"; do
     gid="${files[$name]}"
-    curl -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vT-wK5CmuPc5ZXyNybym28yJPJ9z2H51Ry2SvWs4DXc_HcgwqRHOwdrz0oFhr9_D1MOxvGZS-Wb3YQE/pub?gid=$gid&single=true&output=tsv" -o "$COMPONENTSDIR/$name.tsv"
+    curl -s -L "https://docs.google.com/spreadsheets/d/e/2PACX-1vT-wK5CmuPc5ZXyNybym28yJPJ9z2H51Ry2SvWs4DXc_HcgwqRHOwdrz0oFhr9_D1MOxvGZS-Wb3YQE/pub?gid=${gid}&single=true&output=tsv" \
+        -o "$COMPONENTSDIR/$name.tsv"
+    echo "✔️ Downloaded: $name.tsv"
 done
 
-echo "Generating OWL components with ROBOT..."
+echo "⚙️ Running ROBOT merge + explain for each component..."
 
 function run_robot_merge() {
-    INPUTS=$1
-    TEMPLATE=$2
-    OUTPUT=$3
-    docker run --rm -v "$PWD":/work -w /work -e "ROBOT_JAVA_ARGS=$ROBOT_JAVA_ARGS" $ROBOT_IMAGE \
-        robot merge $INPUTS template --template "$TEMPLATE" --prefix "nfdicore: $ONTBASE/" --output "$OUTPUT"
+    local INPUTS=$1
+    local TEMPLATE=$2
+    local OUTPUT=$3
+    echo "🔧 Merging to $OUTPUT"
+    if ! robot merge $INPUTS template --template "$TEMPLATE" \
+        --prefix "nfdicore: $ONTBASE/" --output "$OUTPUT"; then
+        echo "❗ Merge failed for $OUTPUT, retrying with -vvv"
+        robot -vvv merge $INPUTS template --template "$TEMPLATE" \
+            --prefix "nfdicore: $ONTBASE/" --output "$OUTPUT"
+    fi
 }
 
 function run_robot_explain() {
-    INPUT=$1
-    OUTPUT=$2
-    docker run --rm -v "$PWD":/work -w /work -e "ROBOT_JAVA_ARGS=$ROBOT_JAVA_ARGS" $ROBOT_IMAGE \
-        robot explain --reasoner hermit --input "$INPUT" -M inconsistency --explanation "$OUTPUT"
+    local INPUT=$1
+    local OUTPUT=$2
+    echo "🔍 Explaining inconsistencies for $INPUT"
+    if ! robot explain --reasoner hermit --input "$INPUT" \
+        -M inconsistency --explanation "$OUTPUT"; then
+        echo "❗ Explain failed for $INPUT, retrying with -vvv"
+        robot -vvv explain --reasoner hermit --input "$INPUT" \
+            -M inconsistency --explanation "$OUTPUT"
+    fi
 }
 
-# Example: req_1.owl
+# Ordered logic with dependency chaining
 run_robot_merge "-i $SRC" "$COMPONENTSDIR/req_1.tsv" "$COMPONENTSDIR/req_1.owl"
 run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl" "$COMPONENTSDIR/req_2.tsv" "$COMPONENTSDIR/req_2.owl"
 
-# Add additional merge/explain calls based on the pattern above
-# Because the full list is long, you should now repeat this block for each of your component types:
-# agent, role, process, city, people, organization, dataset, etc.
-# Just like in your .bat file, convert each merge + explain step using run_robot_merge and run_robot_explain
-# (To avoid a 1000-line script here, let me know if you'd like the full repeated content too.)
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_2.owl" "$COMPONENTSDIR/agent.tsv" "$COMPONENTSDIR/agent.owl"
+run_robot_explain "$COMPONENTSDIR/agent.owl" "$REASONER/agent_inconsistency.md"
 
-echo "Component generation completed."
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/agent.owl" "$COMPONENTSDIR/role.tsv" "$COMPONENTSDIR/role.owl"
+run_robot_explain "$COMPONENTSDIR/role.owl" "$REASONER/role_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl" "$COMPONENTSDIR/process.tsv" "$COMPONENTSDIR/process.owl"
+run_robot_explain "$COMPONENTSDIR/process.owl" "$REASONER/process_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl" "$COMPONENTSDIR/city.tsv" "$COMPONENTSDIR/city.owl"
+run_robot_explain "$COMPONENTSDIR/city.owl" "$REASONER/city_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/organization.owl" "$COMPONENTSDIR/people.tsv" "$COMPONENTSDIR/people.owl"
+run_robot_explain "$COMPONENTSDIR/people.owl" "$REASONER/people_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/city.owl" "$COMPONENTSDIR/organization.tsv" "$COMPONENTSDIR/organization.owl"
+run_robot_explain "$COMPONENTSDIR/organization.owl" "$REASONER/organization_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/dataset.tsv" "$COMPONENTSDIR/dataset.owl"
+run_robot_explain "$COMPONENTSDIR/dataset.owl" "$REASONER/dataset_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/publication.tsv" "$COMPONENTSDIR/publication.owl"
+run_robot_explain "$COMPONENTSDIR/publication.owl" "$REASONER/publication_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/publication.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/software.tsv" "$COMPONENTSDIR/software.owl"
+run_robot_explain "$COMPONENTSDIR/software.owl" "$REASONER/software_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/publication.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/dataportal.tsv" "$COMPONENTSDIR/dataportal.owl"
+run_robot_explain "$COMPONENTSDIR/dataportal.owl" "$REASONER/dataportal_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/publication.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/instrument.tsv" "$COMPONENTSDIR/instrument.owl"
+run_robot_explain "$COMPONENTSDIR/instrument.owl" "$REASONER/instrument_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/publication.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/largescalefacility.tsv" "$COMPONENTSDIR/largescalefacility.owl"
+run_robot_explain "$COMPONENTSDIR/largescalefacility.owl" "$REASONER/largescalefacility_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/publication.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/metadata.tsv" "$COMPONENTSDIR/metadata.owl"
+run_robot_explain "$COMPONENTSDIR/metadata.owl" "$REASONER/metadata_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/matwerkta.tsv" "$COMPONENTSDIR/matwerkta.owl"
+run_robot_explain "$COMPONENTSDIR/matwerkta.owl" "$REASONER/matwerkta_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/matwerkta.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/matwerkiuc.tsv" "$COMPONENTSDIR/matwerkiuc.owl"
+run_robot_explain "$COMPONENTSDIR/matwerkiuc.owl" "$REASONER/matwerkiuc_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/matwerkta.owl -i $COMPONENTSDIR/matwerkiuc.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/matwerkpp.tsv" "$COMPONENTSDIR/matwerkpp.owl"
+run_robot_explain "$COMPONENTSDIR/matwerkpp.owl" "$REASONER/matwerkpp_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/publication.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/temporal.tsv" "$COMPONENTSDIR/temporal.owl"
+run_robot_explain "$COMPONENTSDIR/temporal.owl" "$REASONER/temporal_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/temporal.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/event.tsv" "$COMPONENTSDIR/event.owl"
+run_robot_explain "$COMPONENTSDIR/event.owl" "$REASONER/event_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/temporal.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/collaboration.tsv" "$COMPONENTSDIR/collaboration.owl"
+run_robot_explain "$COMPONENTSDIR/collaboration.owl" "$REASONER/collaboration_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/temporal.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/service.tsv" "$COMPONENTSDIR/service.owl"
+run_robot_explain "$COMPONENTSDIR/service.owl" "$REASONER/service_inconsistency.md"
+
+echo "✅ All components generated and explained."
