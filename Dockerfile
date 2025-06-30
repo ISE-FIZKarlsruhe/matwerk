@@ -12,7 +12,7 @@ RUN apt-get update && apt-get install -y \
     git \
     unzip \
     dos2unix \
-    && pip3 install pyshacl \
+    && pip install --upgrade git+https://github.com/RDFLib/pySHACL.git \
     && apt-get clean
 
 ENV ROBOT_JAVA_ARGS="-Xmx8G -Dfile.encoding=UTF-8"
@@ -26,9 +26,11 @@ WORKDIR /app
 COPY . .
 
 # Prepare scripts and run them
-RUN chmod +x ./1st-kg.sh && ./1st-kg.sh
-RUN chmod +x ./2nd-merge-all.sh && ./2nd-merge-all.sh
-RUN cp data/all.ttl /data/ontology.ttl
+RUN chmod +x /app/1st-kg.sh /app/2nd-merge-all.sh
+
+CMD ["/bin/bash", "-c", "./1st-kg.sh && ./2nd-merge-all.sh"]
+
+RUN mkdir -p /data && cp data/all.ttl /data/ontology.ttl
 
 # Download Widoco
 RUN wget https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
@@ -52,7 +54,7 @@ FROM ghcr.io/epoz/shmarql:v0.56
 
 COPY --from=widoco /app/data /data
 COPY --from=widoco /app/docs /src/docs
-COPY --from=widoco /app/mkdocs.yml /a.yml
+COPY mkdocs.yml a.yml
 
 RUN python -m shmarql docs_build -f a.yml
 

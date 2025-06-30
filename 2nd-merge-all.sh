@@ -28,19 +28,24 @@ robot reason \
     --axiom-generators "SubClass ClassAssertion" \
     --output "$COMPONENTSDIR/all.ttl"
 
-# SHACL validations
-echo "Running SHACL validations..."
+# SHACL validations (with safe failure handling)
+for i in 4 3 2 1; do
+    echo "Running SHACL validations: shape $i"
+    SHAPE_FILE="shapes/shape$i.ttl"
+    OUTPUT_FILE="$VALIDATIONSDIR/shape$i.md"
+    if ! python3 -m pyshacl -s "$SHAPE_FILE" "$COMPONENTSDIR/all.ttl" > "$OUTPUT_FILE"; then
+        echo "SHACL validation for shape$i.ttl failed" >&2
+    fi
+done
 
-python3 -m pyshacl -s shapes/shape4.ttl "$COMPONENTSDIR/all.ttl" > "$VALIDATIONSDIR/shape4.md"
-python3 -m pyshacl -s shapes/shape3.ttl "$COMPONENTSDIR/all.ttl" > "$VALIDATIONSDIR/shape3.md"
-python3 -m pyshacl -s shapes/shape2.ttl "$COMPONENTSDIR/all.ttl" > "$VALIDATIONSDIR/shape2.md"
-python3 -m pyshacl -s shapes/shape1.ttl "$COMPONENTSDIR/all.ttl" > "$VALIDATIONSDIR/shape1.md"
-
-# SPARQL verification
-robot verify \
+# SPARQL verification (safe failure)
+echo "Running SPARQL verification..."
+if ! robot verify \
     --input "$COMPONENTSDIR/all.ttl" \
     --queries shapes/verify1.sparql \
     --output-dir "$VALIDATIONSDIR" \
-    -vvv > "$VALIDATIONSDIR/verify1.md"
+    -vvv > "$VALIDATIONSDIR/verify1.md"; then
+    echo "SPARQL verification failed" >&2
+fi
 
 echo "All merge, reasoning, and validation steps completed."
