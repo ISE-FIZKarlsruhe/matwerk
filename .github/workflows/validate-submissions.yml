@@ -65,6 +65,18 @@ jobs:
 
           echo "ttl_file=$TTL_FILE" >> $GITHUB_ENV
           echo "log_file=$LOG_FILE" >> $GITHUB_ENV
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add "$ttl_file" || echo "⚠️ TTL not found"
+          git add "$log_file" || echo "⚠️ Log not found"
+          
+          if git diff --cached --quiet; then
+            echo "✅ No changes to commit."
+          else
+            git commit -m "Add TTL and log for ${{ steps.findtsv.outputs.tsv_file }}"
+            git push
+          fi
 
       - name: Run SHACL Validation
         if: env.ttl_file != ''
@@ -76,19 +88,15 @@ jobs:
           python -m pyshacl -s "$shape_file" -df auto -sf turtle -f human "$ttl_file" > "$result_file"
 
           echo "result_file=$result_file" >> $GITHUB_ENV
-
-      - name: Commit and Push TTL, Log, and Validation
-        run: |
+          
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add "$ttl_file" || echo "⚠️ TTL not found"
-          git add "$log_file" || echo "⚠️ Log not found"
           git add "$result_file" || echo "⚠️ Validation not found"
 
           if git diff --cached --quiet; then
             echo "✅ No changes to commit."
           else
-            git commit -m "Add TTL, log, and validation for ${{ steps.findtsv.outputs.tsv_file }}"
+            git commit -m "Add validation for ${{ steps.findtsv.outputs.tsv_file }}"
             git push
           fi
