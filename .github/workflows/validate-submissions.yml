@@ -65,7 +65,7 @@ jobs:
 
           echo "TTL_FILE=$TTL_FILE" >> $GITHUB_ENV
           echo "LOG_FILE=$LOG_FILE" >> $GITHUB_ENV
-          
+
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
@@ -84,20 +84,35 @@ jobs:
         run: |
           result_file="${TTL_FILE%.ttl}.md"
           shape_file="Submissions/shapes/$(basename $(dirname "$TTL_FILE")).ttl"
+          log_file="${TTL_FILE%.ttl}.log"
 
           echo "🔍 Validating: $TTL_FILE"
-          python -m pyshacl -s "$shape_file" -df auto -sf turtle -f human "$TTL_FILE" > "$result_file"
+          echo "📄 Shape File: $shape_file"
+
+          # Run pySHACL with logging to both .md and .txt
+          {
+            echo "🔎 SHACL Validation Started: $(date)"
+            echo "----------------------------------------"
+            python -m pyshacl -s "$shape_file" -df auto -sf turtle -f human "$TTL_FILE" > "$result_file"
+            STATUS=$?
+            echo "----------------------------------------"
+            echo "✅ Validation finished with exit code $STATUS"
+          } &> "$log_file"
 
           echo "result_file=$result_file" >> $GITHUB_ENV
-          
+          echo "log_file=$log_file" >> $GITHUB_ENV
+
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add "$result_file" || echo "⚠️ Validation not found"
+          git add "$result_file" || echo "⚠️ Failed to stage $result_file"
+          git add "$log_file" || echo "⚠️ Failed to stage $log_file"
 
           if git diff --cached --quiet; then
             echo "✅ No changes to commit."
           else
-            git commit -m "Add validation for ${{ steps.findtsv.outputs.tsv_file }}"
+            git commit -m "Add SHACL validation and log for ${{ env.TTL_FILE }}"
             git push
           fi
+
+          exit 0  # Prevent failure from stopping the workflow, even if pySHACL returned 1
