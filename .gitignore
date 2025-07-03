@@ -4,6 +4,7 @@
 # Ignore nohup output
 nohup.out
 .nohup
+run.log
 
 # Ignore Python cache and virtual environments
 __pycache__/

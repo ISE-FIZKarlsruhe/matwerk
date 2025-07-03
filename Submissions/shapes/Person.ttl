@@ -19,4 +19,4 @@ nfdi:PersonShape
   sh:property [
     sh:path nfdi:NFDI_0000211 ;
     sh:minCount 1 ;
-  ] ;
+  ] .
