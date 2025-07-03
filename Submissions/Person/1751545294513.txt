@@ -1,0 +1,82 @@
+2025-07-03 12:21:56,768 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@5b7b0ada
+2025-07-03 12:21:56,770 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2025-07-03 12:21:56,770 DEBUG org.semanticweb.owlapi.utilities.Injector - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2025-07-03 12:21:56,770 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2025-07-03 12:21:56,771 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@7ec8db0c, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@5552d10, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@7d15c513, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@219dd935, org.semanticweb.owlapi.rio.RioTrigParserFactory@4f1a5b93, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@3b3190fd, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@66859ea9, org.semanticweb.owlapi.rio.RioN3ParserFactory@41b2123e, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@486bcaa, org.semanticweb.owlapi.rio.RioRDFaParserFactory@2f3a0f37, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@4a9412c4, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@5e9671e6, org.semanticweb.owlapi.rio.RioJsonParserFactory@12dc702b, org.semanticweb.owlapi.rio.RioTurtleParserFactory@5dd2ea0a, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@17fa14a3, org.semanticweb.owlapi.rio.RioTrixParserFactory@22ee1ad7, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@320efff5, org.semanticweb.owlapi.rio.RioJsonLDParserFactory@78b44fcb]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2025-07-03 12:21:56,772 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@65fa4a07]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2025-07-03 12:21:56,772 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@6003eb60, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@8beb0dd, org.semanticweb.owlapi.rio.RioN3StorerFactory@6e612122, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@1d38cdde, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@782143e8, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@51d9fd30, org.semanticweb.owlapi.rio.RioTrigStorerFactory@16745abd, org.semanticweb.owlapi.rio.RioTrixStorerFactory@4d793390, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@3a359f7c, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@7f31937b, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@571e2f15, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@2f4fc18, org.semanticweb.owlapi.rio.RioJsonStorerFactory@7187078a, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@233789d9, org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@2552181d, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@2a4bd699, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@3809f65d, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@717b0d81, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@2e7e4480, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@3d99d327]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2025-07-03 12:21:56,890 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for person
+2025-07-03 12:21:56,890 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,892 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for given name
+2025-07-03 12:21:56,892 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,893 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for family name
+2025-07-03 12:21:56,894 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,894 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for email address
+2025-07-03 12:21:56,894 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,894 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for ORCID identifier
+2025-07-03 12:21:56,894 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,894 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for academic discipline
+2025-07-03 12:21:56,895 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,895 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for academic discipline
+2025-07-03 12:21:56,895 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,895 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for academic discipline
+2025-07-03 12:21:56,895 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,895 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for academic discipline
+2025-07-03 12:21:56,895 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,895 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for matwerk project
+2025-07-03 12:21:56,895 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,896 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for contributor role
+2025-07-03 12:21:56,896 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,896 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for person
+2025-07-03 12:21:56,896 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,897 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for person
+2025-07-03 12:21:56,897 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,901 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for given name
+2025-07-03 12:21:56,901 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,901 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for given name
+2025-07-03 12:21:56,901 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,903 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for family name
+2025-07-03 12:21:56,903 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,903 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for family name
+2025-07-03 12:21:56,903 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,905 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for email address
+2025-07-03 12:21:56,905 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,906 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for email address
+2025-07-03 12:21:56,906 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,906 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for ORCID identifier
+2025-07-03 12:21:56,906 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,906 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for ORCID identifier
+2025-07-03 12:21:56,906 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,907 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for academic discipline
+2025-07-03 12:21:56,907 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,907 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for academic discipline
+2025-07-03 12:21:56,907 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,907 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for academic discipline
+2025-07-03 12:21:56,907 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,907 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for academic discipline
+2025-07-03 12:21:56,907 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,908 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for academic discipline
+2025-07-03 12:21:56,908 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,908 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for academic discipline
+2025-07-03 12:21:56,908 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,908 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for academic discipline
+2025-07-03 12:21:56,909 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,909 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for academic discipline
+2025-07-03 12:21:56,909 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,909 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for matwerk project
+2025-07-03 12:21:56,910 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,910 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for matwerk project
+2025-07-03 12:21:56,910 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,911 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for contributor role
+2025-07-03 12:21:56,911 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,911 WARN  org.obolibrary.robot.IOHelper - Could not create IRI for contributor role
+2025-07-03 12:21:56,911 WARN  org.obolibrary.robot.IOHelper - Cannot invoke "java.util.Map.keySet()" because "expanded" is null
+2025-07-03 12:21:56,913 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting object uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl@688efeb2
+2025-07-03 12:21:56,913 DEBUG org.semanticweb.owlapi.utilities.Injector - Loading file META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2025-07-03 12:21:56,914 DEBUG org.semanticweb.owlapi.utilities.Injector - No files found for META-INF/services/org.semanticweb.owlapi.model.OWLOntologyIRIMapper
+2025-07-03 12:21:56,914 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setIRIMappers(java.util.Set).
+2025-07-03 12:21:56,914 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[org.semanticweb.owlapi.rio.RioJsonLDParserFactory@3321fb65, org.semanticweb.owlapi.rio.RioNTriplesParserFactory@42150951, org.semanticweb.owlapi.rio.RioTrixParserFactory@36f497b1, org.semanticweb.owlapi.rdf.rdfxml.parser.RDFXMLParserFactory@5b634e24, org.semanticweb.owlapi.manchestersyntax.parser.ManchesterOWLSyntaxOntologyParserFactory@85f5f55, org.semanticweb.owlapi.owlxml.parser.OWLXMLParserFactory@5470753a, org.semanticweb.owlapi.rdf.turtle.parser.TurtleOntologyParserFactory@394331a8, org.semanticweb.owlapi.krss2.parser.KRSS2OWLParserFactory@131c5bd, org.semanticweb.owlapi.rio.RioBinaryRdfParserFactory@642f8b7f, org.semanticweb.owlapi.rio.RioTurtleParserFactory@4b86a656, org.semanticweb.owlapi.rio.RioTrigParserFactory@5cc152f9, org.semanticweb.owlapi.rio.RioJsonParserFactory@7272914b, org.semanticweb.owlapi.rio.RioN3ParserFactory@663f24e6, org.semanticweb.owlapi.rio.RioRDFaParserFactory@248b2091, org.semanticweb.owlapi.functional.parser.OWLFunctionalSyntaxOWLParserFactory@2627335c, org.semanticweb.owlapi.oboformat.OBOFormatOWLAPIParserFactory@7b0dfa91, org.semanticweb.owlapi.rio.RioNQuadsParserFactory@7e532f2d, org.semanticweb.owlapi.rio.RioRDFXMLParserFactory@3b0c38f2]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyParsers(java.util.Set).
+2025-07-03 12:21:56,915 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[uk.ac.manchester.cs.owl.owlapi.OWLOntologyFactoryImpl@1117cc7c]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyFactories(java.util.Set).
+2025-07-03 12:21:56,916 DEBUG org.semanticweb.owlapi.utilities.Injector - Injecting values [[org.semanticweb.owlapi.krss2.renderer.KRSS2OWLSyntaxStorerFactory@7b24d5e4, org.semanticweb.owlapi.rio.RioN3StorerFactory@278150a1, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxHTMLStorerFactory@39fb5ddf, org.semanticweb.owlapi.rio.RioTrixStorerFactory@21948bd1, org.semanticweb.owlapi.rio.RioNQuadsStorerFactory@3e170abe, org.semanticweb.owlapi.rdf.rdfxml.renderer.RDFXMLStorerFactory@4797023d, org.semanticweb.owlapi.latex.renderer.LatexStorerFactory@5002be8e, org.semanticweb.owlapi.owlxml.renderer.OWLXMLStorerFactory@55cc4c61, org.semanticweb.owlapi.rio.RioJsonLDStorerFactory@6f740044, org.semanticweb.owlapi.rio.RioRDFXMLStorerFactory@af96ac9, org.semanticweb.owlapi.rio.RioTurtleStorerFactory@22617270, org.semanticweb.owlapi.rio.RioJsonStorerFactory@62732be7, org.semanticweb.owlapi.manchestersyntax.renderer.ManchesterSyntaxStorerFactory@4ddb9a8, org.semanticweb.owlapi.rio.RioNTriplesStorerFactory@712e4b18, org.semanticweb.owlapi.rdf.turtle.renderer.TurtleStorerFactory@4c3c31a5, org.semanticweb.owlapi.oboformat.OBOFormatStorerFactory@49b180c8, org.semanticweb.owlapi.dlsyntax.renderer.DLSyntaxStorerFactory@642d34f1, org.semanticweb.owlapi.rio.RioBinaryRdfStorerFactory@c02a1be, org.semanticweb.owlapi.functional.renderer.FunctionalSyntaxStorerFactory@2b06f498, org.semanticweb.owlapi.rio.RioTrigStorerFactory@27d0376f]] on method public void uk.ac.manchester.cs.owl.owlapi.OWLOntologyManagerImpl.setOntologyStorers(java.util.Set).
+2025-07-03 12:21:56,922 DEBUG org.obolibrary.robot.IOHelper - Saving ontology as Turtle Syntax with to IRI file:/home/runner/work/matwerk/matwerk/Submissions/Person/1751545294513.ttl
+2025-07-03 12:21:56,977 WARN  org.obolibrary.robot.CommandManager - Subcommand Timing: template took 0.214 seconds
