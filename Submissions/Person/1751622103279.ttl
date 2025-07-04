@@ -1,0 +1,183 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000054
+<http://purl.obolibrary.org/obo/BFO_0000054> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000055
+<http://purl.obolibrary.org/obo/BFO_0000055> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000056
+<http://purl.obolibrary.org/obo/BFO_0000056> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000057
+<http://purl.obolibrary.org/obo/BFO_0000057> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000197
+<http://purl.obolibrary.org/obo/BFO_0000197> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000136
+<http://purl.obolibrary.org/obo/IAO_0000136> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000235
+<http://purl.obolibrary.org/obo/IAO_0000235> rdf:type owl:ObjectProperty .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211
+<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211> rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007
+<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000429
+<http://purl.obolibrary.org/obo/IAO_0000429> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000708
+<http://purl.obolibrary.org/obo/IAO_0000708> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0020016
+<http://purl.obolibrary.org/obo/IAO_0020016> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0020017
+<http://purl.obolibrary.org/obo/IAO_0020017> rdf:type owl:Class .
+
+
+###  http://purls.helmholtz-metadaten.de/mwo/MWO_0001002
+<http://purls.helmholtz-metadaten.de/mwo/MWO_0001002> rdf:type owl:Class .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004
+<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> rdf:type owl:Class .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100
+<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100> rdf:type owl:Class .
+
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118
+<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001077
+<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001077> rdf:type owl:NamedIndividual .
+
+
+###  https://purls.helmholtz-metadaten.de/msekg/17451394390861
+<https://purls.helmholtz-metadaten.de/msekg/17451394390861> rdf:type owl:NamedIndividual .
+
+
+###  https://purls.helmholtz-metadaten.de/msekg/17515361562051
+<https://purls.helmholtz-metadaten.de/msekg/17515361562051> rdf:type owl:NamedIndividual ,
+                                                                     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> ;
+                                                            <http://purl.obolibrary.org/obo/BFO_0000056> <https://purls.helmholtz-metadaten.de/msekg/175153615620510> ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000235> <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001077> ;
+                                                            <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211> <https://purls.helmholtz-metadaten.de/msekg/17515361562056> ,
+                                                                                                                  <https://purls.helmholtz-metadaten.de/msekg/17515361562057> ,
+                                                                                                                  <https://purls.helmholtz-metadaten.de/msekg/17515361562058> ,
+                                                                                                                  <https://purls.helmholtz-metadaten.de/msekg/17515361562059> ;
+                                                            rdfs:label "M.Sc. Sarath Menon" .
+
+
+###  https://purls.helmholtz-metadaten.de/msekg/175153615620510
+<https://purls.helmholtz-metadaten.de/msekg/175153615620510> rdf:type owl:NamedIndividual ,
+                                                                      <http://purls.helmholtz-metadaten.de/mwo/MWO_0001002> ;
+                                                             <http://purl.obolibrary.org/obo/BFO_0000055> <https://purls.helmholtz-metadaten.de/msekg/175153615620511> ;
+                                                             <http://purl.obolibrary.org/obo/BFO_0000057> <https://purls.helmholtz-metadaten.de/msekg/17451394390861> ;
+                                                             rdfs:label "matwerk project process 1" .
+
+
+###  https://purls.helmholtz-metadaten.de/msekg/175153615620511
+<https://purls.helmholtz-metadaten.de/msekg/175153615620511> rdf:type owl:NamedIndividual ,
+                                                                      <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118> ;
+                                                             <http://purl.obolibrary.org/obo/BFO_0000054> <https://purls.helmholtz-metadaten.de/msekg/175153615620510> ;
+                                                             <http://purl.obolibrary.org/obo/BFO_0000197> <https://purls.helmholtz-metadaten.de/msekg/17451394390861> ;
+                                                             rdfs:label "PersonRole 1" .
+
+
+###  https://purls.helmholtz-metadaten.de/msekg/17515361562052
+<https://purls.helmholtz-metadaten.de/msekg/17515361562052> rdf:type owl:NamedIndividual ,
+                                                                     <http://purl.obolibrary.org/obo/IAO_0020016> ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000136> <https://purls.helmholtz-metadaten.de/msekg/17515361562051> ;
+                                                            <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> "Sarath" .
+
+
+###  https://purls.helmholtz-metadaten.de/msekg/17515361562053
+<https://purls.helmholtz-metadaten.de/msekg/17515361562053> rdf:type owl:NamedIndividual ,
+                                                                     <http://purl.obolibrary.org/obo/IAO_0020017> ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000136> <https://purls.helmholtz-metadaten.de/msekg/17515361562051> ;
+                                                            <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> "Menon" .
+
+
+###  https://purls.helmholtz-metadaten.de/msekg/17515361562054
+<https://purls.helmholtz-metadaten.de/msekg/17515361562054> rdf:type owl:NamedIndividual ,
+                                                                     <http://purl.obolibrary.org/obo/IAO_0000429> ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000136> <https://purls.helmholtz-metadaten.de/msekg/17515361562051> ;
+                                                            <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> "s.menon@mpie.de" .
+
+
+###  https://purls.helmholtz-metadaten.de/msekg/17515361562055
+<https://purls.helmholtz-metadaten.de/msekg/17515361562055> rdf:type owl:NamedIndividual ,
+                                                                     <http://purl.obolibrary.org/obo/IAO_0000708> ;
+                                                            <http://purl.obolibrary.org/obo/IAO_0000136> <https://purls.helmholtz-metadaten.de/msekg/17515361562051> ;
+                                                            <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> "https://orcid.org/0000-0002-6776-1213" .
+
+
+###  https://purls.helmholtz-metadaten.de/msekg/17515361562056
+<https://purls.helmholtz-metadaten.de/msekg/17515361562056> rdf:type owl:NamedIndividual ,
+                                                                     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100> ;
+                                                            rdfs:label "Computational Materials Science" .
+
+
+###  https://purls.helmholtz-metadaten.de/msekg/17515361562057
+<https://purls.helmholtz-metadaten.de/msekg/17515361562057> rdf:type owl:NamedIndividual ,
+                                                                     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100> ;
+                                                            rdfs:label "software development" .
+
+
+###  https://purls.helmholtz-metadaten.de/msekg/17515361562058
+<https://purls.helmholtz-metadaten.de/msekg/17515361562058> rdf:type owl:NamedIndividual ,
+                                                                     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100> ;
+                                                            rdfs:label "Molecular Dynamics (MD)" .
+
+
+###  https://purls.helmholtz-metadaten.de/msekg/17515361562059
+<https://purls.helmholtz-metadaten.de/msekg/17515361562059> rdf:type owl:NamedIndividual ,
+                                                                     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100> ;
+                                                            rdfs:label "atomistic simulations" .
+
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi
