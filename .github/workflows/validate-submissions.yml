@@ -52,6 +52,7 @@ jobs:
           DIRNAME=$(dirname "$TSV_FILE")
           TTL_FILE="${DIRNAME}/${BASENAME}.ttl"
           LOG_FILE="${DIRNAME}/${BASENAME}.txt"
+          LOG_FILE_REASONING="${DIRNAME}/${BASENAME}_reasoning.txt"
 
           echo "📦 Running ROBOT for $TSV_FILE -> $TTL_FILE"
           java -Xmx4G -jar robot.jar merge \
@@ -62,15 +63,24 @@ jobs:
             template --template "$TSV_FILE" \
             -o "$TTL_FILE" -vvv \
             2>&1 | tee "$LOG_FILE"
+          
+          java -Xmx4G -jar robot.jar reason \
+            --reasoner hermit \
+            --input "$TTL_FILE" \
+            --axiom-generators "SubClass ClassAssertion" \
+            --output "$TTL_FILE_reasoned.ttl" -vvv \
+            2>&1 | tee "$LOG_FILE_REASONING"
 
           echo "TTL_FILE=$TTL_FILE" >> $GITHUB_ENV
           echo "LOG_FILE=$LOG_FILE" >> $GITHUB_ENV
+          echo "LOG_FILE_REASONING=$LOG_FILE_REASONING" >> $GITHUB_ENV
 
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
           git add "$TTL_FILE" || echo "⚠️ TTL not found"
           git add "$LOG_FILE" || echo "⚠️ Log not found"
+          git add "$LOG_FILE_REASONING" || echo "⚠️ Reasoner Log not found"
           
           if git diff --cached --quiet; then
             echo "✅ No changes to commit."
