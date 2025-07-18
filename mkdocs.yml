@@ -3,6 +3,7 @@ site_url: https://nfdi.fiz-karlsruhe.de/matwerk/
 repo_url: https://github.com/ISE-FIZKarlsruhe/matwerk
 nav:
   - Home: index.md
+  - How to add data?: upload.md
   - Sample Queries:
     - General Queries: general_queries.md
     - Statistics: statistics.md

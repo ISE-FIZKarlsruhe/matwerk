@@ -42,15 +42,6 @@ The MSE Knowledge Graph encompasses diverse categories:
 - **Data**: Repositories, publications, datasets, reference data.
 - **Educational Resources**: Lectures, workshops, lecture notes.
 
-## How to Contribute
-
-To contribute to the MSE-KG:
-
-1. [Download data collection spreadsheets](https://drive.google.com/file/d/1GS5vKDWDPXeNWJX6UMZk78gq0gaVQ2RW/view){:target="_blank"}.
-2. Add your data.
-3. Send the completed spreadsheet to [MatWerkOMS@fz-juelich.de](mailto:MatWerkOMS@fz-juelich.de).
-
-
 ---
 
 _For more information, visit the [NFDI-MatWerk official website](https://nfdi-matwerk.de/){:target="_blank"}._
