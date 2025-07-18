@@ -51,6 +51,7 @@ jobs:
           BASENAME=$(basename "$TSV_FILE" .tsv)
           DIRNAME=$(dirname "$TSV_FILE")
           TTL_FILE="${DIRNAME}/${BASENAME}.ttl"
+          TTL_FILE_REASONED="${DIRNAME}/${BASENAME}_reasoned.ttl"
           LOG_FILE="${DIRNAME}/${BASENAME}.txt"
           LOG_FILE_REASONING="${DIRNAME}/${BASENAME}_reasoning.txt"
 
@@ -68,10 +69,11 @@ jobs:
             --reasoner hermit \
             --input "$TTL_FILE" \
             --axiom-generators "SubClass ClassAssertion" \
-            --output "$TTL_FILE_reasoned.ttl" -vvv \
+            --output "$TTL_FILE_REASONED" -vvv \
             2>&1 | tee "$LOG_FILE_REASONING"
 
           echo "TTL_FILE=$TTL_FILE" >> $GITHUB_ENV
+          echo "LOG_FILE_REASONING=$LOG_FILE_REASONING" >> $GITHUB_ENV
           echo "LOG_FILE=$LOG_FILE" >> $GITHUB_ENV
           echo "LOG_FILE_REASONING=$LOG_FILE_REASONING" >> $GITHUB_ENV
 
@@ -79,6 +81,7 @@ jobs:
           git config user.email "github-actions@github.com"
 
           git add "$TTL_FILE" || echo "⚠️ TTL not found"
+          git add "$LOG_FILE_REASONING" || echo "⚠️ Reasoned TTL not found"
           git add "$LOG_FILE" || echo "⚠️ Log not found"
           git add "$LOG_FILE_REASONING" || echo "⚠️ Reasoner Log not found"
           
