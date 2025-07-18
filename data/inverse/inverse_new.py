@@ -8,13 +8,8 @@ all_ttl_path = base_dir / "all.ttl"
 inverse_ttl_path = base_dir / "inverse" / "inverse_all.ttl"
 
 # File paths
-inverse_file = "inverse-pairs.txt"
-output_file = "inverse_all.ttl"
+output_file = "inverse_new.ttl"
 all_file = "../all.ttl"
-
-# Read inverse pairs
-with open(inverse_file, "r") as f:
-    pairs = [line.strip().strip('<>').split('><') for line in f if line.strip()]
 
 # Initialize or clear output file
 Path(output_file).write_text("")
@@ -24,23 +19,34 @@ Path(output_file).write_text("")
 # SPARQL query
 sparql = """
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 CONSTRUCT {
-  ?Resource1 ?Property2 ?Resource2.
+  ?r2 ?p2 ?r1 .
 }
 WHERE {
+  # Get all (sub/super) property paths of inverse relationships
   {
-    ?Property1 owl:inverseOf ?Property2.
+    ?inv1 owl:inverseOf ?inv2 .
   }
   UNION
   {
-    ?Property2 owl:inverseOf ?Property1.
+    ?inv2 owl:inverseOf ?inv1 .
   }
-  ?Resource2 ?Property1 ?Resource1.
-  MINUS {
-    ?Resource1 ?Property2 ?Resource2.
+
+  # Resolve all sub-properties of inverse relationships
+  ?p1 rdfs:subPropertyOf* ?inv1 .
+  ?p2 rdfs:subPropertyOf* ?inv2 .
+
+  # Find triples in data
+  ?r1 ?p1 ?r2 .
+
+  # Exclude existing inverse triples
+  FILTER NOT EXISTS {
+    ?r2 ?p2 ?r1 .
   }
 }
+
 """
 
 # URL encode query

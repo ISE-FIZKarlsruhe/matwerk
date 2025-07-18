@@ -1,4 +1,5 @@
 import subprocess
+from rdflib import Graph, Namespace, URIRef
 from pathlib import Path
 
 # Define paths relative to the script location
@@ -12,43 +13,49 @@ inverse_file = "inverse-pairs.txt"
 output_file = "inverse_all.ttl"
 all_file = "../all.ttl"
 
-# Read inverse pairs
-with open(inverse_file, "r") as f:
-    pairs = [line.strip().strip('<>').split('><') for line in f if line.strip()]
+# Namespaces
+OWL = Namespace("http://www.w3.org/2002/07/owl#")
+
+# Load the graph
+g = Graph()
+g.parse(all_ttl_path, format="turtle")
+
+# Extract owl:inverseOf triples
+inverse_triples = [
+    (str(p), str(inv))
+    for p, _, inv in g.triples((None, OWL.inverseOf, None))
+    if isinstance(p, URIRef) and isinstance(inv, URIRef)
+]
+
+# Write to inverse-pairs.txt as TSV
+with open(inverse_file, "w", encoding="utf-8") as f:
+    f.write("p\tinv\n")
+    for p, inv in inverse_triples:
+        f.write(f"<{p}>\t<{inv}>\n")
+
+print(f"✓ Found {len(inverse_triples)} inverse pairs in all.ttl")
 
 # Initialize or clear output file
 Path(output_file).write_text("")
 
-# Loop through pairs and query both directions
-for i, (p1, p2) in enumerate(pairs, 1):
-    for subj, pred in [(p1, p2), (p2, p1)]:
-        # SPARQL query
-        sparql = f"""
-        CONSTRUCT {{
-            ?s <{subj}> ?o .
-        }}
-        WHERE {{
-            ?s <{pred}> ?o .
-        }}
-        """
+# Loop through inverse pairs and materialize inverses
+inverse_graph = Graph()
+for i, (p1, p2) in enumerate(inverse_triples, 1):
+    p1_uri = URIRef(p1)
+    p2_uri = URIRef(p2)
 
-        # URL encode query
-        encoded_query = subprocess.run(
-            ["python3", "-c", f"import urllib.parse; print(urllib.parse.quote('''{sparql}'''))"],
-            capture_output=True, text=True).stdout.strip()
+    for subj, _, obj in g.triples((None, p1_uri, None)):
+        inverse_graph.add((obj, p2_uri, subj))  # r1 p1 r2 → r2 p2 r1
 
-        # cURL command
-        curl_cmd = [
-            "curl", "-s",
-            "https://nfdi.fiz-karlsruhe.de/matwerk/sparql",
-            "--data", f"query={encoded_query}",
-            "-H", "accept: text/turtle"
-        ]
+    for subj, _, obj in g.triples((None, p2_uri, None)):
+        inverse_graph.add((obj, p1_uri, subj))  # r2 p2 r1 → r1 p1 r2
 
-        # Append results to output file
-        with open(output_file, "ab") as out:
-            subprocess.run(curl_cmd, stdout=out)
-    print(i)
+    print(f"✓ Processed inverse pair {i}: {p1} ⇄ {p2}")
+
+# Write the inferred triples to output TTL file
+inverse_graph.serialize(destination=inverse_ttl_path, format="turtle")
+print(f"✓ Inferred inverse triples written to {inverse_ttl_path}")
+
 # Merge using ROBOT
 subprocess.run([
     "docker", "run", "--rm",
