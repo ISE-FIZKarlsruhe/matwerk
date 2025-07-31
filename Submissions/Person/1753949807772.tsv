@@ -1,0 +1,13 @@
+#	TYPE	Label	is about	Value	Title	Academic discipline	participates in	has participant	realizes role	continuant part of	has realization	inheres in
+ID	TYPE	A rdfs:label	I ?is about?	I ?has value?	I ?denoted by?	I ?has subject area? SPLIT=,	I ?participates in?	I ?has participant? SPLIT=|	I ?realizes? SPLIT=,	I ?continuant part of?	I ?has realization?	I ?inheres in? SPLIT=|
+https://purls.helmholtz-metadaten.de/msekg/17515361562051	person	M.Sc. Sarath Menon			M.Sc.	Computational Materials Science,software development,Molecular Dynamics (MD),atomistic simulations	Person(M.Sc. Sarath Menon) process					
+https://purls.helmholtz-metadaten.de/msekg/17515361562052	given name		M.Sc. Sarath Menon	Sarath								
+https://purls.helmholtz-metadaten.de/msekg/17515361562053	family name		M.Sc. Sarath Menon	Menon								
+https://purls.helmholtz-metadaten.de/msekg/17515361562054	email address		M.Sc. Sarath Menon	s.menon@mpie.de								
+https://purls.helmholtz-metadaten.de/msekg/17515361562055	ORCID identifier		M.Sc. Sarath Menon	https://orcid.org/0000-0002-6776-1213								
+https://purls.helmholtz-metadaten.de/msekg/17515361562056	academic discipline	Computational Materials Science										
+https://purls.helmholtz-metadaten.de/msekg/17515361562057	academic discipline	software development										
+https://purls.helmholtz-metadaten.de/msekg/17515361562058	academic discipline	Molecular Dynamics (MD)										
+https://purls.helmholtz-metadaten.de/msekg/17515361562059	academic discipline	atomistic simulations										
+https://purls.helmholtz-metadaten.de/msekg/175153615620510	project	Person(M.Sc. Sarath Menon) process						Max Planck Institute for Iron Research	Person(M.Sc. Sarath Menon) role	the matwerk project		
+https://purls.helmholtz-metadaten.de/msekg/175153615620511	contributor role	Person(M.Sc. Sarath Menon) role									Person(M.Sc. Sarath Menon) process	Max Planck Institute for Iron Research
