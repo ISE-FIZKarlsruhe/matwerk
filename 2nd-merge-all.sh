@@ -28,6 +28,12 @@ robot reason \
     --axiom-generators "SubClass ClassAssertion" \
     --output "$COMPONENTSDIR/all.ttl"
 
+robot reason \
+    --reasoner hermit \
+    --input "$SRC" \
+    --axiom-generators "SubClass SubDataProperty ClassAssertion EquivalentObjectProperty PropertyAssertion InverseObjectProperties SubObjectProperty" \
+    --output "ontology/mwo_reasoned.ttl"
+
 # SHACL validations (with safe failure handling)
 for i in 4 3 2 1; do
     echo "Running SHACL validations: shape $i"

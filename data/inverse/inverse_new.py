@@ -14,7 +14,6 @@ all_file = "../all.ttl"
 # Initialize or clear output file
 Path(output_file).write_text("")
 
-# Loop through pairs and query both directions
 
 # SPARQL query
 sparql = """
@@ -35,16 +34,16 @@ WHERE {
   }
 
   # Resolve all sub-properties of inverse relationships
-  ?p1 rdfs:subPropertyOf* ?inv1 .
-  ?p2 rdfs:subPropertyOf* ?inv2 .
+  #?p1 rdfs:subPropertyOf* ?inv1 .
+  #?p2 rdfs:subPropertyOf* ?inv2 .
 
   # Find triples in data
   ?r1 ?p1 ?r2 .
 
   # Exclude existing inverse triples
-  FILTER NOT EXISTS {
-    ?r2 ?p2 ?r1 .
-  }
+  #FILTER NOT EXISTS {
+  #  ?r2 ?p2 ?r1 .
+  #}
 }
 
 """

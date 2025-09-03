@@ -52,3 +52,7 @@ After starting, you can access it at:
 ## 📫 Contact
 
 For questions or support, please create issues or contact Ebrahim Norouzi `ebrahim.norouzi@fiz-karlsruhe.de`.
+
+## TODO
+- run reasoner first for ontology, then all, how we manage reasoning
+- We need documentation for testing the reasonner, consider examples and test
