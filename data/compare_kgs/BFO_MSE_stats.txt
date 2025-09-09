@@ -1,0 +1,64 @@
+=== Global stats: BFO_MSE ===
+triples: 84698
+num_subjects: 10945
+num_objects: 21335
+num_predicates: 140
+num_literals: 17017
+num_resources: 11037
+num_classes: 453
+num_properties: 209
+num_individuals: 9937
+
+Top 25 types (individual counts):
+  owl:NamedIndividual: 9767
+  obo:BFO_0000001: 1180
+  obo:BFO_0000002: 1134
+  obo:BFO_0000031: 947
+  obo:IAO_0000030: 947
+  obo:IAO_0000590: 845
+  ontology:NFDI_0000223: 815
+  ontology:NFDI_0000102: 643
+  obo:IAO_0000429: 633
+  ontology:NFDI_0001018: 464
+  ontology:NFDI_0001019: 366
+  obo:IAO_0000027: 338
+  ontology:NFDI_0000111: 316
+  ontology:NFDI_0000114: 316
+  ontology:NFDI_0000001: 292
+  ontology:NFDI_0000014: 258
+  obo:BFO_0000008: 257
+  obo:IAO_0000300: 249
+  ontology:NFDI_0000190: 236
+  obo:IAO_0000305: 236
+  ontology:NFDI_0000193: 236
+  ontology:NFDI_0001000: 225
+  ontology:NFDI_0000015: 191
+  obo:BFO_0000038: 173
+  ontology:NFDI_0000030: 169
+
+Top 25 predicates:
+  rdf:type: 27075
+  owl:disjointWith: 14610
+  rdfs:label: 8607
+  obo:IAO_0000219: 4136
+  obo:IAO_0000235: 4136
+  ontology:NFDI_0001007: 3057
+  obo:BFO_0000057: 1699
+  obo:BFO_0000056: 1699
+  ontology:NFDI_0001008: 1179
+  dcterms:creator: 1168
+  dcterms:created: 1163
+  obo:BFO_0000197: 809
+  obo:BFO_0000196: 809
+  obo:BFO_0000054: 785
+  obo:BFO_0000055: 785
+  ontology:NFDI_0000226: 774
+  obo:IAO_0000136: 774
+  <https://w3id.org/pmd/co/PMD_0000004>: 744
+  obo:BFO_0000178: 434
+  obo:BFO_0000176: 434
+  rdfs:subClassOf: 432
+  obo:BFO_0000199: 430
+  ontology:NFDI_0000211: 402
+  ontology:NFDI_0000212: 402
+  rdfs:comment: 377

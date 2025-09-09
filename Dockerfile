@@ -28,8 +28,14 @@ COPY . .
 # Prepare scripts and run them
 RUN chmod +x /app/1st-kg.sh /app/2nd-merge-all.sh
 
-CMD ["/bin/bash", "-c", "./1st-kg.sh && ./2nd-merge-all.sh"]
+# --- BUILD TIME generation of data/all.ttl ---
+RUN set -eu; \
+    if [ -f ./1st-kg.sh ]; then ./1st-kg.sh; fi; \
+    if [ -f ./2nd-merge-all.sh ]; then ./2nd-merge-all.sh; fi; \
+    # sanity checks
+    test -s data/all.ttl && echo "✅ data/all.ttl generated" || (echo "❌ data/all.ttl missing!" >&2; exit 1)
 
+# Put a copy in a predictable place too (optional)
 RUN mkdir -p /data && cp data/all.ttl /data/ontology.ttl
 
 # Download Widoco

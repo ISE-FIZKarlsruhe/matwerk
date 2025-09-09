@@ -1,0 +1,41 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix mwo: <http://purls.helmholtz-metadaten.de/mwo/> .
+@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix ns1: <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://demo.fiz-karlsruhe.de/matwerk/E15879> rdfs:label "Ebrahim Norouzi" ;
+    mwo:emailAddress "ebrahim.norouzi@fiz-karlsruhe.de"^^xsd:string ;
+    mwo:hasAffiliation <http://demo.fiz-karlsruhe.de/matwerk/E1016> ;
+    mwo:hasExpertiseIn <http://demo.fiz-karlsruhe.de/matwerk/E1245258>,
+        <http://demo.fiz-karlsruhe.de/matwerk/E1246240> ;
+    mwo:hasORCID <https://orcid.org/0000-0002-2691-6995> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q118232637> ;
+    foaf:depiction <https://www.fiz-karlsruhe.de/sites/default/files/styles/contact_image/public/FIZ/Bilder/Personen/ebrahim-norouzi.jpg?itok=h0iFGsaA> ;
+    foaf:firstName "Ebrahim"^^xsd:string ;
+    foaf:surname "Norouzi"^^xsd:string .
+
+<http://demo.fiz-karlsruhe.de/matwerk/E1016> rdfs:label "FIZ Karlsruhe - Leibniz Institute for Information Infrastructure",
+        "FIZ Karlsruhe - Leibniz-Institut für Informationsinfrastruktur"@de ;
+    mwo:hasAcronym "FIZ Karlsruhe"^^xsd:string ;
+    mwo:hasPostalCode "76344" ;
+    mwo:hasWebsite <http://demo.fiz-karlsruhe.de/matwerk/E82811> ;
+    nfdicore:location <http://demo.fiz-karlsruhe.de/matwerk/E73772> ;
+    nfdicore:parentOrganisation <http://demo.fiz-karlsruhe.de/matwerk/E2597> .
+
+<http://demo.fiz-karlsruhe.de/matwerk/E1245258> rdfs:label "Information Service Engineering" ;
+    dcterms:format "Academic teaching materials" ;
+    mwo:description "This lecture provides an introduction into natural language processing (NLP), followed by knowledge representation basics with a focus on knowledge graphs and Semantic Web technologies. Moreover, a brief sketch of machine learning and deep learning technologies complement the lecture to provide some insights on state-of-the-art ISE applications, in particular on semantic and exploratory search." ;
+    mwo:hasLecturer <http://demo.fiz-karlsruhe.de/matwerk/E14862> ;
+    mwo:hasWebsite <http://demo.fiz-karlsruhe.de/matwerk/E395717>,
+        <http://demo.fiz-karlsruhe.de/matwerk/E407352> ;
+    mwo:isOnline true ;
+    mwo:requiredTool <http://demo.fiz-karlsruhe.de/matwerk/E836279> ;
+    rdfs:comment "2021" ;
+    ns1:duration "90 min / week plus exercises"^^xsd:time .
+
+<http://demo.fiz-karlsruhe.de/matwerk/E1246240> rdfs:label "Materials Informatic" .
+

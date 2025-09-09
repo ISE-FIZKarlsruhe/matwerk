@@ -1,0 +1,12 @@
+=== High-level comparison ===
+triples: BFO_MSE=84698 | SCHEMA_MSE=8143
+num_subjects: BFO_MSE=10945 | SCHEMA_MSE=1875
+num_objects: BFO_MSE=21335 | SCHEMA_MSE=5012
+num_predicates: BFO_MSE=140 | SCHEMA_MSE=111
+num_literals: BFO_MSE=17017 | SCHEMA_MSE=3066
+num_resources: BFO_MSE=11037 | SCHEMA_MSE=2678
+num_classes: BFO_MSE=453 | SCHEMA_MSE=136
+num_properties: BFO_MSE=209 | SCHEMA_MSE=157
+num_individuals: BFO_MSE=9937 | SCHEMA_MSE=1486
+
+See *_stats.txt, *_types.csv, *_predicates.csv for details.
