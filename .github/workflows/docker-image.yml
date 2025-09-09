@@ -31,3 +31,26 @@ jobs:
         run: |
           docker build -t $REGISTRY/${REPO}:latest -t $REGISTRY/${REPO}:$(date +%s) .  
           docker push $REGISTRY/${REPO} --all-tags
+      - name: Extract generated all.ttl from image
+        env:
+          REGISTRY: ghcr.io
+        run: |
+          set -euxo pipefail
+          cid=$(docker create $REGISTRY/${REPO}:latest)
+          mkdir -p data
+          # adjust the source path if your final image stores it elsewhere
+          docker cp "$cid":/data/all.ttl ./data/all.ttl
+          docker rm "$cid"
+
+      - name: Commit changes (if any)
+        run: |
+          set -euxo pipefail
+          if ! git diff --quiet -- data/all.ttl; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/all.ttl
+            git commit -m "[skip ci] Update data/all.ttl from Docker build"
+            git push
+          else
+            echo "No changes in data/all.ttl"
+          fi

@@ -8,31 +8,31 @@ ONTBASE=https://nfdi.fiz-karlsruhe.de/ontology
 
 mkdir -p "$VALIDATIONSDIR"
 
-# Merge OWL components
+echo "Merge OWL components"
 robot merge -i "$SRC" --inputs "data/components/*.owl" --output "$COMPONENTSDIR/all_NotReasoned.owl"
 
-# Fix NFDI_0001008 datatype annotation
+echo "Fix NFDI_0001008 datatype annotation"
 sed -i 's|<ontology:NFDI_0001008>|<ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">|g' "$COMPONENTSDIR/all_NotReasoned.owl"
 
-# Explanations and inconsistency checks
+echo "Explanations and inconsistency checks"
 robot explain --input "$COMPONENTSDIR/all_NotReasoned.owl" -M inconsistency --explanation "$VALIDATIONSDIR/inconsistency.md"
 
 robot explain --reasoner hermit --input "$SRC" -M inconsistency --explanation "$VALIDATIONSDIR/inconsistency_mwo.md"
 
 robot explain --reasoner hermit --input "$COMPONENTSDIR/all_NotReasoned.owl" -M inconsistency --explanation "$VALIDATIONSDIR/inconsistency_hermit.md"
 
-# Reasoning step
-robot reason \
-    --reasoner hermit \
-    --input "$COMPONENTSDIR/all_NotReasoned.owl" \
-    --axiom-generators "SubClass ClassAssertion" \
-    --output "$COMPONENTSDIR/all.ttl"
+echo "Reasoning step"
+#robot reason \
+#    --reasoner hermit \
+#    --input "$COMPONENTSDIR/all_NotReasoned.owl" \
+#    --axiom-generators "SubClass ClassAssertion" \
+#    --output "$COMPONENTSDIR/all.ttl"
 
-robot reason \
-    --reasoner hermit \
-    --input "$SRC" \
-    --axiom-generators "SubClass SubDataProperty ClassAssertion EquivalentObjectProperty PropertyAssertion InverseObjectProperties SubObjectProperty" \
-    --output "ontology/mwo_reasoned.ttl"
+#robot reason \
+#    --reasoner hermit \
+#    --input "$SRC" \
+#    --axiom-generators "SubClass SubDataProperty ClassAssertion EquivalentObjectProperty PropertyAssertion InverseObjectProperties SubObjectProperty" \
+#    --output "ontology/mwo_reasoned.ttl"
 
 # SHACL validations (with safe failure handling)
 for i in 4 3 2 1; do
