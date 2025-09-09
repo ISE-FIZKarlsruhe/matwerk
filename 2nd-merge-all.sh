@@ -8,6 +8,13 @@ ONTBASE=https://nfdi.fiz-karlsruhe.de/ontology
 
 mkdir -p "$VALIDATIONSDIR"
 
+echo "Reasoning ontology"
+robot reason \
+    --reasoner hermit \
+    --input "$SRC" \
+    --axiom-generators "SubClass SubDataProperty ClassAssertion EquivalentObjectProperty PropertyAssertion InverseObjectProperties SubObjectProperty" \
+    --output "data/components/mwo_reasoned.owl"
+
 echo "Merge OWL components"
 robot merge -i "$SRC" --inputs "data/components/*.owl" --output "$COMPONENTSDIR/all_NotReasoned.owl"
 
@@ -21,18 +28,14 @@ robot explain --reasoner hermit --input "$SRC" -M inconsistency --explanation "$
 
 robot explain --reasoner hermit --input "$COMPONENTSDIR/all_NotReasoned.owl" -M inconsistency --explanation "$VALIDATIONSDIR/inconsistency_hermit.md"
 
-echo "Reasoning step"
+echo "Reasoning KG, for now no reasoning"
+robot merge -i "$SRC" --inputs "data/components/*.owl" --output "$COMPONENTSDIR/all.ttl"
 #robot reason \
 #    --reasoner hermit \
 #    --input "$COMPONENTSDIR/all_NotReasoned.owl" \
 #    --axiom-generators "SubClass ClassAssertion" \
 #    --output "$COMPONENTSDIR/all.ttl"
 
-#robot reason \
-#    --reasoner hermit \
-#    --input "$SRC" \
-#    --axiom-generators "SubClass SubDataProperty ClassAssertion EquivalentObjectProperty PropertyAssertion InverseObjectProperties SubObjectProperty" \
-#    --output "ontology/mwo_reasoned.ttl"
 
 # SHACL validations (with safe failure handling)
 for i in 4 3 2 1; do

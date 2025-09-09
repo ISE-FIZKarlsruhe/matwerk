@@ -31,7 +31,7 @@ jobs:
         run: |
           docker build -t $REGISTRY/${REPO}:latest -t $REGISTRY/${REPO}:$(date +%s) .  
           docker push $REGISTRY/${REPO} --all-tags
-      - name: Extract generated all.ttl from image
+      - name: Extract generated MSE KG from image
         env:
           REGISTRY: ghcr.io
         run: |
@@ -39,18 +39,19 @@ jobs:
           cid=$(docker create $REGISTRY/${REPO}:latest)
           mkdir -p data
           # adjust the source path if your final image stores it elsewhere
-          docker cp "$cid":/data/all.ttl ./data/all.ttl
+          docker cp "$cid":/data/all.ttl ./data/all.ttl || echo "⚠️ all.ttl not found"
+          docker cp "$cid":/data/all_NotReasoned.owl ./data/all_NotReasoned.owl || echo "⚠️ all_NotReasoned.owl not found"
           docker rm "$cid"
 
       - name: Commit changes (if any)
         run: |
           set -euxo pipefail
-          if ! git diff --quiet -- data/all.ttl; then
+          if ! git diff --quiet -- data/all.ttl data/all_NotReasoned.owl; then
             git config user.name  "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/all.ttl
-            git commit -m "[skip ci] Update data/all.ttl from Docker build"
+            git add data/all.ttl data/all_NotReasoned.owl
+            git commit -m "[skip ci] Update ontology build outputs (all.ttl, all_NotReasoned.owl)"
             git push
           else
-            echo "No changes in data/all.ttl"
+            echo "No ontology file changes detected"
           fi
