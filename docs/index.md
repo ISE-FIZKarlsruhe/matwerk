@@ -1,10 +1,6 @@
 # Welcome to the Materials Science and Engineering Knowledge Graph (MSE KG)
 Last update: 09.09.2025
 
-Number of entities: 11005
-
-Number of triples: 90584
-
 
 ## Introduction
 
@@ -20,7 +16,7 @@ The **MSE Knowledge Graph v2.0** is an updated version that is BFO-compliant, al
 - [Data collection spreadsheets](https://drive.google.com/file/d/1GS5vKDWDPXeNWJX6UMZk78gq0gaVQ2RW/view){:target="_blank"}
 - [NFDI-MatWerk LOD Working Group](https://iuc12-nfdi-matwerk-ta-oms-7fd4826d9051b0dd93b21aa77d06d1d8c71c4.pages.rwth-aachen.de/){:target="_blank"}
 - [About NFDI-MatWerk consortium](https://nfdi-matwerk.de/){:target="_blank"}
-- [Contact Us](mailto:MatWerkOMS@fz-juelich.de)
+- [Contact Us](mailto:ebrahim.norouzi@fiz-karlsruhe.de)
 
 ## Purpose
 
