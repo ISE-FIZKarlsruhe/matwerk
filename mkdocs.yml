@@ -4,7 +4,7 @@ repo_url: https://github.com/ISE-FIZKarlsruhe/matwerk
 nav:
   - Home: index.md
   - How to add data?: upload.md
+  - SPARQL Endpoint: /matwerk/shmarql/
   - Sample Queries:
     - General Queries: general_queries.md
     - Statistics: statistics.md
-  - SPARQL Endpoint: /matwerk/shmarql/
