@@ -39,82 +39,57 @@ Adding more data benefits us all. Depending on **your contribution scenario and 
 
 ## 🧭 Contribution Scenarios
 
-### 🔹 Scenario 1: I have a data (e.g., spreadsheet) but I don’t want to represent the information with ontology
+### 🔹 Scenario 1: Unstructured Data (e.g., spreadsheet not represented with ontology)
+
+You have unstructured data such as a spreadsheet, but you do not want (or do not have the time) to represent the information using an ontology. We will not structure this data for you, but you can still make it available in the MSE KG ecosystem.
+
+⚠️ **Note**: We are not able to structure your data for you.  
 
 ✅ **What to do**  
-- Upload your spreadsheet to [https://zenodo.org/](https://zenodo.org/)  
-- Send the link to 📧 [ebrahim.norouzi@fiz-karlsruhe.de](mailto:ebrahim.norouzi@fiz-karlsruhe.de)
+1. Upload your spreadsheet to **Zenodo** [https://zenodo.org/communities/nfdi-matwerk/](https://zenodo.org/communities/nfdi-matwerk/)  
+2. Provide **ROR IDs** for organizations and **ORCID IDs** for people (if applicable)  
+3. Your data would automatically harvested and added to the MSE KG.
 
 ---
 
-### 🔹 Scenario 2: I have a data (e.g., spreadsheet) and want to represent the information with ontology, but my data is not mapped or aligned (and I don’t have time to structure it)
+### 🔹 Scenario 2: RDF Data Already Represented with Ontology
 
-⚠️ **Note**: We cannot map or structure your data for you.  
+You already have RDF data and it is properly represented with an ontology. This makes it possible to directly integrate your data into the MSE KG.
 
 ✅ **What to do**  
-- Upload your spreadsheet to [https://zenodo.org/](https://zenodo.org/)  
-- Send the link to 📧 [ebrahim.norouzi@fiz-karlsruhe.de](mailto:ebrahim.norouzi@fiz-karlsruhe.de)
+1. Upload your spreadsheet (and RDF data) to **Zenodo** [https://zenodo.org/communities/nfdi-matwerk/](https://zenodo.org/communities/nfdi-matwerk/)  
+   - Make sure the **RDF data is included inside the repository**  
+2. We will integrate your RDF into the MSE KG in a **separate named graph**
 
 ---
 
-### 🔹 Scenario 3: I have a data (e.g., spreadsheet) where the RDF data is already represented with ontology
+### 🔹 Scenario 3: RDF Data in a Triple Store (Graph Database)
+
+**Description**:  
+You already maintain your own triple store with a SPARQL endpoint. In this case, we can help connect your graph with the MSE KG so others can query it seamlessly.
 
 ✅ **What to do**  
-1. Upload your spreadsheet (and RDF data) to [https://zenodo.org/](https://zenodo.org/) and make sure the **RDF data is included inside the repository** 
-2. Create a GitHub issue 👉 [Open GitHub Issues](https://github.com/ISE-FIZKarlsruhe/matwerk/issues and include:  
-   - Link to your dataset  
-   - The data itself  
-   - The ontology used  
-   - Your SPARQL endpoint (if available)
-3. Contact us (📧 [ebrahim.norouzi@fiz-karlsruhe.de](mailto:ebrahim.norouzi@fiz-karlsruhe.de)) directly to discuss **mappings** and enabling **federated SPARQL queries** and integrating it into the MSE KG in a **separate named graph**
+1. If you have a **SPARQL endpoint**, please add it to this spreadsheet [SPARQL Endpoint Integration Sheet](https://docs.google.com/spreadsheets/d/1tiB4IZTCsjcw5QxBWk70XpRcwfw5-gs7CW2QTM5ZBiI/edit?gid=85394968#gid=85394968).  
+   - We will automatically integrate it into the MSE KG.   
+2. You may also open a GitHub issue 👉 [Submit GitHub Issue](https://github.com/ISE-FIZKarlsruhe/matwerk/issues) and include details about your SPARQL endpoint and dataset to discuss **mappings** and enabling **federated SPARQL queries** .  
 
 ---
 
-### 🔹 Scenario 4: I have RDF data already in a triple store (Graph database)
+### 🔹 Scenario 4: Data Type Already Supported in MSE KG (e.g., Person, Software)
 
-✅ **What to do**  
-1. Create a GitHub issue 👉 [Open GitHub Issues](https://github.com/ISE-FIZKarlsruhe/matwerk/issues)  
-2. Include:  
-   - Link to your dataset  
-   - The data itself  
-   - The ontology used  
-   - Your SPARQL endpoint (if available)
-3. Contact us (📧 [ebrahim.norouzi@fiz-karlsruhe.de](mailto:ebrahim.norouzi@fiz-karlsruhe.de)) directly to discuss **mappings** and enabling **federated SPARQL queries**  
-
----
-
-### 🔹 Scenario 5: I have unstructured data (e.g., text)
-
-✅ **What to do**  
-- First, represent your data using ontologies  
-- Need help? Contact our ontology expert:  
-📧 [ebrahim.norouzi@fiz-karlsruhe.de](mailto:ebrahim.norouzi@fiz-karlsruhe.de)
-
----
-
-### 🔹 Scenario 6: I have a data (e.g., person, software) that is already supported in MSE KG
-
-You have two contribution options:
+You have data about entities that are already supported in the MSE KG (like people, software, or organizations). In this case, you can use either a quick or advanced contribution workflow.
 
 #### A. 🚀 Quick Contribution (No technical knowledge needed)  
-1. Use our **spreadsheet template** based on the **MatWerk ontology** 👉 [Download template](https://drive.google.com/file/d/1GS5vKDWDPXeNWJX6UMZk78gq0gaVQ2RW/view)  
-2. Fill in your data following the format  
-3. Email the filled sheet to 📧 [ebrahim.norouzi@fiz-karlsruhe.de](mailto:ebrahim.norouzi@fiz-karlsruhe.de)
+1. Use our **spreadsheet template** based on the **MatWerk ontology** [Data collection spreadsheet](https://docs.google.com/spreadsheets/d/1tiB4IZTCsjcw5QxBWk70XpRcwfw5-gs7CW2QTM5ZBiI/edit?usp=sharing)  
+2. Fill in your data following the format 
 
-#### B. 🔬 Advanced Contribution (For ontology/workflow enthusiasts)  
-1. Open the spreadsheet 👉 [Open Spreadsheet Template](#)  
-2. Go to the relevant sheet (e.g., `Person`, `Software`)  
-3. Each row = one instance; IDs are auto-generated via:  
-   `Custom Actions > Replace with new ID`  
-4. Insert your data in the appropriate cells  
-5. Submit via:  
-   `Custom Actions > Generate & Upload Data`  
-6. To **update or delete**, use:  
-   `Update Data` or `Delete Data`
-
-📌 After submission:  
-- An **error log** and **SHACL validation report** will be generated on GitHub 👉 [GitHub Repo](https://github.com/ISE-FIZKarlsruhe/matwerk)  
-- You can fix errors yourself or get help via 📧 [ebrahim.norouzi@fiz-karlsruhe.de](mailto:ebrahim.norouzi@fiz-karlsruhe.de)
+#### B. 🔬 Advanced Contribution (For ontology/workflow enthusiasts) !!! In Preparation !!!
+1. Use the ROBOT spreadsheet template  
+2. Generate IDs and insert your data  
+3. Submit via custom actions:  
+   - `Generate & Upload Data`  
+   - `Update Data` or `Delete Data` for modifications  
+4. Fix errors via the **SHACL validation report** generated on GitHub [GitHub Repo](https://github.com/ISE-FIZKarlsruhe/matwerk)  
 
 ---
 

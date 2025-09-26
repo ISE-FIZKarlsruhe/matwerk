@@ -85,7 +85,7 @@ LIMIT 999
 
 SELECT DISTINCT ?service ?serviceLabel_ ?serviceURL ?docURL ?codeURL WHERE {
 
-  # ?service is a resource of type Service
+  # ?service is a resource of type Service Product
   ?service a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> .
 
   # The label resource for the service

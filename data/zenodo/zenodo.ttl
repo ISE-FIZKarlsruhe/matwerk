@@ -1,0 +1,618 @@
+@prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15210642> {
+    <https://zenodo.org/api/records/15210642/files/Coscine@NFDI-MatWerk-SpringSchool.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15210642> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15210642> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "RDM Platform Coscine @ Spring School NFDI-MatWerk" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.15210642" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12594062> {
+    <https://zenodo.org/api/records/12594062/files/IUC09_MidTermReport.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12594062> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12594062> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "NFDI-Matwerk IUC 09: Infrastructure interfaces with condensed matter physics (collaboration with FAIRmat)" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.12594062" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12749438> {
+    <https://zenodo.org/api/records/12749438/files/NFDI-MatWerk-Data-Management-Plan-Guide-v1.0.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12749438> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12749438> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "NFDI-MatWerk Guide: Research Data Management Plan" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.12749438" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13220179> {
+    <https://zenodo.org/api/records/13220179/files/IUC04_Towards_semi_automated_construction_of_DPDs.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13220179> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13220179> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "IUC04: Towards semi automated construction of Defect Phase Diagrams" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.13220179" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12207313> {
+    <https://zenodo.org/api/records/12207313/files/IUC17_StatusReport.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12207313> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12207313> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Status Report: IUC17 - Ontologies for defects in crystals" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.12207313" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17046190> {
+    <https://zenodo.org/api/records/17046190/files/NFDI-MatWerk-Demos_CoRDI2025.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17046190> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17046190> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Community-Driven Development of Infrastructure Use Cases in NFDI-MatWerk" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.17046190" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11071439> {
+    <https://zenodo.org/api/records/11071439/files/2024-04_EMGlossary_v1-0-4.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11071439> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11071439> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "The EM Glossary: a community effort towards harmonized terminology in electron microscopy" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.11071439" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13846096> {
+    <https://zenodo.org/api/records/13846096/files/MSE24-%20Integration%20of%20Linked%20Open%20Data%20in%20Materials%20Science%20and%20Engineering%20%28MSE%29.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13846096> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13846096> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Integration of Linked Open Data in Materials Science and Engineering (MSE)" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.13846096" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13133719> {
+    <https://zenodo.org/api/records/13133719/files/NFDI-MatWerk_IUC01.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13133719> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13133719> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "IUC 01: Web-based demonstration and teaching framework for MSE research data infrastructure" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.13133719" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15302021> {
+    <https://zenodo.org/api/records/15302021/files/20250121_Vortrag%20NFDI-MatWerk_deRSE_Publication.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15302021> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15302021> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "User-centric development of Materials Knowledge Solutions in NFDI-MatWerk" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.15302021" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15222661> {
+    <https://zenodo.org/api/records/15222661/files/2025-04-10-Riefler-Digitalization+Change-NFDI-MatWerk-SpringSchool.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15222661> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15222661> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Research Data Management (RDM) and Digital Transformation in Science" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.15222661" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17053393> {
+    <https://zenodo.org/api/records/17053393/files/MaterialsOntologies_MC2025.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17053393> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17053393> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Achieving semantic interoperability in materials science data" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.17053393" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17120646> {
+    <https://zenodo.org/api/records/16753543/files/20250806_NFDI-MatWerk_RenewalProposal_B1.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17120646> .
+
+    <https://zenodo.org/api/records/17120646/files/20250827_NFDI-MatWerk_RenewalProposal_B-1_version%202.0.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17120646> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17120646> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "NFDI-MatWerk Renewal Proposal Part B-1",
+            "NFDI-MatWerk Renewal Proposal Part B-1 updated version" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.16753543",
+            "10.5281/zenodo.17120646" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14178185> {
+    <https://zenodo.org/api/records/14178185/files/2024-10-31_EMG-OBM_HMCconference.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14178185> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14178185> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "The EM Glossary: a community effort towards a harmonized terminology in electron microscopy" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.14178185" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13142352> {
+    <https://zenodo.org/api/records/13142352/files/IUC12_Status%20report.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13142352> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13142352> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "IUC12: Alignment of application- and higher-level ontologies" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.13142352" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5445_ir_1000151569> {
+    <https://zenodo.org/api/records/7227714/files/FAIR.DO.Commons.27Sep22.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5445_ir_1000151569> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5445_ir_1000151569> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "FAIR Data Commons / Essential Services and Tools for Metadata Management Supporting Science" ;
+        nfdi:NFDI_0001006 "10.5445/IR/1000151569" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14035822> {
+    <https://zenodo.org/api/records/14035822/files/2024-11-05-10_30-Group-Charta_RDM-Helpdesks.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14035822> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14035822> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Working Group Charter. RDM Helpdesk Network" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.14035822" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11615371> {
+    <https://zenodo.org/api/records/11615371/files/pyscal/iuc17_demonstrator-1.0.0.zip/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11615371> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11615371> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "IUC17 demonstrator" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.11615371" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13859316> {
+    <https://zenodo.org/api/records/13859316/files/20240917_SaxFDM2024_FundamentalsOfScientificMetadata_Gerlich.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13859316> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13859316> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Fundamentals of Scientific Metadata - Ein praxisorientiertes Kursformat für Wissenschaffende und Data Stewards" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.13859316" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11667674> {
+    <https://zenodo.org/api/records/11667674/files/2406_IUC02_BAM-Ref.Data_Definition_v1.0.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11667674> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11667674> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "NFDI-MatWerk/IUC02 Definition for Reference Data of Materials" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.11667674" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13628020> {
+    <https://zenodo.org/api/records/13628020/files/NFDI-Matwerk%20IUC02_v3.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13628020> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13628020> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "IUC 02 : Framework for curation and distribution of reference datasets" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.13628020" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.10620953> {
+    <https://zenodo.org/api/records/10620953/files/Hickel-Bitzek-Neugebauer-MPG-Jahrbuch_2022.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.10620953> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.10620953> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Mit digitalen Strategien vom Modellsystem zum High-Tech-Material" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.10620953" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5445_ir_1000162522> {
+    <https://zenodo.org/api/records/10204105/files/Long%20Term%20Interoperability%20of%20Distributed%20Research%20Data%20Infrastructures.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5445_ir_1000162522> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5445_ir_1000162522> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Long Term Interoperability of Distributed Research Data Infrastructures" ;
+        nfdi:NFDI_0001006 "10.5445/IR/1000162522" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15209702> {
+    <https://zenodo.org/api/records/15209702/files/20250410_kr_nfdimatwerk_spring_school_2025_slides.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15209702> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15209702> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Digital Materials Science Lab - RDM and Workflows" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.15209702" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15861514> {
+    <https://zenodo.org/api/records/15861514/files/MSEResearchDataForumIUC04_slides.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15861514> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15861514> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Boosting Materials Science through Collaboration and Automation via a centralized Research Data Management System" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.15861514" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13838718> {
+    <https://zenodo.org/api/records/13838718/files/2024-09-12_Data%20Management%20Plan%20%28DMP%29%20-%20HedgeDoc.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13838718> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13838718> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Data Management Plan (DMP)" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.13838718" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11353339> {
+    <https://zenodo.org/api/records/11353339/files/Proceedings_NFDI-MatWerk-Conference-2023.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11353339> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11353339> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Proceedings NFDI-MatWerk Conference 2023" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.11353339" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11351884> {
+    <https://zenodo.org/api/records/11351400/files/NFDI-Matwerk%20IUC05.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11351884> .
+
+    <https://zenodo.org/api/records/11351884/files/NFDI-Matwerk%20IUC05.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11351884> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.11351884> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "IUC 05: Towards better digital infrastructures and workflows for experimental labs" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.11351400",
+            "10.5281/zenodo.11351884" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17035738> {
+    <https://zenodo.org/api/records/17014022/files/2025-08-31_MC2025_EMGlossary.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17035738> .
+
+    <https://zenodo.org/api/records/17035738/files/2025-08-31_MC2025_EMGlossary_update.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17035738> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17035738> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "The EM Glossary - A community resource providing harmonized terminology in electron microscopy" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.17014022",
+            "10.5281/zenodo.17035738" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12703358> {
+    <https://zenodo.org/api/records/12703358/files/NFDI-MatWerk%20Spring%20School%20April2024_RDM%20for%20every%20day.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12703358> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12703358> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Research Data Management practices for every day" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.12703358" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> {
+    <https://zenodo.org/api/records/15744298/files/2025-06_Data-Schema_Creep_v1.1_EN%20AW%202618_v1.0.xlsx/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/TestPieceCreepTests-TechnicalDrawing.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/VH5299_1-1.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5260_25-11.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5260_25-12.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5260_25-13.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5260_25-14.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_1-2.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_1-3.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_1-7.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_1-8.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_1-9.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_2-10.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_2-11.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_2-12.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_2-13.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_2-14.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_2-15.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_3-19.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_4-22.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15744298/files/Vh5299_5-25.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/2025-06_Data-Schema_Creep_v1.1_EN%20AW%202618_v1.0.xlsx/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/TestPieceCreepTests-TechnicalDrawing.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/VH5299_1-1.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5260_25-11.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5260_25-12.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5260_25-13.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5260_25-14.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_1-2.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_1-3.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_1-7.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_1-8.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_1-9.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_2-10.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_2-11.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_2-12.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_2-13.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_2-14.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_2-15.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_3-19.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_4-22.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://zenodo.org/api/records/15864549/files/Vh5299_5-25.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.15864549> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.15744298",
+            "10.5281/zenodo.15864549" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12687143> {
+    <https://zenodo.org/api/records/12687143/files/IUC_07-report.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12687143> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.12687143> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "IUC 07: Beyond 3D:Tools for tracking spatiotemporal microstructure evolution" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.12687143" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5445_ir_1000162287> {
+    <https://zenodo.org/api/records/8399407/files/DCE-CoRDI2023-Ost_Shakeel_Toegel.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5445_ir_1000162287> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5445_ir_1000162287> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Data Collections Explorer – An Easy-to-Use Tool for Sharing and Discovering Research Data" ;
+        nfdi:NFDI_0001006 "10.5445/IR/1000162287" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13838506> {
+    <https://zenodo.org/api/records/13838506/files/2024-09-12_Introduction%20to%20Research%20Data%20Management%20%28RDM%29%20-%20HedgeDoc.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13838506> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13838506> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Introduction to Research Data Management (RDM)" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.13838506" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13820070> {
+    <https://zenodo.org/api/records/11668376/files/2407_Data-Schema_Creep_v1.0.csv/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13820070> .
+
+    <https://zenodo.org/api/records/11668376/files/2407_Data-Schema_Creep_v1.0.xlsx/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13820070> .
+
+    <https://zenodo.org/api/records/11668376/files/2407_Schema_IUC02_v1.0.json/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13820070> .
+
+    <https://zenodo.org/api/records/11668376/files/Data-Schema-coversheet.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13820070> .
+
+    <https://zenodo.org/api/records/13820070/files/2024-09_Data-Schema-coversheet_v1.1.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13820070> .
+
+    <https://zenodo.org/api/records/13820070/files/2024-09_Data-Schema_Creep_v1.1.csv/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13820070> .
+
+    <https://zenodo.org/api/records/13820070/files/2024-09_Data-Schema_Creep_v1.1.xlsx/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13820070> .
+
+    <https://zenodo.org/api/records/13820070/files/2024-09_Schema_IUC02_v1.1.json/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13820070> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13820070> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.11668376",
+            "10.5281/zenodo.13820070" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13880656> {
+    <https://zenodo.org/api/records/13745267/files/NFDI-MatWerk_digitalization%20survey%202024.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13880656> .
+
+    <https://zenodo.org/api/records/13880656/files/NFDI-MatWerk_digitalization%20survey%202024.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13880656> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.13880656> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "NFDI-MatWerk Digitalisierungsumfrage 2024" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.13745267",
+            "10.5281/zenodo.13880656" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17044588> {
+    <https://zenodo.org/api/records/17034858/files/NFDI-MatWerk%20-%20Roll-out.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17044588> .
+
+    <https://zenodo.org/api/records/17044588/files/1min_flash_presentation.svg/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17044588> .
+
+    <https://zenodo.org/api/records/17044588/files/CoRDI_2025_paper_171.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17044588> .
+
+    <https://zenodo.org/api/records/17044588/files/NFDI-MatWerk%20-%20Roll-out.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17044588> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.17044588> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "Building bridges: Roll-Out group of NFDI-MatWerk" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.17034858",
+            "10.5281/zenodo.17044588" .
+}
+
+<https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> {
+    <https://zenodo.org/api/records/13937987/files/2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/2024-10_RD_CMSX-6-Coversheet.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Microstructure-before-testing.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Test-piece-location.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/TestPieceCreepTests-TechnicalDrawing-FormA.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Vh5205_C-78.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Vh5205_C-80.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Vh5205_C-81.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Vh5205_C-82.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Vh5205_C-85.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Vh5205_C-89.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Vh5205_C-91.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Vh5205_C-94.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Vh5205_C-95.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Vh5205_C-97.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Vh5205_C-98.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/13937987/files/Vh5205_C-99.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/2025-01_RDS_CMSX-6-Coversheet_v1.1.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Microstructure-before-testing.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Test-piece-location.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/TestPieceCreepTests-TechnicalDrawing-FormA.pdf/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Vh5205_C-78.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Vh5205_C-80.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Vh5205_C-81.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Vh5205_C-82.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Vh5205_C-85.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Vh5205_C-89.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Vh5205_C-91.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Vh5205_C-94.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Vh5205_C-95.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Vh5205_C-97.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Vh5205_C-98.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://zenodo.org/api/records/14750432/files/Vh5205_C-99.LIS/content> a nfdi:NFDI_0000009 ;
+        obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> .
+
+    <https://purls.helmholtz-metadaten.de/msekg/g/doi/10.5281_zenodo.14750432> a nfdi:NFDI_0000009 ;
+        obo:IAO_0000235 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+        nfdi:NFDI_0001006 "10.5281/zenodo.13937987",
+            "10.5281/zenodo.14750432" .
+}
+
