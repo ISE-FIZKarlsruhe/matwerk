@@ -59,4 +59,4 @@ For questions or support, please create issues or contact Ebrahim Norouzi `ebrah
 - run reasoner first for ontology, then all, how we manage reasoning
 - We need documentation for testing the reasonner, consider examples and test
 - SPARQL endpoint downloader
-- Zenodo downloader
+- Zenodo downloader (done!)
