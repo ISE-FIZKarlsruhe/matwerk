@@ -1,31 +1,12 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <Ontology/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000235 -->
-
-    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000235"/>
     
 
 
@@ -40,9 +21,11 @@
     
 
 
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007 -->
+    <!-- http://purl.obolibrary.org/obo/OBI_0002135 -->
 
-    <DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007"/>
+    <DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0002135">
+        <rdfs:label>has value</rdfs:label>
+    </DatatypeProperty>
     
 
 
@@ -84,7 +67,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152291">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Stuttgart</ontology:NFDI_0001007>
         <rdfs:label>Stuttgart_</rdfs:label>
     </NamedIndividual>
     
@@ -94,7 +76,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522910">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Freiburg</ontology:NFDI_0001007>
         <rdfs:label>Freiburg_</rdfs:label>
     </NamedIndividual>
     
@@ -104,7 +85,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522911">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Karlsruhe</ontology:NFDI_0001007>
         <rdfs:label>Karlsruhe_</rdfs:label>
     </NamedIndividual>
     
@@ -114,7 +94,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522912">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Halle (Saale)</ontology:NFDI_0001007>
         <rdfs:label>Halle (Saale)_</rdfs:label>
     </NamedIndividual>
     
@@ -124,7 +103,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522913">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Kaiserslautern</ontology:NFDI_0001007>
         <rdfs:label>Kaiserslautern_</rdfs:label>
     </NamedIndividual>
     
@@ -134,7 +112,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522914">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Bremen</ontology:NFDI_0001007>
         <rdfs:label>Bremen_</rdfs:label>
     </NamedIndividual>
     
@@ -144,7 +121,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522915">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Braunschweig</ontology:NFDI_0001007>
         <rdfs:label>Braunschweig_</rdfs:label>
     </NamedIndividual>
     
@@ -154,7 +130,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522916">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Jülich</ontology:NFDI_0001007>
         <rdfs:label>Jülich_</rdfs:label>
     </NamedIndividual>
     
@@ -164,7 +139,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522917">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Saarbrücken</ontology:NFDI_0001007>
         <rdfs:label>Saarbrücken_</rdfs:label>
     </NamedIndividual>
     
@@ -174,7 +148,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522918">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Dresden</ontology:NFDI_0001007>
         <rdfs:label>Dresden_</rdfs:label>
     </NamedIndividual>
     
@@ -184,7 +157,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513931522919">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Dusseldorf</ontology:NFDI_0001007>
         <rdfs:label>Dusseldorf_</rdfs:label>
     </NamedIndividual>
     
@@ -194,7 +166,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152292">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Berlin</ontology:NFDI_0001007>
         <rdfs:label>Berlin_</rdfs:label>
     </NamedIndividual>
     
@@ -204,7 +175,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152293">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Kiel</ontology:NFDI_0001007>
         <rdfs:label>Kiel_</rdfs:label>
     </NamedIndividual>
     
@@ -214,7 +184,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152294">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Eggenstein-Leopoldshafen</ontology:NFDI_0001007>
         <rdfs:label>Eggenstein-Leopoldshafen_</rdfs:label>
     </NamedIndividual>
     
@@ -224,7 +193,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152295">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Aachen</ontology:NFDI_0001007>
         <rdfs:label>Aachen_</rdfs:label>
     </NamedIndividual>
     
@@ -234,7 +202,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152296">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Bochum</ontology:NFDI_0001007>
         <rdfs:label>Bochum_</rdfs:label>
     </NamedIndividual>
     
@@ -244,7 +211,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152297">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Paderborn</ontology:NFDI_0001007>
         <rdfs:label>Paderborn_</rdfs:label>
     </NamedIndividual>
     
@@ -254,7 +220,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152298">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Darmstadt</ontology:NFDI_0001007>
         <rdfs:label>Darmstadt_</rdfs:label>
     </NamedIndividual>
     
@@ -264,7 +229,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393152299">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000303"/>
-        <ontology:NFDI_0001007>Clausthal-Zellerfeld</ontology:NFDI_0001007>
         <rdfs:label>Clausthal-Zellerfeld_</rdfs:label>
     </NamedIndividual>
     
@@ -274,7 +238,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742191">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522919"/>
         <rdfs:label>Dusseldorf</rdfs:label>
     </NamedIndividual>
     
@@ -284,7 +247,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421910">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152299"/>
         <rdfs:label>Clausthal-Zellerfeld</rdfs:label>
     </NamedIndividual>
     
@@ -294,7 +256,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421911">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522910"/>
         <rdfs:label>Freiburg</rdfs:label>
     </NamedIndividual>
     
@@ -304,7 +265,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421912">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522911"/>
         <rdfs:label>Karlsruhe</rdfs:label>
     </NamedIndividual>
     
@@ -314,7 +274,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421913">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522912"/>
         <rdfs:label>Halle (Saale)</rdfs:label>
     </NamedIndividual>
     
@@ -324,7 +283,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421914">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522913"/>
         <rdfs:label>Kaiserslautern</rdfs:label>
     </NamedIndividual>
     
@@ -334,7 +292,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421915">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522914"/>
         <rdfs:label>Bremen</rdfs:label>
     </NamedIndividual>
     
@@ -344,7 +301,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421916">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522915"/>
         <rdfs:label>Braunschweig</rdfs:label>
     </NamedIndividual>
     
@@ -354,7 +310,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421917">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522916"/>
         <rdfs:label>Jülich</rdfs:label>
     </NamedIndividual>
     
@@ -364,7 +319,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421918">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522917"/>
         <rdfs:label>Saarbrücken</rdfs:label>
     </NamedIndividual>
     
@@ -374,7 +328,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513937421919">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513931522918"/>
         <rdfs:label>Dresden</rdfs:label>
     </NamedIndividual>
     
@@ -384,7 +337,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742192">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152291"/>
         <rdfs:label>Stuttgart</rdfs:label>
     </NamedIndividual>
     
@@ -394,7 +346,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742193">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152292"/>
         <rdfs:label>Berlin</rdfs:label>
     </NamedIndividual>
     
@@ -404,7 +355,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742194">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152293"/>
         <rdfs:label>Kiel</rdfs:label>
     </NamedIndividual>
     
@@ -414,7 +364,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742195">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152294"/>
         <rdfs:label>Eggenstein-Leopoldshafen</rdfs:label>
     </NamedIndividual>
     
@@ -424,7 +373,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742196">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152295"/>
         <rdfs:label>Aachen</rdfs:label>
     </NamedIndividual>
     
@@ -434,7 +382,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742197">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152296"/>
         <rdfs:label>Bochum</rdfs:label>
     </NamedIndividual>
     
@@ -444,7 +391,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742198">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152297"/>
         <rdfs:label>Paderborn</rdfs:label>
     </NamedIndividual>
     
@@ -454,7 +400,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451393742199">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393152298"/>
         <rdfs:label>Darmstadt</rdfs:label>
     </NamedIndividual>
 </rdf:RDF>

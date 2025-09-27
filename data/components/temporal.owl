@@ -1,42 +1,12 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <Ontology/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000222 -->
-
-    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000222"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000224 -->
-
-    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000224"/>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000235 -->
-
-    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000235"/>
     
 
 
@@ -72,7 +42,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454003205451">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454007193391"/>
         <rdfs:label>temporal region 1</rdfs:label>
     </NamedIndividual>
     
@@ -91,7 +60,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174540032054511">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454007193396"/>
         <rdfs:label>temporal region 11</rdfs:label>
     </NamedIndividual>
     
@@ -101,7 +69,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174540032054512">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454007193395"/>
         <rdfs:label>temporal region 12</rdfs:label>
     </NamedIndividual>
     
@@ -174,7 +141,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454003205452">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454007193392"/>
         <rdfs:label>temporal region 2</rdfs:label>
     </NamedIndividual>
     
@@ -274,7 +240,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454003205453">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454007193393"/>
         <rdfs:label>temporal region 3</rdfs:label>
     </NamedIndividual>
     
@@ -302,7 +267,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454003205454">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454007193394"/>
         <rdfs:label>temporal region 4</rdfs:label>
     </NamedIndividual>
     
@@ -312,7 +276,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454003205455">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454007193394"/>
         <rdfs:label>temporal region 5</rdfs:label>
     </NamedIndividual>
     
@@ -322,7 +285,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454003205456">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454007193394"/>
         <rdfs:label>temporal region 6</rdfs:label>
     </NamedIndividual>
     
@@ -332,7 +294,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454003205457">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454007193394"/>
         <rdfs:label>temporal region 7</rdfs:label>
     </NamedIndividual>
     
@@ -342,7 +303,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454003205458">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17454007193394"/>
         <rdfs:label>temporal region 8</rdfs:label>
     </NamedIndividual>
     
@@ -1410,47 +1370,10 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17454007193391 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454007193391"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17454007193392 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454007193392"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17454007193393 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454007193393"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17454007193394 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454007193394"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17454007193395 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454007193395"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17454007193396 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17454007193396"/>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17461157333121 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461157333121">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:BFO_0000222 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461158610611"/>
         <rdfs:label>temporal region 149</rdfs:label>
     </NamedIndividual>
     
@@ -1460,8 +1383,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174611573331210">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:BFO_0000222 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461158610614"/>
-        <obo:BFO_0000224 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461158610616"/>
         <rdfs:label>temporal region 158</rdfs:label>
     </NamedIndividual>
     
@@ -1552,7 +1473,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461157333122">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:BFO_0000222 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461158610612"/>
         <rdfs:label>temporal region 150</rdfs:label>
     </NamedIndividual>
     
@@ -1607,7 +1527,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174611573331225">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:BFO_0000222 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461158610615"/>
         <rdfs:label>temporal region 173</rdfs:label>
     </NamedIndividual>
     
@@ -1617,7 +1536,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461157333123">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:BFO_0000222 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461158610612"/>
         <rdfs:label>temporal region 151</rdfs:label>
     </NamedIndividual>
     
@@ -1627,7 +1545,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461157333124">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:BFO_0000222 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461158610612"/>
         <rdfs:label>temporal region 152</rdfs:label>
     </NamedIndividual>
     
@@ -1637,7 +1554,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461157333125">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:BFO_0000222 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461158610612"/>
         <rdfs:label>temporal region 153</rdfs:label>
     </NamedIndividual>
     
@@ -1647,7 +1563,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461157333126">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:BFO_0000222 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461158610612"/>
         <rdfs:label>temporal region 154</rdfs:label>
     </NamedIndividual>
     
@@ -1657,7 +1572,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461157333127">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:BFO_0000222 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461158610612"/>
         <rdfs:label>temporal region 155</rdfs:label>
     </NamedIndividual>
     
@@ -1667,7 +1581,6 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461157333128">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
-        <obo:BFO_0000222 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461158610613"/>
         <rdfs:label>temporal region 156</rdfs:label>
     </NamedIndividual>
     
@@ -1679,42 +1592,6 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000038"/>
         <rdfs:label>temporal region 157</rdfs:label>
     </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17461158610611 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461158610611"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17461158610612 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461158610612"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17461158610613 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461158610613"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17461158610614 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461158610614"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17461158610615 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461158610615"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17461158610616 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461158610616"/>
 </rdf:RDF>
 
 
