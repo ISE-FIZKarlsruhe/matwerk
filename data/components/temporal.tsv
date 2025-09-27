@@ -1,175 +1,175 @@
 #	TYPE	label	denoted by	has first instance	has last instance
-ID	TYPE	A rdfs:label	I http://purl.obolibrary.org/obo/IAO_0000235	I http://purl.obolibrary.org/obo/BFO_0000222	I http://purl.obolibrary.org/obo/BFO_0000224
-https://purls.helmholtz-metadaten.de/msekg/17454003205451	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 1	2x90 min/week		
-https://purls.helmholtz-metadaten.de/msekg/17454003205452	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 2	1,5x90 min/week		
-https://purls.helmholtz-metadaten.de/msekg/17454003205453	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 3	90 min / week plus exercises		
-https://purls.helmholtz-metadaten.de/msekg/17454003205454	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 4	6 weeks		
-https://purls.helmholtz-metadaten.de/msekg/17454003205455	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 5	6 weeks		
-https://purls.helmholtz-metadaten.de/msekg/17454003205456	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 6	6 weeks		
-https://purls.helmholtz-metadaten.de/msekg/17454003205457	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 7	6 weeks		
-https://purls.helmholtz-metadaten.de/msekg/17454003205458	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 8	6 weeks		
-https://purls.helmholtz-metadaten.de/msekg/17454003205459	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 9			
-https://purls.helmholtz-metadaten.de/msekg/174540032054510	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 10			
-https://purls.helmholtz-metadaten.de/msekg/174540032054511	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 11	13 hrs plus exercises		
-https://purls.helmholtz-metadaten.de/msekg/174540032054512	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 12	3 hrs plus exercises		
-https://purls.helmholtz-metadaten.de/msekg/174540032054513	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 13			
-https://purls.helmholtz-metadaten.de/msekg/174540032054514	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 14			
-https://purls.helmholtz-metadaten.de/msekg/174540032054515	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 15			
-https://purls.helmholtz-metadaten.de/msekg/174540032054516	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 16			
-https://purls.helmholtz-metadaten.de/msekg/174540032054517	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 17			
-https://purls.helmholtz-metadaten.de/msekg/174540032054518	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 18			
-https://purls.helmholtz-metadaten.de/msekg/174540032054519	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 19			
-https://purls.helmholtz-metadaten.de/msekg/174540032054520	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 20			
-https://purls.helmholtz-metadaten.de/msekg/174540032054521	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 21			
-https://purls.helmholtz-metadaten.de/msekg/174540032054522	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 22			
-https://purls.helmholtz-metadaten.de/msekg/174540032054523	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 23			
-https://purls.helmholtz-metadaten.de/msekg/174540032054524	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 24			
-https://purls.helmholtz-metadaten.de/msekg/174540032054525	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 25			
-https://purls.helmholtz-metadaten.de/msekg/174540032054526	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 26			
-https://purls.helmholtz-metadaten.de/msekg/174540032054527	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 27			
-https://purls.helmholtz-metadaten.de/msekg/174540032054528	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 28			
-https://purls.helmholtz-metadaten.de/msekg/174540032054529	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 29			
-https://purls.helmholtz-metadaten.de/msekg/174540032054530	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 30			
-https://purls.helmholtz-metadaten.de/msekg/174540032054531	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 31			
-https://purls.helmholtz-metadaten.de/msekg/17454003205461	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 32			
-https://purls.helmholtz-metadaten.de/msekg/17454003205462	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 33			
-https://purls.helmholtz-metadaten.de/msekg/17454003205463	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 34			
-https://purls.helmholtz-metadaten.de/msekg/17454003205464	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 35			
-https://purls.helmholtz-metadaten.de/msekg/17454003205465	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 36			
-https://purls.helmholtz-metadaten.de/msekg/17454003205466	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 37			
-https://purls.helmholtz-metadaten.de/msekg/17454003205467	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 38			
-https://purls.helmholtz-metadaten.de/msekg/17454003205468	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 39			
-https://purls.helmholtz-metadaten.de/msekg/17454003205469	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 40			
-https://purls.helmholtz-metadaten.de/msekg/174540032054610	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 41			
-https://purls.helmholtz-metadaten.de/msekg/174540032054611	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 42			
-https://purls.helmholtz-metadaten.de/msekg/174540032054612	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 43			
-https://purls.helmholtz-metadaten.de/msekg/174540032054613	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 44			
-https://purls.helmholtz-metadaten.de/msekg/174540032054614	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 45			
-https://purls.helmholtz-metadaten.de/msekg/174540032054615	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 46			
-https://purls.helmholtz-metadaten.de/msekg/174540032054616	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 47			
-https://purls.helmholtz-metadaten.de/msekg/174540032054617	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 48			
-https://purls.helmholtz-metadaten.de/msekg/174540032054618	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 49			
-https://purls.helmholtz-metadaten.de/msekg/174540032054619	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 50			
-https://purls.helmholtz-metadaten.de/msekg/174540032054620	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 51			
-https://purls.helmholtz-metadaten.de/msekg/174540032054621	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 52			
-https://purls.helmholtz-metadaten.de/msekg/174540032054622	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 53			
-https://purls.helmholtz-metadaten.de/msekg/174540032054623	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 54			
-https://purls.helmholtz-metadaten.de/msekg/174540032054624	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 55			
-https://purls.helmholtz-metadaten.de/msekg/174540032054625	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 56			
-https://purls.helmholtz-metadaten.de/msekg/174540032054626	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 57			
-https://purls.helmholtz-metadaten.de/msekg/174540032054627	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 58			
-https://purls.helmholtz-metadaten.de/msekg/174540032054628	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 59			
-https://purls.helmholtz-metadaten.de/msekg/174540032054629	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 60			
-https://purls.helmholtz-metadaten.de/msekg/174540032054630	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 61			
-https://purls.helmholtz-metadaten.de/msekg/174540032054631	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 62			
-https://purls.helmholtz-metadaten.de/msekg/174540032054632	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 63			
-https://purls.helmholtz-metadaten.de/msekg/174540032054633	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 64			
-https://purls.helmholtz-metadaten.de/msekg/174540032054634	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 65			
-https://purls.helmholtz-metadaten.de/msekg/174540032054635	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 66			
-https://purls.helmholtz-metadaten.de/msekg/174540032054636	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 67			
-https://purls.helmholtz-metadaten.de/msekg/174540032054637	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 68			
-https://purls.helmholtz-metadaten.de/msekg/174540032054638	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 69			
-https://purls.helmholtz-metadaten.de/msekg/174540032054639	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 70			
-https://purls.helmholtz-metadaten.de/msekg/174540032054640	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 71			
-https://purls.helmholtz-metadaten.de/msekg/174540032054641	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 72			
-https://purls.helmholtz-metadaten.de/msekg/174540032054642	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 73			
-https://purls.helmholtz-metadaten.de/msekg/174540032054643	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 74			
-https://purls.helmholtz-metadaten.de/msekg/174540032054644	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 75			
-https://purls.helmholtz-metadaten.de/msekg/174540032054645	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 76			
-https://purls.helmholtz-metadaten.de/msekg/174540032054646	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 77			
-https://purls.helmholtz-metadaten.de/msekg/174540032054647	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 78			
-https://purls.helmholtz-metadaten.de/msekg/174540032054648	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 79			
-https://purls.helmholtz-metadaten.de/msekg/174540032054649	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 80			
-https://purls.helmholtz-metadaten.de/msekg/174540032054650	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 81			
-https://purls.helmholtz-metadaten.de/msekg/174540032054651	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 82			
-https://purls.helmholtz-metadaten.de/msekg/174540032054652	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 83			
-https://purls.helmholtz-metadaten.de/msekg/174540032054653	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 84			
-https://purls.helmholtz-metadaten.de/msekg/174540032054654	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 85			
-https://purls.helmholtz-metadaten.de/msekg/174540032054655	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 86			
-https://purls.helmholtz-metadaten.de/msekg/174540032054656	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 87			
-https://purls.helmholtz-metadaten.de/msekg/174540032054657	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 88			
-https://purls.helmholtz-metadaten.de/msekg/174540032054658	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 89			
-https://purls.helmholtz-metadaten.de/msekg/174540032054659	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 90			
-https://purls.helmholtz-metadaten.de/msekg/174540032054660	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 91			
-https://purls.helmholtz-metadaten.de/msekg/174540032054661	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 92			
-https://purls.helmholtz-metadaten.de/msekg/174540032054662	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 93			
-https://purls.helmholtz-metadaten.de/msekg/174540032054663	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 94			
-https://purls.helmholtz-metadaten.de/msekg/174540032054664	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 95			
-https://purls.helmholtz-metadaten.de/msekg/174540032054665	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 96			
-https://purls.helmholtz-metadaten.de/msekg/174540032054666	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 97			
-https://purls.helmholtz-metadaten.de/msekg/174540032054667	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 98			
-https://purls.helmholtz-metadaten.de/msekg/174540032054668	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 99			
-https://purls.helmholtz-metadaten.de/msekg/174540032054669	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 100			
-https://purls.helmholtz-metadaten.de/msekg/174540032054670	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 101			
-https://purls.helmholtz-metadaten.de/msekg/174540032054671	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 102			
-https://purls.helmholtz-metadaten.de/msekg/174540032054672	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 103			
-https://purls.helmholtz-metadaten.de/msekg/174540032054673	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 104			
-https://purls.helmholtz-metadaten.de/msekg/174540032054674	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 105			
-https://purls.helmholtz-metadaten.de/msekg/174540032054675	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 106			
-https://purls.helmholtz-metadaten.de/msekg/174540032054676	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 107			
-https://purls.helmholtz-metadaten.de/msekg/174540032054677	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 108			
-https://purls.helmholtz-metadaten.de/msekg/174540032054678	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 109			
-https://purls.helmholtz-metadaten.de/msekg/174540032054679	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 110			
-https://purls.helmholtz-metadaten.de/msekg/174540032054680	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 111			
-https://purls.helmholtz-metadaten.de/msekg/174540032054681	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 112			
-https://purls.helmholtz-metadaten.de/msekg/174540032054682	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 113			
-https://purls.helmholtz-metadaten.de/msekg/174540032054683	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 114			
-https://purls.helmholtz-metadaten.de/msekg/174540032054684	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 115			
-https://purls.helmholtz-metadaten.de/msekg/174540032054685	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 116			
-https://purls.helmholtz-metadaten.de/msekg/174540032054686	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 117			
-https://purls.helmholtz-metadaten.de/msekg/174540032054687	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 118			
-https://purls.helmholtz-metadaten.de/msekg/174540032054688	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 119			
-https://purls.helmholtz-metadaten.de/msekg/174540032054689	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 120			
-https://purls.helmholtz-metadaten.de/msekg/174540032054690	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 121			
-https://purls.helmholtz-metadaten.de/msekg/174540032054691	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 122			
-https://purls.helmholtz-metadaten.de/msekg/174540032054692	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 123			
-https://purls.helmholtz-metadaten.de/msekg/174540032054693	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 124			
-https://purls.helmholtz-metadaten.de/msekg/174540032054694	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 125			
-https://purls.helmholtz-metadaten.de/msekg/174540032054695	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 126			
-https://purls.helmholtz-metadaten.de/msekg/174540032054696	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 127			
-https://purls.helmholtz-metadaten.de/msekg/174540032054697	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 128			
-https://purls.helmholtz-metadaten.de/msekg/174540032054698	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 129			
-https://purls.helmholtz-metadaten.de/msekg/174540032054699	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 130			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546100	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 131			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546101	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 132			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546102	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 133			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546103	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 134			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546104	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 135			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546105	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 136			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546106	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 137			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546107	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 138			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546108	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 139			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546109	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 140			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546110	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 141			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546111	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 142			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546112	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 143			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546113	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 144			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546114	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 145			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546115	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 146			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546116	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 147			
-https://purls.helmholtz-metadaten.de/msekg/1745400320546117	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 148			
-https://purls.helmholtz-metadaten.de/msekg/17461157333121	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 149		1/10/2024	
-https://purls.helmholtz-metadaten.de/msekg/17461157333122	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 150		10/1/2021	
-https://purls.helmholtz-metadaten.de/msekg/17461157333123	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 151		10/1/2021	
-https://purls.helmholtz-metadaten.de/msekg/17461157333124	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 152		10/1/2021	
-https://purls.helmholtz-metadaten.de/msekg/17461157333125	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 153		10/1/2021	
-https://purls.helmholtz-metadaten.de/msekg/17461157333126	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 154		10/1/2021	
-https://purls.helmholtz-metadaten.de/msekg/17461157333127	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 155		10/1/2021	
-https://purls.helmholtz-metadaten.de/msekg/17461157333128	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 156		1/1/2024	
-https://purls.helmholtz-metadaten.de/msekg/17461157333129	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 157			
-https://purls.helmholtz-metadaten.de/msekg/174611573331210	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 158		2/29/2024	9/30/2026
-https://purls.helmholtz-metadaten.de/msekg/174611573331211	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 159			
-https://purls.helmholtz-metadaten.de/msekg/174611573331212	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 160			
-https://purls.helmholtz-metadaten.de/msekg/174611573331213	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 161			
-https://purls.helmholtz-metadaten.de/msekg/174611573331214	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 162			
-https://purls.helmholtz-metadaten.de/msekg/174611573331215	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 163			
-https://purls.helmholtz-metadaten.de/msekg/174611573331216	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 164			
-https://purls.helmholtz-metadaten.de/msekg/174611573331217	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 165			
-https://purls.helmholtz-metadaten.de/msekg/174611573331218	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 166			
-https://purls.helmholtz-metadaten.de/msekg/174611573331219	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 167			
-https://purls.helmholtz-metadaten.de/msekg/174611573331220	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 168			
-https://purls.helmholtz-metadaten.de/msekg/174611573331221	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 169			
-https://purls.helmholtz-metadaten.de/msekg/174611573331222	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 170			
-https://purls.helmholtz-metadaten.de/msekg/174611573331223	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 171			
-https://purls.helmholtz-metadaten.de/msekg/174611573331224	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 172			
-https://purls.helmholtz-metadaten.de/msekg/174611573331225	http://purl.obolibrary.org/obo/BFO_0000038	temporal region 173		01/10/2022	
+ID	TYPE	A rdfs:label	I ‘denoted by’	I ‘has first instant’	I ‘has last instant’
+https://purls.helmholtz-metadaten.de/msekg/17454003205451	one-dimensional temporal region	temporal region 1	2x90 min/week		
+https://purls.helmholtz-metadaten.de/msekg/17454003205452	one-dimensional temporal region	temporal region 2	1,5x90 min/week		
+https://purls.helmholtz-metadaten.de/msekg/17454003205453	one-dimensional temporal region	temporal region 3	90 min / week plus exercises		
+https://purls.helmholtz-metadaten.de/msekg/17454003205454	one-dimensional temporal region	temporal region 4	6 weeks		
+https://purls.helmholtz-metadaten.de/msekg/17454003205455	one-dimensional temporal region	temporal region 5	6 weeks		
+https://purls.helmholtz-metadaten.de/msekg/17454003205456	one-dimensional temporal region	temporal region 6	6 weeks		
+https://purls.helmholtz-metadaten.de/msekg/17454003205457	one-dimensional temporal region	temporal region 7	6 weeks		
+https://purls.helmholtz-metadaten.de/msekg/17454003205458	one-dimensional temporal region	temporal region 8	6 weeks		
+https://purls.helmholtz-metadaten.de/msekg/17454003205459	one-dimensional temporal region	temporal region 9			
+https://purls.helmholtz-metadaten.de/msekg/174540032054510	one-dimensional temporal region	temporal region 10			
+https://purls.helmholtz-metadaten.de/msekg/174540032054511	one-dimensional temporal region	temporal region 11	13 hrs plus exercises		
+https://purls.helmholtz-metadaten.de/msekg/174540032054512	one-dimensional temporal region	temporal region 12	3 hrs plus exercises		
+https://purls.helmholtz-metadaten.de/msekg/174540032054513	one-dimensional temporal region	temporal region 13			
+https://purls.helmholtz-metadaten.de/msekg/174540032054514	one-dimensional temporal region	temporal region 14			
+https://purls.helmholtz-metadaten.de/msekg/174540032054515	one-dimensional temporal region	temporal region 15			
+https://purls.helmholtz-metadaten.de/msekg/174540032054516	one-dimensional temporal region	temporal region 16			
+https://purls.helmholtz-metadaten.de/msekg/174540032054517	one-dimensional temporal region	temporal region 17			
+https://purls.helmholtz-metadaten.de/msekg/174540032054518	one-dimensional temporal region	temporal region 18			
+https://purls.helmholtz-metadaten.de/msekg/174540032054519	one-dimensional temporal region	temporal region 19			
+https://purls.helmholtz-metadaten.de/msekg/174540032054520	one-dimensional temporal region	temporal region 20			
+https://purls.helmholtz-metadaten.de/msekg/174540032054521	one-dimensional temporal region	temporal region 21			
+https://purls.helmholtz-metadaten.de/msekg/174540032054522	one-dimensional temporal region	temporal region 22			
+https://purls.helmholtz-metadaten.de/msekg/174540032054523	one-dimensional temporal region	temporal region 23			
+https://purls.helmholtz-metadaten.de/msekg/174540032054524	one-dimensional temporal region	temporal region 24			
+https://purls.helmholtz-metadaten.de/msekg/174540032054525	one-dimensional temporal region	temporal region 25			
+https://purls.helmholtz-metadaten.de/msekg/174540032054526	one-dimensional temporal region	temporal region 26			
+https://purls.helmholtz-metadaten.de/msekg/174540032054527	one-dimensional temporal region	temporal region 27			
+https://purls.helmholtz-metadaten.de/msekg/174540032054528	one-dimensional temporal region	temporal region 28			
+https://purls.helmholtz-metadaten.de/msekg/174540032054529	one-dimensional temporal region	temporal region 29			
+https://purls.helmholtz-metadaten.de/msekg/174540032054530	one-dimensional temporal region	temporal region 30			
+https://purls.helmholtz-metadaten.de/msekg/174540032054531	one-dimensional temporal region	temporal region 31			
+https://purls.helmholtz-metadaten.de/msekg/17454003205461	one-dimensional temporal region	temporal region 32			
+https://purls.helmholtz-metadaten.de/msekg/17454003205462	one-dimensional temporal region	temporal region 33			
+https://purls.helmholtz-metadaten.de/msekg/17454003205463	one-dimensional temporal region	temporal region 34			
+https://purls.helmholtz-metadaten.de/msekg/17454003205464	one-dimensional temporal region	temporal region 35			
+https://purls.helmholtz-metadaten.de/msekg/17454003205465	one-dimensional temporal region	temporal region 36			
+https://purls.helmholtz-metadaten.de/msekg/17454003205466	one-dimensional temporal region	temporal region 37			
+https://purls.helmholtz-metadaten.de/msekg/17454003205467	one-dimensional temporal region	temporal region 38			
+https://purls.helmholtz-metadaten.de/msekg/17454003205468	one-dimensional temporal region	temporal region 39			
+https://purls.helmholtz-metadaten.de/msekg/17454003205469	one-dimensional temporal region	temporal region 40			
+https://purls.helmholtz-metadaten.de/msekg/174540032054610	one-dimensional temporal region	temporal region 41			
+https://purls.helmholtz-metadaten.de/msekg/174540032054611	one-dimensional temporal region	temporal region 42			
+https://purls.helmholtz-metadaten.de/msekg/174540032054612	one-dimensional temporal region	temporal region 43			
+https://purls.helmholtz-metadaten.de/msekg/174540032054613	one-dimensional temporal region	temporal region 44			
+https://purls.helmholtz-metadaten.de/msekg/174540032054614	one-dimensional temporal region	temporal region 45			
+https://purls.helmholtz-metadaten.de/msekg/174540032054615	one-dimensional temporal region	temporal region 46			
+https://purls.helmholtz-metadaten.de/msekg/174540032054616	one-dimensional temporal region	temporal region 47			
+https://purls.helmholtz-metadaten.de/msekg/174540032054617	one-dimensional temporal region	temporal region 48			
+https://purls.helmholtz-metadaten.de/msekg/174540032054618	one-dimensional temporal region	temporal region 49			
+https://purls.helmholtz-metadaten.de/msekg/174540032054619	one-dimensional temporal region	temporal region 50			
+https://purls.helmholtz-metadaten.de/msekg/174540032054620	one-dimensional temporal region	temporal region 51			
+https://purls.helmholtz-metadaten.de/msekg/174540032054621	one-dimensional temporal region	temporal region 52			
+https://purls.helmholtz-metadaten.de/msekg/174540032054622	one-dimensional temporal region	temporal region 53			
+https://purls.helmholtz-metadaten.de/msekg/174540032054623	one-dimensional temporal region	temporal region 54			
+https://purls.helmholtz-metadaten.de/msekg/174540032054624	one-dimensional temporal region	temporal region 55			
+https://purls.helmholtz-metadaten.de/msekg/174540032054625	one-dimensional temporal region	temporal region 56			
+https://purls.helmholtz-metadaten.de/msekg/174540032054626	one-dimensional temporal region	temporal region 57			
+https://purls.helmholtz-metadaten.de/msekg/174540032054627	one-dimensional temporal region	temporal region 58			
+https://purls.helmholtz-metadaten.de/msekg/174540032054628	one-dimensional temporal region	temporal region 59			
+https://purls.helmholtz-metadaten.de/msekg/174540032054629	one-dimensional temporal region	temporal region 60			
+https://purls.helmholtz-metadaten.de/msekg/174540032054630	one-dimensional temporal region	temporal region 61			
+https://purls.helmholtz-metadaten.de/msekg/174540032054631	one-dimensional temporal region	temporal region 62			
+https://purls.helmholtz-metadaten.de/msekg/174540032054632	one-dimensional temporal region	temporal region 63			
+https://purls.helmholtz-metadaten.de/msekg/174540032054633	one-dimensional temporal region	temporal region 64			
+https://purls.helmholtz-metadaten.de/msekg/174540032054634	one-dimensional temporal region	temporal region 65			
+https://purls.helmholtz-metadaten.de/msekg/174540032054635	one-dimensional temporal region	temporal region 66			
+https://purls.helmholtz-metadaten.de/msekg/174540032054636	one-dimensional temporal region	temporal region 67			
+https://purls.helmholtz-metadaten.de/msekg/174540032054637	one-dimensional temporal region	temporal region 68			
+https://purls.helmholtz-metadaten.de/msekg/174540032054638	one-dimensional temporal region	temporal region 69			
+https://purls.helmholtz-metadaten.de/msekg/174540032054639	one-dimensional temporal region	temporal region 70			
+https://purls.helmholtz-metadaten.de/msekg/174540032054640	one-dimensional temporal region	temporal region 71			
+https://purls.helmholtz-metadaten.de/msekg/174540032054641	one-dimensional temporal region	temporal region 72			
+https://purls.helmholtz-metadaten.de/msekg/174540032054642	one-dimensional temporal region	temporal region 73			
+https://purls.helmholtz-metadaten.de/msekg/174540032054643	one-dimensional temporal region	temporal region 74			
+https://purls.helmholtz-metadaten.de/msekg/174540032054644	one-dimensional temporal region	temporal region 75			
+https://purls.helmholtz-metadaten.de/msekg/174540032054645	one-dimensional temporal region	temporal region 76			
+https://purls.helmholtz-metadaten.de/msekg/174540032054646	one-dimensional temporal region	temporal region 77			
+https://purls.helmholtz-metadaten.de/msekg/174540032054647	one-dimensional temporal region	temporal region 78			
+https://purls.helmholtz-metadaten.de/msekg/174540032054648	one-dimensional temporal region	temporal region 79			
+https://purls.helmholtz-metadaten.de/msekg/174540032054649	one-dimensional temporal region	temporal region 80			
+https://purls.helmholtz-metadaten.de/msekg/174540032054650	one-dimensional temporal region	temporal region 81			
+https://purls.helmholtz-metadaten.de/msekg/174540032054651	one-dimensional temporal region	temporal region 82			
+https://purls.helmholtz-metadaten.de/msekg/174540032054652	one-dimensional temporal region	temporal region 83			
+https://purls.helmholtz-metadaten.de/msekg/174540032054653	one-dimensional temporal region	temporal region 84			
+https://purls.helmholtz-metadaten.de/msekg/174540032054654	one-dimensional temporal region	temporal region 85			
+https://purls.helmholtz-metadaten.de/msekg/174540032054655	one-dimensional temporal region	temporal region 86			
+https://purls.helmholtz-metadaten.de/msekg/174540032054656	one-dimensional temporal region	temporal region 87			
+https://purls.helmholtz-metadaten.de/msekg/174540032054657	one-dimensional temporal region	temporal region 88			
+https://purls.helmholtz-metadaten.de/msekg/174540032054658	one-dimensional temporal region	temporal region 89			
+https://purls.helmholtz-metadaten.de/msekg/174540032054659	one-dimensional temporal region	temporal region 90			
+https://purls.helmholtz-metadaten.de/msekg/174540032054660	one-dimensional temporal region	temporal region 91			
+https://purls.helmholtz-metadaten.de/msekg/174540032054661	one-dimensional temporal region	temporal region 92			
+https://purls.helmholtz-metadaten.de/msekg/174540032054662	one-dimensional temporal region	temporal region 93			
+https://purls.helmholtz-metadaten.de/msekg/174540032054663	one-dimensional temporal region	temporal region 94			
+https://purls.helmholtz-metadaten.de/msekg/174540032054664	one-dimensional temporal region	temporal region 95			
+https://purls.helmholtz-metadaten.de/msekg/174540032054665	one-dimensional temporal region	temporal region 96			
+https://purls.helmholtz-metadaten.de/msekg/174540032054666	one-dimensional temporal region	temporal region 97			
+https://purls.helmholtz-metadaten.de/msekg/174540032054667	one-dimensional temporal region	temporal region 98			
+https://purls.helmholtz-metadaten.de/msekg/174540032054668	one-dimensional temporal region	temporal region 99			
+https://purls.helmholtz-metadaten.de/msekg/174540032054669	one-dimensional temporal region	temporal region 100			
+https://purls.helmholtz-metadaten.de/msekg/174540032054670	one-dimensional temporal region	temporal region 101			
+https://purls.helmholtz-metadaten.de/msekg/174540032054671	one-dimensional temporal region	temporal region 102			
+https://purls.helmholtz-metadaten.de/msekg/174540032054672	one-dimensional temporal region	temporal region 103			
+https://purls.helmholtz-metadaten.de/msekg/174540032054673	one-dimensional temporal region	temporal region 104			
+https://purls.helmholtz-metadaten.de/msekg/174540032054674	one-dimensional temporal region	temporal region 105			
+https://purls.helmholtz-metadaten.de/msekg/174540032054675	one-dimensional temporal region	temporal region 106			
+https://purls.helmholtz-metadaten.de/msekg/174540032054676	one-dimensional temporal region	temporal region 107			
+https://purls.helmholtz-metadaten.de/msekg/174540032054677	one-dimensional temporal region	temporal region 108			
+https://purls.helmholtz-metadaten.de/msekg/174540032054678	one-dimensional temporal region	temporal region 109			
+https://purls.helmholtz-metadaten.de/msekg/174540032054679	one-dimensional temporal region	temporal region 110			
+https://purls.helmholtz-metadaten.de/msekg/174540032054680	one-dimensional temporal region	temporal region 111			
+https://purls.helmholtz-metadaten.de/msekg/174540032054681	one-dimensional temporal region	temporal region 112			
+https://purls.helmholtz-metadaten.de/msekg/174540032054682	one-dimensional temporal region	temporal region 113			
+https://purls.helmholtz-metadaten.de/msekg/174540032054683	one-dimensional temporal region	temporal region 114			
+https://purls.helmholtz-metadaten.de/msekg/174540032054684	one-dimensional temporal region	temporal region 115			
+https://purls.helmholtz-metadaten.de/msekg/174540032054685	one-dimensional temporal region	temporal region 116			
+https://purls.helmholtz-metadaten.de/msekg/174540032054686	one-dimensional temporal region	temporal region 117			
+https://purls.helmholtz-metadaten.de/msekg/174540032054687	one-dimensional temporal region	temporal region 118			
+https://purls.helmholtz-metadaten.de/msekg/174540032054688	one-dimensional temporal region	temporal region 119			
+https://purls.helmholtz-metadaten.de/msekg/174540032054689	one-dimensional temporal region	temporal region 120			
+https://purls.helmholtz-metadaten.de/msekg/174540032054690	one-dimensional temporal region	temporal region 121			
+https://purls.helmholtz-metadaten.de/msekg/174540032054691	one-dimensional temporal region	temporal region 122			
+https://purls.helmholtz-metadaten.de/msekg/174540032054692	one-dimensional temporal region	temporal region 123			
+https://purls.helmholtz-metadaten.de/msekg/174540032054693	one-dimensional temporal region	temporal region 124			
+https://purls.helmholtz-metadaten.de/msekg/174540032054694	one-dimensional temporal region	temporal region 125			
+https://purls.helmholtz-metadaten.de/msekg/174540032054695	one-dimensional temporal region	temporal region 126			
+https://purls.helmholtz-metadaten.de/msekg/174540032054696	one-dimensional temporal region	temporal region 127			
+https://purls.helmholtz-metadaten.de/msekg/174540032054697	one-dimensional temporal region	temporal region 128			
+https://purls.helmholtz-metadaten.de/msekg/174540032054698	one-dimensional temporal region	temporal region 129			
+https://purls.helmholtz-metadaten.de/msekg/174540032054699	one-dimensional temporal region	temporal region 130			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546100	one-dimensional temporal region	temporal region 131			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546101	one-dimensional temporal region	temporal region 132			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546102	one-dimensional temporal region	temporal region 133			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546103	one-dimensional temporal region	temporal region 134			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546104	one-dimensional temporal region	temporal region 135			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546105	one-dimensional temporal region	temporal region 136			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546106	one-dimensional temporal region	temporal region 137			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546107	one-dimensional temporal region	temporal region 138			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546108	one-dimensional temporal region	temporal region 139			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546109	one-dimensional temporal region	temporal region 140			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546110	one-dimensional temporal region	temporal region 141			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546111	one-dimensional temporal region	temporal region 142			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546112	one-dimensional temporal region	temporal region 143			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546113	one-dimensional temporal region	temporal region 144			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546114	one-dimensional temporal region	temporal region 145			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546115	one-dimensional temporal region	temporal region 146			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546116	one-dimensional temporal region	temporal region 147			
+https://purls.helmholtz-metadaten.de/msekg/1745400320546117	one-dimensional temporal region	temporal region 148			
+https://purls.helmholtz-metadaten.de/msekg/17461157333121	one-dimensional temporal region	temporal region 149		1/10/2024	
+https://purls.helmholtz-metadaten.de/msekg/17461157333122	one-dimensional temporal region	temporal region 150		10/1/2021	
+https://purls.helmholtz-metadaten.de/msekg/17461157333123	one-dimensional temporal region	temporal region 151		10/1/2021	
+https://purls.helmholtz-metadaten.de/msekg/17461157333124	one-dimensional temporal region	temporal region 152		10/1/2021	
+https://purls.helmholtz-metadaten.de/msekg/17461157333125	one-dimensional temporal region	temporal region 153		10/1/2021	
+https://purls.helmholtz-metadaten.de/msekg/17461157333126	one-dimensional temporal region	temporal region 154		10/1/2021	
+https://purls.helmholtz-metadaten.de/msekg/17461157333127	one-dimensional temporal region	temporal region 155		10/1/2021	
+https://purls.helmholtz-metadaten.de/msekg/17461157333128	one-dimensional temporal region	temporal region 156		1/1/2024	
+https://purls.helmholtz-metadaten.de/msekg/17461157333129	one-dimensional temporal region	temporal region 157			
+https://purls.helmholtz-metadaten.de/msekg/174611573331210	one-dimensional temporal region	temporal region 158		2/29/2024	9/30/2026
+https://purls.helmholtz-metadaten.de/msekg/174611573331211	one-dimensional temporal region	temporal region 159			
+https://purls.helmholtz-metadaten.de/msekg/174611573331212	one-dimensional temporal region	temporal region 160			
+https://purls.helmholtz-metadaten.de/msekg/174611573331213	one-dimensional temporal region	temporal region 161			
+https://purls.helmholtz-metadaten.de/msekg/174611573331214	one-dimensional temporal region	temporal region 162			
+https://purls.helmholtz-metadaten.de/msekg/174611573331215	one-dimensional temporal region	temporal region 163			
+https://purls.helmholtz-metadaten.de/msekg/174611573331216	one-dimensional temporal region	temporal region 164			
+https://purls.helmholtz-metadaten.de/msekg/174611573331217	one-dimensional temporal region	temporal region 165			
+https://purls.helmholtz-metadaten.de/msekg/174611573331218	one-dimensional temporal region	temporal region 166			
+https://purls.helmholtz-metadaten.de/msekg/174611573331219	one-dimensional temporal region	temporal region 167			
+https://purls.helmholtz-metadaten.de/msekg/174611573331220	one-dimensional temporal region	temporal region 168			
+https://purls.helmholtz-metadaten.de/msekg/174611573331221	one-dimensional temporal region	temporal region 169			
+https://purls.helmholtz-metadaten.de/msekg/174611573331222	one-dimensional temporal region	temporal region 170			
+https://purls.helmholtz-metadaten.de/msekg/174611573331223	one-dimensional temporal region	temporal region 171			
+https://purls.helmholtz-metadaten.de/msekg/174611573331224	one-dimensional temporal region	temporal region 172			
+https://purls.helmholtz-metadaten.de/msekg/174611573331225	one-dimensional temporal region	temporal region 173		01/10/2022	

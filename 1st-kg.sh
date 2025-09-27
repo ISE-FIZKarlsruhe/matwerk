@@ -50,10 +50,10 @@ function run_robot_merge() {
     local TEMPLATE=$2
     local OUTPUT=$3
     echo "🔧 Merging to $OUTPUT"
-    if ! robot merge $INPUTS template --template "$TEMPLATE" \
+    if ! robot merge --include-annotations true $INPUTS template --template "$TEMPLATE" \
         --prefix "nfdicore: $ONTBASE/" --output "$OUTPUT"; then
         echo "❗ Merge failed for $OUTPUT, retrying with -vvv"
-        robot -vvv merge $INPUTS template --template "$TEMPLATE" \
+        robot -vvv merge --include-annotations true $INPUTS template --template "$TEMPLATE" \
             --prefix "nfdicore: $ONTBASE/" --output "$OUTPUT"
     fi
 }

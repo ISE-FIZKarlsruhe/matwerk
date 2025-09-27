@@ -16,7 +16,7 @@ robot reason \
     --output "data/components/mwo_reasoned.owl"
 
 echo "Merge OWL components"
-robot merge -i "$SRC" --inputs "data/components/*.owl" --output "$COMPONENTSDIR/all_NotReasoned.owl"
+robot merge --include-annotations true -i "$SRC" -i "data/components/req_1.owl" -i "data/components/req_2.owl" --inputs "data/components/*.owl" --output "$COMPONENTSDIR/all_NotReasoned.owl"
 
 echo "Fix NFDI_0001008 datatype annotation"
 sed -i 's|<ontology:NFDI_0001008>|<ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">|g' "$COMPONENTSDIR/all_NotReasoned.owl"
@@ -29,7 +29,7 @@ robot explain --reasoner hermit --input "$SRC" -M inconsistency --explanation "$
 robot explain --reasoner hermit --input "$COMPONENTSDIR/all_NotReasoned.owl" -M inconsistency --explanation "$VALIDATIONSDIR/inconsistency_hermit.md"
 
 echo "Reasoning KG, for now no reasoning"
-robot merge -i "$SRC" --inputs "data/components/*.owl" --output "$COMPONENTSDIR/all.ttl"
+robot merge --include-annotations true -i "$SRC" -i "data/components/req_1.owl" -i "data/components/req_2.owl" --inputs "data/components/*.owl" --output "$COMPONENTSDIR/all.ttl"
 #robot reason \
 #    --reasoner hermit \
 #    --input "$COMPONENTSDIR/all_NotReasoned.owl" \

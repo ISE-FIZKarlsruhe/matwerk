@@ -1,195 +1,156 @@
 #	TYPE	label	Value
-ID	TYPE	A rdfs:label	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007	owl:DataProperty		
-https://purls.helmholtz-metadaten.de/msekg/17451597693901	http://purl.obolibrary.org/obo/IAO_0000605	FEAP	FEAP
-https://purls.helmholtz-metadaten.de/msekg/17451597693902	http://purl.obolibrary.org/obo/IAO_0000605	VTK	VTK
-https://purls.helmholtz-metadaten.de/msekg/17451597693903	http://purl.obolibrary.org/obo/IAO_0000605	VASP	VASP
-https://purls.helmholtz-metadaten.de/msekg/17451597693904	http://purl.obolibrary.org/obo/IAO_0000605	CASTEP	CASTEP
-https://purls.helmholtz-metadaten.de/msekg/17451597693905	http://purl.obolibrary.org/obo/IAO_0000605	CPMD	CPMD
-https://purls.helmholtz-metadaten.de/msekg/17451597693906	http://purl.obolibrary.org/obo/IAO_0000605	PEtot	PEtot
-https://purls.helmholtz-metadaten.de/msekg/17451597693907	http://purl.obolibrary.org/obo/IAO_0000605	SPHINX	SPHINX
-https://purls.helmholtz-metadaten.de/msekg/17451597693908	http://purl.obolibrary.org/obo/IAO_0000605	deMon2k	deMon2k
-https://purls.helmholtz-metadaten.de/msekg/17451597693909	http://purl.obolibrary.org/obo/IAO_0000605	CRYSTAL17	CRYSTAL17
-https://purls.helmholtz-metadaten.de/msekg/174515976939010	http://purl.obolibrary.org/obo/IAO_0000605	OpenMX	OpenMX
-https://purls.helmholtz-metadaten.de/msekg/174515976939011	http://purl.obolibrary.org/obo/IAO_0000605	LAMMPS	LAMMPS
-https://purls.helmholtz-metadaten.de/msekg/174515976939012	http://purl.obolibrary.org/obo/IAO_0000605	IMD	IMD
-https://purls.helmholtz-metadaten.de/msekg/174515976939013	http://purl.obolibrary.org/obo/IAO_0000605	MOOSE	MOOSE
-https://purls.helmholtz-metadaten.de/msekg/174515976939014	http://purl.obolibrary.org/obo/IAO_0000605	DAMASK	DAMASK
-https://purls.helmholtz-metadaten.de/msekg/174515976939015	http://purl.obolibrary.org/obo/IAO_0000605	AiiDA	AiiDA
-https://purls.helmholtz-metadaten.de/msekg/174515976939016	http://purl.obolibrary.org/obo/IAO_0000605	ASE	ASE
-https://purls.helmholtz-metadaten.de/msekg/174515976939017	http://purl.obolibrary.org/obo/IAO_0000605	OVITO	OVITO
-https://purls.helmholtz-metadaten.de/msekg/174515976939018	http://purl.obolibrary.org/obo/IAO_0000605	VESTA	VESTA
-https://purls.helmholtz-metadaten.de/msekg/174515976939019	http://purl.obolibrary.org/obo/IAO_0000605	XcrySDen	XcrySDen
-https://purls.helmholtz-metadaten.de/msekg/174515976939020	http://purl.obolibrary.org/obo/IAO_0000605	VMD	VMD
-https://purls.helmholtz-metadaten.de/msekg/174515976939021	http://purl.obolibrary.org/obo/IAO_0000605	GIMS	GIMS
-https://purls.helmholtz-metadaten.de/msekg/174515976939022	http://purl.obolibrary.org/obo/IAO_0000605	Pymatgen	Pymatgen
-https://purls.helmholtz-metadaten.de/msekg/174515976939023	http://purl.obolibrary.org/obo/IAO_0000605	Yaff	Yaff
-https://purls.helmholtz-metadaten.de/msekg/174515976939024	http://purl.obolibrary.org/obo/IAO_0000605	CLEASE	CLEASE
-https://purls.helmholtz-metadaten.de/msekg/174515976939025	http://purl.obolibrary.org/obo/IAO_0000605	ESPEI	ESPEI
-https://purls.helmholtz-metadaten.de/msekg/174515976939026	http://purl.obolibrary.org/obo/IAO_0000605	KLIFF	KLIFF
-https://purls.helmholtz-metadaten.de/msekg/174515976939027	http://purl.obolibrary.org/obo/IAO_0000605	HTMD	HTMD
-https://purls.helmholtz-metadaten.de/msekg/174515976939028	http://purl.obolibrary.org/obo/IAO_0000605	sharc	sharc
-https://purls.helmholtz-metadaten.de/msekg/174515976939029	http://purl.obolibrary.org/obo/IAO_0000605	pyLabFEA	pyLabFEA
-https://purls.helmholtz-metadaten.de/msekg/174515976939030	http://purl.obolibrary.org/obo/IAO_0000605	AixViPMaP	AixViPMaP
-https://purls.helmholtz-metadaten.de/msekg/174515976939031	http://purl.obolibrary.org/obo/IAO_0000605	VIMMP	VIMMP
-https://purls.helmholtz-metadaten.de/msekg/174515976939032	http://purl.obolibrary.org/obo/IAO_0000605	Kadi4Mat	Kadi4Mat
-https://purls.helmholtz-metadaten.de/msekg/174515976939033	http://purl.obolibrary.org/obo/IAO_0000605	ASR	ASR
-https://purls.helmholtz-metadaten.de/msekg/174515976939034	http://purl.obolibrary.org/obo/IAO_0000605	CAMD	CAMD
-https://purls.helmholtz-metadaten.de/msekg/174515976939035	http://purl.obolibrary.org/obo/IAO_0000605	CrabNet	CrabNet
-https://purls.helmholtz-metadaten.de/msekg/174515976939036	http://purl.obolibrary.org/obo/IAO_0000605	MDCS	MDCS
-https://purls.helmholtz-metadaten.de/msekg/174515976939037	http://purl.obolibrary.org/obo/IAO_0000605	MODNet	MODNet
-https://purls.helmholtz-metadaten.de/msekg/174515976939038	http://purl.obolibrary.org/obo/IAO_0000605	OACIS	OACIS
-https://purls.helmholtz-metadaten.de/msekg/174515976939039	http://purl.obolibrary.org/obo/IAO_0000605	SEAMM	SEAMM
-https://purls.helmholtz-metadaten.de/msekg/174515976939040	http://purl.obolibrary.org/obo/IAO_0000605	DGM	DGM
-https://purls.helmholtz-metadaten.de/msekg/174515976939041	http://purl.obolibrary.org/obo/IAO_0000605	MPCDF	MPCDF
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121	class	Database Software	Database Software
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001045	class	Electronic Lab Notebook	Electronic Lab Notebook
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001046	class	image Processing Software	image Processing Software
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001048	class	Simulation Software	Simulation Software
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000218	class	Software Application	Software Application
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000140	class	Software Library	Software Library
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010039	class	Software Method	Software Method
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010040	class	Software Module	Software Module
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010041	class	Software Script	Software Script
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000222	class	Web Application Software	Web Application Software
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001049	class	Workflow Management Software	Workflow Management Software
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001044	class	Data Analysis Software	Data Analysis Software
+ID	TYPE	A rdfs:label	I ‘has value’
+http://purl.obolibrary.org/obo/OBI_0002135	owl:DataProperty	has value	
+https://purls.helmholtz-metadaten.de/msekg/17451597693901	abbreviation textual entity	FEAP	FEAP
+https://purls.helmholtz-metadaten.de/msekg/17451597693902	abbreviation textual entity	VTK	VTK
+https://purls.helmholtz-metadaten.de/msekg/17451597693903	abbreviation textual entity	VASP	VASP
+https://purls.helmholtz-metadaten.de/msekg/17451597693904	abbreviation textual entity	CASTEP	CASTEP
+https://purls.helmholtz-metadaten.de/msekg/17451597693905	abbreviation textual entity	CPMD	CPMD
+https://purls.helmholtz-metadaten.de/msekg/17451597693906	abbreviation textual entity	PEtot	PEtot
+https://purls.helmholtz-metadaten.de/msekg/17451597693907	abbreviation textual entity	SPHINX	SPHINX
+https://purls.helmholtz-metadaten.de/msekg/17451597693908	abbreviation textual entity	deMon2k	deMon2k
+https://purls.helmholtz-metadaten.de/msekg/17451597693909	abbreviation textual entity	CRYSTAL17	CRYSTAL17
+https://purls.helmholtz-metadaten.de/msekg/174515976939010	abbreviation textual entity	OpenMX	OpenMX
+https://purls.helmholtz-metadaten.de/msekg/174515976939011	abbreviation textual entity	LAMMPS	LAMMPS
+https://purls.helmholtz-metadaten.de/msekg/174515976939012	abbreviation textual entity	IMD	IMD
+https://purls.helmholtz-metadaten.de/msekg/174515976939013	abbreviation textual entity	MOOSE	MOOSE
+https://purls.helmholtz-metadaten.de/msekg/174515976939014	abbreviation textual entity	DAMASK	DAMASK
+https://purls.helmholtz-metadaten.de/msekg/174515976939015	abbreviation textual entity	AiiDA	AiiDA
+https://purls.helmholtz-metadaten.de/msekg/174515976939016	abbreviation textual entity	ASE	ASE
+https://purls.helmholtz-metadaten.de/msekg/174515976939017	abbreviation textual entity	OVITO	OVITO
+https://purls.helmholtz-metadaten.de/msekg/174515976939018	abbreviation textual entity	VESTA	VESTA
+https://purls.helmholtz-metadaten.de/msekg/174515976939019	abbreviation textual entity	XcrySDen	XcrySDen
+https://purls.helmholtz-metadaten.de/msekg/174515976939020	abbreviation textual entity	VMD	VMD
+https://purls.helmholtz-metadaten.de/msekg/174515976939021	abbreviation textual entity	GIMS	GIMS
+https://purls.helmholtz-metadaten.de/msekg/174515976939022	abbreviation textual entity	Pymatgen	Pymatgen
+https://purls.helmholtz-metadaten.de/msekg/174515976939023	abbreviation textual entity	Yaff	Yaff
+https://purls.helmholtz-metadaten.de/msekg/174515976939024	abbreviation textual entity	CLEASE	CLEASE
+https://purls.helmholtz-metadaten.de/msekg/174515976939025	abbreviation textual entity	ESPEI	ESPEI
+https://purls.helmholtz-metadaten.de/msekg/174515976939026	abbreviation textual entity	KLIFF	KLIFF
+https://purls.helmholtz-metadaten.de/msekg/174515976939027	abbreviation textual entity	HTMD	HTMD
+https://purls.helmholtz-metadaten.de/msekg/174515976939028	abbreviation textual entity	sharc	sharc
+https://purls.helmholtz-metadaten.de/msekg/174515976939029	abbreviation textual entity	pyLabFEA	pyLabFEA
+https://purls.helmholtz-metadaten.de/msekg/174515976939030	abbreviation textual entity	AixViPMaP	AixViPMaP
+https://purls.helmholtz-metadaten.de/msekg/174515976939031	abbreviation textual entity	VIMMP	VIMMP
+https://purls.helmholtz-metadaten.de/msekg/174515976939032	abbreviation textual entity	Kadi4Mat	Kadi4Mat
+https://purls.helmholtz-metadaten.de/msekg/174515976939033	abbreviation textual entity	ASR	ASR
+https://purls.helmholtz-metadaten.de/msekg/174515976939034	abbreviation textual entity	CAMD	CAMD
+https://purls.helmholtz-metadaten.de/msekg/174515976939035	abbreviation textual entity	CrabNet	CrabNet
+https://purls.helmholtz-metadaten.de/msekg/174515976939036	abbreviation textual entity	MDCS	MDCS
+https://purls.helmholtz-metadaten.de/msekg/174515976939037	abbreviation textual entity	MODNet	MODNet
+https://purls.helmholtz-metadaten.de/msekg/174515976939038	abbreviation textual entity	OACIS	OACIS
+https://purls.helmholtz-metadaten.de/msekg/174515976939039	abbreviation textual entity	SEAMM	SEAMM
+https://purls.helmholtz-metadaten.de/msekg/174515976939040	abbreviation textual entity	DGM	DGM
+https://purls.helmholtz-metadaten.de/msekg/174515976939041	abbreviation textual entity	MPCDF	MPCDF
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001077	named individual	M.Sc.	M.Sc.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001072	named individual	Dr.	Dr.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001084	named individual	PD Dr.	PD Dr.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001073	named individual	Dr.-Ing.	Dr.-Ing.
-https://purls.helmholtz-metadaten.de/msekg/17467927655511	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040	Jun. Prof. Dr.	Jun. Prof. Dr.
+https://purls.helmholtz-metadaten.de/msekg/17467927655511	academic title	Jun. Prof. Dr.	Jun. Prof. Dr.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001087	named individual	Prof.	Prof.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001088	named individual	Prof. Dr.	Prof. Dr.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001089	named individual	Prof. Dr.-Ing.	Prof. Dr.-Ing.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001085	named individual	PD Dr. habil.	PD Dr. habil.
-https://purls.helmholtz-metadaten.de/msekg/17453287150471	http://purl.obolibrary.org/obo/IAO_0000605	DESY	DESY
-https://purls.helmholtz-metadaten.de/msekg/17453287150472	http://purl.obolibrary.org/obo/IAO_0000605	HPC	HPC
-https://purls.helmholtz-metadaten.de/msekg/17453287150473	http://purl.obolibrary.org/obo/IAO_0000605	JSC	JSC
-https://purls.helmholtz-metadaten.de/msekg/17453287150474	http://purl.obolibrary.org/obo/IAO_0000605	SCC	SCC
-https://purls.helmholtz-metadaten.de/msekg/17453287150475	http://purl.obolibrary.org/obo/IAO_0000605	IBC	IBC
-https://purls.helmholtz-metadaten.de/msekg/17453317046291	http://purl.obolibrary.org/obo/IAO_0000605	CMSO	CMSO
-https://purls.helmholtz-metadaten.de/msekg/17453317046292	http://purl.obolibrary.org/obo/IAO_0000605	PMDCO	PMDCO
-https://purls.helmholtz-metadaten.de/msekg/17453317046293	http://purl.obolibrary.org/obo/IAO_0000605	EMMO	EMMO
-https://purls.helmholtz-metadaten.de/msekg/17453317046294	http://purl.obolibrary.org/obo/IAO_0000605	EMMO_mechanical_testing	EMMO_mechanical_testing
-https://purls.helmholtz-metadaten.de/msekg/17453317046295	http://purl.obolibrary.org/obo/IAO_0000605	EMMO_microstructure	EMMO_microstructure
-https://purls.helmholtz-metadaten.de/msekg/17453317046296	http://purl.obolibrary.org/obo/IAO_0000605	OBO	OBO
-https://purls.helmholtz-metadaten.de/msekg/17453317046297	http://purl.obolibrary.org/obo/IAO_0000605	SUMO	SUMO
-https://purls.helmholtz-metadaten.de/msekg/17453317046298	http://purl.obolibrary.org/obo/IAO_0000605	DOLCE	DOLCE
-https://purls.helmholtz-metadaten.de/msekg/17453317046299	http://purl.obolibrary.org/obo/IAO_0000605	SSN	SSN
-https://purls.helmholtz-metadaten.de/msekg/174533170462910	http://purl.obolibrary.org/obo/IAO_0000605	SP	SP
-https://purls.helmholtz-metadaten.de/msekg/174533170462911	http://purl.obolibrary.org/obo/IAO_0000605	MSEO	MSEO
-https://purls.helmholtz-metadaten.de/msekg/174533170462912	http://purl.obolibrary.org/obo/IAO_0000605	CCO	CCO
-https://purls.helmholtz-metadaten.de/msekg/174533170462913	http://purl.obolibrary.org/obo/IAO_0000605	BWMD-MID	BWMD-MID
-https://purls.helmholtz-metadaten.de/msekg/174533170462914	http://purl.obolibrary.org/obo/IAO_0000605	BWMD-DOMAIN	BWMD-DOMAIN
-https://purls.helmholtz-metadaten.de/msekg/174533170462915	http://purl.obolibrary.org/obo/IAO_0000605	MOL_TENSILE	MOL_TENSILE
-https://purls.helmholtz-metadaten.de/msekg/174533170462916	http://purl.obolibrary.org/obo/IAO_0000605	LPBFO	LPBFO
-https://purls.helmholtz-metadaten.de/msekg/174533170462917	http://purl.obolibrary.org/obo/IAO_0000605	PROV	PROV
-https://purls.helmholtz-metadaten.de/msekg/174533170462918	http://purl.obolibrary.org/obo/IAO_0000605	GPO	GPO
-https://purls.helmholtz-metadaten.de/msekg/174533170462919	http://purl.obolibrary.org/obo/IAO_0000605	EMMO_BVC	EMMO_BVC
-https://purls.helmholtz-metadaten.de/msekg/174533170462920	http://purl.obolibrary.org/obo/IAO_0000605	EMMO_crystallography	EMMO_crystallography
-https://purls.helmholtz-metadaten.de/msekg/174533170462921	http://purl.obolibrary.org/obo/IAO_0000605	CIF-core	CIF-core
-https://purls.helmholtz-metadaten.de/msekg/174533170462922	http://purl.obolibrary.org/obo/IAO_0000605	EMMO_datamodel	EMMO_datamodel
-https://purls.helmholtz-metadaten.de/msekg/174533170462923	http://purl.obolibrary.org/obo/IAO_0000605	EMMO_mappings	EMMO_mappings
-https://purls.helmholtz-metadaten.de/msekg/174533170462924	http://purl.obolibrary.org/obo/IAO_0000605	EMMO_atomistic	EMMO_atomistic
-https://purls.helmholtz-metadaten.de/msekg/174533170462925	http://purl.obolibrary.org/obo/IAO_0000605	MatOnto	MatOnto
-https://purls.helmholtz-metadaten.de/msekg/174533170462926	http://purl.obolibrary.org/obo/IAO_0000605	MatOWL	MatOWL
-https://purls.helmholtz-metadaten.de/msekg/174533170462927	http://purl.obolibrary.org/obo/IAO_0000605	MATINFO	MATINFO
-https://purls.helmholtz-metadaten.de/msekg/174533170462928	http://purl.obolibrary.org/obo/IAO_0000605	Plinius	Plinius
-https://purls.helmholtz-metadaten.de/msekg/174533170462929	http://purl.obolibrary.org/obo/IAO_0000605	PREMAP	PREMAP
-https://purls.helmholtz-metadaten.de/msekg/174533170462930	http://purl.obolibrary.org/obo/IAO_0000605	ONTORULE	ONTORULE
-https://purls.helmholtz-metadaten.de/msekg/174533170462931	http://purl.obolibrary.org/obo/IAO_0000605	SLACKS	SLACKS
-https://purls.helmholtz-metadaten.de/msekg/174533170462932	http://purl.obolibrary.org/obo/IAO_0000605	ELSSI-EMD	ELSSI-EMD
-https://purls.helmholtz-metadaten.de/msekg/174533170462933	http://purl.obolibrary.org/obo/IAO_0000605	SEMMD	SEMMD
-https://purls.helmholtz-metadaten.de/msekg/174533170462934	http://purl.obolibrary.org/obo/IAO_0000605	NPO	NPO
-https://purls.helmholtz-metadaten.de/msekg/174533170462935	http://purl.obolibrary.org/obo/IAO_0000605	eNanomapper	eNanomapper
-https://purls.helmholtz-metadaten.de/msekg/174533170462936	http://purl.obolibrary.org/obo/IAO_0000605	MaterialsMine	MaterialsMine
-https://purls.helmholtz-metadaten.de/msekg/174533170462937	http://purl.obolibrary.org/obo/IAO_0000605	MMOY	MMOY
-https://purls.helmholtz-metadaten.de/msekg/174533170462938	http://purl.obolibrary.org/obo/IAO_0000605	MAMBO	MAMBO
-https://purls.helmholtz-metadaten.de/msekg/174533170462939	http://purl.obolibrary.org/obo/IAO_0000605	DISO	DISO
-https://purls.helmholtz-metadaten.de/msekg/174533170462940	http://purl.obolibrary.org/obo/IAO_0000605	MDO	MDO
-https://purls.helmholtz-metadaten.de/msekg/174533170462941	http://purl.obolibrary.org/obo/IAO_0000605	NanoMine	NanoMine
-https://purls.helmholtz-metadaten.de/msekg/174533170462942	http://purl.obolibrary.org/obo/IAO_0000605	DEB	DEB
-https://purls.helmholtz-metadaten.de/msekg/174533170462943	http://purl.obolibrary.org/obo/IAO_0000605	SKOS_MDO	SKOS_MDO
-https://purls.helmholtz-metadaten.de/msekg/174533170462944	http://purl.obolibrary.org/obo/IAO_0000605	FreeClass	FreeClass
-https://purls.helmholtz-metadaten.de/msekg/174533170462945	http://purl.obolibrary.org/obo/IAO_0000605	Periodictable	Periodictable
-https://purls.helmholtz-metadaten.de/msekg/174533170462946	http://purl.obolibrary.org/obo/IAO_0000605	MetalAlloy	MetalAlloy
-https://purls.helmholtz-metadaten.de/msekg/174533170462947	http://purl.obolibrary.org/obo/IAO_0000605	EMMO_BattINFO	EMMO_BattINFO
-https://purls.helmholtz-metadaten.de/msekg/174533170462948	http://purl.obolibrary.org/obo/IAO_0000605	IAO	IAO
-https://purls.helmholtz-metadaten.de/msekg/174533170462949	http://purl.obolibrary.org/obo/IAO_0000605	CheBi	CheBi
-https://purls.helmholtz-metadaten.de/msekg/174533170462950	http://purl.obolibrary.org/obo/IAO_0000605	OEO	OEO
-https://purls.helmholtz-metadaten.de/msekg/174533170462951	http://purl.obolibrary.org/obo/IAO_0000605	PATO	PATO
-https://purls.helmholtz-metadaten.de/msekg/174533170462952	http://purl.obolibrary.org/obo/IAO_0000605	UO	UO
-https://purls.helmholtz-metadaten.de/msekg/174533170462953	http://purl.obolibrary.org/obo/IAO_0000605	OM	OM
-https://purls.helmholtz-metadaten.de/msekg/174533170462954	http://purl.obolibrary.org/obo/IAO_0000605	QUDV	QUDV
-https://purls.helmholtz-metadaten.de/msekg/174533170462955	http://purl.obolibrary.org/obo/IAO_0000605	OBI	OBI
-https://purls.helmholtz-metadaten.de/msekg/174533170462956	http://purl.obolibrary.org/obo/IAO_0000605	NCIT	NCIT
-https://purls.helmholtz-metadaten.de/msekg/174533170462957	http://purl.obolibrary.org/obo/IAO_0000605	QUDT	QUDT
-https://purls.helmholtz-metadaten.de/msekg/174533170462958	http://purl.obolibrary.org/obo/IAO_0000605	OA	OA
-https://purls.helmholtz-metadaten.de/msekg/174533170462959	http://purl.obolibrary.org/obo/IAO_0000605	WILD	WILD
-https://purls.helmholtz-metadaten.de/msekg/174533170462960	http://purl.obolibrary.org/obo/IAO_0000605	P-PLAN	P-PLAN
-https://purls.helmholtz-metadaten.de/msekg/174533170462961	http://purl.obolibrary.org/obo/IAO_0000605	SAREF	SAREF
-https://purls.helmholtz-metadaten.de/msekg/174533170462962	http://purl.obolibrary.org/obo/IAO_0000605	OSMO	OSMO
-https://purls.helmholtz-metadaten.de/msekg/174533170462963	http://purl.obolibrary.org/obo/IAO_0000605	VIMMP	VIMMP
-https://purls.helmholtz-metadaten.de/msekg/174533170462964	http://purl.obolibrary.org/obo/IAO_0000605	BMO	BMO
-https://purls.helmholtz-metadaten.de/msekg/174533170462965	http://purl.obolibrary.org/obo/IAO_0000605	MOL_BRINELL	MOL_BRINELL
-https://purls.helmholtz-metadaten.de/msekg/174533170462966	http://purl.obolibrary.org/obo/IAO_0000605	AMONTOLOGY	AMONTOLOGY
-https://purls.helmholtz-metadaten.de/msekg/174533170462967	http://purl.obolibrary.org/obo/IAO_0000605	SSOS	SSOS
-https://purls.helmholtz-metadaten.de/msekg/174533170462968	http://purl.obolibrary.org/obo/IAO_0000605	CHAMEO	CHAMEO
-https://purls.helmholtz-metadaten.de/msekg/174533170462969	http://purl.obolibrary.org/obo/IAO_0000605	MatVoc	MatVoc
-https://purls.helmholtz-metadaten.de/msekg/174533170462970	http://purl.obolibrary.org/obo/IAO_0000605	M4I	M4I
-https://purls.helmholtz-metadaten.de/msekg/174533170462971	http://purl.obolibrary.org/obo/IAO_0000605	OPMW	OPMW
-https://purls.helmholtz-metadaten.de/msekg/174533170462972	http://purl.obolibrary.org/obo/IAO_0000605	MAT	MAT
-https://purls.helmholtz-metadaten.de/msekg/174533170462973	http://purl.obolibrary.org/obo/IAO_0000605	NFDIcore	NFDIcore
-https://purls.helmholtz-metadaten.de/msekg/174533170462974	http://purl.obolibrary.org/obo/IAO_0000605	MWO	MWO
-https://purls.helmholtz-metadaten.de/msekg/174533170462975	http://purl.obolibrary.org/obo/IAO_0000605	tribAIn	tribAIn
-https://purls.helmholtz-metadaten.de/msekg/174533170462976	http://purl.obolibrary.org/obo/IAO_0000605	EXPO	EXPO
-https://purls.helmholtz-metadaten.de/msekg/174533170462977	http://purl.obolibrary.org/obo/IAO_0000605	CHMO	CHMO
-https://purls.helmholtz-metadaten.de/msekg/174533170462978	http://purl.obolibrary.org/obo/IAO_0000605	CHEMINF	CHEMINF
-https://purls.helmholtz-metadaten.de/msekg/174533170462979	http://purl.obolibrary.org/obo/IAO_0000605	OIE characterisation-methods	OIE characterisation-methods
-https://purls.helmholtz-metadaten.de/msekg/174533170462980	http://purl.obolibrary.org/obo/IAO_0000605	OIE manufacturing	OIE manufacturing
-https://purls.helmholtz-metadaten.de/msekg/174533170462981	http://purl.obolibrary.org/obo/IAO_0000605	OIE materials	OIE materials
-https://purls.helmholtz-metadaten.de/msekg/174533170462982	http://purl.obolibrary.org/obo/IAO_0000605	OIE software	OIE software
-https://purls.helmholtz-metadaten.de/msekg/174533170462983	http://purl.obolibrary.org/obo/IAO_0000605	OIE models	OIE models
-https://purls.helmholtz-metadaten.de/msekg/174533170462984	http://purl.obolibrary.org/obo/IAO_0000605	Photovoltaics	Photovoltaics
-https://purls.helmholtz-metadaten.de/msekg/174533170462985	http://purl.obolibrary.org/obo/IAO_0000605	MDS	MDS
-https://purls.helmholtz-metadaten.de/msekg/174533170462986	http://purl.obolibrary.org/obo/IAO_0000605	DSIM	DSIM
-https://purls.helmholtz-metadaten.de/msekg/174533170462987	http://purl.obolibrary.org/obo/IAO_0000605	CSO	CSO
-https://purls.helmholtz-metadaten.de/msekg/174533170462988	http://purl.obolibrary.org/obo/IAO_0000605	ASMO	ASMO
-https://purls.helmholtz-metadaten.de/msekg/174533170462989	http://purl.obolibrary.org/obo/IAO_0000605	PODO	PODO
-https://purls.helmholtz-metadaten.de/msekg/174533170462990	http://purl.obolibrary.org/obo/IAO_0000605	CDCO	CDCO
-https://purls.helmholtz-metadaten.de/msekg/174533170462991	http://purl.obolibrary.org/obo/IAO_0000605	LDO	LDO
-https://purls.helmholtz-metadaten.de/msekg/174533170462992	http://purl.obolibrary.org/obo/IAO_0000605	PLDO	PLDO
-https://purls.helmholtz-metadaten.de/msekg/174533170462993	http://purl.obolibrary.org/obo/IAO_0000605	PRIMA	PRIMA
-https://purls.helmholtz-metadaten.de/msekg/174533170462994	http://purl.obolibrary.org/obo/IAO_0000605	MSLE	MSLE
-https://purls.helmholtz-metadaten.de/msekg/174533170462995	http://purl.obolibrary.org/obo/IAO_0000605	RDO	RDO
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018	class	academic event	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010020	class	conference	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010023	class	course	
-http://purls.helmholtz-metadaten.de/mwo/MWO_0001000	class	expert discussion	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010021	class	hackathon	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010022	class	lecture	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001043	class	meeting	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010027	class	panel discussion	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010025	class	seminar	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010024	class	summer school	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010026	class	symposium	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010019	class	workshop	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000219	class	Training Service	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000222	class	Web Application Software	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000218	class	Software Application	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000214	class	Support Service	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000210	class	Storage Service	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000140	class	Software Library	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121	class	Database Software	
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000122	class	Data Curation Service	
-http://purls.helmholtz-metadaten.de/mwo/MWO_0001005	class	Networking	
-http://purls.helmholtz-metadaten.de/mwo/MWO_0001007	class	Joint efforting	
-http://purls.helmholtz-metadaten.de/mwo/MWO_0001006	class	Project collabration	
-http://purls.helmholtz-metadaten.de/mwo/MWO_0001004	class	Strategic cooperation	
-http://purls.helmholtz-metadaten.de/mwo/MWO_0001009	class	Alliancing	
-http://purls.helmholtz-metadaten.de/mwo/MWO_0001008	class	Joint servicing	
-http://purls.helmholtz-metadaten.de/mwo/MWO_0001010	class	Partnering	
+https://purls.helmholtz-metadaten.de/msekg/17453287150471	abbreviation textual entity	DESY	DESY
+https://purls.helmholtz-metadaten.de/msekg/17453287150472	abbreviation textual entity	HPC	HPC
+https://purls.helmholtz-metadaten.de/msekg/17453287150473	abbreviation textual entity	JSC	JSC
+https://purls.helmholtz-metadaten.de/msekg/17453287150474	abbreviation textual entity	SCC	SCC
+https://purls.helmholtz-metadaten.de/msekg/17453287150475	abbreviation textual entity	IBC	IBC
+https://purls.helmholtz-metadaten.de/msekg/17453317046291	abbreviation textual entity	CMSO	CMSO
+https://purls.helmholtz-metadaten.de/msekg/17453317046292	abbreviation textual entity	PMDCO	PMDCO
+https://purls.helmholtz-metadaten.de/msekg/17453317046293	abbreviation textual entity	EMMO	EMMO
+https://purls.helmholtz-metadaten.de/msekg/17453317046294	abbreviation textual entity	EMMO_mechanical_testing	EMMO_mechanical_testing
+https://purls.helmholtz-metadaten.de/msekg/17453317046295	abbreviation textual entity	EMMO_microstructure	EMMO_microstructure
+https://purls.helmholtz-metadaten.de/msekg/17453317046296	abbreviation textual entity	OBO	OBO
+https://purls.helmholtz-metadaten.de/msekg/17453317046297	abbreviation textual entity	SUMO	SUMO
+https://purls.helmholtz-metadaten.de/msekg/17453317046298	abbreviation textual entity	DOLCE	DOLCE
+https://purls.helmholtz-metadaten.de/msekg/17453317046299	abbreviation textual entity	SSN	SSN
+https://purls.helmholtz-metadaten.de/msekg/174533170462910	abbreviation textual entity	SP	SP
+https://purls.helmholtz-metadaten.de/msekg/174533170462911	abbreviation textual entity	MSEO	MSEO
+https://purls.helmholtz-metadaten.de/msekg/174533170462912	abbreviation textual entity	CCO	CCO
+https://purls.helmholtz-metadaten.de/msekg/174533170462913	abbreviation textual entity	BWMD-MID	BWMD-MID
+https://purls.helmholtz-metadaten.de/msekg/174533170462914	abbreviation textual entity	BWMD-DOMAIN	BWMD-DOMAIN
+https://purls.helmholtz-metadaten.de/msekg/174533170462915	abbreviation textual entity	MOL_TENSILE	MOL_TENSILE
+https://purls.helmholtz-metadaten.de/msekg/174533170462916	abbreviation textual entity	LPBFO	LPBFO
+https://purls.helmholtz-metadaten.de/msekg/174533170462917	abbreviation textual entity	PROV	PROV
+https://purls.helmholtz-metadaten.de/msekg/174533170462918	abbreviation textual entity	GPO	GPO
+https://purls.helmholtz-metadaten.de/msekg/174533170462919	abbreviation textual entity	EMMO_BVC	EMMO_BVC
+https://purls.helmholtz-metadaten.de/msekg/174533170462920	abbreviation textual entity	EMMO_crystallography	EMMO_crystallography
+https://purls.helmholtz-metadaten.de/msekg/174533170462921	abbreviation textual entity	CIF-core	CIF-core
+https://purls.helmholtz-metadaten.de/msekg/174533170462922	abbreviation textual entity	EMMO_datamodel	EMMO_datamodel
+https://purls.helmholtz-metadaten.de/msekg/174533170462923	abbreviation textual entity	EMMO_mappings	EMMO_mappings
+https://purls.helmholtz-metadaten.de/msekg/174533170462924	abbreviation textual entity	EMMO_atomistic	EMMO_atomistic
+https://purls.helmholtz-metadaten.de/msekg/174533170462925	abbreviation textual entity	MatOnto	MatOnto
+https://purls.helmholtz-metadaten.de/msekg/174533170462926	abbreviation textual entity	MatOWL	MatOWL
+https://purls.helmholtz-metadaten.de/msekg/174533170462927	abbreviation textual entity	MATINFO	MATINFO
+https://purls.helmholtz-metadaten.de/msekg/174533170462928	abbreviation textual entity	Plinius	Plinius
+https://purls.helmholtz-metadaten.de/msekg/174533170462929	abbreviation textual entity	PREMAP	PREMAP
+https://purls.helmholtz-metadaten.de/msekg/174533170462930	abbreviation textual entity	ONTORULE	ONTORULE
+https://purls.helmholtz-metadaten.de/msekg/174533170462931	abbreviation textual entity	SLACKS	SLACKS
+https://purls.helmholtz-metadaten.de/msekg/174533170462932	abbreviation textual entity	ELSSI-EMD	ELSSI-EMD
+https://purls.helmholtz-metadaten.de/msekg/174533170462933	abbreviation textual entity	SEMMD	SEMMD
+https://purls.helmholtz-metadaten.de/msekg/174533170462934	abbreviation textual entity	NPO	NPO
+https://purls.helmholtz-metadaten.de/msekg/174533170462935	abbreviation textual entity	eNanomapper	eNanomapper
+https://purls.helmholtz-metadaten.de/msekg/174533170462936	abbreviation textual entity	MaterialsMine	MaterialsMine
+https://purls.helmholtz-metadaten.de/msekg/174533170462937	abbreviation textual entity	MMOY	MMOY
+https://purls.helmholtz-metadaten.de/msekg/174533170462938	abbreviation textual entity	MAMBO	MAMBO
+https://purls.helmholtz-metadaten.de/msekg/174533170462939	abbreviation textual entity	DISO	DISO
+https://purls.helmholtz-metadaten.de/msekg/174533170462940	abbreviation textual entity	MDO	MDO
+https://purls.helmholtz-metadaten.de/msekg/174533170462941	abbreviation textual entity	NanoMine	NanoMine
+https://purls.helmholtz-metadaten.de/msekg/174533170462942	abbreviation textual entity	DEB	DEB
+https://purls.helmholtz-metadaten.de/msekg/174533170462943	abbreviation textual entity	SKOS_MDO	SKOS_MDO
+https://purls.helmholtz-metadaten.de/msekg/174533170462944	abbreviation textual entity	FreeClass	FreeClass
+https://purls.helmholtz-metadaten.de/msekg/174533170462945	abbreviation textual entity	Periodictable	Periodictable
+https://purls.helmholtz-metadaten.de/msekg/174533170462946	abbreviation textual entity	MetalAlloy	MetalAlloy
+https://purls.helmholtz-metadaten.de/msekg/174533170462947	abbreviation textual entity	EMMO_BattINFO	EMMO_BattINFO
+https://purls.helmholtz-metadaten.de/msekg/174533170462948	abbreviation textual entity	IAO	IAO
+https://purls.helmholtz-metadaten.de/msekg/174533170462949	abbreviation textual entity	CheBi	CheBi
+https://purls.helmholtz-metadaten.de/msekg/174533170462950	abbreviation textual entity	OEO	OEO
+https://purls.helmholtz-metadaten.de/msekg/174533170462951	abbreviation textual entity	PATO	PATO
+https://purls.helmholtz-metadaten.de/msekg/174533170462952	abbreviation textual entity	UO	UO
+https://purls.helmholtz-metadaten.de/msekg/174533170462953	abbreviation textual entity	OM	OM
+https://purls.helmholtz-metadaten.de/msekg/174533170462954	abbreviation textual entity	QUDV	QUDV
+https://purls.helmholtz-metadaten.de/msekg/174533170462955	abbreviation textual entity	OBI	OBI
+https://purls.helmholtz-metadaten.de/msekg/174533170462956	abbreviation textual entity	NCIT	NCIT
+https://purls.helmholtz-metadaten.de/msekg/174533170462957	abbreviation textual entity	QUDT	QUDT
+https://purls.helmholtz-metadaten.de/msekg/174533170462958	abbreviation textual entity	OA	OA
+https://purls.helmholtz-metadaten.de/msekg/174533170462959	abbreviation textual entity	WILD	WILD
+https://purls.helmholtz-metadaten.de/msekg/174533170462960	abbreviation textual entity	P-PLAN	P-PLAN
+https://purls.helmholtz-metadaten.de/msekg/174533170462961	abbreviation textual entity	SAREF	SAREF
+https://purls.helmholtz-metadaten.de/msekg/174533170462962	abbreviation textual entity	OSMO	OSMO
+https://purls.helmholtz-metadaten.de/msekg/174533170462963	abbreviation textual entity	VIMMP	VIMMP
+https://purls.helmholtz-metadaten.de/msekg/174533170462964	abbreviation textual entity	BMO	BMO
+https://purls.helmholtz-metadaten.de/msekg/174533170462965	abbreviation textual entity	MOL_BRINELL	MOL_BRINELL
+https://purls.helmholtz-metadaten.de/msekg/174533170462966	abbreviation textual entity	AMONTOLOGY	AMONTOLOGY
+https://purls.helmholtz-metadaten.de/msekg/174533170462967	abbreviation textual entity	SSOS	SSOS
+https://purls.helmholtz-metadaten.de/msekg/174533170462968	abbreviation textual entity	CHAMEO	CHAMEO
+https://purls.helmholtz-metadaten.de/msekg/174533170462969	abbreviation textual entity	MatVoc	MatVoc
+https://purls.helmholtz-metadaten.de/msekg/174533170462970	abbreviation textual entity	M4I	M4I
+https://purls.helmholtz-metadaten.de/msekg/174533170462971	abbreviation textual entity	OPMW	OPMW
+https://purls.helmholtz-metadaten.de/msekg/174533170462972	abbreviation textual entity	MAT	MAT
+https://purls.helmholtz-metadaten.de/msekg/174533170462973	abbreviation textual entity	NFDIcore	NFDIcore
+https://purls.helmholtz-metadaten.de/msekg/174533170462974	abbreviation textual entity	MWO	MWO
+https://purls.helmholtz-metadaten.de/msekg/174533170462975	abbreviation textual entity	tribAIn	tribAIn
+https://purls.helmholtz-metadaten.de/msekg/174533170462976	abbreviation textual entity	EXPO	EXPO
+https://purls.helmholtz-metadaten.de/msekg/174533170462977	abbreviation textual entity	CHMO	CHMO
+https://purls.helmholtz-metadaten.de/msekg/174533170462978	abbreviation textual entity	CHEMINF	CHEMINF
+https://purls.helmholtz-metadaten.de/msekg/174533170462979	abbreviation textual entity	OIE characterisation-methods	OIE characterisation-methods
+https://purls.helmholtz-metadaten.de/msekg/174533170462980	abbreviation textual entity	OIE manufacturing	OIE manufacturing
+https://purls.helmholtz-metadaten.de/msekg/174533170462981	abbreviation textual entity	OIE materials	OIE materials
+https://purls.helmholtz-metadaten.de/msekg/174533170462982	abbreviation textual entity	OIE software	OIE software
+https://purls.helmholtz-metadaten.de/msekg/174533170462983	abbreviation textual entity	OIE models	OIE models
+https://purls.helmholtz-metadaten.de/msekg/174533170462984	abbreviation textual entity	Photovoltaics	Photovoltaics
+https://purls.helmholtz-metadaten.de/msekg/174533170462985	abbreviation textual entity	MDS	MDS
+https://purls.helmholtz-metadaten.de/msekg/174533170462986	abbreviation textual entity	DSIM	DSIM
+https://purls.helmholtz-metadaten.de/msekg/174533170462987	abbreviation textual entity	CSO	CSO
+https://purls.helmholtz-metadaten.de/msekg/174533170462988	abbreviation textual entity	ASMO	ASMO
+https://purls.helmholtz-metadaten.de/msekg/174533170462989	abbreviation textual entity	PODO	PODO
+https://purls.helmholtz-metadaten.de/msekg/174533170462990	abbreviation textual entity	CDCO	CDCO
+https://purls.helmholtz-metadaten.de/msekg/174533170462991	abbreviation textual entity	LDO	LDO
+https://purls.helmholtz-metadaten.de/msekg/174533170462992	abbreviation textual entity	PLDO	PLDO
+https://purls.helmholtz-metadaten.de/msekg/174533170462993	abbreviation textual entity	PRIMA	PRIMA
+https://purls.helmholtz-metadaten.de/msekg/174533170462994	abbreviation textual entity	MSLE	MSLE
+https://purls.helmholtz-metadaten.de/msekg/174533170462995	abbreviation textual entity	RDO	RDO
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001070	named individual	active status	
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001071	named individual	cancelled status	
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001074	named individual	finished status	
