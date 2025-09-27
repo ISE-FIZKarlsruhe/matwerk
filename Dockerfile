@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
 ENV ROBOT_JAVA_ARGS="-Xmx8G -Dfile.encoding=UTF-8"
 
 # Download ROBOT
-RUN wget https://github.com/ontodev/robot/releases/download/v1.9.8/robot.jar -O /usr/local/bin/robot.jar
+RUN wget https://github.com/ontodev/robot/releases/download/v1.9.7/robot.jar -O /usr/local/bin/robot.jar
 RUN echo '#!/bin/bash\njava $ROBOT_JAVA_ARGS -jar /usr/local/bin/robot.jar "$@"' > /usr/local/bin/robot && chmod +x /usr/local/bin/robot
 
 # Set workdir and copy all files
