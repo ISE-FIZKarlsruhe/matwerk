@@ -1,5 +1,5 @@
 #	TYPE	label	Value	temporal region	denoted by	has file format	has acronym	has url	is quality measured as	has measurement datum	is about	Domain	Range
-ID	TYPE	A rdfs:label	I ‘has value’	I ‘occupies temporal region’	I ‘denoted by’	I ‘has file format’	I ‘has acronym’	I ‘has url’	I ‘is quality measured as’	I ‘has measurement datum’	I ‘is about’	DOMAIN	RANGE
+ID	TYPE	A rdfs:label	I has value	I ‘occupies temporal region’	I ‘denoted by’	I ‘has file format’	I has acronym	I has url	I ‘is quality measured as’	I ‘has measurement datum’	I ‘is about’	DOMAIN	RANGE
 http://purl.obolibrary.org/obo/OBI_0002135	owl:DataProperty	has value											
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008	owl:DataProperty	has url											xsd:anyURI
 http://purls.helmholtz-metadaten.de/mwo/MWO_0001143	owl:DataProperty	has acronym											

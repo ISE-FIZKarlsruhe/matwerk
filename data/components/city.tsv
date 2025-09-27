@@ -1,5 +1,5 @@
 #	TYPE	Label	denoted by	Value
-ID	TYPE	A rdfs:label	I ‘denoted by’	I ‘has value’
+ID	TYPE	A rdfs:label	I ‘denoted by’	I has value
 http://purl.obolibrary.org/obo/OBI_0002135	owl:DataProperty	has value		
 https://purls.helmholtz-metadaten.de/msekg/17451393742191	city	Dusseldorf	Dusseldorf_	
 https://purls.helmholtz-metadaten.de/msekg/17451393742192	city	Stuttgart	Stuttgart_	
