@@ -3,60 +3,99 @@ name: Docker Image CI
 on:
   push:
     branches:
-    - main
+      - main
     paths-ignore:
       - 'Submissions/**'
       - '.github/**'
 
+permissions:
+  contents: write     # needed to push commits back
+  packages: write     # needed to push to GHCR
+
 jobs:
   build:
+    # Optional guard to avoid re-running on our own "[skip ci]" commits
+    if: ${{ !contains(github.event.head_commit.message, '[skip ci]') }}
     runs-on: ubuntu-latest
+    concurrency:
+      group: publish-data-${{ github.ref }}
+      cancel-in-progress: false
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # ensure we can rebase before pushing
+
       - name: Login to GitHub Container registry
-        uses: docker/login-action@v2
+        uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: downcase REPO
         run: |
           echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
-          echo ${REPO}
-          echo ${GITHUB_REPOSITORY}
-      - name: Build and Push
+          echo "${REPO}"
+          echo "${GITHUB_REPOSITORY}"
+
+      - name: Build and Push image
         env:
           REGISTRY: ghcr.io
         run: |
-          docker build -t $REGISTRY/${REPO}:latest -t $REGISTRY/${REPO}:$(date +%s) .  
+          set -euxo pipefail
+          docker build -t $REGISTRY/${REPO}:latest -t $REGISTRY/${REPO}:$(date +%s) .
           docker push $REGISTRY/${REPO} --all-tags
+
       - name: Extract generated data dir from image
         env:
           REGISTRY: ghcr.io
         run: |
           set -euxo pipefail
           cid=$(docker create $REGISTRY/${REPO}:latest)
-          # start fresh so removed files don't linger
           rm -rf data
           mkdir -p data
-          # copy the *contents* of /data into ./data
-          docker cp "$cid":/data/. ./data/
+          # copy the *contents* of /data into ./data (if present)
+          docker cp "$cid":/data/. ./data/ || echo "⚠️ No /data directory found in image"
           docker rm "$cid"
 
-      - name: Commit changes in data/ (if any)
+      - name: Commit & push data/ (rebased)
+        env:
+          BRANCH: ${{ github.ref_name }}
         run: |
           set -euxo pipefail
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          # Stage everything in data/, including new/deleted files
+          # Stage everything in data/, including new and deleted files
           git add -A data
 
-          # Only commit if the index has changes
+          # Only continue if there are staged changes
           if git diff --cached --quiet; then
             echo "No changes in data/ — nothing to commit."
-          else
-            git commit -m "[skip ci] Update generated data directory"
-            git push
+            exit 0
           fi
+
+          git commit -m "[skip ci] Update generated data directory"
+
+          # Rebase on top of the latest remote to avoid non-fast-forward
+          git pull --rebase origin "${BRANCH}"
+
+          # Push, retry a couple times in case of a race with another run
+          for i in 1 2 3; do
+            if git push; then
+              break
+            fi
+            echo "Push race detected, retrying ($i/3)…"
+            git pull --rebase origin "${BRANCH}"
+            sleep $((RANDOM%5+1))
+          done
+
+      - name: Trigger private repo workflow
+        if: ${{ secrets.PERSONAL_ACCESS_TOKEN != '' }}
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
+            https://api.github.com/repos/ISE-FIZKarlsruhe/deploy/dispatches \
+            -d '{"event_type":"run-private-workflow"}'
