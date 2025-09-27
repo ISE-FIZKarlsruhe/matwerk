@@ -22,7 +22,7 @@ jobs:
       cancel-in-progress: true
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -94,10 +94,12 @@ jobs:
           exit 1
 
       - name: Trigger private repo workflow
-        if: ${{ success() && secrets.PERSONAL_ACCESS_TOKEN != '' }}
+        if: ${{ env.PAT != '' }}
+        env:
+          PAT: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           curl -X POST \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
+            -H "Authorization: Bearer $PAT" \
             https://api.github.com/repos/ISE-FIZKarlsruhe/deploy/dispatches \
             -d '{"event_type":"run-private-workflow"}'
