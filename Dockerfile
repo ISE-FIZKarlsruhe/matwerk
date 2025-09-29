@@ -40,8 +40,9 @@ RUN pip install --no-cache-dir SPARQLWrapper
 
 # Run the script to fetch the SPARQL endpoints
 # (disabled for now as it takes too long and is not always needed)
-RUN chmod +x /scripts/fetch_endpoints.py
-RUN python3 /scripts/fetch_endpoints.py
+RUN chmod +x /app/scripts/fetch_endpoints.py
+RUN python3 /app/scripts/fetch_endpoints.py
+
 
 # Put a copy in a predictable place too (optional)
 RUN mkdir -p /data && cp data/all.ttl /data/ontology.ttl
