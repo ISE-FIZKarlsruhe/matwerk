@@ -32,14 +32,16 @@ COPY . /app
 
 # Run your scripts (working dir aware)
 RUN cd data/zenodo && python export_zenodo.py
-# endpoint fetch at build time
-RUN chmod +x /app/scripts/fetch_endpoints.py \
- && python /app/scripts/fetch_endpoints.py
+
 
 RUN chmod +x /app/1st-kg.sh /app/2nd-merge-all.sh \
  && ./1st-kg.sh || true \
  && ./2nd-merge-all.sh || true \
  && test -s data/all.ttl
+
+# endpoint fetch at build time
+RUN chmod +x /app/scripts/fetch_endpoints.py \
+ && python /app/scripts/fetch_endpoints.py
 
 # Copy a predictable artifact
 RUN mkdir -p /data && cp data/all.ttl /data/ontology.ttl
