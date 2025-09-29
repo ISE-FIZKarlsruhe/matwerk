@@ -4,6 +4,7 @@
 FROM openjdk:17-slim AS widoco
 
 # Install prerequisites
+# Install prerequisites
 RUN apt-get update && apt-get install -y \
     curl \
     wget \
@@ -12,8 +13,13 @@ RUN apt-get update && apt-get install -y \
     git \
     unzip \
     dos2unix \
-    && pip install --upgrade git+https://github.com/RDFLib/pySHACL.git \
+    && pip install --no-cache-dir --upgrade \
+        git+https://github.com/RDFLib/pySHACL.git \
+        SPARQLWrapper \
+        requests \
+        rdflib \
     && apt-get clean
+
 
 ENV ROBOT_JAVA_ARGS="-Xmx8G -Dfile.encoding=UTF-8"
 
@@ -38,8 +44,6 @@ RUN set -eu; \
     # sanity checks
     test -s data/all.ttl && echo "✅ data/all.ttl generated" || (echo "❌ data/all.ttl missing!" >&2; exit 1)
 
-    # Add SPARQLWrapper for endpoint downloads
-RUN pip install --no-cache-dir SPARQLWrapper
 
 # Run the script to fetch the SPARQL endpoints
 # (disabled for now as it takes too long and is not always needed)
