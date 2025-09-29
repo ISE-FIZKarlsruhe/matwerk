@@ -1,60 +1,50 @@
 # ==========================
 # Stage 1: Build KG (all.ttl)
 # ==========================
-FROM openjdk:17-slim AS widoco
+# Use Python 3.11 base
+FROM python:3.11-slim AS widoco
 
-# Install prerequisites
-RUN apt-get update && apt-get install -y \
-    curl \
-    wget \
-    python3 \
-    python3-pip \
-    git \
-    unzip \
-    dos2unix \
-    && apt-get clean
+RUN set -eux; \
+    apt-get update; \
+    apt-get install -y --no-install-recommends \
+        ca-certificates \
+        openjdk-17-jdk-headless \
+        curl wget git unzip dos2unix \
+    || { apt-get update; apt-get install -y --no-install-recommends default-jre-headless curl wget git unzip dos2unix; }; \
+    rm -rf /var/lib/apt/lists/*
 
-# Copy requirements and install Python dependencies
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
 
 ENV ROBOT_JAVA_ARGS="-Xmx8G -Dfile.encoding=UTF-8"
-
-# Download ROBOT
-RUN wget https://github.com/ontodev/robot/releases/download/v1.9.7/robot.jar -O /usr/local/bin/robot.jar
-RUN echo '#!/bin/bash\njava $ROBOT_JAVA_ARGS -jar /usr/local/bin/robot.jar "$@"' > /usr/local/bin/robot && chmod +x /usr/local/bin/robot
-
-# Set workdir and copy all files
 WORKDIR /app
-COPY . .
 
-# Run the Zenodo harvester to get the latest datasets
-RUN cd data/zenodo && python3 export_zenodo.py
+# Install Python deps (cached layer)
+COPY requirements.txt /app/requirements.txt
+RUN python -m pip install --no-cache-dir -r /app/requirements.txt
 
-# Prepare scripts and run them
-RUN chmod +x /app/1st-kg.sh /app/2nd-merge-all.sh
+# Robot + Widoco
+RUN wget -q https://github.com/ontodev/robot/releases/download/v1.9.7/robot.jar -O /usr/local/bin/robot.jar \
+ && printf '#!/bin/sh\nexec java $ROBOT_JAVA_ARGS -jar /usr/local/bin/robot.jar "$@"\n' > /usr/local/bin/robot \
+ && chmod +x /usr/local/bin/robot \
+ && wget -q https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
 
-# --- BUILD TIME generation of data/all.ttl ---
-RUN set -eu; \
-    if [ -f ./1st-kg.sh ]; then ./1st-kg.sh; fi; \
-    if [ -f ./2nd-merge-all.sh ]; then ./2nd-merge-all.sh; fi; \
-    # sanity checks
-    test -s data/all.ttl && echo "✅ data/all.ttl generated" || (echo "❌ data/all.ttl missing!" >&2; exit 1)
+# App sources
+COPY . /app
 
+# Run your scripts (working dir aware)
+RUN cd data/zenodo && python export_zenodo.py
+# endpoint fetch at build time
+RUN chmod +x /app/scripts/fetch_endpoints.py \
+ && python /app/scripts/fetch_endpoints.py
 
-# Run the script to fetch the SPARQL endpoints
-# (disabled for now as it takes too long and is not always needed)
-RUN chmod +x /app/scripts/fetch_endpoints.py
-RUN python3 /app/scripts/fetch_endpoints.py
+RUN chmod +x /app/1st-kg.sh /app/2nd-merge-all.sh \
+ && ./1st-kg.sh || true \
+ && ./2nd-merge-all.sh || true \
+ && test -s data/all.ttl
 
-
-# Put a copy in a predictable place too (optional)
+# Copy a predictable artifact
 RUN mkdir -p /data && cp data/all.ttl /data/ontology.ttl
 
-# Download Widoco
-RUN wget https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
-
-# Run Widoco to generate docs in /app/docs
+# Generate docs
 RUN java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar \
     -ontFile data/all.ttl \
     -outFolder docs \
