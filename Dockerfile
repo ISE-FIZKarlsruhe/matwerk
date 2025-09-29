@@ -25,6 +25,9 @@ RUN echo '#!/bin/bash\njava $ROBOT_JAVA_ARGS -jar /usr/local/bin/robot.jar "$@"'
 WORKDIR /app
 COPY . .
 
+# Run the Zenodo harvester to get the latest datasets
+RUN cd data/zenodo && python3 export_zenodo.py
+
 # Prepare scripts and run them
 RUN chmod +x /app/1st-kg.sh /app/2nd-merge-all.sh
 
