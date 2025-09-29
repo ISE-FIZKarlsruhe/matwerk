@@ -29,7 +29,7 @@ robot explain --reasoner hermit --input "$SRC" -M inconsistency --explanation "$
 robot explain --reasoner hermit --input "$COMPONENTSDIR/all_NotReasoned.owl" -M inconsistency --explanation "$VALIDATIONSDIR/inconsistency_hermit.md"
 
 echo "Reasoning KG, for now no reasoning"
-robot merge --include-annotations true -i "$SRC" -i "data/components/req_1.owl" -i "data/components/req_2.owl" --inputs "data/components/*.owl" convert --output "$COMPONENTSDIR/all.ttl"
+robot merge --include-annotations true -i "$SRC" -i "data/components/req_1.owl" -i "data/components/req_2.owl" --inputs "data/components/*.owl" -i "data/zenodo/zenodo.ttl" convert --output "$COMPONENTSDIR/all.ttl"
 #robot reason \
 #    --reasoner hermit \
 #    --input "$COMPONENTSDIR/all_NotReasoned.owl" \
