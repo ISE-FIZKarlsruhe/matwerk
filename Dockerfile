@@ -4,7 +4,6 @@
 FROM openjdk:17-slim AS widoco
 
 # Install prerequisites
-# Install prerequisites
 RUN apt-get update && apt-get install -y \
     curl \
     wget \
@@ -13,13 +12,11 @@ RUN apt-get update && apt-get install -y \
     git \
     unzip \
     dos2unix \
-    && pip install --no-cache-dir --upgrade \
-        git+https://github.com/RDFLib/pySHACL.git \
-        SPARQLWrapper \
-        requests \
-        rdflib \
     && apt-get clean
 
+# Copy requirements and install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
 ENV ROBOT_JAVA_ARGS="-Xmx8G -Dfile.encoding=UTF-8"
 

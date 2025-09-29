@@ -1,18 +1,4 @@
 #!/usr/bin/env python3
-"""
-Simplified fast fetcher:
-- Discovers SPARQL endpoints from data/all.ttl (strict ENDPOINT_PREDICATE).
-- Fetches the whole default graph of each endpoint via paged CONSTRUCT.
-- Streams results directly to a single N-Quads file, one named graph per endpoint.
-- Updates data/all.ttl by adding rdfs:seeAlso (or HAS_GRAPH_PRED) triples pointing to each new graph IRI.
-- Maintains a JSON history endpoint -> [graph_iri, ...]
-
-Speed-ups vs original:
-- Requests application/n-triples with gzip to reduce transfer and parsing cost.
-- Writes NT -> NQ on the fly without creating big rdflib graphs.
-- Larger default page size, no artificial sleeps, fewer round trips.
-"""
-
 import json
 import os
 import time
@@ -31,12 +17,10 @@ ENDPOINT_CLASS = URIRef(os.environ.get(
     "ENDPOINT_CLASS",
     "http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"
 ))
-
 ENDPOINT_PREDICATE = URIRef(os.environ.get(
     "ENDPOINT_PREDICATE",
     "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008"
 ))
-
 HAS_GRAPH_PRED = URIRef(os.environ.get(
     "HAS_GRAPH_PRED",
     "http://www.w3.org/2000/01/rdf-schema#seeAlso"
@@ -44,10 +28,17 @@ HAS_GRAPH_PRED = URIRef(os.environ.get(
 
 PAGE_SIZE = int(os.environ.get("PAGE_SIZE", "1000"))
 REQUEST_TIMEOUT = int(os.environ.get("REQUEST_TIMEOUT", "30"))
+MAX_TRIPLES = int(os.environ.get("MAX_TRIPLES", "10000"))   # cap per endpoint for tests; 0=unlimited
+ONLY_FIRST_ENDPOINT = os.environ.get("ONLY_FIRST_ENDPOINT", "0") == "1"
 
 STATE_JSON = os.environ.get("STATE_JSON", "data/sparql_endpoints/sparql_sources.json")   # endpoint -> [graph_iri,...]
 OUT_NQUADS = os.environ.get("OUT_NQUADS", "data/sparql_endpoints/endpoints.nq")          # merged quads across endpoints
-ALL_TTL = os.environ.get("ALL_TTL", "data/all.ttl")
+ALL_TTL    = os.environ.get("ALL_TTL", "data/all.ttl")
+SUMMARY_JSON = os.environ.get("SUMMARY_JSON", "data/sparql_endpoints/sparql_sources_list.json")
+
+# If we're capping triples, don't ask the server for more than we need
+if MAX_TRIPLES > 0:
+    PAGE_SIZE = min(PAGE_SIZE, MAX_TRIPLES)
 
 # ------------------ Helpers ------------------
 def as_http_url_str(obj):
@@ -99,9 +90,6 @@ def next_unique_graph_iri(used_iris: set, history: dict) -> str:
         ts += 1
 
 def collect_endpoints_with_subjects(all_ttl_path):
-    """
-    Return list[(subject_iri, endpoint_url_str)]. Only strict ENDPOINT_PREDICATE values that are http(s) URLs.
-    """
     g = Graph()
     g.parse(all_ttl_path, format="turtle")
     pairs = []
@@ -110,7 +98,6 @@ def collect_endpoints_with_subjects(all_ttl_path):
             u = as_http_url_str(v)
             if u:
                 pairs.append((s, u))
-
     # de-duplicate
     seen = set()
     uniq = []
@@ -123,14 +110,9 @@ def collect_endpoints_with_subjects(all_ttl_path):
 
 # ------------------ Fetching ------------------
 def make_construct_query(offset: int, limit: int) -> str:
-    # Simple, portable pagination. For maximum speed on huge datasets, migrate to keyset pagination.
     return f"CONSTRUCT {{ ?s ?p ?o }} WHERE {{ ?s ?p ?o }} OFFSET {offset} LIMIT {limit}"
 
 def fetch_nt_page(endpoint_url: str, query: str, timeout: int) -> bytes:
-    """
-    Try SPARQLWrapper (GET then POST) requesting N-Triples + gzip.
-    Fallback to curl if needed. Returns raw bytes (NT) or b'' on empty.
-    """
     sw = SPARQLWrapper(endpoint_url)
     sw.setTimeout(timeout)
     sw.addCustomHttpHeader("Accept", "application/n-triples")
@@ -139,13 +121,9 @@ def fetch_nt_page(endpoint_url: str, query: str, timeout: int) -> bytes:
         try:
             sw.setMethod(method)
             sw.setQuery(query)
-            # read() gives us raw, avoiding extra parsing work
-            resp = sw.query().response
-            return resp.read()
+            return sw.query().response.read()
         except Exception:
             continue
-
-    # curl fallback
     try:
         res = subprocess.run(
             [
@@ -165,46 +143,77 @@ def fetch_nt_page(endpoint_url: str, query: str, timeout: int) -> bytes:
     except FileNotFoundError:
         return b""
 
-def stream_construct_nt(endpoint_url: str, page_size: int, timeout: int):
+def stream_construct_nt(endpoint_url: str, page_size: int, timeout: int, max_total: int | None):
     """
-    Yield N-Triples text for each page until empty.
+    Yield N-Triples pages; stop when endpoint is empty or max_total reached.
     """
     offset = 0
+    remaining = max_total if (max_total and max_total > 0) else None
     while True:
-        q = make_construct_query(offset, page_size)
+        this_limit = min(page_size, remaining) if remaining else page_size
+        if this_limit <= 0:
+            break
+        q = make_construct_query(offset, this_limit)
         raw = fetch_nt_page(endpoint_url, q, timeout=timeout)
         if not raw:
             break
         text = raw.decode("utf-8", errors="replace").strip()
         if not text:
             break
-        # Guard against HTML error pages
         if text.lower().startswith("<!doctype html") or text.lower().startswith("<html"):
             if offset == 0:
                 raise RuntimeError(f"Endpoint {endpoint_url} returned HTML (not RDF).")
             break
         yield text
-        offset += page_size
+        triples_in_chunk = sum(1 for L in text.splitlines() if L.strip().endswith(" .") and not L.lstrip().startswith("#"))
+        offset += this_limit
+        if remaining is not None:
+            remaining -= triples_in_chunk
+            if remaining <= 0:
+                break
 
 # ------------------ Writing ------------------
 def ensure_parent(path: str):
     Path(path).parent.mkdir(parents=True, exist_ok=True)
 
-def append_nt_as_nq(nt_text: str, graph_iri: str, out_path: str):
+def append_nt_as_nq(nt_text: str, graph_iri: str, out_handle):
     """
-    Convert NT lines to NQ by inserting the graph IRI before the final period.
-    Skips comments/blank lines.
+    Convert NT lines to NQ by inserting graph IRI; write to the given handle.
     """
-    ensure_parent(out_path)
-    with open(out_path, "a", encoding="utf-8") as f:
-        for line in nt_text.splitlines():
-            s = line.strip()
-            if not s or s.startswith("#"):
+    for line in nt_text.splitlines():
+        s = line.strip()
+        if not s or s.startswith("#"):
+            continue
+        if s.endswith(" ."):
+            out_handle.write(f"{s[:-2]} <{graph_iri}> .\n")
+
+def rewrite_nquads_excluding_graphs(src_path: str, dst_path: str, excluded_graphs: set[str]):
+    """
+    Copy all quads from src to dst, skipping lines whose graph IRI is in excluded_graphs.
+    Assumes line-oriented N-Quads: ... <graph> .
+    """
+    ensure_parent(dst_path)
+    if not Path(src_path).exists():
+        Path(dst_path).write_text("", encoding="utf-8")
+        return
+    with open(src_path, "r", encoding="utf-8", errors="replace") as src, \
+         open(dst_path, "w", encoding="utf-8") as dst:
+        for line in src:
+            s = line.rstrip("\n")
+            if not s or s.lstrip().startswith("#"):
                 continue
-            # Heuristic: valid N-Triples statement ends with ' .'
-            if s.endswith(" ."):
-                # Insert graph IRI before final ' .'
-                f.write(f"{s[:-2]} <{graph_iri}> .\n")
+            # Fast check: graph IRI is the last <...> before final " ."
+            # We'll just see if any excluded graph substring appears; stricter parse if needed.
+            skip = False
+            for g in excluded_graphs:
+                if s.endswith(f"<{g}> ."):
+                    skip = True
+                    break
+            if not skip:
+                dst.write(s + "\n")
+
+def safe_overwrite(path: str, tmp_path: str):
+    Path(tmp_path).replace(Path(path))
 
 def safe_overwrite_ttl(path: str, graph: Graph):
     p = Path(path)
@@ -219,6 +228,8 @@ def main():
     if not pairs:
         print("No endpoints found in all.ttl.")
         return
+    if ONLY_FIRST_ENDPOINT:
+        pairs = pairs[:1]
 
     print("Found pairs: ", pairs)
 
@@ -226,54 +237,65 @@ def main():
     used_this_run = set()
     summary = []
 
-    # Prepare output file (truncate for a fresh run)
-    ensure_parent(OUT_NQUADS)
-    Path(OUT_NQUADS).write_text("", encoding="utf-8")
+    # Determine the graph IRI to use per endpoint (reuse if exists)
+    endpoint_to_graph = {}
+    graphs_to_refresh = set()
 
-    MAX_TRIPLES = 2000  # stop after this many per endpoint
-
-    for subj_iri, ep in pairs:
+    for _, ep in pairs:
         ep = ep.strip()
-        print(f"Fetching from endpoint: {ep}")
-        graph_iri = next_unique_graph_iri(used_this_run, history)
-        used_this_run.add(graph_iri)
-
         lst = history.get(ep, [])
         if isinstance(lst, str):
             lst = [lst]
-        lst.append(graph_iri)
-        history[ep] = lst
+        if lst:
+            graph_iri = lst[-1]  # reuse last known graph for this endpoint
+        else:
+            graph_iri = next_unique_graph_iri(used_this_run, history)
+            lst.append(graph_iri)
+            history[ep] = lst
+        used_this_run.add(graph_iri)
+        endpoint_to_graph[ep] = graph_iri
+        graphs_to_refresh.add(graph_iri)
 
-        total_written = 0
-        try:
-            for nt_chunk in stream_construct_nt(ep, PAGE_SIZE, REQUEST_TIMEOUT):
-                append_nt_as_nq(nt_chunk, graph_iri, OUT_NQUADS)
-                triples_in_chunk = sum(
-                    1 for L in nt_chunk.splitlines()
-                    if L.strip().endswith(" .") and not L.lstrip().startswith("#")
-                )
-                total_written += triples_in_chunk
+    # Rebuild OUT_NQUADS: copy all old quads except those for graphs we're refreshing
+    tmp_nq = str(Path(OUT_NQUADS).with_suffix(".tmp"))
+    rewrite_nquads_excluding_graphs(OUT_NQUADS, tmp_nq, graphs_to_refresh)
 
-                if total_written >= MAX_TRIPLES:
-                    print(f"Reached test limit ({MAX_TRIPLES} triples), stopping early for {ep}")
-                    break
-        except Exception as e:
-            print(f"WARNING: Failed to fetch from {ep}: {e}")
+    # Append fresh quads for each refreshed graph
+    with open(tmp_nq, "a", encoding="utf-8") as outfh:
+        for subj_iri, ep in pairs:
+            ep = ep.strip()
+            graph_iri = endpoint_to_graph[ep]
+            print(f"Fetching from endpoint: {ep}  -> graph {graph_iri}")
 
-        summary.append({
-            "subject": str(subj_iri),
-            "endpoint": ep,
-            "graph_iri": graph_iri,
-            "triples_added_estimate": total_written
-        })
-        print(f"[{ep}] -> {graph_iri} (~{total_written} triples)")
+            total_written = 0
+            try:
+                for nt_chunk in stream_construct_nt(ep, PAGE_SIZE, REQUEST_TIMEOUT,
+                                                    max_total=MAX_TRIPLES if MAX_TRIPLES > 0 else None):
+                    append_nt_as_nq(nt_chunk, graph_iri, outfh)
+                    total_written += sum(1 for L in nt_chunk.splitlines()
+                                         if L.strip().endswith(" .") and not L.lstrip().startswith("#"))
+            except Exception as e:
+                print(f"WARNING: Failed to fetch from {ep}: {e}")
 
+            summary.append({
+                "subject": str(subj_iri),
+                "endpoint": ep,
+                "graph_iri": graph_iri,
+                "triples_added_estimate": total_written
+            })
+            print(f"[{ep}] -> {graph_iri} (~{total_written} triples)")
+
+    # Atomically replace the N-Quads file
+    ensure_parent(OUT_NQUADS)
+    safe_overwrite(OUT_NQUADS, tmp_nq)
 
     # Save state and summary
     save_state(STATE_JSON, history)
-    Path("/data/sparql_sources_list.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
+    summary_path = Path(SUMMARY_JSON)
+    summary_path.parent.mkdir(parents=True, exist_ok=True)
+    summary_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    # Update all.ttl with graph pointers
+    # Update all.ttl with graph pointers (add only if missing)
     try:
         g_all = Graph()
         g_all.parse(ALL_TTL, format="turtle")

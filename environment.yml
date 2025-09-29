@@ -1,0 +1,6 @@
+name: matwerk
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+prefix: C:\Users\eno\AppData\Local\anaconda3\envs\matwerk

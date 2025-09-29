@@ -1,0 +1,8 @@
+[
+  {
+    "subject": "https://purls.helmholtz-metadaten.de/msekg/17588918337771",
+    "endpoint": "https://sparql-nfdi-matwerk-02.web.vulcanus.otc.coscine.dev/",
+    "graph_iri": "https://purls.helmholtz-metadaten.de/msekg/g/1759164875713",
+    "triples_added_estimate": 10000
+  }
+]
