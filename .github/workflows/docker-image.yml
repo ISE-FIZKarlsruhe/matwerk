@@ -3,7 +3,7 @@ name: Docker Image CI
 on:
   push:
     branches:
-    - main
+      - main
     paths-ignore:
       - 'Submissions/**'
       - '.github/**'
@@ -20,41 +20,61 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - name: downcase REPO
+
+      - name: Downcase REPO
         run: |
-          echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
-          echo ${REPO}
-          echo ${GITHUB_REPOSITORY}
-      - name: Build and Push
+          echo "REPO=${GITHUB_REPOSITORY,,}" >> "$GITHUB_ENV"
+          echo "Using image: ghcr.io/${GITHUB_REPOSITORY,,}"
+
+      - name: Build and Push image
         env:
           REGISTRY: ghcr.io
         run: |
-          docker build -t $REGISTRY/${REPO}:latest -t $REGISTRY/${REPO}:$(date +%s) .  
+          set -euxo pipefail
+          docker build -t $REGISTRY/${REPO}:latest -t $REGISTRY/${REPO}:$(date +%s) .
           docker push $REGISTRY/${REPO} --all-tags
-      - name: Extract generated MSE KG from image
+
+      - name: Extract generated data dir from image
         env:
           REGISTRY: ghcr.io
         run: |
           set -euxo pipefail
           cid=$(docker create $REGISTRY/${REPO}:latest)
+          rm -rf data
           mkdir -p data
-          # adjust the source path if your final image stores it elsewhere
-          docker cp "$cid":/data/all.ttl ./data/all.ttl || echo "⚠️ all.ttl not found"
-          docker cp "$cid":/data/all_NotReasoned.owl ./data/all_NotReasoned.owl || echo "⚠️ all_NotReasoned.owl not found"
+          # copy the *contents* of /data into ./data
+          docker cp "$cid":/data/. ./data/ || echo "⚠️ /data not found in image"
           docker rm "$cid"
 
-      - name: Commit changes (if any)
+      - name: Commit & push data/ (rebased)
+        env:
+          BRANCH: ${{ github.ref_name }}
         run: |
           set -euxo pipefail
-          if ! git diff --quiet -- data/all.ttl data/all_NotReasoned.owl; then
-            git config user.name  "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add data/all.ttl data/all_NotReasoned.owl
-            git commit -m "[skip ci] Update ontology build outputs (all.ttl, all_NotReasoned.owl)"
-            git push
-          else
-            echo "No ontology file changes detected"
-          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Stage everything in data/, including new/deleted files
+          git add -A data
+
+          git commit -m "[skip ci] Update generated data directory"
+
+          # Rebase our commit on top of the latest remote to avoid non-fast-forward errors
+          git pull --rebase origin "${BRANCH}"
+
+          # Push, retry a couple times in case another run races us
+          for i in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push race detected, retrying ($i/3)…"
+            git pull --rebase origin "${BRANCH}"
+            sleep $((RANDOM%5+1))
+          done
+
+          echo "Push failed after retries." >&2
+          exit 1
+
       - name: Trigger private repo workflow
         run: |
           curl -X POST \
