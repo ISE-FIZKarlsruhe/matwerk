@@ -1,5 +1,5 @@
 #	Type	Collabration title	Collabration partner	Consortium partner	Target	Status	occupies temporal region	Comment
-ID	TYPE	I ‘denoted by’	I ‘has participant’ SPLIT=|	I ‘has participant’ SPLIT=|	I ‘has participant’  SPLIT=|	I ‘has specification’	I ‘occupies temporal region’	I ‘denoted by’
+ID	TYPE	I http://purl.obolibrary.org/obo/IAO_0000235	I http://purl.obolibrary.org/obo/BFO_0000057 SPLIT=|	I http://purl.obolibrary.org/obo/BFO_0000057 SPLIT=|	I http://purl.obolibrary.org/obo/BFO_0000057  SPLIT=|	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204	I http://purl.obolibrary.org/obo/BFO_0000199	I http://purl.obolibrary.org/obo/IAO_0000235
 https://purls.helmholtz-metadaten.de/msekg/17454791459241	networking	Ontology development	PMD	NFDI MatWerk-OMS	National	active status	temporal region 149	
 https://purls.helmholtz-metadaten.de/msekg/17454187282291	strategic collaboration		RDA	Fraunhofer Institute for Mechanics of Materials|Karlsruhe Institute of Technology|RWTH Aachen University	Global	active status	temporal region 150	
 https://purls.helmholtz-metadaten.de/msekg/17454187282292	strategic collaboration	MaRDA Annual Meeting	Materials Research Data Alliance (MaRDA)	Karlsruhe Institute of Technology	Europe	active status	temporal region 151	

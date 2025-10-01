@@ -1,5 +1,5 @@
 #	TYPE agent	label	denoted by written name	bearer of Role
-ID	TYPE	A rdfs:label	I ‘denoted by’	I ‘bearer of’
+ID	TYPE	A rdfs:label	I http://purl.obolibrary.org/obo/IAO_0000235	I http://purl.obolibrary.org/obo/BFO_0000196
 https://purls.helmholtz-metadaten.de/msekg/17451651928121	agent	ContactPoint 1	WrittenName 1	ContactPointRole 1
 https://purls.helmholtz-metadaten.de/msekg/17451651928122	agent	ContactPoint 2	WrittenName 2	ContactPointRole 2
 https://purls.helmholtz-metadaten.de/msekg/17451651928123	agent	ContactPoint 3	WrittenName 3	ContactPointRole 3

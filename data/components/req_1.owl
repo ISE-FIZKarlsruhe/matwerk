@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ontology="https://nfdi.fiz-karlsruhe.de/ontology/">
     <Ontology/>
     
 
@@ -27,6 +27,12 @@
     <DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0002135">
         <rdfs:label>has value</rdfs:label>
     </DatatypeProperty>
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007 -->
+
+    <DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007"/>
     
 
 
@@ -173,7 +179,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001072 -->
 
     <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001072">
-        <obo:OBI_0002135>Dr.</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Dr.</ontology:NFDI_0001007>
         <rdfs:label>Dr.</rdfs:label>
     </NamedIndividual>
     
@@ -182,7 +188,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001073 -->
 
     <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001073">
-        <obo:OBI_0002135>Dr.-Ing.</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Dr.-Ing.</ontology:NFDI_0001007>
         <rdfs:label>Dr.-Ing.</rdfs:label>
     </NamedIndividual>
     
@@ -199,7 +205,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001077 -->
 
     <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001077">
-        <obo:OBI_0002135>M.Sc.</obo:OBI_0002135>
+        <ontology:NFDI_0001007>M.Sc.</ontology:NFDI_0001007>
         <rdfs:label>M.Sc.</rdfs:label>
     </NamedIndividual>
     
@@ -224,7 +230,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001084 -->
 
     <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001084">
-        <obo:OBI_0002135>PD Dr.</obo:OBI_0002135>
+        <ontology:NFDI_0001007>PD Dr.</ontology:NFDI_0001007>
         <rdfs:label>PD Dr.</rdfs:label>
     </NamedIndividual>
     
@@ -233,7 +239,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001085 -->
 
     <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001085">
-        <obo:OBI_0002135>PD Dr. habil.</obo:OBI_0002135>
+        <ontology:NFDI_0001007>PD Dr. habil.</ontology:NFDI_0001007>
         <rdfs:label>PD Dr. habil.</rdfs:label>
     </NamedIndividual>
     
@@ -250,7 +256,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001087 -->
 
     <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001087">
-        <obo:OBI_0002135>Prof.</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Prof.</ontology:NFDI_0001007>
         <rdfs:label>Prof.</rdfs:label>
     </NamedIndividual>
     
@@ -259,7 +265,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001088 -->
 
     <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001088">
-        <obo:OBI_0002135>Prof. Dr.</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Prof. Dr.</ontology:NFDI_0001007>
         <rdfs:label>Prof. Dr.</rdfs:label>
     </NamedIndividual>
     
@@ -268,7 +274,7 @@
     <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001089 -->
 
     <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001089">
-        <obo:OBI_0002135>Prof. Dr.-Ing.</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Prof. Dr.-Ing.</ontology:NFDI_0001007>
         <rdfs:label>Prof. Dr.-Ing.</rdfs:label>
     </NamedIndividual>
     
@@ -302,7 +308,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451597693901">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>FEAP</obo:OBI_0002135>
+        <ontology:NFDI_0001007>FEAP</ontology:NFDI_0001007>
         <rdfs:label>FEAP</rdfs:label>
     </NamedIndividual>
     
@@ -312,7 +318,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939010">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OpenMX</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OpenMX</ontology:NFDI_0001007>
         <rdfs:label>OpenMX</rdfs:label>
     </NamedIndividual>
     
@@ -322,7 +328,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939011">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>LAMMPS</obo:OBI_0002135>
+        <ontology:NFDI_0001007>LAMMPS</ontology:NFDI_0001007>
         <rdfs:label>LAMMPS</rdfs:label>
     </NamedIndividual>
     
@@ -332,7 +338,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939012">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>IMD</obo:OBI_0002135>
+        <ontology:NFDI_0001007>IMD</ontology:NFDI_0001007>
         <rdfs:label>IMD</rdfs:label>
     </NamedIndividual>
     
@@ -342,7 +348,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939013">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MOOSE</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MOOSE</ontology:NFDI_0001007>
         <rdfs:label>MOOSE</rdfs:label>
     </NamedIndividual>
     
@@ -352,7 +358,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939014">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>DAMASK</obo:OBI_0002135>
+        <ontology:NFDI_0001007>DAMASK</ontology:NFDI_0001007>
         <rdfs:label>DAMASK</rdfs:label>
     </NamedIndividual>
     
@@ -362,7 +368,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939015">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>AiiDA</obo:OBI_0002135>
+        <ontology:NFDI_0001007>AiiDA</ontology:NFDI_0001007>
         <rdfs:label>AiiDA</rdfs:label>
     </NamedIndividual>
     
@@ -372,7 +378,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939016">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>ASE</obo:OBI_0002135>
+        <ontology:NFDI_0001007>ASE</ontology:NFDI_0001007>
         <rdfs:label>ASE</rdfs:label>
     </NamedIndividual>
     
@@ -382,7 +388,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939017">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OVITO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OVITO</ontology:NFDI_0001007>
         <rdfs:label>OVITO</rdfs:label>
     </NamedIndividual>
     
@@ -392,7 +398,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939018">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>VESTA</obo:OBI_0002135>
+        <ontology:NFDI_0001007>VESTA</ontology:NFDI_0001007>
         <rdfs:label>VESTA</rdfs:label>
     </NamedIndividual>
     
@@ -402,7 +408,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939019">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>XcrySDen</obo:OBI_0002135>
+        <ontology:NFDI_0001007>XcrySDen</ontology:NFDI_0001007>
         <rdfs:label>XcrySDen</rdfs:label>
     </NamedIndividual>
     
@@ -412,7 +418,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451597693902">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>VTK</obo:OBI_0002135>
+        <ontology:NFDI_0001007>VTK</ontology:NFDI_0001007>
         <rdfs:label>VTK</rdfs:label>
     </NamedIndividual>
     
@@ -422,7 +428,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939020">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>VMD</obo:OBI_0002135>
+        <ontology:NFDI_0001007>VMD</ontology:NFDI_0001007>
         <rdfs:label>VMD</rdfs:label>
     </NamedIndividual>
     
@@ -432,7 +438,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939021">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>GIMS</obo:OBI_0002135>
+        <ontology:NFDI_0001007>GIMS</ontology:NFDI_0001007>
         <rdfs:label>GIMS</rdfs:label>
     </NamedIndividual>
     
@@ -442,7 +448,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939022">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>Pymatgen</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Pymatgen</ontology:NFDI_0001007>
         <rdfs:label>Pymatgen</rdfs:label>
     </NamedIndividual>
     
@@ -452,7 +458,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939023">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>Yaff</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Yaff</ontology:NFDI_0001007>
         <rdfs:label>Yaff</rdfs:label>
     </NamedIndividual>
     
@@ -462,7 +468,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939024">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CLEASE</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CLEASE</ontology:NFDI_0001007>
         <rdfs:label>CLEASE</rdfs:label>
     </NamedIndividual>
     
@@ -472,7 +478,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939025">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>ESPEI</obo:OBI_0002135>
+        <ontology:NFDI_0001007>ESPEI</ontology:NFDI_0001007>
         <rdfs:label>ESPEI</rdfs:label>
     </NamedIndividual>
     
@@ -482,7 +488,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939026">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>KLIFF</obo:OBI_0002135>
+        <ontology:NFDI_0001007>KLIFF</ontology:NFDI_0001007>
         <rdfs:label>KLIFF</rdfs:label>
     </NamedIndividual>
     
@@ -492,7 +498,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939027">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>HTMD</obo:OBI_0002135>
+        <ontology:NFDI_0001007>HTMD</ontology:NFDI_0001007>
         <rdfs:label>HTMD</rdfs:label>
     </NamedIndividual>
     
@@ -502,7 +508,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939028">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>sharc</obo:OBI_0002135>
+        <ontology:NFDI_0001007>sharc</ontology:NFDI_0001007>
         <rdfs:label>sharc</rdfs:label>
     </NamedIndividual>
     
@@ -512,7 +518,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939029">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>pyLabFEA</obo:OBI_0002135>
+        <ontology:NFDI_0001007>pyLabFEA</ontology:NFDI_0001007>
         <rdfs:label>pyLabFEA</rdfs:label>
     </NamedIndividual>
     
@@ -522,7 +528,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451597693903">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>VASP</obo:OBI_0002135>
+        <ontology:NFDI_0001007>VASP</ontology:NFDI_0001007>
         <rdfs:label>VASP</rdfs:label>
     </NamedIndividual>
     
@@ -532,7 +538,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939030">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>AixViPMaP</obo:OBI_0002135>
+        <ontology:NFDI_0001007>AixViPMaP</ontology:NFDI_0001007>
         <rdfs:label>AixViPMaP</rdfs:label>
     </NamedIndividual>
     
@@ -542,7 +548,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939031">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>VIMMP</obo:OBI_0002135>
+        <ontology:NFDI_0001007>VIMMP</ontology:NFDI_0001007>
         <rdfs:label>VIMMP</rdfs:label>
     </NamedIndividual>
     
@@ -552,7 +558,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939032">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>Kadi4Mat</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Kadi4Mat</ontology:NFDI_0001007>
         <rdfs:label>Kadi4Mat</rdfs:label>
     </NamedIndividual>
     
@@ -562,7 +568,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939033">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>ASR</obo:OBI_0002135>
+        <ontology:NFDI_0001007>ASR</ontology:NFDI_0001007>
         <rdfs:label>ASR</rdfs:label>
     </NamedIndividual>
     
@@ -572,7 +578,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939034">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CAMD</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CAMD</ontology:NFDI_0001007>
         <rdfs:label>CAMD</rdfs:label>
     </NamedIndividual>
     
@@ -582,7 +588,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939035">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CrabNet</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CrabNet</ontology:NFDI_0001007>
         <rdfs:label>CrabNet</rdfs:label>
     </NamedIndividual>
     
@@ -592,7 +598,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939036">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MDCS</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MDCS</ontology:NFDI_0001007>
         <rdfs:label>MDCS</rdfs:label>
     </NamedIndividual>
     
@@ -602,7 +608,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939037">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MODNet</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MODNet</ontology:NFDI_0001007>
         <rdfs:label>MODNet</rdfs:label>
     </NamedIndividual>
     
@@ -612,7 +618,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939038">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OACIS</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OACIS</ontology:NFDI_0001007>
         <rdfs:label>OACIS</rdfs:label>
     </NamedIndividual>
     
@@ -622,7 +628,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939039">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>SEAMM</obo:OBI_0002135>
+        <ontology:NFDI_0001007>SEAMM</ontology:NFDI_0001007>
         <rdfs:label>SEAMM</rdfs:label>
     </NamedIndividual>
     
@@ -632,7 +638,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451597693904">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CASTEP</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CASTEP</ontology:NFDI_0001007>
         <rdfs:label>CASTEP</rdfs:label>
     </NamedIndividual>
     
@@ -642,7 +648,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939040">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>DGM</obo:OBI_0002135>
+        <ontology:NFDI_0001007>DGM</ontology:NFDI_0001007>
         <rdfs:label>DGM</rdfs:label>
     </NamedIndividual>
     
@@ -652,7 +658,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939041">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MPCDF</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MPCDF</ontology:NFDI_0001007>
         <rdfs:label>MPCDF</rdfs:label>
     </NamedIndividual>
     
@@ -662,7 +668,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451597693905">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CPMD</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CPMD</ontology:NFDI_0001007>
         <rdfs:label>CPMD</rdfs:label>
     </NamedIndividual>
     
@@ -672,7 +678,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451597693906">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>PEtot</obo:OBI_0002135>
+        <ontology:NFDI_0001007>PEtot</ontology:NFDI_0001007>
         <rdfs:label>PEtot</rdfs:label>
     </NamedIndividual>
     
@@ -682,7 +688,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451597693907">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>SPHINX</obo:OBI_0002135>
+        <ontology:NFDI_0001007>SPHINX</ontology:NFDI_0001007>
         <rdfs:label>SPHINX</rdfs:label>
     </NamedIndividual>
     
@@ -692,7 +698,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451597693908">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>deMon2k</obo:OBI_0002135>
+        <ontology:NFDI_0001007>deMon2k</ontology:NFDI_0001007>
         <rdfs:label>deMon2k</rdfs:label>
     </NamedIndividual>
     
@@ -702,7 +708,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451597693909">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CRYSTAL17</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CRYSTAL17</ontology:NFDI_0001007>
         <rdfs:label>CRYSTAL17</rdfs:label>
     </NamedIndividual>
     
@@ -712,7 +718,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453287150471">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>DESY</obo:OBI_0002135>
+        <ontology:NFDI_0001007>DESY</ontology:NFDI_0001007>
         <rdfs:label>DESY</rdfs:label>
     </NamedIndividual>
     
@@ -722,7 +728,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453287150472">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>HPC</obo:OBI_0002135>
+        <ontology:NFDI_0001007>HPC</ontology:NFDI_0001007>
         <rdfs:label>HPC</rdfs:label>
     </NamedIndividual>
     
@@ -732,7 +738,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453287150473">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>JSC</obo:OBI_0002135>
+        <ontology:NFDI_0001007>JSC</ontology:NFDI_0001007>
         <rdfs:label>JSC</rdfs:label>
     </NamedIndividual>
     
@@ -742,7 +748,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453287150474">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>SCC</obo:OBI_0002135>
+        <ontology:NFDI_0001007>SCC</ontology:NFDI_0001007>
         <rdfs:label>SCC</rdfs:label>
     </NamedIndividual>
     
@@ -752,7 +758,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453287150475">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>IBC</obo:OBI_0002135>
+        <ontology:NFDI_0001007>IBC</ontology:NFDI_0001007>
         <rdfs:label>IBC</rdfs:label>
     </NamedIndividual>
     
@@ -762,7 +768,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453317046291">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CMSO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CMSO</ontology:NFDI_0001007>
         <rdfs:label>CMSO</rdfs:label>
     </NamedIndividual>
     
@@ -772,7 +778,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462910">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>SP</obo:OBI_0002135>
+        <ontology:NFDI_0001007>SP</ontology:NFDI_0001007>
         <rdfs:label>SP</rdfs:label>
     </NamedIndividual>
     
@@ -782,7 +788,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462911">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MSEO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MSEO</ontology:NFDI_0001007>
         <rdfs:label>MSEO</rdfs:label>
     </NamedIndividual>
     
@@ -792,7 +798,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462912">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CCO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CCO</ontology:NFDI_0001007>
         <rdfs:label>CCO</rdfs:label>
     </NamedIndividual>
     
@@ -802,7 +808,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462913">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>BWMD-MID</obo:OBI_0002135>
+        <ontology:NFDI_0001007>BWMD-MID</ontology:NFDI_0001007>
         <rdfs:label>BWMD-MID</rdfs:label>
     </NamedIndividual>
     
@@ -812,7 +818,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462914">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>BWMD-DOMAIN</obo:OBI_0002135>
+        <ontology:NFDI_0001007>BWMD-DOMAIN</ontology:NFDI_0001007>
         <rdfs:label>BWMD-DOMAIN</rdfs:label>
     </NamedIndividual>
     
@@ -822,7 +828,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462915">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MOL_TENSILE</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MOL_TENSILE</ontology:NFDI_0001007>
         <rdfs:label>MOL_TENSILE</rdfs:label>
     </NamedIndividual>
     
@@ -832,7 +838,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462916">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>LPBFO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>LPBFO</ontology:NFDI_0001007>
         <rdfs:label>LPBFO</rdfs:label>
     </NamedIndividual>
     
@@ -842,7 +848,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462917">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>PROV</obo:OBI_0002135>
+        <ontology:NFDI_0001007>PROV</ontology:NFDI_0001007>
         <rdfs:label>PROV</rdfs:label>
     </NamedIndividual>
     
@@ -852,7 +858,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462918">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>GPO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>GPO</ontology:NFDI_0001007>
         <rdfs:label>GPO</rdfs:label>
     </NamedIndividual>
     
@@ -862,7 +868,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462919">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>EMMO_BVC</obo:OBI_0002135>
+        <ontology:NFDI_0001007>EMMO_BVC</ontology:NFDI_0001007>
         <rdfs:label>EMMO_BVC</rdfs:label>
     </NamedIndividual>
     
@@ -872,7 +878,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453317046292">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>PMDCO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>PMDCO</ontology:NFDI_0001007>
         <rdfs:label>PMDCO</rdfs:label>
     </NamedIndividual>
     
@@ -882,7 +888,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462920">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>EMMO_crystallography</obo:OBI_0002135>
+        <ontology:NFDI_0001007>EMMO_crystallography</ontology:NFDI_0001007>
         <rdfs:label>EMMO_crystallography</rdfs:label>
     </NamedIndividual>
     
@@ -892,7 +898,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462921">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CIF-core</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CIF-core</ontology:NFDI_0001007>
         <rdfs:label>CIF-core</rdfs:label>
     </NamedIndividual>
     
@@ -902,7 +908,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462922">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>EMMO_datamodel</obo:OBI_0002135>
+        <ontology:NFDI_0001007>EMMO_datamodel</ontology:NFDI_0001007>
         <rdfs:label>EMMO_datamodel</rdfs:label>
     </NamedIndividual>
     
@@ -912,7 +918,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462923">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>EMMO_mappings</obo:OBI_0002135>
+        <ontology:NFDI_0001007>EMMO_mappings</ontology:NFDI_0001007>
         <rdfs:label>EMMO_mappings</rdfs:label>
     </NamedIndividual>
     
@@ -922,7 +928,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462924">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>EMMO_atomistic</obo:OBI_0002135>
+        <ontology:NFDI_0001007>EMMO_atomistic</ontology:NFDI_0001007>
         <rdfs:label>EMMO_atomistic</rdfs:label>
     </NamedIndividual>
     
@@ -932,7 +938,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462925">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MatOnto</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MatOnto</ontology:NFDI_0001007>
         <rdfs:label>MatOnto</rdfs:label>
     </NamedIndividual>
     
@@ -942,7 +948,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462926">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MatOWL</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MatOWL</ontology:NFDI_0001007>
         <rdfs:label>MatOWL</rdfs:label>
     </NamedIndividual>
     
@@ -952,7 +958,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462927">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MATINFO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MATINFO</ontology:NFDI_0001007>
         <rdfs:label>MATINFO</rdfs:label>
     </NamedIndividual>
     
@@ -962,7 +968,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462928">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>Plinius</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Plinius</ontology:NFDI_0001007>
         <rdfs:label>Plinius</rdfs:label>
     </NamedIndividual>
     
@@ -972,7 +978,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462929">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>PREMAP</obo:OBI_0002135>
+        <ontology:NFDI_0001007>PREMAP</ontology:NFDI_0001007>
         <rdfs:label>PREMAP</rdfs:label>
     </NamedIndividual>
     
@@ -982,7 +988,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453317046293">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>EMMO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>EMMO</ontology:NFDI_0001007>
         <rdfs:label>EMMO</rdfs:label>
     </NamedIndividual>
     
@@ -992,7 +998,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462930">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>ONTORULE</obo:OBI_0002135>
+        <ontology:NFDI_0001007>ONTORULE</ontology:NFDI_0001007>
         <rdfs:label>ONTORULE</rdfs:label>
     </NamedIndividual>
     
@@ -1002,7 +1008,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462931">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>SLACKS</obo:OBI_0002135>
+        <ontology:NFDI_0001007>SLACKS</ontology:NFDI_0001007>
         <rdfs:label>SLACKS</rdfs:label>
     </NamedIndividual>
     
@@ -1012,7 +1018,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462932">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>ELSSI-EMD</obo:OBI_0002135>
+        <ontology:NFDI_0001007>ELSSI-EMD</ontology:NFDI_0001007>
         <rdfs:label>ELSSI-EMD</rdfs:label>
     </NamedIndividual>
     
@@ -1022,7 +1028,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462933">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>SEMMD</obo:OBI_0002135>
+        <ontology:NFDI_0001007>SEMMD</ontology:NFDI_0001007>
         <rdfs:label>SEMMD</rdfs:label>
     </NamedIndividual>
     
@@ -1032,7 +1038,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462934">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>NPO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>NPO</ontology:NFDI_0001007>
         <rdfs:label>NPO</rdfs:label>
     </NamedIndividual>
     
@@ -1042,7 +1048,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462935">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>eNanomapper</obo:OBI_0002135>
+        <ontology:NFDI_0001007>eNanomapper</ontology:NFDI_0001007>
         <rdfs:label>eNanomapper</rdfs:label>
     </NamedIndividual>
     
@@ -1052,7 +1058,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462936">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MaterialsMine</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MaterialsMine</ontology:NFDI_0001007>
         <rdfs:label>MaterialsMine</rdfs:label>
     </NamedIndividual>
     
@@ -1062,7 +1068,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462937">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MMOY</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MMOY</ontology:NFDI_0001007>
         <rdfs:label>MMOY</rdfs:label>
     </NamedIndividual>
     
@@ -1072,7 +1078,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462938">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MAMBO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MAMBO</ontology:NFDI_0001007>
         <rdfs:label>MAMBO</rdfs:label>
     </NamedIndividual>
     
@@ -1082,7 +1088,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462939">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>DISO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>DISO</ontology:NFDI_0001007>
         <rdfs:label>DISO</rdfs:label>
     </NamedIndividual>
     
@@ -1092,7 +1098,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453317046294">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>EMMO_mechanical_testing</obo:OBI_0002135>
+        <ontology:NFDI_0001007>EMMO_mechanical_testing</ontology:NFDI_0001007>
         <rdfs:label>EMMO_mechanical_testing</rdfs:label>
     </NamedIndividual>
     
@@ -1102,7 +1108,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462940">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MDO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MDO</ontology:NFDI_0001007>
         <rdfs:label>MDO</rdfs:label>
     </NamedIndividual>
     
@@ -1112,7 +1118,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462941">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>NanoMine</obo:OBI_0002135>
+        <ontology:NFDI_0001007>NanoMine</ontology:NFDI_0001007>
         <rdfs:label>NanoMine</rdfs:label>
     </NamedIndividual>
     
@@ -1122,7 +1128,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462942">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>DEB</obo:OBI_0002135>
+        <ontology:NFDI_0001007>DEB</ontology:NFDI_0001007>
         <rdfs:label>DEB</rdfs:label>
     </NamedIndividual>
     
@@ -1132,7 +1138,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462943">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>SKOS_MDO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>SKOS_MDO</ontology:NFDI_0001007>
         <rdfs:label>SKOS_MDO</rdfs:label>
     </NamedIndividual>
     
@@ -1142,7 +1148,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462944">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>FreeClass</obo:OBI_0002135>
+        <ontology:NFDI_0001007>FreeClass</ontology:NFDI_0001007>
         <rdfs:label>FreeClass</rdfs:label>
     </NamedIndividual>
     
@@ -1152,7 +1158,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462945">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>Periodictable</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Periodictable</ontology:NFDI_0001007>
         <rdfs:label>Periodictable</rdfs:label>
     </NamedIndividual>
     
@@ -1162,7 +1168,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462946">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MetalAlloy</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MetalAlloy</ontology:NFDI_0001007>
         <rdfs:label>MetalAlloy</rdfs:label>
     </NamedIndividual>
     
@@ -1172,7 +1178,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462947">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>EMMO_BattINFO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>EMMO_BattINFO</ontology:NFDI_0001007>
         <rdfs:label>EMMO_BattINFO</rdfs:label>
     </NamedIndividual>
     
@@ -1182,7 +1188,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462948">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>IAO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>IAO</ontology:NFDI_0001007>
         <rdfs:label>IAO</rdfs:label>
     </NamedIndividual>
     
@@ -1192,7 +1198,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462949">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CheBi</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CheBi</ontology:NFDI_0001007>
         <rdfs:label>CheBi</rdfs:label>
     </NamedIndividual>
     
@@ -1202,7 +1208,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453317046295">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>EMMO_microstructure</obo:OBI_0002135>
+        <ontology:NFDI_0001007>EMMO_microstructure</ontology:NFDI_0001007>
         <rdfs:label>EMMO_microstructure</rdfs:label>
     </NamedIndividual>
     
@@ -1212,7 +1218,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462950">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OEO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OEO</ontology:NFDI_0001007>
         <rdfs:label>OEO</rdfs:label>
     </NamedIndividual>
     
@@ -1222,7 +1228,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462951">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>PATO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>PATO</ontology:NFDI_0001007>
         <rdfs:label>PATO</rdfs:label>
     </NamedIndividual>
     
@@ -1232,7 +1238,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462952">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>UO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>UO</ontology:NFDI_0001007>
         <rdfs:label>UO</rdfs:label>
     </NamedIndividual>
     
@@ -1242,7 +1248,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462953">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OM</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OM</ontology:NFDI_0001007>
         <rdfs:label>OM</rdfs:label>
     </NamedIndividual>
     
@@ -1252,7 +1258,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462954">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>QUDV</obo:OBI_0002135>
+        <ontology:NFDI_0001007>QUDV</ontology:NFDI_0001007>
         <rdfs:label>QUDV</rdfs:label>
     </NamedIndividual>
     
@@ -1262,7 +1268,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462955">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OBI</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OBI</ontology:NFDI_0001007>
         <rdfs:label>OBI</rdfs:label>
     </NamedIndividual>
     
@@ -1272,7 +1278,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462956">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>NCIT</obo:OBI_0002135>
+        <ontology:NFDI_0001007>NCIT</ontology:NFDI_0001007>
         <rdfs:label>NCIT</rdfs:label>
     </NamedIndividual>
     
@@ -1282,7 +1288,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462957">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>QUDT</obo:OBI_0002135>
+        <ontology:NFDI_0001007>QUDT</ontology:NFDI_0001007>
         <rdfs:label>QUDT</rdfs:label>
     </NamedIndividual>
     
@@ -1292,7 +1298,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462958">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OA</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OA</ontology:NFDI_0001007>
         <rdfs:label>OA</rdfs:label>
     </NamedIndividual>
     
@@ -1302,7 +1308,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462959">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>WILD</obo:OBI_0002135>
+        <ontology:NFDI_0001007>WILD</ontology:NFDI_0001007>
         <rdfs:label>WILD</rdfs:label>
     </NamedIndividual>
     
@@ -1312,7 +1318,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453317046296">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OBO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OBO</ontology:NFDI_0001007>
         <rdfs:label>OBO</rdfs:label>
     </NamedIndividual>
     
@@ -1322,7 +1328,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462960">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>P-PLAN</obo:OBI_0002135>
+        <ontology:NFDI_0001007>P-PLAN</ontology:NFDI_0001007>
         <rdfs:label>P-PLAN</rdfs:label>
     </NamedIndividual>
     
@@ -1332,7 +1338,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462961">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>SAREF</obo:OBI_0002135>
+        <ontology:NFDI_0001007>SAREF</ontology:NFDI_0001007>
         <rdfs:label>SAREF</rdfs:label>
     </NamedIndividual>
     
@@ -1342,7 +1348,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462962">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OSMO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OSMO</ontology:NFDI_0001007>
         <rdfs:label>OSMO</rdfs:label>
     </NamedIndividual>
     
@@ -1352,7 +1358,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462963">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>VIMMP</obo:OBI_0002135>
+        <ontology:NFDI_0001007>VIMMP</ontology:NFDI_0001007>
         <rdfs:label>VIMMP</rdfs:label>
     </NamedIndividual>
     
@@ -1362,7 +1368,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462964">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>BMO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>BMO</ontology:NFDI_0001007>
         <rdfs:label>BMO</rdfs:label>
     </NamedIndividual>
     
@@ -1372,7 +1378,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462965">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MOL_BRINELL</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MOL_BRINELL</ontology:NFDI_0001007>
         <rdfs:label>MOL_BRINELL</rdfs:label>
     </NamedIndividual>
     
@@ -1382,7 +1388,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462966">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>AMONTOLOGY</obo:OBI_0002135>
+        <ontology:NFDI_0001007>AMONTOLOGY</ontology:NFDI_0001007>
         <rdfs:label>AMONTOLOGY</rdfs:label>
     </NamedIndividual>
     
@@ -1392,7 +1398,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462967">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>SSOS</obo:OBI_0002135>
+        <ontology:NFDI_0001007>SSOS</ontology:NFDI_0001007>
         <rdfs:label>SSOS</rdfs:label>
     </NamedIndividual>
     
@@ -1402,7 +1408,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462968">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CHAMEO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CHAMEO</ontology:NFDI_0001007>
         <rdfs:label>CHAMEO</rdfs:label>
     </NamedIndividual>
     
@@ -1412,7 +1418,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462969">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MatVoc</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MatVoc</ontology:NFDI_0001007>
         <rdfs:label>MatVoc</rdfs:label>
     </NamedIndividual>
     
@@ -1422,7 +1428,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453317046297">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>SUMO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>SUMO</ontology:NFDI_0001007>
         <rdfs:label>SUMO</rdfs:label>
     </NamedIndividual>
     
@@ -1432,7 +1438,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462970">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>M4I</obo:OBI_0002135>
+        <ontology:NFDI_0001007>M4I</ontology:NFDI_0001007>
         <rdfs:label>M4I</rdfs:label>
     </NamedIndividual>
     
@@ -1442,7 +1448,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462971">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OPMW</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OPMW</ontology:NFDI_0001007>
         <rdfs:label>OPMW</rdfs:label>
     </NamedIndividual>
     
@@ -1452,7 +1458,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462972">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MAT</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MAT</ontology:NFDI_0001007>
         <rdfs:label>MAT</rdfs:label>
     </NamedIndividual>
     
@@ -1462,7 +1468,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462973">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>NFDIcore</obo:OBI_0002135>
+        <ontology:NFDI_0001007>NFDIcore</ontology:NFDI_0001007>
         <rdfs:label>NFDIcore</rdfs:label>
     </NamedIndividual>
     
@@ -1472,7 +1478,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462974">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MWO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MWO</ontology:NFDI_0001007>
         <rdfs:label>MWO</rdfs:label>
     </NamedIndividual>
     
@@ -1482,7 +1488,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462975">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>tribAIn</obo:OBI_0002135>
+        <ontology:NFDI_0001007>tribAIn</ontology:NFDI_0001007>
         <rdfs:label>tribAIn</rdfs:label>
     </NamedIndividual>
     
@@ -1492,7 +1498,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462976">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>EXPO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>EXPO</ontology:NFDI_0001007>
         <rdfs:label>EXPO</rdfs:label>
     </NamedIndividual>
     
@@ -1502,7 +1508,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462977">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CHMO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CHMO</ontology:NFDI_0001007>
         <rdfs:label>CHMO</rdfs:label>
     </NamedIndividual>
     
@@ -1512,7 +1518,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462978">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CHEMINF</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CHEMINF</ontology:NFDI_0001007>
         <rdfs:label>CHEMINF</rdfs:label>
     </NamedIndividual>
     
@@ -1522,7 +1528,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462979">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OIE characterisation-methods</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OIE characterisation-methods</ontology:NFDI_0001007>
         <rdfs:label>OIE characterisation-methods</rdfs:label>
     </NamedIndividual>
     
@@ -1532,7 +1538,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453317046298">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>DOLCE</obo:OBI_0002135>
+        <ontology:NFDI_0001007>DOLCE</ontology:NFDI_0001007>
         <rdfs:label>DOLCE</rdfs:label>
     </NamedIndividual>
     
@@ -1542,7 +1548,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462980">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OIE manufacturing</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OIE manufacturing</ontology:NFDI_0001007>
         <rdfs:label>OIE manufacturing</rdfs:label>
     </NamedIndividual>
     
@@ -1552,7 +1558,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462981">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OIE materials</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OIE materials</ontology:NFDI_0001007>
         <rdfs:label>OIE materials</rdfs:label>
     </NamedIndividual>
     
@@ -1562,7 +1568,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462982">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OIE software</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OIE software</ontology:NFDI_0001007>
         <rdfs:label>OIE software</rdfs:label>
     </NamedIndividual>
     
@@ -1572,7 +1578,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462983">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>OIE models</obo:OBI_0002135>
+        <ontology:NFDI_0001007>OIE models</ontology:NFDI_0001007>
         <rdfs:label>OIE models</rdfs:label>
     </NamedIndividual>
     
@@ -1582,7 +1588,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462984">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>Photovoltaics</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Photovoltaics</ontology:NFDI_0001007>
         <rdfs:label>Photovoltaics</rdfs:label>
     </NamedIndividual>
     
@@ -1592,7 +1598,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462985">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MDS</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MDS</ontology:NFDI_0001007>
         <rdfs:label>MDS</rdfs:label>
     </NamedIndividual>
     
@@ -1602,7 +1608,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462986">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>DSIM</obo:OBI_0002135>
+        <ontology:NFDI_0001007>DSIM</ontology:NFDI_0001007>
         <rdfs:label>DSIM</rdfs:label>
     </NamedIndividual>
     
@@ -1612,7 +1618,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462987">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CSO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CSO</ontology:NFDI_0001007>
         <rdfs:label>CSO</rdfs:label>
     </NamedIndividual>
     
@@ -1622,7 +1628,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462988">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>ASMO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>ASMO</ontology:NFDI_0001007>
         <rdfs:label>ASMO</rdfs:label>
     </NamedIndividual>
     
@@ -1632,7 +1638,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462989">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>PODO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>PODO</ontology:NFDI_0001007>
         <rdfs:label>PODO</rdfs:label>
     </NamedIndividual>
     
@@ -1642,7 +1648,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453317046299">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>SSN</obo:OBI_0002135>
+        <ontology:NFDI_0001007>SSN</ontology:NFDI_0001007>
         <rdfs:label>SSN</rdfs:label>
     </NamedIndividual>
     
@@ -1652,7 +1658,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462990">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>CDCO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>CDCO</ontology:NFDI_0001007>
         <rdfs:label>CDCO</rdfs:label>
     </NamedIndividual>
     
@@ -1662,7 +1668,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462991">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>LDO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>LDO</ontology:NFDI_0001007>
         <rdfs:label>LDO</rdfs:label>
     </NamedIndividual>
     
@@ -1672,7 +1678,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462992">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>PLDO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>PLDO</ontology:NFDI_0001007>
         <rdfs:label>PLDO</rdfs:label>
     </NamedIndividual>
     
@@ -1682,7 +1688,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462993">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>PRIMA</obo:OBI_0002135>
+        <ontology:NFDI_0001007>PRIMA</ontology:NFDI_0001007>
         <rdfs:label>PRIMA</rdfs:label>
     </NamedIndividual>
     
@@ -1692,7 +1698,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462994">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>MSLE</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MSLE</ontology:NFDI_0001007>
         <rdfs:label>MSLE</rdfs:label>
     </NamedIndividual>
     
@@ -1702,7 +1708,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462995">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <obo:OBI_0002135>RDO</obo:OBI_0002135>
+        <ontology:NFDI_0001007>RDO</ontology:NFDI_0001007>
         <rdfs:label>RDO</rdfs:label>
     </NamedIndividual>
     
@@ -1712,7 +1718,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467208847621">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001063"/>
-        <obo:OBI_0002135>Artificial Intelligence</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Artificial Intelligence</ontology:NFDI_0001007>
         <rdfs:label>Artificial Intelligence</rdfs:label>
     </NamedIndividual>
     
@@ -1722,7 +1728,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174672088476210">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001050"/>
-        <obo:OBI_0002135>Materials Processing</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Materials Processing</ontology:NFDI_0001007>
         <rdfs:label>Materials Processing</rdfs:label>
     </NamedIndividual>
     
@@ -1732,7 +1738,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174672088476211">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001047"/>
-        <obo:OBI_0002135>Materials Surface Science</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Materials Surface Science</ontology:NFDI_0001007>
         <rdfs:label>Materials Surface Science</rdfs:label>
     </NamedIndividual>
     
@@ -1742,7 +1748,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174672088476212">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001045"/>
-        <obo:OBI_0002135>Materials Thermodynamics</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Materials Thermodynamics</ontology:NFDI_0001007>
         <rdfs:label>Materials Thermodynamics</rdfs:label>
     </NamedIndividual>
     
@@ -1752,7 +1758,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174672088476213">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001043"/>
-        <obo:OBI_0002135>MaterialsDeformation Processes</obo:OBI_0002135>
+        <ontology:NFDI_0001007>MaterialsDeformation Processes</ontology:NFDI_0001007>
         <rdfs:label>MaterialsDeformation Processes</rdfs:label>
     </NamedIndividual>
     
@@ -1762,7 +1768,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174672088476214">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001065"/>
-        <obo:OBI_0002135>Software Engineering</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Software Engineering</ontology:NFDI_0001007>
         <rdfs:label>Software Engineering</rdfs:label>
     </NamedIndividual>
     
@@ -1772,7 +1778,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174672088476215">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001064"/>
-        <obo:OBI_0002135>Theoretical Computer Science</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Theoretical Computer Science</ontology:NFDI_0001007>
         <rdfs:label>Theoretical Computer Science</rdfs:label>
     </NamedIndividual>
     
@@ -1782,7 +1788,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467208847622">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001041"/>
-        <obo:OBI_0002135>Computational Materials Science</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Computational Materials Science</ontology:NFDI_0001007>
         <rdfs:label>Computational Materials Science</rdfs:label>
     </NamedIndividual>
     
@@ -1792,7 +1798,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467208847623">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001067"/>
-        <obo:OBI_0002135>Cybersecurity</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Cybersecurity</ontology:NFDI_0001007>
         <rdfs:label>Cybersecurity</rdfs:label>
     </NamedIndividual>
     
@@ -1802,7 +1808,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467208847624">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001049"/>
-        <obo:OBI_0002135>Data Driven Material Science</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Data Driven Material Science</ontology:NFDI_0001007>
         <rdfs:label>Data Driven Material Science</rdfs:label>
     </NamedIndividual>
     
@@ -1812,7 +1818,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467208847625">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001066"/>
-        <obo:OBI_0002135>Data Science</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Data Science</ontology:NFDI_0001007>
         <rdfs:label>Data Science</rdfs:label>
     </NamedIndividual>
     
@@ -1822,7 +1828,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467208847626">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001044"/>
-        <obo:OBI_0002135>Materials Characterization</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Materials Characterization</ontology:NFDI_0001007>
         <rdfs:label>Materials Characterization</rdfs:label>
     </NamedIndividual>
     
@@ -1832,7 +1838,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467208847627">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001046"/>
-        <obo:OBI_0002135>Materials Design</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Materials Design</ontology:NFDI_0001007>
         <rdfs:label>Materials Design</rdfs:label>
     </NamedIndividual>
     
@@ -1842,7 +1848,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467208847628">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001042"/>
-        <obo:OBI_0002135>Materials Mechanical Behavior</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Materials Mechanical Behavior</ontology:NFDI_0001007>
         <rdfs:label>Materials Mechanical Behavior</rdfs:label>
     </NamedIndividual>
     
@@ -1852,7 +1858,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467208847629">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001048"/>
-        <obo:OBI_0002135>Materials Microstructural</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Materials Microstructural</ontology:NFDI_0001007>
         <rdfs:label>Materials Microstructural</rdfs:label>
     </NamedIndividual>
     
@@ -1862,7 +1868,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467927655511">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001040"/>
-        <obo:OBI_0002135>Jun. Prof. Dr.</obo:OBI_0002135>
+        <ontology:NFDI_0001007>Jun. Prof. Dr.</ontology:NFDI_0001007>
         <rdfs:label>Jun. Prof. Dr.</rdfs:label>
     </NamedIndividual>
 </rdf:RDF>

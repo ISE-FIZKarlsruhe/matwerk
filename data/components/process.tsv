@@ -1,5 +1,5 @@
-#	TYPE	label	has participant	realizes role	occupies temporal region	concretizes	Standard	continuant part of
-ID	TYPE	A rdfs:label	I ‘has participant’ SPLIT=|	I ‘realizes’ SPLIT=,	I ‘occupies temporal region’	I ‘concretizes’	I ‘has standard’ SPLIT=,	I ‘continuant part of’
+#	TYPE	label	has participant	realizes role	occupies temporal region	concretizes	Standard	
+ID	TYPE	A rdfs:label	I http://purl.obolibrary.org/obo/BFO_0000057 SPLIT=|	I http://purl.obolibrary.org/obo/BFO_0000055 SPLIT=,	I http://purl.obolibrary.org/obo/BFO_0000199	I http://purl.obolibrary.org/obo/BFO_0000059	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207 SPLIT=,	
 https://purls.helmholtz-metadaten.de/msekg/17461174529941	contacting process	ContactingProcess 1	ContactPoint 1	ContactPointRole 1				
 https://purls.helmholtz-metadaten.de/msekg/17461174529942	contacting process	ContactingProcess 2	ContactPoint 2	ContactPointRole 2				
 https://purls.helmholtz-metadaten.de/msekg/17461174529943	contacting process	ContactingProcess 3	ContactPoint 3	ContactPointRole 3				

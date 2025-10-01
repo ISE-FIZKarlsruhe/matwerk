@@ -1,5 +1,5 @@
 #	TYPE	label	denoted by	has first instance	has last instance
-ID	TYPE	A rdfs:label	I ‘denoted by’	I ‘has first instant’	I ‘has last instant’
+ID	TYPE	A rdfs:label	I http://purl.obolibrary.org/obo/IAO_0000235	I http://purl.obolibrary.org/obo/BFO_0000222	I http://purl.obolibrary.org/obo/BFO_0000224
 https://purls.helmholtz-metadaten.de/msekg/17454003205451	one-dimensional temporal region	temporal region 1	2x90 min/week		
 https://purls.helmholtz-metadaten.de/msekg/17454003205452	one-dimensional temporal region	temporal region 2	1,5x90 min/week		
 https://purls.helmholtz-metadaten.de/msekg/17454003205453	one-dimensional temporal region	temporal region 3	90 min / week plus exercises		

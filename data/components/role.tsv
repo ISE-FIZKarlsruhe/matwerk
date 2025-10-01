@@ -1,5 +1,5 @@
 #	TYPE contact point role	label	role email	role website	denoted by written name	has realization	inheres in
-ID	TYPE	A rdfs:label	I ‘denoted by’	I ‘denoted by’	I ‘denoted by’	I ‘has realization’	I ‘inheres in’ SPLIT=|
+ID	TYPE	A rdfs:label	I http://purl.obolibrary.org/obo/IAO_0000235	I http://purl.obolibrary.org/obo/IAO_0000235	I http://purl.obolibrary.org/obo/IAO_0000235	I http://purl.obolibrary.org/obo/BFO_0000054	I http://purl.obolibrary.org/obo/BFO_0000197 SPLIT=|
 https://purls.helmholtz-metadaten.de/msekg/17461177496071	contact point role	ContactPointRole 1	RoleEmail 1	RoleWebsite 1		ContactingProcess 1	ContactPoint 1
 https://purls.helmholtz-metadaten.de/msekg/17461177496081	contact point role	ContactPointRole 2	RoleEmail 2	RoleWebsite 2		ContactingProcess 2	ContactPoint 2
 https://purls.helmholtz-metadaten.de/msekg/17461177496082	contact point role	ContactPointRole 3	RoleEmail 3	RoleWebsite 3		ContactingProcess 3	ContactPoint 3

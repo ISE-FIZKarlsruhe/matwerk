@@ -1,5 +1,5 @@
 #	TYPE	label	Value
-ID	TYPE	A rdfs:label	I has value
+ID	TYPE	A rdfs:label	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007
 http://purl.obolibrary.org/obo/OBI_0002135	owl:DataProperty	has value	
 https://purls.helmholtz-metadaten.de/msekg/17451597693901	abbreviation textual entity	FEAP	FEAP
 https://purls.helmholtz-metadaten.de/msekg/17451597693902	abbreviation textual entity	VTK	VTK
