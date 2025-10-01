@@ -1,3 +1,15 @@
-#	TYPE	Label	Short description	License	Creator(s)	Creator(s) affiliation	Contributor(s)	Contributor(s) affiliation	Link (URL / PID)	Link to related Publication(s)
-ID	TYPE	A rdfs:label@en	I ‘denoted by’	I ‘has license’	I ‘has continuant part’	I ‘has continuant part’	I ‘has continuant part’	I ‘has continuant part’	I ‘denoted by’	I ‘denoted by’
-https://purls.helmholtz-metadaten.de/msekg/17588917500551	dataset	MSE Knowledge Graph v1.0			Ebrahim Norouzi	FIZ Karlsruhe - Leibniz Institute for Information Infrastructure			sparql endpoint of MSE Knowledge Graph v1.0	
+#	TYPE	Label	Short description		License	Creator(s)	Creator(s) affiliation	Contributor(s)	Contributor(s) affiliation	Link (URL / PID)	Link to related Publication(s)		Number of instances/classes/triples	Number of ontolgoies		named_g contain class	is_consistance
+ID	TYPE	A rdfs:label@en	I ‘denoted by’	I ‘denoted by’	I ‘has license’	I ‘has continuant part’	I ‘has continuant part’	I ‘has continuant part’	I ‘has continuant part’	I ‘denoted by’	I ‘denoted by’	I 'part of'			show me all the named_g 		
+https://purls.helmholtz-metadaten.de/msekg/17588917500551	dataset	MSE Knowledge Graph v1.0				Ebrahim Norouzi	FIZ Karlsruhe - Leibniz Institute for Information Infrastructure			show me the classes which we can find in the named graph? dataset(line4) has classes we need to import the classes from the named_graph into our KG guery the KG: show me things about tto_process					zenodo; dataset		what is the best method to create a summary of a dataset? how to generate an abstract of a dataset? having the tbox and statistics, how often is the class reused, property reused.
+	dataset	people		named_graph_iri						results:named_g that contains these		MSE Knowledge Graph v1.0					
+	dataset	org		named_graph_iri_2						detect patterns from named_graph					conians annotation property to refer to the class		
+										federated insert, select all the classes from the named_graph that contains 							
+										in our mwo, we have mwo:Device							
+										in another ontology, x:ttl_machine, subclassOf mwo:device							
+										:contain TTlmachine							
+										the t_box should be consistance, befor we should check the consistency, if the inconsistence, we need to fic that							
+											if consistence then add it to the kg						
+																	
+									import classes iri + label								
+									import class + subclasses	report	not possible, possible	star: it's possible to import	not:possible, only import class and labels				
+									import the classes + all axioms								

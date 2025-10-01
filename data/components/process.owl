@@ -27,9 +27,9 @@
     
 
 
-    <!-- http://purls.helmholtz-metadaten.de/mwo/MWO_0001002 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002 -->
 
-    <Class rdf:about="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+    <Class rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
     
 
 
@@ -5609,7 +5609,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423621 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423621">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 1</rdfs:label>
     </NamedIndividual>
     
@@ -5618,7 +5618,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236210 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236210">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 10</rdfs:label>
     </NamedIndividual>
     
@@ -5627,7 +5627,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236211 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236211">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 11</rdfs:label>
     </NamedIndividual>
     
@@ -5636,7 +5636,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236212 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236212">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 12</rdfs:label>
     </NamedIndividual>
     
@@ -5645,7 +5645,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236213 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236213">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 13</rdfs:label>
     </NamedIndividual>
     
@@ -5654,7 +5654,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236214 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236214">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 14</rdfs:label>
     </NamedIndividual>
     
@@ -5663,7 +5663,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236215 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236215">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 15</rdfs:label>
     </NamedIndividual>
     
@@ -5672,7 +5672,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236216 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236216">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 16</rdfs:label>
     </NamedIndividual>
     
@@ -5681,7 +5681,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236217 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236217">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 17</rdfs:label>
     </NamedIndividual>
     
@@ -5690,7 +5690,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236218 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236218">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 18</rdfs:label>
     </NamedIndividual>
     
@@ -5699,7 +5699,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236219 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236219">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 19</rdfs:label>
     </NamedIndividual>
     
@@ -5708,7 +5708,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423622 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423622">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 2</rdfs:label>
     </NamedIndividual>
     
@@ -5717,7 +5717,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236220 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236220">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 20</rdfs:label>
     </NamedIndividual>
     
@@ -5726,7 +5726,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236221 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236221">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 21</rdfs:label>
     </NamedIndividual>
     
@@ -5735,7 +5735,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236222 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236222">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 22</rdfs:label>
     </NamedIndividual>
     
@@ -5744,7 +5744,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236223 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236223">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 23</rdfs:label>
     </NamedIndividual>
     
@@ -5753,7 +5753,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236224 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236224">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 24</rdfs:label>
     </NamedIndividual>
     
@@ -5762,7 +5762,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236225 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236225">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 25</rdfs:label>
     </NamedIndividual>
     
@@ -5771,7 +5771,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236226 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236226">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 26</rdfs:label>
     </NamedIndividual>
     
@@ -5780,7 +5780,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236227 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236227">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 27</rdfs:label>
     </NamedIndividual>
     
@@ -5789,7 +5789,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236228 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236228">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 28</rdfs:label>
     </NamedIndividual>
     
@@ -5798,7 +5798,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236229 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236229">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 29</rdfs:label>
     </NamedIndividual>
     
@@ -5807,7 +5807,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423623 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423623">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 3</rdfs:label>
     </NamedIndividual>
     
@@ -5816,7 +5816,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236230 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236230">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 30</rdfs:label>
     </NamedIndividual>
     
@@ -5825,7 +5825,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236231 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236231">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 31</rdfs:label>
     </NamedIndividual>
     
@@ -5834,7 +5834,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236232 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236232">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 32</rdfs:label>
     </NamedIndividual>
     
@@ -5843,7 +5843,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236233 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236233">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 33</rdfs:label>
     </NamedIndividual>
     
@@ -5852,7 +5852,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236234 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236234">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 34</rdfs:label>
     </NamedIndividual>
     
@@ -5861,7 +5861,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236235 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236235">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 35</rdfs:label>
     </NamedIndividual>
     
@@ -5870,7 +5870,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236236 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236236">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 36</rdfs:label>
     </NamedIndividual>
     
@@ -5879,7 +5879,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236237 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236237">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 37</rdfs:label>
     </NamedIndividual>
     
@@ -5888,7 +5888,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236238 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236238">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 38</rdfs:label>
     </NamedIndividual>
     
@@ -5897,7 +5897,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236239 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236239">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 39</rdfs:label>
     </NamedIndividual>
     
@@ -5906,7 +5906,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423624 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423624">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 4</rdfs:label>
     </NamedIndividual>
     
@@ -5915,7 +5915,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236240 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236240">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 40</rdfs:label>
     </NamedIndividual>
     
@@ -5924,7 +5924,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236241 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236241">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 41</rdfs:label>
     </NamedIndividual>
     
@@ -5933,7 +5933,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236242 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236242">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 42</rdfs:label>
     </NamedIndividual>
     
@@ -5942,7 +5942,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236243 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236243">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 43</rdfs:label>
     </NamedIndividual>
     
@@ -5951,7 +5951,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236244 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236244">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 44</rdfs:label>
     </NamedIndividual>
     
@@ -5960,7 +5960,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236245 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236245">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 45</rdfs:label>
     </NamedIndividual>
     
@@ -5969,7 +5969,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236246 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236246">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 46</rdfs:label>
     </NamedIndividual>
     
@@ -5978,7 +5978,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236247 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236247">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 47</rdfs:label>
     </NamedIndividual>
     
@@ -5987,7 +5987,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236248 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236248">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 48</rdfs:label>
     </NamedIndividual>
     
@@ -5996,7 +5996,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236249 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236249">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 49</rdfs:label>
     </NamedIndividual>
     
@@ -6005,7 +6005,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423625 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423625">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 5</rdfs:label>
     </NamedIndividual>
     
@@ -6014,7 +6014,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236250 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236250">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 50</rdfs:label>
     </NamedIndividual>
     
@@ -6023,7 +6023,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236251 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236251">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 51</rdfs:label>
     </NamedIndividual>
     
@@ -6032,7 +6032,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236252 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236252">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 52</rdfs:label>
     </NamedIndividual>
     
@@ -6041,7 +6041,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236253 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236253">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 53</rdfs:label>
     </NamedIndividual>
     
@@ -6050,7 +6050,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236254 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236254">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 54</rdfs:label>
     </NamedIndividual>
     
@@ -6059,7 +6059,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236255 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236255">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 55</rdfs:label>
     </NamedIndividual>
     
@@ -6068,7 +6068,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236256 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236256">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 56</rdfs:label>
     </NamedIndividual>
     
@@ -6077,7 +6077,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236257 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236257">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 57</rdfs:label>
     </NamedIndividual>
     
@@ -6086,7 +6086,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236258 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236258">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 58</rdfs:label>
     </NamedIndividual>
     
@@ -6095,7 +6095,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236259 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236259">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 59</rdfs:label>
     </NamedIndividual>
     
@@ -6104,7 +6104,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423626 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423626">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 6</rdfs:label>
     </NamedIndividual>
     
@@ -6113,7 +6113,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423627 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423627">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 7</rdfs:label>
     </NamedIndividual>
     
@@ -6122,7 +6122,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423628 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423628">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 8</rdfs:label>
     </NamedIndividual>
     
@@ -6131,7 +6131,7 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423629 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423629">
-        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002"/>
         <rdfs:label>matwerk project process 9</rdfs:label>
     </NamedIndividual>
 </rdf:RDF>
