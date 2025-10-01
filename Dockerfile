@@ -22,7 +22,7 @@ COPY requirements.txt /app/requirements.txt
 RUN python -m pip install --no-cache-dir -r /app/requirements.txt
 
 # Robot + Widoco
-RUN wget -q https://github.com/ontodev/robot/releases/download/v1.9.7/robot.jar -O /usr/local/bin/robot.jar \
+RUN wget -q https://github.com/ontodev/robot/releases/download/v1.9.8/robot.jar -O /usr/local/bin/robot.jar \
  && printf '#!/bin/sh\nexec java $ROBOT_JAVA_ARGS -jar /usr/local/bin/robot.jar "$@"\n' > /usr/local/bin/robot \
  && chmod +x /usr/local/bin/robot \
  && wget -q https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar
