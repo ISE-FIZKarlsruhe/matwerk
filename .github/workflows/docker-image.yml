@@ -55,6 +55,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           # Stage everything in data/, including new/deleted files
+          git add -f data/all.ttl
           git add -A data
 
           git commit -m "[skip ci] Update generated data directory"

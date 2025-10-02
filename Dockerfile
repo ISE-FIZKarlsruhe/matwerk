@@ -44,7 +44,7 @@ RUN chmod +x /app/1st-kg.sh /app/2nd-merge-all.sh \
 # && python /app/scripts/fetch_endpoints.py
 
 # Copy a predictable artifact
-RUN mkdir -p /data && cp data/all.ttl /data/ontology.ttl
+RUN cp data/all.ttl data/ontology.ttl
 
 # Generate docs
 RUN java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar \

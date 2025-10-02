@@ -139,6 +139,7 @@ run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl
 run_robot_explain "$COMPONENTSDIR/sparql_endpoints.owl" "$REASONER/sparql_endpoints.md"
 
 run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/temporal.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl -i $COMPONENTSDIR/dataset.owl" "$COMPONENTSDIR/FDOs.tsv" "$COMPONENTSDIR/FDOs.owl"
+sed -i 's|<ontology:NFDI_0001008>|<ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">|g' "$COMPONENTSDIR/FDOs.owl"
 run_robot_explain "$COMPONENTSDIR/FDOs.owl" "$REASONER/FDOs.md"
 
 echo "✅ All components generated and explained."
