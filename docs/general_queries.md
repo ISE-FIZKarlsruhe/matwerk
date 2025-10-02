@@ -31,6 +31,27 @@ ORDER BY DESC(?count)
 LIMIT 999
 ```
 
+---
+### What are the submitted records in NFDI-MatWerk Zenodo community present in the MSE-KG?
+
+```sparql
+# This query retrieves NFDI-MatWerk Zenodo community.
+
+SELECT ?records ?recordsLabel_ ?filesInRecordLabel_ ?doi WHERE {
+
+  # Match any subject (?records) that is an instance of one of the Dataset classes
+  ?records a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> .
+  ?records rdfs:label ?recordsLabel_ .
+  ?records <http://purl.obolibrary.org/obo/BFO_0000051> ?containsInRecord .
+  ?containsInRecord rdfs:label ?filesInRecordLabel_ .
+  ?containsInRecord rdfs:seeAlso ?doi .
+
+}
+
+# Limit results to 999 rows
+LIMIT 999
+```
+
 
 ---
 ### What are the Fair Digital Objects present in the MSE-KG?
@@ -40,7 +61,7 @@ LIMIT 999
 
 SELECT ?FDOs ?FDOsLabel_ ?FDOsParentDataset ?FDOsURL WHERE {
 
-  # Match any subject (?FDOs) that is an instance of one of the Dataset classes
+  # Match any subject (?FDOs) that is an instance of one of the digital object identifier classes
   ?FDOs a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037> .
   ?FDOs rdfs:label ?FDOsLabel_ .
   ?FDOs <http://purl.obolibrary.org/obo/BFO_0000051> ?FDOsParentDataset .
@@ -285,7 +306,13 @@ LIMIT 999
 SELECT ?dataset ?title ?creatorLabel ?creatorAffiliationLabel ?link
 WHERE {
   # Dataset type
-  ?dataset a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> .
+  VALUES ?class {
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>  # Dataset
+    <http://purls.helmholtz-metadaten.de/mwo/MWO_0001058>
+    <http://purls.helmholtz-metadaten.de/mwo/MWO_0001056>
+    <http://purls.helmholtz-metadaten.de/mwo/MWO_0001057>
+  }
+  ?dataset a ?class .
 
   # Dataset title
   OPTIONAL {
@@ -606,14 +633,15 @@ LIMIT 999
 ### What are the Task Areas in MatWerk which are present in the MSE-KG?
 
 ```sparql
-SELECT ?ta ?label ?description
+SELECT *
 WHERE {
   ?ta_organization a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001022> .
   ?ta_organization <http://purl.obolibrary.org/obo/BFO_0000056> ?ta_process .
-  ?ta_process <http://purl.obolibrary.org/obo/BFO_0000059> ?ta .
-  ?ta a <http://purl.obolibrary.org/obo/IAO_0000005> .
-
-  OPTIONAL { ?ta rdfs:label ?label . }
+  OPTIONAL { 
+    ?ta_organization <http://purl.obolibrary.org/obo/BFO_0000056> ?ta_process .
+  	?ta_process <http://purl.obolibrary.org/obo/BFO_0000059> ?ta .
+    ?ta a <http://purl.obolibrary.org/obo/IAO_0000005> .
+    ?ta rdfs:label ?label . }
   OPTIONAL { ?ta <http://purl.obolibrary.org/obo/IAO_0000235> ?descriptionNode . 
            ?descriptionNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018> .
            ?descriptionNode rdfs:label ?description .
