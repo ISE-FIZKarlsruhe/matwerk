@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -25,6 +26,29 @@
     <!-- http://www.w3.org/2000/01/rdf-schema#label@en -->
 
     <AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label@en"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000178 -->
+
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000178"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000235 -->
+
+    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000235"/>
     
 
 
@@ -56,12 +80,33 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451394390865 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451394390865"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174636276694537 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174636276694537"/>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17588917500551 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17588917500551">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
+        <obo:BFO_0000178 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451394390865"/>
+        <obo:BFO_0000178 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174636276694537"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17588918337771"/>
         <label:en>MSE Knowledge Graph v1.0</label:en>
     </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17588918337771 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17588918337771"/>
 </rdf:RDF>
 
 
