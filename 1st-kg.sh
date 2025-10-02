@@ -34,6 +34,7 @@ declare -A files=(
     [collaboration]=266847052
     [service]=130394813
     [sparql_endpoints]=1732373290
+    [FDOs]=152649677
 )
 
 for name in "${!files[@]}"; do
@@ -136,5 +137,8 @@ run_robot_explain "$COMPONENTSDIR/service.owl" "$REASONER/service_inconsistency.
 
 run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/temporal.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/sparql_endpoints.tsv" "$COMPONENTSDIR/sparql_endpoints.owl"
 run_robot_explain "$COMPONENTSDIR/sparql_endpoints.owl" "$REASONER/sparql_endpoints.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/temporal.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl -i $COMPONENTSDIR/dataset.owl" "$COMPONENTSDIR/FDOs.tsv" "$COMPONENTSDIR/FDOs.owl"
+run_robot_explain "$COMPONENTSDIR/FDOs.owl" "$REASONER/FDOs.md"
 
 echo "✅ All components generated and explained."

@@ -33,6 +33,27 @@ LIMIT 999
 
 
 ---
+### What are the Fair Digital Objects present in the MSE-KG?
+
+```sparql
+# This query retrieves Fair Digital Objects.
+
+SELECT ?FDOs ?FDOsLabel_ ?FDOsParentDataset ?FDOsURL WHERE {
+
+  # Match any subject (?FDOs) that is an instance of one of the Dataset classes
+  ?FDOs a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037> .
+  ?FDOs rdfs:label ?FDOsLabel_ .
+  ?FDOs <http://purl.obolibrary.org/obo/BFO_0000051> ?FDOsParentDataset .
+  ?FDOs <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?FDOsURL .
+
+}
+
+# Limit results to 999 rows
+LIMIT 999
+```
+
+
+---
 ### What are the softwares present in the MSE-KG? What are the license, programming language, repository URL and publication of these softwares?
 
 ```sparql
@@ -41,7 +62,21 @@ LIMIT 999
 SELECT ?software ?softwareLabel_ ?licenseLabel ?languageLabel ?repositoryURL ?publicationLabel WHERE {
 
   # Match any subject (?software) that is an instance of one of the software-related classes
-  ?software a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198> .
+  VALUES ?class {
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121>  # Software
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001045>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001046>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001048>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000218>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000140>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010039>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010040>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010041>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000222>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001049>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001044>
+  }
+  ?software a ?class .
   
   # Try to extract a human-readable label for the software
   OPTIONAL { 
@@ -89,9 +124,11 @@ SELECT DISTINCT ?service ?serviceLabel_ ?serviceURL ?docURL ?codeURL WHERE {
   ?service a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> .
 
   # The label resource for the service
-  ?service <http://purl.obolibrary.org/obo/IAO_0000235> ?serviceLabel .
-  ?serviceLabel a <http://purl.obolibrary.org/obo/IAO_0000590> .
-  OPTIONAL { ?serviceLabel rdfs:label ?serviceLabel_ . }
+  OPTIONAL {
+    ?service <http://purl.obolibrary.org/obo/IAO_0000235> ?serviceLabel .
+    ?serviceLabel a <http://purl.obolibrary.org/obo/IAO_0000590> .
+    ?serviceLabel rdfs:label ?serviceLabel_ . 
+  }
 
 
   # Service link (URL)
@@ -286,7 +323,6 @@ LIMIT 999
 ### What are the data portals present in the MSE-KG? What are the links, repositories and contactpoint names or email addresses or websites of these data portals?
 
 ```sparql
-data portals
 SELECT ?portal ?name ?link ?repository ?contactpointName ?Email ?Website
 WHERE {
   # Identify resources of type Data Portal
@@ -475,7 +511,7 @@ LIMIT 999
 SELECT ?int_colaborations ?name 
 WHERE {
 
-  ?int_colaborations a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001003> .
+  ?int_colaborations a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001005> .
 
   OPTIONAL { ?int_colaborations <http://purl.obolibrary.org/obo/IAO_0000235> ?nameNode . 
            ?nameNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
