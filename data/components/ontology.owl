@@ -1571,7 +1571,7 @@ Declaration(AnnotationProperty(skos:scopeNote))
 Declaration(AnnotationProperty(ontology:NFDI_0000012))
 Declaration(AnnotationProperty(ontology:NFDI_0010013))
 Declaration(AnnotationProperty(ontology:NFDI_0010015))
-Declaration(Datatype(<http://www.w3.org/2001/XMLSchema#:anyURI>))
+Declaration(Datatype(<http://www.w3.org/2001/XMLSchema#anyURI>))
 Declaration(Datatype(<internal:anonymous-constants>))
 ############################
 #   Annotation Properties
