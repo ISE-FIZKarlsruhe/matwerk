@@ -35,8 +35,8 @@ RUN cd data/zenodo && python export_zenodo.py
 
 
 RUN chmod +x /app/1st-kg.sh /app/2nd-merge-all.sh \
- && ./1st-kg.sh || true \
- && ./2nd-merge-all.sh || true \
+ && ./1st-kg.sh \
+ && ./2nd-merge-all.sh \
  && test -s data/all.ttl
 
 # endpoint fetch at build time
