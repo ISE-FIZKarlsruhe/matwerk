@@ -637,11 +637,10 @@ SELECT *
 WHERE {
   ?ta_organization a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001022> .
   ?ta_organization <http://purl.obolibrary.org/obo/BFO_0000056> ?ta_process .
-  OPTIONAL { 
     ?ta_organization <http://purl.obolibrary.org/obo/BFO_0000056> ?ta_process .
   	?ta_process <http://purl.obolibrary.org/obo/BFO_0000059> ?ta .
     ?ta a <http://purl.obolibrary.org/obo/IAO_0000005> .
-    ?ta rdfs:label ?label . }
+    ?ta rdfs:label ?label .
   OPTIONAL { ?ta <http://purl.obolibrary.org/obo/IAO_0000235> ?descriptionNode . 
            ?descriptionNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018> .
            ?descriptionNode rdfs:label ?description .
