@@ -7,6 +7,7 @@ SRC=ontology/mwo-full.owl
 ONTBASE=https://nfdi.fiz-karlsruhe.de/ontology
 
 mkdir -p "$VALIDATIONSDIR"
+rm -f "$COMPONENTSDIR/all_NotReasoned.owl" "$COMPONENTSDIR/all.ttl"
 
 echo "Reasoning ontology"
 robot reason \
@@ -21,6 +22,9 @@ robot merge --include-annotations true -i "$SRC" -i "data/components/req_1.owl" 
 echo "Fix NFDI_0001008 datatype annotation"
 sed -i 's|<ontology:NFDI_0001008>|<ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">|g' "$COMPONENTSDIR/all_NotReasoned.owl"
 
+echo "Reasoning KG, for now no reasoning"
+robot merge --include-annotations true -i "$SRC" -i "data/components/req_1.owl" -i "data/components/req_2.owl" --inputs "data/components/*.owl" -i "data/zenodo/zenodo.ttl" --output "$COMPONENTSDIR/all.ttl"
+
 echo "Explanations and inconsistency checks"
 robot explain --input "$COMPONENTSDIR/all_NotReasoned.owl" -M inconsistency --explanation "$VALIDATIONSDIR/inconsistency.md"
 
@@ -28,8 +32,6 @@ robot explain --reasoner hermit --input "$SRC" -M inconsistency --explanation "$
 
 robot explain --reasoner hermit --input "$COMPONENTSDIR/all_NotReasoned.owl" -M inconsistency --explanation "$VALIDATIONSDIR/inconsistency_hermit.md"
 
-echo "Reasoning KG, for now no reasoning"
-robot merge --include-annotations true -i "$SRC" -i "data/components/req_1.owl" -i "data/components/req_2.owl" --inputs "data/components/*.owl" -i "data/zenodo/zenodo.ttl" --output "$COMPONENTSDIR/all.ttl"
 #robot reason \
 #    --reasoner hermit \
 #    --input "$COMPONENTSDIR/all_NotReasoned.owl" \

@@ -40,11 +40,11 @@ RUN chmod +x /app/1st-kg.sh /app/2nd-merge-all.sh \
  && test -s data/all.ttl
 
 # endpoint fetch at build time
-#RUN chmod +x /app/scripts/fetch_endpoints.py \
-# && python /app/scripts/fetch_endpoints.py
+RUN chmod +x /app/scripts/fetch_endpoints.py \
+ && python /app/scripts/fetch_endpoints.py
 
 # Copy a predictable artifact
-RUN cp data/all.ttl data/ontology.ttl
+RUN mkdir -p /data && cp data/all.ttl /data/ontology.ttl
 
 # Generate docs
 RUN java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar \
