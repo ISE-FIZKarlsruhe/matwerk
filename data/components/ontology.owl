@@ -20042,7 +20042,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/17516151111311000>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/17516151111311000>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/17516151111311000> <https://purls.helmholtz-metadaten.de/msekg/1751615111131998>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/17516151111311000> "https://w3id.org/pmd/co/3.0.0/characterization"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/17516151111311000> "https://w3id.org/pmd/co/3.0.0/characterization"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/17516151111311000> "https://w3id.org/pmd/co/3.0.0/characterization"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/17516151111311001> (<https://purls.helmholtz-metadaten.de/msekg/17516151111311001>)
@@ -23646,7 +23646,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/17516151111311285>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/17516151111311285>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/17516151111311285> <https://purls.helmholtz-metadaten.de/msekg/17516151111311283>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/17516151111311285> "http://openenergy-platform.org/ontology/oeo/dev/oeo-physical-axioms.owl"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/17516151111311285> "http://openenergy-platform.org/ontology/oeo/dev/oeo-physical-axioms.owl"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/17516151111311285> "http://openenergy-platform.org/ontology/oeo/dev/oeo-physical-axioms.owl"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/17516151111311286> (<https://purls.helmholtz-metadaten.de/msekg/17516151111311286>)
@@ -25950,7 +25950,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/175161511113115>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/175161511113115>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/175161511113115> <https://purls.helmholtz-metadaten.de/msekg/175161511113113>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/175161511113115> "http://purl.obolibrary.org/obo/bfo/2020/bfo.owl"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/175161511113115> "http://purl.obolibrary.org/obo/bfo/2020/bfo.owl"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/175161511113115> "http://purl.obolibrary.org/obo/bfo/2020/bfo.owl"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131150> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131150>)
@@ -26053,7 +26053,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131156>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131156>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131156> <https://purls.helmholtz-metadaten.de/msekg/1751615111131154>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131156> "https://w3id.org/battinfo/0.8.0-beta/battinfo"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131156> "https://w3id.org/battinfo/0.8.0-beta/battinfo"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131156> "https://w3id.org/battinfo/0.8.0-beta/battinfo"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131157> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131157>)
@@ -26808,7 +26808,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/175161511113121>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/175161511113121>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/175161511113121> <https://purls.helmholtz-metadaten.de/msekg/175161511113119>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/175161511113121> "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.owl"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/175161511113121> "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.owl"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/175161511113121> "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.owl"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131210> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131210>)
@@ -27338,7 +27338,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131252>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131252>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131252> <https://purls.helmholtz-metadaten.de/msekg/1751615111131250>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131252> "https://w3id.org/semmd/skos_vocab/ver0001"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131252> "https://w3id.org/semmd/skos_vocab/ver0001"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131252> "https://w3id.org/semmd/skos_vocab/ver0001"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131253> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131253>)
@@ -27549,7 +27549,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131267>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131267>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131267> <https://purls.helmholtz-metadaten.de/msekg/1751615111131265>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131267> "http://emmo.info/datamodel/0.0.2/collection"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131267> "http://emmo.info/datamodel/0.0.2/collection"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131267> "http://emmo.info/datamodel/0.0.2/collection"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131268> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131268>)
@@ -27776,7 +27776,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131284>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131284>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131284> <https://purls.helmholtz-metadaten.de/msekg/1751615111131282>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131284> "http://emmo.info/datamodel/0.0.2/entity"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131284> "http://emmo.info/datamodel/0.0.2/entity"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131284> "http://emmo.info/datamodel/0.0.2/entity"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131285> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131285>)
@@ -28060,7 +28060,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131302>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131302>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131302> <https://purls.helmholtz-metadaten.de/msekg/1751615111131300>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131302> "http://emmo.info/datamodel/0.0.2/metamodel"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131302> "http://emmo.info/datamodel/0.0.2/metamodel"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131302> "http://emmo.info/datamodel/0.0.2/metamodel"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131303> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131303>)
@@ -28324,7 +28324,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131318>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131318>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131318> <https://purls.helmholtz-metadaten.de/msekg/1751615111131316>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131318> "http://emmo.info/datamodel/0.0.2/transaction"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131318> "http://emmo.info/datamodel/0.0.2/transaction"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131318> "http://emmo.info/datamodel/0.0.2/transaction"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131319> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131319>)
@@ -28564,7 +28564,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131336>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131336>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131336> <https://purls.helmholtz-metadaten.de/msekg/1751615111131334>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131336> "https://w3id.org/emmo/domain/atomistic/0.0.1"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131336> "https://w3id.org/emmo/domain/atomistic/0.0.1"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131336> "https://w3id.org/emmo/domain/atomistic/0.0.1"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131337> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131337>)
@@ -28805,7 +28805,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131354>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131354>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131354> <https://purls.helmholtz-metadaten.de/msekg/1751615111131352>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131354> "http://emmo.info/domain-mappings/0.0.1"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131354> "http://emmo.info/domain-mappings/0.0.1"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131354> "http://emmo.info/domain-mappings/0.0.1"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131355> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131355>)
@@ -29119,7 +29119,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131377>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131377>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131377> <https://purls.helmholtz-metadaten.de/msekg/1751615111131375>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131377> "http://emmo.info/emmo/domain/mechanical-testing/1.0.0"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131377> "http://emmo.info/emmo/domain/mechanical-testing/1.0.0"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131377> "http://emmo.info/emmo/domain/mechanical-testing/1.0.0"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131378> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131378>)
@@ -29165,7 +29165,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/175161511113138>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/175161511113138>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/175161511113138> <https://purls.helmholtz-metadaten.de/msekg/175161511113136>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/175161511113138> "https://w3id.org/battinfo/0.8.0-beta/battinfo-inferred"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/175161511113138> "https://w3id.org/battinfo/0.8.0-beta/battinfo-inferred"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/175161511113138> "https://w3id.org/battinfo/0.8.0-beta/battinfo-inferred"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131380> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131380>)
@@ -29607,7 +29607,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131410>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131410>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131410> <https://purls.helmholtz-metadaten.de/msekg/1751615111131408>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131410> "http://onto.onto-ns.com/domain-photovoltaics/0.0.1/domain_photovoltaics.ttl"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131410> "http://onto.onto-ns.com/domain-photovoltaics/0.0.1/domain_photovoltaics.ttl"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131410> "http://onto.onto-ns.com/domain-photovoltaics/0.0.1/domain_photovoltaics.ttl"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131411> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131411>)
@@ -29858,7 +29858,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131428>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131428>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131428> <https://purls.helmholtz-metadaten.de/msekg/1751615111131426>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131428> "https://w3id.org/emmo/1.0.1/emmo-full"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131428> "https://w3id.org/emmo/1.0.1/emmo-full"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131428> "https://w3id.org/emmo/1.0.1/emmo-full"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131429> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131429>)
@@ -30382,7 +30382,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131459>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131459>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131459> <https://purls.helmholtz-metadaten.de/msekg/1751615111131457>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131459> "https://w3id.org/emmo/1.0.1/emmo-mlo"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131459> "https://w3id.org/emmo/1.0.1/emmo-mlo"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131459> "https://w3id.org/emmo/1.0.1/emmo-mlo"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/175161511113146> (<https://purls.helmholtz-metadaten.de/msekg/175161511113146>)
@@ -32768,7 +32768,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131619>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131619>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131619> <https://purls.helmholtz-metadaten.de/msekg/1751615111131617>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131619> "http://emmo.info/emmo/domain/oie/manufacturing"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131619> "http://emmo.info/emmo/domain/oie/manufacturing"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131619> "http://emmo.info/emmo/domain/oie/manufacturing"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131620> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131620>)
@@ -33172,7 +33172,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131653>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131653>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131653> <https://purls.helmholtz-metadaten.de/msekg/1751615111131651>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131653> "http://emmo.info/emmo/domain/oie/materials"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131653> "http://emmo.info/emmo/domain/oie/materials"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131653> "http://emmo.info/emmo/domain/oie/materials"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131654> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131654>)
@@ -33549,7 +33549,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131687>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131687>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131687> <https://purls.helmholtz-metadaten.de/msekg/1751615111131685>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131687> "http://emmo.info/emmo/domain/oie/models"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131687> "http://emmo.info/emmo/domain/oie/models"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131687> "http://emmo.info/emmo/domain/oie/models"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131688> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131688>)
@@ -34830,7 +34830,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131792>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131792>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131792> <https://purls.helmholtz-metadaten.de/msekg/1751615111131790>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131792> "http://matonto.org/ontologies/mat-catalog/1.1"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131792> "http://matonto.org/ontologies/mat-catalog/1.1"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131792> "http://matonto.org/ontologies/mat-catalog/1.1"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131793> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131793>)
@@ -35247,7 +35247,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131826>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131826>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131826> <https://purls.helmholtz-metadaten.de/msekg/1751615111131824>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131826> "https://nfdi.fiz-karlsruhe.de/ontology/3.0.1"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131826> "https://nfdi.fiz-karlsruhe.de/ontology/3.0.1"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131826> "https://nfdi.fiz-karlsruhe.de/ontology/3.0.1"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131827> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131827>)
@@ -35862,7 +35862,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131878>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131878>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131878> <https://purls.helmholtz-metadaten.de/msekg/1751615111131876>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131878> "https://w3id.org/mdo/calculation/1.1/"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131878> "https://w3id.org/mdo/calculation/1.1/"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131878> "https://w3id.org/mdo/calculation/1.1/"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131879> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131879>)
@@ -36063,7 +36063,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131892>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131892>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131892> <https://purls.helmholtz-metadaten.de/msekg/1751615111131890>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131892> "https://w3id.org/mdo/core/1.1/"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131892> "https://w3id.org/mdo/core/1.1/"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131892> "https://w3id.org/mdo/core/1.1/"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131893> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131893>)
@@ -36162,7 +36162,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/17516151111319>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/17516151111319>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/17516151111319> <https://purls.helmholtz-metadaten.de/msekg/17516151111317>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/17516151111319> "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/17516151111319> "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/17516151111319> "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/175161511113190> (<https://purls.helmholtz-metadaten.de/msekg/175161511113190>)
@@ -36281,7 +36281,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131905>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131905>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131905> <https://purls.helmholtz-metadaten.de/msekg/1751615111131903>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131905> "https://w3id.org/mdo/full/1.1/"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131905> "https://w3id.org/mdo/full/1.1/"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131905> "https://w3id.org/mdo/full/1.1/"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131906> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131906>)
@@ -36426,7 +36426,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131917>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131917>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131917> <https://purls.helmholtz-metadaten.de/msekg/1751615111131915>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131917> "https://w3id.org/mdo/provenance/1.1/"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131917> "https://w3id.org/mdo/provenance/1.1/"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131917> "https://w3id.org/mdo/provenance/1.1/"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131918> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131918>)
@@ -36589,7 +36589,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131929>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131929>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131929> <https://purls.helmholtz-metadaten.de/msekg/1751615111131927>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131929> "https://w3id.org/mdo/structure/1.1/"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131929> "https://w3id.org/mdo/structure/1.1/"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131929> "https://w3id.org/mdo/structure/1.1/"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/175161511113193> (<https://purls.helmholtz-metadaten.de/msekg/175161511113193>)
@@ -36701,7 +36701,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131938>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131938>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131938> <https://purls.helmholtz-metadaten.de/msekg/1751615111131936>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131938> "https://w3id.org/mdo/structure/1.0/"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131938> "https://w3id.org/mdo/structure/1.0/"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131938> "https://w3id.org/mdo/structure/1.0/"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/1751615111131939> (<https://purls.helmholtz-metadaten.de/msekg/1751615111131939>)
@@ -36906,7 +36906,7 @@ ClassAssertion(obo:IAO_0000030 <https://purls.helmholtz-metadaten.de/msekg/17516
 ClassAssertion(ontology:NFDI_0000015 <https://purls.helmholtz-metadaten.de/msekg/1751615111131949>)
 ClassAssertion(ontology:NFDI_0001053 <https://purls.helmholtz-metadaten.de/msekg/1751615111131949>)
 ObjectPropertyAssertion(obo:IAO_0000136 <https://purls.helmholtz-metadaten.de/msekg/1751615111131949> <https://purls.helmholtz-metadaten.de/msekg/1751615111131947>)
-DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131949> "https://w3id.org/pmd/co/3.0.0-alpha1"^^<http://www.w3.org/2001/XMLSchema#:anyURI>)
+DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131949> "https://w3id.org/pmd/co/3.0.0-alpha1"^^<http://www.w3.org/2001/XMLSchema#anyURI>)
 DataPropertyAssertion(ontology:NFDI_0001008 <https://purls.helmholtz-metadaten.de/msekg/1751615111131949> "https://w3id.org/pmd/co/3.0.0-alpha1"^^<internal:anonymous-constants>)
 
 # Individual: <https://purls.helmholtz-metadaten.de/msekg/175161511113195> (<https://purls.helmholtz-metadaten.de/msekg/175161511113195>)
