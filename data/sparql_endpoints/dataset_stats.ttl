@@ -1,0 +1,20 @@
+@prefix ns1: <http://purl.obolibrary.org/obo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix stat: <https://purls.helmholtz-metadaten.de/msekg/stat/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://purls.helmholtz-metadaten.de/msekg/17588917500551> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
+    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17588918337771> ;
+    rdfs:seeAlso <https://purls.helmholtz-metadaten.de/msekg/1759747764517>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759747764518>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759747764519> ;
+    stat:classReusedFromMWO ns1:BFO_0000023,
+        <http://www.ebi.ac.uk/swo/SWO_0000002> ;
+    stat:numberOfClasses 123 ;
+    stat:numberOfClassesReusedFromMWO 2 ;
+    stat:numberOfDataProperties 32 ;
+    stat:numberOfDataPropertiesReusedFromMWO 0 ;
+    stat:numberOfInstances 724 ;
+    stat:numberOfObjectProperties 85 ;
+    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+

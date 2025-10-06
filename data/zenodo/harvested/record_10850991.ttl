@@ -1,0 +1,172 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157547> a nfdi:NFDI_0000009 ;
+    rdfs:label "https://zenodo.org/records/10850990" ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759758157549>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157552>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157553>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157554>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157555>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157556>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157557>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157558>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157559>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157560>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157561>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157562>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157563>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157564>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157565>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157566>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157567>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157568>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157569>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759758157570> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759758157548> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157548> rdfs:label "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157549> rdfs:label "Hardness for the four simulations with different size.png" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/Hardness for the four simulations with different size.png/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157552> rdfs:label "Von-Misses stress distribution.png" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/Von-Misses stress distribution.png/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157553> rdfs:label "configuration.xls" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/configuration.xls/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157554> rdfs:label "Loading curves for the three interatomic potentials.png" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/Loading curves for the three interatomic potentials.png/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157555> rdfs:label "data_fig8.xlsx" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/data_fig8.xlsx/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157556> rdfs:label "radius.xlsx" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/radius.xlsx/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157557> rdfs:label "Indentation velocity dependence of the.png" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/Indentation velocity dependence of the.png/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157558> rdfs:label "Predicted indentation force.png" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/Predicted indentation force.png/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157559> rdfs:label "Result from nanoindentation on the (100).png" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/Result from nanoindentation on the (100).png/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157560> rdfs:label "data_fig4_5.xlsx" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/data_fig4_5.xlsx/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157561> rdfs:label "size.xlsx" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/size.xlsx/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157562> rdfs:label "Schematic presentation of the simulation mode.png" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/Schematic presentation of the simulation mode.png/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157563> rdfs:label "data_fig6.xlsx" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/data_fig6.xlsx/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157564> rdfs:label "velocity.xlsx" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/velocity.xlsx/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157565> rdfs:label "linearmodelal_29_nov.eps" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/linearmodelal_29_nov.eps/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157566> rdfs:label "goodresult.xlsx" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/goodresult.xlsx/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157567> rdfs:label "Snapshots showing pile-ups at the surface.png" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/Snapshots showing pile-ups at the surface.png/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157568> rdfs:label "Dislocations in the substrate during simulation.png" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/Dislocations in the substrate during simulation.png/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157569> rdfs:label "Measured hardness of aluminum.png" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/Measured hardness of aluminum.png/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758157570> rdfs:label "Indentation force for different simulation setup.png" ;
+    obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
+    dcterms:identifier "https://zenodo.org/api/records/10850991/files/Indentation force for different simulation setup.png/content" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850991> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850991> ;
+    nfdi:NFDI_0001006 "10.5281/zenodo.10850991" .
+

@@ -1,8 +1,41 @@
 [
   {
-    "subject": "https://purls.helmholtz-metadaten.de/msekg/17588918337771",
+    "endpoint_individual": "https://purls.helmholtz-metadaten.de/msekg/17588918337771",
     "endpoint": "https://sparql-nfdi-matwerk-02.web.vulcanus.otc.coscine.dev/",
-    "graph_iri": "https://purls.helmholtz-metadaten.de/msekg/g/1759164875713",
-    "triples_added_estimate": 10000
+    "graphs": {
+      "classes": {
+        "iri": "https://purls.helmholtz-metadaten.de/msekg/1759747764517",
+        "nq": "data\\sparql_endpoints\\named_graphs\\1759747764517.nq",
+        "ttl": "data\\sparql_endpoints\\named_graphs\\1759747764517.ttl"
+      },
+      "classHierarchy": {
+        "iri": "https://purls.helmholtz-metadaten.de/msekg/1759747764518",
+        "nq": "data\\sparql_endpoints\\named_graphs\\1759747764518.nq",
+        "ttl": "data\\sparql_endpoints\\named_graphs\\1759747764518.ttl"
+      },
+      "tbox": {
+        "iri": "https://purls.helmholtz-metadaten.de/msekg/1759747764519",
+        "nq": "data\\sparql_endpoints\\named_graphs\\1759747764519.nq",
+        "ttl": "data\\sparql_endpoints\\named_graphs\\1759747764519.ttl"
+      }
+    },
+    "datasets": [
+      "https://purls.helmholtz-metadaten.de/msekg/17588917500551"
+    ],
+    "stats": {
+      "classes": 123,
+      "objectProperties": 85,
+      "dataProperties": 32,
+      "instances": 724,
+      "classesReusedFromMWO": 2,
+      "objectPropertiesReusedFromMWO": 0,
+      "dataPropertiesReusedFromMWO": 0,
+      "classesReusedFromMWO_list": [
+        "http://purl.obolibrary.org/obo/BFO_0000023",
+        "http://www.ebi.ac.uk/swo/SWO_0000002"
+      ],
+      "objectPropertiesReusedFromMWO_list": [],
+      "dataPropertiesReusedFromMWO_list": []
+    }
   }
 ]

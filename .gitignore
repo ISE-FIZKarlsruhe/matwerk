@@ -28,6 +28,7 @@ Thumbs.db
 *.log
 *.tmp
 *.bak
+/data/zenodo/download/
 
 # Ignore documentation and site builds
 /site/
