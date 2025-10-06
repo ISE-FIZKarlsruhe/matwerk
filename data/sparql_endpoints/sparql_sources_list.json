@@ -5,18 +5,18 @@
     "graphs": {
       "classes": {
         "iri": "https://purls.helmholtz-metadaten.de/msekg/1759747764517",
-        "nq": "data\\sparql_endpoints\\named_graphs\\1759747764517.nq",
-        "ttl": "data\\sparql_endpoints\\named_graphs\\1759747764517.ttl"
+        "nq": "data/sparql_endpoints/named_graphs/1759747764517.nq",
+        "ttl": "data/sparql_endpoints/named_graphs/1759747764517.ttl"
       },
       "classHierarchy": {
         "iri": "https://purls.helmholtz-metadaten.de/msekg/1759747764518",
-        "nq": "data\\sparql_endpoints\\named_graphs\\1759747764518.nq",
-        "ttl": "data\\sparql_endpoints\\named_graphs\\1759747764518.ttl"
+        "nq": "data/sparql_endpoints/named_graphs/1759747764518.nq",
+        "ttl": "data/sparql_endpoints/named_graphs/1759747764518.ttl"
       },
       "tbox": {
         "iri": "https://purls.helmholtz-metadaten.de/msekg/1759747764519",
-        "nq": "data\\sparql_endpoints\\named_graphs\\1759747764519.nq",
-        "ttl": "data\\sparql_endpoints\\named_graphs\\1759747764519.ttl"
+        "nq": "data/sparql_endpoints/named_graphs/1759747764519.nq",
+        "ttl": "data/sparql_endpoints/named_graphs/1759747764519.ttl"
       }
     },
     "datasets": [
