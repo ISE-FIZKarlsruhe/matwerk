@@ -8,7 +8,7 @@ RDF_EXTS = {".ttl", ".trig", ".nt", ".nq", ".n3", ".owl", ".rdf", ".xml", ".json
 ZIP_EXTS = {".zip"}
 
 # ---- Size cap: 500 MB (in bytes) ----
-MAX_FILE_BYTES = 500 * 1024 * 1024
+MAX_FILE_BYTES = 100 * 1024 * 1024
 
 # ---- Helpers ----
 def should_fetch_rdf_like(file_key: Optional[str], url: Optional[str]) -> bool:
