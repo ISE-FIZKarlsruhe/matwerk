@@ -1,0 +1,45 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://w3id.org/pmd/pc#Blade> a owl:Class ;
+    rdfs:label "Blade"@en .
+
+<https://w3id.org/pmd/pc#CuttingAngle> a owl:Class ;
+    rdfs:label "Cutting Angle"@en .
+
+<https://w3id.org/pmd/pc#CuttingSpeed> a owl:Class ;
+    rdfs:label "Cutting Speed"@en .
+
+<https://w3id.org/pmd/pc#CuttingTechnique> a owl:Class ;
+    rdfs:label "Cutting Technique"@en .
+
+<https://w3id.org/pmd/pc#DINA4> a owl:Class ;
+    rdfs:label "DINA4"@en .
+
+<https://w3id.org/pmd/pc#DINA5> a owl:Class ;
+    rdfs:label "DINA5"@en .
+
+<https://w3id.org/pmd/pc#IndustrialPaperCutter> a owl:Class ;
+    rdfs:label "Industrial Paper Cutter"@en .
+
+<https://w3id.org/pmd/pc#Paper> a owl:Class ;
+    rdfs:label "Paper"@en .
+
+<https://w3id.org/pmd/pc#PaperCutter> a owl:Class ;
+    rdfs:label "Paper Cutter"@en .
+
+<https://w3id.org/pmd/pc#PaperCutting> a owl:Class ;
+    rdfs:label "Paper Cutting"@en .
+
+<https://w3id.org/pmd/pc#PaperCuttingDevice> a owl:Class ;
+    rdfs:label "Paper Cutting Device"@en .
+
+<https://w3id.org/pmd/pc#PaperGeometry> a owl:Class ;
+    rdfs:label "Paper Geometry"@en .
+
+<https://w3id.org/pmd/pc#Scissors> a owl:Class ;
+    rdfs:label "Scissors"@en .
+
+<https://w3id.org/pmd/pc#StraightCut> a owl:Class ;
+    rdfs:label "Straight Cut"@en .
+

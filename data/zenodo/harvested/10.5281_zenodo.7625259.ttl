@@ -1,0 +1,28 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757743772> a nfdi:NFDI_0000009 ;
+    rdfs:label "https://zenodo.org/records/6659460" ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759757743783>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757743784> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759757743773> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757743773> rdfs:label "Radii of S-phase Al2CuMg in Al-alloy EN AW-2618A after different aging times at 190°C" ;
+    obo:OBI_0002135 "Radii of S-phase Al2CuMg in Al-alloy EN AW-2618A after different aging times at 190°C" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757743783> rdfs:label "radii_190C_aging_V1.1.xlsx" ;
+    obo:OBI_0002135 "Radii of S-phase Al2CuMg in Al-alloy EN AW-2618A after different aging times at 190°C" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.7625259> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.7625259> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.7625259>,
+        <https://zenodo.org/api/records/7625259/files/radii_190C_aging_V1.1.xlsx/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757743784> rdfs:label "Content.pdf" ;
+    obo:OBI_0002135 "Radii of S-phase Al2CuMg in Al-alloy EN AW-2618A after different aging times at 190°C" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.7625259> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.7625259> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.7625259>,
+        <https://zenodo.org/api/records/7625259/files/Content.pdf/content> .
+

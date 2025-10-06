@@ -1,0 +1,20 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758154471> a nfdi:NFDI_0000009 ;
+    rdfs:label "https://zenodo.org/records/10043613" ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759758154473> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759758154472> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758154472> rdfs:label "Atomistic Structures discussed in \"Segregation-enhanced grain boundary embrittlement of recrystallised tungsten evidenced by site-specific microcantilever fracture\"" ;
+    obo:OBI_0002135 "Atomistic Structures discussed in \"Segregation-enhanced grain boundary embrittlement of recrystallised tungsten evidenced by site-specific microcantilever fracture\"" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758154473> rdfs:label "Sigma7_GB.tar" ;
+    obo:OBI_0002135 "Atomistic Structures discussed in \"Segregation-enhanced grain boundary embrittlement of recrystallised tungsten evidenced by site-specific microcantilever fracture\"" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10043614> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10043614> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.10043614>,
+        <https://zenodo.org/api/records/10043614/files/Sigma7_GB.tar/content> .
+

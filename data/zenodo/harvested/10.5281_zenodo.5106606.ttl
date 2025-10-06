@@ -1,0 +1,140 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748359> a nfdi:NFDI_0000009 ;
+    rdfs:label "https://zenodo.org/records/5106605" ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759757748361>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748362>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748363>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748364>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748365>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748366>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748367>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748368>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748369>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748370>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748371>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748372>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748373>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748374>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748375>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759757748376> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759757748360> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748360> rdfs:label "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748361> rdfs:label "KN7180-04.LIS" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/KN7180-04.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748362> rdfs:label "KRI011-002_Kriechprobe-50-Bünde.pdf" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/KRI011-002_Kriechprobe-50-B%C3%BCnde.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748363> rdfs:label "KRI012-001_Kriechprobe-30-Bünde.pdf" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/KRI012-001_Kriechprobe-30-B%C3%BCnde.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748364> rdfs:label "Pruefmittel_Messmittel-Kriechversuche.pdf" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/Pruefmittel_Messmittel-Kriechversuche.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748365> rdfs:label "Inhalt_Content.pdf" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/Inhalt_Content.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748366> rdfs:label "KN7180-01.LIS" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/KN7180-01.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748367> rdfs:label "BCR-425_cert.pdf" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/BCR-425_cert.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748368> rdfs:label "BCR425-280-4.LIS" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/BCR425-280-4.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748369> rdfs:label "BCR425-280-1.LIS" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/BCR425-280-1.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748370> rdfs:label "KN7180-05.LIS" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/KN7180-05.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748371> rdfs:label "Ergebnisse-N75-BCR425.pdf" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/Ergebnisse-N75-BCR425.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748372> rdfs:label "BCR425-280-2.LIS" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/BCR425-280-2.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748373> rdfs:label "KN7180-08.LIS" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/KN7180-08.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748374> rdfs:label "BCR425-280-3.LIS" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/BCR425-280-3.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748375> rdfs:label "KN7180-07.LIS" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/KN7180-07.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759757748376> rdfs:label "KN7180-06.LIS" ;
+    obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.5106606> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.5106606> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.5106606>,
+        <https://zenodo.org/api/records/5106606/files/KN7180-06.LIS/content> .
+
