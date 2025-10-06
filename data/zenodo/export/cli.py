@@ -90,7 +90,7 @@ def main():
 
             # minted file identifier (literal)
             fid = URIRef(get_or_mint_file_identifier(state, key, file_key, session_nodes))
-            g.add((fid, URIRef("http://purl.org/dc/terms/identifier"), Literal(file_uri)))
+            #g.add((fid, URIRef("http://purl.org/dc/terms/identifier"), Literal(file_uri)))
             
             # hasPart relation
             g.add((instance_iri, URIRef("http://purl.obolibrary.org/obo/BFO_0000051"), fid))
