@@ -13,8 +13,8 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/1759758154473> rdfs:label "Sigma7_GB.tar" ;
     obo:OBI_0002135 "Atomistic Structures discussed in \"Segregation-enhanced grain boundary embrittlement of recrystallised tungsten evidenced by site-specific microcantilever fracture\"" ;
-    dcterms:identifier "https://zenodo.org/api/records/10043614/files/Sigma7_GB.tar/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10043614> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10043614> ;
-    nfdi:NFDI_0001006 "10.5281/zenodo.10043614" .
+    nfdi:NFDI_0001006 <10.5281/zenodo.10043614>,
+        <https://zenodo.org/api/records/10043614/files/Sigma7_GB.tar/content> .
 

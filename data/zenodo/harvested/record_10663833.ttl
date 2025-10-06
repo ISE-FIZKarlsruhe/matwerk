@@ -13,8 +13,8 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/1759758153085> rdfs:label "glossary.pdf" ;
     obo:OBI_0002135 "The MDMC-NEP Glossary of Terms" ;
-    dcterms:identifier "https://zenodo.org/api/records/10663833/files/glossary.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10663833> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10663833> ;
-    nfdi:NFDI_0001006 "10.5281/zenodo.10663833" .
+    nfdi:NFDI_0001006 <10.5281/zenodo.10663833>,
+        <https://zenodo.org/api/records/10663833/files/glossary.pdf/content> .
 

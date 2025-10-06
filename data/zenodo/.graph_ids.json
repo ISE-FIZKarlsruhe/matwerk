@@ -46,7 +46,11 @@
     "10663832": "https://purls.helmholtz-metadaten.de/msekg/1759758153083",
     "10043613": "https://purls.helmholtz-metadaten.de/msekg/1759758154471",
     "10850977": "https://purls.helmholtz-metadaten.de/msekg/1759758156248",
-    "10850990": "https://purls.helmholtz-metadaten.de/msekg/1759758157547"
+    "10850990": "https://purls.helmholtz-metadaten.de/msekg/1759758157547",
+    "8065751": "https://purls.helmholtz-metadaten.de/msekg/1759767769043",
+    "11224126": "https://purls.helmholtz-metadaten.de/msekg/1759767916972",
+    "4047773": "https://purls.helmholtz-metadaten.de/msekg/1759767918217",
+    "5000610": "https://purls.helmholtz-metadaten.de/msekg/1759767937740"
   },
   "nodes": {
     "16753542": [
@@ -189,6 +193,18 @@
     ],
     "10850990": [
       "https://purls.helmholtz-metadaten.de/msekg/1759758157548"
+    ],
+    "8065751": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759767769044"
+    ],
+    "11224126": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759767916973"
+    ],
+    "4047773": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759767918218"
+    ],
+    "5000610": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759767937741"
     ]
   },
   "file_graphs": {
@@ -359,7 +375,68 @@
     "10850990|Snapshots showing pile-ups at the surface.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157567",
     "10850990|Dislocations in the substrate during simulation.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157568",
     "10850990|Measured hardness of aluminum.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157569",
-    "10850990|Indentation force for different simulation setup.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157570"
+    "10850990|Indentation force for different simulation setup.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157570",
+    "8065751|Final Results_25_ForthePaper_Z.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767915793",
+    "8065751|Final Results_14_ForthePaper_Z.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767915794",
+    "8065751|Final Results_19_ForthePaper_Z.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767915795",
+    "8065751|Guide_DataStructure.txt": "https://purls.helmholtz-metadaten.de/msekg/1759767915796",
+    "8065751|3D_Damage.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767915797",
+    "11224126|Microstructure_Segmetation.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767917179",
+    "4047773|cnn.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767934764",
+    "4047773|dt_cnn.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767934765",
+    "4047773|ann.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767934766",
+    "4047773|data.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767934767",
+    "4047773|readme.txt": "https://purls.helmholtz-metadaten.de/msekg/1759767934768",
+    "4047773|analytical.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767934769",
+    "5000610|AQ1_5kV_sp-5_SE_5K_002.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937744",
+    "5000610|AQ1_5kV_sp-5_A-7_SE_6K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937745",
+    "5000610|AQ1_5kV_sp-5_A-6_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937746",
+    "5000610|AQ1_5kV_sp-5_A-5_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937747",
+    "5000610|AQ1_5kV_sp-5_A-5_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937748",
+    "5000610|AQ1_5kV_sp-5_A-4_SE_3K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937749",
+    "5000610|AQ1_5kV_sp-5_A-3_SE_5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937750",
+    "5000610|AQ1_5kV_sp-5_A-3_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937751",
+    "5000610|AQ1_5kV_sp-5_A-2_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937752",
+    "5000610|AQ5_5kV_sp-5_A-3_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937753",
+    "5000610|AQ5_5kV_sp-5_A-3_SE_2.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937754",
+    "5000610|AQ5_5kV_sp-5_A-2_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937755",
+    "5000610|AQ5_5kV_sp-5_A-1_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937756",
+    "5000610|AQ5_5kV_sp-5_A-1_SE_2.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937757",
+    "5000610|AQ5_5kV_sp-5_A-1_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937758",
+    "5000610|AQ4_5kV_sp-5_A-4_SE_6K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937759",
+    "5000610|AQ1_5kV_sp-5_A-7_SE_6K_002.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937760",
+    "5000610|AQ1_5kV_sp-5_A-8_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937761",
+    "5000610|AQ1_5kV_sp-5_A-8_SE_2K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937762",
+    "5000610|AQ1_5kV_sp-5_SE_1K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937763",
+    "5000610|AQ1_5kV_sp-5_SE_2K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937764",
+    "5000610|AQ1_5kV_sp-5_SE_5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937765",
+    "5000610|AQ1_5kV_sp-5_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937766",
+    "5000610|AQ2_5kV_sp-5_A-1_SE_2.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937767",
+    "5000610|AQ2_5kV_sp-5_A-1_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937768",
+    "5000610|AQ2_5kV_sp-5_A-2_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937769",
+    "5000610|AQ2_5kV_sp-5_A-2_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937770",
+    "5000610|AQ2_5kV_sp-5_A-3_SE_4K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937771",
+    "5000610|AQ2_5kV_sp-5_A-3_SE_4K_002.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937772",
+    "5000610|AQ2_5kV_sp-5_A-3_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937773",
+    "5000610|AQ2_5kV_sp-5_A-4_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937774",
+    "5000610|AQ2_5kV_sp-5_A-4_SE_4K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937775",
+    "5000610|AQ3_5kV_sp-5_A-1_SE_1.5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937776",
+    "5000610|AQ3_5kV_sp-5_A-1_SE_2.5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937777",
+    "5000610|AQ3_5kV_sp-5_A-1_SE_7K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937778",
+    "5000610|AQ3_5kV_sp-5_A-2_SE_1.5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937779",
+    "5000610|AQ3_5kV_sp-5_A-2_SE_5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937780",
+    "5000610|AQ3_5kV_sp-5_A-3_SE_1.5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937781",
+    "5000610|AQ3_5kV_sp-5_A-3_SE_4K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937782",
+    "5000610|AQ3_5kV_sp-5_A-4_SE_6K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937783",
+    "5000610|AQ3_5kV_sp-5_A-5_SE_1.5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937784",
+    "5000610|AQ3_5kV_sp-5_A-5_SE_4K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937785",
+    "5000610|AQ4_5kV_sp-5_A-1_SE_7K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937786",
+    "5000610|AQ4_5kV_sp-5_A-2_SE_5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937787",
+    "5000610|AQ4_5kV_sp-5_A-3_SE_2K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937788",
+    "5000610|AQ4_5kV_sp-5_A-3_SE_4K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937789",
+    "5000610|AQ4_5kV_sp-5_A-4_SE_1K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937790",
+    "5106605|BCR-425_report_Characterization.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759767951480",
+    "5106605|Inhalt_Content_V1.1.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759767951492"
   },
   "graphs": {},
   "by_record": {

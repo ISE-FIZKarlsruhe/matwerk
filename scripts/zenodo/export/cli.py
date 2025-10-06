@@ -381,7 +381,7 @@ def main():
             if title:
                 g.add((fid, URIRef("http://purl.obolibrary.org/obo/OBI_0002135"), Literal(title)))
             if doi:
-                g.add((fid, URIRef("https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006"), Literal(doi)))
+                g.add((fid, URIRef("https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006"), URIRef(to_doi_iri(doi))))
                 doi_url = (rec.get("links", {}) or {}).get("doi") or (f"https://doi.org/{doi}" if not str(doi).startswith("http") else str(doi))
                 g.add((fid, URIRef("http://purl.org/dc/terms/isPartOf"), URIRef(doi_url)))
                 g.add((fid, RDFS.seeAlso, URIRef(doi_url)))

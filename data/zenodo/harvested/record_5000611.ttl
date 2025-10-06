@@ -1,0 +1,388 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937740> a nfdi:NFDI_0000009 ;
+    rdfs:label "https://zenodo.org/records/5000610" ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759767937744>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937745>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937746>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937747>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937748>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937749>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937750>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937751>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937752>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937753>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937754>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937755>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937756>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937757>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937758>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937759>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937760>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937761>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937762>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937763>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937764>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937765>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937766>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937767>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937768>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937769>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937770>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937771>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937772>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937773>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937774>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937775>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937776>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937777>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937778>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937779>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937780>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937781>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937782>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937783>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937784>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937785>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937786>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937787>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937788>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937789>,
+        <https://purls.helmholtz-metadaten.de/msekg/1759767937790> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759767937741> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937741> rdfs:label "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937744> rdfs:label "AQ1_5kV_sp-5_SE_5K_002.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_SE_5K_002.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937745> rdfs:label "AQ1_5kV_sp-5_A-7_SE_6K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_A-7_SE_6K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937746> rdfs:label "AQ1_5kV_sp-5_A-6_SE_1.5K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_A-6_SE_1.5K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937747> rdfs:label "AQ1_5kV_sp-5_A-5_SE_7K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_A-5_SE_7K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937748> rdfs:label "AQ1_5kV_sp-5_A-5_SE_1.5K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_A-5_SE_1.5K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937749> rdfs:label "AQ1_5kV_sp-5_A-4_SE_3K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_A-4_SE_3K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937750> rdfs:label "AQ1_5kV_sp-5_A-3_SE_5K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_A-3_SE_5K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937751> rdfs:label "AQ1_5kV_sp-5_A-3_SE_1.5K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_A-3_SE_1.5K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937752> rdfs:label "AQ1_5kV_sp-5_A-2_SE_7K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_A-2_SE_7K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937753> rdfs:label "AQ5_5kV_sp-5_A-3_SE_7K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ5_5kV_sp-5_A-3_SE_7K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937754> rdfs:label "AQ5_5kV_sp-5_A-3_SE_2.5K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ5_5kV_sp-5_A-3_SE_2.5K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937755> rdfs:label "AQ5_5kV_sp-5_A-2_SE_7K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ5_5kV_sp-5_A-2_SE_7K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937756> rdfs:label "AQ5_5kV_sp-5_A-1_SE_7K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ5_5kV_sp-5_A-1_SE_7K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937757> rdfs:label "AQ5_5kV_sp-5_A-1_SE_2.5K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ5_5kV_sp-5_A-1_SE_2.5K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937758> rdfs:label "AQ5_5kV_sp-5_A-1_SE_1.5K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ5_5kV_sp-5_A-1_SE_1.5K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937759> rdfs:label "AQ4_5kV_sp-5_A-4_SE_6K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ4_5kV_sp-5_A-4_SE_6K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937760> rdfs:label "AQ1_5kV_sp-5_A-7_SE_6K_002.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_A-7_SE_6K_002.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937761> rdfs:label "AQ1_5kV_sp-5_A-8_SE_1.5K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_A-8_SE_1.5K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937762> rdfs:label "AQ1_5kV_sp-5_A-8_SE_2K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_A-8_SE_2K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937763> rdfs:label "AQ1_5kV_sp-5_SE_1K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_SE_1K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937764> rdfs:label "AQ1_5kV_sp-5_SE_2K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_SE_2K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937765> rdfs:label "AQ1_5kV_sp-5_SE_5K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_SE_5K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937766> rdfs:label "AQ1_5kV_sp-5_SE_7K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ1_5kV_sp-5_SE_7K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937767> rdfs:label "AQ2_5kV_sp-5_A-1_SE_2.5K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ2_5kV_sp-5_A-1_SE_2.5K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937768> rdfs:label "AQ2_5kV_sp-5_A-1_SE_7K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ2_5kV_sp-5_A-1_SE_7K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937769> rdfs:label "AQ2_5kV_sp-5_A-2_SE_1.5K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ2_5kV_sp-5_A-2_SE_1.5K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937770> rdfs:label "AQ2_5kV_sp-5_A-2_SE_7K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ2_5kV_sp-5_A-2_SE_7K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937771> rdfs:label "AQ2_5kV_sp-5_A-3_SE_4K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ2_5kV_sp-5_A-3_SE_4K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937772> rdfs:label "AQ2_5kV_sp-5_A-3_SE_4K_002.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ2_5kV_sp-5_A-3_SE_4K_002.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937773> rdfs:label "AQ2_5kV_sp-5_A-3_SE_7K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ2_5kV_sp-5_A-3_SE_7K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937774> rdfs:label "AQ2_5kV_sp-5_A-4_SE_1.5K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ2_5kV_sp-5_A-4_SE_1.5K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937775> rdfs:label "AQ2_5kV_sp-5_A-4_SE_4K_001.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ2_5kV_sp-5_A-4_SE_4K_001.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937776> rdfs:label "AQ3_5kV_sp-5_A-1_SE_1.5K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ3_5kV_sp-5_A-1_SE_1.5K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937777> rdfs:label "AQ3_5kV_sp-5_A-1_SE_2.5K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ3_5kV_sp-5_A-1_SE_2.5K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937778> rdfs:label "AQ3_5kV_sp-5_A-1_SE_7K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ3_5kV_sp-5_A-1_SE_7K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937779> rdfs:label "AQ3_5kV_sp-5_A-2_SE_1.5K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ3_5kV_sp-5_A-2_SE_1.5K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937780> rdfs:label "AQ3_5kV_sp-5_A-2_SE_5K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ3_5kV_sp-5_A-2_SE_5K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937781> rdfs:label "AQ3_5kV_sp-5_A-3_SE_1.5K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ3_5kV_sp-5_A-3_SE_1.5K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937782> rdfs:label "AQ3_5kV_sp-5_A-3_SE_4K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ3_5kV_sp-5_A-3_SE_4K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937783> rdfs:label "AQ3_5kV_sp-5_A-4_SE_6K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ3_5kV_sp-5_A-4_SE_6K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937784> rdfs:label "AQ3_5kV_sp-5_A-5_SE_1.5K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ3_5kV_sp-5_A-5_SE_1.5K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937785> rdfs:label "AQ3_5kV_sp-5_A-5_SE_4K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ3_5kV_sp-5_A-5_SE_4K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937786> rdfs:label "AQ4_5kV_sp-5_A-1_SE_7K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ4_5kV_sp-5_A-1_SE_7K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937787> rdfs:label "AQ4_5kV_sp-5_A-2_SE_5K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ4_5kV_sp-5_A-2_SE_5K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937788> rdfs:label "AQ4_5kV_sp-5_A-3_SE_2K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ4_5kV_sp-5_A-3_SE_2K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937789> rdfs:label "AQ4_5kV_sp-5_A-3_SE_4K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ4_5kV_sp-5_A-3_SE_4K_001r.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759767937790> rdfs:label "AQ4_5kV_sp-5_A-4_SE_1K_001r.tif" ;
+    obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
+    dcterms:isPartOf <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    rdfs:seeAlso <https://doi.org/10.5061/dryad.ttdz08kt4> ;
+    nfdi:NFDI_0001006 <10.5061/dryad.ttdz08kt4>,
+        <https://zenodo.org/api/records/5000611/files/AQ4_5kV_sp-5_A-4_SE_1K_001r.tif/content> .
+
