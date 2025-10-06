@@ -40,12 +40,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000178 -->
-
-    <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000178"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000235 -->
 
     <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000235"/>
@@ -80,24 +74,10 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451394390865 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451394390865"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174636276694537 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174636276694537"/>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17588917500551 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17588917500551">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:BFO_0000178 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451394390865"/>
-        <obo:BFO_0000178 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174636276694537"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17588918337771"/>
         <label:en>MSE Knowledge Graph v1.0</label:en>
     </NamedIndividual>

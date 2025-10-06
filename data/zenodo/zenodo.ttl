@@ -248,7 +248,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993019> rdfs:label "20250827_NFDI-MatWerk_RenewalProposal_B-1_version 2.0.pdf" ;
     obo:OBI_0002135 "NFDI-MatWerk Renewal Proposal Part B-1 updated version" ;
-    dcterms:identifier "https://zenodo.org/api/records/17120646/files/20250827_NFDI-MatWerk_RenewalProposal_B-1_version 2.0.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17120646> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17120646> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.17120646" .
@@ -258,7 +257,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993022> rdfs:label "MaterialsOntologies_MC2025.pdf" ;
     obo:OBI_0002135 "Achieving semantic interoperability in materials science data" ;
-    dcterms:identifier "https://zenodo.org/api/records/17053393/files/MaterialsOntologies_MC2025.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17053393> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17053393> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.17053393" .
@@ -268,7 +266,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993025> rdfs:label "NFDI-MatWerk-Demos_CoRDI2025.pdf" ;
     obo:OBI_0002135 "Community-Driven Development of Infrastructure Use Cases in NFDI-MatWerk" ;
-    dcterms:identifier "https://zenodo.org/api/records/17046190/files/NFDI-MatWerk-Demos_CoRDI2025.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17046190> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17046190> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.17046190" .
@@ -278,8 +275,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993028> rdfs:label "NFDI-MatWerk - Roll-out.pdf" ;
     obo:OBI_0002135 "Building bridges: Roll-Out group of NFDI-MatWerk" ;
-    dcterms:identifier "https://zenodo.org/api/records/17034858/files/NFDI-MatWerk - Roll-out.pdf/content",
-        "https://zenodo.org/api/records/17044588/files/NFDI-MatWerk - Roll-out.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17034858>,
         <https://doi.org/10.5281/zenodo.17044588> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17034858>,
@@ -289,14 +284,12 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993029> rdfs:label "CoRDI_2025_paper_171.pdf" ;
     obo:OBI_0002135 "Building bridges: Roll-Out group of NFDI-MatWerk" ;
-    dcterms:identifier "https://zenodo.org/api/records/17044588/files/CoRDI_2025_paper_171.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17044588> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17044588> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.17044588" .
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993030> rdfs:label "1min_flash_presentation.svg" ;
     obo:OBI_0002135 "Building bridges: Roll-Out group of NFDI-MatWerk" ;
-    dcterms:identifier "https://zenodo.org/api/records/17044588/files/1min_flash_presentation.svg/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17044588> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17044588> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.17044588" .
@@ -306,14 +299,12 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993033> rdfs:label "2025-08-31_MC2025_EMGlossary_update.pdf" ;
     obo:OBI_0002135 "The EM Glossary - A community resource providing harmonized terminology in electron microscopy" ;
-    dcterms:identifier "https://zenodo.org/api/records/17035738/files/2025-08-31_MC2025_EMGlossary_update.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17035738> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17035738> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.17035738" .
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993034> rdfs:label "2025-08-31_MC2025_EMGlossary.pdf" ;
     obo:OBI_0002135 "The EM Glossary - A community resource providing harmonized terminology in electron microscopy" ;
-    dcterms:identifier "https://zenodo.org/api/records/17014022/files/2025-08-31_MC2025_EMGlossary.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17014022> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17014022> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.17014022" .
@@ -323,14 +314,12 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993037> rdfs:label "MSEResearchDataForumIUC04_slides.pdf" ;
     obo:OBI_0002135 "Boosting Materials Science through Collaboration and Automation via a centralized Research Data Management System" ;
-    dcterms:identifier "https://zenodo.org/api/records/15861514/files/MSEResearchDataForumIUC04_slides.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15861514> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15861514> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.15861514" .
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993038> rdfs:label "20250806_NFDI-MatWerk_RenewalProposal_B1.pdf" ;
     obo:OBI_0002135 "NFDI-MatWerk Renewal Proposal Part B-1" ;
-    dcterms:identifier "https://zenodo.org/api/records/16753543/files/20250806_NFDI-MatWerk_RenewalProposal_B1.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.16753543> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.16753543> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.16753543" .
@@ -340,8 +329,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993041> rdfs:label "Vh5260_25-11.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5260_25-11.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5260_25-11.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -351,8 +338,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993042> rdfs:label "Vh5299_2-10.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_2-10.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_2-10.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -362,8 +347,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993043> rdfs:label "Vh5299_1-2.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_1-2.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_1-2.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -373,8 +356,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993044> rdfs:label "Vh5299_5-25.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_5-25.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_5-25.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -384,8 +365,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993045> rdfs:label "Vh5260_25-12.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5260_25-12.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5260_25-12.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -395,8 +374,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993046> rdfs:label "Vh5260_25-13.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5260_25-13.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5260_25-13.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -406,8 +383,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993047> rdfs:label "Vh5260_25-14.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5260_25-14.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5260_25-14.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -417,8 +392,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993048> rdfs:label "VH5299_1-1.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/VH5299_1-1.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/VH5299_1-1.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -428,8 +401,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993049> rdfs:label "Vh5299_2-14.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_2-14.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_2-14.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -439,8 +410,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993050> rdfs:label "Vh5299_1-7.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_1-7.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_1-7.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -450,8 +419,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993051> rdfs:label "Vh5299_1-8.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_1-8.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_1-8.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -461,8 +428,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993052> rdfs:label "Vh5299_2-11.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_2-11.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_2-11.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -472,8 +437,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993053> rdfs:label "Vh5299_1-3.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_1-3.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_1-3.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -483,8 +446,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993054> rdfs:label "Vh5299_1-9.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_1-9.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_1-9.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -494,8 +455,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993055> rdfs:label "Vh5299_2-13.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_2-13.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_2-13.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -505,8 +464,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993056> rdfs:label "Vh5299_2-12.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_2-12.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_2-12.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -516,8 +473,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993057> rdfs:label "Vh5299_2-15.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_2-15.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_2-15.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -527,8 +482,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993058> rdfs:label "Vh5299_4-22.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_4-22.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_4-22.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -538,8 +491,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993059> rdfs:label "Vh5299_3-19.LIS" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/Vh5299_3-19.LIS/content",
-        "https://zenodo.org/api/records/15864549/files/Vh5299_3-19.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -549,8 +500,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993060> rdfs:label "2025-06_Data-Schema_Creep_v1.1_EN AW 2618_v1.0.xlsx" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/2025-06_Data-Schema_Creep_v1.1_EN AW 2618_v1.0.xlsx/content",
-        "https://zenodo.org/api/records/15864549/files/2025-06_Data-Schema_Creep_v1.1_EN AW 2618_v1.0.xlsx/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -560,8 +509,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993061> rdfs:label "TestPieceCreepTests-TechnicalDrawing.pdf" ;
     obo:OBI_0002135 "Dataset on the Creep Properties of EN AW-2618A Aluminum Alloy in the T61 and an overaged condition" ;
-    dcterms:identifier "https://zenodo.org/api/records/15744298/files/TestPieceCreepTests-TechnicalDrawing.pdf/content",
-        "https://zenodo.org/api/records/15864549/files/TestPieceCreepTests-TechnicalDrawing.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15744298>,
         <https://doi.org/10.5281/zenodo.15864549> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15744298>,
@@ -574,7 +521,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993064> rdfs:label "20250121_Vortrag NFDI-MatWerk_deRSE_Publication.pdf" ;
     obo:OBI_0002135 "User-centric development of Materials Knowledge Solutions in NFDI-MatWerk" ;
-    dcterms:identifier "https://zenodo.org/api/records/15302021/files/20250121_Vortrag NFDI-MatWerk_deRSE_Publication.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15302021> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15302021> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.15302021" .
@@ -584,7 +530,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993067> rdfs:label "2025-04-10-Riefler-Digitalization+Change-NFDI-MatWerk-SpringSchool.pdf" ;
     obo:OBI_0002135 "Research Data Management (RDM) and Digital Transformation in Science" ;
-    dcterms:identifier "https://zenodo.org/api/records/15222661/files/2025-04-10-Riefler-Digitalization+Change-NFDI-MatWerk-SpringSchool.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15222661> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15222661> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.15222661" .
@@ -594,7 +539,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993070> rdfs:label "Coscine@NFDI-MatWerk-SpringSchool.pdf" ;
     obo:OBI_0002135 "RDM Platform Coscine @ Spring School NFDI-MatWerk" ;
-    dcterms:identifier "https://zenodo.org/api/records/15210642/files/Coscine@NFDI-MatWerk-SpringSchool.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15210642> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15210642> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.15210642" .
@@ -604,7 +548,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993073> rdfs:label "20250410_kr_nfdimatwerk_spring_school_2025_slides.pdf" ;
     obo:OBI_0002135 "Digital Materials Science Lab - RDM and Workflows" ;
-    dcterms:identifier "https://zenodo.org/api/records/15209702/files/20250410_kr_nfdimatwerk_spring_school_2025_slides.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.15209702> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.15209702> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.15209702" .
@@ -614,8 +557,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993076> rdfs:label "Vh5205_C-97.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Vh5205_C-97.LIS/content",
-        "https://zenodo.org/api/records/14750432/files/Vh5205_C-97.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -625,8 +566,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993077> rdfs:label "Microstructure-before-testing.pdf" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Microstructure-before-testing.pdf/content",
-        "https://zenodo.org/api/records/14750432/files/Microstructure-before-testing.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -636,8 +575,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993078> rdfs:label "2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx/content",
-        "https://zenodo.org/api/records/14750432/files/2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -647,8 +584,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993079> rdfs:label "TestPieceCreepTests-TechnicalDrawing-FormA.pdf" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/TestPieceCreepTests-TechnicalDrawing-FormA.pdf/content",
-        "https://zenodo.org/api/records/14750432/files/TestPieceCreepTests-TechnicalDrawing-FormA.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -658,8 +593,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993080> rdfs:label "Test-piece-location.pdf" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Test-piece-location.pdf/content",
-        "https://zenodo.org/api/records/14750432/files/Test-piece-location.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -669,8 +602,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993081> rdfs:label "Vh5205_C-89.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Vh5205_C-89.LIS/content",
-        "https://zenodo.org/api/records/14750432/files/Vh5205_C-89.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -680,8 +611,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993082> rdfs:label "Vh5205_C-82.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Vh5205_C-82.LIS/content",
-        "https://zenodo.org/api/records/14750432/files/Vh5205_C-82.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -691,8 +620,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993083> rdfs:label "Vh5205_C-80.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Vh5205_C-80.LIS/content",
-        "https://zenodo.org/api/records/14750432/files/Vh5205_C-80.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -702,8 +629,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993084> rdfs:label "Vh5205_C-91.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Vh5205_C-91.LIS/content",
-        "https://zenodo.org/api/records/14750432/files/Vh5205_C-91.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -713,8 +638,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993085> rdfs:label "Vh5205_C-99.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Vh5205_C-99.LIS/content",
-        "https://zenodo.org/api/records/14750432/files/Vh5205_C-99.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -724,8 +647,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993086> rdfs:label "Vh5205_C-94.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Vh5205_C-94.LIS/content",
-        "https://zenodo.org/api/records/14750432/files/Vh5205_C-94.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -735,8 +656,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993087> rdfs:label "Vh5205_C-85.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Vh5205_C-85.LIS/content",
-        "https://zenodo.org/api/records/14750432/files/Vh5205_C-85.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -746,8 +665,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993088> rdfs:label "Vh5205_C-98.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Vh5205_C-98.LIS/content",
-        "https://zenodo.org/api/records/14750432/files/Vh5205_C-98.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -757,8 +674,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993089> rdfs:label "Vh5205_C-78.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Vh5205_C-78.LIS/content",
-        "https://zenodo.org/api/records/14750432/files/Vh5205_C-78.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -768,8 +683,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993090> rdfs:label "Vh5205_C-95.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Vh5205_C-95.LIS/content",
-        "https://zenodo.org/api/records/14750432/files/Vh5205_C-95.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -779,8 +692,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993091> rdfs:label "Vh5205_C-81.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/Vh5205_C-81.LIS/content",
-        "https://zenodo.org/api/records/14750432/files/Vh5205_C-81.LIS/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987>,
         <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987>,
@@ -790,7 +701,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993092> rdfs:label "2025-01_RDS_CMSX-6-Coversheet_v1.1.pdf" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/14750432/files/2025-01_RDS_CMSX-6-Coversheet_v1.1.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.14750432> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.14750432> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.14750432" .
@@ -800,14 +710,12 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993095> rdfs:label "2024-10-31_EMG-OBM_HMCconference.pdf" ;
     obo:OBI_0002135 "The EM Glossary: a community effort towards a harmonized terminology in electron microscopy" ;
-    dcterms:identifier "https://zenodo.org/api/records/14178185/files/2024-10-31_EMG-OBM_HMCconference.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.14178185> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.14178185> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.14178185" .
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993096> rdfs:label "2024-10_RD_CMSX-6-Coversheet.pdf" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:identifier "https://zenodo.org/api/records/13937987/files/2024-10_RD_CMSX-6-Coversheet.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13937987" .
@@ -817,7 +725,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993099> rdfs:label "2024-11-05-10_30-Group-Charta_RDM-Helpdesks.pdf" ;
     obo:OBI_0002135 "Working Group Charter. RDM Helpdesk Network" ;
-    dcterms:identifier "https://zenodo.org/api/records/14035822/files/2024-11-05-10_30-Group-Charta_RDM-Helpdesks.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.14035822> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.14035822> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.14035822" .
@@ -827,7 +734,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993102> rdfs:label "2024-09-12_Introduction to Research Data Management (RDM) - HedgeDoc.pdf" ;
     obo:OBI_0002135 "Introduction to Research Data Management (RDM)" ;
-    dcterms:identifier "https://zenodo.org/api/records/13838506/files/2024-09-12_Introduction to Research Data Management (RDM) - HedgeDoc.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13838506> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13838506> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13838506" .
@@ -837,7 +743,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993105> rdfs:label "2024-09-12_Data Management Plan (DMP) - HedgeDoc.pdf" ;
     obo:OBI_0002135 "Data Management Plan (DMP)" ;
-    dcterms:identifier "https://zenodo.org/api/records/13838718/files/2024-09-12_Data Management Plan (DMP) - HedgeDoc.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13838718> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13838718> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13838718" .
@@ -847,8 +752,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993108> rdfs:label "NFDI-MatWerk_digitalization survey 2024.pdf" ;
     obo:OBI_0002135 "NFDI-MatWerk Digitalisierungsumfrage 2024" ;
-    dcterms:identifier "https://zenodo.org/api/records/13745267/files/NFDI-MatWerk_digitalization survey 2024.pdf/content",
-        "https://zenodo.org/api/records/13880656/files/NFDI-MatWerk_digitalization survey 2024.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13745267>,
         <https://doi.org/10.5281/zenodo.13880656> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13745267>,
@@ -861,7 +764,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993111> rdfs:label "20240917_SaxFDM2024_FundamentalsOfScientificMetadata_Gerlich.pdf" ;
     obo:OBI_0002135 "Fundamentals of Scientific Metadata - Ein praxisorientiertes Kursformat für Wissenschaffende und Data Stewards" ;
-    dcterms:identifier "https://zenodo.org/api/records/13859316/files/20240917_SaxFDM2024_FundamentalsOfScientificMetadata_Gerlich.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13859316> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13859316> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13859316" .
@@ -871,7 +773,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993114> rdfs:label "MSE24- Integration of Linked Open Data in Materials Science and Engineering (MSE).pdf" ;
     obo:OBI_0002135 "Integration of Linked Open Data in Materials Science and Engineering (MSE)" ;
-    dcterms:identifier "https://zenodo.org/api/records/13846096/files/MSE24- Integration of Linked Open Data in Materials Science and Engineering (MSE).pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13846096> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13846096> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13846096" .
@@ -881,28 +782,24 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993117> rdfs:label "2024-09_Data-Schema-coversheet_v1.1.pdf" ;
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
-    dcterms:identifier "https://zenodo.org/api/records/13820070/files/2024-09_Data-Schema-coversheet_v1.1.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13820070> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13820070> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13820070" .
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993118> rdfs:label "2024-09_Data-Schema_Creep_v1.1.xlsx" ;
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
-    dcterms:identifier "https://zenodo.org/api/records/13820070/files/2024-09_Data-Schema_Creep_v1.1.xlsx/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13820070> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13820070> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13820070" .
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993119> rdfs:label "2024-09_Data-Schema_Creep_v1.1.csv" ;
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
-    dcterms:identifier "https://zenodo.org/api/records/13820070/files/2024-09_Data-Schema_Creep_v1.1.csv/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13820070> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13820070> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13820070" .
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993120> rdfs:label "2024-09_Schema_IUC02_v1.1.json" ;
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
-    dcterms:identifier "https://zenodo.org/api/records/13820070/files/2024-09_Schema_IUC02_v1.1.json/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13820070> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13820070> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13820070" .
@@ -912,7 +809,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993123> rdfs:label "NFDI-Matwerk IUC02_v3.pdf" ;
     obo:OBI_0002135 "IUC 02 : Framework for curation and distribution of reference datasets" ;
-    dcterms:identifier "https://zenodo.org/api/records/13628020/files/NFDI-Matwerk IUC02_v3.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13628020> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13628020> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13628020" .
@@ -922,7 +818,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993126> rdfs:label "IUC04_Towards_semi_automated_construction_of_DPDs.pdf" ;
     obo:OBI_0002135 "IUC04: Towards semi automated construction of Defect Phase Diagrams" ;
-    dcterms:identifier "https://zenodo.org/api/records/13220179/files/IUC04_Towards_semi_automated_construction_of_DPDs.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13220179> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13220179> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13220179" .
@@ -932,7 +827,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993129> rdfs:label "IUC12_Status report.pdf" ;
     obo:OBI_0002135 "IUC12: Alignment of application- and higher-level ontologies" ;
-    dcterms:identifier "https://zenodo.org/api/records/13142352/files/IUC12_Status report.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13142352> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13142352> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13142352" .
@@ -942,35 +836,30 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993132> rdfs:label "NFDI-MatWerk_IUC01.pdf" ;
     obo:OBI_0002135 "IUC 01: Web-based demonstration and teaching framework for MSE research data infrastructure" ;
-    dcterms:identifier "https://zenodo.org/api/records/13133719/files/NFDI-MatWerk_IUC01.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13133719> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13133719> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.13133719" .
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993133> rdfs:label "2407_Data-Schema_Creep_v1.0.csv" ;
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
-    dcterms:identifier "https://zenodo.org/api/records/11668376/files/2407_Data-Schema_Creep_v1.0.csv/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.11668376> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.11668376> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.11668376" .
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993134> rdfs:label "2407_Schema_IUC02_v1.0.json" ;
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
-    dcterms:identifier "https://zenodo.org/api/records/11668376/files/2407_Schema_IUC02_v1.0.json/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.11668376> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.11668376> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.11668376" .
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993135> rdfs:label "Data-Schema-coversheet.pdf" ;
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
-    dcterms:identifier "https://zenodo.org/api/records/11668376/files/Data-Schema-coversheet.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.11668376> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.11668376> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.11668376" .
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993136> rdfs:label "2407_Data-Schema_Creep_v1.0.xlsx" ;
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
-    dcterms:identifier "https://zenodo.org/api/records/11668376/files/2407_Data-Schema_Creep_v1.0.xlsx/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.11668376> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.11668376> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.11668376" .
@@ -980,7 +869,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993139> rdfs:label "NFDI-MatWerk-Data-Management-Plan-Guide-v1.0.pdf" ;
     obo:OBI_0002135 "NFDI-MatWerk Guide: Research Data Management Plan" ;
-    dcterms:identifier "https://zenodo.org/api/records/12749438/files/NFDI-MatWerk-Data-Management-Plan-Guide-v1.0.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.12749438> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.12749438> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.12749438" .
@@ -990,7 +878,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993142> rdfs:label "NFDI-MatWerk Spring School April2024_RDM for every day.pdf" ;
     obo:OBI_0002135 "Research Data Management practices for every day" ;
-    dcterms:identifier "https://zenodo.org/api/records/12703358/files/NFDI-MatWerk Spring School April2024_RDM for every day.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.12703358> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.12703358> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.12703358" .
@@ -1000,7 +887,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993145> rdfs:label "IUC_07-report.pdf" ;
     obo:OBI_0002135 "IUC 07: Beyond 3D:Tools for tracking spatiotemporal microstructure evolution" ;
-    dcterms:identifier "https://zenodo.org/api/records/12687143/files/IUC_07-report.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.12687143> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.12687143> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.12687143" .
@@ -1010,7 +896,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993148> rdfs:label "IUC09_MidTermReport.pdf" ;
     obo:OBI_0002135 "NFDI-Matwerk IUC 09: Infrastructure interfaces with condensed matter physics (collaboration with FAIRmat)" ;
-    dcterms:identifier "https://zenodo.org/api/records/12594062/files/IUC09_MidTermReport.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.12594062> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.12594062> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.12594062" .
@@ -1020,7 +905,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993151> rdfs:label "IUC17_StatusReport.pdf" ;
     obo:OBI_0002135 "Status Report: IUC17 - Ontologies for defects in crystals" ;
-    dcterms:identifier "https://zenodo.org/api/records/12207313/files/IUC17_StatusReport.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.12207313> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.12207313> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.12207313" .
@@ -1030,7 +914,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993154> rdfs:label "2406_IUC02_BAM-Ref.Data_Definition_v1.0.pdf" ;
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Definition for Reference Data of Materials" ;
-    dcterms:identifier "https://zenodo.org/api/records/11667674/files/2406_IUC02_BAM-Ref.Data_Definition_v1.0.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.11667674> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.11667674> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.11667674" .
@@ -1040,7 +923,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993293> rdfs:label "pyscal/iuc17_demonstrator-1.0.0.zip" ;
     obo:OBI_0002135 "IUC17 demonstrator" ;
-    dcterms:identifier "https://zenodo.org/api/records/11615371/files/pyscal/iuc17_demonstrator-1.0.0.zip/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.11615371> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.11615371> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.11615371" .
@@ -1050,7 +932,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993296> rdfs:label "Proceedings_NFDI-MatWerk-Conference-2023.pdf" ;
     obo:OBI_0002135 "Proceedings NFDI-MatWerk Conference 2023" ;
-    dcterms:identifier "https://zenodo.org/api/records/11353339/files/Proceedings_NFDI-MatWerk-Conference-2023.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.11353339> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.11353339> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.11353339" .
@@ -1060,8 +941,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993299> rdfs:label "NFDI-Matwerk IUC05.pdf" ;
     obo:OBI_0002135 "IUC 05: Towards better digital infrastructures and workflows for experimental labs" ;
-    dcterms:identifier "https://zenodo.org/api/records/11351400/files/NFDI-Matwerk IUC05.pdf/content",
-        "https://zenodo.org/api/records/11351884/files/NFDI-Matwerk IUC05.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.11351400>,
         <https://doi.org/10.5281/zenodo.11351884> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.11351400>,
@@ -1074,7 +953,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993302> rdfs:label "2024-04_EMGlossary_v1-0-4.pdf" ;
     obo:OBI_0002135 "The EM Glossary: a community effort towards harmonized terminology in electron microscopy" ;
-    dcterms:identifier "https://zenodo.org/api/records/11071439/files/2024-04_EMGlossary_v1-0-4.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.11071439> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.11071439> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.11071439" .
@@ -1084,7 +962,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993305> rdfs:label "Hickel-Bitzek-Neugebauer-MPG-Jahrbuch_2022.pdf" ;
     obo:OBI_0002135 "Mit digitalen Strategien vom Modellsystem zum High-Tech-Material" ;
-    dcterms:identifier "https://zenodo.org/api/records/10620953/files/Hickel-Bitzek-Neugebauer-MPG-Jahrbuch_2022.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10620953> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10620953> ;
     nfdi:NFDI_0001006 "10.5281/zenodo.10620953" .
@@ -1094,7 +971,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993308> rdfs:label "Long Term Interoperability of Distributed Research Data Infrastructures.pdf" ;
     obo:OBI_0002135 "Long Term Interoperability of Distributed Research Data Infrastructures" ;
-    dcterms:identifier "https://zenodo.org/api/records/10204105/files/Long Term Interoperability of Distributed Research Data Infrastructures.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5445/IR/1000162522> ;
     rdfs:seeAlso <https://doi.org/10.5445/IR/1000162522> ;
     nfdi:NFDI_0001006 "10.5445/IR/1000162522" .
@@ -1104,7 +980,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993311> rdfs:label "DCE-CoRDI2023-Ost_Shakeel_Toegel.pdf" ;
     obo:OBI_0002135 "Data Collections Explorer – An Easy-to-Use Tool for Sharing and Discovering Research Data" ;
-    dcterms:identifier "https://zenodo.org/api/records/8399407/files/DCE-CoRDI2023-Ost_Shakeel_Toegel.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5445/IR/1000162287> ;
     rdfs:seeAlso <https://doi.org/10.5445/IR/1000162287> ;
     nfdi:NFDI_0001006 "10.5445/IR/1000162287" .
@@ -1114,7 +989,6 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/v/1758983993314> rdfs:label "FAIR.DO.Commons.27Sep22.pdf" ;
     obo:OBI_0002135 "FAIR Data Commons / Essential Services and Tools for Metadata Management Supporting Science" ;
-    dcterms:identifier "https://zenodo.org/api/records/7227714/files/FAIR.DO.Commons.27Sep22.pdf/content" ;
     dcterms:isPartOf <https://doi.org/10.5445/IR/1000151569> ;
     rdfs:seeAlso <https://doi.org/10.5445/IR/1000151569> ;
     nfdi:NFDI_0001006 "10.5445/IR/1000151569" .

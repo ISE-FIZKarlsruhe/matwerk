@@ -6811,7 +6811,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515632127113">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <ontology:NFDI_0001008>https://https://zenodo.org//records/10663833</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://zenodo.org/records/10663833</ontology:NFDI_0001008>
         <rdfs:label>url 40</rdfs:label>
     </NamedIndividual>
     
@@ -6821,7 +6821,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515632127114">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <ontology:NFDI_0001008>https://https://zenodo.org//records/10043614</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://zenodo.org/records/10043614</ontology:NFDI_0001008>
         <rdfs:label>url 41</rdfs:label>
     </NamedIndividual>
     
@@ -6841,7 +6841,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515632127116">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <ontology:NFDI_0001008>https://https://zenodo.org//records/10850978</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://zenodo.org/records/10850978</ontology:NFDI_0001008>
         <rdfs:label>url 43</rdfs:label>
     </NamedIndividual>
     
@@ -6851,7 +6851,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515632127117">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <ontology:NFDI_0001008>https://https://zenodo.org//records/10850991</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://zenodo.org/records/10850991</ontology:NFDI_0001008>
         <rdfs:label>url 44</rdfs:label>
     </NamedIndividual>
     
@@ -6861,7 +6861,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515632127118">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <ontology:NFDI_0001008>https://https://zenodo.org//records/11353699</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://zenodo.org/records/11353699</ontology:NFDI_0001008>
         <rdfs:label>url 45</rdfs:label>
     </NamedIndividual>
     
@@ -6871,7 +6871,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515632127119">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <ontology:NFDI_0001008>https://https://zenodo.org//records/11224127</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://zenodo.org/records/11224127</ontology:NFDI_0001008>
         <rdfs:label>url 46</rdfs:label>
     </NamedIndividual>
     
@@ -6901,7 +6901,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515632127121">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <ontology:NFDI_0001008>https://https://zenodo.org//records/4047774</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://zenodo.org/records/4047774</ontology:NFDI_0001008>
         <rdfs:label>url 48</rdfs:label>
     </NamedIndividual>
     
@@ -6911,7 +6911,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515632127122">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <ontology:NFDI_0001008>https://https://zenodo.org//records/5000611</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://zenodo.org/records/5000611</ontology:NFDI_0001008>
         <rdfs:label>url 49</rdfs:label>
     </NamedIndividual>
     
@@ -6981,7 +6981,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451563212719">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <ontology:NFDI_0001008>https://https://zenodo.org//records/7764161</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://zenodo.org/records/7764161</ontology:NFDI_0001008>
         <rdfs:label>url 36</rdfs:label>
     </NamedIndividual>
     
@@ -18473,7 +18473,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516779743826">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <ontology:NFDI_0001008>https://https://zenodo.org//records/11353699</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://zenodo.org/records/11353699</ontology:NFDI_0001008>
         <rdfs:label>url 447</rdfs:label>
     </NamedIndividual>
     
@@ -18483,7 +18483,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516779743827">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <ontology:NFDI_0001008>https://https://zenodo.org//records/11224127</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://zenodo.org/records/11224127</ontology:NFDI_0001008>
         <rdfs:label>url 448</rdfs:label>
     </NamedIndividual>
     
@@ -18733,7 +18733,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451677974385">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <ontology:NFDI_0001008>https://https://zenodo.org//records/10600183</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008>https://zenodo.org/records/10600183</ontology:NFDI_0001008>
         <rdfs:label>url 426</rdfs:label>
     </NamedIndividual>
     
