@@ -1,17 +1,10 @@
 import subprocess
 from pathlib import Path
 
-# Define paths relative to the script location
-base_dir = Path(__name__).resolve().parent.parent
-
-all_ttl_path = base_dir / "all.ttl"
-inverse_ttl_path = base_dir / "inverse" / "inverse_all.ttl"
-
-# File paths
-output_file = "inverse_new.ttl"
-all_file = "../all.ttl"
-
-# Initialize or clear output file
+# Define paths
+all_ttl_path = "data/all.ttl"
+inverse_ttl_path = "data/inverse/inverse_all.ttl"
+output_file = "data/inverse/inverse_new.ttl"
 Path(output_file).write_text("")
 
 
@@ -34,16 +27,16 @@ WHERE {
   }
 
   # Resolve all sub-properties of inverse relationships
-  #?p1 rdfs:subPropertyOf* ?inv1 .
-  #?p2 rdfs:subPropertyOf* ?inv2 .
+  ?p1 rdfs:subPropertyOf* ?inv1 .
+  ?p2 rdfs:subPropertyOf* ?inv2 .
 
   # Find triples in data
   ?r1 ?p1 ?r2 .
 
   # Exclude existing inverse triples
-  #FILTER NOT EXISTS {
-  #  ?r2 ?p2 ?r1 .
-  #}
+  FILTER NOT EXISTS {
+    ?r2 ?p2 ?r1 .
+  }
 }
 
 """
@@ -64,18 +57,4 @@ curl_cmd = [
 # Append results to output file
 with open(output_file, "ab") as out:
     subprocess.run(curl_cmd, stdout=out)
-
-
-# Merge using ROBOT
-'''
-subprocess.run([
-    "docker", "run", "--rm",
-    "-v", f"{base_dir}:/work",
-    "-w", "/work",
-    "-e", "ROBOT_JAVA_ARGS=-Xmx8G -Dfile.encoding=UTF-8",
-    "obolibrary/robot",  # assuming %ROBOT_IMAGE% = "robotframework/robot"
-    "robot", "merge",
-    "--input", "all.ttl",
-    "--input", "inverse/inverse_all.ttl",
-    "--output", "all.ttl"
-])'''
+'
