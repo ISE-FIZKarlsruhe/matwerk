@@ -93,6 +93,21 @@ You have data about entities that are already supported in the MSE KG (like peop
 
 ---
 
+### 🔹 Scenario 5: FAIR Digital Objects (FDOs)
+
+**Description:**  
+You want to add your **FAIR Digital Objects (FDOs)** to the **MSE-KG**?  
+We’ve made the process simple and semi-automated — your registered FDOs can be harvested and integrated directly into the graph.
+
+✅ **What to do**  
+1. Please add your FDO metadata to this spreadsheet:  
+   [**FAIR Digital Object Integration Sheet**](https://docs.google.com/spreadsheets/d/1tiB4IZTCsjcw5QxBWk70XpRcwfw5-gs7CW2QTM5ZBiI/edit?usp=sharing).  
+   - Each entry should include your **FDO identifier**, **type**, **related dataset/publication**, and **persistent URL**.  
+2. Once added, your FDOs will be automatically harvested and integrated into the MSE-KG through the **FAIR Digital Object Harvester** pipeline.  
+3. Optionally, open a GitHub issue 👉 [**Submit GitHub Issue**](https://github.com/ISE-FIZKarlsruhe/matwerk/issues) if you’d like to discuss **custom FDO mappings**, **schema alignment**, or **FDO–dataset linking** strategies.
+
+---
+
 ## ❓ Not Sure Where Your Data Fits?
 
 No worries! You can:  
