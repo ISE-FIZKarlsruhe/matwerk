@@ -1,0 +1,17 @@
+# What are the people present in the MSE-KG?
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
+PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
+PREFIX schema: <http://schema.org/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX swo: <http://www.ebi.ac.uk/swo/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?person ?label ?email ?orcid WHERE {
+  ?person a schema:Person .
+  OPTIONAL { ?person rdfs:label ?label . }
+  OPTIONAL { ?person mwo:emailAddress ?email . }
+  OPTIONAL { ?person mwo:hasORCID ?orcid . }
+}
+LIMIT 999

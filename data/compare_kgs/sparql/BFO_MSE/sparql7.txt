@@ -1,0 +1,42 @@
+# What are the datasets present in the MSE-KG?
+
+SELECT ?dataset ?title ?creatorLabel ?creatorAffiliationLabel ?link
+WHERE {
+  # Dataset type
+  VALUES ?class {
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>  # Dataset
+    <http://purls.helmholtz-metadaten.de/mwo/MWO_0001058>
+    <http://purls.helmholtz-metadaten.de/mwo/MWO_0001056>
+    <http://purls.helmholtz-metadaten.de/mwo/MWO_0001057>
+  }
+  ?dataset a ?class .
+
+  # Dataset title
+  OPTIONAL {
+    ?dataset <http://purl.obolibrary.org/obo/IAO_0000235> ?titleNode .
+    ?titleNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
+    ?titleNode rdfs:label ?title .
+  }
+
+  # Creator(s)
+  OPTIONAL {
+    ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creator .
+    ?creator a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001032> .
+    ?creator rdfs:label ?creatorLabel .
+  }
+
+  # Creator affiliation(s)
+  OPTIONAL {
+    ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creatorAffiliation .
+    ?creatorAffiliation a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033> .
+    ?creatorAffiliation rdfs:label ?creatorAffiliationLabel .
+  }
+
+  # Link (URL or PID)
+  OPTIONAL {
+    ?dataset <http://purl.obolibrary.org/obo/IAO_0000235> ?linkNode .
+    ?linkNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?link .
+  }
+
+}
+LIMIT 999

@@ -1,0 +1,39 @@
+# What are the larg scale facilities present in the MSE-KG?
+
+SELECT ?facility ?name ?acronym ?orgLabel ?Email ?Website
+WHERE {
+  ?facility a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001027> .
+
+  OPTIONAL {
+    ?facility <http://purl.obolibrary.org/obo/IAO_0000235> ?facilityNode .
+    ?facilityNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
+    ?facilityNode rdfs:label ?name .
+  }
+  # Acronym
+  OPTIONAL {
+    ?facility <http://purl.obolibrary.org/obo/IAO_0000235> ?acr .
+    ?acr a <http://purl.obolibrary.org/obo/IAO_0000605> .
+    ?acr rdfs:label ?acronym .
+  }
+
+  # Output Process
+  OPTIONAL {
+    ?facility <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023> ?outputProcess .
+    ?outputProcess <http://purl.obolibrary.org/obo/BFO_0000057> ?org .
+    ?outputProcess <http://purl.obolibrary.org/obo/BFO_0000055> ?Role .
+    
+    OPTIONAL {?org a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003> .
+              ?org rdfs:label ?orgLabel .
+             }
+    
+    ?Role a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000230> .
+    ?Role <http://purl.obolibrary.org/obo/IAO_0000235> ?EmailWebsite .
+    OPTIONAL {?EmailWebsite a <http://purl.obolibrary.org/obo/IAO_0000429> .
+              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?Email
+             }
+    OPTIONAL {?EmailWebsite a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223> .
+              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?Website
+             }
+  }
+}
+LIMIT 999

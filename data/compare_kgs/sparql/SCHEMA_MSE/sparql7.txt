@@ -1,0 +1,23 @@
+# What are the datasets present in the MSE-KG?
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
+PREFIX mwo: <http://purls.helmholtz-metadaten.de/mwo/>
+PREFIX schema: <http://schema.org/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX swo: <http://www.ebi.ac.uk/swo/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+SELECT ?dataset ?title ?creatorLabel ?creatorAffiliationLabel ?link WHERE {
+  VALUES ?class { nfdi:Dataset mwo:MWO_0001058 mwo:MWO_0001056 mwo:MWO_0001057 }
+  ?dataset a ?class .
+  OPTIONAL { ?dataset dct:title ?title . }
+  OPTIONAL { ?dataset mwo:hasCreator ?creator . OPTIONAL { ?creator rdfs:label ?creatorLabel . } }
+  OPTIONAL { ?creator mwo:hasAffiliation ?creatorAffiliation . OPTIONAL { ?creatorAffiliation rdfs:label ?creatorAffiliationLabel . } }
+  OPTIONAL {
+     ?dataset mwo:hasRepository ?repo .
+     OPTIONAL { ?repo nfdi:url ?link . }
+     OPTIONAL { ?repo mwo:hasWebsite ?link . }
+  }
+}
+LIMIT 999
