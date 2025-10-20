@@ -63,6 +63,18 @@
     
 
 
+    <!-- https://rdfportal.org/primary/sparql -->
+
+    <Class rdf:about="https://rdfportal.org/primary/sparql"/>
+    
+
+
+    <!-- https://sparql.unhide.helmholtz-metadaten.de/ -->
+
+    <Class rdf:about="https://sparql.unhide.helmholtz-metadaten.de/"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
