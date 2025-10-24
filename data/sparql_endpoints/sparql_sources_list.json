@@ -5,18 +5,18 @@
     "graphs": {
       "classes": {
         "iri": "https://purls.helmholtz-metadaten.de/msekg/1759747764517",
-        "nq": "data\\sparql_endpoints\\named_graphs\\1759747764517.nq",
-        "ttl": "data\\sparql_endpoints\\named_graphs\\1759747764517.ttl"
+        "nq": "data/sparql_endpoints/named_graphs/1759747764517.nq",
+        "ttl": "data/sparql_endpoints/named_graphs/1759747764517.ttl"
       },
       "classHierarchy": {
         "iri": "https://purls.helmholtz-metadaten.de/msekg/1759747764518",
-        "nq": "data\\sparql_endpoints\\named_graphs\\1759747764518.nq",
-        "ttl": "data\\sparql_endpoints\\named_graphs\\1759747764518.ttl"
+        "nq": "data/sparql_endpoints/named_graphs/1759747764518.nq",
+        "ttl": "data/sparql_endpoints/named_graphs/1759747764518.ttl"
       },
       "tbox": {
         "iri": "https://purls.helmholtz-metadaten.de/msekg/1759747764519",
-        "nq": "data\\sparql_endpoints\\named_graphs\\1759747764519.nq",
-        "ttl": "data\\sparql_endpoints\\named_graphs\\1759747764519.ttl"
+        "nq": "data/sparql_endpoints/named_graphs/1759747764519.nq",
+        "ttl": "data/sparql_endpoints/named_graphs/1759747764519.ttl"
       }
     },
     "datasets": [
@@ -26,16 +26,197 @@
       "classes": 123,
       "objectProperties": 85,
       "dataProperties": 32,
+      "propertiesTotal": 117,
       "instances": 724,
-      "classesReusedFromMWO": 2,
-      "objectPropertiesReusedFromMWO": 0,
-      "dataPropertiesReusedFromMWO": 0,
-      "classesReusedFromMWO_list": [
+      "numberOfClassesReusedFromMWO": 2,
+      "classesReusedFromMWO": [
         "http://purl.obolibrary.org/obo/BFO_0000023",
         "http://www.ebi.ac.uk/swo/SWO_0000002"
       ],
-      "objectPropertiesReusedFromMWO_list": [],
-      "dataPropertiesReusedFromMWO_list": []
+      "numberOfObjectPropertiesReusedFromMWO": 0,
+      "objectPropertiesReusedFromMWO": [],
+      "numberOfDataPropertiesReusedFromMWO": 0,
+      "dataPropertiesReusedFromMWO": [],
+      "classCounts": [
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/ComputationalWorkflow",
+          "label": "computational workflow",
+          "instances": 5
+        },
+        {
+          "class": "http://www.ebi.ac.uk/swo/license/SWO_1000103",
+          "label": "Vendor-specific License",
+          "instances": 1
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/ontology/Person",
+          "label": "person",
+          "instances": 99
+        },
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/LargeScaleFacility",
+          "label": "large-scale facility",
+          "instances": 5
+        },
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/MetadataSchema",
+          "label": "metadata schema",
+          "instances": 8
+        },
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/WorkflowEnvironment",
+          "label": "workflow environment",
+          "instances": 3
+        },
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/Method",
+          "label": "method",
+          "instances": 22
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/ontology/Project",
+          "label": "project",
+          "instances": 17
+        },
+        {
+          "class": "http://www.ebi.ac.uk/swo/license/SWO_1000001",
+          "label": "Creative Commons",
+          "instances": 8
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/ontology/Organization",
+          "label": "organization",
+          "instances": 72
+        },
+        {
+          "class": "http://www.ebi.ac.uk/swo/license/SWO_1000002",
+          "label": "Proprietary commercial software license",
+          "instances": 5
+        },
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/SemanticResource",
+          "label": "semantic resource",
+          "instances": 15
+        },
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/Documentation",
+          "label": "documentation",
+          "instances": 89
+        },
+        {
+          "class": "http://purl.org/dc/terms/FileFormat",
+          "label": "File Format",
+          "instances": 9
+        },
+        {
+          "class": "http://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity",
+          "label": "semantic expressivity",
+          "instances": 4
+        },
+        {
+          "class": "http://www.ebi.ac.uk/swo/SWO_0000001",
+          "label": "software",
+          "instances": 16
+        },
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/ContactPoint",
+          "label": "contact point",
+          "instances": 29
+        },
+        {
+          "class": "https://w3id.org/skgo/modsci#Instrument",
+          "label": "Instrument",
+          "instances": 8
+        },
+        {
+          "class": "http://www.ebi.ac.uk/swo/SWO_0000002",
+          "label": "software license",
+          "instances": 33
+        },
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/ProcessingSoftware",
+          "label": "processing software",
+          "instances": 8
+        },
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/VisualizationSoftware",
+          "label": "visualization software",
+          "instances": 8
+        },
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/EducationalResource",
+          "label": "educational resource",
+          "instances": 13
+        },
+        {
+          "class": "https://w3id.org/skgo/modsci#Technology",
+          "label": "Technology",
+          "instances": 6
+        },
+        {
+          "class": "http://www.ebi.ac.uk/swo/license/SWO_1000061",
+          "label": "free to use license",
+          "instances": 10
+        },
+        {
+          "class": "http://www.ebi.ac.uk/swo/license/SWO_1000043",
+          "label": "GNU Project Free License Type",
+          "instances": 13
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/ontology/Consortium",
+          "label": "consortium",
+          "instances": 1
+        },
+        {
+          "class": "https://w3id.org/skgo/modsci#ScientificInstrumentManufacturer",
+          "label": "Scientific Instrument Manufacturer",
+          "instances": 5
+        },
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/ResearchSoftware",
+          "label": "research software",
+          "instances": 54
+        },
+        {
+          "class": "http://nfdi.fiz-karlsruhe.de/ontology/Project",
+          "label": "project",
+          "instances": 7
+        },
+        {
+          "class": "http://purls.helmholtz-metadaten.de/mwo/Repository",
+          "label": "repository",
+          "instances": 163
+        },
+        {
+          "class": "http://emmo.info/emmo#EMMO_4207e895_8b83_4318_996a_72cfb32acd94",
+          "label": "Material",
+          "instances": 9
+        }
+      ],
+      "vocabularies": [
+        "http://emmo.info/emmo#",
+        "http://nfdi.fiz-karlsruhe.de/ontology/",
+        "http://purl.obolibrary.org/obo/",
+        "http://purl.org/dc/elements/1.1/",
+        "http://purl.org/dc/terms/",
+        "http://purls.helmholtz-metadaten.de/mwo/",
+        "http://www.ebi.ac.uk/swo/",
+        "http://www.ebi.ac.uk/swo/license/",
+        "http://www.geneontology.org/formats/oboInOwl#",
+        "http://www.openlinksw.com/schemas/DAV#",
+        "http://www.openlinksw.com/schemas/virtrdf#",
+        "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "http://www.w3.org/2000/01/rdf-schema#",
+        "http://www.w3.org/2002/07/owl#",
+        "http://www.w3.org/2004/02/skos/core#",
+        "http://www.w3.org/ns/sparql-service-description#",
+        "http://xmlns.com/foaf/0.1/",
+        "https://nfdi.fiz-karlsruhe.de/ontology/",
+        "https://schema.org/",
+        "https://w3id.org/scholarlydata/ontology/conference-ontology.owl#",
+        "https://w3id.org/skgo/modsci#"
+      ]
     }
   }
 ]

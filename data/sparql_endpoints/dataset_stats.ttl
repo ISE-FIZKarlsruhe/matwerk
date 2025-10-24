@@ -1,15 +1,77 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ns1: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix stat: <https://purls.helmholtz-metadaten.de/msekg/stat/> .
+@prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://purls.helmholtz-metadaten.de/msekg/17588917500551> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17588918337771> ;
-    rdfs:seeAlso <https://purls.helmholtz-metadaten.de/msekg/1759747764517>,
+    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759747764517>,
         <https://purls.helmholtz-metadaten.de/msekg/1759747764518>,
         <https://purls.helmholtz-metadaten.de/msekg/1759747764519> ;
-    stat:classReusedFromMWO ns1:BFO_0000023,
-        <http://www.ebi.ac.uk/swo/SWO_0000002> ;
+    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17588918337771> ;
+    void:classPartition <https://purls.helmholtz-metadaten.de/msekg/1cd612cf56808c91>,
+        <https://purls.helmholtz-metadaten.de/msekg/34f6f34c48897bbd>,
+        <https://purls.helmholtz-metadaten.de/msekg/3f4c3e8adada8429>,
+        <https://purls.helmholtz-metadaten.de/msekg/4ceda973d842a7e6>,
+        <https://purls.helmholtz-metadaten.de/msekg/58b07a5e6650d739>,
+        <https://purls.helmholtz-metadaten.de/msekg/5ee53630b91dedf5>,
+        <https://purls.helmholtz-metadaten.de/msekg/708328717d558289>,
+        <https://purls.helmholtz-metadaten.de/msekg/7a727754a7fca98e>,
+        <https://purls.helmholtz-metadaten.de/msekg/862e15098c38dea0>,
+        <https://purls.helmholtz-metadaten.de/msekg/88074073e9679ae6>,
+        <https://purls.helmholtz-metadaten.de/msekg/895984beb6f728c8>,
+        <https://purls.helmholtz-metadaten.de/msekg/8dc071b13bbce6e0>,
+        <https://purls.helmholtz-metadaten.de/msekg/907c05f12602ddfe>,
+        <https://purls.helmholtz-metadaten.de/msekg/9389e94efcf506f4>,
+        <https://purls.helmholtz-metadaten.de/msekg/97b17b736ceeda29>,
+        <https://purls.helmholtz-metadaten.de/msekg/999c9d8472fa53d0>,
+        <https://purls.helmholtz-metadaten.de/msekg/99ae3b57d8c329b5>,
+        <https://purls.helmholtz-metadaten.de/msekg/a4ed1849ff0d988d>,
+        <https://purls.helmholtz-metadaten.de/msekg/aef867c95ff63455>,
+        <https://purls.helmholtz-metadaten.de/msekg/b13ead00dede0598>,
+        <https://purls.helmholtz-metadaten.de/msekg/b45c9d6374787c49>,
+        <https://purls.helmholtz-metadaten.de/msekg/b6257b706f69a629>,
+        <https://purls.helmholtz-metadaten.de/msekg/b816ef25af2bde0e>,
+        <https://purls.helmholtz-metadaten.de/msekg/c25b7f3e0af24a7b>,
+        <https://purls.helmholtz-metadaten.de/msekg/c6e47eef54b88b18>,
+        <https://purls.helmholtz-metadaten.de/msekg/cdd995e5376e7a79>,
+        <https://purls.helmholtz-metadaten.de/msekg/cf5483630a0af191>,
+        <https://purls.helmholtz-metadaten.de/msekg/dc9bc7b4ea558b22>,
+        <https://purls.helmholtz-metadaten.de/msekg/e44bac61e6697547>,
+        <https://purls.helmholtz-metadaten.de/msekg/ecb32ff257faea2c>,
+        <https://purls.helmholtz-metadaten.de/msekg/fd1f6b678dbbae39> ;
+    void:classes 123 ;
+    void:entities 724 ;
+    void:properties 117 ;
+    void:sparqlEndpoint <https://sparql-nfdi-matwerk-02.web.vulcanus.otc.coscine.dev/> ;
+    void:vocabulary <http://emmo.info/emmo#>,
+        <http://nfdi.fiz-karlsruhe.de/ontology/>,
+        ns1:,
+        dc:,
+        dcterms:,
+        <http://purls.helmholtz-metadaten.de/mwo/>,
+        <http://www.ebi.ac.uk/swo/>,
+        <http://www.ebi.ac.uk/swo/license/>,
+        <http://www.geneontology.org/formats/oboInOwl#>,
+        <http://www.openlinksw.com/schemas/DAV#>,
+        <http://www.openlinksw.com/schemas/virtrdf#>,
+        rdf:,
+        rdfs:,
+        owl:,
+        skos:,
+        <http://www.w3.org/ns/sparql-service-description#>,
+        foaf:,
+        <https://nfdi.fiz-karlsruhe.de/ontology/>,
+        schema:,
+        <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#>,
+        <https://w3id.org/skgo/modsci#> ;
     stat:numberOfClasses 123 ;
     stat:numberOfClassesReusedFromMWO 2 ;
     stat:numberOfDataProperties 32 ;
@@ -17,4 +79,128 @@
     stat:numberOfInstances 724 ;
     stat:numberOfObjectProperties 85 ;
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
+
+<https://purls.helmholtz-metadaten.de/msekg/1cd612cf56808c91> rdfs:label "Scientific Instrument Manufacturer" ;
+    void:class <https://w3id.org/skgo/modsci#ScientificInstrumentManufacturer> ;
+    void:entities 5 .
+
+<https://purls.helmholtz-metadaten.de/msekg/34f6f34c48897bbd> rdfs:label "visualization software" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/VisualizationSoftware> ;
+    void:entities 8 .
+
+<https://purls.helmholtz-metadaten.de/msekg/3f4c3e8adada8429> rdfs:label "Instrument" ;
+    void:class <https://w3id.org/skgo/modsci#Instrument> ;
+    void:entities 8 .
+
+<https://purls.helmholtz-metadaten.de/msekg/4ceda973d842a7e6> rdfs:label "processing software" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/ProcessingSoftware> ;
+    void:entities 8 .
+
+<https://purls.helmholtz-metadaten.de/msekg/58b07a5e6650d739> rdfs:label "Proprietary commercial software license" ;
+    void:class <http://www.ebi.ac.uk/swo/license/SWO_1000002> ;
+    void:entities 5 .
+
+<https://purls.helmholtz-metadaten.de/msekg/5ee53630b91dedf5> rdfs:label "Vendor-specific License" ;
+    void:class <http://www.ebi.ac.uk/swo/license/SWO_1000103> ;
+    void:entities 1 .
+
+<https://purls.helmholtz-metadaten.de/msekg/708328717d558289> rdfs:label "software" ;
+    void:class <http://www.ebi.ac.uk/swo/SWO_0000001> ;
+    void:entities 16 .
+
+<https://purls.helmholtz-metadaten.de/msekg/7a727754a7fca98e> rdfs:label "Material" ;
+    void:class <http://emmo.info/emmo#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> ;
+    void:entities 9 .
+
+<https://purls.helmholtz-metadaten.de/msekg/862e15098c38dea0> rdfs:label "semantic resource" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/SemanticResource> ;
+    void:entities 15 .
+
+<https://purls.helmholtz-metadaten.de/msekg/88074073e9679ae6> rdfs:label "person" ;
+    void:class <https://nfdi.fiz-karlsruhe.de/ontology/Person> ;
+    void:entities 99 .
+
+<https://purls.helmholtz-metadaten.de/msekg/895984beb6f728c8> rdfs:label "Creative Commons" ;
+    void:class <http://www.ebi.ac.uk/swo/license/SWO_1000001> ;
+    void:entities 8 .
+
+<https://purls.helmholtz-metadaten.de/msekg/8dc071b13bbce6e0> rdfs:label "educational resource" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/EducationalResource> ;
+    void:entities 13 .
+
+<https://purls.helmholtz-metadaten.de/msekg/907c05f12602ddfe> rdfs:label "project" ;
+    void:class <https://nfdi.fiz-karlsruhe.de/ontology/Project> ;
+    void:entities 17 .
+
+<https://purls.helmholtz-metadaten.de/msekg/9389e94efcf506f4> rdfs:label "consortium" ;
+    void:class <https://nfdi.fiz-karlsruhe.de/ontology/Consortium> ;
+    void:entities 1 .
+
+<https://purls.helmholtz-metadaten.de/msekg/97b17b736ceeda29> rdfs:label "method" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/Method> ;
+    void:entities 22 .
+
+<https://purls.helmholtz-metadaten.de/msekg/999c9d8472fa53d0> rdfs:label "project" ;
+    void:class <http://nfdi.fiz-karlsruhe.de/ontology/Project> ;
+    void:entities 7 .
+
+<https://purls.helmholtz-metadaten.de/msekg/99ae3b57d8c329b5> rdfs:label "large-scale facility" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/LargeScaleFacility> ;
+    void:entities 5 .
+
+<https://purls.helmholtz-metadaten.de/msekg/a4ed1849ff0d988d> rdfs:label "computational workflow" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/ComputationalWorkflow> ;
+    void:entities 5 .
+
+<https://purls.helmholtz-metadaten.de/msekg/aef867c95ff63455> rdfs:label "documentation" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/Documentation> ;
+    void:entities 89 .
+
+<https://purls.helmholtz-metadaten.de/msekg/b13ead00dede0598> rdfs:label "Technology" ;
+    void:class <https://w3id.org/skgo/modsci#Technology> ;
+    void:entities 6 .
+
+<https://purls.helmholtz-metadaten.de/msekg/b45c9d6374787c49> rdfs:label "repository" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/Repository> ;
+    void:entities 163 .
+
+<https://purls.helmholtz-metadaten.de/msekg/b6257b706f69a629> rdfs:label "metadata schema" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/MetadataSchema> ;
+    void:entities 8 .
+
+<https://purls.helmholtz-metadaten.de/msekg/b816ef25af2bde0e> rdfs:label "workflow environment" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/WorkflowEnvironment> ;
+    void:entities 3 .
+
+<https://purls.helmholtz-metadaten.de/msekg/c25b7f3e0af24a7b> rdfs:label "research software" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/ResearchSoftware> ;
+    void:entities 54 .
+
+<https://purls.helmholtz-metadaten.de/msekg/c6e47eef54b88b18> rdfs:label "free to use license" ;
+    void:class <http://www.ebi.ac.uk/swo/license/SWO_1000061> ;
+    void:entities 10 .
+
+<https://purls.helmholtz-metadaten.de/msekg/cdd995e5376e7a79> rdfs:label "GNU Project Free License Type" ;
+    void:class <http://www.ebi.ac.uk/swo/license/SWO_1000043> ;
+    void:entities 13 .
+
+<https://purls.helmholtz-metadaten.de/msekg/cf5483630a0af191> rdfs:label "organization" ;
+    void:class <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ;
+    void:entities 72 .
+
+<https://purls.helmholtz-metadaten.de/msekg/dc9bc7b4ea558b22> rdfs:label "File Format" ;
+    void:class dcterms:FileFormat ;
+    void:entities 9 .
+
+<https://purls.helmholtz-metadaten.de/msekg/e44bac61e6697547> rdfs:label "contact point" ;
+    void:class <http://purls.helmholtz-metadaten.de/mwo/ContactPoint> ;
+    void:entities 29 .
+
+<https://purls.helmholtz-metadaten.de/msekg/ecb32ff257faea2c> rdfs:label "software license" ;
+    void:class <http://www.ebi.ac.uk/swo/SWO_0000002> ;
+    void:entities 33 .
+
+<https://purls.helmholtz-metadaten.de/msekg/fd1f6b678dbbae39> rdfs:label "semantic expressivity" ;
+    void:class <http://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> ;
+    void:entities 4 .
 
