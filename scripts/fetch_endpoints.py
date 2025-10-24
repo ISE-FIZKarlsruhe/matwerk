@@ -5,12 +5,26 @@ import json
 import os
 import time
 import tempfile
+import hashlib
+import contextlib
+import warnings
 from pathlib import Path
 import subprocess
 from typing import Iterable, Set, List, Dict, Any
-
-from rdflib import Graph, URIRef, RDF, Literal, Namespace, ConjunctiveGraph, BNode
+import rdflib
+from rdflib import Graph, URIRef, RDF, Literal, Namespace, BNode
 from rdflib.namespace import RDFS, OWL, XSD
+
+# rdflib Dataset fallback (older versions)
+try:
+    from rdflib.dataset import Dataset as RDFDataset  # rdflib >= 6.x
+    def new_dataset():
+        return RDFDataset()
+except Exception:
+    from rdflib import ConjunctiveGraph as RDFDataset  # rdflib <= 5.x
+    warnings.filterwarnings("ignore", category=DeprecationWarning, module="rdflib")
+    def new_dataset():
+        return RDFDataset()
 
 # ------------------ Config (env-overridable) ------------------
 BASE_GRAPH_IRI = os.environ.get("BASE_GRAPH_IRI", "https://purls.helmholtz-metadaten.de/msekg/").rstrip("/") + "/"
@@ -19,7 +33,7 @@ ENDPOINT_CLASS = URIRef(os.environ.get("ENDPOINT_CLASS", "http://purls.helmholtz
 ENDPOINT_PREDICATE = URIRef(os.environ.get("ENDPOINT_PREDICATE", "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008"))  # xsd:anyURI endpoint URL
 DATASET_TYPE = URIRef(os.environ.get("DATASET_TYPE", "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"))             # Graph database (dataset)
 IAO_0000235 = URIRef(os.environ.get("IAO_0000235", "http://purl.obolibrary.org/obo/IAO_0000235"))                        # denotes
-HAS_GRAPH_PRED = URIRef(os.environ.get("HAS_GRAPH_PRED", "http://www.w3.org/2000/01/rdf-schema#seeAlso"))
+HAS_GRAPH_PRED = URIRef(os.environ.get("HAS_GRAPH_PRED", "http://purl.obolibrary.org/obo/BFO_0000051"))
 
 MWO_OWL_PATH = os.environ.get("MWO_OWL_PATH", "ontology/mwo-full.owl")
 
@@ -33,8 +47,9 @@ STATS_TTL    = os.environ.get("STATS_TTL", "data/sparql_endpoints/dataset_stats.
 # Per-graph output dir
 NAMED_GRAPHS_DIR = os.environ.get("NAMED_GRAPHS_DIR", "data/sparql_endpoints/named_graphs/").rstrip("/") + "/"
 
-# Namespace for stats/annotations
+# Namespaces
 STAT = Namespace("https://purls.helmholtz-metadaten.de/msekg/stat/")
+VOID = Namespace("http://rdfs.org/ns/void#")
 
 # Functionality keys → stable graph IRIs per endpoint
 FUNC_CLASSES        = "classes"
@@ -74,11 +89,21 @@ def ensure_parent(path: str):
     Path(path).parent.mkdir(parents=True, exist_ok=True)
 
 def safe_overwrite_ttl(path: str, graph: Graph):
+    """
+    Serialize `graph` to Turtle at `path` atomically.
+    Writes a temp file in the same directory to avoid cross-device rename errors.
+    """
     p = Path(path)
-    with tempfile.NamedTemporaryFile("w", delete=False, suffix=".ttl", encoding="utf-8") as tf:
-        tmp_name = tf.name
-    graph.serialize(destination=tmp_name, format="turtle")
-    Path(tmp_name).replace(p)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    fd, tmp_path = tempfile.mkstemp(dir=str(p.parent), prefix=p.name + ".", suffix=".tmp")
+    os.close(fd)
+    try:
+        graph.serialize(destination=tmp_path, format="turtle")
+        os.replace(tmp_path, p)  # atomic if same filesystem
+    except Exception:
+        with contextlib.suppress(Exception):
+            os.remove(tmp_path)
+        raise
 
 def looks_like_html(s: str) -> bool:
     t = s.lstrip().lower()
@@ -110,18 +135,15 @@ def get_or_create_graph_iri(state: Dict[str, Any], endpoint_url: str, func_key: 
     state.setdefault("by_endpoint", {})
     per_ep = state["by_endpoint"].setdefault(endpoint_url, {})
 
-    # reuse if already present
     iri = per_ep.get(func_key)
     if iri:
         return iri
 
-    # set of timestamps already used by this endpoint (for other functionalities)
     used_ts = set()
     for existing in per_ep.values():
         if isinstance(existing, str) and existing.startswith(BASE_GRAPH_IRI):
             used_ts.add(iri_timestamp_fragment(existing))
 
-    # mint unique timestamp (bump if collides)
     ts = now_ts_ms()
     while str(ts) in used_ts:
         ts += 1
@@ -129,7 +151,6 @@ def get_or_create_graph_iri(state: Dict[str, Any], endpoint_url: str, func_key: 
     iri = f"{BASE_GRAPH_IRI}{ts}"
     per_ep[func_key] = iri
     return iri
-
 
 # ------------------ SPARQL helpers ------------------
 PREFIXES = """
@@ -288,12 +309,7 @@ WHERE {
 """
 
 def q_construct_tbox_plain() -> str:
-    # TBox approximation: pull axioms about classes and properties (no instances), including:
-    # - class typing and labels
-    # - subclass, equivalentClass, disjointWith
-    # - property typing (object/datatype), labels
-    # - domain / range
-    # NOTE: We keep it compact (no bnodes written later per your rule).
+    # TBox approximation: pull axioms about classes and properties (no instances)
     return """
 CONSTRUCT {
   ?s ?p ?o .
@@ -302,23 +318,21 @@ WHERE {
   {
     ?s a owl:Class .
     ?s ?p ?o .
-    FILTER(?p IN (rdfs:label, rdf:type, rdfs:subClassOf, owl:equivalentClass, owl:disjointWith))
   }
   UNION
   {
     ?s a owl:ObjectProperty .
     ?s ?p ?o .
-    FILTER(?p IN (rdfs:label, rdf:type, rdfs:domain, rdfs:range, owl:inverseOf, owl:equivalentProperty, owl:propertyDisjointWith))
   }
   UNION
   {
     ?s a owl:DatatypeProperty .
     ?s ?p ?o .
-    FILTER(?p IN (rdfs:label, rdf:type, rdfs:domain, rdfs:range, owl:equivalentProperty, owl:propertyDisjointWith))
   }
 }
 """
 
+# Counts
 Q_NUM_CLASSES = "SELECT (COUNT(DISTINCT ?c) AS ?n) WHERE { ?c a owl:Class . FILTER(isIRI(?c)) }"
 Q_NUM_OBJ_P   = "SELECT (COUNT(DISTINCT ?p) AS ?n) WHERE { ?p a owl:ObjectProperty . }"
 Q_NUM_DAT_P   = "SELECT (COUNT(DISTINCT ?p) AS ?n) WHERE { ?p a owl:DatatypeProperty . }"
@@ -326,6 +340,29 @@ Q_NUM_INST    = """
 SELECT (COUNT(DISTINCT ?i) AS ?n) WHERE {
   ?i a ?t . ?t a owl:Class .
   FILTER(isIRI(?i))
+}
+"""
+
+# Per-class instance counts (partition materialization)
+Q_INSTANCES_PER_CLASS = """
+SELECT ?c (SAMPLE(?lbl) AS ?label) (COUNT(DISTINCT ?i) AS ?n)
+WHERE {
+  ?i a ?c .
+  ?c a owl:Class .
+  FILTER(isIRI(?i))
+  OPTIONAL { ?c rdfs:label ?l . FILTER(LANG(?l) = "" || LANGMATCHES(LANG(?l), "en")) }
+  BIND(COALESCE(?l, STRAFTER(STR(?c), "#"), STRAFTER(STR(?c), "/")) AS ?lbl)
+}
+GROUP BY ?c
+"""
+
+# Used terms (classes as rdf:type, and all predicates) → for void:vocabulary
+Q_TERMS_USED = """
+SELECT DISTINCT ?term
+WHERE {
+  { ?i a ?term . FILTER(isIRI(?i) && isIRI(?term)) }
+  UNION
+  { ?s ?term ?o . FILTER(isIRI(?term)) }
 }
 """
 
@@ -432,30 +469,60 @@ def write_named_graph_files(graph_iri: str, turtle_text: str, nq_path: Path, ttl
     Parse the Turtle, drop any triples with blank nodes, then:
       - write N-Quads with named graph IRI to nq_path
       - write Turtle (triples only) to ttl_path
+    Works with rdflib>=6 (Dataset) and rdflib<=5 (ConjunctiveGraph).
     """
     if not turtle_text:
         return
+
     tmp_g = Graph()
     tmp_g.parse(data=turtle_text, format="turtle")
 
-    # 1) N-Quads with GRAPH IRI
-    cg = ConjunctiveGraph()
-    ctx = cg.get_context(URIRef(graph_iri))
+    nq_path.parent.mkdir(parents=True, exist_ok=True)
+    ttl_path.parent.mkdir(parents=True, exist_ok=True)
+
+    # 1) N-Quads with named graph IRI (skip bnodes)
+    ds = new_dataset()
+    try:
+        ctx = ds.graph(URIRef(graph_iri))   # rdflib >= 6
+    except AttributeError:
+        ctx = ds.get_context(URIRef(graph_iri))  # rdflib <= 5
+
     for s, p, o in tmp_g:
         if isinstance(s, BNode) or isinstance(p, BNode) or isinstance(o, BNode):
             continue
         ctx.add((s, p, o))
-    nq_path.parent.mkdir(parents=True, exist_ok=True)
-    cg.serialize(destination=str(nq_path), format="nquads", encoding="utf-8")
 
-    # 2) Plain Turtle (triples only)
+    fd_nq, tmp_nq = tempfile.mkstemp(dir=str(nq_path.parent), prefix=nq_path.name + ".", suffix=".tmp")
+    os.close(fd_nq)
+    try:
+        ds.serialize(destination=tmp_nq, format="nquads")
+        os.replace(tmp_nq, nq_path)
+    except Exception:
+        with contextlib.suppress(Exception):
+            os.remove(tmp_nq)
+        raise
+
+    # 2) Plain Turtle (triples only, skip bnodes)
     g_plain = Graph()
     for s, p, o in tmp_g:
         if isinstance(s, BNode) or isinstance(p, BNode) or isinstance(o, BNode):
             continue
         g_plain.add((s, p, o))
-    ttl_path.parent.mkdir(parents=True, exist_ok=True)
+
     safe_overwrite_ttl(str(ttl_path), g_plain)
+
+# ------------------ VoID helpers ------------------
+def partition_iri_for(ds: URIRef, cls: URIRef) -> URIRef:
+    """Skolemize a stable, bnode-free IRI for a VoID classPartition node."""
+    h = hashlib.sha1((str(ds) + " " + str(cls)).encode("utf-8")).hexdigest()[:16]
+    return URIRef(f"{BASE_GRAPH_IRI}{h}")
+
+def namespace_iri(u: str) -> str:
+    """Best-effort namespace (hash or slash)."""
+    if "#" in u:
+        return u.split("#", 1)[0] + "#"
+    i = u.rfind("/")
+    return u[:i+1] if i >= 0 else u
 
 # ------------------ Main ------------------
 def main():
@@ -469,13 +536,13 @@ def main():
         print("No SPARQL endpoints found in all.ttl.")
         return
 
-    # Load MWO terms for reuse stats
+    # Load MWO terms for reuse stats (counts only)
     mwo_classes, mwo_objprops, mwo_datprops = load_mwo_terms(MWO_OWL_PATH)
     print(f"Loaded MWO terms: classes={len(mwo_classes)}, objProps={len(mwo_objprops)}, dataProps={len(mwo_datprops)}")
 
     # Stats graph
     stats = Graph()
-    stats.bind("stat", STAT); stats.bind("rdfs", RDFS); stats.bind("owl", OWL)
+    stats.bind("stat", STAT); stats.bind("rdfs", RDFS); stats.bind("owl", OWL); stats.bind("void", VOID)
 
     summary = []
 
@@ -506,8 +573,12 @@ def main():
         num_objp    = one(Q_NUM_OBJ_P)
         num_datp    = one(Q_NUM_DAT_P)
         num_inst    = one(Q_NUM_INST)
+        num_props   = num_objp + num_datp
 
-        # --- Reuse sets from MWO ---
+        # --- Per-class instance counts (VoID class partitions) ---
+        inst_bindings = run_select(ep_url, Q_INSTANCES_PER_CLASS, REQUEST_TIMEOUT)
+
+        # --- Reuse sets from MWO (for counts only) ---
         mwo_classes_used = reused_classes(ep_url, mwo_classes) if mwo_classes else set()
         mwo_objp_used    = reused_objprops(ep_url, mwo_objprops) if mwo_objprops else set()
         mwo_datp_used    = reused_dataprops(ep_url, mwo_datprops) if mwo_datprops else set()
@@ -537,36 +608,71 @@ def main():
         else:
             print(f"WARNING: tbox CONSTRUCT returned nothing for {ep_url}")
 
-        # --- Annotate datasets with stats + reused lists + links to ALL graphs ---
-        for ds in datasets:
-            stats.add((ds, RDF.type, DATASET_TYPE))
-            stats.add((ds, IAO_0000235, ep_ind))
+        # --- VoID: vocabularies used (namespaces of used classes/properties) ---
+        term_rows = run_select(ep_url, Q_TERMS_USED, REQUEST_TIMEOUT)
+        vocab_ns = set()
+        for b in term_rows:
+            t = b.get("term", {}).get("value")
+            if t:
+                vocab_ns.add(namespace_iri(t))
 
-            # numeric stats
-            stats.add((ds, STAT.numberOfClasses, Literal(num_classes, datatype=XSD.integer)))
+        # --- Annotate datasets with VoID + stat namespace + links to ALL graphs ---
+        for ds in datasets:
+            # dataset typing + connection to endpoint individual
+            stats.add((ds, RDF.type, DATASET_TYPE))
+            #stats.add((ds, RDF.type, VOID.Dataset))
+            stats.add((ds, IAO_0000235, ep_ind))
+            # VoID: endpoint URL
+            #stats.add((ds, ENDPOINT_PREDICATE, URIRef(ep_url)))
+            stats.add((ds, VOID.sparqlEndpoint, URIRef(ep_url)))
+
+            # VoID numeric stats
+            stats.add((ds, VOID.classes, Literal(num_classes, datatype=XSD.integer)))
+            stats.add((ds, VOID.properties, Literal(num_props, datatype=XSD.integer)))
+            stats.add((ds, VOID.entities, Literal(num_inst, datatype=XSD.integer)))
+
+            # (Optional) custom numeric stats
+            #stats.add((ds, STAT.numberOfClasses, Literal(num_classes, datatype=XSD.integer)))
             stats.add((ds, STAT.numberOfObjectProperties, Literal(num_objp, datatype=XSD.integer)))
             stats.add((ds, STAT.numberOfDataProperties, Literal(num_datp, datatype=XSD.integer)))
-            stats.add((ds, STAT.numberOfInstances, Literal(num_inst, datatype=XSD.integer)))
+            #stats.add((ds, STAT.numberOfInstances, Literal(num_inst, datatype=XSD.integer)))
 
-            # reuse counts
+            # Reuse counts (no lists; Option A relies on VoID partitions)
             stats.add((ds, STAT.numberOfClassesReusedFromMWO, Literal(len(mwo_classes_used), datatype=XSD.integer)))
             stats.add((ds, STAT.numberOfObjectPropertiesReusedFromMWO, Literal(len(mwo_objp_used), datatype=XSD.integer)))
             stats.add((ds, STAT.numberOfDataPropertiesReusedFromMWO, Literal(len(mwo_datp_used), datatype=XSD.integer)))
 
-            # reuse lists
-            for c in sorted(mwo_classes_used, key=str):
-                stats.add((ds, STAT.classReusedFromMWO, c))
-            for p in sorted(mwo_objp_used, key=str):
-                stats.add((ds, STAT.objectPropertyReusedFromMWO, p))
-            for p in sorted(mwo_datp_used, key=str):
-                stats.add((ds, STAT.dataPropertyReusedFromMWO, p))
-
-            # link dataset to each snapshot graph
+            # Link dataset to each snapshot graph (VoID + existing predicate)
             for iri in (iri_classes, iri_hier, iri_tbox):
+                #stats.add((ds, VOID.subset, URIRef(iri)))
                 stats.add((ds, HAS_GRAPH_PRED, URIRef(iri)))
                 t = (ds, HAS_GRAPH_PRED, URIRef(iri))
                 if t not in g_all:
                     g_all.add(t)
+
+            # VoID class partitions from per-class counts
+            for b in inst_bindings:
+                c = b.get("c", {}).get("value")
+                n = b.get("n", {}).get("value")
+                lbl = b.get("label", {}).get("value")
+                if not c or not n:
+                    continue
+                c_iri = URIRef(c)
+                try:
+                    n_lit = Literal(int(float(n)), datatype=XSD.integer)
+                except Exception:
+                    continue
+
+                part = partition_iri_for(ds, c_iri)
+                stats.add((ds, VOID.classPartition, part))
+                stats.add((part, VOID["class"], c_iri))
+                stats.add((part, VOID.entities, n_lit))
+                if lbl:
+                    stats.add((part, RDFS.label, Literal(lbl)))
+
+            # VoID vocabularies used
+            for ns in sorted(vocab_ns):
+                stats.add((ds, VOID.vocabulary, URIRef(ns)))
 
         # Collect summary record
         summary.append({
@@ -582,28 +688,48 @@ def main():
                 "classes": num_classes,
                 "objectProperties": num_objp,
                 "dataProperties": num_datp,
+                "propertiesTotal": num_props,
                 "instances": num_inst,
-                "classesReusedFromMWO": len(mwo_classes_used),
-                "objectPropertiesReusedFromMWO": len(mwo_objp_used),
-                "dataPropertiesReusedFromMWO": len(mwo_datp_used),
-                "classesReusedFromMWO_list": [str(x) for x in sorted(mwo_classes_used, key=str)],
-                "objectPropertiesReusedFromMWO_list": [str(x) for x in sorted(mwo_objp_used, key=str)],
-                "dataPropertiesReusedFromMWO_list": [str(x) for x in sorted(mwo_datp_used, key=str)],
+                "numberOfClassesReusedFromMWO": len(mwo_classes_used),
+                "classesReusedFromMWO": [str(x) for x in sorted(mwo_classes_used, key=str)],
+                "numberOfObjectPropertiesReusedFromMWO": len(mwo_objp_used),
+                "objectPropertiesReusedFromMWO": [str(x) for x in sorted(mwo_objp_used, key=str)],
+                "numberOfDataPropertiesReusedFromMWO": len(mwo_datp_used),
+                "dataPropertiesReusedFromMWO": [str(x) for x in sorted(mwo_datp_used, key=str)],
+                "classCounts": [
+                    {
+                        "class": b["c"]["value"],
+                        "label": b.get("label", {}).get("value", ""),
+                        "instances": int(float(b["n"]["value"]))
+                    }
+                    for b in inst_bindings if "c" in b and "n" in b
+                ],
+                "vocabularies": sorted(vocab_ns),
             }
         })
 
-    # Save stats + catalog + state + summary
-    ensure_parent(STATS_TTL); safe_overwrite_ttl(STATS_TTL, stats)
+    # Merge stats into catalog before saving
+    for triple in stats:
+        g_all.add(triple)
+
+    # Save unified graph as both all.ttl and stats.ttl (if you want separate copies)
+    ensure_parent(ALL_TTL)
     safe_overwrite_ttl(ALL_TTL, g_all)
+
+    # Optionally also save stats separately (they’ll be identical if you merged)
+    safe_overwrite_ttl(STATS_TTL, stats)
+
+    # Save state + summary JSON
     save_state(STATE_JSON, state)
     ensure_parent(SUMMARY_JSON)
     Path(SUMMARY_JSON).write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    print(f"\nNamed graphs directory:    {NAMED_GRAPHS_DIR}")
-    print(f"Stats written to:          {STATS_TTL}")
-    print(f"Catalog updated:           {ALL_TTL}")
-    print(f"State:                     {STATE_JSON}")
+    print(f"\nUnified catalog + stats written to: {ALL_TTL}")
+    print(f"(Stats copy also at: {STATS_TTL})")
+    print(f"Named graphs directory: {NAMED_GRAPHS_DIR}")
+    print(f"State: {STATE_JSON}")
     print("Done.")
+
 
 if __name__ == "__main__":
     main()
