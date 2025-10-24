@@ -688,3 +688,28 @@ WHERE {
 ```
 
 ---
+### What are the SPARQL endpoints in the MSE-KG?
+
+```sparql
+PREFIX mwo:    <http://purls.helmholtz-metadaten.de/mwo/>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX ontology: <https://nfdi.fiz-karlsruhe.de/ontology/>
+PREFIX obo:    <http://purl.obolibrary.org/obo/>
+
+SELECT ?dataset ?datasetLabel ?endpoint ?endpointLabel ?sparqlURL
+WHERE {
+  ?endpoint a mwo:MWO_0001060 ;
+            rdfs:label ?endpointLabel ;
+            ontology:NFDI_0001008 ?sparqlURL .
+
+  OPTIONAL {
+    ?dataset a ontology:NFDI_0000009 ;
+             obo:IAO_0000235 ?endpoint .
+    OPTIONAL { ?dataset rdfs:label ?datasetLabel }
+  }
+}
+ORDER BY ?dataset ?endpoint
+
+```
+
+---

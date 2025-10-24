@@ -1,64 +1,64 @@
 === Global stats: SCHEMA_MSE ===
-triples: 8143
-num_subjects: 1875
-num_objects: 5012
-num_predicates: 111
-num_literals: 3066
-num_resources: 2678
+triples: 18413
+num_subjects: 5553
+num_objects: 5113
+num_predicates: 117
+num_literals: 3559
+num_resources: 5555
 num_classes: 136
-num_properties: 157
-num_individuals: 1486
+num_properties: 180
+num_individuals: 5237
 
 Top 25 types (individual counts):
+  rdfs:Resource: 5237
+  owl:Thing: 774
+  <http://schema.org/Product>: 739
+  xsd:anyURI: 506
+  nfdicore:Resource: 374
+  <n87b0218f356d411cb370cd9a956f83b8b68>: 374
   nfdicore:Website: 255
   nfdicore:Software: 202
   mwo:Repository: 163
   nfdicore:AcademicDiscipline: 116
+  modsci:ModernScience: 116
+  <http://schema.org/CreativeWork>: 99
   nfdicore:Person: 96
   nfdicore:Publication: 90
+  <n87b0218f356d411cb370cd9a956f83b8b13>: 89
   mwo:Documentation: 89
-  nfdicore:Organization: 72
+  ns3:SWO_0000001: 86
+  rdfs:Literal: 78
+  nfdicore:Organization: 73
+  ns3:SWO_0000002: 70
+  <n87b0218f356d411cb370cd9a956f83b8b72>: 70
   nfdicore:DataPortal: 61
-  mwo:ResearchSoftware: 54
-  nfdicore:Resource: 48
-  ns3:SWO_0000002: 33
-  mwo:ContactPoint: 29
-  nfdicore:Project: 24
-  mwo:Method: 21
-  nfdicore:City: 20
-  ns3:SWO_0000001: 16
-  nfdicore:ProgrammingLanguage: 16
-  mwo:SemanticResource: 15
-  nfdicore:ObjectType: 14
-  mwo:EducationalResource: 13
-  <http://www.ebi.ac.uk/swo/license/SWO_1000043>: 13
-  nfdicore:Specification: 12
-  <http://www.ebi.ac.uk/swo/license/SWO_1000061>: 10
-  dcterms:FileFormat: 9
+  <http://schema.org/Service>: 61
+  <http://schema.org/Intangible>: 61
+  nfdicore:Project: 60
 
 Top 25 predicates:
-  rdf:type: 1909
-  rdfs:label: 1704
+  rdf:type: 11347
+  rdfs:label: 1763
   nfdicore:url: 506
   mwo:hasWebsite: 257
+  mwo:hasPersonalInformation: 248
   owl:sameAs: 195
+  rdfs:subClassOf: 175
   mwo:hasRepository: 166
+  rdfs:subPropertyOf: 149
   ns3:has_license: 148
-  dcterms:description: 141
-  mwo:description: 131
+  dcterms:description: 142
   mwo:hasExpertiseIn: 131
+  mwo:description: 131
   rdfs:comment: 124
+  mwo:emailAddress: 118
   nfdicore:programmingLanguage: 102
   ns2:IAO_0000115: 101
   mwo:hasAffiliation: 99
   foaf:firstName: 96
   foaf:surname: 96
-  mwo:hasDiscipline: 93
   mwo:hasVersion: 93
-  rdfs:subClassOf: 93
+  mwo:hasDiscipline: 93
   schema:citation: 91
   mwo:hasDocumentation: 91
-  mwo:emailAddress: 89
   rdfs:domain: 86
-  schema:operatingSystem: 80
-  mwo:hasAcronym: 72

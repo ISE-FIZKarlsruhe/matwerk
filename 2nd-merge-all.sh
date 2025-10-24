@@ -59,4 +59,7 @@ if ! robot verify \
     echo "SPARQL verification failed" >&2
 fi
 
+#python3 ./scripts/kg_compare.py --kg1 ./matwerk/data/all.ttl --name1 BFO_MSE --kg2 ./matwerk/data/MSE_KG_old/mse_v1.ttl --name2 SCHEMA_MSE --label "Ebrahim Norouzi" --type schema:Person --out data/compare_kgs/ --reasoner rdfs
+#python3 ./scripts/run_sparql_bench.py --kg1 ./matwerk/data/all.ttl --name1 BFO_MSE --kg2 ./matwerk/data/MSE_KG_old/mse_v1.ttl --name2 SCHEMA_MSE --runs 3 --reasoner none --out data/compare_kgs/sparql_results/
+
 echo "All merge, reasoning, and validation steps completed."

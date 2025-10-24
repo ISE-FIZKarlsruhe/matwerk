@@ -1,0 +1,11 @@
+id,description,BFO_MSE_status,BFO_MSE_avg_sec,SCHEMA_MSE_status,SCHEMA_MSE_avg_sec
+sparql1,What are the entitiy types (concepts) present in the MSE-KG?,ok,3.056769,ok,0.265554
+sparql10,What are the larg scale facilities present in the MSE-KG?,ok,0.20025,ok,0.018262
+sparql2,How many entities exist for each concept in the MSE-KG?,ok,2.825881,ok,0.236406
+sparql3,What are the softwares present in the MSE-KG?,ok,3.391425,ok,0.15432
+sparql4,What are the services present in the MSE-KG?,ok,1.021379,ok,0.011076
+sparql5,What are the organizations present in the MSE-KG?,ok,0.287061,ok,0.013088
+sparql6,What are the people present in the MSE-KG?,ok,1.849873,ok,0.01116
+sparql7,What are the datasets present in the MSE-KG?,ok,0.735131,ok,0.061454
+sparql8,What are the data portals present in the MSE-KG?,ok,0.499881,ok,0.038511
+sparql9,What are the instruments present in the MSE-KG?,ok,0.141943,ok,0.011944

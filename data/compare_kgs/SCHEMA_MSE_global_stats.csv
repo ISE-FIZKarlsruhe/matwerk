@@ -1,0 +1,10 @@
+metric,SCHEMA_MSE
+triples,18413
+num_subjects,5553
+num_objects,5113
+num_predicates,117
+num_literals,3559
+num_resources,5555
+num_classes,136
+num_properties,180
+num_individuals,5237

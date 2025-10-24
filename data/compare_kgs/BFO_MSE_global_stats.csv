@@ -1,0 +1,10 @@
+metric,BFO_MSE
+triples,240519
+num_subjects,22788
+num_objects,21229
+num_predicates,157
+num_literals,21772
+num_resources,22790
+num_classes,453
+num_properties,268
+num_individuals,22067
