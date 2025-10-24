@@ -164,7 +164,7 @@ def run_select(endpoint_url: str, query_body: str, timeout: int) -> list[dict]:
     # POST raw
     try:
         res = subprocess.run(
-            ["curl","-sS","-L","--compressed","--max-time",str(timeout),
+            ["curl","-sS","-L","--compressed","--fail-with-body","--max-time",str(timeout),
              "-H","Accept: application/sparql-results+json",
              "-H","Content-Type: application/sparql-query",
              "-H","User-Agent: curl/8",
@@ -179,7 +179,7 @@ def run_select(endpoint_url: str, query_body: str, timeout: int) -> list[dict]:
     # POST urlencoded
     try:
         res = subprocess.run(
-            ["curl","-sS","-L","--compressed","--max-time",str(timeout),
+            ["curl","-sS","-L","--compressed","--fail-with-body","--max-time",str(timeout),
              "-H","Accept: application/sparql-results+json",
              "-H","User-Agent: curl/8",
              "--data-urlencode", f"query={query}",
@@ -193,7 +193,7 @@ def run_select(endpoint_url: str, query_body: str, timeout: int) -> list[dict]:
     # GET urlencoded
     try:
         res = subprocess.run(
-            ["curl","-sS","-L","--compressed","--max-time",str(timeout),
+            ["curl","-sS","-L","--compressed","--fail-with-body","--max-time",str(timeout),
              "-H","Accept: application/sparql-results+json",
              "-H","User-Agent: curl/8",
              "--get","--data-urlencode", f"query={query}",
@@ -211,7 +211,7 @@ def fetch_construct_as_turtle(ep_url: str, query_body: str, timeout: int) -> str
     # POST raw
     try:
         res = subprocess.run(
-            ["curl","-sS","-L","--compressed","--max-time",str(timeout),
+            ["curl","-sS","-L","--compressed","--fail-with-body","--max-time",str(timeout),
              "-H","Accept: text/turtle",
              "-H","Content-Type: application/sparql-query",
              "-H","User-Agent: curl/8",
@@ -226,7 +226,7 @@ def fetch_construct_as_turtle(ep_url: str, query_body: str, timeout: int) -> str
     # POST urlencoded
     try:
         res = subprocess.run(
-            ["curl","-sS","-L","--compressed","--max-time",str(timeout),
+            ["curl","-sS","-L","--compressed","--fail-with-body","--max-time",str(timeout),
              "-H","Accept: text/turtle",
              "-H","User-Agent: curl/8",
              "--data-urlencode", f"query={query}",
@@ -240,7 +240,7 @@ def fetch_construct_as_turtle(ep_url: str, query_body: str, timeout: int) -> str
     # GET urlencoded
     try:
         res = subprocess.run(
-            ["curl","-sS","-L","--compressed","--max-time",str(timeout),
+            ["curl","-sS","-L","--compressed","--fail-with-body","--max-time",str(timeout),
              "-H","Accept: text/turtle",
              "-H","User-Agent: curl/8",
              "--get","--data-urlencode", f"query={query}",
@@ -475,7 +475,13 @@ def write_named_graph_files(graph_iri: str, turtle_text: str, nq_path: Path, ttl
         return
 
     tmp_g = Graph()
-    tmp_g.parse(data=turtle_text, format="turtle")
+    try:
+        tmp_g.parse(data=turtle_text, format="turtle")
+    except Exception as e:
+        # show a short snippet to help debugging and skip this graph
+        snippet = turtle_text[:200].replace("\n", "\\n")
+        print(f"WARNING: failed to parse Turtle for graph {graph_iri}: {e}\n  Payload starts with: {snippet}")
+        return
 
     nq_path.parent.mkdir(parents=True, exist_ok=True)
     ttl_path.parent.mkdir(parents=True, exist_ok=True)
