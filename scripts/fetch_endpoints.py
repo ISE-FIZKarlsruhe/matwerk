@@ -632,10 +632,10 @@ def main():
             stats.add((ds, VOID.entities, Literal(num_inst, datatype=XSD.integer)))
 
             # (Optional) custom numeric stats
-            stats.add((ds, STAT.numberOfClasses, Literal(num_classes, datatype=XSD.integer)))
+            #stats.add((ds, STAT.numberOfClasses, Literal(num_classes, datatype=XSD.integer)))
             stats.add((ds, STAT.numberOfObjectProperties, Literal(num_objp, datatype=XSD.integer)))
             stats.add((ds, STAT.numberOfDataProperties, Literal(num_datp, datatype=XSD.integer)))
-            stats.add((ds, STAT.numberOfInstances, Literal(num_inst, datatype=XSD.integer)))
+            #stats.add((ds, STAT.numberOfInstances, Literal(num_inst, datatype=XSD.integer)))
 
             # Reuse counts (no lists; Option A relies on VoID partitions)
             stats.add((ds, STAT.numberOfClassesReusedFromMWO, Literal(len(mwo_classes_used), datatype=XSD.integer)))

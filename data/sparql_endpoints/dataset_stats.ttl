@@ -72,11 +72,9 @@
         schema:,
         <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#>,
         <https://w3id.org/skgo/modsci#> ;
-    stat:numberOfClasses 123 ;
     stat:numberOfClassesReusedFromMWO 2 ;
     stat:numberOfDataProperties 32 ;
     stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfInstances 724 ;
     stat:numberOfObjectProperties 85 ;
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
