@@ -1,9 +1,24 @@
-#	TYPE	Label	sparql endpoint	License	Creator(s)	Creator(s) affiliation	Contributor(s)	Contributor(s) affiliation	Link (URL / PID)	Link to related Publication(s)
-ID	TYPE	A rdfs:label@en	I http://purl.obolibrary.org/obo/IAO_0000235	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142	I http://purl.obolibrary.org/obo/BFO_0000178	I http://purl.obolibrary.org/obo/BFO_0000178	I http://purl.obolibrary.org/obo/BFO_0000178	I http://purl.obolibrary.org/obo/BFO_0000178	I http://purl.obolibrary.org/obo/IAO_0000235	I http://purl.obolibrary.org/obo/IAO_0000235
-https://purls.helmholtz-metadaten.de/msekg/17588917500551	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	MSE Knowledge Graph v1.0	sparql endpoint of MSE Knowledge Graph v1.0							
-										
-										
-										
-										
-https://rdfportal.org/primary/sparql										
-https://sparql.unhide.helmholtz-metadaten.de/										
+#	TYPE	Label	sparql endpoint	License
+ID	TYPE	A rdfs:label@en	I http://purl.obolibrary.org/obo/IAO_0000235	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142
+https://purls.helmholtz-metadaten.de/msekg/17588917500551	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	MSE Knowledge Graph v1.0	sparql endpoint of MSE Knowledge Graph v1.0	
+https://purls.helmholtz-metadaten.de/msekg/17611348076041	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	Platform MaterialDigital Knowledge Graph	sparql endpoint of Platform MaterialDigital KG	
+https://purls.helmholtz-metadaten.de/msekg/17611349780261	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	RDF portal of life science datasets	sparql endpoint of RDF portal	
+https://purls.helmholtz-metadaten.de/msekg/17611348774371	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	Helmholtz Knowledge Graph	sparql endpoint of Helmholtz Knowledge Graph	
+https://purls.helmholtz-metadaten.de/msekg/17611344289021	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	Chemotion Knowledge Graph	sparql endpoint of Chemotion KG	
+https://purls.helmholtz-metadaten.de/msekg/17611344289031	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	GESIS Knowledge Graph (GESIS KG)	sparql endpoint of GESIS Knowledge Graph (GESIS KG)	
+https://purls.helmholtz-metadaten.de/msekg/17611344289032	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	MaRDI Knowledge Graph	sparql endpoint of MaRDI	
+https://purls.helmholtz-metadaten.de/msekg/17611344289033	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	NFDI4Bioimage Knowledge Graph	sparql endpoint of NFDI4Bioimage	
+https://purls.helmholtz-metadaten.de/msekg/17611344289034	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	NFDI4Chem Knowledge Graph	sparql endpoint of NFDI4Chem	
+https://purls.helmholtz-metadaten.de/msekg/17611344289035	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	NFDI4Culture Knowledge Graph	sparql endpoint of NFDI4Culture	
+https://purls.helmholtz-metadaten.de/msekg/17611344289036	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	NFDI4DataScience Knowledge Graph	sparql endpoint of NFDI4DataScience	
+https://purls.helmholtz-metadaten.de/msekg/17611344289037	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	NFDI4Earth Knowledge Graph	sparql endpoint of NFDI4Earth	
+https://purls.helmholtz-metadaten.de/msekg/17611344289038	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	NFDI4Memory Knowledge Graph	sparql endpoint of NFDI4Memory	
+https://purls.helmholtz-metadaten.de/msekg/17611344289039	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	NFDI4Microbiota Knowledge Graph	sparql endpoint of NFDI4Microbiota	
+https://purls.helmholtz-metadaten.de/msekg/176113442890310	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	Open Research Knowledge Graph	sparql endpoint of Open Research Knowledge Graph	
+https://purls.helmholtz-metadaten.de/msekg/176113442890311	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	NFDI4Objects Knowledge Graph	sparql endpoint of NFDI4Objects Knowledge Graph	
+https://purls.helmholtz-metadaten.de/msekg/176113442890312	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	MaschinenBauIndustrie Knowledge Graph	sparql endpoint of MaschinenBauIndustrie Knowledge Graph	
+https://purls.helmholtz-metadaten.de/msekg/176113442890313	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	LinkedOpenData-Service des B3Kat	sparql endpoint of LinkedOpenData-Service des B3Kat	
+https://purls.helmholtz-metadaten.de/msekg/176113442890314	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	Linked Stage Graph	sparql endpoint of Linked Stage Graph	
+https://purls.helmholtz-metadaten.de/msekg/176113442890315	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	Claims Knowledge Graph	sparql endpoint of Claims Knowledge Graph	
+https://purls.helmholtz-metadaten.de/msekg/176113442890316	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	Software Mentions in Science Knowledge Graph	sparql endpoint of Software Mentions in Science Knowledge Graph	
+https://purls.helmholtz-metadaten.de/msekg/176113442890317	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	Software Knowledge Graph	sparql endpoint of Software Knowledge Graph	

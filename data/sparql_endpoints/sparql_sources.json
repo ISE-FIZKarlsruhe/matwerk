@@ -4,6 +4,111 @@
       "classes": "https://purls.helmholtz-metadaten.de/msekg/1759747764517",
       "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1759747764518",
       "tbox": "https://purls.helmholtz-metadaten.de/msekg/1759747764519"
+    },
+    "https://ditrare.ise.fiz-karlsruhe.de/chemotion-kg/shmarql/": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315165455",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315165456",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315165457"
+    },
+    "https://nfdi4microbiota.de/services/sparql_query/": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315198796",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315198797",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315198798"
+    },
+    "https://orkg.org/triplestore": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315219704",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315219705",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315219706"
+    },
+    "https://data.gesis.org/gesiskg/sparql": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315234557",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315234558",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315234559"
+    },
+    "https://query.portal.mardi4nfdi.de/": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315340486",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315340487",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315340488"
+    },
+    "https://kg.nfdi4bioimage.de/#/dataset/N4BIKG/query": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315362950",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315362951",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315362952"
+    },
+    "https://search.nfdi4chem.de/sparql": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315382077",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315382078",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315382079"
+    },
+    "https://nfdi4culture.de/sparql": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315410130",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315410131",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315410132"
+    },
+    "https://nfdi.fiz-karlsruhe.de/4ds/sparql": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315432947",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315432948",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315432949"
+    },
+    "https://sparql.knowledgehub.nfdi4earth.de/": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315444837",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315444838",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315444839"
+    },
+    "https://nfdi.fiz-karlsruhe.de/4memory/shmarql/": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315458914",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315458915",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315458916"
+    },
+    "https://pmdkg.ise.fiz-karlsruhe.de/sparql": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315480209",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315480210",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315480211"
+    },
+    "https://rdfportal.org/primary/sparql": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315494185",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315494186",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315494187"
+    },
+    "https://sparql.unhide.helmholtz-metadaten.de/": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316039934",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316039935",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316039936"
+    },
+    "https://graph.nfdi4objects.net/sparql": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316053473",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316053474",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316053475"
+    },
+    "https://query.mbi.kgi.uni-mannheim.de/": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316078426",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316078427",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316078428"
+    },
+    "https://lod.b3kat.de/doc/sparql-endpoint": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316097927",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316097928",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316097929"
+    },
+    "https://slod.fiz-karlsruhe.de/sparql": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316117185",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316117186",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316117187"
+    },
+    "https://data.gesis.org/claimskg/sparql": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316667916",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316667917",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316667918"
+    },
+    "https://data.gesis.org/somesci/sparql": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316687329",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316687330",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316687331"
+    },
+    "https://data.gesis.org/softwarekg/sparql": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316701163",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316701164",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316701165"
     }
   }
 }

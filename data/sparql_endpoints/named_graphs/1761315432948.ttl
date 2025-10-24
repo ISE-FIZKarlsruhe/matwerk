@@ -1,0 +1,249 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<http://purl.obolibrary.org/obo/IAO_0000442> a owl:Class ;
+    rdfs:label "" .
+
+<http://purl.obolibrary.org/obo/IAO_0000708> a owl:Class ;
+    rdfs:label "" .
+
+<http://purl.obolibrary.org/obo/OBI_0002110> a owl:Class ;
+    rdfs:label "digital object identifier" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000578> .
+
+<http://purl.org/spar/fabio/Journal> a owl:Class ;
+    rdfs:label "" .
+
+<http://purl.org/spar/fabio/JournalIssue> a owl:Class ;
+    rdfs:label "" .
+
+<http://purl.org/spar/fabio/JournalVolume> a owl:Class ;
+    rdfs:label "" .
+
+<http://schema.org/EventAttendanceModeEnumeration> a owl:Class ;
+    rdfs:label "" .
+
+time:Instant a owl:Class ;
+    rdfs:label "Instant" .
+
+time:Interval a owl:Class ;
+    rdfs:label "Interval" .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/BecomingAMember> a owl:Class ;
+    rdfs:label "becoming a member" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/CoSpokespersonRole> a owl:Class ;
+    rdfs:label "CoSpokespersonRole",
+        "co-spokesperson role" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Conference> a owl:Class ;
+    rdfs:label "conference" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EducationalFunction> a owl:Class ;
+    rdfs:label "educational function" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000034> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EvaluationMetric> a owl:Class ;
+    rdfs:label "evaluation metric" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/FAIRDataPriniciple> a owl:Class ;
+    rdfs:label "FAIR data principle" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Hackathon> a owl:Class ;
+    rdfs:label "hackathon" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/JournalArticle> a owl:Class ;
+    rdfs:label "journal article" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Publication> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/LODRating> a owl:Class ;
+    rdfs:label "LOD rating" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Leading> a owl:Class ;
+    rdfs:label "leading" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Lecture> a owl:Class ;
+    rdfs:label "lecture" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureContributorRole> a owl:Class ;
+    rdfs:label "measure contributor role" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureLeadRole> a owl:Class ;
+    rdfs:label "measure lead role" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/NewsArticle> a owl:Class ;
+    rdfs:label "news article" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PageRange> a owl:Class ;
+    rdfs:label "page range" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Persona> a owl:Class ;
+    rdfs:label "persona" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Agent> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDescription> a owl:Class ;
+    rdfs:label "persona description" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDomainKnowledgeLevel> a owl:Class ;
+    rdfs:label "persona domain knowledge level" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaEthicalOrLegalSkillLevel> a owl:Class ;
+    rdfs:label "persona ethical or legal skill level" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaOccupationRole> a owl:Class ;
+    rdfs:label "persona occupation role" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaProblemDescription> a owl:Class ;
+    rdfs:label "persona problem description" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaSoftSkillLevel> a owl:Class ;
+    rdfs:label "persona soft skill level" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTask> a owl:Class ;
+    rdfs:label "persona task" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTechnicalSkillLevel> a owl:Class ;
+    rdfs:label "persona technical skill level" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaWishDescription> a owl:Class ;
+    rdfs:label "persona wish description" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Proceedings> a owl:Class ;
+    rdfs:label "Proceedings" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Publication> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/ScienceSlam> a owl:Class ;
+    rdfs:label "science slam" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SharedTask> a owl:Class ;
+    rdfs:label "shared task" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SpokespersonRole> a owl:Class ;
+    rdfs:label "SpokespersonRole",
+        "spokesperson role" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SubTask> a owl:Class ;
+    rdfs:label "sub-task" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SummerSchool> a owl:Class ;
+    rdfs:label "summer school" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskArea> a owl:Class ;
+    rdfs:label "task area" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaContributorRole> a owl:Class ;
+    rdfs:label "task area contributor role" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaLeadRole> a owl:Class ;
+    rdfs:label "task area lead role" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaMeasure> a owl:Class ;
+    rdfs:label "task area measure" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Tutorial> a owl:Class ;
+    rdfs:label "tutorial" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroup> a owl:Class ;
+    rdfs:label "working group" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Agent> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupContactPointRole> a owl:Class ;
+    rdfs:label "working group contact point role" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupMemberRole> a owl:Class ;
+    rdfs:label "working group member role" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Workshop> a owl:Class ;
+    rdfs:label "workshop" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> a owl:Class ;
+    rdfs:label "" .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> a owl:Class ;
+    rdfs:label "" .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> a owl:Class ;
+    rdfs:label "" .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Organization> a owl:Class ;
+    rdfs:label "" .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Person> a owl:Class ;
+    rdfs:label "" .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Place> a owl:Class ;
+    rdfs:label "" .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Project> a owl:Class ;
+    rdfs:label "" .
+
+<http://purl.obolibrary.org/obo/BFO_0000034> a owl:Class ;
+    rdfs:label "" .
+
+<http://purl.obolibrary.org/obo/IAO_0000578> a owl:Class ;
+    rdfs:label "" .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Event> a owl:Class ;
+    rdfs:label "" .
+
+<http://purl.obolibrary.org/obo/IAO_0000033> a owl:Class ;
+    rdfs:label "" .
+
+<http://purl.obolibrary.org/obo/OBI_0000011> rdfs:label "" .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Agent> a owl:Class ;
+    rdfs:label "" .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Publication> a owl:Class ;
+    rdfs:label "" .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> a owl:Class ;
+    rdfs:label "academic event" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> .
+
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> a owl:Class ;
+    rdfs:label "organized event" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Event> .
+
+<http://purl.obolibrary.org/obo/BFO_0000023> a owl:Class ;
+    rdfs:label "" .
+
+<http://purl.obolibrary.org/obo/IAO_0000030> a owl:Class ;
+    rdfs:label "" .
+

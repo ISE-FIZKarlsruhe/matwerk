@@ -66791,6 +66791,216 @@
         <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sparql-nfdi-matwerk-02.web.vulcanus.otc.coscine.dev/</ontology:NFDI_0001008>
         <rdfs:label>sparql endpoint of MSE Knowledge Graph v1.0</rdfs:label>
     </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064251 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064251">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://ditrare.ise.fiz-karlsruhe.de/chemotion-kg/shmarql/</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of Chemotion KG</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/176113440642510 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113440642510">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://nfdi4microbiota.de/services/sparql_query/</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of NFDI4Microbiota</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/176113440642511 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113440642511">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orkg.org/triplestore</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of Open Research Knowledge Graph</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064252 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064252">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://data.gesis.org/gesiskg/sparql</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of GESIS Knowledge Graph (GESIS KG)</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064253 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064253">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://query.portal.mardi4nfdi.de/</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of MaRDI</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064254 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064254">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://kg.nfdi4bioimage.de/#/dataset/N4BIKG/query</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of NFDI4Bioimage</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064255 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064255">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://search.nfdi4chem.de/sparql</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of NFDI4Chem</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064256 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064256">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://nfdi4culture.de/sparql</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of NFDI4Culture</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064257 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064257">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://nfdi.fiz-karlsruhe.de/4ds/sparql</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of NFDI4DataScience</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064258 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064258">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sparql.knowledgehub.nfdi4earth.de/</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of NFDI4Earth</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064259 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064259">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://nfdi.fiz-karlsruhe.de/4memory/shmarql/</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of NFDI4Memory</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506661 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506661">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://pmdkg.ise.fiz-karlsruhe.de/sparql</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of Platform MaterialDigital KG</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506662 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506662">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://rdfportal.org/primary/sparql</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of RDF portal</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506663 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506663">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://sparql.unhide.helmholtz-metadaten.de/</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of Helmholtz Knowledge Graph</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506664 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506664">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://graph.nfdi4objects.net/sparql</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of NFDI4Objects Knowledge Graph</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506665 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506665">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://query.mbi.kgi.uni-mannheim.de/</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of MaschinenBauIndustrie Knowledge Graph</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506666 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506666">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://lod.b3kat.de/doc/sparql-endpoint</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of LinkedOpenData-Service des B3Kat</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506667 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506667">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://slod.fiz-karlsruhe.de/sparql</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of Linked Stage Graph</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506668 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506668">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://data.gesis.org/claimskg/sparql</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of Claims Knowledge Graph</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506669 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506669">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://data.gesis.org/somesci/sparql</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of Software Mentions in Science Knowledge Graph</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506670 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506670">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://data.gesis.org/softwarekg/sparql</ontology:NFDI_0001008>
+        <rdfs:label>sparql endpoint of Software Knowledge Graph</rdfs:label>
+    </NamedIndividual>
 </rdf:RDF>
 
 

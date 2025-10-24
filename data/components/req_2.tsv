@@ -6937,8 +6937,24 @@ https://purls.helmholtz-metadaten.de/msekg/17453315869423	https://nfdi.fiz-karls
 https://purls.helmholtz-metadaten.de/msekg/17453315869424	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	https://doi.org/10.1107/S1600576714027575											
 https://purls.helmholtz-metadaten.de/msekg/17453315869425	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190	First principles methods using CASTEP&quot;, Zeitschrift fuer Kristallographie 220(5-6) pp. 567-570 (2005) S. J. Clark, M. D. Segall, C. J. Pickard, P. J. Hasnip, M. J. Probert, K. Refson, M. C. Payne											
 https://purls.helmholtz-metadaten.de/msekg/17588918337771	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of MSE Knowledge Graph v1.0						https://sparql-nfdi-matwerk-02.web.vulcanus.otc.coscine.dev/					
-								https://hdl.handle.net/21.11152/253e0f2a-4d4a-4916-a45a-ef7cd8ad1f9b					
-								https://hdl.handle.net/21.11152/28f4733f-a457-430f-9482-f5259f91cfc2					
-								https://hdl.handle.net/21.11152/fa8ce096-b98b-4ec9-8ca9-fa140454bb86					
-								https://hdl.handle.net/21.11152/ce406c08-74ea-4294-8af2-4d28c9ebf53f					
-								https://hdl.handle.net/21.11152/f66b53a9-38d5-4b4b-a701-a69adce1c68b					
+https://purls.helmholtz-metadaten.de/msekg/17611344064251	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of Chemotion KG						https://ditrare.ise.fiz-karlsruhe.de/chemotion-kg/shmarql/					
+https://purls.helmholtz-metadaten.de/msekg/17611344064252	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of GESIS Knowledge Graph (GESIS KG)						https://data.gesis.org/gesiskg/sparql					
+https://purls.helmholtz-metadaten.de/msekg/17611344064253	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of MaRDI						https://query.portal.mardi4nfdi.de/					
+https://purls.helmholtz-metadaten.de/msekg/17611344064254	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4Bioimage						https://kg.nfdi4bioimage.de/#/dataset/N4BIKG/query 					
+https://purls.helmholtz-metadaten.de/msekg/17611344064255	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4Chem						https://search.nfdi4chem.de/sparql					
+https://purls.helmholtz-metadaten.de/msekg/17611344064256	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4Culture						https://nfdi4culture.de/sparql					
+https://purls.helmholtz-metadaten.de/msekg/17611344064257	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4DataScience						https://nfdi.fiz-karlsruhe.de/4ds/sparql					
+https://purls.helmholtz-metadaten.de/msekg/17611344064258	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4Earth						https://sparql.knowledgehub.nfdi4earth.de/					
+https://purls.helmholtz-metadaten.de/msekg/17611344064259	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4Memory						https://nfdi.fiz-karlsruhe.de/4memory/shmarql/					
+https://purls.helmholtz-metadaten.de/msekg/176113440642510	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4Microbiota						https://nfdi4microbiota.de/services/sparql_query/					
+https://purls.helmholtz-metadaten.de/msekg/176113440642511	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of Open Research Knowledge Graph						https://orkg.org/triplestore					
+https://purls.helmholtz-metadaten.de/msekg/17611350506661	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of Platform MaterialDigital KG						https://pmdkg.ise.fiz-karlsruhe.de/sparql					
+https://purls.helmholtz-metadaten.de/msekg/17611350506662	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of RDF portal						https://rdfportal.org/primary/sparql					
+https://purls.helmholtz-metadaten.de/msekg/17611350506663	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of Helmholtz Knowledge Graph						https://sparql.unhide.helmholtz-metadaten.de/					
+https://purls.helmholtz-metadaten.de/msekg/17611350506664	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4Objects Knowledge Graph						https://graph.nfdi4objects.net/sparql					
+https://purls.helmholtz-metadaten.de/msekg/17611350506665	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of MaschinenBauIndustrie Knowledge Graph						https://query.mbi.kgi.uni-mannheim.de/					
+https://purls.helmholtz-metadaten.de/msekg/17611350506666	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of LinkedOpenData-Service des B3Kat						https://lod.b3kat.de/doc/sparql-endpoint					
+https://purls.helmholtz-metadaten.de/msekg/17611350506667	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of Linked Stage Graph						https://slod.fiz-karlsruhe.de/sparql					
+https://purls.helmholtz-metadaten.de/msekg/17611350506668	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of Claims Knowledge Graph						https://data.gesis.org/claimskg/sparql					
+https://purls.helmholtz-metadaten.de/msekg/17611350506669	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of Software Mentions in Science Knowledge Graph						https://data.gesis.org/somesci/sparql					
+https://purls.helmholtz-metadaten.de/msekg/17611350506670	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of Software Knowledge Graph						https://data.gesis.org/softwarekg/sparql					
