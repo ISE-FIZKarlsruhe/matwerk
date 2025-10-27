@@ -3,16 +3,16 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcmitype: <http://purl.org/dc/dcmitype/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix geo: <http://www.opengis.net/ont/geosparql#> .
-@prefix ns1: <http://purl.obolibrary.org/obo/> .
+@prefix mwo: <http://purls.helmholtz-metadaten.de/mwo/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
+@prefix schema1: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix stat: <https://purls.helmholtz-metadaten.de/msekg/stat/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
@@ -20,10 +20,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://purls.helmholtz-metadaten.de/msekg/17588917500551> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759747764517>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759747764517>,
         <https://purls.helmholtz-metadaten.de/msekg/1759747764518>,
         <https://purls.helmholtz-metadaten.de/msekg/1759747764519> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17588918337771> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17588918337771> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/1cd612cf56808c91>,
         <https://purls.helmholtz-metadaten.de/msekg/34f6f34c48897bbd>,
         <https://purls.helmholtz-metadaten.de/msekg/3f4c3e8adada8429>,
@@ -61,10 +61,10 @@
     void:sparqlEndpoint <https://sparql-nfdi-matwerk-02.web.vulcanus.otc.coscine.dev/> ;
     void:vocabulary <http://emmo.info/emmo#>,
         <http://nfdi.fiz-karlsruhe.de/ontology/>,
-        ns1:,
+        obo:,
         dc:,
         dcterms:,
-        <http://purls.helmholtz-metadaten.de/mwo/>,
+        mwo:,
         <http://www.ebi.ac.uk/swo/>,
         <http://www.ebi.ac.uk/swo/license/>,
         <http://www.geneontology.org/formats/oboInOwl#>,
@@ -87,10 +87,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289021> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315165455>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315165455>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315165456>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315165457> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064251> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064251> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/0071dc030a82fc54>,
         <https://purls.helmholtz-metadaten.de/msekg/0b6e660b78e40714>,
         <https://purls.helmholtz-metadaten.de/msekg/151e8e8783f6283a>,
@@ -113,7 +113,7 @@
     void:entities 83497 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://ditrare.ise.fiz-karlsruhe.de/chemotion-kg/shmarql/> ;
-    void:vocabulary ns1:,
+    void:vocabulary obo:,
         <http://purl.obolibrary.org/obo/chebi/>,
         rdf:,
         rdfs:,
@@ -126,26 +126,14 @@
     stat:numberOfObjectPropertiesReusedFromMWO 15 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289031> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315234557>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315234557>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315234558>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315234559> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064252> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064252> ;
     void:classes 34 ;
     void:entities 3724634 ;
     void:properties 148 ;
     void:sparqlEndpoint <https://data.gesis.org/gesiskg/sparql> ;
-    void:vocabulary dcterms:,
-        <http://rdf-vocabulary.ddialliance.org/lifecycle#>,
-        void:,
-        <http://www.openlinksw.com/schemas/DAV#>,
-        <http://www.openlinksw.com/schemas/virtrdf#>,
-        rdf:,
-        rdfs:,
-        owl:,
-        <http://www.w3.org/ns/sparql-service-description#>,
-        <https://data.gesis.org/gesiskg/schema/>,
-        <https://nfdi.fiz-karlsruhe.de/ontology/>,
-        schema: ;
     stat:numberOfClassesReusedFromMWO 0 ;
     stat:numberOfDataProperties 114 ;
     stat:numberOfDataPropertiesReusedFromMWO 0 ;
@@ -153,10 +141,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890310> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315219704>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315219704>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315219705>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315219706> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/176113440642511> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/176113440642511> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/00123ea5a97ba4d4>,
         <https://purls.helmholtz-metadaten.de/msekg/002505e95e10cef8>,
         <https://purls.helmholtz-metadaten.de/msekg/003fc1236c7d6a4a>,
@@ -1018,6 +1006,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/70bc35ce8ca39c09>,
         <https://purls.helmholtz-metadaten.de/msekg/70e87d1dd7ba7092>,
         <https://purls.helmholtz-metadaten.de/msekg/7129f28f762f0b70>,
+        <https://purls.helmholtz-metadaten.de/msekg/716759377a0a5ba9>,
         <https://purls.helmholtz-metadaten.de/msekg/71695f02a3e910a9>,
         <https://purls.helmholtz-metadaten.de/msekg/71837cb966f67399>,
         <https://purls.helmholtz-metadaten.de/msekg/7183b3c28589a7a3>,
@@ -2033,8 +2022,8 @@
         <https://purls.helmholtz-metadaten.de/msekg/ff918d350805fe70>,
         <https://purls.helmholtz-metadaten.de/msekg/ffba162ececefc28>,
         <https://purls.helmholtz-metadaten.de/msekg/ffbe7ae88c460787> ;
-    void:classes 2582 ;
-    void:entities 486444 ;
+    void:classes 2596 ;
+    void:entities 486742 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://orkg.org/triplestore> ;
     void:vocabulary <http://orkg.org/orkg/class/>,
@@ -2053,10 +2042,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890311> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316053473>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316053473>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316053474>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316053475> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506664> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506664> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
@@ -2068,10 +2057,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890312> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316078426>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316078426>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316078427>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316078428> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506665> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506665> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
@@ -2083,10 +2072,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890313> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316097927>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316097927>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316097928>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316097929> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506666> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506666> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
@@ -2098,10 +2087,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890314> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316117185>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316117185>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316117186>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316117187> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506667> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506667> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/05e03e0c6c1fb209>,
         <https://purls.helmholtz-metadaten.de/msekg/0a25a7dcea4ed091>,
         <https://purls.helmholtz-metadaten.de/msekg/1d301dcaa8cd939d>,
@@ -2151,7 +2140,7 @@
         vann:,
         <http://purl.org/vocommons/voaf#>,
         <http://rhizomik.net/ontologies/2007/11/xlink-2003-12-31.owl#>,
-        <http://schema.org/>,
+        schema1:,
         <http://slod.fiz-karlsruhe/ontology/>,
         <http://wikiba.se/ontology#>,
         <http://www.openarchives.org/ore/terms/>,
@@ -2182,8 +2171,7 @@
         <http://www.wikidata.org/prop/statement/value-normalized/>,
         <http://www.wikidata.org/prop/statement/value/>,
         foaf:,
-        <https://d-nb.info/standards/elementset/gnd#>,
-        <urn:isbn:1-931666-22-9#> ;
+        <https://d-nb.info/standards/elementset/gnd#> ;
     stat:numberOfClassesReusedFromMWO 0 ;
     stat:numberOfDataProperties 3231 ;
     stat:numberOfDataPropertiesReusedFromMWO 0 ;
@@ -2191,53 +2179,15 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890315> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316667916>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316667916>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316667917>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316667918> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506668> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506668> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/31b6ca902205d044> ;
     void:classes 3 ;
     void:entities 121 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://data.gesis.org/claimskg/sparql> ;
-    void:vocabulary <http://dbpedia.org/class/yago/>,
-        <http://dbpedia.org/ontology/>,
-        <http://dbpedia.org/ontology/PopulatedPlace/>,
-        <http://dbpedia.org/ontology/Software/>,
-        <http://dbpedia.org/ontology/Work/>,
-        <http://dbpedia.org/property/>,
-        <http://dbpedia.org/property/city/>,
-        <http://dbpedia.org/property/country/>,
-        <http://dbpedia.org/property/state/>,
-        <http://open.vocab.org/terms/>,
-        <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>,
-        dc:,
-        dcterms:,
-        <http://purl.org/iso25964/skos-thes#>,
-        <http://purl.org/linguistics/gold/>,
-        <http://purl.org/ontology/bibo/>,
-        <http://schema.org/>,
-        <http://try.iqvoc.net/schema#>,
-        <http://umbel.org/umbel#>,
-        <http://umbel.org/umbel/rc/>,
-        <http://vocabularies.unesco.org/ontology#>,
-        <http://www.georss.org/georss/>,
-        <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#>,
-        <http://www.openlinksw.com/schemas/DAV#>,
-        <http://www.openlinksw.com/schemas/virtrdf#>,
-        rdf:,
-        rdfs:,
-        owl:,
-        <http://www.w3.org/2003/01/geo/wgs84_pos#>,
-        skos:,
-        <http://www.w3.org/2007/05/powder-s#>,
-        <http://www.w3.org/2008/05/skos-xl#>,
-        dcat:,
-        prov:,
-        <http://www.w3.org/ns/sparql-service-description#>,
-        <http://www.wikidata.org/entity/>,
-        foaf:,
-        <https://www.w3.org/2005/11/its/rdf#> ;
     stat:numberOfClassesReusedFromMWO 0 ;
     stat:numberOfDataProperties 0 ;
     stat:numberOfDataPropertiesReusedFromMWO 0 ;
@@ -2245,10 +2195,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890316> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316687329>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316687329>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316687330>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316687331> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506669> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506669> ;
     void:classes 2 ;
     void:entities 0 ;
     void:properties 0 ;
@@ -2257,7 +2207,7 @@
         <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>,
         dcterms:,
         void:,
-        <http://schema.org/>,
+        schema1:,
         <http://www.openlinksw.com/schemas/DAV#>,
         <http://www.openlinksw.com/schemas/virtrdf#>,
         rdf:,
@@ -2275,22 +2225,21 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890317> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316701163>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316701163>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316701164>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316701165> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506670> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506670> ;
     void:classes 2 ;
     void:entities 0 ;
     void:properties 4 ;
     void:sparqlEndpoint <https://data.gesis.org/softwarekg/sparql> ;
-    void:vocabulary <file:///home/softwarekg/data/softwarekg/v6/>,
-        <http://data.gesis.org/softwarekg/>,
+    void:vocabulary <http://data.gesis.org/softwarekg/>,
         <http://dbpedia.org/ontology/>,
         <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>,
         dc:,
         dcterms:,
         <http://purl.org/spar/datacite/>,
-        <http://schema.org/>,
+        schema1:,
         <http://www.openlinksw.com/schemas/DAV#>,
         <http://www.openlinksw.com/schemas/virtrdf#>,
         rdf:,
@@ -2305,10 +2254,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289032> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315340486>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315340486>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315340487>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315340488> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064253> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064253> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
@@ -2320,10 +2269,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289033> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315362950>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315362950>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315362951>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315362952> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064254> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064254> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
@@ -2335,10 +2284,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289034> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315382077>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315382077>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315382078>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315382079> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064255> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064255> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
@@ -2350,31 +2299,14 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289035> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315410130>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315410130>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315410131>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315410132> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064256> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064256> ;
     void:classes 2 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://nfdi4culture.de/sparql> ;
-    void:vocabulary ns1:,
-        dcterms:,
-        <http://purl.org/spar/fabio/>,
-        void:,
-        <http://schema.org/>,
-        <http://www.openlinksw.com/schemas/DAV#>,
-        <http://www.openlinksw.com/schemas/virtrdf#>,
-        rdf:,
-        rdfs:,
-        owl:,
-        dcat:,
-        <http://www.w3.org/ns/hydra/core#>,
-        org:,
-        <http://www.w3.org/ns/sparql-service-description#>,
-        <https://nfdi.fiz-karlsruhe.de/ontology/>,
-        <https://nfdi4culture.de/ontology/>,
-        <https://w3id.org/okn/o/sd#> ;
     stat:numberOfClassesReusedFromMWO 26 ;
     stat:numberOfDataProperties 0 ;
     stat:numberOfDataPropertiesReusedFromMWO 1 ;
@@ -2382,10 +2314,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 19 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289036> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315432947>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315432947>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315432948>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315432949> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064257> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064257> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/002ecdb3c81a6db9>,
         <https://purls.helmholtz-metadaten.de/msekg/0cacdd579baf4e97>,
         <https://purls.helmholtz-metadaten.de/msekg/10de07fa95a738b3>,
@@ -2420,11 +2352,11 @@
     void:entities 242 ;
     void:properties 64 ;
     void:sparqlEndpoint <https://nfdi.fiz-karlsruhe.de/4ds/sparql> ;
-    void:vocabulary ns1:,
+    void:vocabulary obo:,
         dcterms:,
         <http://purl.org/ontology/bibo/>,
         vann:,
-        <http://schema.org/>,
+        schema1:,
         <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>,
         rdf:,
         rdfs:,
@@ -2441,10 +2373,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 4 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289037> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315444837>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315444837>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315444838>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315444839> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064258> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064258> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/04aead2a1b357781>,
         <https://purls.helmholtz-metadaten.de/msekg/196c5422cead7273>,
         <https://purls.helmholtz-metadaten.de/msekg/b2fcbf82a50566cf>,
@@ -2455,36 +2387,6 @@
     void:entities 581 ;
     void:properties 144 ;
     void:sparqlEndpoint <https://sparql.knowledgehub.nfdi4earth.de/> ;
-    void:vocabulary <http://nfdi4earth.de/ontology/>,
-        dc:,
-        dcterms:,
-        <http://purl.org/iso25964/skos-thes#>,
-        <http://purl.org/pav/>,
-        vann:,
-        <http://schema.org/>,
-        <http://spdx.org/rdf/terms#>,
-        doap:,
-        <http://vocabularies.unesco.org/ontology#>,
-        <http://w3id.org/nfdi4ing/metadata4ing#>,
-        <http://www.loc.gov/premis/rdf/v3/>,
-        geo:,
-        <http://www.openlinksw.com/schemas/DAV#>,
-        <http://www.openlinksw.com/schemas/virtrdf#>,
-        rdf:,
-        rdfs:,
-        owl:,
-        skos:,
-        <http://www.w3.org/2006/vcard/ns#>,
-        <http://www.w3.org/2008/05/skos-xl#>,
-        <http://www.w3.org/ns/adms#>,
-        dcat:,
-        <http://www.w3.org/ns/locn#>,
-        org:,
-        prov:,
-        <http://www.w3.org/ns/sparql-service-description#>,
-        foaf:,
-        <https://nfdi.fiz-karlsruhe.de/ontology/>,
-        <https://w3id.org/linkml/> ;
     stat:numberOfClassesReusedFromMWO 0 ;
     stat:numberOfDataProperties 79 ;
     stat:numberOfDataPropertiesReusedFromMWO 0 ;
@@ -2492,10 +2394,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289038> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315458914>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315458914>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315458915>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315458916> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064259> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064259> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/1635f3ef7cde3155>,
         <https://purls.helmholtz-metadaten.de/msekg/1c58f27111a304ed>,
         <https://purls.helmholtz-metadaten.de/msekg/299835750730dde8>,
@@ -2521,7 +2423,7 @@
     void:entities 206 ;
     void:properties 89 ;
     void:sparqlEndpoint <https://nfdi.fiz-karlsruhe.de/4memory/shmarql/> ;
-    void:vocabulary ns1:,
+    void:vocabulary obo:,
         dc:,
         dcterms:,
         <http://purl.org/ontology/bibo/>,
@@ -2543,10 +2445,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 7 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289039> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315198796>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315198796>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315198797>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315198798> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/176113440642510> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/176113440642510> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
@@ -2558,10 +2460,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611348076041> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315480209>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315480209>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315480210>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315480211> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506661> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506661> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/01549a031746eab0>,
         <https://purls.helmholtz-metadaten.de/msekg/0194f1e7ce233ac5>,
         <https://purls.helmholtz-metadaten.de/msekg/01fe48fc861e2470>,
@@ -2931,7 +2833,7 @@
     void:vocabulary <http://emmo.info/emmo/middle/models#>,
         <http://emmo.info/emmo/top/annotations#>,
         <http://material-digital.de/pmdco/>,
-        ns1:,
+        obo:,
         <http://purl.obolibrary.org/obo/chebi/>,
         dc:,
         dcterms:,
@@ -2975,30 +2877,14 @@
     stat:numberOfObjectPropertiesReusedFromMWO 7 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611348774371> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316039934>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316039934>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316039935>,
         <https://purls.helmholtz-metadaten.de/msekg/1761316039936> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506663> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506663> ;
     void:classes 2 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://sparql.unhide.helmholtz-metadaten.de/> ;
-    void:vocabulary <http://doi.com/>,
-        dcterms:,
-        <http://schema.org/>,
-        <http://www.openlinksw.com/schemas/DAV#>,
-        <http://www.openlinksw.com/schemas/virtrdf#>,
-        rdf:,
-        rdfs:,
-        owl:,
-        skos:,
-        <http://www.w3.org/ns/sparql-service-description#>,
-        <https://codemeta.github.io/terms/>,
-        schema:,
-        <https://w3id.org/software-types#>,
-        <p1>,
-        <p2>,
-        <p3> ;
     stat:numberOfClassesReusedFromMWO 0 ;
     stat:numberOfDataProperties 0 ;
     stat:numberOfDataPropertiesReusedFromMWO 0 ;
@@ -3006,10 +2892,10 @@
     stat:numberOfObjectPropertiesReusedFromMWO 0 .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611349780261> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    ns1:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315494185>,
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315494185>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315494186>,
         <https://purls.helmholtz-metadaten.de/msekg/1761315494187> ;
-    ns1:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506662> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506662> ;
     void:classes 929276 ;
     void:entities 0 ;
     void:properties 2274 ;
@@ -3076,7 +2962,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/0194f1e7ce233ac5> rdfs:label "mass unit" ;
-    void:class ns1:UO_0000002 ;
+    void:class obo:UO_0000002 ;
     void:entities 6 .
 
 <https://purls.helmholtz-metadaten.de/msekg/01978919ec979761> rdfs:label "R111507" ;
@@ -3179,7 +3065,7 @@
     void:entities 40 .
 
 <https://purls.helmholtz-metadaten.de/msekg/04c0d3214d0d1995> rdfs:label "regulatory agency" ;
-    void:class ns1:OBI_0000450 ;
+    void:class obo:OBI_0000450 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/04c97f5826260881> rdfs:label "Curingprocess with constant Temperature" ;
@@ -3232,7 +3118,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/06cc1f446b0ac87b> rdfs:label "Problem" ;
     void:class <http://orkg.org/orkg/class/Problem> ;
-    void:entities 7231 .
+    void:entities 7242 .
 
 <https://purls.helmholtz-metadaten.de/msekg/06e5a7292fa17646> rdfs:label "Data" ;
     void:class <http://orkg.org/orkg/class/C58020> ;
@@ -3405,7 +3291,7 @@
     void:entities 8 .
 
 <https://purls.helmholtz-metadaten.de/msekg/0b863945e616493b> rdfs:label "clinical tumor stage group according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002314 ;
+    void:class obo:OBI_0002314 ;
     void:entities 11 .
 
 <https://purls.helmholtz-metadaten.de/msekg/0b8847b8a8039c4d> rdfs:label "Lithium chloride" ;
@@ -3711,7 +3597,7 @@
     void:entities 18 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1336fbe97a854c73> rdfs:label "pathologic lymph node stage for colon and rectum according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002270 ;
+    void:class obo:OBI_0002270 ;
     void:entities 8 .
 
 <https://purls.helmholtz-metadaten.de/msekg/133ca71359bd6397> rdfs:label "hypothesis evaluation status" ;
@@ -3960,7 +3846,7 @@
     void:entities 144 .
 
 <https://purls.helmholtz-metadaten.de/msekg/198ce281b8c2b29e> rdfs:label "GenePattern software" ;
-    void:class ns1:OBI_0000713 ;
+    void:class obo:OBI_0000713 ;
     void:entities 10 .
 
 <https://purls.helmholtz-metadaten.de/msekg/198e5e02579519f4> rdfs:label "assay Kit" ;
@@ -4020,7 +3906,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/1ad7a8973f5b867c> rdfs:label "Time (duration) [C]" ;
     void:class <http://orkg.org/orkg/class/C123005> ;
-    void:entities 1 .
+    void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1ae9e044a92bc9fd> rdfs:label "software requirements" ;
     void:class <http://orkg.org/orkg/class/C79004> ;
@@ -4072,7 +3958,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/1c09499fa5cd21f6> rdfs:label "Published Comparison" ;
     void:class <http://orkg.org/orkg/class/ComparisonPublished> ;
-    void:entities 2016 .
+    void:entities 2018 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1c2c3ab55fd66ac5> rdfs:label "Knowledge representation" ;
     void:class <http://orkg.org/orkg/class/C77042> ;
@@ -4179,7 +4065,7 @@
     void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1e3044b5bdd4b43e> rdfs:label "pathologic primary tumor stage for kidney according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002243 ;
+    void:class obo:OBI_0002243 ;
     void:entities 12 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1e788e9b67b5b73f> rdfs:label "R51438" ;
@@ -4200,7 +4086,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/1efdec983bb0605a> rdfs:label "Contribution" ;
     void:class <http://orkg.org/orkg/class/Contribution> ;
-    void:entities 77277 .
+    void:entities 77303 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1f188c70fd640f72> rdfs:label "ecological study system" ;
     void:class <http://orkg.org/orkg/class/C65002> ;
@@ -4271,7 +4157,7 @@
     void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/2150877fc71b92c1> rdfs:label "hierarchical clustering" ;
-    void:class ns1:OBI_0200042 ;
+    void:class obo:OBI_0200042 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/2196da90cc9d0030> rdfs:label "Avance III" ;
@@ -4371,7 +4257,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/249af2c025bc9c6e> rdfs:label "Drought Stress Planting System [C]" ;
     void:class <http://orkg.org/orkg/class/C121064> ;
-    void:entities 8 .
+    void:entities 17 .
 
 <https://purls.helmholtz-metadaten.de/msekg/24a42e23b9aaf890> rdfs:label "NOD1" ;
     void:class <http://orkg.org/orkg/class/C14530> ;
@@ -4402,7 +4288,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/25e81e9499a3efbd> rdfs:label "histologic grade according to the Fuhrman Nuclear Grading System" ;
-    void:class ns1:OBI_0002210 ;
+    void:class obo:OBI_0002210 ;
     void:entities 4 .
 
 <https://purls.helmholtz-metadaten.de/msekg/260430994a15186f> rdfs:label "Docetaxel" ;
@@ -4445,7 +4331,7 @@
     void:entities 9 .
 
 <https://purls.helmholtz-metadaten.de/msekg/2753c845da0175d9> rdfs:label "pathologic distant metastases stage for lung according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002298 ;
+    void:class obo:OBI_0002298 ;
     void:entities 7 .
 
 <https://purls.helmholtz-metadaten.de/msekg/2757ad20090fa211> rdfs:label "Fluorescein" ;
@@ -4590,7 +4476,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/2a9611ff54e191ff> rdfs:label "Material" ;
     void:class <http://orkg.org/orkg/class/Material> ;
-    void:entities 682 .
+    void:entities 686 .
 
 <https://purls.helmholtz-metadaten.de/msekg/2aafb5d25ecdaab8> rdfs:label "electrolyte" ;
     void:class <http://orkg.org/orkg/class/C63004> ;
@@ -4661,7 +4547,7 @@
     void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/2cdd093b9e4f6a9f> rdfs:label "histologic grade for ovarian tumor according to a two-tier grading system" ;
-    void:class ns1:OBI_0002216 ;
+    void:class obo:OBI_0002216 ;
     void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/2cf1966a7f0b41c0> rdfs:label "inhibitor" ;
@@ -4908,7 +4794,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/349bc1ec1d86d6b4> rdfs:label "Venue" ;
     void:class <http://orkg.org/orkg/class/Venue> ;
-    void:entities 11729 .
+    void:entities 11734 .
 
 <https://purls.helmholtz-metadaten.de/msekg/34ce8da28de53bc2> rdfs:label "organization" ;
     void:class <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ;
@@ -4931,7 +4817,7 @@
     void:entities 17 .
 
 <https://purls.helmholtz-metadaten.de/msekg/34f6f34c48897bbd> rdfs:label "visualization software" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/VisualizationSoftware> ;
+    void:class mwo:VisualizationSoftware ;
     void:entities 8 .
 
 <https://purls.helmholtz-metadaten.de/msekg/3516b6023762083a> rdfs:label "percent cell viability" ;
@@ -5004,7 +4890,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/36857f5f9229cd0c> rdfs:label "Planting Environment" ;
     void:class <http://orkg.org/orkg/class/C120023> ;
-    void:entities 11 .
+    void:entities 21 .
 
 <https://purls.helmholtz-metadaten.de/msekg/36b5b8ae4dd4312d> rdfs:label "mlguide method" ;
     void:class <http://orkg.org/orkg/class/C105001> ;
@@ -5063,7 +4949,7 @@
     void:entities 227 .
 
 <https://purls.helmholtz-metadaten.de/msekg/385fd16c7f576a85> rdfs:label "pathologic primary tumor stage for ovary according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002256 ;
+    void:class obo:OBI_0002256 ;
     void:entities 13 .
 
 <https://purls.helmholtz-metadaten.de/msekg/3879b3b8a8e8f590> rdfs:label "AI tool" ;
@@ -5176,7 +5062,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/3ae40668818306e0> rdfs:label "Sample Size (Plants) [C]" ;
     void:class <http://orkg.org/orkg/class/C120018> ;
-    void:entities 17 .
+    void:entities 27 .
 
 <https://purls.helmholtz-metadaten.de/msekg/3af1b2f6787f4740> rdfs:label "Preparing specimen process" ;
     void:class <http://w3id.org/sensotwin/applicationontology#PrepareSpecimenProcess> ;
@@ -5210,12 +5096,12 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/3c517a38a9ff4a59> rdfs:label "pathologic distant metastases stage for colon according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002290 ;
+    void:class obo:OBI_0002290 ;
     void:entities 7 .
 
 <https://purls.helmholtz-metadaten.de/msekg/3c5768f1a37d40c7> rdfs:label "Drought Stress Indicators of One Plant" ;
     void:class <http://orkg.org/orkg/class/C120020> ;
-    void:entities 30 .
+    void:entities 57 .
 
 <https://purls.helmholtz-metadaten.de/msekg/3c75a89325cc9514> rdfs:label "System qualities" ;
     void:class <http://orkg.org/orkg/class/C21043> ;
@@ -5255,7 +5141,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/3d695193c4ae38a0> rdfs:label "Drought Stress Condition Design [C]" ;
     void:class <http://orkg.org/orkg/class/C121066> ;
-    void:entities 7 .
+    void:entities 12 .
 
 <https://purls.helmholtz-metadaten.de/msekg/3d7cbf9b19aaec3c> rdfs:label "H5N1 subtype" ;
     void:class <http://orkg.org/orkg/class/C15012> ;
@@ -5499,7 +5385,7 @@
     void:entities 10 .
 
 <https://purls.helmholtz-metadaten.de/msekg/441af9d93db4d7b6> rdfs:label "questionnaire" ;
-    void:class ns1:OBI_0001000 ;
+    void:class obo:OBI_0001000 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/4423c39da11c7bc6> rdfs:label "city" ;
@@ -5511,7 +5397,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/4452998cab23e597> rdfs:label "organization" ;
-    void:class ns1:OBI_0000245 ;
+    void:class obo:OBI_0000245 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/448f53ffee1eeaaf> rdfs:label "Tabular dataset" ;
@@ -5642,7 +5528,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/4788d2820a797e36> rdfs:label "leave one out cross validation method" ;
-    void:class ns1:OBI_0200033 ;
+    void:class obo:OBI_0200033 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/47ae1f1c68c1c5a0> rdfs:label "source detection approaches in astronomical images [C]" ;
@@ -5699,7 +5585,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/48cf949e1acd0524> rdfs:label "Latest version" ;
     void:class <http://orkg.org/orkg/class/LatestVersion> ;
-    void:entities 1717 .
+    void:entities 1718 .
 
 <https://purls.helmholtz-metadaten.de/msekg/48ebf5b7b831ce91> rdfs:label "beta lactamase induction" ;
     void:class <http://orkg.org/orkg/class/C14099> ;
@@ -5722,7 +5608,7 @@
     void:entities 4 .
 
 <https://purls.helmholtz-metadaten.de/msekg/495e14c9c3480ce0> rdfs:label "length unit" ;
-    void:class ns1:UO_0000001 ;
+    void:class obo:UO_0000001 ;
     void:entities 6 .
 
 <https://purls.helmholtz-metadaten.de/msekg/497342389921719a> rdfs:label "Adenosine triphosphate" ;
@@ -5735,7 +5621,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/49e999c38e8264ee> rdfs:label "Drought Stress Experimental Design [C]" ;
     void:class <http://orkg.org/orkg/class/C120015> ;
-    void:entities 53 .
+    void:entities 60 .
 
 <https://purls.helmholtz-metadaten.de/msekg/49ea15a877353580> rdfs:label "NLP task translation mapping cardinality" ;
     void:class <http://orkg.org/orkg/class/C121009> ;
@@ -5778,7 +5664,7 @@
     void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/4a9971d28aa21f58> rdfs:label "International Federation of Gynecology and Obstetrics cervical cancer stage value specification" ;
-    void:class ns1:OBI_0002326 ;
+    void:class obo:OBI_0002326 ;
     void:entities 14 .
 
 <https://purls.helmholtz-metadaten.de/msekg/4b0c02775879f517> rdfs:label "Papertype" ;
@@ -5876,7 +5762,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/4ceda973d842a7e6> rdfs:label "processing software" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/ProcessingSoftware> ;
+    void:class mwo:ProcessingSoftware ;
     void:entities 8 .
 
 <https://purls.helmholtz-metadaten.de/msekg/4cf6136b29ed24cb> rdfs:label "EEA Target" ;
@@ -5907,7 +5793,7 @@
     void:class <http://orkg.org/orkg/class/C21072> ;
     void:entities 2 .
 
-<https://purls.helmholtz-metadaten.de/msekg/4dcffb9155e7af45> void:class ns1:CHEBI_23367 ;
+<https://purls.helmholtz-metadaten.de/msekg/4dcffb9155e7af45> void:class obo:CHEBI_23367 ;
     void:entities 3746 .
 
 <https://purls.helmholtz-metadaten.de/msekg/4ded9559fc8eb0e2> rdfs:label "artefact hcd step" ;
@@ -5919,7 +5805,7 @@
     void:entities 7 .
 
 <https://purls.helmholtz-metadaten.de/msekg/4e1b029ed8553aa9> rdfs:label "denotator type" ;
-    void:class ns1:IAO_0000409 ;
+    void:class obo:IAO_0000409 ;
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/4e30ac6356abfdd5> rdfs:label "dist_fibre_max" ;
@@ -5963,7 +5849,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/4f5fb503c3f5c03c> rdfs:label "Drought Stress Experimental - Soil Condition [C]" ;
     void:class <http://orkg.org/orkg/class/C120024> ;
-    void:entities 7 .
+    void:entities 14 .
 
 <https://purls.helmholtz-metadaten.de/msekg/4f63633ad401a041> rdfs:label "homogeneous phase" ;
     void:class <http://orkg.org/orkg/class/C10002> ;
@@ -6194,7 +6080,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/5493d320f999292b> rdfs:label "Plants (Experimental Object) [C]" ;
     void:class <http://orkg.org/orkg/class/C120014> ;
-    void:entities 59 .
+    void:entities 67 .
 
 <https://purls.helmholtz-metadaten.de/msekg/549fabf45a3d36a3> rdfs:label "Cyclic adenosine monophosphate" ;
     void:class <http://orkg.org/orkg/class/C14199> ;
@@ -6248,7 +6134,7 @@
     void:class <http://orkg.org/orkg/class/C14571> ;
     void:entities 2 .
 
-<https://purls.helmholtz-metadaten.de/msekg/560ff1fcccd2d7da> void:class ns1:IAO_0000027 ;
+<https://purls.helmholtz-metadaten.de/msekg/560ff1fcccd2d7da> void:class obo:IAO_0000027 ;
     void:entities 33277 .
 
 <https://purls.helmholtz-metadaten.de/msekg/565e1a56f9fa109e> rdfs:label "Date" ;
@@ -6280,7 +6166,7 @@
     void:entities 8 .
 
 <https://purls.helmholtz-metadaten.de/msekg/574628f7326245da> rdfs:label "support vector machine" ;
-    void:class ns1:OBI_0000700 ;
+    void:class obo:OBI_0000700 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/57909f67a697b91f> rdfs:label "Note" ;
@@ -6419,7 +6305,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/5ad6e3c8df48f0ff> rdfs:label "Author" ;
     void:class <http://orkg.org/orkg/class/Author> ;
-    void:entities 9885 .
+    void:entities 9927 .
 
 <https://purls.helmholtz-metadaten.de/msekg/5b1e18aa7b582adf> rdfs:label "R282321" ;
     void:class <http://orkg.org/orkg/class/C51003> ;
@@ -6467,7 +6353,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/5b68a2df031bad18> rdfs:label "Comparison" ;
     void:class <http://orkg.org/orkg/class/Comparison> ;
-    void:entities 1743 .
+    void:entities 1745 .
 
 <https://purls.helmholtz-metadaten.de/msekg/5b7e58206916a58f> rdfs:label "amount" ;
     void:class <http://orkg.org/orkg/class/C68000> ;
@@ -6561,7 +6447,7 @@
     void:entities 43 .
 
 <https://purls.helmholtz-metadaten.de/msekg/5ec67458e06d0483> rdfs:label "temperature unit" ;
-    void:class ns1:UO_0000005 ;
+    void:class obo:UO_0000005 ;
     void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/5ed38d09d1cb2e85> rdfs:label "L-AP4" ;
@@ -6701,7 +6587,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/623515faa146700f> rdfs:label "Result" ;
     void:class <http://orkg.org/orkg/class/Result> ;
-    void:entities 1814 .
+    void:entities 1827 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6244efd9d22fc004> rdfs:label "Chlorocebus aethiops" ;
     void:class <http://orkg.org/orkg/class/C14424> ;
@@ -6735,7 +6621,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6303ac83ee85e11f> rdfs:label "material supplier" ;
-    void:class ns1:OBI_0002989 ;
+    void:class obo:OBI_0002989 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6312992dcce410d1> rdfs:label "CBF-his/runx1-biotin protein complex" ;
@@ -6824,7 +6710,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/6560184360cb3596> rdfs:label "Drought Stress Experimental - Air Condition [C]" ;
     void:class <http://orkg.org/orkg/class/C120025> ;
-    void:entities 7 .
+    void:entities 15 .
 
 <https://purls.helmholtz-metadaten.de/msekg/656260531d566f25> rdfs:label "Comparison Related Figure" ;
     void:class <http://orkg.org/orkg/class/ComparisonRelatedFigure> ;
@@ -7148,7 +7034,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6e569082120197af> rdfs:label "principal components analysis dimensionality reduction" ;
-    void:class ns1:OBI_0200051 ;
+    void:class obo:OBI_0200051 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6e781528227e3d34> rdfs:label "LLM-Hallu-Bench-Task [C]" ;
@@ -7177,7 +7063,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/6f1eebd02cf1df19> rdfs:label "Paper" ;
     void:class <http://orkg.org/orkg/class/Paper> ;
-    void:entities 53158 .
+    void:entities 53167 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6f75957dac0b4bd6> rdfs:label "e31" ;
     void:class <http://w3id.org/sensotwin/applicationontology#e31> ;
@@ -7271,11 +7157,15 @@
     void:class <http://orkg.org/orkg/class/C14488> ;
     void:entities 2 .
 
-<https://purls.helmholtz-metadaten.de/msekg/711ed585afb51475> void:class ns1:BFO_0000015 ;
+<https://purls.helmholtz-metadaten.de/msekg/711ed585afb51475> void:class obo:BFO_0000015 ;
     void:entities 20563 .
 
 <https://purls.helmholtz-metadaten.de/msekg/7129f28f762f0b70> rdfs:label "Acetazolamide" ;
     void:class <http://orkg.org/orkg/class/C21055> ;
+    void:entities 3 .
+
+<https://purls.helmholtz-metadaten.de/msekg/716759377a0a5ba9> rdfs:label "Solar irradiance" ;
+    void:class <http://orkg.org/orkg/class/C120000> ;
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/71695f02a3e910a9> rdfs:label "Exploited data" ;
@@ -7377,7 +7267,7 @@
     void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/736a775709286022> rdfs:label "obsolescence reason specification" ;
-    void:class ns1:IAO_0000225 ;
+    void:class obo:IAO_0000225 ;
     void:entities 6 .
 
 <https://purls.helmholtz-metadaten.de/msekg/736e05ec6a4b09bf> rdfs:label "aggregated" ;
@@ -7974,7 +7864,7 @@
     void:entities 19 .
 
 <https://purls.helmholtz-metadaten.de/msekg/853de092f7ee03d3> rdfs:label "pathologic primary tumor stage for colon and rectum according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002224 ;
+    void:class obo:OBI_0002224 ;
     void:entities 7 .
 
 <https://purls.helmholtz-metadaten.de/msekg/8553671db5aba97e> rdfs:label "[125I]Y10-neuropeptide S" ;
@@ -8010,7 +7900,7 @@
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/862e15098c38dea0> rdfs:label "semantic resource" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/SemanticResource> ;
+    void:class mwo:SemanticResource ;
     void:entities 15 .
 
 <https://purls.helmholtz-metadaten.de/msekg/86526a648780987a> rdfs:label "FutureWork" ;
@@ -8059,7 +7949,7 @@
     void:class <http://orkg.org/orkg/class/Sentence> ;
     void:entities 560 .
 
-<https://purls.helmholtz-metadaten.de/msekg/87dec26fc8f6ef74> void:class ns1:IAO_0020017 ;
+<https://purls.helmholtz-metadaten.de/msekg/87dec26fc8f6ef74> void:class obo:IAO_0020017 ;
     void:entities 107 .
 
 <https://purls.helmholtz-metadaten.de/msekg/88074073e9679ae6> rdfs:label "person" ;
@@ -8075,7 +7965,7 @@
     void:entities 23 .
 
 <https://purls.helmholtz-metadaten.de/msekg/883ee63b191d3af2> rdfs:label "curation status specification" ;
-    void:class ns1:IAO_0000078 ;
+    void:class obo:IAO_0000078 ;
     void:entities 9 .
 
 <https://purls.helmholtz-metadaten.de/msekg/884035a89cbbdd88> rdfs:label "Lecithin, Soybean" ;
@@ -8269,7 +8159,7 @@
     void:entities 69 .
 
 <https://purls.helmholtz-metadaten.de/msekg/8ceed6d1f990af02> rdfs:label "substance unit" ;
-    void:class ns1:UO_0000006 ;
+    void:class obo:UO_0000006 ;
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/8cf9c70b9a541811> rdfs:label "Cycle Number" ;
@@ -8297,7 +8187,7 @@
     void:entities 110 .
 
 <https://purls.helmholtz-metadaten.de/msekg/8dc071b13bbce6e0> rdfs:label "educational resource" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/EducationalResource> ;
+    void:class mwo:EducationalResource ;
     void:entities 13 .
 
 <https://purls.helmholtz-metadaten.de/msekg/8de083cc4c406de2> rdfs:label "CD40" ;
@@ -8305,7 +8195,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/8df366bc298a7fb0> rdfs:label "pathologic primary tumor stage for lung according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002232 ;
+    void:class obo:OBI_0002232 ;
     void:entities 10 .
 
 <https://purls.helmholtz-metadaten.de/msekg/8df6f5860485a1c7> rdfs:label "Analytical Luminescence Laboratory" ;
@@ -8400,10 +8290,10 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/8fc46cee88f385b7> rdfs:label "Drought Stress Experimental - Light Condition [C]" ;
     void:class <http://orkg.org/orkg/class/C120026> ;
-    void:entities 5 .
+    void:entities 9 .
 
 <https://purls.helmholtz-metadaten.de/msekg/8fdb8011103cd22b> rdfs:label "obsolescence reason specification" ;
-    void:class ns1:IAO_0000225 ;
+    void:class obo:IAO_0000225 ;
     void:entities 5 .
 
 <https://purls.helmholtz-metadaten.de/msekg/8fe53b4e90131b72> rdfs:label "R206311" ;
@@ -8499,7 +8389,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/9294cc88bf901b05> rdfs:label "Method" ;
     void:class <http://orkg.org/orkg/class/Method> ;
-    void:entities 2627 .
+    void:entities 2634 .
 
 <https://purls.helmholtz-metadaten.de/msekg/929b304dd7d53bb6> rdfs:label "Strain-Fatigue Life Curve" ;
     void:class <https://gitlab.com/kupferdigital/process-graphs/lcf-test/StrainFatigueLifeCurve> ;
@@ -8525,7 +8415,7 @@
     void:class <http://orkg.org/orkg/class/C14351> ;
     void:entities 2 .
 
-<https://purls.helmholtz-metadaten.de/msekg/92d3f8aec1b675f0> void:class <http://schema.org/EventAttendanceModeEnumeration> ;
+<https://purls.helmholtz-metadaten.de/msekg/92d3f8aec1b675f0> void:class schema1:EventAttendanceModeEnumeration ;
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/92f242c599bcab2a> rdfs:label "Recommended items" ;
@@ -8568,7 +8458,7 @@
     void:class <https://nfdi.fiz-karlsruhe.de/ontology/Consortium> ;
     void:entities 1 .
 
-<https://purls.helmholtz-metadaten.de/msekg/938b5a58553a25d9> void:class ns1:IAO_0020016 ;
+<https://purls.helmholtz-metadaten.de/msekg/938b5a58553a25d9> void:class obo:IAO_0020016 ;
     void:entities 92 .
 
 <https://purls.helmholtz-metadaten.de/msekg/938d682cc7980a63> rdfs:label "frequency" ;
@@ -8703,7 +8593,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/97b17b736ceeda29> rdfs:label "method" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/Method> ;
+    void:class mwo:Method ;
     void:entities 22 .
 
 <https://purls.helmholtz-metadaten.de/msekg/97bb66c0ac57e2dd> rdfs:label "Placing spacer process" ;
@@ -8786,7 +8676,7 @@
     void:entities 7 .
 
 <https://purls.helmholtz-metadaten.de/msekg/99ae3b57d8c329b5> rdfs:label "large-scale facility" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/LargeScaleFacility> ;
+    void:class mwo:LargeScaleFacility ;
     void:entities 5 .
 
 <https://purls.helmholtz-metadaten.de/msekg/99af1e7508701040> rdfs:label "Transient absorption" ;
@@ -8802,7 +8692,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/99edd1afcb0c81a3> rdfs:label "pathologic lymph node stage for kidney according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002284 ;
+    void:class obo:OBI_0002284 ;
     void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/9a0081270e23df93> rdfs:label "Dataset" ;
@@ -9045,11 +8935,11 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/a13c512c7a70ba9f> rdfs:label "data format specification" ;
-    void:class ns1:IAO_0000098 ;
+    void:class obo:IAO_0000098 ;
     void:entities 10 .
 
 <https://purls.helmholtz-metadaten.de/msekg/a153032a1e99ad87> rdfs:label "volumetric flow rate unit" ;
-    void:class ns1:UO_0000270 ;
+    void:class obo:UO_0000270 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/a17c256476be65b8> rdfs:label "SupplementaryInformationDescription" ;
@@ -9160,7 +9050,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/a42661f9e04524de> rdfs:label "peak matching" ;
-    void:class ns1:OBI_0000726 ;
+    void:class obo:OBI_0000726 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/a42b3eb54ccb333e> rdfs:label "tool type" ;
@@ -9187,7 +9077,7 @@
     void:entities 9008 .
 
 <https://purls.helmholtz-metadaten.de/msekg/a4ed1849ff0d988d> rdfs:label "computational workflow" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/ComputationalWorkflow> ;
+    void:class mwo:ComputationalWorkflow ;
     void:entities 5 .
 
 <https://purls.helmholtz-metadaten.de/msekg/a509f789c9dd98a4> rdfs:label "R186701" ;
@@ -9399,7 +9289,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/aa86830844a6267a> rdfs:label "Karnofsky score vaue specification" ;
-    void:class ns1:OBI_0002363 ;
+    void:class obo:OBI_0002363 ;
     void:entities 4 .
 
 <https://purls.helmholtz-metadaten.de/msekg/aad9398e0f6ea5bf> rdfs:label "inhibition" ;
@@ -9562,7 +9452,7 @@
     void:entities 266 .
 
 <https://purls.helmholtz-metadaten.de/msekg/aef867c95ff63455> rdfs:label "documentation" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/Documentation> ;
+    void:class mwo:Documentation ;
     void:entities 89 .
 
 <https://purls.helmholtz-metadaten.de/msekg/af1b8c7486a59a9c> rdfs:label "apoptotic process" ;
@@ -9586,7 +9476,7 @@
     void:entities 37 .
 
 <https://purls.helmholtz-metadaten.de/msekg/af99285c8b9dbd77> rdfs:label "pathologic lymph node stage for lung according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002279 ;
+    void:class obo:OBI_0002279 ;
     void:entities 4 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b01033ea24e35658> rdfs:label "Soybean Oil" ;
@@ -9726,7 +9616,7 @@
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b45c9d6374787c49> rdfs:label "repository" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/Repository> ;
+    void:class mwo:Repository ;
     void:entities 163 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b465f3ba579bcc4d> rdfs:label "degree Celsius" ;
@@ -9746,7 +9636,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b54fa7a60345c264> rdfs:label "histologic grade for ovarian tumor according to the World Health Organization" ;
-    void:class ns1:OBI_0002219 ;
+    void:class obo:OBI_0002219 ;
     void:entities 4 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b59a71ac076c193c> rdfs:label "Applications of artificial intelligence models in pulsar candidate identification [C]" ;
@@ -9778,7 +9668,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b6257b706f69a629> rdfs:label "metadata schema" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/MetadataSchema> ;
+    void:class mwo:MetadataSchema ;
     void:entities 8 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b6444ca49ff139f8> rdfs:label "R187648" ;
@@ -9853,7 +9743,7 @@
     void:entities 8 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b77d0f6c4e9ee7c6> rdfs:label "frequency unit" ;
-    void:class ns1:UO_0000105 ;
+    void:class obo:UO_0000105 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b7a52cc3ee1bd892> rdfs:label "biochemical format" ;
@@ -9873,7 +9763,7 @@
     void:entities 35 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b816ef25af2bde0e> rdfs:label "workflow environment" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/WorkflowEnvironment> ;
+    void:class mwo:WorkflowEnvironment ;
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b82f23bd94c0effc> rdfs:label "nuclear receptor" ;
@@ -9885,10 +9775,10 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/b8561739a31448ff> rdfs:label "Property shape" ;
     void:class <http://orkg.org/orkg/class/PropertyShape> ;
-    void:entities 9208 .
+    void:entities 9221 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b856ed6f6689ec2a> rdfs:label "pathologic distant metastases stage for ovary according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002310 ;
+    void:class obo:OBI_0002310 ;
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b86b500661917c37> rdfs:label "multiple repetition" ;
@@ -9977,7 +9867,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/ba7d521719f00f8d> rdfs:label "Drought Stress Experimental - Location [C]" ;
     void:class <http://orkg.org/orkg/class/C120027> ;
-    void:entities 9 .
+    void:entities 18 .
 
 <https://purls.helmholtz-metadaten.de/msekg/ba84be87d60c2cad> rdfs:label "More about Query optimization" ;
     void:class <http://orkg.org/orkg/class/C17014> ;
@@ -10024,7 +9914,7 @@
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/bb5751ee0752c3d5> rdfs:label "concentration unit" ;
-    void:class ns1:UO_0000051 ;
+    void:class obo:UO_0000051 ;
     void:entities 15 .
 
 <https://purls.helmholtz-metadaten.de/msekg/bb6bc114109a383e> rdfs:label "Device" ;
@@ -10048,7 +9938,7 @@
     void:entities 18 .
 
 <https://purls.helmholtz-metadaten.de/msekg/bbc903a59eb482a0> rdfs:label "pathologic lymph node stage for ovary according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002287 ;
+    void:class obo:OBI_0002287 ;
     void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/bbee3b613372e999> rdfs:label "qudt:QuantityValue" ;
@@ -10261,7 +10151,7 @@
     void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/c1b01f5e8a53e6d3> rdfs:label "curation status specification" ;
-    void:class ns1:IAO_0000078 ;
+    void:class obo:IAO_0000078 ;
     void:entities 9 .
 
 <https://purls.helmholtz-metadaten.de/msekg/c1decb2cb67e6aec> rdfs:label "G protein" ;
@@ -10273,7 +10163,7 @@
     void:entities 6 .
 
 <https://purls.helmholtz-metadaten.de/msekg/c25b7f3e0af24a7b> rdfs:label "research software" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/ResearchSoftware> ;
+    void:class mwo:ResearchSoftware ;
     void:entities 54 .
 
 <https://purls.helmholtz-metadaten.de/msekg/c26bf24bf831c2ee> rdfs:label "Temperature" ;
@@ -10362,7 +10252,7 @@
     void:entities 4 .
 
 <https://purls.helmholtz-metadaten.de/msekg/c4ec2cb7ce386e4b> rdfs:label "International Federation of Gynecology and Obstetrics ovarian cancer stage value specification" ;
-    void:class ns1:OBI_0002341 ;
+    void:class obo:OBI_0002341 ;
     void:entities 14 .
 
 <https://purls.helmholtz-metadaten.de/msekg/c5200e068dfbaa73> rdfs:label "risk probability" ;
@@ -10442,7 +10332,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/c6a0ffd0994ae05d> rdfs:label "Drought Stress Units Ranges [C]" ;
     void:class <http://orkg.org/orkg/class/C121063> ;
-    void:entities 87 .
+    void:entities 121 .
 
 <https://purls.helmholtz-metadaten.de/msekg/c6b6ed274c189b72> rdfs:label "Concept" ;
     void:class skos:Concept ;
@@ -10468,7 +10358,7 @@
     void:class <https://gitlab.com/kupferdigital/process-graphs/lcf-test/WaveformDevice> ;
     void:entities 1 .
 
-<https://purls.helmholtz-metadaten.de/msekg/c78949196af76b74> void:class ns1:IAO_0000708 ;
+<https://purls.helmholtz-metadaten.de/msekg/c78949196af76b74> void:class obo:IAO_0000708 ;
     void:entities 96 .
 
 <https://purls.helmholtz-metadaten.de/msekg/c797bb6f8325b247> rdfs:label "Degasing Node" ;
@@ -10684,7 +10574,7 @@
     void:entities 13 .
 
 <https://purls.helmholtz-metadaten.de/msekg/cde84527a73fc70f> rdfs:label "rate unit" ;
-    void:class ns1:UO_0000280 ;
+    void:class obo:UO_0000280 ;
     void:entities 4 .
 
 <https://purls.helmholtz-metadaten.de/msekg/cde88494ef6c0c0c> rdfs:label "Orexin A" ;
@@ -10742,7 +10632,7 @@
     void:entities 4 .
 
 <https://purls.helmholtz-metadaten.de/msekg/cf4e60eb4069c47a> rdfs:label "k-nearest neighbors" ;
-    void:class ns1:OBI_0000727 ;
+    void:class obo:OBI_0000727 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/cf5483630a0af191> rdfs:label "organization" ;
@@ -10766,7 +10656,7 @@
     void:entities 9 .
 
 <https://purls.helmholtz-metadaten.de/msekg/d015f0695a0de8fc> rdfs:label "categorical label" ;
-    void:class ns1:OBI_0000963 ;
+    void:class obo:OBI_0000963 ;
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/d024f40631e2137f> rdfs:label "unpurified" ;
@@ -10838,7 +10728,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/d18e61f93fd40ae4> rdfs:label "denotator type" ;
-    void:class ns1:IAO_0000409 ;
+    void:class obo:IAO_0000409 ;
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/d18f2287a398ca1c> rdfs:label "Documentation type" ;
@@ -11035,7 +10925,7 @@
     void:entities 14 .
 
 <https://purls.helmholtz-metadaten.de/msekg/d7e6aff23b87daee> rdfs:label "clustered data visualization" ;
-    void:class ns1:OBI_0200190 ;
+    void:class obo:OBI_0200190 ;
     void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/d805571550bdb31e> rdfs:label "academic discipline" ;
@@ -11063,7 +10953,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/d8948c5736d71550> rdfs:label "pathologic distant metastases stage for kidney according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002306 ;
+    void:class obo:OBI_0002306 ;
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/d899e880d245a72b> rdfs:label "BMG Labtech" ;
@@ -11186,7 +11076,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/db1a10c1d60e4861> rdfs:label "k-means clustering" ;
-    void:class ns1:OBI_0200041 ;
+    void:class obo:OBI_0200041 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/db63ceb0be97088c> rdfs:label "book" ;
@@ -11309,7 +11199,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/deabc293f3c831c2> rdfs:label "Plant Drought Stress Detection Instrument [C]" ;
     void:class <http://orkg.org/orkg/class/C120022> ;
-    void:entities 25 .
+    void:entities 51 .
 
 <https://purls.helmholtz-metadaten.de/msekg/dee2f74a6e8e2afb> void:class <https://w3id.org/pmd/co/SlopeOfTheElasticPart> ;
     void:entities 2 .
@@ -11342,7 +11232,7 @@
     void:class <http://orkg.org/orkg/class/C14042> ;
     void:entities 1 .
 
-<https://purls.helmholtz-metadaten.de/msekg/df79a97e773b378c> void:class ns1:IAO_0000003 ;
+<https://purls.helmholtz-metadaten.de/msekg/df79a97e773b378c> void:class obo:IAO_0000003 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/dfe25c65f01c344c> rdfs:label "Manufacturing Process" ;
@@ -11449,7 +11339,7 @@
     void:entities 13 .
 
 <https://purls.helmholtz-metadaten.de/msekg/e44bac61e6697547> rdfs:label "contact point" ;
-    void:class <http://purls.helmholtz-metadaten.de/mwo/ContactPoint> ;
+    void:class mwo:ContactPoint ;
     void:entities 29 .
 
 <https://purls.helmholtz-metadaten.de/msekg/e4591f6819412d8f> rdfs:label "R54009" ;
@@ -11585,7 +11475,7 @@
     void:entities 55 .
 
 <https://purls.helmholtz-metadaten.de/msekg/e865270168df1619> rdfs:label "Eastern Cooperative Oncology Group score value specification" ;
-    void:class ns1:OBI_0002357 ;
+    void:class obo:OBI_0002357 ;
     void:entities 5 .
 
 <https://purls.helmholtz-metadaten.de/msekg/e874f43991c3ece8> rdfs:label "beta galactosidase reporter gene assay" ;
@@ -11709,7 +11599,7 @@
     void:entities 65 .
 
 <https://purls.helmholtz-metadaten.de/msekg/ec6b90c2967a4a6c> rdfs:label "manufacturer" ;
-    void:class ns1:OBI_0000835 ;
+    void:class obo:OBI_0000835 ;
     void:entities 40 .
 
 <https://purls.helmholtz-metadaten.de/msekg/ec6ef3b042f1632c> rdfs:label "organism behavior assay" ;
@@ -11832,7 +11722,7 @@
     void:entities 8 .
 
 <https://purls.helmholtz-metadaten.de/msekg/efdc08210e9a50a7> rdfs:label "histologic grade according to AJCC 7th edition" ;
-    void:class ns1:OBI_0002205 ;
+    void:class obo:OBI_0002205 ;
     void:entities 4 .
 
 <https://purls.helmholtz-metadaten.de/msekg/efe5f201e32fb069> rdfs:label "LYMP2-005" ;
@@ -11911,7 +11801,7 @@
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/f1c20b7fe1aa2052> rdfs:label "volume unit" ;
-    void:class ns1:UO_0000095 ;
+    void:class obo:UO_0000095 ;
     void:entities 7 .
 
 <https://purls.helmholtz-metadaten.de/msekg/f1d5a458b9939fad> rdfs:label "bao:BAO_0002080" ;
@@ -12220,7 +12110,7 @@
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/fa7e7a307c745a70> rdfs:label "CART" ;
-    void:class ns1:OBI_0000749 ;
+    void:class obo:OBI_0000749 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/faae3b018f23966f> rdfs:label "Hypotheses in invasion biology" ;
@@ -12259,7 +12149,7 @@
     void:class <http://orkg.org/orkg/class/C14598> ;
     void:entities 1 .
 
-<https://purls.helmholtz-metadaten.de/msekg/fb9737c1249bffaa> void:class ns1:IAO_0000578 ;
+<https://purls.helmholtz-metadaten.de/msekg/fb9737c1249bffaa> void:class obo:IAO_0000578 ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/fbaa0cb0413d2a72> rdfs:label "Funding Information" ;
@@ -12331,7 +12221,7 @@
     void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/fddabd3874b7e9e5> rdfs:label "time unit" ;
-    void:class ns1:UO_0000003 ;
+    void:class obo:UO_0000003 ;
     void:entities 7 .
 
 <https://purls.helmholtz-metadaten.de/msekg/fddc7c87a7d39bec> rdfs:label "SpatialThing" ;

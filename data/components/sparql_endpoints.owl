@@ -6,26 +6,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:label="http://www.w3.org/2000/01/rdf-schema#label@">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <Ontology/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#label@en -->
-
-    <AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label@en"/>
     
 
 
@@ -79,7 +61,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17588917500551">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17588918337771"/>
-        <label:en>MSE Knowledge Graph v1.0</label:en>
+        <rdfs:label>MSE Knowledge Graph v1.0</rdfs:label>
     </NamedIndividual>
     
 
@@ -161,7 +143,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289021">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064251"/>
-        <label:en>Chemotion Knowledge Graph</label:en>
+        <rdfs:label>Chemotion Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -171,7 +153,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289031">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064252"/>
-        <label:en>GESIS Knowledge Graph (GESIS KG)</label:en>
+        <rdfs:label>GESIS Knowledge Graph (GESIS KG)</rdfs:label>
     </NamedIndividual>
     
 
@@ -181,7 +163,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890310">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/176113440642511"/>
-        <label:en>Open Research Knowledge Graph</label:en>
+        <rdfs:label>Open Research Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -191,7 +173,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890311">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506664"/>
-        <label:en>NFDI4Objects Knowledge Graph</label:en>
+        <rdfs:label>NFDI4Objects Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -201,7 +183,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890312">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506665"/>
-        <label:en>MaschinenBauIndustrie Knowledge Graph</label:en>
+        <rdfs:label>MaschinenBauIndustrie Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -211,7 +193,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890313">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506666"/>
-        <label:en>LinkedOpenData-Service des B3Kat</label:en>
+        <rdfs:label>LinkedOpenData-Service des B3Kat</rdfs:label>
     </NamedIndividual>
     
 
@@ -221,7 +203,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890314">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506667"/>
-        <label:en>Linked Stage Graph</label:en>
+        <rdfs:label>Linked Stage Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -231,7 +213,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890315">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506668"/>
-        <label:en>Claims Knowledge Graph</label:en>
+        <rdfs:label>Claims Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -241,7 +223,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890316">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506669"/>
-        <label:en>Software Mentions in Science Knowledge Graph</label:en>
+        <rdfs:label>Software Mentions in Science Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -251,7 +233,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890317">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506670"/>
-        <label:en>Software Knowledge Graph</label:en>
+        <rdfs:label>Software Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -261,7 +243,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289032">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064253"/>
-        <label:en>MaRDI Knowledge Graph</label:en>
+        <rdfs:label>MaRDI Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -271,7 +253,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289033">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064254"/>
-        <label:en>NFDI4Bioimage Knowledge Graph</label:en>
+        <rdfs:label>NFDI4Bioimage Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -281,7 +263,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289034">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064255"/>
-        <label:en>NFDI4Chem Knowledge Graph</label:en>
+        <rdfs:label>NFDI4Chem Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -291,7 +273,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289035">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064256"/>
-        <label:en>NFDI4Culture Knowledge Graph</label:en>
+        <rdfs:label>NFDI4Culture Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -301,7 +283,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289036">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064257"/>
-        <label:en>NFDI4DataScience Knowledge Graph</label:en>
+        <rdfs:label>NFDI4DataScience Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -311,7 +293,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289037">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064258"/>
-        <label:en>NFDI4Earth Knowledge Graph</label:en>
+        <rdfs:label>NFDI4Earth Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -321,7 +303,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289038">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064259"/>
-        <label:en>NFDI4Memory Knowledge Graph</label:en>
+        <rdfs:label>NFDI4Memory Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -331,7 +313,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289039">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/176113440642510"/>
-        <label:en>NFDI4Microbiota Knowledge Graph</label:en>
+        <rdfs:label>NFDI4Microbiota Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -341,7 +323,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611348076041">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506661"/>
-        <label:en>Platform MaterialDigital Knowledge Graph</label:en>
+        <rdfs:label>Platform MaterialDigital Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -351,7 +333,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611348774371">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506663"/>
-        <label:en>Helmholtz Knowledge Graph</label:en>
+        <rdfs:label>Helmholtz Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
@@ -361,7 +343,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611349780261">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506662"/>
-        <label:en>RDF portal of life science datasets</label:en>
+        <rdfs:label>RDF portal of life science datasets</rdfs:label>
     </NamedIndividual>
     
 

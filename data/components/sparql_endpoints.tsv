@@ -1,5 +1,5 @@
 #	TYPE	Label	sparql endpoint	License
-ID	TYPE	A rdfs:label@en	I http://purl.obolibrary.org/obo/IAO_0000235	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142
+ID	TYPE	A rdfs:label	I http://purl.obolibrary.org/obo/IAO_0000235	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142
 https://purls.helmholtz-metadaten.de/msekg/17588917500551	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	MSE Knowledge Graph v1.0	sparql endpoint of MSE Knowledge Graph v1.0	
 https://purls.helmholtz-metadaten.de/msekg/17611348076041	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	Platform MaterialDigital Knowledge Graph	sparql endpoint of Platform MaterialDigital KG	
 https://purls.helmholtz-metadaten.de/msekg/17611349780261	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009	RDF portal of life science datasets	sparql endpoint of RDF portal	

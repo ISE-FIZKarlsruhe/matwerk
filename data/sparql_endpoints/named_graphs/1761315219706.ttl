@@ -2217,6 +2217,76 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description "project of one or more scientists, or of an organization in a scientific field"^^xsd:string ;
     owl:equivalentClass <https://www.wikidata.org/entity/Q1298668> .
 
+<http://orkg.org/orkg/class/C123014> a owl:Class ;
+    rdfs:label "maximum temperature"^^xsd:string ;
+    ns1:description ""^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q9356633> .
+
+<http://orkg.org/orkg/class/C123015> a owl:Class ;
+    rdfs:label "minimum temperature"^^xsd:string ;
+    ns1:description ""^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q9356634> .
+
+<http://orkg.org/orkg/class/C123016> a owl:Class ;
+    rdfs:label "pot"^^xsd:string ;
+    ns1:description "rounded container used for domestic purposes, such as cooking or serving"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q12244686> .
+
+<http://orkg.org/orkg/class/C123017> a owl:Class ;
+    rdfs:label "Orchard"^^xsd:string ;
+    ns1:description "intentional planting of trees or shrubs that is maintained for food production"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q236371> .
+
+<http://orkg.org/orkg/class/C123018> a owl:Class ;
+    rdfs:label "Peach"^^xsd:string ;
+    ns1:description "fruit, use Q13189 for the species"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q13202263> .
+
+<http://orkg.org/orkg/class/C123019> a owl:Class ;
+    rdfs:label "night"^^xsd:string ;
+    ns1:description "period from sunset to sunrise in each twenty-four hours"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q575> .
+
+<http://orkg.org/orkg/class/C123020> a owl:Class ;
+    rdfs:label "rainforest"^^xsd:string ;
+    ns1:description "forest characterized by abundant precipitation"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q9444> .
+
+<http://orkg.org/orkg/class/C123021> a owl:Class ;
+    rdfs:label "dendrometer"^^xsd:string ;
+    ns1:description "device used for measuring the height and diameter of trees"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q726466> .
+
+<http://orkg.org/orkg/class/C123022> a owl:Class ;
+    rdfs:label "sap flow meter"^^xsd:string ;
+    ns1:description "device to measure sap flow"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q121033596> .
+
+<http://orkg.org/orkg/class/C123023> a owl:Class ;
+    rdfs:label "acoustic emission"^^xsd:string ;
+    ns1:description "phenomenon of radiation of acoustic waves in solids that occurs when a material undergoes irreversible changes in its internal structure, e.g. crack formation or plastic deformation due to aging, temperature gradients or external mechanical forces"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q746673> .
+
+<http://orkg.org/orkg/class/C123024> a owl:Class ;
+    rdfs:label "chlorophyll fluorescence"^^xsd:string ;
+    ns1:description "light re-emitted by chlorophyll molecules during return from excited to non-excited states"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1075297> .
+
+<http://orkg.org/orkg/class/C123025> a owl:Class ;
+    rdfs:label "water stress"^^xsd:string ;
+    ns1:description "Lack of water in organisms"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q489777> .
+
+<http://orkg.org/orkg/class/C123026> a owl:Class ;
+    rdfs:label "multispectral camera"^^xsd:string ;
+    ns1:description "type of camera with focus on multispectral"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q132360619> .
+
+<http://orkg.org/orkg/class/C123027> a owl:Class ;
+    rdfs:label "thermometer"^^xsd:string ;
+    ns1:description "device that measures temperature or a temperature gradient"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q646> .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string ;
     owl:equivalentClass <http://purl.obolibrary.org/obo/ZFS_0100000> .

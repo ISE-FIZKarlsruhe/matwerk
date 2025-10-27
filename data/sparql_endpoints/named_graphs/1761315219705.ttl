@@ -1703,6 +1703,48 @@
 <http://orkg.org/orkg/class/C123013> a owl:Class ;
     rdfs:label "science project"^^xsd:string .
 
+<http://orkg.org/orkg/class/C123014> a owl:Class ;
+    rdfs:label "maximum temperature"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123015> a owl:Class ;
+    rdfs:label "minimum temperature"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123016> a owl:Class ;
+    rdfs:label "pot"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123017> a owl:Class ;
+    rdfs:label "Orchard"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123018> a owl:Class ;
+    rdfs:label "Peach"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123019> a owl:Class ;
+    rdfs:label "night"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123020> a owl:Class ;
+    rdfs:label "rainforest"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123021> a owl:Class ;
+    rdfs:label "dendrometer"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123022> a owl:Class ;
+    rdfs:label "sap flow meter"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123023> a owl:Class ;
+    rdfs:label "acoustic emission"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123024> a owl:Class ;
+    rdfs:label "chlorophyll fluorescence"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123025> a owl:Class ;
+    rdfs:label "water stress"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123026> a owl:Class ;
+    rdfs:label "multispectral camera"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123027> a owl:Class ;
+    rdfs:label "thermometer"^^xsd:string .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string .
 
