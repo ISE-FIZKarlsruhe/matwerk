@@ -13,7 +13,7 @@ import subprocess
 from typing import Iterable, Set, List, Dict, Any
 import rdflib
 from rdflib import Graph, URIRef, RDF, Literal, Namespace, BNode
-from rdflib.namespace import RDFS, OWL, XSD
+from rdflib.namespace import RDF, RDFS, OWL, SKOS, DCTERMS, XSD
 
 # rdflib Dataset fallback (older versions)
 try:
@@ -360,11 +360,19 @@ GROUP BY ?c
 Q_TERMS_USED = """
 SELECT DISTINCT ?term
 WHERE {
-  { ?i a ?term . FILTER(isIRI(?i) && isIRI(?term)) }
+  {
+    ?i a ?term .
+    FILTER(isIRI(?i) && isIRI(?term))
+  }
   UNION
-  { ?s ?term ?o . FILTER(isIRI(?term)) }
+  {
+    ?s ?term ?o .
+    FILTER(isIRI(?term))
+  }
+  FILTER(STRSTARTS(STR(?term), "http://") || STRSTARTS(STR(?term), "https://"))
 }
 """
+
 
 # ------------------ Discovery from all.ttl ------------------
 def discover_from_all_ttl(all_ttl_path: str):
@@ -549,6 +557,14 @@ def main():
     # Stats graph
     stats = Graph()
     stats.bind("stat", STAT); stats.bind("rdfs", RDFS); stats.bind("owl", OWL); stats.bind("void", VOID)
+    stats.bind("rdf", RDF)
+    stats.bind("rdfs", RDFS)
+    stats.bind("owl", OWL)
+    stats.bind("skos", SKOS)
+    stats.bind("dcterms", DCTERMS)
+    stats.bind("schema", Namespace("http://schema.org/"))
+    stats.bind("obo", Namespace("http://purl.obolibrary.org/obo/"))
+    stats.bind("mwo", Namespace("http://purls.helmholtz-metadaten.de/mwo/"))
 
     summary = []
 

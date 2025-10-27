@@ -7,7 +7,7 @@ SRC=ontology/mwo-full.owl
 ONTBASE=https://nfdi.fiz-karlsruhe.de/ontology
 
 mkdir -p "$VALIDATIONSDIR"
-rm -f "$COMPONENTSDIR/all_NotReasoned.owl" "$COMPONENTSDIR/all.ttl"
+rm -f "$COMPONENTSDIR/all_NotReasoned.owl" "$COMPONENTSDIR/all.ttl" "$VALIDATIONSDIR/inconsistency.md" "$VALIDATIONSDIR/inconsistency_mwo.md" "$VALIDATIONSDIR/inconsistency_hermit.md"
 
 echo "Reasoning ontology"
 robot reason \
