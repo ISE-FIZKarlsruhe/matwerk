@@ -190,7 +190,9 @@ def main():
         print("\nSome harvests failed:")
         for mode, value in failed:
             print(f"  --{mode} {value}")
-        sys.exit(1)
+        #sys.exit(1)
+    else:
+        print("\nAll harvests succeeded!")
 
 if __name__ == "__main__":
     main()
