@@ -30,23 +30,6 @@ RUN wget -q https://github.com/ontodev/robot/releases/download/v1.9.8/robot.jar 
 # App sources
 COPY . /app
 
-# Run your scripts (working dir aware)
-RUN python -m scripts.zenodo.export_zenodo --make-snapshots --out data/zenodo/zenodo.ttl && python ./scripts/fetch_zenodo.py
-
-
-RUN chmod +x /app/robot-download.sh /app/robot-merge.sh \
- && ./robot-download.sh \
- && ./robot-merge.sh \
- && test -s data/all_NotReasoned.ttl
-
-# endpoint fetch at build time
-RUN chmod +x /app/scripts/fetch_endpoints.py \
- && python /app/scripts/fetch_endpoints.py
-
-# reason the knowledge graph
-RUN chmod +x /app/robot-reaon.sh\
- && ./robot-reaon.sh \
- && test -s data/all.ttl
 
  # Copy a predictable artifact
 RUN mkdir -p /data && cp data/all.ttl /data/ontology.ttl
@@ -66,7 +49,7 @@ RUN java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar \
 # ==========================
 # Stage 2: Run Shmarql
 # ==========================
-FROM ghcr.io/epoz/shmarql:v0.56
+FROM ghcr.io/epoz/shmarql:latest
 
 COPY --from=widoco /app/data /data
 COPY --from=widoco /app/docs /src/docs
