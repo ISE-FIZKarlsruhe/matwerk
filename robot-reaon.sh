@@ -1,6 +1,12 @@
 #!/bin/bash
 set -e
 
+COMPONENTSDIR=data
+VALIDATIONSDIR=data/validation
+SRC=ontology/mwo-full.owl
+
+mkdir -p "$VALIDATIONSDIR"
+
 ###############################################################################
 # ABox materialization via SPARQL UPDATE rules (replaces Hermit KG reasoning)
 ###############################################################################
@@ -54,34 +60,34 @@ apply_update() {
 apply_update "infer-equivalent-props.ru" "infer-equivalent-props" "$OUTDIR/step1.ttl"
 
 # 2) Inverse properties
-apply_update "infer-inverses.ru" "infer-inverses" "$OUTDIR/step2.ttl"
+apply_update "infer-inverses.ru"        "infer-inverses"        "$OUTDIR/step2.ttl"
 
 # 3) Property chains (p1∘p2 -> r)
 apply_update "infer-property-chains.ru" "infer-property-chains" "$OUTDIR/step3.ttl"
 
 # 4) Transitive properties
-apply_update "infer-transitive.ru" "infer-transitive" "$OUTDIR/step4.ttl"
+apply_update "infer-transitive.ru"      "infer-transitive"      "$OUTDIR/step4.ttl"
 
 # 5) SubProperty propagation (on all enriched property assertions)
-apply_update "infer-subprops.ru" "infer-subprops" "$OUTDIR/step5.ttl"
+apply_update "infer-subprops.ru"        "infer-subprops"        "$OUTDIR/step5.ttl"
 
 # 6) Domain → rdf:type (after properties are propagated)
-apply_update "infer-domain-types.ru" "infer-domain-types" "$OUTDIR/step6.ttl"
+apply_update "infer-domain-types.ru"    "infer-domain-types"    "$OUTDIR/step6.ttl"
 
 # 7) Range → rdf:type
-apply_update "infer-range-types.ru" "infer-range-types" "$OUTDIR/step7.ttl"
+apply_update "infer-range-types.ru"     "infer-range-types"     "$OUTDIR/step7.ttl"
 
 # 8) SubClass type propagation (after all rdf:type are in place)
-apply_update "infer-subclass-types.ru" "infer-subclass-types" "$OUTDIR/step8.ttl"
+apply_update "infer-subclass-types.ru"  "infer-subclass-types"  "$OUTDIR/step8.ttl"
 
 # 9) sameAs closure (symmetric + transitive)
-apply_update "infer-sameas-closure.ru" "infer-sameas-closure" "$OUTDIR/step9.ttl"
+apply_update "infer-sameas-closure.ru"  "infer-sameas-closure"  "$OUTDIR/step9.ttl"
 
 # 10) Propagate types over sameAs
-apply_update "infer-sameas-types.ru" "infer-sameas-types" "$OUTDIR/step10.ttl"
+apply_update "infer-sameas-types.ru"    "infer-sameas-types"    "$OUTDIR/step10.ttl"
 
 # 11) Propagate properties over sameAs
-apply_update "infer-sameas-props.ru" "infer-sameas-props" "$OUTDIR/step11.ttl"
+apply_update "infer-sameas-props.ru"    "infer-sameas-props"    "$OUTDIR/step11.ttl"
 
 # Final KG output
 cp "$OUTDIR/step11.ttl" "$COMPONENTSDIR/all.ttl"
@@ -107,7 +113,7 @@ robot explain \
 
 robot explain \
     --reasoner hermit \
-    --input "$COMPONENTSDIR/all_NotReasoned.ttl" \
+    --input "$COMPONENTSDIR/all.ttl" \
     -M inconsistency \
     --explanation "$VALIDATIONSDIR/inconsistency_hermit.md"
 
@@ -137,4 +143,4 @@ if ! robot verify \
     echo "SPARQL verification failed" >&2
 fi
 
-echo "All merge, reasoning, and validation steps completed."
+echo "All ABox materialization, reasoning, and validation steps completed."
