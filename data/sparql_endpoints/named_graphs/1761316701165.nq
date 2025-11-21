@@ -1,35 +1,35 @@
-<http://www.w3.org/2002/07/owl#bottomObjectProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of OWL individuals." <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property that relates every two individuals." <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
 <http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The data property that relates every individual to every data value." <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#label> "topObjectProperty" <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#bottomDataProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2002/07/owl#> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the empty class." <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#bottomObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2002/07/owl#> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#bottomObjectProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property that does not relate any two individuals." <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2002/07/owl#> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2002/07/owl#> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#bottomObjectProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2002/07/owl#> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#bottomObjectProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#bottomDataProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The data property that does not relate any individual to any data value." <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#label> "topDataProperty" <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#bottomDataProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/2002/07/owl#complementOf> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#bottomDataProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#bottomObjectProperty> <http://www.w3.org/2000/01/rdf-schema#label> "bottomObjectProperty" <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
 <http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/2000/01/rdf-schema#label> "Thing" <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/2000/01/rdf-schema#label> "Nothing" <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#bottomDataProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2002/07/owl#> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
-<http://www.w3.org/2002/07/owl#bottomDataProperty> <http://www.w3.org/2000/01/rdf-schema#label> "bottomDataProperty" <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
 <http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/2000/01/rdf-schema#label> "Nothing" <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2002/07/owl#> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2002/07/owl#> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#bottomDataProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#bottomObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#bottomObjectProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2002/07/owl#> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2002/07/owl#> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property that relates every two individuals." <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#label> "topDataProperty" <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#bottomObjectProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2002/07/owl#> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#label> "topObjectProperty" <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#bottomDataProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The data property that does not relate any individual to any data value." <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#bottomDataProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of OWL individuals." <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#bottomDataProperty> <http://www.w3.org/2000/01/rdf-schema#label> "bottomDataProperty" <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#bottomObjectProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property that does not relate any two individuals." <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the empty class." <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#bottomDataProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/2002/07/owl#complementOf> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#bottomDataProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2002/07/owl#> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#bottomObjectProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
+<http://www.w3.org/2002/07/owl#bottomObjectProperty> <http://www.w3.org/2000/01/rdf-schema#label> "bottomObjectProperty" <https://purls.helmholtz-metadaten.de/msekg/1761316701165> .
 

@@ -1,179 +1,179 @@
-<https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> <http://www.w3.org/2000/01/rdf-schema#label> "controlled vocabulary"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000311> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Standard> <http://www.w3.org/2000/01/rdf-schema#label> "standard"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Specification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Project> <http://www.w3.org/2000/01/rdf-schema#label> "project"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000007> <http://www.w3.org/2000/01/rdf-schema#label> "action specification"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000030> <http://www.w3.org/2000/01/rdf-schema#label> "information content entity" <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> <http://www.w3.org/2000/01/rdf-schema#label> "consortium member"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Contributing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/MediaType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> <http://www.w3.org/2000/01/rdf-schema#label> "publisher role"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/DatabasesService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> <http://www.w3.org/2000/01/rdf-schema#label> "thesaurus"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ToolsAndApplicationsService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/DataCurationService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000444> <http://www.w3.org/2000/01/rdf-schema#label> "publishing process"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000019> <http://www.w3.org/2000/01/rdf-schema#label> "quality"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000033> <http://www.w3.org/2000/01/rdf-schema#label> "directive information entity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://www.ebi.ac.uk/swo/SWO_0000002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Resource> <http://www.w3.org/2000/01/rdf-schema#label> "resource"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Publication> <http://www.w3.org/2000/01/rdf-schema#label> "publication"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000025> <http://www.w3.org/2000/01/rdf-schema#label> "programming language"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000034> <http://www.w3.org/2000/01/rdf-schema#label> "function"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000102> <http://www.w3.org/2000/01/rdf-schema#label> "data about an ontology part"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/License> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/TrainingService> <http://www.w3.org/2000/01/rdf-schema#label> "training service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000003> <http://www.w3.org/2000/01/rdf-schema#label> "occurrent"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> <http://www.w3.org/2000/01/rdf-schema#label> "contact point role"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/DataCurationService> <http://www.w3.org/2000/01/rdf-schema#label> "data curation service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000015> <http://www.w3.org/2000/01/rdf-schema#label> "process"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/LibrariesAndAPIsService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000010> <http://www.w3.org/2000/01/rdf-schema#label> "software"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000001> <http://www.w3.org/2000/01/rdf-schema#label> "entity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000078> <http://www.w3.org/2000/01/rdf-schema#label> "curation status specification"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/4memory/ontology/ObjectType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "country"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000409> <http://www.w3.org/2000/01/rdf-schema#label> "denotator type"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/APOLLO_SV_00000008> <http://www.w3.org/2000/01/rdf-schema#label> "software development"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Collection> <http://www.w3.org/2000/01/rdf-schema#label> "collection"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
 <http://purl.obolibrary.org/obo/BFO_0000034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000078> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Ontology> <http://www.w3.org/2000/01/rdf-schema#label> "ontology"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Contacting> <http://www.w3.org/2000/01/rdf-schema#label> "contacting"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://schema.org/CreativeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/APOLLO_SV_00000008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> <http://www.w3.org/2000/01/rdf-schema#label> "consortium"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "organization"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000444> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://schema.org/Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000409> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Software> <http://www.w3.org/2000/01/rdf-schema#label> "software"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "dataset"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Event> <http://www.w3.org/2000/01/rdf-schema#label> "event"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000002> <http://www.w3.org/2000/01/rdf-schema#label> "continuant"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Glossary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "agent"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000310> <http://www.w3.org/2000/01/rdf-schema#label> "document"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000029> <http://www.w3.org/2000/01/rdf-schema#label> "site"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000016> <http://www.w3.org/2000/01/rdf-schema#label> "disposition"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000004> <http://www.w3.org/2000/01/rdf-schema#label> "independent continuant"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/WorkflowsAndPipelinesService> <http://www.w3.org/2000/01/rdf-schema#label> "workflows & pipelines service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000027> <http://www.w3.org/2000/01/rdf-schema#label> "data item"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000006> <http://www.w3.org/2000/01/rdf-schema#label> "spatial region"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/License> <http://www.w3.org/2000/01/rdf-schema#label> "license"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Person> <http://www.w3.org/2000/01/rdf-schema#label> "person"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000003> <http://www.w3.org/2000/01/rdf-schema#label> "occurrent"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000007> <http://www.w3.org/2000/01/rdf-schema#label> "action specification"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Project> <http://www.w3.org/2000/01/rdf-schema#label> "project"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
 <https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> <http://www.w3.org/2000/01/rdf-schema#label> "MIME-type"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000020> <http://www.w3.org/2000/01/rdf-schema#label> "specifically dependent continuant"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/MediaType> <http://www.w3.org/2000/01/rdf-schema#label> "media type"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> <http://www.w3.org/2000/01/rdf-schema#label> "data portal"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000023> <http://www.w3.org/2000/01/rdf-schema#label> "role"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000031> <http://www.w3.org/2000/01/rdf-schema#label> "generically dependent continuant"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Place> <http://www.w3.org/2000/01/rdf-schema#label> "place"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000017> <http://www.w3.org/2000/01/rdf-schema#label> "realizable entity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/4memory/ontology/ObjectType> <http://www.w3.org/2000/01/rdf-schema#label> "object type" <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000027> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/StorageService> <http://www.w3.org/2000/01/rdf-schema#label> "storage service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/DatabasesService> <http://www.w3.org/2000/01/rdf-schema#label> "databases service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> <http://www.w3.org/2000/01/rdf-schema#label> "contributor role"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Contributing> <http://www.w3.org/2000/01/rdf-schema#label> "contributing"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Service> <http://www.w3.org/2000/01/rdf-schema#label> "service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> <http://www.w3.org/2000/01/rdf-schema#label> "consortium member role"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> <http://www.w3.org/2000/01/rdf-schema#label> "funding organization role"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/TrainingService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/StorageService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/2000/01/rdf-schema#label> "objective specification"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://www.ebi.ac.uk/swo/SWO_0000002> <http://www.w3.org/2000/01/rdf-schema#label> "licence"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/WebApplicationsService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ToolsAndApplicationsService> <http://www.w3.org/2000/01/rdf-schema#label> "tools & applications service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/FederalState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000096> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000310> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
 <http://purl.obolibrary.org/obo/BFO_0000019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> <http://www.w3.org/2000/01/rdf-schema#label> "creative work"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/SupportAndConsultingService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/LibrariesAndAPIsService> <http://www.w3.org/2000/01/rdf-schema#label> "libraries & APIs service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000311> <http://www.w3.org/2000/01/rdf-schema#label> "publication"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/FederalState> <http://www.w3.org/2000/01/rdf-schema#label> "federal state"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/OBI_0000011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Website> <http://www.w3.org/2000/01/rdf-schema#label> "website"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://www.ebi.ac.uk/swo/SWO_0000002> <http://www.w3.org/2000/01/rdf-schema#label> "software license" <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/WebApplicationsService> <http://www.w3.org/2000/01/rdf-schema#label> "web applications service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000096> <http://www.w3.org/2000/01/rdf-schema#label> "source code module"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Website> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000033> <http://www.w3.org/2000/01/rdf-schema#label> "directive information entity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Service> <http://www.w3.org/2000/01/rdf-schema#label> "service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000015> <http://www.w3.org/2000/01/rdf-schema#label> "process"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000040> <http://www.w3.org/2000/01/rdf-schema#label> "material entity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000006> <http://www.w3.org/2000/01/rdf-schema#label> "spatial region"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/2000/01/rdf-schema#label> "objective specification"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
 <http://purl.obolibrary.org/obo/IAO_0000102> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> <http://www.w3.org/2000/01/rdf-schema#label> "semantic expressivity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000040> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://schema.org/Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Publication> <http://www.w3.org/2000/01/rdf-schema#label> "publication"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Glossary> <http://www.w3.org/2000/01/rdf-schema#label> "glossary"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000096> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000104> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> <http://www.w3.org/2000/01/rdf-schema#label> "data portal"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000310> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Software> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "programming language"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Person> <http://www.w3.org/2000/01/rdf-schema#label> "person"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000409> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
 <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> <http://www.w3.org/2000/01/rdf-schema#label> "technological means"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
 <https://nfdi.fiz-karlsruhe.de/ontology/Contacting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000141> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000141> <http://www.w3.org/2000/01/rdf-schema#label> "immaterial entity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/SupportAndConsultingService> <http://www.w3.org/2000/01/rdf-schema#label> "support & consulting service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000225> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "programming language"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000104> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Ontology> <http://www.w3.org/2000/01/rdf-schema#label> "ontology"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000078> <http://www.w3.org/2000/01/rdf-schema#label> "curation status specification"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Website> <http://www.w3.org/2000/01/rdf-schema#label> "website"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Contacting> <http://www.w3.org/2000/01/rdf-schema#label> "contacting"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/FederalState> <http://www.w3.org/2000/01/rdf-schema#label> "federal state"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000023> <http://www.w3.org/2000/01/rdf-schema#label> "role"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000096> <http://www.w3.org/2000/01/rdf-schema#label> "source code module"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/4memory/ontology/ObjectType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Collection> <http://www.w3.org/2000/01/rdf-schema#label> "collection"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://schema.org/Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
 <https://nfdi.fiz-karlsruhe.de/ontology/WorkflowsAndPipelinesService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Glossary> <http://www.w3.org/2000/01/rdf-schema#label> "glossary"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/IAO_0000104> <http://www.w3.org/2000/01/rdf-schema#label> "plan specification"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> <http://www.w3.org/2000/01/rdf-schema#label> "taxonomy"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "city"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<http://purl.obolibrary.org/obo/BFO_0000040> <http://www.w3.org/2000/01/rdf-schema#label> "material entity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> <http://www.w3.org/2000/01/rdf-schema#label> "academic discipline"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://schema.org/CreativeWork> <http://www.w3.org/2000/01/rdf-schema#label> "CreativeWork"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000020> <http://www.w3.org/2000/01/rdf-schema#label> "specifically dependent continuant"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Place> <http://www.w3.org/2000/01/rdf-schema#label> "place"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "country"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
 <https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/StorageService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000409> <http://www.w3.org/2000/01/rdf-schema#label> "denotator type"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/TrainingService> <http://www.w3.org/2000/01/rdf-schema#label> "training service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000078> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> <http://www.w3.org/2000/01/rdf-schema#label> "controlled vocabulary"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> <http://www.w3.org/2000/01/rdf-schema#label> "creative work"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> <http://www.w3.org/2000/01/rdf-schema#label> "funding organization role"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "organization"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> <http://www.w3.org/2000/01/rdf-schema#label> "consortium"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/StorageService> <http://www.w3.org/2000/01/rdf-schema#label> "storage service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000040> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/APOLLO_SV_00000008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Standard> <http://www.w3.org/2000/01/rdf-schema#label> "standard"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/DataCurationService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000310> <http://www.w3.org/2000/01/rdf-schema#label> "document"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/DatabasesService> <http://www.w3.org/2000/01/rdf-schema#label> "databases service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000029> <http://www.w3.org/2000/01/rdf-schema#label> "site"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000027> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000019> <http://www.w3.org/2000/01/rdf-schema#label> "quality"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000104> <http://www.w3.org/2000/01/rdf-schema#label> "plan specification"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000225> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Glossary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "agent"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/SupportAndConsultingService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> <http://www.w3.org/2000/01/rdf-schema#label> "contributor role"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Website> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
 <http://purl.obolibrary.org/obo/IAO_0000225> <http://www.w3.org/2000/01/rdf-schema#label> "obsolescence reason specification"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Specification> <http://www.w3.org/2000/01/rdf-schema#label> "specification"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
 <http://purl.obolibrary.org/obo/IAO_0000030> <http://www.w3.org/2000/01/rdf-schema#label> "information content entity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/SupportAndConsultingService> <http://www.w3.org/2000/01/rdf-schema#label> "support & consulting service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/License> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/DatabasesService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000311> <http://www.w3.org/2000/01/rdf-schema#label> "publication"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000001> <http://www.w3.org/2000/01/rdf-schema#label> "entity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/MediaType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000102> <http://www.w3.org/2000/01/rdf-schema#label> "data about an ontology part"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/LibrariesAndAPIsService> <http://www.w3.org/2000/01/rdf-schema#label> "libraries & APIs service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/WebApplicationsService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "dataset"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> <http://www.w3.org/2000/01/rdf-schema#label> "thesaurus"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://schema.org/Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://schema.org/CreativeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000030> <http://www.w3.org/2000/01/rdf-schema#label> "information content entity" <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Specification> <http://www.w3.org/2000/01/rdf-schema#label> "specification"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000141> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Software> <http://www.w3.org/2000/01/rdf-schema#label> "software"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000444> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/4memory/ontology/ObjectType> <http://www.w3.org/2000/01/rdf-schema#label> "object type" <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ToolsAndApplicationsService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Specification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> <http://www.w3.org/2000/01/rdf-schema#label> "consortium member role"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/OBI_0000011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
 <http://purl.obolibrary.org/obo/OBI_0000011> <http://www.w3.org/2000/01/rdf-schema#label> "planned process"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://www.ebi.ac.uk/swo/SWO_0000002> <http://www.w3.org/2000/01/rdf-schema#label> "software license" <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> <http://www.w3.org/2000/01/rdf-schema#label> "academic discipline"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000010> <http://www.w3.org/2000/01/rdf-schema#label> "software"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000034> <http://www.w3.org/2000/01/rdf-schema#label> "function"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/MediaType> <http://www.w3.org/2000/01/rdf-schema#label> "media type"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/WebApplicationsService> <http://www.w3.org/2000/01/rdf-schema#label> "web applications service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/LibrariesAndAPIsService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ToolsAndApplicationsService> <http://www.w3.org/2000/01/rdf-schema#label> "tools & applications service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000017> <http://www.w3.org/2000/01/rdf-schema#label> "realizable entity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Resource> <http://www.w3.org/2000/01/rdf-schema#label> "resource"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Event> <http://www.w3.org/2000/01/rdf-schema#label> "event"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000141> <http://www.w3.org/2000/01/rdf-schema#label> "immaterial entity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000444> <http://www.w3.org/2000/01/rdf-schema#label> "publishing process"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://www.ebi.ac.uk/swo/SWO_0000002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/APOLLO_SV_00000008> <http://www.w3.org/2000/01/rdf-schema#label> "software development"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000016> <http://www.w3.org/2000/01/rdf-schema#label> "disposition"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/TrainingService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> <http://www.w3.org/2000/01/rdf-schema#label> "consortium member"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000025> <http://www.w3.org/2000/01/rdf-schema#label> "programming language"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> <http://www.w3.org/2000/01/rdf-schema#label> "semantic expressivity"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Contributing> <http://www.w3.org/2000/01/rdf-schema#label> "contributing"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://www.ebi.ac.uk/swo/SWO_0000002> <http://www.w3.org/2000/01/rdf-schema#label> "licence"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/WorkflowsAndPipelinesService> <http://www.w3.org/2000/01/rdf-schema#label> "workflows & pipelines service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000031> <http://www.w3.org/2000/01/rdf-schema#label> "generically dependent continuant"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/License> <http://www.w3.org/2000/01/rdf-schema#label> "license"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> <http://www.w3.org/2000/01/rdf-schema#label> "contact point role"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000027> <http://www.w3.org/2000/01/rdf-schema#label> "data item"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000004> <http://www.w3.org/2000/01/rdf-schema#label> "independent continuant"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> <http://www.w3.org/2000/01/rdf-schema#label> "publisher role"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://schema.org/CreativeWork> <http://www.w3.org/2000/01/rdf-schema#label> "CreativeWork"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/FederalState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/City> <http://www.w3.org/2000/01/rdf-schema#label> "city"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000002> <http://www.w3.org/2000/01/rdf-schema#label> "continuant"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> <http://www.w3.org/2000/01/rdf-schema#label> "taxonomy"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Contributing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<https://nfdi.fiz-karlsruhe.de/ontology/DataCurationService> <http://www.w3.org/2000/01/rdf-schema#label> "data curation service"@en <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/BFO_0000031> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
+<http://purl.obolibrary.org/obo/IAO_0000311> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315458914> .
 
