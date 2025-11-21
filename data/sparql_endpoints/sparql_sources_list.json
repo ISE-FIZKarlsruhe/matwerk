@@ -10205,9 +10205,29 @@
       "dataPropertiesReusedFromMWO": [],
       "classCounts": [
         {
-          "class": "https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember",
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTechnicalSkillLevel",
+          "label": "persona technical skill level",
+          "instances": 5
+        },
+        {
+          "class": "http://schema.org/EventAttendanceModeEnumeration",
           "label": "",
-          "instances": 19
+          "instances": 3
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/SharedTask",
+          "label": "shared task",
+          "instances": 3
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/EvaluationMetric",
+          "label": "evaluation metric",
+          "instances": 4
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaLeadRole",
+          "label": "task area lead role",
+          "instances": 6
         },
         {
           "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureLeadRole",
@@ -10215,14 +10235,59 @@
           "instances": 6
         },
         {
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaContributorRole",
+          "label": "task area contributor role",
+          "instances": 6
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/ontology/Project",
+          "label": "",
+          "instances": 1
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/SubTask",
+          "label": "sub-task",
+          "instances": 10
+        },
+        {
           "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/BecomingAMember",
           "label": "becoming a member",
           "instances": 1
         },
         {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaLeadRole",
-          "label": "task area lead role",
+          "class": "https://nfdi.fiz-karlsruhe.de/ontology/Consortium",
+          "label": "",
+          "instances": 1
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaProblemDescription",
+          "label": "persona problem description",
+          "instances": 14
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDomainKnowledgeLevel",
+          "label": "persona domain knowledge level",
+          "instances": 3
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskArea",
+          "label": "task area",
           "instances": 6
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupMemberRole",
+          "label": "working group member role",
+          "instances": 1
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDescription",
+          "label": "persona description",
+          "instances": 8
+        },
+        {
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/Leading",
+          "label": "leading",
+          "instances": 13
         },
         {
           "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaWishDescription",
@@ -10235,78 +10300,18 @@
           "instances": 1
         },
         {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaMeasure",
-          "label": "task area measure",
-          "instances": 28
-        },
-        {
-          "class": "https://nfdi.fiz-karlsruhe.de/ontology/Person",
-          "label": "",
-          "instances": 32
-        },
-        {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/SubTask",
-          "label": "sub-task",
-          "instances": 10
-        },
-        {
-          "class": "http://schema.org/EventAttendanceModeEnumeration",
-          "label": "",
-          "instances": 3
-        },
-        {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupMemberRole",
-          "label": "working group member role",
-          "instances": 1
-        },
-        {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/EvaluationMetric",
-          "label": "evaluation metric",
-          "instances": 4
-        },
-        {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskArea",
-          "label": "task area",
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureContributorRole",
+          "label": "measure contributor role",
           "instances": 6
         },
         {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTechnicalSkillLevel",
-          "label": "persona technical skill level",
-          "instances": 5
-        },
-        {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTask",
-          "label": "persona task",
-          "instances": 22
-        },
-        {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaContributorRole",
-          "label": "task area contributor role",
-          "instances": 6
-        },
-        {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaEthicalOrLegalSkillLevel",
-          "label": "persona ethical or legal skill level",
-          "instances": 4
+          "class": "https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember",
+          "label": "",
+          "instances": 19
         },
         {
           "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/SpokespersonRole",
           "label": "SpokespersonRole",
-          "instances": 1
-        },
-        {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDomainKnowledgeLevel",
-          "label": "persona domain knowledge level",
-          "instances": 3
-        },
-        {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDescription",
-          "label": "persona description",
-          "instances": 8
-        },
-        {
-          "class": "https://nfdi.fiz-karlsruhe.de/ontology/Consortium",
-          "label": "",
           "instances": 1
         },
         {
@@ -10315,9 +10320,9 @@
           "instances": 1
         },
         {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/SharedTask",
-          "label": "shared task",
-          "instances": 3
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaMeasure",
+          "label": "task area measure",
+          "instances": 28
         },
         {
           "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/Persona",
@@ -10325,19 +10330,14 @@
           "instances": 8
         },
         {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaProblemDescription",
-          "label": "persona problem description",
-          "instances": 14
-        },
-        {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/FAIRDataPriniciple",
-          "label": "FAIR data principle",
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaEthicalOrLegalSkillLevel",
+          "label": "persona ethical or legal skill level",
           "instances": 4
         },
         {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureContributorRole",
-          "label": "measure contributor role",
-          "instances": 6
+          "class": "https://nfdi.fiz-karlsruhe.de/ontology/Person",
+          "label": "",
+          "instances": 32
         },
         {
           "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaSoftSkillLevel",
@@ -10345,14 +10345,14 @@
           "instances": 4
         },
         {
-          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/Leading",
-          "label": "leading",
-          "instances": 13
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTask",
+          "label": "persona task",
+          "instances": 22
         },
         {
-          "class": "https://nfdi.fiz-karlsruhe.de/ontology/Project",
-          "label": "",
-          "instances": 1
+          "class": "https://nfdi.fiz-karlsruhe.de/nfdi4dso/FAIRDataPriniciple",
+          "label": "FAIR data principle",
+          "instances": 4
         }
       ],
       "vocabularies": [

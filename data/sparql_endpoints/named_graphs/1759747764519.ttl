@@ -1,9 +1,9 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ns1: <http://purl.obolibrary.org/obo/> .
-@prefix ns2: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix ns2: <http://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix ns3: <http://www.geneontology.org/formats/oboInOwl#> .
-@prefix ns4: <http://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix ns4: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix ns5: <http://emmo.info/emmo#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -11,138 +11,138 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns4:Consortium a owl:Class ;
+ns2:Consortium a owl:Class ;
     rdfs:label "consortium"@en ;
-    ns4:example "NFDI4Culture, NFDI-MatWerk, DataPLANT." ;
+    ns2:example "NFDI4Culture, NFDI-MatWerk, DataPLANT." ;
     rdfs:comment "NFDI consortia grouped by a discipline based in a science-led process managed by the German Research Foundation (DFG)."@en ;
-    rdfs:subClassOf ns4:Organization .
+    rdfs:subClassOf ns2:Organization .
 
-ns4:DataPortal a owl:Class ;
+ns2:DataPortal a owl:Class ;
     rdfs:label "data portal"@en ;
-    ns4:example "Bach digital, KultSam, MusiXplora"@en ;
+    ns2:example "Bach digital, KultSam, MusiXplora"@en ;
     rdfs:comment "An online platform that provides access to data collections and datasets."@en ;
     rdfs:subClassOf <http://schema.org/Service> .
 
-ns4:ProvidedResource a owl:Class ;
+ns2:ProvidedResource a owl:Class ;
     rdfs:label "provided resource"@en ;
     rdfs:comment "A ressource that identifies a resource provided to the nfdi."@en ;
-    rdfs:subClassOf ns4:Resource .
+    rdfs:subClassOf ns2:Resource .
 
-ns4:Publication a owl:Class ;
+ns2:Publication a owl:Class ;
     rdfs:label "publication"@en ;
-    ns4:example "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten" ;
+    ns2:example "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten" ;
     rdfs:comment "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
     rdfs:subClassOf <http://schema.org/CreativeWork> .
 
-ns4:ServiceType a owl:Class ;
+ns2:ServiceType a owl:Class ;
     rdfs:label "service type"@en ;
-    ns4:example "Expertise, advertisement, curation"@en ;
+    ns2:example "Expertise, advertisement, curation"@en ;
     rdfs:comment "A resource that identifies the type of a service."@en .
 
-ns4:bestPractice a owl:ObjectProperty ;
+ns2:bestPractice a owl:ObjectProperty ;
     rdfs:label "best practice"@en ;
     rdfs:comment "The property is a relationship between a resource and the best practice."@en ;
-    rdfs:domain ns4:Resource ;
-    rdfs:range ns4:Specification ;
-    owl:inverseOf ns4:bestPracticeOf .
+    rdfs:domain ns2:Resource ;
+    rdfs:range ns2:Specification ;
+    owl:inverseOf ns2:bestPracticeOf .
 
-ns4:country a owl:ObjectProperty ;
+ns2:country a owl:ObjectProperty ;
     rdfs:label "country"@en ;
     rdfs:comment "The property relates a city or a state to a country where it is located."@en ;
-    rdfs:range ns4:Country ;
-    owl:inverseOf ns4:countryOf .
+    rdfs:range ns2:Country ;
+    owl:inverseOf ns2:countryOf .
 
-ns4:federalState a owl:ObjectProperty ;
+ns2:federalState a owl:ObjectProperty ;
     rdfs:label "federal state"@en ;
     rdfs:comment "The property relates a city to a federal state where it is located."@en ;
-    rdfs:domain ns4:City ;
-    rdfs:range ns4:FederalState ;
-    owl:inverseOf ns4:federalStateOf .
+    rdfs:domain ns2:City ;
+    rdfs:range ns2:FederalState ;
+    owl:inverseOf ns2:federalStateOf .
 
-ns4:fundingOrganisation a owl:ObjectProperty ;
+ns2:fundingOrganisation a owl:ObjectProperty ;
     rdfs:label "funding organisation"@en ;
     rdfs:comment "The property relates a resource or a project to the organisation that provided funding for it."@en ;
-    rdfs:range ns4:Organization ;
-    rdfs:subPropertyOf ns4:funder ;
-    owl:inverseOf ns4:fundingOrganisationOf .
+    rdfs:range ns2:Organization ;
+    rdfs:subPropertyOf ns2:funder ;
+    owl:inverseOf ns2:fundingOrganisationOf .
 
-ns4:fundingProject a owl:ObjectProperty ;
+ns2:fundingProject a owl:ObjectProperty ;
     rdfs:label "funding project"@en ;
     rdfs:comment "The property relateds a resource to the project that provided funding for it."@en ;
-    rdfs:domain ns4:Resource ;
-    rdfs:range ns4:Project ;
-    rdfs:subPropertyOf ns4:funder ;
-    owl:inverseOf ns4:fundingProjectOf .
+    rdfs:domain ns2:Resource ;
+    rdfs:range ns2:Project ;
+    rdfs:subPropertyOf ns2:funder ;
+    owl:inverseOf ns2:fundingProjectOf .
 
-ns4:location a owl:ObjectProperty ;
+ns2:location a owl:ObjectProperty ;
     rdfs:label "location"@en ;
     rdfs:comment "The property is a relationship between a thing and a place its located at. "@en ;
     rdfs:domain owl:Thing ;
-    rdfs:range ns4:Place ;
-    owl:inverseOf ns4:locationOf .
+    rdfs:range ns2:Place ;
+    owl:inverseOf ns2:locationOf .
 
-ns4:objectType a owl:ObjectProperty ;
+ns2:objectType a owl:ObjectProperty ;
     rdfs:label "object type"@en ;
     rdfs:comment "The property relates a data collection to the type of object it contains. "@en ;
-    rdfs:domain ns4:Collection ;
-    rdfs:range ns4:ObjectType ;
-    owl:inverseOf ns4:objectTypeOf .
+    rdfs:domain ns2:Collection ;
+    rdfs:range ns2:ObjectType ;
+    owl:inverseOf ns2:objectTypeOf .
 
-ns4:parentOrganisation a owl:ObjectProperty ;
+ns2:parentOrganisation a owl:ObjectProperty ;
     rdfs:label "parent organisation"@en ;
     rdfs:comment "The property is a parental relationship between organisations."@en ;
-    rdfs:domain ns4:Organization ;
-    rdfs:range ns4:Organization ;
-    owl:inverseOf ns4:subsidiaryOrganization .
+    rdfs:domain ns2:Organization ;
+    rdfs:range ns2:Organization ;
+    owl:inverseOf ns2:subsidiaryOrganization .
 
-ns4:partnerOrganization a owl:ObjectProperty,
+ns2:partnerOrganization a owl:ObjectProperty,
         owl:SymmetricProperty ;
-    rdfs:domain ns4:Organization ;
-    rdfs:range ns4:Organization .
+    rdfs:domain ns2:Organization ;
+    rdfs:range ns2:Organization .
 
-ns4:programmingLanguage a owl:ObjectProperty ;
+ns2:programmingLanguage a owl:ObjectProperty ;
     rdfs:label "programming language"@en ;
     rdfs:comment "The property links software to a programming language it is written in." ;
-    rdfs:domain ns4:Software ;
-    rdfs:range ns4:ProgrammingLanguage ;
-    owl:inverseOf ns4:programmingLanguageOf .
+    rdfs:domain ns2:Software ;
+    rdfs:range ns2:ProgrammingLanguage ;
+    owl:inverseOf ns2:programmingLanguageOf .
 
-ns4:publisher a owl:ObjectProperty ;
+ns2:publisher a owl:ObjectProperty ;
     rdfs:label "publisher"@en ;
     rdfs:comment "The property is a relationship between a resource and an organisation or a person responsible for publishing it."@en ;
-    rdfs:domain ns4:Resource ;
-    owl:inverseOf ns4:publisherOf .
+    rdfs:domain ns2:Resource ;
+    owl:inverseOf ns2:publisherOf .
 
-ns4:relatedProject a owl:ObjectProperty,
+ns2:relatedProject a owl:ObjectProperty,
         owl:SymmetricProperty ;
     rdfs:label "related project"@en ;
     rdfs:comment "The property is a relationship between related projects. The property is symmetric."@en ;
-    rdfs:domain ns4:Project ;
-    rdfs:range ns4:Project .
+    rdfs:domain ns2:Project ;
+    rdfs:range ns2:Project .
 
-ns4:semanticExpressivity a owl:ObjectProperty ;
+ns2:semanticExpressivity a owl:ObjectProperty ;
     rdfs:label "semantic expressivity"@en ;
     rdfs:comment "The property relates a resource to its semantic expressivity spectrum."@en ;
     rdfs:domain <http://purls.helmholtz-metadaten.de/mwo/SemanticResource> ;
-    rdfs:range ns4:SemanticExpressivity ;
-    owl:inverseOf ns4:semanticExpressivityOf .
+    rdfs:range ns2:SemanticExpressivity ;
+    owl:inverseOf ns2:semanticExpressivityOf .
 
-ns4:standard a owl:ObjectProperty ;
+ns2:standard a owl:ObjectProperty ;
     rdfs:label "standard"@en ;
     rdfs:comment "The property relates a resource to the standard it relies on."@en ;
-    rdfs:domain ns4:Resource ;
-    rdfs:range ns4:Standard ;
-    owl:inverseOf ns4:standardOf .
+    rdfs:domain ns2:Resource ;
+    rdfs:range ns2:Standard ;
+    owl:inverseOf ns2:standardOf .
 
 dcterms:isPartOf a owl:ObjectProperty ;
-    rdfs:domain ns4:TaskArea ;
-    rdfs:range ns2:Consortium .
+    rdfs:domain ns2:TaskArea ;
+    rdfs:range ns4:Consortium .
 
 dcterms:title a owl:AnnotationProperty,
         owl:DatatypeProperty ;
     rdfs:label "has title"@en ;
     rdfs:comment "A name given to a resource.  Typically, the title will be the name by which the resource is formally known."@en ;
-    rdfs:domain ns4:Resource .
+    rdfs:domain ns2:Resource .
 
 <http://purls.helmholtz-metadaten.de/mwo/ChemistryDatabase> a owl:Class ;
     rdfs:label "chemistry database"@en ;
@@ -176,7 +176,7 @@ dcterms:title a owl:AnnotationProperty,
 <http://purls.helmholtz-metadaten.de/mwo/EducationalResource> a owl:Class ;
     rdfs:label "educational resource"@en ;
     ns1:IAO_0000115 "A resource or material that can be used for teaching and learning puposes."@en ;
-    rdfs:subClassOf ns4:Resource .
+    rdfs:subClassOf ns2:Resource .
 
 <http://purls.helmholtz-metadaten.de/mwo/ElectronicLabNotebook> a owl:Class ;
     rdfs:label "electronic lab notebook"@en ;
@@ -211,7 +211,7 @@ dcterms:title a owl:AnnotationProperty,
 <http://purls.helmholtz-metadaten.de/mwo/MetadataSchema> a owl:Class ;
     rdfs:label "metadata schema"@en ;
     ns1:IAO_0000115 "A metadata schema is a specification which establishes the elements needed to describe a data resource in a formalized and concise manner."@en ;
-    rdfs:subClassOf ns4:Specification .
+    rdfs:subClassOf ns2:Specification .
 
 <http://purls.helmholtz-metadaten.de/mwo/OntologyRepository> a owl:Class ;
     rdfs:label "ontology repository"@en ;
@@ -222,7 +222,7 @@ dcterms:title a owl:AnnotationProperty,
     rdfs:label "patent"@en ;
     ns1:IAO_0000115 "A patent is an exclusive right granted for an invention, which is a product or a process that provides, in general, a new way of doing something, or offers a new technical solution to a problem. To get a patent, technical information about the invention must be disclosed to the public in a patent application."@en ;
     ns3:hasDbXref <https://www.wipo.int/patents/en/> ;
-    rdfs:subClassOf ns4:Specification .
+    rdfs:subClassOf ns2:Specification .
 
 <http://purls.helmholtz-metadaten.de/mwo/PotentialsRepository> a owl:Class ;
     rdfs:label "potentials repository"@en ;
@@ -287,19 +287,19 @@ Research software might be source code files, algorithms, scripts, computational
 <http://purls.helmholtz-metadaten.de/mwo/aboutMaterial> a owl:ObjectProperty ;
     rdfs:label "about material"@en ;
     ns1:IAO_0000115 "A relation between a dataset and the material it contains data on."@en ;
-    rdfs:domain ns4:Dataset ;
+    rdfs:domain ns2:Dataset ;
     rdfs:range ns5:EMMO_4207e895_8b83_4318_996a_72cfb32acd94 .
 
 <http://purls.helmholtz-metadaten.de/mwo/belongsTo> a owl:ObjectProperty ;
     rdfs:label "belongs to"@en ;
     ns1:IAO_0000115 "A relation between a research group or large-scale facility and the organization it belongs to."@en ;
-    rdfs:range ns4:Organization .
+    rdfs:range ns2:Organization .
 
 <http://purls.helmholtz-metadaten.de/mwo/conformsToSpecification> a owl:ObjectProperty ;
     rdfs:label "conforms to specification"@en ;
     ns1:IAO_0000115 "A relation between a resource and the specification it conforms to."@en ;
-    rdfs:domain ns4:Resource ;
-    rdfs:range ns4:Specification .
+    rdfs:domain ns2:Resource ;
+    rdfs:range ns2:Specification .
 
 <http://purls.helmholtz-metadaten.de/mwo/description> a owl:DatatypeProperty ;
     rdfs:label "description"@en ;
@@ -315,8 +315,8 @@ Research software might be source code files, algorithms, scripts, computational
 <http://purls.helmholtz-metadaten.de/mwo/hasAffiliation> a owl:ObjectProperty ;
     rdfs:label "has affiliation"@en ;
     ns1:IAO_0000115 "a relation between a person and an organization to which the person is affiliated."@en ;
-    rdfs:domain ns4:Person ;
-    rdfs:range ns4:Organization .
+    rdfs:domain ns2:Person ;
+    rdfs:range ns2:Organization .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasContactPoint> a owl:ObjectProperty ;
     rdfs:label "a relation between a thing and its contact point, which can be a person or website."@en,
@@ -331,25 +331,25 @@ Research software might be source code files, algorithms, scripts, computational
 <http://purls.helmholtz-metadaten.de/mwo/hasCreator> a owl:ObjectProperty ;
     rdfs:label "has creator" ;
     ns1:IAO_0000115 "A relation between a dataset and a person or organization, who has created the data."@en ;
-    rdfs:domain ns4:Dataset ;
+    rdfs:domain ns2:Dataset ;
     rdfs:subPropertyOf <http://purls.helmholtz-metadaten.de/mwo/hasAuthor> .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasDOI> a owl:DatatypeProperty ;
     rdfs:label "has DOI" ;
     ns1:IAO_0000115 "A data property relating a work to its Digital Object Identifier (DOI)."@en ;
-    rdfs:domain ns4:Resource ;
+    rdfs:domain ns2:Resource ;
     rdfs:subPropertyOf dcterms:identifier .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasDiscipline> a owl:ObjectProperty ;
     rdfs:label "has discipline"@en ;
     ns1:IAO_0000115 "A relation between a resource or large-scale facility and the academic discipline of the produced work."@en ;
-    rdfs:domain ns4:Resource ;
-    rdfs:range ns4:AcademicDiscipline .
+    rdfs:domain ns2:Resource ;
+    rdfs:range ns2:AcademicDiscipline .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasDocumentation> a owl:ObjectProperty ;
     rdfs:label "has documentation"@en ;
     ns1:IAO_0000115 "A relation between a resource and its documentation."@en ;
-    rdfs:domain ns4:Resource ;
+    rdfs:domain ns2:Resource ;
     rdfs:range <http://purls.helmholtz-metadaten.de/mwo/Documentation> .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasEndpointURL> a owl:DatatypeProperty ;
@@ -357,18 +357,18 @@ Research software might be source code files, algorithms, scripts, computational
     ns1:IAO_0000115 "A data property relating a SPARQL EndPoint with its URL."@en ;
     rdfs:domain <http://purls.helmholtz-metadaten.de/mwo/SparqlEndpoint> ;
     rdfs:range xsd:anyURI ;
-    rdfs:subPropertyOf ns4:url .
+    rdfs:subPropertyOf ns2:url .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasExpertiseIn> a owl:ObjectProperty ;
     rdfs:label "has expertise in"@en ;
     ns1:IAO_0000115 "A relation between a person and an academic discipline or research topic, in which this person is an expert."@en ;
-    rdfs:domain ns4:Person ;
-    rdfs:range ns4:AcademicDiscipline .
+    rdfs:domain ns2:Person ;
+    rdfs:range ns2:AcademicDiscipline .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasFormat> a owl:ObjectProperty ;
     rdfs:label "has format"@en ;
     ns1:IAO_0000115 "The file format of the resource"@en ;
-    rdfs:domain ns4:Resource ;
+    rdfs:domain ns2:Resource ;
     rdfs:range dcterms:FileFormat .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasLeader> a owl:ObjectProperty ;
@@ -381,7 +381,7 @@ Research software might be source code files, algorithms, scripts, computational
 <http://purls.helmholtz-metadaten.de/mwo/hasLecturer> a owl:ObjectProperty ;
     rdfs:label "has lecturer"@en ;
     ns1:IAO_0000115 "A relation between an academic event and a person, who participates in teaching capacity in the event."@en ;
-    rdfs:range ns4:Person .
+    rdfs:range ns2:Person .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasManual> a owl:ObjectProperty ;
     rdfs:label "has manual"@en ;
@@ -392,21 +392,21 @@ Research software might be source code files, algorithms, scripts, computational
 <http://purls.helmholtz-metadaten.de/mwo/hasMember> a owl:ObjectProperty ;
     rdfs:label "has member"@en ;
     ns1:IAO_0000115 "A relation between a research project and its members."@en ;
-    rdfs:domain ns4:Project ;
+    rdfs:domain ns2:Project ;
     rdfs:range <http://purls.helmholtz-metadaten.de/mwo/ProjectMember> ;
     owl:inverseOf <http://purls.helmholtz-metadaten.de/mwo/memberOf> .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasORCID> a owl:DatatypeProperty ;
     rdfs:label "has ORCID" ;
     ns1:IAO_0000115 "A data property relating a person to their Open Researcher and Contributor ID (ORCID)." ;
-    rdfs:domain ns4:Person ;
+    rdfs:domain ns2:Person ;
     rdfs:subPropertyOf dcterms:identifier .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasOwner> a owl:ObjectProperty ;
     rdfs:label "has owner"@en ;
     ns1:IAO_0000115 "A relation between an instrument and the organization that acts as its owner."@en ;
     rdfs:domain <https://w3id.org/skgo/modsci#Instrument> ;
-    rdfs:range ns4:Organization .
+    rdfs:range ns2:Organization .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasPostalCode> a owl:DatatypeProperty ;
     rdfs:label "has postal code" ;
@@ -416,32 +416,32 @@ Research software might be source code files, algorithms, scripts, computational
 <http://purls.helmholtz-metadaten.de/mwo/hasProjectIdentifier> a owl:DatatypeProperty ;
     rdfs:label "has project identifier"@en ;
     ns1:IAO_0000115 "A data property relating a research project with a unique identifier, defined in a given context."@en ;
-    rdfs:domain ns4:Project ;
+    rdfs:domain ns2:Project ;
     rdfs:subPropertyOf dcterms:identifier .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasRORID> a owl:DatatypeProperty ;
     rdfs:label "has ROR ID" ;
     ns1:IAO_0000115 "A data property relating an organization to its identifier within the Research Organization Registry (ROR)."@en ;
-    rdfs:domain ns4:Organization ;
+    rdfs:domain ns2:Organization ;
     rdfs:subPropertyOf dcterms:identifier .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasRelatedResource> a owl:ObjectProperty,
         owl:SymmetricProperty ;
     rdfs:label "has related resource"@en ;
     ns1:IAO_0000115 "A relation between two different resources, which indicates both are associated."@en ;
-    rdfs:domain ns4:Resource ;
-    rdfs:range ns4:Resource .
+    rdfs:domain ns2:Resource ;
+    rdfs:range ns2:Resource .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasRepository> a owl:ObjectProperty ;
     rdfs:label "has repository"@en ;
     ns1:IAO_0000115 "A relation between a software and the website of the repository where it is stored."@en ;
-    rdfs:domain ns4:Resource ;
+    rdfs:domain ns2:Resource ;
     rdfs:range <http://purls.helmholtz-metadaten.de/mwo/Repository> .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasRole> a owl:ObjectProperty ;
     rdfs:label "has role"@en ;
     ns1:IAO_0000115 "A relation between a person (the bearer) and a role, in which the role specifically depends on the bearer for its existence."@en ;
-    rdfs:domain ns4:Person ;
+    rdfs:domain ns2:Person ;
     rdfs:range ns1:BFO_0000023 .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasSerialNumber> a owl:DatatypeProperty ;
@@ -458,19 +458,19 @@ Research software might be source code files, algorithms, scripts, computational
 <http://purls.helmholtz-metadaten.de/mwo/hasTopic> a owl:ObjectProperty ;
     rdfs:label "has topic"@en ;
     ns1:IAO_0000115 "A relation between a research project and the topic of the research question it investigates."@en ;
-    rdfs:domain ns4:Project ;
+    rdfs:domain ns2:Project ;
     rdfs:range <http://purls.helmholtz-metadaten.de/mwo/ResearchTopic> .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasVersion> a owl:DatatypeProperty ;
     rdfs:label "has version"@en ;
     ns1:IAO_0000115 "A number or string that identifies different variants or releases of a resource."@en ;
-    rdfs:domain ns4:Resource .
+    rdfs:domain ns2:Resource .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasWebsite> a owl:ObjectProperty ;
     rdfs:label "has website"@en ;
     ns1:IAO_0000115 "a relation between a thing and its website."@en ;
     rdfs:domain owl:Thing ;
-    rdfs:range ns4:Website .
+    rdfs:range ns2:Website .
 
 <http://purls.helmholtz-metadaten.de/mwo/instrumentModel> a owl:DatatypeProperty ;
     rdfs:label "instrument model"@en ;
@@ -488,7 +488,7 @@ Research software might be source code files, algorithms, scripts, computational
 
 <http://purls.helmholtz-metadaten.de/mwo/mainTaskArea> a owl:ObjectProperty ;
     rdfs:domain <http://purls.helmholtz-metadaten.de/mwo/UseCase> ;
-    rdfs:range ns4:TaskArea .
+    rdfs:range ns2:TaskArea .
 
 <http://purls.helmholtz-metadaten.de/mwo/relatedParticipantProject> a owl:ObjectProperty ;
     rdfs:domain <http://purls.helmholtz-metadaten.de/mwo/UseCase> ;
@@ -496,7 +496,7 @@ Research software might be source code files, algorithms, scripts, computational
 
 <http://purls.helmholtz-metadaten.de/mwo/relatedTaskArea> a owl:ObjectProperty ;
     rdfs:domain <http://purls.helmholtz-metadaten.de/mwo/UseCase> ;
-    rdfs:range ns4:TaskArea .
+    rdfs:range ns2:TaskArea .
 
 <http://purls.helmholtz-metadaten.de/mwo/requiredTool> a owl:ObjectProperty ;
     rdfs:label "required tool"@en ;
@@ -506,14 +506,14 @@ Research software might be source code files, algorithms, scripts, computational
 <http://purls.helmholtz-metadaten.de/mwo/softwareCitation> a owl:ObjectProperty ;
     rdfs:label "software citation"@en ;
     ns1:IAO_0000115 "A relation between a work and a cited software."@en ;
-    rdfs:domain ns4:Resource ;
-    rdfs:range ns4:Software ;
+    rdfs:domain ns2:Resource ;
+    rdfs:range ns2:Software ;
     rdfs:subPropertyOf schema:citation .
 
 <http://purls.helmholtz-metadaten.de/mwo/usesMethod> a owl:ObjectProperty ;
     rdfs:label "uses method"@en ;
     ns1:IAO_0000115 "A relation between a resource and method it implements, uses or describes."@en ;
-    rdfs:domain ns4:Resource ;
+    rdfs:domain ns2:Resource ;
     rdfs:range <http://purls.helmholtz-metadaten.de/mwo/Method> .
 
 <http://purls.helmholtz-metadaten.de/mwo/usesTechnology> a owl:ObjectProperty ;
@@ -568,7 +568,7 @@ Research software might be source code files, algorithms, scripts, computational
 <http://www.ebi.ac.uk/swo/has_license> a owl:ObjectProperty ;
     rdfs:label "has license" ;
     ns1:IAO_0000115 "The relationship between an entity and the set of legal restrictions, i.e. license, which are applied in using or otherwise interacting with that entity. Eg. relationship between software and a software license." ;
-    rdfs:domain ns4:Resource ;
+    rdfs:domain ns2:Resource ;
     rdfs:range <http://www.ebi.ac.uk/swo/SWO_0000002> ;
     owl:inverseOf <http://www.ebi.ac.uk/swo/is_license_for> .
 
@@ -664,81 +664,81 @@ owl:Nothing a owl:Class ;
     owl:complementOf owl:Thing .
 
 foaf:firstName a owl:DatatypeProperty ;
-    rdfs:domain ns4:Person ;
+    rdfs:domain ns2:Person ;
     rdfs:subPropertyOf <http://purls.helmholtz-metadaten.de/mwo/hasPersonalInformation> .
 
 foaf:gender a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "gender" ;
     rdfs:comment "The gender of this Agent (typically but not necessarily 'male' or 'female')." ;
-    rdfs:domain ns4:Person ;
+    rdfs:domain ns2:Person ;
     rdfs:isDefinedBy foaf: ;
     rdfs:subPropertyOf <http://purls.helmholtz-metadaten.de/mwo/hasPersonalInformation> .
 
 foaf:surname a owl:DatatypeProperty ;
-    rdfs:domain ns4:Person ;
+    rdfs:domain ns2:Person ;
     rdfs:subPropertyOf <http://purls.helmholtz-metadaten.de/mwo/hasPersonalInformation> .
 
 foaf:title a owl:DatatypeProperty ;
     rdfs:label "title" ;
     rdfs:comment "Title (Mr, Mrs, Ms, Dr. etc)" ;
-    rdfs:domain ns4:Person ;
+    rdfs:domain ns2:Person ;
     rdfs:isDefinedBy foaf: ;
     rdfs:subPropertyOf <http://purls.helmholtz-metadaten.de/mwo/hasPersonalInformation> .
 
-ns2:Person a owl:Class ;
+ns4:Person a owl:Class ;
     rdfs:label "person"@en ;
     rdfs:comment "A resource that represents a single person."@en ;
-    ns2:example "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" .
+    ns4:example "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" .
 
-ns2:areaCode a owl:DatatypeProperty ;
+ns4:areaCode a owl:DatatypeProperty ;
     rdfs:label "area code"@en ;
-    rdfs:domain ns2:Organization ;
+    rdfs:domain ns4:Organization ;
     rdfs:range rdfs:Literal .
 
-ns2:emailAddress a owl:DatatypeProperty ;
+ns4:emailAddress a owl:DatatypeProperty ;
     rdfs:label "email address"@en ;
     rdfs:range rdfs:Literal .
 
-ns2:fileExtension a owl:DatatypeProperty ;
+ns4:fileExtension a owl:DatatypeProperty ;
     rdfs:label "file extension" ;
     rdfs:comment "An identifier for a file format (e.g. txt for a text file) used as a suffix to the file name, don't use dot at start."@en ;
-    ns2:example "mp4",
+    ns4:example "mp4",
         "ttl",
         "txt",
         "xml" .
 
-ns2:fundingOrganization a owl:ObjectProperty ;
+ns4:fundingOrganization a owl:ObjectProperty ;
     rdfs:label "funding organization"@en ;
     rdfs:comment "The property relates a resource or a project to the organization that provided funding for it."@en ;
-    rdfs:range ns2:Organization ;
-    owl:inverseOf ns2:fundingOrganizationOf .
+    rdfs:range ns4:Organization ;
+    owl:inverseOf ns4:fundingOrganizationOf .
 
-ns2:fundingProject a owl:ObjectProperty ;
+ns4:fundingProject a owl:ObjectProperty ;
     rdfs:label "funding project"@en ;
     rdfs:comment "The property relateds a resource to the project that provided funding for it."@en ;
-    rdfs:range ns2:Project ;
-    owl:inverseOf ns2:fundingProjectOf .
+    rdfs:range ns4:Project ;
+    owl:inverseOf ns4:fundingProjectOf .
 
-ns2:parentOrganization a owl:ObjectProperty ;
+ns4:parentOrganization a owl:ObjectProperty ;
     rdfs:label "parent organization"@en ;
     rdfs:comment "The property is a parental relationship between organizations."@en ;
-    rdfs:domain ns2:Organization ;
-    rdfs:range ns2:Organization .
+    rdfs:domain ns4:Organization ;
+    rdfs:range ns4:Organization .
 
-ns2:partnerOrganization a owl:ObjectProperty,
+ns4:partnerOrganization a owl:ObjectProperty,
         owl:SymmetricProperty ;
     rdfs:label "partner organization"@en ;
     rdfs:comment "The property is a partner relationship between organizations. The property is symmetric."@en ;
-    rdfs:domain ns2:Organization ;
-    rdfs:range ns2:Organization .
+    rdfs:domain ns4:Organization ;
+    rdfs:range ns4:Organization .
 
-ns2:relatedProject a owl:ObjectProperty ;
+ns4:relatedProject a owl:ObjectProperty ;
     rdfs:label "related project"@en ;
     rdfs:comment "The property is a relationship between a project or a resource and related projects."@en ;
-    rdfs:range ns2:Project .
+    rdfs:range ns4:Project .
 
-ns2:url a owl:DatatypeProperty ;
+ns4:url a owl:DatatypeProperty ;
     rdfs:label "url"@en ;
     rdfs:comment "URL of a thing"@en ;
     rdfs:domain owl:Thing ;
@@ -812,102 +812,102 @@ ns5:EMMO_4207e895_8b83_4318_996a_72cfb32acd94 a owl:Class ;
         "Material usually means some definite kind, quality, or quantity of matter, especially as intended for use."@en ;
     skos:prefLabel "Material"@en .
 
-ns4:City a owl:Class ;
+ns2:City a owl:Class ;
     rdfs:label "city"@en ;
-    ns4:example "Berlin, Hannover, Kyiv"@en ;
+    ns2:example "Berlin, Hannover, Kyiv"@en ;
     rdfs:comment "A city or a town where the thing is located."@en ;
-    rdfs:subClassOf ns4:Place .
+    rdfs:subClassOf ns2:Place .
 
-ns4:Collection a owl:Class ;
+ns2:Collection a owl:Class ;
     rdfs:label "collection"@en ;
-    ns4:example "RISM catalogue of musical sources"@en ;
+    ns2:example "RISM catalogue of musical sources"@en ;
     rdfs:comment "A tangible collection of valuables published or curated by an organisation or a person."@en ;
     rdfs:subClassOf <http://schema.org/Product> .
 
-ns4:Country a owl:Class ;
+ns2:Country a owl:Class ;
     rdfs:label "country"@en ;
     rdfs:comment "A country where the thing is located."@en ;
-    rdfs:subClassOf ns4:Place .
+    rdfs:subClassOf ns2:Place .
 
-ns4:FederalState a owl:Class ;
+ns2:FederalState a owl:Class ;
     rdfs:label "federal state"@en ;
-    ns4:example "Sachsen, Berlin"@de ;
+    ns2:example "Sachsen, Berlin"@de ;
     rdfs:comment "A federal state where the thing is located."@en ;
-    rdfs:subClassOf ns4:Place .
+    rdfs:subClassOf ns2:Place .
 
-ns4:ObjectType a owl:Class ;
+ns2:ObjectType a owl:Class ;
     rdfs:label "object type"@en ;
-    ns4:example "book, photograph, music sheet"@en ;
+    ns2:example "book, photograph, music sheet"@en ;
     rdfs:comment "A resource that identifies the type of object in a data collection."@en .
 
-ns4:ProgrammingLanguage a owl:Class ;
+ns2:ProgrammingLanguage a owl:Class ;
     rdfs:label "programming language"@en ;
-    ns4:example "Java, Ruby, C++, Perl, PHP" ;
+    ns2:example "Java, Ruby, C++, Perl, PHP" ;
     rdfs:comment "A formal language used for implementing a software."@en ;
-    rdfs:subClassOf ns4:TechnologicalMeans ;
+    rdfs:subClassOf ns2:TechnologicalMeans ;
     owl:equivalentClass <https://w3id.org/skgo/modsci#ProgrammingLanguage> .
 
-ns4:SemanticExpressivity a owl:Class ;
+ns2:SemanticExpressivity a owl:Class ;
     rdfs:label "semantic expressivity"@en ;
-    ns4:example "controlled vocabulary, ontology, taxonomy"@en ;
+    ns2:example "controlled vocabulary, ontology, taxonomy"@en ;
     rdfs:comment "An entity that identifies the level of the semantic expressivity of a resource. Five instances are now included in nfdicore."@en .
 
-ns4:Standard a owl:Class ;
+ns2:Standard a owl:Class ;
     rdfs:label "standard"@en ;
-    ns4:example "ISO 15511, DINI-Zertifikat" ;
+    ns2:example "ISO 15511, DINI-Zertifikat" ;
     rdfs:comment "An international standard and norm that can be used to evaluate or create services."@en ;
-    rdfs:subClassOf ns4:Specification .
+    rdfs:subClassOf ns2:Specification .
 
-ns4:TechnologicalMeans a owl:Class ;
+ns2:TechnologicalMeans a owl:Class ;
     rdfs:label "technological means"@en ;
-    ns4:example "Groovy on Grails, Angular"@en ;
+    ns2:example "Groovy on Grails, Angular"@en ;
     rdfs:comment "A technology, e.g. a web application or a programming framework used in a resource."@en .
 
-ns4:Website a owl:Class ;
+ns2:Website a owl:Class ;
     rdfs:label "website"@en ;
-    ns4:example "https:\\/\\/opac.rism.info" ;
+    ns2:example "https:\\/\\/opac.rism.info" ;
     rdfs:comment "A collection of webpages contributed by an organisation or a person."@en ;
     rdfs:subClassOf <http://schema.org/Product> .
 
-ns4:bestPracticeOf a owl:ObjectProperty ;
+ns2:bestPracticeOf a owl:ObjectProperty ;
     rdfs:label "best practice of"@en .
 
-ns4:countryOf a owl:ObjectProperty ;
+ns2:countryOf a owl:ObjectProperty ;
     rdfs:label "country of"@en .
 
-ns4:federalStateOf a owl:ObjectProperty ;
+ns2:federalStateOf a owl:ObjectProperty ;
     rdfs:label "federal state of"@en .
 
-ns4:fundingOrganisationOf a owl:ObjectProperty ;
+ns2:fundingOrganisationOf a owl:ObjectProperty ;
     rdfs:label "funding organisation of"@en ;
-    rdfs:subPropertyOf ns4:funderOf .
+    rdfs:subPropertyOf ns2:funderOf .
 
-ns4:fundingProjectOf a owl:ObjectProperty ;
+ns2:fundingProjectOf a owl:ObjectProperty ;
     rdfs:label "funding project of"@en ;
-    rdfs:subPropertyOf ns4:funderOf .
+    rdfs:subPropertyOf ns2:funderOf .
 
-ns4:locationOf a owl:ObjectProperty ;
+ns2:locationOf a owl:ObjectProperty ;
     rdfs:label "location of"@en .
 
-ns4:objectTypeOf a owl:ObjectProperty ;
+ns2:objectTypeOf a owl:ObjectProperty ;
     rdfs:label "object type of"@en .
 
-ns4:programmingLanguageOf a owl:ObjectProperty ;
+ns2:programmingLanguageOf a owl:ObjectProperty ;
     rdfs:label "programming language of"@en .
 
-ns4:publisherOf a owl:ObjectProperty ;
+ns2:publisherOf a owl:ObjectProperty ;
     rdfs:label "publisher of"@en .
 
-ns4:semanticExpressivityOf a owl:ObjectProperty ;
+ns2:semanticExpressivityOf a owl:ObjectProperty ;
     rdfs:label "semantic expressivity of"@en .
 
-ns4:standardOf a owl:ObjectProperty ;
+ns2:standardOf a owl:ObjectProperty ;
     rdfs:label "standard of"@en .
 
-ns4:subsidiaryOrganization a owl:ObjectProperty ;
+ns2:subsidiaryOrganization a owl:ObjectProperty ;
     rdfs:label "subsidiary organization"@en .
 
-ns4:url a owl:DatatypeProperty ;
+ns2:url a owl:DatatypeProperty ;
     rdfs:label "url"@en ;
     rdfs:comment "URL of a thing."@en ;
     rdfs:domain owl:Thing ;
@@ -939,7 +939,7 @@ dcterms:MediaType a owl:Class ;
         "Technique"@en .
 
 <http://purls.helmholtz-metadaten.de/mwo/ParticipantProject> a owl:Class ;
-    rdfs:subClassOf ns2:Project .
+    rdfs:subClassOf ns4:Project .
 
 <http://purls.helmholtz-metadaten.de/mwo/ProjectManager> a owl:Class ;
     rdfs:label "project manager"@en ;
@@ -967,8 +967,8 @@ dcterms:MediaType a owl:Class ;
 <http://purls.helmholtz-metadaten.de/mwo/hasAuthor> a owl:ObjectProperty ;
     rdfs:label "has author"@en ;
     ns1:IAO_0000115 "A relation between a resource and a person, who is the author."@en ;
-    rdfs:domain ns4:Resource ;
-    rdfs:range ns4:Person .
+    rdfs:domain ns2:Resource ;
+    rdfs:range ns2:Person .
 
 <http://purls.helmholtz-metadaten.de/mwo/hasPostalAddress> a owl:DatatypeProperty ;
     rdfs:label "has postal address"@en ;
@@ -977,7 +977,7 @@ dcterms:MediaType a owl:Class ;
 <http://purls.helmholtz-metadaten.de/mwo/isContributorOf> a owl:ObjectProperty ;
     rdfs:label "is contributor of"@en ;
     ns1:IAO_0000115 "A relation between an organization or person and the resource of which it is a contributor."@en ;
-    rdfs:range ns4:Resource .
+    rdfs:range ns2:Resource .
 
 <http://purls.helmholtz-metadaten.de/mwo/isLeaderOf> a owl:ObjectProperty ;
     rdfs:label "is leader of"@en .
@@ -1016,28 +1016,28 @@ dcterms:MediaType a owl:Class ;
     rdfs:label "Open source software license" ;
     rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000002> .
 
-ns2:Consortium a owl:Class ;
+ns4:Consortium a owl:Class ;
     rdfs:label "consortium"@en ;
     rdfs:comment "NFDI consortia grouped by a discipline based in a science-led process managed by the German Research Foundation (DFG)."@en ;
-    rdfs:subClassOf ns2:Organization ;
-    ns2:example "NFDI4Culture, NFDI-MatWerk, DataPLANT." .
+    rdfs:subClassOf ns4:Organization ;
+    ns4:example "NFDI4Culture, NFDI-MatWerk, DataPLANT." .
 
-ns2:fundingOrganizationOf a owl:ObjectProperty ;
+ns4:fundingOrganizationOf a owl:ObjectProperty ;
     rdfs:label "funding organization of"@en .
 
-ns2:fundingProjectOf a owl:ObjectProperty ;
+ns4:fundingProjectOf a owl:ObjectProperty ;
     rdfs:label "funding project of"@en .
 
 schema:dateCreated a owl:DatatypeProperty ;
     rdfs:label "dateCreated"@en ;
     rdfs:comment "The date on which the CreativeWork was created or the item was added to a DataFeed."@en ;
-    rdfs:domain ns4:Resource ;
+    rdfs:domain ns2:Resource ;
     rdfs:isDefinedBy schema:dateCreated .
 
 schema:datePublished a owl:DatatypeProperty ;
     rdfs:label "datePublished"@en ;
     rdfs:comment "Date of first broadcast/publication."@en ;
-    rdfs:domain ns4:Resource ;
+    rdfs:domain ns2:Resource ;
     rdfs:isDefinedBy schema:datePublished .
 
 schema:free a owl:DatatypeProperty ;
@@ -1048,7 +1048,7 @@ schema:free a owl:DatatypeProperty ;
 schema:operatingSystem a owl:ObjectProperty ;
     rdfs:label "operatingSystem"@en ;
     rdfs:comment "Operating systems supported (Windows 7, OS X 10.6, Android 1.6)."@en ;
-    rdfs:domain ns4:Software ;
+    rdfs:domain ns2:Software ;
     rdfs:isDefinedBy schema:operatingSystem ;
     rdfs:range <http://www.ebi.ac.uk/swo/SWO_0000021> .
 
@@ -1073,7 +1073,7 @@ schema:sponsor a owl:ObjectProperty ;
 <https://w3id.org/seo#InvitedSpeakers> a owl:Class ;
     rdfs:label "Invited speakers"@en ;
     rdfs:comment "Invited person to give a speech in an event."@en ;
-    rdfs:subClassOf ns4:Person .
+    rdfs:subClassOf ns2:Person .
 
 <https://w3id.org/skgo/modsci#ModernScience> a owl:Class ;
     rdfs:label "Science" ;
@@ -1095,16 +1095,16 @@ schema:sponsor a owl:ObjectProperty ;
 <https://w3id.org/skgo/modsci#isManufacturerOf> a owl:ObjectProperty ;
     rdfs:label "is manufacturer of"@en .
 
-ns4:Dataset a owl:Class ;
+ns2:Dataset a owl:Class ;
     rdfs:label "dataset"@en ;
     rdfs:comment "A dataset is associated with a structured information about a resource."@en ;
     rdfs:subClassOf <http://schema.org/CreativeWork> .
 
-ns4:funder a owl:ObjectProperty ;
+ns2:funder a owl:ObjectProperty ;
     rdfs:label "funder"@en ;
     rdfs:comment "The property relates a thing to an organisation or a project that provided funding for it. The sub-properties are used to specify more specific funding relationships. "@en ;
     rdfs:domain owl:Thing ;
-    owl:inverseOf ns4:funderOf .
+    owl:inverseOf ns2:funderOf .
 
 <http://purls.helmholtz-metadaten.de/mwo/ContactPoint> a owl:Class ;
     rdfs:label "contact point"@en ;
@@ -1126,12 +1126,12 @@ ns4:funder a owl:ObjectProperty ;
     ns3:hasBroadSynonym "Research area"@en ;
     ns3:hasExactSynonym "Research field"@en,
         "Research subject"@en ;
-    rdfs:subClassOf ns4:AcademicDiscipline .
+    rdfs:subClassOf ns2:AcademicDiscipline .
 
 <http://purls.helmholtz-metadaten.de/mwo/SemanticResource> a owl:Class ;
     rdfs:label "semantic resource" ;
     ns1:IAO_0000115 "A machine-actionable controlled vocabularies to describe the meaning of the content and express relations among them."@en ;
-    rdfs:subClassOf ns4:Resource .
+    rdfs:subClassOf ns2:Resource .
 
 <http://purls.helmholtz-metadaten.de/mwo/SparqlEndpoint> a owl:Class ;
     rdfs:label "SPARQL endpoint"@en ;
@@ -1141,7 +1141,7 @@ ns4:funder a owl:ObjectProperty ;
 <http://purls.helmholtz-metadaten.de/mwo/Workflow> a owl:Class ;
     rdfs:label "workflow"@en ;
     ns1:IAO_0000115 "A workflow is a specification which describes a repeatable sequence of steps needed to create or produce a work."@en ;
-    rdfs:subClassOf ns4:Specification .
+    rdfs:subClassOf ns2:Specification .
 
 <http://schema.org/ComputerLanguage> a owl:Class ;
     rdfs:label "ComputerLanguage"@en ;
@@ -1156,9 +1156,9 @@ ns4:funder a owl:ObjectProperty ;
 schema:citation a owl:ObjectProperty ;
     rdfs:label "citation"@en ;
     rdfs:comment "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."@en ;
-    rdfs:domain ns4:Resource ;
+    rdfs:domain ns2:Resource ;
     rdfs:isDefinedBy schema:citation ;
-    rdfs:range ns4:Resource .
+    rdfs:range ns2:Resource .
 
 <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#isPartOf> a owl:ObjectProperty ;
     rdfs:label "is part of"@en ;
@@ -1170,23 +1170,23 @@ schema:citation a owl:ObjectProperty ;
     rdfs:subClassOf <https://w3id.org/skgo/modsci#Instrument> ;
     skos:prefLabel "Instrument"@en .
 
-ns4:AcademicDiscipline a owl:Class ;
+ns2:AcademicDiscipline a owl:Class ;
     rdfs:label "academic discipline"@en ;
-    ns4:example <https://www.wikidata.org/entity/Q12271>,
+    ns2:example <https://www.wikidata.org/entity/Q12271>,
         "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en ;
     rdfs:comment "An academic discipline, a research field or domain of a resource, e.g. a data portal or a field of study of a person."@en ;
     rdfs:subClassOf <https://w3id.org/skgo/modsci#ModernScience> .
 
-ns4:Software a owl:Class ;
+ns2:Software a owl:Class ;
     rdfs:label "software"@en ;
-    ns4:example "Edirom, Muscat" ;
+    ns2:example "Edirom, Muscat" ;
     rdfs:comment "A computer software provided by an organisation or a person."@en ;
     rdfs:subClassOf <http://schema.org/Product> ;
     owl:equivalentClass <http://www.ebi.ac.uk/swo/SWO_0000001> .
 
-ns4:TaskArea a owl:Class .
+ns2:TaskArea a owl:Class .
 
-ns4:funderOf a owl:ObjectProperty ;
+ns2:funderOf a owl:ObjectProperty ;
     rdfs:label "funder of"@en .
 
 <http://purls.helmholtz-metadaten.de/mwo/Database> a owl:Class ;
@@ -1206,14 +1206,14 @@ ns4:funderOf a owl:ObjectProperty ;
     rdfs:label "software interface" ;
     ns1:IAO_0000115 "The mode of interaction with a piece of software." .
 
-ns2:Project a owl:Class ;
+ns4:Project a owl:Class ;
     rdfs:label "project"@en ;
     rdfs:comment "A scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
-    ns2:example "Freischütz digital, Corpus Vitrearum Medii Aevi" .
+    ns4:example "Freischütz digital, Corpus Vitrearum Medii Aevi" .
 
-ns4:Place a owl:Class ;
+ns2:Place a owl:Class ;
     rdfs:label "place"@en ;
-    ns4:example "Hessen, Berlin, Schweiz" ;
+    ns2:example "Hessen, Berlin, Schweiz" ;
     rdfs:comment "A spatial region, e.g. country, city or district."@en .
 
 <http://purls.helmholtz-metadaten.de/mwo/EducationalEvent> a owl:Class ;
@@ -1224,7 +1224,7 @@ ns4:Place a owl:Class ;
 <http://purls.helmholtz-metadaten.de/mwo/hasPersonalInformation> a owl:DatatypeProperty ;
     rdfs:label "has personal information"@en ;
     ns1:IAO_0000115 "A data property linking a person with information about that person."@en ;
-    rdfs:domain ns4:Person .
+    rdfs:domain ns2:Person .
 
 <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> a owl:Class ;
     rdfs:label "Academic event"@en ;
@@ -1241,15 +1241,15 @@ ns4:Place a owl:Class ;
     ns1:IAO_0000115 "An operating system is a piece of software which is responsible for managing software that runs on a computer and the interactions of that software with the hardware and system resources." ;
     rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000001> .
 
-ns4:Project a owl:Class ;
+ns2:Project a owl:Class ;
     rdfs:label "project"@en ;
-    ns4:example "Freisch\\u00fctz digital, Corpus Vitrearum Medii Aevi" ;
+    ns2:example "Freisch\\u00fctz digital, Corpus Vitrearum Medii Aevi" ;
     rdfs:comment "A scientific or business endeavour that aims to conclude an investigation or to answer a research question."@en ;
     owl:equivalentClass <http://schema.org/Project> .
 
-ns4:Specification a owl:Class ;
+ns2:Specification a owl:Class ;
     rdfs:label "specification"@en ;
-    ns4:example "RDF, SPARQL, Federation" ;
+    ns2:example "RDF, SPARQL, Federation" ;
     rdfs:comment "A set of requirements, guidelines, standards contributed by an organisation or a person."@en ;
     rdfs:subClassOf <http://schema.org/Product> .
 
@@ -1258,10 +1258,10 @@ ns4:Specification a owl:Class ;
     rdfs:comment "A tool or implement, especially one for precision work."@en ;
     rdfs:subClassOf <http://schema.org/Product> .
 
-ns2:Organization a owl:Class ;
+ns4:Organization a owl:Class ;
     rdfs:label "organization"@en ;
     rdfs:comment "An organization of some kind, e.g. research organization or business organization"@en ;
-    ns2:example "Univerity Library in Leipzig, Museums of City Cologne" .
+    ns4:example "Univerity Library in Leipzig, Museums of City Cologne" .
 
 ns1:BFO_0000023 a owl:Class ;
     rdfs:label "role"@en ;
@@ -1288,15 +1288,15 @@ ns1:BFO_0000023 a owl:Class ;
 owl:Thing a owl:Class ;
     rdfs:label "Thing" .
 
-ns4:Organization a owl:Class ;
+ns2:Organization a owl:Class ;
     rdfs:label "organization"@en ;
-    ns4:example "Universit\\u00e4tsbibliothek Leipzig, S\\u00e4chsisches Wirtschaftsarchiv, Museen der Stadt K\\u00f6ln" ;
+    ns2:example "Universit\\u00e4tsbibliothek Leipzig, S\\u00e4chsisches Wirtschaftsarchiv, Museen der Stadt K\\u00f6ln" ;
     rdfs:comment "An organisation of some kind, e.g. research organisation or business organisation"@en ;
     owl:equivalentClass <http://schema.org/Organization> .
 
-ns4:Person a owl:Class ;
+ns2:Person a owl:Class ;
     rdfs:label "person"@en ;
-    ns4:example "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" ;
+    ns2:example "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" ;
     rdfs:comment "A resource that represents a single person."@en ;
     owl:equivalentClass <http://schema.org/Person> .
 
@@ -1315,7 +1315,7 @@ ns4:Person a owl:Class ;
     ns1:IAO_0000119 "Modified from http://en.wikipedia.org/wiki/Software_license" ;
     dcterms:creator "James Malone" .
 
-ns4:Resource a owl:Class ;
+ns2:Resource a owl:Class ;
     rdfs:label "resource"@en ;
     rdfs:comment "The most generic kind of a resource and may be associated with any kind of creative work, e.g. datasets, books, movies, photographs; offered products and services, e.g. data portals, data curation, data digitization; and intangible things, e.g. subjects of creative works, topics of events, offers, a list of enumerations."@en .
 
