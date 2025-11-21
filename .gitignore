@@ -29,6 +29,7 @@ Thumbs.db
 *.tmp
 *.bak
 /data/zenodo/download/
+/data/reasoned/*.owl
 
 # Ignore documentation and site builds
 /site/
