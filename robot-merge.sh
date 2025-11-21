@@ -7,12 +7,9 @@ SRC=ontology/mwo-full.owl
 ONTBASE=https://nfdi.fiz-karlsruhe.de/ontology
 
 mkdir -p "$VALIDATIONSDIR"
-rm -f "$COMPONENTSDIR/all_NotReasoned.owl" \
-      "$COMPONENTSDIR/all_NotReasoned.ttl" \
-      "$COMPONENTSDIR/all.ttl" \
-      "$VALIDATIONSDIR/inconsistency.md" \
-      "$VALIDATIONSDIR/inconsistency_mwo.md" \
-      "$VALIDATIONSDIR/inconsistency_hermit.md"
+rm -f "$COMPONENTSDIR/*.owl" \
+      "$COMPONENTSDIR/*.ttl" \
+      "$VALIDATIONSDIR/*.md"
 
 echo "Reasoning ontology (TBox) with Hermit"
 robot reason \
