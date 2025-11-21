@@ -1,0 +1,4 @@
+SELECT (COUNT(*) AS ?triple_count)
+WHERE {
+  ?s ?p ?o .
+}

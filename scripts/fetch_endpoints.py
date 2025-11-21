@@ -40,7 +40,7 @@ MWO_OWL_PATH = os.environ.get("MWO_OWL_PATH", "ontology/mwo-full.owl")
 REQUEST_TIMEOUT = int(os.environ.get("REQUEST_TIMEOUT", "30"))
 
 STATE_JSON   = os.environ.get("STATE_JSON", "data/sparql_endpoints/sparql_sources.json")
-ALL_TTL      = os.environ.get("ALL_TTL", "data/all.ttl")
+ALL_TTL      = os.environ.get("ALL_TTL", "data/all_NotReasoned.ttl")
 SUMMARY_JSON = os.environ.get("SUMMARY_JSON", "data/sparql_endpoints/sparql_sources_list.json")
 STATS_TTL    = os.environ.get("STATS_TTL", "data/sparql_endpoints/dataset_stats.ttl")
 
@@ -374,7 +374,7 @@ WHERE {
 """
 
 
-# ------------------ Discovery from all.ttl ------------------
+# ------------------ Discovery from all_NotReasoned.ttl ------------------
 def discover_from_all_ttl(all_ttl_path: str):
     g = Graph()
     g.parse(all_ttl_path, format="turtle")
@@ -547,7 +547,7 @@ def main():
     # Discover endpoints/datasets
     g_all, discovered = discover_from_all_ttl(ALL_TTL)
     if not discovered:
-        print("No SPARQL endpoints found in all.ttl.")
+        print("No SPARQL endpoints found in all_NotReasoned.ttl.")
         return
 
     # Load MWO terms for reuse stats (counts only)
@@ -734,7 +734,7 @@ def main():
     for triple in stats:
         g_all.add(triple)
 
-    # Save unified graph as both all.ttl and stats.ttl (if you want separate copies)
+    # Save unified graph as both all_NotReasoned.ttl and stats.ttl (if you want separate copies)
     ensure_parent(ALL_TTL)
     safe_overwrite_ttl(ALL_TTL, g_all)
 

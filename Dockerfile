@@ -14,7 +14,7 @@ RUN set -eux; \
     rm -rf /var/lib/apt/lists/*
 
 
-ENV ROBOT_JAVA_ARGS="-Xmx8G -Dfile.encoding=UTF-8"
+ENV ROBOT_JAVA_ARGS="-Xmx16G -Dfile.encoding=UTF-8"
 WORKDIR /app
 
 # Install Python deps (cached layer)
@@ -34,16 +34,21 @@ COPY . /app
 RUN python -m scripts.zenodo.export_zenodo --make-snapshots --out data/zenodo/zenodo.ttl && python ./scripts/fetch_zenodo.py
 
 
-RUN chmod +x /app/1st-kg.sh /app/2nd-merge-all.sh \
- && ./1st-kg.sh \
- && ./2nd-merge-all.sh \
- && test -s data/all.ttl
+RUN chmod +x /app/robot-download.sh /app/robot-merge.sh \
+ && ./robot-download.sh \
+ && ./robot-merge.sh \
+ && test -s data/all_NotReasoned.ttl
 
 # endpoint fetch at build time
 RUN chmod +x /app/scripts/fetch_endpoints.py \
  && python /app/scripts/fetch_endpoints.py
 
-# Copy a predictable artifact
+# reason the knowledge graph
+RUN chmod +x /app/robot-reaon.sh\
+ && ./robot-reaon.sh \
+ && test -s data/all.ttl
+
+ # Copy a predictable artifact
 RUN mkdir -p /data && cp data/all.ttl /data/ontology.ttl
 
 # Generate docs
