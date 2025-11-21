@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xml:base="http://purls.helmholtz-metadaten.de/mwo/mwo.owl"
+<rdf:RDF xmlns="http://purls.helmholtz-metadaten.de/mwo/mwo.owl#"
+     xml:base="http://purls.helmholtz-metadaten.de/mwo/mwo.owl"
      xmlns:dce="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
