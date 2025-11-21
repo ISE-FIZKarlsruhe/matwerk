@@ -50,7 +50,9 @@
     "8065751": "https://purls.helmholtz-metadaten.de/msekg/1759767769043",
     "11224126": "https://purls.helmholtz-metadaten.de/msekg/1759767916972",
     "4047773": "https://purls.helmholtz-metadaten.de/msekg/1759767918217",
-    "5000610": "https://purls.helmholtz-metadaten.de/msekg/1759767937740"
+    "5000610": "https://purls.helmholtz-metadaten.de/msekg/1759767937740",
+    "17533124": "https://purls.helmholtz-metadaten.de/msekg/1763729383621",
+    "10566836": "https://purls.helmholtz-metadaten.de/msekg/1763729383640"
   },
   "nodes": {
     "16753542": [
@@ -205,6 +207,12 @@
     ],
     "5000610": [
       "https://purls.helmholtz-metadaten.de/msekg/1759767937741"
+    ],
+    "17533124": [
+      "https://purls.helmholtz-metadaten.de/msekg/1763729383622"
+    ],
+    "10566836": [
+      "https://purls.helmholtz-metadaten.de/msekg/1763729383641"
     ]
   },
   "file_graphs": {
@@ -436,7 +444,11 @@
     "5000610|AQ4_5kV_sp-5_A-3_SE_4K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937789",
     "5000610|AQ4_5kV_sp-5_A-4_SE_1K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937790",
     "5106605|BCR-425_report_Characterization.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759767951480",
-    "5106605|Inhalt_Content_V1.1.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759767951492"
+    "5106605|Inhalt_Content_V1.1.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759767951492",
+    "17533124|Towards FAIRness using an Interoperable Research Data-RDA-2025.pdf": "https://purls.helmholtz-metadaten.de/msekg/1763729383623",
+    "10566836|Poster_DataStewardship_DSGG_2024.pdf": "https://purls.helmholtz-metadaten.de/msekg/1763729383642",
+    "10566836|Datasteardship Workflow -NFDIMatWerk.png": "https://purls.helmholtz-metadaten.de/msekg/1763729384935",
+    "10566836|123.png": "https://purls.helmholtz-metadaten.de/msekg/1763729384936"
   },
   "graphs": {},
   "by_record": {

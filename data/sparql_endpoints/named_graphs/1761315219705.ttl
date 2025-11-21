@@ -1745,6 +1745,275 @@
 <http://orkg.org/orkg/class/C123027> a owl:Class ;
     rdfs:label "thermometer"^^xsd:string .
 
+<http://orkg.org/orkg/class/C123028> a owl:Class ;
+    rdfs:label "drought stress"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123029> a owl:Class ;
+    rdfs:label "Drought Stress Experimental - Climate Condition [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123030> a owl:Class ;
+    rdfs:label "radiometer"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123031> a owl:Class ;
+    rdfs:label "Drought Stress Result [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123032> a owl:Class ;
+    rdfs:label "Disease (MONDO)"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123033> a owl:Class ;
+    rdfs:label "software framework"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123034> a owl:Class ;
+    rdfs:label "Class of disease"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123035> a owl:Class ;
+    rdfs:label "class of disease"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123036> a owl:Class ;
+    rdfs:label "USDA"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123037> a owl:Class ;
+    rdfs:label "machine translation"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123038> a owl:Class ;
+    rdfs:label "multimodal learning"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123039> a owl:Class ;
+    rdfs:label "text analysis"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123040> a owl:Class ;
+    rdfs:label "image captioning"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123041> a owl:Class ;
+    rdfs:label "code generation"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123042> a owl:Class ;
+    rdfs:label "automatic summarization"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123043> a owl:Class ;
+    rdfs:label "reduction of complexity"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123044> a owl:Class ;
+    rdfs:label "retrieval-augmented generation"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123045> a owl:Class ;
+    rdfs:label "Pyranometer"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123046> a owl:Class ;
+    rdfs:label "autoencoder"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123047> a owl:Class ;
+    rdfs:label "decision tree"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123048> a owl:Class ;
+    rdfs:label "rule-based system"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123049> a owl:Class ;
+    rdfs:label "statistical analysis plan"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123050> a owl:Class ;
+    rdfs:label "retraining"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123051> a owl:Class ;
+    rdfs:label "multilayer perceptron"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123052> a owl:Class ;
+    rdfs:label "support vector machine"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123053> a owl:Class ;
+    rdfs:label "variational auto-encoder"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123054> a owl:Class ;
+    rdfs:label "one-class classification"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123055> a owl:Class ;
+    rdfs:label "long short-term memory"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123056> a owl:Class ;
+    rdfs:label "oversampling"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123057> a owl:Class ;
+    rdfs:label "undersampling"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123058> a owl:Class ;
+    rdfs:label "specificity"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123059> a owl:Class ;
+    rdfs:label "sensitivity"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123060> a owl:Class ;
+    rdfs:label "loss function"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123061> a owl:Class ;
+    rdfs:label "confusion matrix"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123062> a owl:Class ;
+    rdfs:label "false positive"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123063> a owl:Class ;
+    rdfs:label "false negative"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123064> a owl:Class ;
+    rdfs:label "atmospheric pressure"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123065> a owl:Class ;
+    rdfs:label "latitude"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123066> a owl:Class ;
+    rdfs:label "ensemble learning"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123067> a owl:Class ;
+    rdfs:label "embedding model"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123068> a owl:Class ;
+    rdfs:label "digital twin"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123069> a owl:Class ;
+    rdfs:label "deep neural network"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123070> a owl:Class ;
+    rdfs:label "gated recurrent unit"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123071> a owl:Class ;
+    rdfs:label "Kolmogorov-Arnold Networks"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123072> a owl:Class ;
+    rdfs:label "Bayesian optimization"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123073> a owl:Class ;
+    rdfs:label "Parzen-Tree Estimator"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123074> a owl:Class ;
+    rdfs:label "hidden Markov model"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123075> a owl:Class ;
+    rdfs:label "federated learning"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123076> a owl:Class ;
+    rdfs:label "generative adversarial network"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123077> a owl:Class ;
+    rdfs:label "detection"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123078> a owl:Class ;
+    rdfs:label "anomaly detection"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123079> a owl:Class ;
+    rdfs:label "advocacy group"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123080> a owl:Class ;
+    rdfs:label "theoretical framework"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123081> a owl:Class ;
+    rdfs:label "network analysis"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123082> a owl:Class ;
+    rdfs:label "public"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123083> a owl:Class ;
+    rdfs:label "Linear Regression (Parameters) [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123084> a owl:Class ;
+    rdfs:label "settling time"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123085> a owl:Class ;
+    rdfs:label "continual learning"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123086> a owl:Class ;
+    rdfs:label "self-supervised learning"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123087> a owl:Class ;
+    rdfs:label "flowering stage"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123088> a owl:Class ;
+    rdfs:label "Dish"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C34019> .
+
+<http://orkg.org/orkg/class/C123089> a owl:Class ;
+    rdfs:label "NFDIxCS Versioning Schema [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123090> a owl:Class ;
+    rdfs:label "unique identifier"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123093> a owl:Class ;
+    rdfs:label "Child Nutrition Disorders"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123092> .
+
+<http://orkg.org/orkg/class/C123094> a owl:Class ;
+    rdfs:label "Hypervitaminosis A"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123092> .
+
+<http://orkg.org/orkg/class/C123096> a owl:Class ;
+    rdfs:label "Vitamin K Deficiency Bleeding"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123095> .
+
+<http://orkg.org/orkg/class/C123101> a owl:Class ;
+    rdfs:label "Scurvy"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123100> .
+
+<http://orkg.org/orkg/class/C123102> a owl:Class ;
+    rdfs:label "Vitamin A Deficiency"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123099> .
+
+<http://orkg.org/orkg/class/C123103> a owl:Class ;
+    rdfs:label "Vitamin B Deficiency"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123099> .
+
+<http://orkg.org/orkg/class/C123104> a owl:Class ;
+    rdfs:label "Vitamin D Deficiency"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123099> .
+
+<http://orkg.org/orkg/class/C123105> a owl:Class ;
+    rdfs:label "Vitamin E Deficiency"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123099> .
+
+<http://orkg.org/orkg/class/C123106> a owl:Class ;
+    rdfs:label "Vitamin K Deficiency"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123099> .
+
+<http://orkg.org/orkg/class/C123107> a owl:Class ;
+    rdfs:label "Magnesium Deficiency"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> .
+
+<http://orkg.org/orkg/class/C123108> a owl:Class ;
+    rdfs:label "Potassium Deficiency"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> .
+
+<http://orkg.org/orkg/class/C123109> a owl:Class ;
+    rdfs:label "Protein Deficiency"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> .
+
+<http://orkg.org/orkg/class/C123110> a owl:Class ;
+    rdfs:label "Swayback"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> .
+
+<http://orkg.org/orkg/class/C123111> a owl:Class ;
+    rdfs:label "Fetal Nutrition Disorders"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> .
+
+<http://orkg.org/orkg/class/C123112> a owl:Class ;
+    rdfs:label "Refeeding Syndrome"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> .
+
+<http://orkg.org/orkg/class/C123114> a owl:Class ;
+    rdfs:label "Kwashiorkor"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123113> .
+
+<http://orkg.org/orkg/class/C123115> a owl:Class ;
+    rdfs:label "Starvation"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123097> .
+
+<http://orkg.org/orkg/class/C123116> a owl:Class ;
+    rdfs:label "Overnutrition"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123092> .
+
+<http://orkg.org/orkg/class/C123117> a owl:Class ;
+    rdfs:label "Marasmus"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> .
+
+<http://orkg.org/orkg/class/C123118> a owl:Class ;
+    rdfs:label "NFDIxCS Joint-structure [C]"^^xsd:string .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string .
 
@@ -7633,7 +7902,7 @@
     rdfs:label "Postscript"^^xsd:string .
 
 <http://orkg.org/orkg/class/Predicates> a owl:Class ;
-    rdfs:label "Predicate"^^xsd:string .
+    rdfs:label "Property"^^xsd:string .
 
 <http://orkg.org/orkg/class/Problem> a owl:Class ;
     rdfs:label "Problem"^^xsd:string .
@@ -7791,6 +8060,21 @@ owl:Nothing a owl:Class ;
 owl:Thing a owl:Class ;
     rdfs:label "Thing" .
 
+<http://orkg.org/orkg/class/C123091> a owl:Class ;
+    rdfs:label "Nutritional and Metabolic Diseases"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123095> a owl:Class ;
+    rdfs:label "Infant Nutrition Disorders"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123092> .
+
+<http://orkg.org/orkg/class/C123100> a owl:Class ;
+    rdfs:label "Ascorbic Acid Deficiency"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123099> .
+
+<http://orkg.org/orkg/class/C123113> a owl:Class ;
+    rdfs:label "Severe Acute Malnutrition"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123097> .
+
 <http://orkg.org/orkg/class/C28006> a owl:Class ;
     rdfs:label "hypothesis testing"^^xsd:string .
 
@@ -7809,6 +8093,10 @@ owl:Thing a owl:Class ;
     rdfs:label "Micronutrient"^^xsd:string ;
     rdfs:subClassOf <http://orkg.org/orkg/class/C77020> .
 
+<http://orkg.org/orkg/class/C123097> a owl:Class ;
+    rdfs:label "Malnutrition"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123092> .
+
 <http://orkg.org/orkg/class/C77023> a owl:Class ;
     rdfs:label "Macronutrient"^^xsd:string ;
     rdfs:subClassOf <http://orkg.org/orkg/class/C77020> .
@@ -7816,12 +8104,24 @@ owl:Thing a owl:Class ;
 <http://orkg.org/orkg/class/C34009> a owl:Class ;
     rdfs:label "Food component"^^xsd:string .
 
+<http://orkg.org/orkg/class/C123092> a owl:Class ;
+    rdfs:label "Nutrition Disorders"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123091> .
+
+<http://orkg.org/orkg/class/C123099> a owl:Class ;
+    rdfs:label "Avitaminosis"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> .
+
 <http://orkg.org/orkg/class/C34019> a owl:Class ;
     rdfs:label "Food"^^xsd:string .
 
 <http://orkg.org/orkg/class/C77000> a owl:Class ;
     rdfs:label "Beverage"^^xsd:string ;
     rdfs:subClassOf <http://orkg.org/orkg/class/C34019> .
+
+<http://orkg.org/orkg/class/C123098> a owl:Class ;
+    rdfs:label "Deficiency Diseases"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123097> .
 
 <http://orkg.org/orkg/class/C58031> a owl:Class ;
     rdfs:label "Pattern"^^xsd:string .

@@ -241,6 +241,18 @@
     obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1758983993314> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1758983993313> .
 
+<https://purls.helmholtz-metadaten.de/msekg/1763729383621> a nfdi:NFDI_0000009 ;
+    rdfs:label "https://zenodo.org/records/17533124" ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1763729383623> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1763729383622> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1763729383640> a nfdi:NFDI_0000009 ;
+    rdfs:label "https://zenodo.org/records/10566836" ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1763729383642>,
+        <https://purls.helmholtz-metadaten.de/msekg/1763729384935>,
+        <https://purls.helmholtz-metadaten.de/msekg/1763729384936> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1763729383641> .
+
 <https://purls.helmholtz-metadaten.de/msekg/1758983993018> rdfs:label "NFDI-MatWerk Renewal Proposal Part B-1",
         "NFDI-MatWerk Renewal Proposal Part B-1 updated version" ;
     obo:OBI_0002135 "NFDI-MatWerk Renewal Proposal Part B-1",
@@ -1118,4 +1130,40 @@
     rdfs:seeAlso <https://doi.org/10.5445/IR/1000151569> ;
     nfdi:NFDI_0001006 <10.5445/IR/1000151569>,
         <https://zenodo.org/api/records/7227714/files/FAIR.DO.Commons.27Sep22.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1763729383622> rdfs:label "Towards FAIRness using an Interoperable Research Data Architecture Developed within NFDI-MatWerk - RDA 2025" ;
+    obo:OBI_0002135 "Towards FAIRness using an Interoperable Research Data Architecture Developed within NFDI-MatWerk - RDA 2025" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1763729383623> rdfs:label "Towards FAIRness using an Interoperable Research Data-RDA-2025.pdf" ;
+    obo:OBI_0002135 "Towards FAIRness using an Interoperable Research Data Architecture Developed within NFDI-MatWerk - RDA 2025" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17533125> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17533125> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17533125>,
+        <https://zenodo.org/api/records/17533125/files/Towards%20FAIRness%20using%20an%20Interoperable%20Research%20Data-RDA-2025.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1763729383641> rdfs:label "Data Steward's Workflow in NFDI-MatWerk",
+        "Effective Data Stewardship in NFDI-MatWerk" ;
+    obo:OBI_0002135 "Data Steward's Workflow in NFDI-MatWerk",
+        "Effective Data Stewardship in NFDI-MatWerk" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1763729383642> rdfs:label "Poster_DataStewardship_DSGG_2024.pdf" ;
+    obo:OBI_0002135 "Data Steward's Workflow in NFDI-MatWerk" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.14012860> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.14012860> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.14012860>,
+        <https://zenodo.org/api/records/14012860/files/Poster_DataStewardship_DSGG_2024.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1763729384935> rdfs:label "Datasteardship Workflow -NFDIMatWerk.png" ;
+    obo:OBI_0002135 "Effective Data Stewardship in NFDI-MatWerk" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10794162> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10794162> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.10794162>,
+        <https://zenodo.org/api/records/10794162/files/Datasteardship%20Workflow%20-NFDIMatWerk.png/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1763729384936> rdfs:label "123.png" ;
+    obo:OBI_0002135 "Effective Data Stewardship in NFDI-MatWerk" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10566837> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10566837> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.10566837>,
+        <https://zenodo.org/api/records/10566837/files/123.png/content> .
 

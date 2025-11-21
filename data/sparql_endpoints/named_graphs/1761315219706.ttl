@@ -2287,6 +2287,432 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description "device that measures temperature or a temperature gradient"^^xsd:string ;
     owl:equivalentClass <https://www.wikidata.org/entity/Q646> .
 
+<http://orkg.org/orkg/class/C123028> a owl:Class ;
+    rdfs:label "drought stress"^^xsd:string ;
+    ns1:description "abiotic stress caused by lack of water"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q110377053> .
+
+<http://orkg.org/orkg/class/C123029> a owl:Class ;
+    rdfs:label "Drought Stress Experimental - Climate Condition [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123030> a owl:Class ;
+    rdfs:label "radiometer"^^xsd:string ;
+    ns1:description "device for measuring the radiant flux (power) of electromagnetic radiation"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q850281> .
+
+<http://orkg.org/orkg/class/C123031> a owl:Class ;
+    rdfs:label "Drought Stress Result [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123032> a owl:Class ;
+    rdfs:label "Disease (MONDO)"^^xsd:string ;
+    ns1:description "The class of disease entities as defined in the MONDO ontology."^^xsd:string ;
+    owl:equivalentClass <https://www.ebi.ac.uk/ols4/ontologies/mondo/classes/http%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FMONDO_0000001> .
+
+<http://orkg.org/orkg/class/C123033> a owl:Class ;
+    rdfs:label "software framework"^^xsd:string ;
+    ns1:description "type of library that helps structure other software"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q271680> .
+
+<http://orkg.org/orkg/class/C123034> a owl:Class ;
+    rdfs:label "Class of disease"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/wiki/Q112193867> .
+
+<http://orkg.org/orkg/class/C123035> a owl:Class ;
+    rdfs:label "class of disease"^^xsd:string ;
+    ns1:description "disease as a first-order metaclass. To be used as P31 values for all disease classes. Its instances are classes (e.g., cancer)"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q112193867> .
+
+<http://orkg.org/orkg/class/C123036> a owl:Class ;
+    rdfs:label "USDA"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123037> a owl:Class ;
+    rdfs:label "machine translation"^^xsd:string ;
+    ns1:description "use of software for language translation"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q79798> .
+
+<http://orkg.org/orkg/class/C123038> a owl:Class ;
+    rdfs:label "multimodal learning"^^xsd:string ;
+    ns1:description "machine learning combining different information resources, such as images and text"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q25052564> .
+
+<http://orkg.org/orkg/class/C123039> a owl:Class ;
+    rdfs:label "text analysis"^^xsd:string ;
+    ns1:description "structured analysis of text and context"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q67224805> .
+
+<http://orkg.org/orkg/class/C123040> a owl:Class ;
+    rdfs:label "image captioning"^^xsd:string ;
+    ns1:description ""^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q39161486> .
+
+<http://orkg.org/orkg/class/C123041> a owl:Class ;
+    rdfs:label "code generation"^^xsd:string ;
+    ns1:description "process by which a compiler's code generator converts some intermediate representation of source code into a form that can be readily executed by a machine"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1061077> .
+
+<http://orkg.org/orkg/class/C123042> a owl:Class ;
+    rdfs:label "automatic summarization"^^xsd:string ;
+    ns1:description "computer-based method for shortening a text"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1394144> .
+
+<http://orkg.org/orkg/class/C123043> a owl:Class ;
+    rdfs:label "reduction of complexity"^^xsd:string ;
+    ns1:description "type of social process"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q123477586> .
+
+<http://orkg.org/orkg/class/C123044> a owl:Class ;
+    rdfs:label "retrieval-augmented generation"^^xsd:string ;
+    ns1:description "language generation model"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q121362277> .
+
+<http://orkg.org/orkg/class/C123045> a owl:Class ;
+    rdfs:label "Pyranometer"^^xsd:string ;
+    ns1:description "meteorological instrumentation to measure the solar radiation flux density"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q653486> .
+
+<http://orkg.org/orkg/class/C123046> a owl:Class ;
+    rdfs:label "autoencoder"^^xsd:string ;
+    ns1:description "neural network that learns efficient data encoding in an unsupervised manner"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q786435> .
+
+<http://orkg.org/orkg/class/C123047> a owl:Class ;
+    rdfs:label "decision tree"^^xsd:string ;
+    ns1:description "decision support tool"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q831366> .
+
+<http://orkg.org/orkg/class/C123048> a owl:Class ;
+    rdfs:label "rule-based system"^^xsd:string ;
+    ns1:description "curated rule set to store and manipulate knowledge and interpret information"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1417149> .
+
+<http://orkg.org/orkg/class/C123049> a owl:Class ;
+    rdfs:label "statistical analysis plan"^^xsd:string ;
+    ns1:description "method for interpreting data"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q107295191> .
+
+<http://orkg.org/orkg/class/C123050> a owl:Class ;
+    rdfs:label "retraining"^^xsd:string ;
+    ns1:description "the process of learning a new or the same old skill or trade"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q3505966> .
+
+<http://orkg.org/orkg/class/C123051> a owl:Class ;
+    rdfs:label "multilayer perceptron"^^xsd:string ;
+    ns1:description "type of feedforward neural network with multiple fully connected layers"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q2991667> .
+
+<http://orkg.org/orkg/class/C123052> a owl:Class ;
+    rdfs:label "support vector machine"^^xsd:string ;
+    ns1:description "set of methods for supervised statistical learning"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q282453> .
+
+<http://orkg.org/orkg/class/C123053> a owl:Class ;
+    rdfs:label "variational auto-encoder"^^xsd:string ;
+    ns1:description "deep learning generative model to encode data representation"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q97311562> .
+
+<http://orkg.org/orkg/class/C123054> a owl:Class ;
+    rdfs:label "one-class classification"^^xsd:string ;
+    ns1:description "unary classification"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q7092302> .
+
+<http://orkg.org/orkg/class/C123055> a owl:Class ;
+    rdfs:label "long short-term memory"^^xsd:string ;
+    ns1:description "artificial recurrent neural network architecture used in deep learning"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q6673524> .
+
+<http://orkg.org/orkg/class/C123056> a owl:Class ;
+    rdfs:label "oversampling"^^xsd:string ;
+    ns1:description "process of sampling a signal at a sampling frequency significantly higher than the Nyquist rate"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q331222> .
+
+<http://orkg.org/orkg/class/C123057> a owl:Class ;
+    rdfs:label "undersampling"^^xsd:string ;
+    ns1:description "process of sampling a signal at a sampling frequency lower than the Nyquist rate"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1225894> .
+
+<http://orkg.org/orkg/class/C123058> a owl:Class ;
+    rdfs:label "specificity"^^xsd:string ;
+    ns1:description "proportion of actual negatives that are correctly identified as such by a binary classification test"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q3494375> .
+
+<http://orkg.org/orkg/class/C123059> a owl:Class ;
+    rdfs:label "sensitivity"^^xsd:string ;
+    ns1:description "proportion of actual positives that are correctly identified as such by a binary classification test"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q6842789> .
+
+<http://orkg.org/orkg/class/C123060> a owl:Class ;
+    rdfs:label "loss function"^^xsd:string ;
+    ns1:description "in mathematical optimization, a function (to be minimized) representing the cost of each outcome"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1036748> .
+
+<http://orkg.org/orkg/class/C123061> a owl:Class ;
+    rdfs:label "confusion matrix"^^xsd:string ;
+    ns1:description "table layout for visualizing performance; also called an error matrix"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q2709591> .
+
+<http://orkg.org/orkg/class/C123062> a owl:Class ;
+    rdfs:label "false positive"^^xsd:string ;
+    ns1:description "positive test result that is inaccurate because negative is the correct answer"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q135550345> .
+
+<http://orkg.org/orkg/class/C123063> a owl:Class ;
+    rdfs:label "false negative"^^xsd:string ;
+    ns1:description "negative test result that is inaccurate because positive is the correct answer"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q135550331> .
+
+<http://orkg.org/orkg/class/C123064> a owl:Class ;
+    rdfs:label "atmospheric pressure"^^xsd:string ;
+    ns1:description "static pressure exerted by the weight of the atmosphere"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q81809> .
+
+<http://orkg.org/orkg/class/C123065> a owl:Class ;
+    rdfs:label "latitude"^^xsd:string ;
+    ns1:description "angle between zenith and a plane parallel to the equator"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q34027> .
+
+<http://orkg.org/orkg/class/C123066> a owl:Class ;
+    rdfs:label "ensemble learning"^^xsd:string ;
+    ns1:description "in machine learning, the use of multiple algorithms to obtain better predictive performance than from any of the constituent learning algorithms alone"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q245652> .
+
+<http://orkg.org/orkg/class/C123067> a owl:Class ;
+    rdfs:label "embedding model"^^xsd:string ;
+    ns1:description "type of artificial intelligence model"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q124045602> .
+
+<http://orkg.org/orkg/class/C123068> a owl:Class ;
+    rdfs:label "digital twin"^^xsd:string ;
+    ns1:description "digital replica of a living or non-living physical entity"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q25099680> .
+
+<http://orkg.org/orkg/class/C123069> a owl:Class ;
+    rdfs:label "deep neural network"^^xsd:string ;
+    ns1:description "artificial neural network with more than one hidden layer"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q51289900> .
+
+<http://orkg.org/orkg/class/C123070> a owl:Class ;
+    rdfs:label "gated recurrent unit"^^xsd:string ;
+    ns1:description "mechanisms in recurrent neural networks"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q25325415> .
+
+<http://orkg.org/orkg/class/C123071> a owl:Class ;
+    rdfs:label "Kolmogorov-Arnold Networks"^^xsd:string ;
+    ns1:description ""^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q136697096> .
+
+<http://orkg.org/orkg/class/C123072> a owl:Class ;
+    rdfs:label "Bayesian optimization"^^xsd:string ;
+    ns1:description "optimization technique for undifferentiable, black-box functions"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q17002908> .
+
+<http://orkg.org/orkg/class/C123073> a owl:Class ;
+    rdfs:label "Parzen-Tree Estimator"^^xsd:string ;
+    ns1:description ""^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q114627188> .
+
+<http://orkg.org/orkg/class/C123074> a owl:Class ;
+    rdfs:label "hidden Markov model"^^xsd:string ;
+    ns1:description "statistical Markov model"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q176769> .
+
+<http://orkg.org/orkg/class/C123075> a owl:Class ;
+    rdfs:label "federated learning"^^xsd:string ;
+    ns1:description "method for artificial intelligence"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q50818671> .
+
+<http://orkg.org/orkg/class/C123076> a owl:Class ;
+    rdfs:label "generative adversarial network"^^xsd:string ;
+    ns1:description "deep learning method in which two neural networks compete with each other in a game, learning to generate new data with the same statistics as the training set"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q25104379> .
+
+<http://orkg.org/orkg/class/C123077> a owl:Class ;
+    rdfs:label "detection"^^xsd:string ;
+    ns1:description "action of accessing information without specific cooperation from or synchronization with the sender"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q5720030> .
+
+<http://orkg.org/orkg/class/C123078> a owl:Class ;
+    rdfs:label "anomaly detection"^^xsd:string ;
+    ns1:description "The identification of rare items, events or observations which raise suspicions by differing significantly from the expected or majority of the data"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q3560506> .
+
+<http://orkg.org/orkg/class/C123079> a owl:Class ;
+    rdfs:label "advocacy group"^^xsd:string ;
+    ns1:description "groups using advocacy in order to influence public opinion and policy"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q431603> .
+
+<http://orkg.org/orkg/class/C123080> a owl:Class ;
+    rdfs:label "theoretical framework"^^xsd:string ;
+    ns1:description "structure that can hold or support a theory of a research study"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q114437798> .
+
+<http://orkg.org/orkg/class/C123081> a owl:Class ;
+    rdfs:label "network analysis"^^xsd:string ;
+    ns1:description "use of graph theory to solve network problems"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q4417999> .
+
+<http://orkg.org/orkg/class/C123082> a owl:Class ;
+    rdfs:label "public"^^xsd:string ;
+    ns1:description "grouping of individual people"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q2388316> .
+
+<http://orkg.org/orkg/class/C123083> a owl:Class ;
+    rdfs:label "Linear Regression (Parameters) [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123084> a owl:Class ;
+    rdfs:label "settling time"^^xsd:string ;
+    ns1:description "time required for the output of an amplifier to stabilize"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q3983320> .
+
+<http://orkg.org/orkg/class/C123085> a owl:Class ;
+    rdfs:label "continual learning"^^xsd:string ;
+    ns1:description "machine learning technique"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q114958157> .
+
+<http://orkg.org/orkg/class/C123086> a owl:Class ;
+    rdfs:label "self-supervised learning"^^xsd:string ;
+    ns1:description "class of machine learning techniques in which a task is solved based on pseudo-labels which help initialize weights the weight, then the actual task is performed with supervised or unsupervised learning"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q77562367> .
+
+<http://orkg.org/orkg/class/C123087> a owl:Class ;
+    rdfs:label "flowering stage"^^xsd:string ;
+    ns1:description "flower development stage that begins when pollen is released by anther dehiscence and/or the stigma is receptive and ends with the process of pollination and/or floral organ senescence"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q30513971> .
+
+<http://orkg.org/orkg/class/C123088> a owl:Class ;
+    rdfs:label "Dish"^^xsd:string ;
+    ns1:description "specific food preparation with cooking finished, and ready to eat, or be served"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C34019> ;
+    owl:equivalentClass <https://www.wikidata.org/wiki/Q746549> .
+
+<http://orkg.org/orkg/class/C123089> a owl:Class ;
+    rdfs:label "NFDIxCS Versioning Schema [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123090> a owl:Class ;
+    rdfs:label "unique identifier"^^xsd:string ;
+    ns1:description "identifier which is unique and permanent within a subset of space and time"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q6545185> .
+
+<http://orkg.org/orkg/class/C123093> a owl:Class ;
+    rdfs:label "Child Nutrition Disorders"^^xsd:string ;
+    ns1:description " Malnutrition occurring in children ages 2 to 12 years, which is due to insufficient intake of food, dietary nutrients, or a pathophysiologic condition which prevents the absorption and utilization of food. Growth and development are markedly affected. Disorders caused by nutritional imbalance, either overnutrition or undernutrition, occurring in children ages 2 to 12 years. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123092> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D015362> .
+
+<http://orkg.org/orkg/class/C123094> a owl:Class ;
+    rdfs:label "Hypervitaminosis A"^^xsd:string ;
+    ns1:description " A symptom complex resulting from ingesting excessive amounts of VITAMIN A. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123092> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D006986> .
+
+<http://orkg.org/orkg/class/C123096> a owl:Class ;
+    rdfs:label "Vitamin K Deficiency Bleeding"^^xsd:string ;
+    ns1:description " Hemorrhage caused by vitamin K deficiency. Neonatal nasogastric or intracranial hemorrhage caused by vitamin K deficiency. "^^xsd:string ;
+    ns1:hasSynonym "Hemorrhagic Disease of Newborn"^^xsd:string,
+        "Newborn Hemorrhagic Disease"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123095> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D006475> .
+
+<http://orkg.org/orkg/class/C123101> a owl:Class ;
+    rdfs:label "Scurvy"^^xsd:string ;
+    ns1:description " An acquired blood vessel disorder caused by severe deficiency of vitamin C (ASCORBIC ACID) in the diet leading to defective collagen formation in small blood vessels. Scurvy is characterized by bleeding in any tissue, weakness, ANEMIA, spongy gums, and a brawny induration of the muscles of the calves and legs. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123100> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D012614> .
+
+<http://orkg.org/orkg/class/C123102> a owl:Class ;
+    rdfs:label "Vitamin A Deficiency"^^xsd:string ;
+    ns1:description " A nutritional condition produced by a deficiency of VITAMIN A in the diet, characterized by NIGHT BLINDNESS and other ocular manifestations such as dryness of the conjunctiva and later of the cornea (XEROPHTHALMIA). Vitamin A deficiency is a very common problem worldwide, particularly in developing countries as a consequence of famine or shortages of vitamin A-rich foods. In the United States it is found among the urban poor, the elderly, alcoholics, and patients with malabsorption. (From Cecil Textbook of Medicine, 19th ed, p1179) "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123099> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D014802> .
+
+<http://orkg.org/orkg/class/C123103> a owl:Class ;
+    rdfs:label "Vitamin B Deficiency"^^xsd:string ;
+    ns1:description " A condition due to deficiency in any member of the VITAMIN B COMPLEX. These B vitamins are water-soluble and must be obtained from the diet because they are easily lost in the urine. Unlike the lipid-soluble vitamins, they cannot be stored in the body fat. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123099> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D014804> .
+
+<http://orkg.org/orkg/class/C123104> a owl:Class ;
+    rdfs:label "Vitamin D Deficiency"^^xsd:string ;
+    ns1:description "A nutritional condition produced by a deficiency of VITAMIN D in the diet, insufficient production of vitamin D in the skin, inadequate absorption of vitamin D from the diet, or abnormal conversion of vitamin D to its bioactive metabolites. It is manifested clinically as RICKETS in children and OSTEOMALACIA in adults. (From Cecil Textbook of Medicine, 19th ed, p1406)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123099> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D014808> .
+
+<http://orkg.org/orkg/class/C123105> a owl:Class ;
+    rdfs:label "Vitamin E Deficiency"^^xsd:string ;
+    ns1:description " A nutritional condition produced by a deficiency of VITAMIN E in the diet, characterized by posterior column and spinocerebellar tract abnormalities, areflexia, ophthalmoplegia, and disturbances of gait, proprioception, and vibration. In premature infants vitamin E deficiency is associated with hemolytic anemia, thrombocytosis, edema, intraventricular hemorrhage, and increasing risk of retrolental fibroplasia and bronchopulmonary dysplasia. An apparent inborn error of vitamin E metabolism, named familial isolated vitamin E deficiency, has recently been identified. (Cecil Textbook of Medicine, 19th ed, p1181) "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123099> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D014811> .
+
+<http://orkg.org/orkg/class/C123106> a owl:Class ;
+    rdfs:label "Vitamin K Deficiency"^^xsd:string ;
+    ns1:description " A nutritional condition produced by a deficiency of VITAMIN K in the diet, characterized by an increased tendency to hemorrhage (HEMORRHAGIC DISORDERS). Such bleeding episodes may be particularly severe in newborn infants. (From Cecil Textbook of Medicine, 19th ed, p1182) "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123099> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D014813> .
+
+<http://orkg.org/orkg/class/C123107> a owl:Class ;
+    rdfs:label "Magnesium Deficiency"^^xsd:string ;
+    ns1:description " A nutritional condition produced by a deficiency of magnesium in the diet, characterized by anorexia, nausea, vomiting, lethargy, and weakness. Symptoms are paresthesias, muscle cramps, irritability, decreased attention span, and mental confusion, possibly requiring months to appear. Deficiency of body magnesium can exist even when serum values are normal. In addition, magnesium deficiency may be organ-selective, since certain tissues become deficient before others. (Harrison's Principles of Internal Medicine, 12th ed, p1936) "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D008275> .
+
+<http://orkg.org/orkg/class/C123108> a owl:Class ;
+    rdfs:label "Potassium Deficiency"^^xsd:string ;
+    ns1:description " A condition due to decreased dietary intake of potassium, as in starvation or failure to administer in intravenous solutions, or to gastrointestinal loss in diarrhea, chronic laxative abuse, vomiting, gastric suction, or bowel diversion. Severe potassium deficiency may produce muscular weakness and lead to paralysis and respiratory failure. Muscular malfunction may result in hypoventilation, paralytic ileus, hypotension, muscle twitches, tetany, and rhabomyolysis. Nephropathy from potassium deficit impairs the concentrating mechanism, producing POLYURIA and decreased maximal urinary concentrating ability with secondary POLYDIPSIA. (Merck Manual, 16th ed) "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D011191> .
+
+<http://orkg.org/orkg/class/C123109> a owl:Class ;
+    rdfs:label "Protein Deficiency"^^xsd:string ;
+    ns1:description " A nutritional condition produced by a deficiency of proteins in the diet, characterized by adaptive enzyme changes in the liver, increase in amino acid synthetases, and diminution of urea formation, thus conserving nitrogen and reducing its loss in the urine. Growth, immune response, repair, and production of enzymes and hormones are all impaired in severe protein deficiency. Protein deficiency may also arise in the face of adequate protein intake if the protein is of poor quality (i.e., the content of one or more amino acids is inadequate and thus becomes the limiting factor in protein utilization). (From Merck Manual, 16th ed; Harrison's Principles of Internal Medicine, 12th ed, p406) "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D011488> .
+
+<http://orkg.org/orkg/class/C123110> a owl:Class ;
+    rdfs:label "Swayback"^^xsd:string ;
+    ns1:description " Congenital locomotor ataxia of lambs, thought to be associated with copper deficiency. It is characterized clinically by progressive incoordination of the hind limbs and pathologically by disruption of neuron and myelin development in the central nervous system. It is caused by a deficiency of metabolizable copper in the ewe during the last half of her pregnancy. (Dorland, 28th ed; Stedman, 26th ed) "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D013540> .
+
+<http://orkg.org/orkg/class/C123111> a owl:Class ;
+    rdfs:label "Fetal Nutrition Disorders"^^xsd:string ;
+    ns1:description " Disorders caused by nutritional imbalance, either overnutrition or undernutrition, in the FETUS in utero. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D048070> .
+
+<http://orkg.org/orkg/class/C123112> a owl:Class ;
+    rdfs:label "Refeeding Syndrome"^^xsd:string ;
+    ns1:description " A condition of metabolic imbalance that is caused by complications of initially feeding a severely malnourished patient too aggressively. Usually occurring within the first 5 days of refeeding, this syndrome is characterized by WATER-ELECTROLYTE IMBALANCE; GLUCOSE INTOLERANCE; CARDIAC ARRHYTHMIAS; and DIARRHEA. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D055677> .
+
+<http://orkg.org/orkg/class/C123114> a owl:Class ;
+    rdfs:label "Kwashiorkor"^^xsd:string ;
+    ns1:description " A syndrome produced by severe protein deficiency, characterized by retarded growth, changes in skin and hair pigment, edema, and pathologic changes in the liver, including fatty infiltration, necrosis, and fibrosis. The word is a local name in Gold Coast, Africa, meaning displaced child. Although first reported from Africa, kwashiorkor is now known throughout the world, but mainly in the tropics and subtropics. It is considered to be related to marasmus. (From Dorland, 27th ed) "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123113> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D007732> .
+
+<http://orkg.org/orkg/class/C123115> a owl:Class ;
+    rdfs:label "Starvation"^^xsd:string ;
+    ns1:description " Lengthy and continuous deprivation of food. (Stedman, 25th ed) "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123097> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D013217> .
+
+<http://orkg.org/orkg/class/C123116> a owl:Class ;
+    rdfs:label "Overnutrition"^^xsd:string ;
+    ns1:description " An imbalanced NUTRITIONAL STATUS resulting from excessive intake of nutrients. Generally, overnutrition generates an energy imbalance between food consumption and energy expenditure leading to disorders such as OBESITY. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123092> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D044343> .
+
+<http://orkg.org/orkg/class/C123117> a owl:Class ;
+    rdfs:label "Marasmus"^^xsd:string ;
+    ns1:description " The lack of sufficient energy or protein to meet the body's metabolic demands, as a result of either an inadequate dietary intake of protein, intake of poor quality dietary protein, increased demands due to disease, or increased nutrient losses. "^^xsd:string ;
+    ns1:hasSynonym "Protein Calorie Malnutrition"^^xsd:string,
+        "Protein-Energy Malnutrition"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D011502> .
+
+<http://orkg.org/orkg/class/C123118> a owl:Class ;
+    rdfs:label "NFDIxCS Joint-structure [C]"^^xsd:string .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string ;
     owl:equivalentClass <http://purl.obolibrary.org/obo/ZFS_0100000> .
@@ -9494,7 +9920,7 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     rdfs:label "Postscript"^^xsd:string .
 
 <http://orkg.org/orkg/class/Predicates> a owl:Class ;
-    rdfs:label "Predicate"^^xsd:string .
+    rdfs:label "Property"^^xsd:string .
 
 <http://orkg.org/orkg/class/Problem> a owl:Class ;
     rdfs:label "Problem"^^xsd:string ;
@@ -9674,6 +10100,32 @@ owl:Nothing a owl:Class ;
     rdfs:label "Nothing" ;
     owl:complementOf owl:Thing .
 
+<http://orkg.org/orkg/class/C123091> a owl:Class ;
+    rdfs:label "Nutritional and Metabolic Diseases"^^xsd:string ;
+    ns1:description "A collective term for nutritional disorders resulting from poor absorption or nutritional imbalance, and metabolic disorders resulting from defects in biosynthesis (ANABOLISM) or breakdown (CATABOLISM) of endogenous substances."^^xsd:string ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D009750> .
+
+<http://orkg.org/orkg/class/C123095> a owl:Class ;
+    rdfs:label "Infant Nutrition Disorders"^^xsd:string ;
+    ns1:description " Malnutrition, occurring in infants ages 1 month to 24 months, which is due to insufficient intake of food, dietary nutrients, or a pathophysiologic condition which prevents the absorption and utilization of food. Growth and development are markedly affected. Disorders caused by nutritional imbalance, either overnutrition or undernutrition, occurring in infants ages 1 month to 24 months. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123092> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D007228> .
+
+<http://orkg.org/orkg/class/C123100> a owl:Class ;
+    rdfs:label "Ascorbic Acid Deficiency"^^xsd:string ;
+    ns1:description " A condition due to a dietary deficiency of ascorbic acid (vitamin C), characterized by malaise, lethargy, and weakness. As the disease progresses, joints, muscles, and subcutaneous tissues may become the sites of hemorrhage. Ascorbic acid deficiency frequently develops into SCURVY in young children fed unsupplemented cow's milk exclusively during their first year. It develops also commonly in chronic alcoholism. (Cecil Textbook of Medicine, 19th ed, p1177) "^^xsd:string ;
+    ns1:hasSynonym "Hypoascorbemias"^^xsd:string,
+        "Scorbutus"^^xsd:string,
+        "Scurvies"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123099> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D001206> .
+
+<http://orkg.org/orkg/class/C123113> a owl:Class ;
+    rdfs:label "Severe Acute Malnutrition"^^xsd:string ;
+    ns1:description " Acute form of MALNUTRITION which usually affects children, characterized by a very low weight for height (below -3z scores of the median World Health Organization standards), visible severe wasting, or occurrence of nutritional EDEMA. It can be a direct or indirect cause of fatality in children suffering from DIARRHEA and PNEUMONIA. Do not confuse with starvation, a condition in which the body is not getting enough food, usually for extended periods of time. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123097> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D000067011> .
+
 <http://orkg.org/orkg/class/C28006> a owl:Class ;
     rdfs:label "hypothesis testing"^^xsd:string .
 
@@ -9697,6 +10149,14 @@ owl:Thing a owl:Class ;
     rdfs:label "Micronutrient"^^xsd:string ;
     rdfs:subClassOf <http://orkg.org/orkg/class/C77020> .
 
+<http://orkg.org/orkg/class/C123097> a owl:Class ;
+    rdfs:label "Malnutrition"^^xsd:string ;
+    ns1:description " An imbalanced nutritional status resulting from insufficient intake of nutrients to meet normal physiological requirement. "^^xsd:string ;
+    ns1:hasSynonym "Malnourishment"^^xsd:string,
+        "Nutritional Deficiency"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123092> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D044342> .
+
 <http://orkg.org/orkg/class/C77023> a owl:Class ;
     rdfs:label "Macronutrient"^^xsd:string ;
     rdfs:subClassOf <http://orkg.org/orkg/class/C77020> .
@@ -9705,6 +10165,19 @@ owl:Thing a owl:Class ;
     rdfs:label "Food component"^^xsd:string ;
     ns1:description "A physiological role played by any substance that is distributed in foodstuffs. It includes materials derived from plants or animals, such as vitamins or minerals, as well as environmental contaminants."^^xsd:string ;
     owl:equivalentClass <http://purl.obolibrary.org/obo/CHEBI_78295> .
+
+<http://orkg.org/orkg/class/C123092> a owl:Class ;
+    rdfs:label "Nutrition Disorders"^^xsd:string ;
+    ns1:description " Disorders caused by nutritional imbalance, either overnutrition or undernutrition. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123091> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D009748> .
+
+<http://orkg.org/orkg/class/C123099> a owl:Class ;
+    rdfs:label "Avitaminosis"^^xsd:string ;
+    ns1:description " A condition due to a deficiency of one or more essential vitamins. (Dorland, 27th ed) "^^xsd:string ;
+    ns1:hasSynonym "Vitamin C Deficiency"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123098> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D001361> .
 
 <http://orkg.org/orkg/class/C34019> a owl:Class ;
     rdfs:label "Food"^^xsd:string ;
@@ -9716,6 +10189,13 @@ owl:Thing a owl:Class ;
     ns1:description "Liquid (tea, tisane, coffee, etc.) excluding water to consume"^^xsd:string ;
     rdfs:subClassOf <http://orkg.org/orkg/class/C34019> ;
     owl:equivalentClass <https://www.wikidata.org/wiki/Q37208484> .
+
+<http://orkg.org/orkg/class/C123098> a owl:Class ;
+    rdfs:label "Deficiency Diseases"^^xsd:string ;
+    ns1:description " A condition produced by dietary or metabolic deficiency. The term includes all diseases caused by an insufficient supply of essential nutrients, i.e., protein (or amino acids), vitamins, and minerals. It also includes an inadequacy of calories. (From Dorland, 27th ed; Stedman, 25th ed) "^^xsd:string ;
+    ns1:hasSynonym "Vitamin Deficiency"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/C123097> ;
+    owl:equivalentClass <http://purl.bioontology.org/ontology/MESH/D003677> .
 
 <http://orkg.org/orkg/class/C58031> a owl:Class ;
     rdfs:label "Pattern"^^xsd:string ;
