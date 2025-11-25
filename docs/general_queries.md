@@ -32,49 +32,6 @@ LIMIT 999
 ```
 
 ---
-### What are the SPARQL endpoints in the MSE-KG that are about "process"?
-
-```sparql
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX void: <http://rdfs.org/ns/void#>
-PREFIX IAO:  <http://purl.obolibrary.org/obo/IAO_>
-PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
-PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
-
-SELECT ?dataset_name ?dataset ?sparql_endpoint ?term_class (xsd:integer(?n) AS ?instances)
-WHERE {
-  # Use your custom dataset type
-  ?dataset a nfdi:NFDI_0000009 ;
-           IAO:0000235 ?epInd ;
-           void:classPartition ?cp ;
-           <http://purl.obolibrary.org/obo/IAO_0000235> ?sparql_endpoint_node .
-
-  ?sparql_endpoint_node <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?sparql_endpoint .
-  
-  OPTIONAL {
-    ?dataset rdfs:label ?dataset_name .
-    FILTER(LANG(?dataset_name) = "" || LANGMATCHES(LANG(?dataset_name), "en"))
-  }
-
-  ?cp void:class ?term_class ;
-      void:entities ?n .
-
-  OPTIONAL { ?cp rdfs:label ?lbl }
-  OPTIONAL {
-    ?term_class rdfs:label ?lc .
-    FILTER(LANG(?lc) = "" || LANGMATCHES(LANG(?lc), "en"))
-  }
-
-  BIND(LCASE(COALESCE(?lbl, ?lc,
-       STRAFTER(STR(?term_class), "#"),
-       STRAFTER(STR(?term_class), "/"))) AS ?name)
-
-  FILTER(CONTAINS(?name, "process"))
-}
-ORDER BY ?dataset ?term_class
-```
-
----
 ### What are the submitted records in NFDI-MatWerk Zenodo community present in the MSE-KG?
 
 ```sparql
