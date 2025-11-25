@@ -2014,6 +2014,45 @@
 <http://orkg.org/orkg/class/C123118> a owl:Class ;
     rdfs:label "NFDIxCS Joint-structure [C]"^^xsd:string .
 
+<http://orkg.org/orkg/class/C123119> a owl:Class ;
+    rdfs:label "Versioning Relation Type"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123120> a owl:Class ;
+    rdfs:label "Contributor Roles"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123121> a owl:Class ;
+    rdfs:label "hour angle"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123122> a owl:Class ;
+    rdfs:label "albedo"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123123> a owl:Class ;
+    rdfs:label "gas absorption"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123124> a owl:Class ;
+    rdfs:label "metastatic cancer to the breast"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123125> a owl:Class ;
+    rdfs:label "flower"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123126> a owl:Class ;
+    rdfs:label "treatment"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123127> a owl:Class ;
+    rdfs:label " Harm reduction intervention statement (class)"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123128> a owl:Class ;
+    rdfs:label "chemical compound"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123129> a owl:Class ;
+    rdfs:label "antimicrobial agent"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123130> a owl:Class ;
+    rdfs:label "fungicide"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123131> a owl:Class ;
+    rdfs:label "Pesticides [C]"^^xsd:string .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string .
 

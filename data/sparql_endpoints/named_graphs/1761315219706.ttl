@@ -2713,6 +2713,69 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
 <http://orkg.org/orkg/class/C123118> a owl:Class ;
     rdfs:label "NFDIxCS Joint-structure [C]"^^xsd:string .
 
+<http://orkg.org/orkg/class/C123119> a owl:Class ;
+    rdfs:label "Versioning Relation Type"^^xsd:string ;
+    ns1:description "Controlled vocabulary for versioning relations."^^xsd:string .
+
+<http://orkg.org/orkg/class/C123120> a owl:Class ;
+    rdfs:label "Contributor Roles"^^xsd:string ;
+    ns1:description "Specify who contributed to this specific version and in which role."^^xsd:string .
+
+<http://orkg.org/orkg/class/C123121> a owl:Class ;
+    rdfs:label "hour angle"^^xsd:string ;
+    ns1:description "unit of angle"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q734439> .
+
+<http://orkg.org/orkg/class/C123122> a owl:Class ;
+    rdfs:label "albedo"^^xsd:string ;
+    ns1:description "ratio of reflected radiation to incident radiation"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q101038> .
+
+<http://orkg.org/orkg/class/C123123> a owl:Class ;
+    rdfs:label "gas absorption"^^xsd:string ;
+    ns1:description ""^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q36937419> .
+
+<http://orkg.org/orkg/class/C123124> a owl:Class ;
+    rdfs:label "metastatic cancer to the breast"^^xsd:string ;
+    ns1:description "human disease"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q18967485> .
+
+<http://orkg.org/orkg/class/C123125> a owl:Class ;
+    rdfs:label "flower"^^xsd:string ;
+    ns1:description "sexual reproductive structure found on flowering plants"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q506> .
+
+<http://orkg.org/orkg/class/C123126> a owl:Class ;
+    rdfs:label "treatment"^^xsd:string ;
+    ns1:description "process or manner of treating or responding to a condition"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q26256310> .
+
+<http://orkg.org/orkg/class/C123127> a owl:Class ;
+    rdfs:label " Harm reduction intervention statement (class)"^^xsd:string ;
+    ns1:description """A generic statement relating interventions to types of harm they are meant to reduce
+
+This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
+    ns1:exampleOfUsage "Parachute use reduces injury from gravitational challenge"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123128> a owl:Class ;
+    rdfs:label "chemical compound"^^xsd:string ;
+    ns1:description "pure chemical substance consisting of two or more different chemical elements"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q11173> .
+
+<http://orkg.org/orkg/class/C123129> a owl:Class ;
+    rdfs:label "antimicrobial agent"^^xsd:string ;
+    ns1:description "substance that kills or slows the growth of microorganisms, including bacteria, viruses, fungi and protozoans"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q68541106> .
+
+<http://orkg.org/orkg/class/C123130> a owl:Class ;
+    rdfs:label "fungicide"^^xsd:string ;
+    ns1:description "pesticide used to kill fungi"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q193237> .
+
+<http://orkg.org/orkg/class/C123131> a owl:Class ;
+    rdfs:label "Pesticides [C]"^^xsd:string .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string ;
     owl:equivalentClass <http://purl.obolibrary.org/obo/ZFS_0100000> .
