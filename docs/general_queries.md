@@ -303,7 +303,7 @@ LIMIT 999
 ### What are the datasets present in the MSE-KG? What are creators, creator's affiliations and link of these datasets?
 
 ```sparql
-SELECT ?dataset ?title ?creatorLabel ?creatorAffiliationLabel ?link
+SELECT DISTINCT ?dataset ?title ?creatorLabel ?creatorAffiliationLabel ?link
 WHERE {
   # Dataset type
   VALUES ?class {
@@ -321,19 +321,15 @@ WHERE {
     ?titleNode rdfs:label ?title .
   }
 
-  # Creator(s)
-  OPTIONAL {
+
     ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creator .
     ?creator a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001032> .
     ?creator rdfs:label ?creatorLabel .
-  }
 
-  # Creator affiliation(s)
-  OPTIONAL {
     ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creatorAffiliation .
     ?creatorAffiliation a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033> .
     ?creatorAffiliation rdfs:label ?creatorAffiliationLabel .
-  }
+
 
   # Link (URL or PID)
   OPTIONAL {

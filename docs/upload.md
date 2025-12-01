@@ -81,7 +81,10 @@ You have data about entities that are already supported in the MSE KG (like peop
 
 #### A. 🚀 Quick Contribution (No technical knowledge needed)  
 1. Use our **spreadsheet template** based on the **MatWerk ontology** [Data collection spreadsheet](https://docs.google.com/spreadsheets/d/1tiB4IZTCsjcw5QxBWk70XpRcwfw5-gs7CW2QTM5ZBiI/edit?usp=sharing)  
-2. Fill in your data following the format 
+2. Fill in your data following the format
+3. You can also use this [Spreadsheet](https://docs.google.com/spreadsheets/d/1OyoWwcX4zUtrJilwXdtTooavELw278nQSNW2oniBBsk/edit?usp=sharing) to **check whether your data is already available in the knowledge graph**, without needing to run a SPARQL query yourself.  
+   - The spreadsheet is connected to our **GitHub workflow**, which keeps the information synchronized.  
+   - For this reason, the file is **read-only**, preventing accidental edits that could interfere with the automated process.
 
 #### B. 🔬 Advanced Contribution (For ontology/workflow enthusiasts) !!! In Preparation !!!
 1. Use the ROBOT spreadsheet template  
