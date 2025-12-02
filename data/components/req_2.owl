@@ -5252,6 +5252,16 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174514749319623 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174514749319623">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"/>
+        <ontology:NFDI_0001007>A high-throughput ab initio study of elemental segregation and cohesion at ferritic-iron grain boundaries</ontology:NFDI_0001007>
+        <rdfs:label>A high-throughput ab initio study of elemental segregation and cohesion at ferritic-iron grain boundaries</rdfs:label>
+    </NamedIndividual>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451474931963 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451474931963">
@@ -5396,8 +5406,8 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451477729117">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <ontology:NFDI_0001007>high temperature mechanical behavior</ontology:NFDI_0001007>
-        <rdfs:label>high temperature mechanical behavior</rdfs:label>
+        <ontology:NFDI_0001007>grain boundary segregation</ontology:NFDI_0001007>
+        <rdfs:label>grain boundary segregation</rdfs:label>
     </NamedIndividual>
     
 
@@ -5561,8 +5571,10 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174514906404223">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014"/>
         <ontology:NFDI_0001007>10/30/2019</ontology:NFDI_0001007>
         <rdfs:label>DatasetPublishingDate 1</rdfs:label>
+        <rdfs:label>dataset publishing process 23</rdfs:label>
     </NamedIndividual>
     
 
@@ -5783,6 +5795,15 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174514906404245 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174514906404245">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
+        <rdfs:label>DatasetPublishingDate 23</rdfs:label>
+    </NamedIndividual>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451490640425 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451490640425">
@@ -5992,6 +6013,16 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451502843855 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451502843855">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000215"/>
+        <ontology:NFDI_0001007>Density functional theory calculations</ontology:NFDI_0001007>
+        <rdfs:label>Density functional theory calculations</rdfs:label>
+    </NamedIndividual>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451508444811 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451508444811">
@@ -6038,6 +6069,16 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
         <ontology:NFDI_0001007>Mechanical damage of hair can serve as an indicator of health status and its assessment relies on the measurement of morphological features via microscopic analysis, yet few studies have categorized the extent of damage sustained, and instead, have depended on qualitative profiling based on the presence or absence of specific features. We describe the development and application of a novel quantitative measure for scoring hair surface damage in scanning electron microscopic (SEM) images without predefined features, and automation of image analysis for characterization of morphological hair damage after exposure to an explosive blast. Application of an automated normalization procedure for SEM images revealed features indicative of contact with materials in an explosive device and characteristic of heat damage, though many were similar to features from physical and chemical weathering. Assessment of hair damage with tailing factor, a measure of asymmetry in pixel brightness histograms and proxy for surface roughness, yielded 81% classification accuracy to an existing damage classification system, indicating good agreement between the two metrics. Further ability of tailing factor to score features of hair damage reflecting explosion conditions demonstrates the broad applicability of the metric to assess damage to hairs containing a diverse set of morphological features.</ontology:NFDI_0001007>
         <rdfs:label>Mechanical damage of hair can serve as an indicator of health status and its assessment relies on the measurement of morphological features via microscopic analysis, yet few studies have categorized the extent of damage sustained, and instead, have depended on qualitative profiling based on the presence or absence of specific features. We describe the development and application of a novel quantitative measure for scoring hair surface damage in scanning electron microscopic (SEM) images without predefined features, and automation of image analysis for characterization of morphological hair damage after exposure to an explosive blast. Application of an automated normalization procedure for SEM images revealed features indicative of contact with materials in an explosive device and characteristic of heat damage, though many were similar to features from physical and chemical weathering. Assessment of hair damage with tailing factor, a measure of asymmetry in pixel brightness histograms and proxy for surface roughness, yielded 81% classification accuracy to an existing damage classification system, indicating good agreement between the two metrics. Further ability of tailing factor to score features of hair damage reflecting explosion conditions demonstrates the broad applicability of the metric to assess damage to hairs containing a diverse set of morphological features.</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174515084448114 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515084448114">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
+        <ontology:NFDI_0001007>The data consists of atomistic structures (pymatgen Structure format), and associated DFT computed segregation energies for sites across 6 model GBs and the induced cohesion effects (embrittlement/strengthening) computed in various interfacial strength</ontology:NFDI_0001007>
+        <rdfs:label>The data consists of atomistic structures (pymatgen Structure format), and associated DFT computed segregation energies for sites across 6 model GBs and the induced cohesion effects (embrittlement/strengthening) computed in various interfacial strength</rdfs:label>
     </NamedIndividual>
     
 
@@ -6517,6 +6558,16 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174515599437715 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515599437715">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001032"/>
+        <ontology:NFDI_0001007>(a) Han Lin Mai; (b) Xiang-Yuan Cui; (c) Tilmann Hickel; (a) Joerg Neugebauer; (b) Simon Ringer</ontology:NFDI_0001007>
+        <rdfs:label>(a) Han Lin Mai; (b) Xiang-Yuan Cui; (c) Tilmann Hickel; (a) Joerg Neugebauer; (b) Simon Ringer</rdfs:label>
+    </NamedIndividual>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451559943772 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451559943772">
@@ -6623,6 +6674,16 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033"/>
         <ontology:NFDI_0001007>(a-d, f) Federal Institute for Materials Research and Testing, (e) Fraunhofer Institute for Mechanics and Materials</ontology:NFDI_0001007>
         <rdfs:label>(a-d, f) Federal Institute for Materials Research and Testing, (e) Fraunhofer Institute for Mechanics and Materials</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174515610136812 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515610136812">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033"/>
+        <ontology:NFDI_0001007>(a) Max Planck Institute for Sustainable Materials GmbH Dusseldorf, Germany (b) The University of Sydney, Australia (c) BAM Federal Institute for Materials Research and Testing</ontology:NFDI_0001007>
+        <rdfs:label>(a) Max Planck Institute for Sustainable Materials GmbH Dusseldorf, Germany (b) The University of Sydney, Australia (c) BAM Federal Institute for Materials Research and Testing</rdfs:label>
     </NamedIndividual>
     
 
@@ -63773,6 +63834,16 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174645496125663 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174645496125663">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/ligerzero-ai/FeGB_PtableSeg_FromFirstPrinciples_Data/tree/main</ontology:NFDI_0001008>
+        <rdfs:label>url 799</rdfs:label>
+    </NamedIndividual>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17464549612567 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17464549612567">
@@ -67000,6 +67071,16 @@
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"/>
         <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://data.gesis.org/softwarekg/sparql</ontology:NFDI_0001008>
         <rdfs:label>sparql endpoint of Software Knowledge Graph</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17646004501381 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17646004501381">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
+        <ontology:NFDI_0001007>embrittlement</ontology:NFDI_0001007>
+        <rdfs:label>embrittlement</rdfs:label>
     </NamedIndividual>
 </rdf:RDF>
 

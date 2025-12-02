@@ -437,7 +437,11 @@
 
     <!-- https://purls.helmholtz-metadaten.de/msekg/174514906404223 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174514906404223"/>
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174514906404223">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014"/>
+        <obo:BFO_0000199 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174514906404245"/>
+        <rdfs:label>dataset publishing process 23</rdfs:label>
+    </NamedIndividual>
     
 
 
@@ -584,6 +588,12 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174514906404244 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174514906404244"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174514906404245 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174514906404245"/>
     
 
 

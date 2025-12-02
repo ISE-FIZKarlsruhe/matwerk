@@ -2776,6 +2776,115 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
 <http://orkg.org/orkg/class/C123131> a owl:Class ;
     rdfs:label "Pesticides [C]"^^xsd:string .
 
+<http://orkg.org/orkg/class/C123132> a owl:Class ;
+    rdfs:label "evolutionary sequela statement (class)"^^xsd:string ;
+    ns1:description """Evolutionary sequela is a proposed term for a type of claim repeatedly made in the literature. A disease (or medical condition more generally) is the consequence of natural selection favoring genetic variants linked to it, because they conferred protection from, or tolerance of, a disease affecting ancestral populations disproportionately.  Apart from the arguments disease and ancestral disease, evolutionary sequela statements take an optional 'population' argument. If used, this argument explicitly limits the scope of the statement to descendants of one or more named ancestral populations. If this argument is a geographical name, it is understoodto refer to the historical inhabitants of that area. A start and a stop date are implied but not made explicit, at least for the moment.  
+
+This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
+    ns1:exampleOfUsage """Sickle cell anemia is an evolutionary sequela of malaria in the coastal plains of Kenya. 
+Cystic fibrosis is an evolutionary sequela of tuberculosis in Europe. 
+Atopic dermatitis is an evolutionary sequela of vitamin D3 deficiency in northern Europe. """^^xsd:string .
+
+<http://orkg.org/orkg/class/C123133> a owl:Class ;
+    rdfs:label "cohort"^^xsd:string ;
+    ns1:description "in statistics, marketing and demography, a group of subjects who share a defining characteristic"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1303415> .
+
+<http://orkg.org/orkg/class/C123134> a owl:Class ;
+    rdfs:label "disguise"^^xsd:string ;
+    ns1:description "anything which conceals or changes a person's physical appearance"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q6497468> .
+
+<http://orkg.org/orkg/class/C123135> a owl:Class ;
+    rdfs:label "privilege escalation"^^xsd:string ;
+    ns1:description "process to gain control of computer privileges that are not allowed to a user or application by default"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1856893> .
+
+<http://orkg.org/orkg/class/C123136> a owl:Class ;
+    rdfs:label "random search"^^xsd:string ;
+    ns1:description "numerical optimization method"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q4925641> .
+
+<http://orkg.org/orkg/class/C123137> a owl:Class ;
+    rdfs:label "EfficientNet"^^xsd:string ;
+    ns1:description "Family of computer vision models"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q116493015> .
+
+<http://orkg.org/orkg/class/C123138> a owl:Class ;
+    rdfs:label "deep learning"^^xsd:string ;
+    ns1:description "branch of machine learning"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q197536> .
+
+<http://orkg.org/orkg/class/C123139> a owl:Class ;
+    rdfs:label "data augmentation"^^xsd:string ;
+    ns1:description "creation of more data based on previously collected data to enhance the performance of a statistical model"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q85014143> .
+
+<http://orkg.org/orkg/class/C123140> a owl:Class ;
+    rdfs:label "CutMix"^^xsd:string ;
+    ns1:description "regularization method for artificial neural networks"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q117908145> .
+
+<http://orkg.org/orkg/class/C123141> a owl:Class ;
+    rdfs:label "data set"^^xsd:string ;
+    ns1:description "collection of data, publication type"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1172284> .
+
+<http://orkg.org/orkg/class/C123142> a owl:Class ;
+    rdfs:label "benchmark dataset"^^xsd:string ;
+    ns1:description "a dataset developed for benchmarking of computational techniques"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q104819290> .
+
+<http://orkg.org/orkg/class/C123143> a owl:Class ;
+    rdfs:label "fine-tuning"^^xsd:string ;
+    ns1:description "adjustment of parameters to fit data in theoretical physics"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q2828883> .
+
+<http://orkg.org/orkg/class/C123144> a owl:Class ;
+    rdfs:label "Prompting"^^xsd:string ;
+    ns1:description "strategies used to increase the probability of correct responding and opportunities for by providing and then systematically removing prompts"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q2112837> .
+
+<http://orkg.org/orkg/class/C123145> a owl:Class ;
+    rdfs:label "few-shot learning"^^xsd:string ;
+    ns1:description "machine learning approach that enables a system to learn new tasks or recognize new objects from only a few examples or demonstrations, rather than requiring extensive data"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q110797734> .
+
+<http://orkg.org/orkg/class/C123146> a owl:Class ;
+    rdfs:label "chain-of-thought prompt"^^xsd:string ;
+    ns1:description "prompt technique for AI models"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q135305651> .
+
+<http://orkg.org/orkg/class/C123147> a owl:Class ;
+    rdfs:label "decision-tree classification"^^xsd:string ;
+    ns1:description "classification using decision trees"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q121891183> .
+
+<http://orkg.org/orkg/class/C123148> a owl:Class ;
+    rdfs:label "population density"^^xsd:string ;
+    ns1:description "measurement of population per unit area or unit volume"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q22856> .
+
+<http://orkg.org/orkg/class/C123149> a owl:Class ;
+    rdfs:label "direct normal irradiance"^^xsd:string ;
+    ns1:description "solar radiance measured at the surface of the Earth at a given location with a surface element perpendicular to the Sun"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q62071452> .
+
+<http://orkg.org/orkg/class/C123150> a owl:Class ;
+    rdfs:label "diffuse horizontal irradiance"^^xsd:string ;
+    ns1:description "radiation at the Earth's surface from light scattered by the atmosphere"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q62071441> .
+
+<http://orkg.org/orkg/class/C123151> a owl:Class ;
+    rdfs:label "global tilted irradiance"^^xsd:string ;
+    ns1:description "total radiation received on a surface with defined tilt & azimuth"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q124903861> .
+
+<http://orkg.org/orkg/class/C123152> a owl:Class ;
+    rdfs:label "cloud cover"^^xsd:string ;
+    ns1:description "fraction of the sky obscured by clouds when observed from a particular location"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q830457> .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string ;
     owl:equivalentClass <http://purl.obolibrary.org/obo/ZFS_0100000> .

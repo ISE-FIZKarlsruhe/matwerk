@@ -2053,6 +2053,69 @@
 <http://orkg.org/orkg/class/C123131> a owl:Class ;
     rdfs:label "Pesticides [C]"^^xsd:string .
 
+<http://orkg.org/orkg/class/C123132> a owl:Class ;
+    rdfs:label "evolutionary sequela statement (class)"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123133> a owl:Class ;
+    rdfs:label "cohort"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123134> a owl:Class ;
+    rdfs:label "disguise"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123135> a owl:Class ;
+    rdfs:label "privilege escalation"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123136> a owl:Class ;
+    rdfs:label "random search"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123137> a owl:Class ;
+    rdfs:label "EfficientNet"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123138> a owl:Class ;
+    rdfs:label "deep learning"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123139> a owl:Class ;
+    rdfs:label "data augmentation"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123140> a owl:Class ;
+    rdfs:label "CutMix"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123141> a owl:Class ;
+    rdfs:label "data set"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123142> a owl:Class ;
+    rdfs:label "benchmark dataset"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123143> a owl:Class ;
+    rdfs:label "fine-tuning"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123144> a owl:Class ;
+    rdfs:label "Prompting"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123145> a owl:Class ;
+    rdfs:label "few-shot learning"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123146> a owl:Class ;
+    rdfs:label "chain-of-thought prompt"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123147> a owl:Class ;
+    rdfs:label "decision-tree classification"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123148> a owl:Class ;
+    rdfs:label "population density"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123149> a owl:Class ;
+    rdfs:label "direct normal irradiance"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123150> a owl:Class ;
+    rdfs:label "diffuse horizontal irradiance"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123151> a owl:Class ;
+    rdfs:label "global tilted irradiance"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123152> a owl:Class ;
+    rdfs:label "cloud cover"^^xsd:string .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string .
 

@@ -1,14 +1,9 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> a owl:Class ;
     rdfs:label "Instrument" ;
-    rdfs:subClassOf schema:CreativeWork .
-
-<http://rdf-vocabulary.ddialliance.org/lifecycle#Question> a owl:Class ;
-    rdfs:label "Question" ;
     rdfs:subClassOf schema:CreativeWork .
 
 <http://rdf-vocabulary.ddialliance.org/lifecycle#Variable> a owl:Class ;
@@ -20,9 +15,6 @@ owl:Nothing a owl:Class ;
 
 owl:Thing a owl:Class ;
     rdfs:label "Thing" .
-
-skos:Concept a owl:Class ;
-    rdfs:label "Concept" .
 
 <https://data.gesis.org/gesiskg/schema/DatasetReference> a owl:Class ;
     rdfs:label "" ;
@@ -40,30 +32,17 @@ skos:Concept a owl:Class ;
     rdfs:label "" ;
     rdfs:subClassOf <https://data.gesis.org/gesiskg/schema/Reference> .
 
+<https://data.gesis.org/gesiskg/schema/Task> a owl:Class ;
+    rdfs:label "" ;
+    rdfs:subClassOf schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/Tutorial> a owl:Class ;
+    rdfs:label "" ;
+    rdfs:subClassOf schema:CreativeWork .
+
 <https://data.gesis.org/gesiskg/schema/VariableReference> a owl:Class ;
     rdfs:label "" ;
     rdfs:subClassOf <https://data.gesis.org/gesiskg/schema/Reference> .
-
-<https://data.gesis.org/methodshub/schema/License> a owl:Class ;
-    rdfs:label "" ;
-    rdfs:subClassOf schema:CreativeWork .
-
-<https://data.gesis.org/methodshub/schema/Task> a owl:Class ;
-    rdfs:label "" ;
-    rdfs:subClassOf schema:CreativeWork .
-
-<https://data.gesis.org/methodshub/schema/Tutorial> a owl:Class ;
-    rdfs:label "" ;
-    rdfs:subClassOf schema:CreativeWork .
-
-<https://nfdi.fiz-karlsruhe.de/ontology/Organization> a owl:Class ;
-    rdfs:label "" .
-
-<https://nfdi.fiz-karlsruhe.de/ontology/Person> a owl:Class ;
-    rdfs:label "" .
-
-<https://nfdi.fiz-karlsruhe.de/ontology/Service> a owl:Class ;
-    rdfs:label "" .
 
 schema:Collection a owl:Class ;
     rdfs:label "" ;
@@ -78,13 +57,6 @@ schema:Dataset a owl:Class ;
     rdfs:subClassOf schema:CreativeWork .
 
 schema:DefinedTerm a owl:Class ;
-    rdfs:label "" .
-
-schema:DefinedTermSet a owl:Class ;
-    rdfs:label "" ;
-    rdfs:subClassOf schema:CreativeWork .
-
-schema:Grant a owl:Class ;
     rdfs:label "" .
 
 schema:Organization a owl:Class ;
