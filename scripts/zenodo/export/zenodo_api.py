@@ -19,7 +19,7 @@ try:
     DEFAULT_PAGE_SIZE = _DEFAULT_PAGE_SIZE_CONST
 except Exception:
     ZENODO_API = "https://zenodo.org/api/records"
-    DEFAULT_PAGE_SIZE = 100
+    DEFAULT_PAGE_SIZE = 25
 
 # ----- Tunables via env (sane defaults) -----
 ZENODO_PAGE_SIZE = int(os.getenv("ZENODO_PAGE_SIZE", str(DEFAULT_PAGE_SIZE)))  # 25–100 are polite
