@@ -1,7 +1,9 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759757748359> a nfdi:NFDI_0000009 ;
     rdfs:label "https://zenodo.org/records/5106605" ;
@@ -21,7 +23,14 @@
         <https://purls.helmholtz-metadaten.de/msekg/1759757748374>,
         <https://purls.helmholtz-metadaten.de/msekg/1759757748375>,
         <https://purls.helmholtz-metadaten.de/msekg/1759757748376> ;
-    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759757748360> .
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759757748360> ;
+    dcterms:created "2021-07-15T16:52:05.375338+00:00"^^xsd:dateTime ;
+    dcterms:modified "2024-07-18T22:08:04.739858+00:00"^^xsd:dateTime ;
+    dcterms:source <https://doi.org/10.5281/zenodo.5106606> ;
+    prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.5106606> .
+
+<https://purls.helmholtz-metadaten.de/msekg/8314b4994434441a81ea0986e3544f6f> a prov:Activity ;
+    prov:startedAtTime "2025-12-16T11:02:03+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759757748360> rdfs:label "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" ;
     obo:OBI_0002135 "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy" .

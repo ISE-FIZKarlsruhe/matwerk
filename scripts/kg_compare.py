@@ -10,11 +10,7 @@ Adds to the original features:
 
 Example:
 
-python3 kg_compare.py \
-    --kg1 data/all.ttl --name1 BFO_MSE \
-    --kg2 data/MSE_KG_old/all.ttl --name2 SCHEMA_MSE \
-    --label "Ebrahim Norouzi" --type schema:Person \
-    --out out
+python3 scripts/kg_compare.py --kg1 data/all_NotReasoned.ttl --name1 BFO_MSE --kg2 data/MSE_KG_old/mse_v1.ttl --name2 SCHEMA_MSE --label "Ebrahim Norouzi" --type schema:Person --out data/compare_kgs
 
 Notes
 - CURIEs are supported if declared in the KG or provided with --prefix (e.g., --prefix schema=https://schema.org/).
@@ -97,11 +93,22 @@ RDFS_ = RDFS
 OWL_  = OWL
 
 
-def _any(g, s=None, p=None, o=None, cond=None):
+def _any(g, s=None, p=None, o=None, cond=None) -> bool:
+    """Boolean: does any triple match (s, p, o) and optional cond?"""
     for (ss, pp, oo) in g.triples((s, p, o)):
         if cond is None or cond(ss, pp, oo):
             return True
     return False
+
+
+def _count(g, s=None, p=None, o=None, cond=None) -> int:
+    """Count how many triples match (s, p, o) and optional cond."""
+    n = 0
+    for (ss, pp, oo) in g.triples((s, p, o)):
+        if cond is None or cond(ss, pp, oo):
+            n += 1
+    return n
+
 
 
 def _is_uri(x):
@@ -112,194 +119,197 @@ def _is_lit(x):
     return isinstance(x, Literal)
 
 
-# Individual construct predicates
+# Individual construct predicates (now returning counts instead of booleans)
 
-def has_construct_ROLE_INVERSE(g: Graph) -> bool:
+def count_construct_ROLE_INVERSE(g: Graph) -> int:
     return (
-        _any(g, None, OWL.inverseOf, None)
-        or _any(g, None, RDF.type, OWL.SymmetricProperty)
-        or _any(g, None, RDF.type, OWL.InverseFunctionalProperty)
+        _count(g, None, OWL.inverseOf, None)
+        + _count(g, None, RDF.type, OWL.SymmetricProperty)
+        + _count(g, None, RDF.type, OWL.InverseFunctionalProperty)
     )
 
 
-def has_construct_D(g: Graph) -> bool:
-    if _any(g, None, RDF.type, OWL.DatatypeProperty):
-        return True
-    if _any(g, None, OWL.datatypeComplementOf, None):
-        return True
-    if _any(g, None, OWL.oneOf, None):
-        for _x, _p, coll in g.triples((None, OWL.oneOf, None)):
-            if _any(g, coll, RDF.first, None, cond=lambda s, p, o: _is_lit(o)):
-                return True
-    if _any(g, None, OWL.onDatatype, None) and _any(g, None, OWL.withRestrictions, None):
-        return True
-    if _any(g, None, OWL.hasValue, None, cond=lambda s, p, o: _is_lit(o)):
-        return True
-    return False
-
-
-def has_construct_CONCEPT_INTERSECTION(g: Graph) -> bool:
-    return _any(g, None, OWL.intersectionOf, None)
-
-
-def has_construct_CONCEPT_UNION(g: Graph) -> bool:
-    if _any(g, None, OWL.unionOf, None):
-        return True
+def count_construct_D(g: Graph) -> int:
+    c = 0
+    # Datatype properties
+    c += _count(g, None, RDF.type, OWL.DatatypeProperty)
+    # Datatype complement
+    c += _count(g, None, OWL.datatypeComplementOf, None)
+    # OneOf (datatype enumerations – count how many lists have a literal head)
     for _x, _p, coll in g.triples((None, OWL.oneOf, None)):
-        if _any(g, coll, RDF.first, None, cond=lambda s, p, o: _is_uri(o)):
-            return True
-    if _any(g, None, OWL.differentFrom, None):
-        return True
-    if _any(g, None, RDF.type, OWL.AllDifferent):
-        return True
-    if _any(g, None, OWL.disjointUnionOf, None):
-        return True
-    return False
+        c += _count(g, coll, RDF.first, None, cond=lambda s, p, o: _is_lit(o))
+    # Datatype restrictions: count onDatatype axioms
+    c += _count(g, None, OWL.onDatatype, None)
+    # hasValue with literals
+    c += _count(g, None, OWL.hasValue, None, cond=lambda s, p, o: _is_lit(o))
+    return c
 
 
-def has_construct_CONCEPT_COMPLEX_NEGATION(g: Graph) -> bool:
-    return (
-        _any(g, None, OWL.complementOf, None)
-        or _any(g, None, OWL.disjointWith, None)
-        or _any(g, None, RDF.type, OWL.AllDisjointClasses)
-        or _any(g, None, OWL.differentFrom, None)
-        or _any(g, None, RDF.type, OWL.AllDifferent)
-        or _any(g, None, OWL.disjointUnionOf, None)
-    )
+def count_construct_CONCEPT_INTERSECTION(g: Graph) -> int:
+    return _count(g, None, OWL.intersectionOf, None)
 
 
-def has_construct_FULL_EXISTENTIAL(g: Graph) -> bool:
-    if _any(g, None, OWL.someValuesFrom, None, cond=lambda s, p, o: (o != OWL.Thing)):
-        return True
-    if _any(g, None, OWL.hasValue, None, cond=lambda s, p, o: _is_uri(o)):
-        return True
-    return False
-
-
-def has_construct_LIMITED_EXISTENTIAL(g: Graph) -> bool:
-    return _any(g, None, OWL.someValuesFrom, OWL.Thing)
-
-
-def has_construct_UNIVERSAL_RESTRICTION(g: Graph) -> bool:
-    return _any(g, None, OWL.allValuesFrom, None)
-
-
-def has_construct_NOMINALS(g: Graph) -> bool:
-    if _any(g, None, OWL.hasValue, None, cond=lambda s, p, o: _is_uri(o)):
-        return True
+def count_construct_CONCEPT_UNION(g: Graph) -> int:
+    c = 0
+    c += _count(g, None, OWL.unionOf, None)
+    # Class enumerations via oneOf with URI elements
     for _x, _p, coll in g.triples((None, OWL.oneOf, None)):
-        if _any(g, coll, RDF.first, None, cond=lambda s, p, o: _is_uri(o)):
-            return True
-    if _any(g, None, OWL.differentFrom, None):
-        return True
-    if _any(g, None, RDF.type, OWL.AllDifferent):
-        return True
-    if _any(g, None, OWL.sameAs, None):
-        return True
-    return False
+        c += _count(g, coll, RDF.first, None, cond=lambda s, p, o: _is_uri(o))
+    c += _count(g, None, OWL.differentFrom, None)
+    c += _count(g, None, RDF.type, OWL.AllDifferent)
+    c += _count(g, None, OWL.disjointUnionOf, None)
+    return c
 
 
-def has_construct_Q(g: Graph) -> bool:
-    if _any(g, None, OWL.minQualifiedCardinality, None) and (
-        _any(g, None, OWL.onClass, None, cond=lambda s, p, o: o != OWL.Thing)
-        or _any(g, None, OWL.onDataRange, None, cond=lambda s, p, o: o != RDFS.Literal)
-    ):
-        return True
-    if _any(g, None, OWL.qualifiedCardinality, None) and (
-        _any(g, None, OWL.onClass, None, cond=lambda s, p, o: o != OWL.Thing)
-        or _any(g, None, OWL.onDataRange, None, cond=lambda s, p, o: o != RDFS.Literal)
-    ):
-        return True
-    if _any(g, None, OWL.maxQualifiedCardinality, None) and (
-        _any(g, None, OWL.onClass, None, cond=lambda s, p, o: o != OWL.Thing)
-        or _any(g, None, OWL.onDataRange, None, cond=lambda s, p, o: o != RDFS.Literal)
-    ):
-        return True
-    return False
-
-
-def has_construct_N(g: Graph) -> bool:
+def count_construct_CONCEPT_COMPLEX_NEGATION(g: Graph) -> int:
     return (
-        _any(g, None, OWL.minCardinality, None)
-        or _any(g, None, OWL.cardinality, None)
-        or _any(g, None, OWL.maxCardinality, None)
-        or (
-            _any(g, None, OWL.minQualifiedCardinality, None)
-            and (
-                _any(g, None, OWL.onClass, OWL.Thing)
-                or _any(g, None, OWL.onDataRange, RDFS.Literal)
-            )
-        )
-        or (
-            _any(g, None, OWL.qualifiedCardinality, None)
-            and (
-                _any(g, None, OWL.onClass, OWL.Thing)
-                or _any(g, None, OWL.onDataRange, RDFS.Literal)
-            )
-        )
-        or (
-            _any(g, None, OWL.maxQualifiedCardinality, None)
-            and (
-                _any(g, None, OWL.onClass, OWL.Thing)
-                or _any(g, None, OWL.onDataRange, RDFS.Literal)
-            )
-        )
+        _count(g, None, OWL.complementOf, None)
+        + _count(g, None, OWL.disjointWith, None)
+        + _count(g, None, RDF.type, OWL.AllDisjointClasses)
+        + _count(g, None, OWL.differentFrom, None)
+        + _count(g, None, RDF.type, OWL.AllDifferent)
+        + _count(g, None, OWL.disjointUnionOf, None)
     )
 
 
-def has_construct_ROLE_COMPLEX(g: Graph) -> bool:
+def count_construct_FULL_EXISTENTIAL(g: Graph) -> int:
     return (
-        _any(g, None, OWL.hasSelf, None)
-        or _any(g, None, RDF.type, OWL.AsymmetricProperty)
-        or _any(g, None, OWL.propertyDisjointWith, None)
-        or _any(g, None, RDF.type, OWL.AllDisjointProperties)
-        or _any(g, None, RDF.type, OWL.IrreflexiveProperty)
+        _count(g, None, OWL.someValuesFrom, None, cond=lambda s, p, o: (o != OWL.Thing))
+        + _count(g, None, OWL.hasValue, None, cond=lambda s, p, o: _is_uri(o))
     )
 
 
-def has_construct_ROLE_REFLEXIVITY_CHAINS(g: Graph) -> bool:
-    return _any(g, None, RDF.type, OWL.ReflexiveProperty) or _any(g, None, OWL.propertyChainAxiom, None)
+def count_construct_LIMITED_EXISTENTIAL(g: Graph) -> int:
+    return _count(g, None, OWL.someValuesFrom, OWL.Thing)
 
 
-def has_construct_ROLE_DOMAIN_RANGE(g: Graph) -> bool:
-    return _any(g, None, RDFS.domain, None) or _any(g, None, RDFS.range, None)
+def count_construct_UNIVERSAL_RESTRICTION(g: Graph) -> int:
+    return _count(g, None, OWL.allValuesFrom, None)
 
 
-def has_construct_ROLE_HIERARCHY(g: Graph) -> bool:
-    return _any(g, None, OWL.equivalentProperty, None) or _any(g, None, RDFS.subPropertyOf, None)
+def count_construct_NOMINALS(g: Graph) -> int:
+    c = 0
+    # hasValue with URI objects
+    c += _count(g, None, OWL.hasValue, None, cond=lambda s, p, o: _is_uri(o))
+    # OneOf with URIs
+    for _x, _p, coll in g.triples((None, OWL.oneOf, None)):
+        c += _count(g, coll, RDF.first, None, cond=lambda s, p, o: _is_uri(o))
+    # sameAs / differentFrom / AllDifferent
+    c += _count(g, None, OWL.differentFrom, None)
+    c += _count(g, None, RDF.type, OWL.AllDifferent)
+    c += _count(g, None, OWL.sameAs, None)
+    return c
 
 
-def has_construct_F(g: Graph) -> bool:
-    return _any(g, None, RDF.type, OWL.FunctionalProperty) or _any(g, None, RDF.type, OWL.InverseFunctionalProperty)
+def count_construct_Q(g: Graph) -> int:
+    """Qualified cardinalities (onClass != owl:Thing, onDataRange != rdfs:Literal)."""
+    c = 0
+    # minQualifiedCardinality
+    for r, _, _ in g.triples((None, OWL.minQualifiedCardinality, None)):
+        if ((r, OWL.onClass, OWL.Thing) not in g and (r, OWL.onClass, None) in g) or \
+           ((r, OWL.onDataRange, RDFS.Literal) not in g and (r, OWL.onDataRange, None) in g):
+            c += 1
+    # qualifiedCardinality
+    for r, _, _ in g.triples((None, OWL.qualifiedCardinality, None)):
+        if ((r, OWL.onClass, OWL.Thing) not in g and (r, OWL.onClass, None) in g) or \
+           ((r, OWL.onDataRange, RDFS.Literal) not in g and (r, OWL.onDataRange, None) in g):
+            c += 1
+    # maxQualifiedCardinality
+    for r, _, _ in g.triples((None, OWL.maxQualifiedCardinality, None)):
+        if ((r, OWL.onClass, OWL.Thing) not in g and (r, OWL.onClass, None) in g) or \
+           ((r, OWL.onDataRange, RDFS.Literal) not in g and (r, OWL.onDataRange, None) in g):
+            c += 1
+    return c
 
 
-def has_construct_ROLE_TRANSITIVE(g: Graph) -> bool:
-    return _any(g, None, RDF.type, OWL.TransitiveProperty)
+def count_construct_N(g: Graph) -> int:
+    """Unqualified number restrictions (and qualified ones with top concepts)."""
+    c = 0
+    # Standard unqualified cardinalities
+    c += _count(g, None, OWL.minCardinality, None)
+    c += _count(g, None, OWL.cardinality, None)
+    c += _count(g, None, OWL.maxCardinality, None)
+
+    # Qualified cardinalities where qualifier is owl:Thing / rdfs:Literal
+    for r, _, _ in g.triples((None, OWL.minQualifiedCardinality, None)):
+        if (r, OWL.onClass, OWL.Thing) in g or (r, OWL.onDataRange, RDFS.Literal) in g:
+            c += 1
+    for r, _, _ in g.triples((None, OWL.qualifiedCardinality, None)):
+        if (r, OWL.onClass, OWL.Thing) in g or (r, OWL.onDataRange, RDFS.Literal) in g:
+            c += 1
+    for r, _, _ in g.triples((None, OWL.maxQualifiedCardinality, None)):
+        if (r, OWL.onClass, OWL.Thing) in g or (r, OWL.onDataRange, RDFS.Literal) in g:
+            c += 1
+    return c
+
+
+def count_construct_ROLE_COMPLEX(g: Graph) -> int:
+    return (
+        _count(g, None, OWL.hasSelf, None)
+        + _count(g, None, RDF.type, OWL.AsymmetricProperty)
+        + _count(g, None, OWL.propertyDisjointWith, None)
+        + _count(g, None, RDF.type, OWL.AllDisjointProperties)
+        + _count(g, None, RDF.type, OWL.IrreflexiveProperty)
+    )
+
+
+def count_construct_ROLE_REFLEXIVITY_CHAINS(g: Graph) -> int:
+    return (
+        _count(g, None, RDF.type, OWL.ReflexiveProperty)
+        + _count(g, None, OWL.propertyChainAxiom, None)
+    )
+
+
+def count_construct_ROLE_DOMAIN_RANGE(g: Graph) -> int:
+    return (
+        _count(g, None, RDFS.domain, None)
+        + _count(g, None, RDFS.range, None)
+    )
+
+
+def count_construct_ROLE_HIERARCHY(g: Graph) -> int:
+    return (
+        _count(g, None, OWL.equivalentProperty, None)
+        + _count(g, None, RDFS.subPropertyOf, None)
+    )
+
+
+def count_construct_F(g: Graph) -> int:
+    return (
+        _count(g, None, RDF.type, OWL.FunctionalProperty)
+        + _count(g, None, RDF.type, OWL.InverseFunctionalProperty)
+    )
+
+
+def count_construct_ROLE_TRANSITIVE(g: Graph) -> int:
+    return _count(g, None, RDF.type, OWL.TransitiveProperty)
+
 
 _CONSTRUCT_FUNCS = {
-    "ROLE_INVERSE": has_construct_ROLE_INVERSE,
-    "D": has_construct_D,
-    "CONCEPT_INTERSECTION": has_construct_CONCEPT_INTERSECTION,
-    "CONCEPT_UNION": has_construct_CONCEPT_UNION,
-    "CONCEPT_COMPLEX_NEGATION": has_construct_CONCEPT_COMPLEX_NEGATION,
-    "FULL_EXISTENTIAL": has_construct_FULL_EXISTENTIAL,
-    "LIMITED_EXISTENTIAL": has_construct_LIMITED_EXISTENTIAL,
-    "UNIVERSAL_RESTRICTION": has_construct_UNIVERSAL_RESTRICTION,
-    "NOMINALS": has_construct_NOMINALS,
-    "Q": has_construct_Q,
-    "N": has_construct_N,
-    "ROLE_COMPLEX": has_construct_ROLE_COMPLEX,
-    "ROLE_REFLEXIVITY_CHAINS": has_construct_ROLE_REFLEXIVITY_CHAINS,
-    "ROLE_DOMAIN_RANGE": has_construct_ROLE_DOMAIN_RANGE,
-    "ROLE_HIERARCHY": has_construct_ROLE_HIERARCHY,
-    "F": has_construct_F,
-    "ROLE_TRANSITIVE": has_construct_ROLE_TRANSITIVE,
+    "ROLE_INVERSE": count_construct_ROLE_INVERSE,
+    "D": count_construct_D,
+    "CONCEPT_INTERSECTION": count_construct_CONCEPT_INTERSECTION,
+    "CONCEPT_UNION": count_construct_CONCEPT_UNION,
+    "CONCEPT_COMPLEX_NEGATION": count_construct_CONCEPT_COMPLEX_NEGATION,
+    "FULL_EXISTENTIAL": count_construct_FULL_EXISTENTIAL,
+    "LIMITED_EXISTENTIAL": count_construct_LIMITED_EXISTENTIAL,
+    "UNIVERSAL_RESTRICTION": count_construct_UNIVERSAL_RESTRICTION,
+    "NOMINALS": count_construct_NOMINALS,
+    "Q": count_construct_Q,
+    "N": count_construct_N,
+    "ROLE_COMPLEX": count_construct_ROLE_COMPLEX,
+    "ROLE_REFLEXIVITY_CHAINS": count_construct_ROLE_REFLEXIVITY_CHAINS,
+    "ROLE_DOMAIN_RANGE": count_construct_ROLE_DOMAIN_RANGE,
+    "ROLE_HIERARCHY": count_construct_ROLE_HIERARCHY,
+    "F": count_construct_F,
+    "ROLE_TRANSITIVE": count_construct_ROLE_TRANSITIVE,
 }
 CONSTRUCT_NAMES = list(_CONSTRUCT_FUNCS.keys())
 
 
 def compute_constructs(g: Graph) -> dict:
-    return {name: bool(fn(g)) for name, fn in _CONSTRUCT_FUNCS.items()}
+    """Return a dict: {construct_name: count}."""
+    return {name: int(fn(g)) for name, fn in _CONSTRUCT_FUNCS.items()}
 
 # ----------------------------
 # Core statistics
@@ -652,7 +662,7 @@ def write_constructs_csv(path: str, name: str, constructs: dict):
         w = csv.writer(f)
         w.writerow(["construct", name])
         for c in CONSTRUCT_NAMES:
-            w.writerow([c, int(bool(constructs.get(c, False)))])
+            w.writerow([c, int(constructs.get(c, 0))])
 
 
 def write_constructs_compare_csv(path: str, name1: str, constructs1: dict, name2: str, constructs2: dict):
@@ -661,7 +671,11 @@ def write_constructs_compare_csv(path: str, name1: str, constructs1: dict, name2
         w = csv.writer(f)
         w.writerow(["construct", name1, name2])
         for c in CONSTRUCT_NAMES:
-            w.writerow([c, int(bool(constructs1.get(c, False))), int(bool(constructs2.get(c, False)))])
+            w.writerow([
+                c,
+                int(constructs1.get(c, 0)),
+                int(constructs2.get(c, 0)),
+            ])
 
 
 def write_constructs_latex(path: str, name1: str, constructs1: dict, name2: str, constructs2: dict):
@@ -671,8 +685,8 @@ def write_constructs_latex(path: str, name1: str, constructs1: dict, name2: str,
         f.write("\\begin{tabular}{lrr}\\hline\n")
         f.write(f"Construct & {_latex_escape(name1)} & {_latex_escape(name2)} \\\\ \\hline\n")
         for c in CONSTRUCT_NAMES:
-            v1 = int(bool(constructs1.get(c, False)))
-            v2 = int(bool(constructs2.get(c, False)))
+            v1 = int(constructs1.get(c, 0))
+            v2 = int(constructs2.get(c, 0))
             f.write(f"{_latex_escape(c)} & {v1} & {v2} \\\\\n")
         f.write("\\hline\\end{tabular}\n")
 

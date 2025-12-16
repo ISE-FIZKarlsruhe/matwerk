@@ -3,13 +3,63 @@ from rdflib.graph import Graph
 from rdflib.namespace import RDF, RDFS
 from rdflib.term import Literal, URIRef
 
-NFDI_DATASET = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"
+NFDI_DATASET      = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"
+NFDI_PUBLICATION  = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"
+NFDI_LECTURE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010022"
+NFDI_SOFTWARE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"
+
 IAO_0000235 = "http://purl.obolibrary.org/obo/IAO_0000235"
 OBI_0002135 = "http://purl.obolibrary.org/obo/OBI_0002135"
 NFDI_DOI_PRED = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006"
 
 from .mint import get_or_mint_node_at
 from .zenodo_api import get_metadata
+
+def class_iri_for_zenodo_record(meta: dict) -> str:
+    """
+    Decide which class IRI to use based on Zenodo metadata.
+    """
+
+    rt = meta.get("resource_type") or {}
+    rt_type = rt.get("type")
+
+    upload_type = meta.get("upload_type")
+
+    record_type = (rt_type or upload_type or "").lower()
+    print(f"Determining class IRI for record type: {record_type}")
+    #exit()
+
+    if record_type in {"dataset", "image"}:
+        return NFDI_DATASET
+
+    if record_type in {
+        "publication",
+        "article",
+        "conferencepaper",
+        "book",
+        "section",
+        "thesis",
+        "report",
+        "workingpaper",
+        "preprint",
+        "softwaredocumentation",
+    }:
+        return NFDI_PUBLICATION
+
+    if record_type in {
+        "presentation",
+        "poster",
+        "lesson",
+    }:
+        return NFDI_LECTURE
+    
+    if record_type in {
+        "software",
+    }:
+        return NFDI_SOFTWARE
+
+    # Fallback
+    return NFDI_DATASET
 
 def link_value_node_at_index(
     g: Graph,
@@ -48,7 +98,9 @@ def build_record_in_default_graph(
 ) -> None:
     meta = get_metadata(rec)
     subj = instance_uri
-    g.add((subj, RDF.type, URIRef(NFDI_DATASET)))
+    
+    class_iri = class_iri_for_zenodo_record(meta)
+    g.add((subj, RDF.type, URIRef(class_iri)))
 
     title = meta.get("title")
     if title:

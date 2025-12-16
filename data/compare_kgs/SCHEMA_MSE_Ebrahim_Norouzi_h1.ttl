@@ -2,10 +2,11 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix mwo: <http://purls.helmholtz-metadaten.de/mwo/> .
 @prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@prefix ns1: <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#> .
+@prefix conference: <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix msekg-v1: <http://demo.fiz-karlsruhe.de/matwerk/> .
 
 <http://demo.fiz-karlsruhe.de/matwerk/E15879> rdfs:label "Ebrahim Norouzi" ;
     mwo:emailAddress "ebrahim.norouzi@fiz-karlsruhe.de"^^xsd:string ;
@@ -26,16 +27,7 @@
     nfdicore:location <http://demo.fiz-karlsruhe.de/matwerk/E73772> ;
     nfdicore:parentOrganisation <http://demo.fiz-karlsruhe.de/matwerk/E2597> .
 
-<http://demo.fiz-karlsruhe.de/matwerk/E1245258> rdfs:label "Information Service Engineering" ;
-    dcterms:format "Academic teaching materials" ;
-    mwo:description "This lecture provides an introduction into natural language processing (NLP), followed by knowledge representation basics with a focus on knowledge graphs and Semantic Web technologies. Moreover, a brief sketch of machine learning and deep learning technologies complement the lecture to provide some insights on state-of-the-art ISE applications, in particular on semantic and exploratory search." ;
-    mwo:hasLecturer <http://demo.fiz-karlsruhe.de/matwerk/E14862> ;
-    mwo:hasWebsite <http://demo.fiz-karlsruhe.de/matwerk/E395717>,
-        <http://demo.fiz-karlsruhe.de/matwerk/E407352> ;
-    mwo:isOnline true ;
-    mwo:requiredTool <http://demo.fiz-karlsruhe.de/matwerk/E836279> ;
-    rdfs:comment "2021" ;
-    ns1:duration "90 min / week plus exercises"^^xsd:time .
+<http://demo.fiz-karlsruhe.de/matwerk/E1245258> rdfs:label "Information Service Engineering" .
 
 <http://demo.fiz-karlsruhe.de/matwerk/E1246240> rdfs:label "Materials Informatic" .
 

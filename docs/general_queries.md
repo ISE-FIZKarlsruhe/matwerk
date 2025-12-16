@@ -64,7 +64,7 @@ SELECT ?FDOs ?FDOsLabel_ ?FDOsParentDataset ?FDOsURL WHERE {
   # Match any subject (?FDOs) that is an instance of one of the digital object identifier classes
   ?FDOs a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037> .
   ?FDOs rdfs:label ?FDOsLabel_ .
-  ?FDOs <http://purl.obolibrary.org/obo/BFO_0000051> ?FDOsParentDataset .
+  ?FDOs <http://purl.obolibrary.org/obo/BFO_0000050> ?FDOsParentDataset .
   ?FDOs <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?FDOsURL .
 
 }
@@ -296,6 +296,45 @@ SELECT ?person ?label ?email ?orcid WHERE {
 
 }
 LIMIT 999
+
+```
+---
+
+### What are the SPARQL endpoints in the MSE-KG that are about "process"?
+
+```sparql
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX IAO:  <http://purl.obolibrary.org/obo/IAO_>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
+PREFIX BFO:  <http://purl.obolibrary.org/obo/BFO_>
+
+SELECT ?dataset_name ?dataset ?sparql_endpoint ?term_class (xsd:integer(?n) AS ?instances)
+WHERE {
+  ?dataset a nfdi:NFDI_0000009 ;
+           IAO:0000235 ?epInd ;
+           void:classPartition ?cp ;
+           <http://purl.obolibrary.org/obo/IAO_0000235> ?sparql_endpoint_node .
+
+  ?sparql_endpoint_node nfdi:NFDI_0001008 ?sparql_endpoint .
+
+  OPTIONAL {
+    ?dataset rdfs:label ?dataset_name .
+    FILTER(LANG(?dataset_name) = "" || LANGMATCHES(LANG(?dataset_name), "en"))
+  }
+
+  ?cp void:class ?term_class ;
+      void:entities ?n .
+
+  # IRI-based restriction
+  VALUES ?term_class {
+    BFO:0000015      # BFO process
+    # add more IRIs
+  }
+
+}
+ORDER BY ?dataset ?term_class
 
 ```
 

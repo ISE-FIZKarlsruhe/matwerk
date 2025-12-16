@@ -6,19 +6,22 @@ from pathlib import Path
 from typing import Set, Dict, Any, List, Tuple, Optional
 import argparse
 import time
+import datetime
+import uuid
 import requests
 import re
 from urllib.parse import urlsplit, urlunsplit, quote
 from .zenodo_api import ZENODO_API, ZENODO_TIMEOUT
 
 from rdflib import Graph, ConjunctiveGraph, URIRef, Literal, BNode
-from rdflib.namespace import RDF, RDFS, OWL, XSD
+from rdflib.namespace import RDF, RDFS, OWL, XSD, DCTERMS
+from rdflib import Namespace
 
 from .downloads import download_rdf_files, download_rdf_and_zip_collect
 from .iri_utils import normalize_graph_uris, safe_slug
 from .rdf_builders import build_record_in_default_graph
 from .state import load_state, save_state, record_key
-from .zenodo_api import normalize_community, iter_community_records, extract_files, get_records_by_ids
+from .zenodo_api import best_external_url, normalize_community, iter_community_records, extract_files, get_records_by_ids
 from .mint import get_or_mint_instance, get_or_mint_file_graph, get_or_mint_file_identifier
 from .rdf_import import import_rdf_into_named_graph
 from .zenodo_api import get_metadata
@@ -34,6 +37,7 @@ FUNC_TBOX           = "tbox"
 
 STAT = URIRef("https://purls.helmholtz-metadaten.de/msekg/stat/")
 MWO_OWL_PATH = Path(os.environ.get("MWO_OWL_PATH", "ontology/mwo-full.owl"))
+PROV = Namespace("http://www.w3.org/ns/prov#")
 
 # ------------------ Utils for stable per-record graph IRIs ------------------
 def _now_ms() -> int:
@@ -297,6 +301,20 @@ def main():
     ds.bind("obo", "http://purl.obolibrary.org/obo/")
     ds.bind("dcterms", "http://purl.org/dc/terms/")
     ds.bind("stat", str(STAT))
+    
+    ds.bind("prov", str(PROV))
+
+    run_id = os.environ.get("RUN_ID") or uuid.uuid4().hex
+    run_iri = URIRef(f"https://purls.helmholtz-metadaten.de/msekg/{run_id}")
+    run_time = datetime.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+
+    g.add((run_iri, RDF.type, PROV.Activity))
+    g.add((run_iri, PROV.startedAtTime, Literal(run_time, datatype=XSD.dateTime)))
+
+    git_sha = os.environ.get("GIT_SHA")
+    if git_sha:
+        g.add((run_iri, DCTERMS.identifier, Literal(git_sha)))
+
 
     count = 0
     download_root = Path(args.download_dir).expanduser().resolve() if args.download_dir else None
@@ -344,6 +362,34 @@ def main():
 
         # Default graph enrichment for the record
         build_record_in_default_graph(g, rec, instance_iri, state, key, session_nodes)
+        
+        # --- Provenance: source + created/updated (Zenodo) + run ---
+        src_url = best_external_url(rec) or (f"https://zenodo.org/records/{rec.get('id')}" if rec.get("id") else None)
+        if src_url:
+            g.add((instance_iri, DCTERMS.source, URIRef(src_url)))
+            g.add((instance_iri, PROV.wasDerivedFrom, URIRef(src_url)))
+
+        if str(instance_iri) in session_nodes:
+            #g.add((instance_iri, PROV.wasGeneratedBy, run_iri))
+            g.add((instance_iri, PROV.generatedAtTime, Literal(run_time, datatype=XSD.dateTime)))
+
+
+        # Zenodo timestamps:
+        # IMPORTANT: get_metadata(rec) returns rec["metadata"] only
+        meta = get_metadata(rec)
+
+        created_at = rec.get("created") or meta.get("publication_date")
+        updated_at = rec.get("updated") or rec.get("modified") or rec.get("updated_at")  # payload variants
+
+        if created_at:
+            # If created_at is YYYY-MM-DD, this is technically xsd:date; keep as dateTime only if it includes time.
+            dtype = XSD.dateTime if "T" in str(created_at) else XSD.date
+            g.add((instance_iri, DCTERMS.created, Literal(created_at, datatype=dtype)))
+
+        if updated_at:
+            dtype = XSD.dateTime if "T" in str(updated_at) else XSD.date
+            g.add((instance_iri, DCTERMS.modified, Literal(updated_at, datatype=dtype)))
+
 
         # Handle files: enrich ALL, and import RDF from direct files and ZIPs
         files = extract_files(rec)
@@ -371,6 +417,12 @@ def main():
             file_uri = URIRef(file_link) if file_link and file_link.startswith("http") else URIRef(f"urn:file:{safe_slug(file_key)}")
 
             fid = URIRef(get_or_mint_file_identifier(state, key, file_key, session_nodes))
+
+            # Add run provenance only if this fid was minted in THIS run
+            if str(fid) in session_nodes:
+                #g.add((fid, PROV.wasGeneratedBy, run_iri))
+                g.add((fid, PROV.generatedAtTime, Literal(run_time, datatype=XSD.dateTime)))
+
             g.add((fid, URIRef("https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006"), URIRef(to_doi_iri(file_uri))))
             g.add((instance_iri, URIRef("http://purl.obolibrary.org/obo/BFO_0000051"), fid))
             g.add((fid, RDFS.label, Literal(file_key)))
@@ -390,10 +442,15 @@ def main():
             for local_path, content_type, inner_name in downloaded_map.get(file_key, []):
                 combined_key = f"{file_key}!{inner_name}" if inner_name else file_key
                 graph_iri = get_or_mint_file_graph(state, key, combined_key, session_nodes)
+
+                # Add run provenance only if this graph IRI was minted in THIS run
+                if str(graph_iri) in session_nodes:
+                    #g.add((URIRef(graph_iri), PROV.wasGeneratedBy, run_iri))
+                    g.add((URIRef(graph_iri), PROV.generatedAtTime, Literal(run_time, datatype=XSD.dateTime)))
+
                 ok = import_rdf_into_named_graph(ds, local_path, graph_iri, content_type)
                 if ok:
                     g.add((fid, RDFS.seeAlso, graph_iri))
-                    #g.add((instance_iri, RDFS.seeAlso, graph_iri))
                     imported_graphs.append(URIRef(graph_iri))
                 else:
                     print(f"  (skipped linking {local_path.name}; parse failed)")
@@ -465,15 +522,21 @@ def main():
             break
 
     save_state(state_path, state)
-    g.serialize(destination=args.out, format=args.format)
-    print(f"Serializing {count} records to {args.out} as {args.format}…")
+
     # If named graphs exist, use TriG
-    if args.format.lower() != "trig":
-        has_named = any(1 for ctx in ds.contexts() if ctx.identifier != g.identifier)
-        if has_named:
-            print("Note: Dataset contains named graphs. Switching to TriG.")
-            args.format = "trig"
+    has_named = any(1 for ctx in ds.contexts() if ctx.identifier != g.identifier)
+    if args.format.lower() != "trig" and has_named:
+        print("Note: Dataset contains named graphs. Switching to TriG.")
+        args.format = "trig"
 
     normalize_graph_uris(ds)
-    #ds.serialize(destination=args.out.replace(".ttl",".triq"), format=args.format)
+
+    print(f"Serializing {count} records to {args.out} as {args.format}…")
+
+    if args.format.lower() == "trig":
+        ds.serialize(destination=args.out, format="trig")
+    else:
+        g.serialize(destination=args.out, format=args.format)
+
     print("Done.")
+

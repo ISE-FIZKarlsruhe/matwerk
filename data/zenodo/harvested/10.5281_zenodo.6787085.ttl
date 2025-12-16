@@ -1,13 +1,22 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759757741871> a nfdi:NFDI_0000009 ;
     rdfs:label "https://zenodo.org/records/6787084" ;
     obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759757741873>,
         <https://purls.helmholtz-metadaten.de/msekg/1759757741874> ;
-    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759757741872> .
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759757741872> ;
+    dcterms:created "2022-07-01T13:46:00.330120+00:00"^^xsd:dateTime ;
+    dcterms:modified "2024-07-16T12:25:21.843238+00:00"^^xsd:dateTime ;
+    dcterms:source <https://doi.org/10.5281/zenodo.6787085> ;
+    prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.6787085> .
+
+<https://purls.helmholtz-metadaten.de/msekg/e968d05d4a124d819550561878a00f96> a prov:Activity ;
+    prov:startedAtTime "2025-12-16T11:02:06+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759757741872> rdfs:label "Brinell-Hardness (HBW 2.5/62.5) of Al-alloy EN AW-2618A after different aging times and temperatures" ;
     obo:OBI_0002135 "Brinell-Hardness (HBW 2.5/62.5) of Al-alloy EN AW-2618A after different aging times and temperatures" .

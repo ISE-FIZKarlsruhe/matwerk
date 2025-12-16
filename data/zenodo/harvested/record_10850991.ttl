@@ -1,9 +1,11 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://purls.helmholtz-metadaten.de/msekg/1759758157547> a nfdi:NFDI_0000009 ;
+<https://purls.helmholtz-metadaten.de/msekg/1759758157547> a nfdi:NFDI_0000190 ;
     rdfs:label "https://zenodo.org/records/10850990" ;
     obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759758157549>,
         <https://purls.helmholtz-metadaten.de/msekg/1759758157552>,
@@ -25,7 +27,14 @@
         <https://purls.helmholtz-metadaten.de/msekg/1759758157568>,
         <https://purls.helmholtz-metadaten.de/msekg/1759758157569>,
         <https://purls.helmholtz-metadaten.de/msekg/1759758157570> ;
-    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759758157548> .
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759758157548> ;
+    dcterms:created "2024-03-22T00:03:08.006534+00:00"^^xsd:dateTime ;
+    dcterms:modified "2024-07-06T20:23:41.775339+00:00"^^xsd:dateTime ;
+    dcterms:source <https://doi.org/10.5281/zenodo.10850991> ;
+    prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.10850991> .
+
+<https://purls.helmholtz-metadaten.de/msekg/fda3cc4e779a473a99e1e30ff84d5d5d> a prov:Activity ;
+    prov:startedAtTime "2025-12-16T10:59:59+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759758157548> rdfs:label "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulation of nanoindentation in Al and Fe\"" .

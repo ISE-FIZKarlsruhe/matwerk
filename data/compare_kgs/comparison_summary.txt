@@ -1,15 +1,13 @@
 === High-level comparison ===
-Reasoner: rdfs (axioms=False, daxioms=False)
-
-triples: BFO_MSE=240519 | SCHEMA_MSE=18413
-num_subjects: BFO_MSE=22788 | SCHEMA_MSE=5553
-num_objects: BFO_MSE=21229 | SCHEMA_MSE=5113
-num_predicates: BFO_MSE=157 | SCHEMA_MSE=117
-num_literals: BFO_MSE=21772 | SCHEMA_MSE=3559
-num_resources: BFO_MSE=22790 | SCHEMA_MSE=5555
+triples: BFO_MSE=92840 | SCHEMA_MSE=8143
+num_subjects: BFO_MSE=13642 | SCHEMA_MSE=1875
+num_objects: BFO_MSE=28633 | SCHEMA_MSE=5012
+num_predicates: BFO_MSE=143 | SCHEMA_MSE=111
+num_literals: BFO_MSE=22225 | SCHEMA_MSE=3066
+num_resources: BFO_MSE=16518 | SCHEMA_MSE=2678
 num_classes: BFO_MSE=453 | SCHEMA_MSE=136
-num_properties: BFO_MSE=268 | SCHEMA_MSE=180
-num_individuals: BFO_MSE=22067 | SCHEMA_MSE=5237
+num_properties: BFO_MSE=211 | SCHEMA_MSE=157
+num_individuals: BFO_MSE=10019 | SCHEMA_MSE=1486
 
 CSV: *_global_stats.csv, *_constructs.csv, constructs_compare.csv
 LaTeX: global_stats_compare.tex, constructs_compare.tex

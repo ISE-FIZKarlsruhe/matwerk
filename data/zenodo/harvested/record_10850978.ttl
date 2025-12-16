@@ -1,9 +1,14 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://purls.helmholtz-metadaten.de/msekg/1759758156248> a nfdi:NFDI_0000009 ;
+<https://purls.helmholtz-metadaten.de/msekg/1014e86f3d724927a3b22cb2fa954d68> a prov:Activity ;
+    prov:startedAtTime "2025-12-16T10:59:58+00:00"^^xsd:dateTime .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758156248> a nfdi:NFDI_0000190 ;
     rdfs:label "https://zenodo.org/records/10850977" ;
     obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759758156250>,
         <https://purls.helmholtz-metadaten.de/msekg/1759758156251>,
@@ -27,7 +32,11 @@
         <https://purls.helmholtz-metadaten.de/msekg/1759758156269>,
         <https://purls.helmholtz-metadaten.de/msekg/1759758156270>,
         <https://purls.helmholtz-metadaten.de/msekg/1759758156271> ;
-    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759758156249> .
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759758156249> ;
+    dcterms:created "2024-03-21T23:40:09.006242+00:00"^^xsd:dateTime ;
+    dcterms:modified "2024-07-06T20:23:48.164705+00:00"^^xsd:dateTime ;
+    dcterms:source <https://doi.org/10.5281/zenodo.10850978> ;
+    prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.10850978> .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759758156249> rdfs:label "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" .

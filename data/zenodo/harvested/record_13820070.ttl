@@ -1,15 +1,24 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://purls.helmholtz-metadaten.de/msekg/1758983993115> a nfdi:NFDI_0000009 ;
+<https://purls.helmholtz-metadaten.de/msekg/1758983993115> a nfdi:NFDI_0000190 ;
     rdfs:label "https://zenodo.org/records/11668375" ;
     obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1758983993117>,
         <https://purls.helmholtz-metadaten.de/msekg/1758983993118>,
         <https://purls.helmholtz-metadaten.de/msekg/1758983993119>,
         <https://purls.helmholtz-metadaten.de/msekg/1758983993120> ;
-    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1758983993116> .
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1758983993116> ;
+    dcterms:created "2024-09-20T15:24:11.374727+00:00"^^xsd:dateTime ;
+    dcterms:modified "2024-09-20T15:24:11.777679+00:00"^^xsd:dateTime ;
+    dcterms:source <https://doi.org/10.5281/zenodo.13820070> ;
+    prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.13820070> .
+
+<https://purls.helmholtz-metadaten.de/msekg/41f939fa13d947c5bbb226f0e46fd892> a prov:Activity ;
+    prov:startedAtTime "2025-12-16T10:59:15+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1758983993116> rdfs:label "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" .
