@@ -4,6 +4,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ns1: <http://orkg.org/orkg/predicate/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix qb: <http://purl.org/linked-data/cube#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
@@ -99,7 +100,8 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description """The information-containing-entity-has-part statement describes the part-whole relationship between two different entities that are the bearer of information. The statement may also include the specification of a date-time or a time interval for which the statement is valid. The information-containing-entity that takes the part-role in one statement can take the subject role in another information-containing-entity-has-part statement. This can result in chains of information-containing-entity-has-part statements that form a tree-shaped hierarchy of information parthood relations.
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "This scholarly paper has part an Introduction. This movie has part subtitles. This dataset has part provenance metadata."^^xsd:string .
+    ns1:exampleOfUsage "This scholarly paper has part an Introduction. This movie has part subtitles. This dataset has part provenance metadata."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100005> a owl:Class ;
     rdfs:label "Material-entity-has-part statement (class)"^^xsd:string ;
@@ -113,14 +115,16 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description """The material-entity-has-composition statement describes the (chemical) substances of which the material entity is composed. The statement may also include the specification of a date-time or time interval for which the statement is valid. The statement should not be used to specify the parts of the material entity, such as an ant having an ant head as a part. For this, you should use the material-entity-has-part statement type. 
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "This table is composed of wood and steel. This book is composed of paper and cardboard. This ant is composed of cells, fluids, and chitin."^^xsd:string .
+    ns1:exampleOfUsage "This table is composed of wood and steel. This book is composed of paper and cardboard. This ant is composed of cells, fluids, and chitin."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100007> a owl:Class ;
     rdfs:label "Process-has-process-step statement (class)"^^xsd:string ;
     ns1:description """The process-has-process-step statement describes the part-whole relationship between two different process entities/objects. The statement may also include the specification of a date-time or a time interval for which the statement is valid. The process step that takes the step-role in one statement can take the role of the process consisting of steps in another process-has-process-step statement. This can result in chains of process-has-process-step statements that form a tree-shaped hierarchy of process parthood relations.
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "This cooking has step mixing. This study has step field trip. This field trip has step specimen collection."^^xsd:string .
+    ns1:exampleOfUsage "This cooking has step mixing. This study has step field trip. This field trip has step specimen collection."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100008> a owl:Class ;
     rdfs:label "measurement statement (class)"^^xsd:string ;
@@ -135,7 +139,8 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description """The material-entity-has-part statement describes the part-whole relationship between two different material entities/objects. The statement may also include the specification of a date-time or time interval for which the statement is valid. The statement should not be used to describe the overall composition of a material entity, e.g., what (chemical) substance it is made of. For this, the statement type material-entity-has-composition should be used. The material entity that takes the part-role in one statement can take the subject role in another material-entity-has-part statement. This can result in chains of material-entity-has-part statements that form a tree-shaped hierarchy of material parthood relations.
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "This cat has part head. This head has part 2 eyes. This table has part 4 table leg. This book has part hard cover. "^^xsd:string .
+    ns1:exampleOfUsage "This cat has part head. This head has part 2 eyes. This table has part 4 table leg. This book has part hard cover. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C10001> a owl:Class ;
     rdfs:label "endpoint assay"^^xsd:string ;
@@ -154,7 +159,8 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description """The causal-fuzzy-cognitive-map statement describes a causal relationship between two variables, documented as a cause concept and an effect concept. The strength of the causal relationship is indicated by a value between -1 and +1, with negative values indicating causal decrease and positive values causal increase of the variable.  See also https://doi.org/10.1016/j.ecolmodel.2003.10.027
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "Wetlands has a fuzzy causal relationship to Fish of +1. Lake Pollution has a fuzzy causal relationship to Wetlands of -0.2"^^xsd:string .
+    ns1:exampleOfUsage "Wetlands has a fuzzy causal relationship to Fish of +1. Lake Pollution has a fuzzy causal relationship to Wetlands of -0.2"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100012> a owl:Class ;
     rdfs:label "measurement statement (class)"^^xsd:string ;
@@ -162,7 +168,8 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
     ns1:exampleOfUsage """This apple has a weight of 212.45 grams (95% Conf. Int.: 212.44 - 212.47 grams). The sample has a mean blood pressure of 120 mmHg. The lake has a pH of 7.5.
-"""^^xsd:string .
+"""^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100013> a owl:Class ;
     rdfs:label "continuity-of-two-material-entities statement (class)"^^xsd:string ;
@@ -183,35 +190,40 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description """The overlap-of-two-material-entities statement describes the spatial and structural overlap between two material entities that share at least one part. In other words, whenever two material entities A and B both have the same entity C as their part, A overlaps with B. The statement may also include the specification of a date-time or time interval for which the statement is valid. 
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "This human digestive system overlaps with this human trunk. This human circulatory system overlaps with this human left hand. "^^xsd:string .
+    ns1:exampleOfUsage "This human digestive system overlaps with this human trunk. This human circulatory system overlaps with this human left hand. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100016> a owl:Class ;
     rdfs:label "continuity-of-two-material-entities statement (class)"^^xsd:string ;
     ns1:description """The continuity-of-two-material-entities statement describes the spatial and structural relationship between two material entities that are physically continuous with each other, i.e., they share a fiat boundary. The statement may also include the specification of a date-time or time interval for which the statement is valid. 
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "This left hand is continuous with this right forearm. This tree trunk is continuous with these tree roots. "^^xsd:string .
+    ns1:exampleOfUsage "This left hand is continuous with this right forearm. This tree trunk is continuous with these tree roots. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100017> a owl:Class ;
     rdfs:label "connectedness-of-two-material-entities-via-a-third-entity statement (class)"^^xsd:string ;
     ns1:description """The connectedness-of-two-material-entities-via-a-third-entity statement describes the spatial and structural relationship between two material entities that are physically connected via a third material entity. The statement may also include the specification of a date-time or time interval for which the statement is valid. 
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "This table top is connected to this table leg via this screw. This poster is connected to this poster board via this pin. This sheet of paper is connected to this box via this glue."^^xsd:string .
+    ns1:exampleOfUsage "This table top is connected to this table leg via this screw. This poster is connected to this poster board via this pin. This sheet of paper is connected to this box via this glue."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100018> a owl:Class ;
     rdfs:label "spatial-disconnectedness-of-two-material-entities statement (class)"^^xsd:string ;
     ns1:description """The spatial-disconnectedness-of-two-material-entities statement describes the spatial separation of two material entities. Two material entities that are spatially disconnected have no parts in common. The statement may also include the specification of a date-time or time interval for which the statement is valid. 
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "This table is spatially disjoint from this carpet. This human hand is spatially separate from this human foot."^^xsd:string .
+    ns1:exampleOfUsage "This table is spatially disjoint from this carpet. This human hand is spatially separate from this human foot."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100019> a owl:Class ;
     rdfs:label "adjacency-of-two-matieral-entities statement (class)"^^xsd:string ;
     ns1:description """The adjacency-of-two-matieral-entities statement describes the spatial relationship between two material entities that share some of their boundary. In other words, whenever two material entities "touch" each other, they are adjacent. The statement may also include the specification of a date-time or time interval for which the statement is valid. 
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "A butterfly touching a leaf with its leg is adjacent to that leaf. This plasma membrane is adjacent to this cytoplasm. This portion of water is adjacent to this cup. "^^xsd:string .
+    ns1:exampleOfUsage "A butterfly touching a leaf with its leg is adjacent to that leaf. This plasma membrane is adjacent to this cytoplasm. This portion of water is adjacent to this cup. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C10002> a owl:Class ;
     rdfs:label "homogeneous phase"^^xsd:string ;
@@ -222,14 +234,16 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description """The material-entity-surrounded-by-material-entity statement describes the spatial relationship between two material entities, in which one is surrounded by the other. More specifically: Material entity A is surrounded by material entity B if two conditions are met: 1) Material entity A is right next to B, and no matter which other spatial region touches A, it also overlaps with B. 2) Most of the boundary (the outer edge) of material entity A is shared with B. Therefore, for material entity A to be surrounded by material entity B, B needs to cover almost all of the space around A. The statement may also include the specification of a date-time or time interval for which the statement is valid. 
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "This portion of water is surrounded by a bottle. This smartphone is surrounded by a protective case. This cherry stone is surrounded by fruit pulp."^^xsd:string .
+    ns1:exampleOfUsage "This portion of water is surrounded by a bottle. This smartphone is surrounded by a protective case. This cherry stone is surrounded by fruit pulp."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100021> a owl:Class ;
     rdfs:label "location-between-two-material-entities-or-spatial-regions statement (class)"^^xsd:string ;
     ns1:description """This location-between-two-material-entities-or-spatial-regions statement describes the spatial relationship between two material entities or spatial regions, in which one is the location of the other. The material entity or spatial region that is located in the other material entity or spatial region can take the location role in another location-between-two-material-entities-or-spatial-regions statement. This can result in chains of location-between-two-material-entities-or-spatial-regions statements that form a tree-shaped hierarchy of located-in relations.
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "This human heart is located in this human body. This portion of water is located in this bottle. Paris is located in France. This car is located in Berlin."^^xsd:string .
+    ns1:exampleOfUsage "This human heart is located in this human body. This portion of water is located in this bottle. Paris is located in France. This car is located in Berlin."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100022> a owl:Class ;
     rdfs:label "Small-Language-Model"^^xsd:string ;
@@ -240,14 +254,16 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description """The statement describes the metadata on the open education resources
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "The video lecture \"Game theory. Graphical solution\" on Operations Research by Tetiana Shestakevych from Lviv Polytechnic National University, Lviv, Ukraine, is an open education resource (DOI https://doi.org/10.5446/68343) at TIB AV-PORTAL, created within Projekt 'Open Education Resources with Ukraine' in 2024."^^xsd:string .
+    ns1:exampleOfUsage "The video lecture \"Game theory. Graphical solution\" on Operations Research by Tetiana Shestakevych from Lviv Polytechnic National University, Lviv, Ukraine, is an open education resource (DOI https://doi.org/10.5446/68343) at TIB AV-PORTAL, created within Projekt 'Open Education Resources with Ukraine' in 2024."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100024> a owl:Class ;
     rdfs:label "Open-Education-Resources-description (class)"^^xsd:string ;
     ns1:description """Description of the Open Education Resources from TIB AV-portal.
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "The \"Game theory. Graphical solution\", an Open Education Resource, is a video lecture at   TIB AV-PORTAL with (DOI https://doi.org/10.5446/68343), created by Tetiana Shestakevych from Lviv Polytechnic National University, Lviv, Ukraine, on the Operations Research course within the  Projekt 'Open Education Resources with Ukraine' in 2024."^^xsd:string .
+    ns1:exampleOfUsage "The \"Game theory. Graphical solution\", an Open Education Resource, is a video lecture at   TIB AV-PORTAL with (DOI https://doi.org/10.5446/68343), created by Tetiana Shestakevych from Lviv Polytechnic National University, Lviv, Ukraine, on the Operations Research course within the  Projekt 'Open Education Resources with Ukraine' in 2024."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C10003> a owl:Class ;
     rdfs:label "confirmatory assay"^^xsd:string ;
@@ -434,14 +450,16 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description """This hypothesis-description-in-invasion-biology statement describes a hypothesis in invasion biology. It requires a textual description of the hypothesis and optionally allows the specification of references (with URL/DOI), the specification of its official name and short name, a link to an entry of the same hypothesis but with a different name, and the specification of the research field that studies it.
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "The Anthropogenically induced adaptation to invade hypothesis can be described as \"Anthropogenically induced adaptation to invade can facilitate invasion and invasiveness of an organism or population.\", is based on Hufbauer et al. 2012 (https://doi.org/10.1111/oik.09645), has the official name \"Anthropogenically induced adaptation to invade\" (short: AIAI), is the same as the Anthropogenically induced adaptation to invade hypothesis, and is studied by Invasion Biology."^^xsd:string .
+    ns1:exampleOfUsage "The Anthropogenically induced adaptation to invade hypothesis can be described as \"Anthropogenically induced adaptation to invade can facilitate invasion and invasiveness of an organism or population.\", is based on Hufbauer et al. 2012 (https://doi.org/10.1111/oik.09645), has the official name \"Anthropogenically induced adaptation to invade\" (short: AIAI), is the same as the Anthropogenically induced adaptation to invade hypothesis, and is studied by Invasion Biology."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101001> a owl:Class ;
     rdfs:label "WIP_DON'T_USE!_hypothesis-test-in-invasion-biology statement (class)"^^xsd:string ;
     ns1:description """Template describing a hypothesis test included in a study. It allows the annotation of the hypothesis being tested and whether the results support, contradict or are undecided about the hypothesis.
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "The tens rule has been tested and is supported. The Enemy release hypothesis has been tested not conclusively and is not supported (description of test result: Invasive spider was more predated by native predators than native prey.)"^^xsd:string .
+    ns1:exampleOfUsage "The tens rule has been tested and is supported. The Enemy release hypothesis has been tested not conclusively and is not supported (description of test result: Invasive spider was more predated by native predators than native prey.)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101002> a owl:Class ;
     rdfs:label "WIP_DO_NOT_USE! invasion-biology-study-research-question statement (class)"^^xsd:string ;
@@ -449,14 +467,16 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
 https://orkg.org/resource/R652027?noRedirect=&isEditMode=false
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "Invasion success and invasibility (invasion biology theme) has been studied for Orgyia antiqua, attempting to answer the research question 'Which type of forest coverage is more resistant to the invasive Rusty Tussok Moth', testing the Opportunity windows hypothesis. Invasion success and invasibility (invasion biology theme) has been studied for Xanthium strumarium, attempting to answer the research question 'How can we successfully control invasive species?', testing the Human commensalism hypothesis."^^xsd:string .
+    ns1:exampleOfUsage "Invasion success and invasibility (invasion biology theme) has been studied for Orgyia antiqua, attempting to answer the research question 'Which type of forest coverage is more resistant to the invasive Rusty Tussok Moth', testing the Opportunity windows hypothesis. Invasion success and invasibility (invasion biology theme) has been studied for Xanthium strumarium, attempting to answer the research question 'How can we successfully control invasive species?', testing the Human commensalism hypothesis."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101003> a owl:Class ;
     rdfs:label "restoration-study statement (class)"^^xsd:string ;
     ns1:description """The restoration-study statement describes how a restoration technique was tested to reverse the effect of a specific degradation type, with optional information about positive effects on the population size of specific taxa in a specific location at a specific time, and a description of the effectiveness of the technique.
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "Sod translocation was tested in order to reverse the effects of land use change and enhance the population of Phengaris (Maculinea) teleius (NCBI:txid203778) in Natura 2000 area “Vlijmens Ven, Moerputten and Bossche Broek”."^^xsd:string .
+    ns1:exampleOfUsage "Sod translocation was tested in order to reverse the effects of land use change and enhance the population of Phengaris (Maculinea) teleius (NCBI:txid203778) in Natura 2000 area “Vlijmens Ven, Moerputten and Bossche Broek”."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101004> a owl:Class ;
     rdfs:label "result-of-structural-equation-modeling (class)"^^xsd:string ;
@@ -466,28 +486,32 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:exampleOfUsage """Shrub cover in 1m radius is correlated with Coefficient of variation of light availability with a normalized correlation coefficient of 0.41 and a P value of <0.01
 Shrub cover in 1m radius is correlated with Total species richness with a normalized correlation coefficient of 0.29 and a P value of <0.1
 Coefficient of variation of light availability is correlated with Total species richness with a normalized correlation coefficient of 0.34 and a P value of <0.05
-"""^^xsd:string .
+"""^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101005> a owl:Class ;
     rdfs:label "optimization_method_application (class)"^^xsd:string ;
     ns1:description """The Statement will describe an optimization method applied to specific subject areas
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "The [Branch and Bound algorithm] was used to solve [integer programming] task, and its results are used to optimize the [total of efficiencies of wind power plants]. "^^xsd:string .
+    ns1:exampleOfUsage "The [Branch and Bound algorithm] was used to solve [integer programming] task, and its results are used to optimize the [total of efficiencies of wind power plants]. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101006> a owl:Class ;
     rdfs:label "result-of-generalized-linear-mixed-models statement (class)"^^xsd:string ;
     ns1:description """The result-of-generalized-linear-mixed-models statement describes which variable A was the best predictor of a given variable B in a GLMM, providing an AIC value for variable A together with an adjusted p Value.
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "Sanguisorba cover was the best predictor of Myrmica scabrinodis in a GLMM, with the model of the former having an AIC of 436.8 and an adjusted p-value of 0.05."^^xsd:string .
+    ns1:exampleOfUsage "Sanguisorba cover was the best predictor of Myrmica scabrinodis in a GLMM, with the model of the former having an AIC of 436.8 and an adjusted p-value of 0.05."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101007> a owl:Class ;
     rdfs:label "fake_news_detection_application (class)"^^xsd:string ;
     ns1:description """The statement will describe the method for detection of fake news.
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "The [long short-term memory, reccurent neural network] deep learning model was used on [Arabic] language dataset of [8196] entries."^^xsd:string .
+    ns1:exampleOfUsage "The [long short-term memory, reccurent neural network] deep learning model was used on [Arabic] language dataset of [8196] entries."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101008> a owl:Class ;
     rdfs:label "hypothesis evaluation status"^^xsd:string ;
@@ -537,7 +561,8 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description """This gives the method adopted for soil classification and the resulting classes, texture and available nutrients or elements and the values and ranges.
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "Artificial Neural Network (ANN) models soil texture to sand, clay and silt"^^xsd:string .
+    ns1:exampleOfUsage "Artificial Neural Network (ANN) models soil texture to sand, clay and silt"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C102010> a owl:Class ;
     rdfs:label "Template energy procurement [C]"^^xsd:string .
@@ -1767,7 +1792,8 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description """This statement describes the growth conditions of prokaryotic strains in BacDive Database. 
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "Acetivibrio straminisolvens  (Strain Bac Dive ID 2827) has a positive growth at an optimum temperature of 50 °C in Acetivibrio Medium. "^^xsd:string .
+    ns1:exampleOfUsage "Acetivibrio straminisolvens  (Strain Bac Dive ID 2827) has a positive growth at an optimum temperature of 50 °C in Acetivibrio Medium. "^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C119001> a owl:Class ;
     rdfs:label "treatment strategies"^^xsd:string .
@@ -2756,7 +2782,8 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
     ns1:description """A generic statement relating interventions to types of harm they are meant to reduce
 
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
-    ns1:exampleOfUsage "Parachute use reduces injury from gravitational challenge"^^xsd:string .
+    ns1:exampleOfUsage "Parachute use reduces injury from gravitational challenge"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C123128> a owl:Class ;
     rdfs:label "chemical compound"^^xsd:string ;
@@ -2783,7 +2810,8 @@ This is a Rosetta Statement class. Every Rosetta Stone Statement class has a tem
 This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
     ns1:exampleOfUsage """Sickle cell anemia is an evolutionary sequela of malaria in the coastal plains of Kenya. 
 Cystic fibrosis is an evolutionary sequela of tuberculosis in Europe. 
-Atopic dermatitis is an evolutionary sequela of vitamin D3 deficiency in northern Europe. """^^xsd:string .
+Atopic dermatitis is an evolutionary sequela of vitamin D3 deficiency in northern Europe. """^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C123133> a owl:Class ;
     rdfs:label "cohort"^^xsd:string ;
@@ -2884,6 +2912,287 @@ Atopic dermatitis is an evolutionary sequela of vitamin D3 deficiency in norther
     rdfs:label "cloud cover"^^xsd:string ;
     ns1:description "fraction of the sky obscured by clouds when observed from a particular location"^^xsd:string ;
     owl:equivalentClass <https://www.wikidata.org/entity/Q830457> .
+
+<http://orkg.org/orkg/class/C123153> a owl:Class ;
+    rdfs:label "research question"^^xsd:string ;
+    ns1:description "question that a research project sets out to answer"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1438033> .
+
+<http://orkg.org/orkg/class/C123154> a owl:Class ;
+    rdfs:label "object of study"^^xsd:string ;
+    ns1:description "something that undergoes testing or observation in a scientific experiment or in a scientific study"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q4330518> .
+
+<http://orkg.org/orkg/class/C123155> a owl:Class ;
+    rdfs:label "research object"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123156> a owl:Class ;
+    rdfs:label "hypothesis"^^xsd:string ;
+    ns1:description "proposed explanation for an observation, phenomenon, or scientific problem"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q41719> .
+
+<http://orkg.org/orkg/class/C123157> a owl:Class ;
+    rdfs:label "NFDIxCS BI Schema [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123158> a owl:Class ;
+    rdfs:label "Keywords"^^xsd:string ;
+    ns1:description "word that academics use to reveal the internal structure of an author's reasoning"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q6398560> .
+
+<http://orkg.org/orkg/class/C123159> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123160> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123161> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123162> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123163> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123164> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123165> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123166> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123167> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123168> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123169> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123170> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123171> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123172> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123173> a owl:Class ;
+    rdfs:label "research components"^^xsd:string ;
+    ns1:description "collection of Type of theory, emphasis, formal concepts, algorithms, hypothesis, independent variables, dependent variables "^^xsd:string .
+
+<http://orkg.org/orkg/class/C123174> a owl:Class ;
+    rdfs:label "reseach components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123175> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect information about the research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123176> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect information about the research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123177> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123178> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123179> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123180> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123181> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123182> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123183> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123184> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123185> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123186> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123187> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123188> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123189> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123190> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123191> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123192> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123193> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123194> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123195> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123196> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123197> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123198> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123199> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123200> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123201> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123202> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123203> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123204> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123205> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123206> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123207> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123208> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123209> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123210> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123211> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123212> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string ;
+    ns1:description "collect detail about research artifact and its components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123213> a owl:Class ;
+    rdfs:label "focus and intent"^^xsd:string ;
+    ns1:description "collection of main intent of the paper"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124000> a owl:Class ;
+    rdfs:label "m4i [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124001> a owl:Class ;
+    rdfs:label "has simulation type"^^xsd:string ;
+    owl:equivalentClass <https://w3id.org/nfdi4ing/terms/5e910c09-804d-439c-b401-8fd9afe9414e/> .
+
+<http://orkg.org/orkg/class/C124002> a owl:Class ;
+    rdfs:label "has simulation type"^^xsd:string ;
+    ns1:description "Associates a simulation model or study with the type of simulation methodology it employs"^^xsd:string ;
+    owl:equivalentClass <https://w3id.org/nfdi4ing/terms/5e910c09-804d-439c-b401-8fd9afe9414e> .
+
+<http://orkg.org/orkg/class/C124003> a owl:Class ;
+    rdfs:label "Method"^^xsd:string ;
+    ns1:description "Method"^^xsd:string ;
+    owl:equivalentClass <http://w3id.org/nfdi4ing/metadata4ing#Method> .
+
+<http://orkg.org/orkg/class/C124004> a owl:Class ;
+    rdfs:label "Agent"^^xsd:string ;
+    owl:equivalentClass prov:Agent .
+
+<http://orkg.org/orkg/class/C124005> a owl:Class ;
+    rdfs:label "ProcessingStep"^^xsd:string ;
+    owl:equivalentClass <http://w3id.org/nfdi4ing/metadata4ing#ProcessingStep> .
+
+<http://orkg.org/orkg/class/C124006> a owl:Class ;
+    rdfs:label "Variable"^^xsd:string ;
+    owl:equivalentClass <http://www.molmod.info/semantics/pims-ii.ttl#Variable> .
+
+<http://orkg.org/orkg/class/C124007> a owl:Class ;
+    rdfs:label "Tool"^^xsd:string ;
+    owl:equivalentClass <http://w3id.org/nfdi4ing/metadata4ing#Tool> .
+
+<http://orkg.org/orkg/class/C124008> a owl:Class ;
+    rdfs:label "Property"^^xsd:string ;
+    owl:equivalentClass <http://www.molmod.info/semantics/pims-ii.ttl#Property> .
 
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string ;
@@ -9714,7 +10023,8 @@ Atopic dermatitis is an evolutionary sequela of vitamin D3 deficiency in norther
 
 <http://orkg.org/orkg/class/C99009> a owl:Class ;
     rdfs:label "benchmarked result / task-dataset-model-metric-score (TDMS) statement (class)"^^xsd:string ;
-    ns1:exampleOfUsage "Basic-I_lion_fine-tuned has a performance of 91.1 Percent Top_1_Accuracy for the ML task Image_Classification using the dataset ImageNet."^^xsd:string .
+    ns1:exampleOfUsage "Basic-I_lion_fine-tuned has a performance of 91.1 Percent Top_1_Accuracy for the ML task Image_Classification using the dataset ImageNet."^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C99010> a owl:Class ;
     rdfs:label "LLM-Hallu-Bench"^^xsd:string ;
@@ -9784,12 +10094,14 @@ Atopic dermatitis is an evolutionary sequela of vitamin D3 deficiency in norther
 
 <http://orkg.org/orkg/class/C99027> a owl:Class ;
     rdfs:label "Text2KGBenchmark (class)"^^xsd:string ;
-    ns1:exampleOfUsage "Given the Text2KGBench benchmark, the Wikidata-TekGen dataset, and the Vicuna LLM model, variant All chosen (Options can be either All, Selected. Unseen), the benchmark gives a Precision (P) of 0.38, a Recall of 0.34, an F1-score of 0.35, an ontology conformance (OC) of 0.83 and a Subject Hallucination (SH) of 0.17, a Relation Hallucination (RH) of 0.17 and an Object Hallucination of 0.17"^^xsd:string .
+    ns1:exampleOfUsage "Given the Text2KGBench benchmark, the Wikidata-TekGen dataset, and the Vicuna LLM model, variant All chosen (Options can be either All, Selected. Unseen), the benchmark gives a Precision (P) of 0.38, a Recall of 0.34, an F1-score of 0.35, an ontology conformance (OC) of 0.83 and a Subject Hallucination (SH) of 0.17, a Relation Hallucination (RH) of 0.17 and an Object Hallucination of 0.17"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C99028> a owl:Class ;
     rdfs:label "biodiversity occurrence record (organism sighting) statement (class)"^^xsd:string ;
     ns1:exampleOfUsage """The species/taxon Danaus plexippus was observed at San Francisco (37.7749° ; -122.4194°) on July 15, 2023, with a quantity of + with Braun-Blanquet Scale, based on humanObservation.
-"""^^xsd:string .
+"""^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C99029> a owl:Class ;
     rdfs:label "Nutrient [C]"^^xsd:string .
@@ -10151,9 +10463,6 @@ Atopic dermatitis is an evolutionary sequela of vitamin D3 deficiency in norther
 <http://orkg.org/orkg/class/RosettaNodeShape> a owl:Class ;
     rdfs:label "Rosetta Stone Node Shape"^^xsd:string .
 
-<http://orkg.org/orkg/class/RosettaStoneStatement> a owl:Class ;
-    rdfs:label "Rosetta Stone Statement"^^xsd:string .
-
 <http://orkg.org/orkg/class/Row> a owl:Class ;
     rdfs:label "Row"^^xsd:string ;
     owl:equivalentClass csvw:Row .
@@ -10194,6 +10503,7 @@ Atopic dermatitis is an evolutionary sequela of vitamin D3 deficiency in norther
 
 <http://orkg.org/orkg/class/String> a owl:Class ;
     rdfs:label "Text"^^xsd:string ;
+    ns1:description "Method"^^xsd:string ;
     owl:equivalentClass xsd:string .
 
 <http://orkg.org/orkg/class/SupplementaryInformationDescription> a owl:Class ;
@@ -10372,4 +10682,7 @@ owl:Thing a owl:Class ;
 <http://orkg.org/orkg/class/C58031> a owl:Class ;
     rdfs:label "Pattern"^^xsd:string ;
     owl:equivalentClass <https://w3id.org/semsys/ns/swemls#Pattern> .
+
+<http://orkg.org/orkg/class/RosettaStoneStatement> a owl:Class ;
+    rdfs:label "Rosetta Stone Statement"^^xsd:string .
 

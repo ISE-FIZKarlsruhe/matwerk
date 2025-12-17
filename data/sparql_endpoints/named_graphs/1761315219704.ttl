@@ -2120,6 +2120,216 @@
 <http://orkg.org/orkg/class/C123152> a owl:Class ;
     rdfs:label "cloud cover"^^xsd:string .
 
+<http://orkg.org/orkg/class/C123153> a owl:Class ;
+    rdfs:label "research question"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123154> a owl:Class ;
+    rdfs:label "object of study"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123155> a owl:Class ;
+    rdfs:label "research object"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123156> a owl:Class ;
+    rdfs:label "hypothesis"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123157> a owl:Class ;
+    rdfs:label "NFDIxCS BI Schema [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123158> a owl:Class ;
+    rdfs:label "Keywords"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123159> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123160> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123161> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123162> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123163> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123164> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123165> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123166> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123167> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123168> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123169> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123170> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123171> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123172> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123173> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123174> a owl:Class ;
+    rdfs:label "reseach components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123175> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123176> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123177> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123178> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123179> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123180> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123181> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123182> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123183> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123184> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123185> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123186> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123187> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123188> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123189> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123190> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123191> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123192> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123193> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123194> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123195> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123196> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123197> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123198> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123199> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123200> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123201> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123202> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123203> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123204> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123205> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123206> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123207> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123208> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123209> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123210> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123211> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123212> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123213> a owl:Class ;
+    rdfs:label "focus and intent"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124000> a owl:Class ;
+    rdfs:label "m4i [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124001> a owl:Class ;
+    rdfs:label "has simulation type"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124002> a owl:Class ;
+    rdfs:label "has simulation type"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124003> a owl:Class ;
+    rdfs:label "Method"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124004> a owl:Class ;
+    rdfs:label "Agent"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124005> a owl:Class ;
+    rdfs:label "ProcessingStep"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124006> a owl:Class ;
+    rdfs:label "Variable"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124007> a owl:Class ;
+    rdfs:label "Tool"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124008> a owl:Class ;
+    rdfs:label "Property"^^xsd:string .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string .
 

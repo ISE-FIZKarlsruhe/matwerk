@@ -16620,6 +16620,17 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236260 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236260">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <obo:BFO_0000055 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174677596209460"/>
+        <obo:BFO_0000057 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451394390865"/>
+        <rdfs:label>matwerk project process 60</rdfs:label>
+    </NamedIndividual>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423627 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423627">
@@ -16986,6 +16997,12 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467759620946 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467759620946"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174677596209460 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677596209460"/>
     
 
 

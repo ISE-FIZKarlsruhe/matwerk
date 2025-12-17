@@ -663,6 +663,12 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513918613765 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513918613765"/>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451391861377 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451391861377"/>
@@ -2814,6 +2820,23 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513945784460 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513945784460">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"/>
+        <obo:BFO_0000056 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174677574236260"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001072"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513918613765"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17646663526911"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17646663931761"/>
+        <ontology:NFDI_0000211 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513921413976"/>
+        <ontology:NFDI_0000211 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513921413977"/>
+        <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451474815432"/>
+        <rdfs:label>Dr. Hossein Beygi Nasrabadi</rdfs:label>
+    </NamedIndividual>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451394578447 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451394578447">
@@ -2882,6 +2905,12 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451474815431 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451474815431"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451474815432 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451474815432"/>
     
 
 
@@ -3257,6 +3286,12 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236260 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236260"/>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423627 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423627"/>
@@ -3278,6 +3313,18 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467927655511 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467927655511"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17646663526911 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17646663526911"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17646663931761 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17646663931761"/>
 </rdf:RDF>
 
 

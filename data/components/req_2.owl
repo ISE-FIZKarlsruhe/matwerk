@@ -1563,6 +1563,16 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174513918613765 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513918613765">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0020017"/>
+        <ontology:NFDI_0001007>Beygi Nasrabadi</ontology:NFDI_0001007>
+        <rdfs:label>Beygi Nasrabadi</rdfs:label>
+    </NamedIndividual>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451391861377 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451391861377">
@@ -5098,6 +5108,16 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000708"/>
         <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1141-7704</ontology:NFDI_0001008>
         <rdfs:label>orcid 46</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17451474815432 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451474815432">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000708"/>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-3092-0532</ontology:NFDI_0001008>
+        <rdfs:label>orcid 47</rdfs:label>
     </NamedIndividual>
     
 
@@ -66297,6 +66317,15 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236260 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236260">
+        <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001002"/>
+        <rdfs:label>matwerk project process 60</rdfs:label>
+    </NamedIndividual>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423627 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423627">
@@ -66828,6 +66857,15 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174677596209460 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677596209460">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118"/>
+        <rdfs:label>PersonRole 60</rdfs:label>
+    </NamedIndividual>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467759620947 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467759620947">
@@ -67081,6 +67119,26 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
         <ontology:NFDI_0001007>embrittlement</ontology:NFDI_0001007>
         <rdfs:label>embrittlement</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17646663526911 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17646663526911">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0020016"/>
+        <ontology:NFDI_0001007>Hossein</ontology:NFDI_0001007>
+        <rdfs:label>Hossein</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17646663931761 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17646663931761">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000429"/>
+        <ontology:NFDI_0001007>hossein.beygi_nasrabadi@fiz-karlsruhe.de</ontology:NFDI_0001007>
+        <rdfs:label>hossein.beygi_nasrabadi@fiz-karlsruhe.de</rdfs:label>
     </NamedIndividual>
 </rdf:RDF>
 

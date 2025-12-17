@@ -14,8 +14,8 @@
     dcterms:source <https://doi.org/10.5281/zenodo.11224127> ;
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.11224127> .
 
-<https://purls.helmholtz-metadaten.de/msekg/c94ac3e0c55e44648cf201ee2e955863> a prov:Activity ;
-    prov:startedAtTime "2025-12-16T11:00:33+00:00"^^xsd:dateTime .
+<https://purls.helmholtz-metadaten.de/msekg/d3bde6451574430fbef10f31b192d00e> a prov:Activity ;
+    prov:startedAtTime "2025-12-17T10:42:59+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759767916973> rdfs:label "Automated Segmentation of Large Image Datasets using Artificial Intelligence for Microstructure Characterisation and Damage Analysis" ;
     obo:OBI_0002135 "Automated Segmentation of Large Image Datasets using Artificial Intelligence for Microstructure Characterisation and Damage Analysis" .

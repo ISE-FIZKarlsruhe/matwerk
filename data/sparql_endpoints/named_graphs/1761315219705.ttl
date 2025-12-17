@@ -60,22 +60,26 @@
     rdfs:label "Information containing entity has part statement  (class)"^^xsd:string .
 
 <http://orkg.org/orkg/class/C100004> a owl:Class ;
-    rdfs:label "Information-containing-entity-has-part statement  (class)"^^xsd:string .
+    rdfs:label "Information-containing-entity-has-part statement  (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100005> a owl:Class ;
     rdfs:label "Material-entity-has-part statement (class)"^^xsd:string .
 
 <http://orkg.org/orkg/class/C100006> a owl:Class ;
-    rdfs:label "Material-entity-has-composition statement (class)"^^xsd:string .
+    rdfs:label "Material-entity-has-composition statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100007> a owl:Class ;
-    rdfs:label "Process-has-process-step statement (class)"^^xsd:string .
+    rdfs:label "Process-has-process-step statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100008> a owl:Class ;
     rdfs:label "measurement statement (class)"^^xsd:string .
 
 <http://orkg.org/orkg/class/C100009> a owl:Class ;
-    rdfs:label "Material-entity-has-part statement (class)"^^xsd:string .
+    rdfs:label "Material-entity-has-part statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C10001> a owl:Class ;
     rdfs:label "endpoint assay"^^xsd:string .
@@ -84,10 +88,12 @@
     rdfs:label "measurement statement (class)"^^xsd:string .
 
 <http://orkg.org/orkg/class/C100011> a owl:Class ;
-    rdfs:label "causal-fuzzy-cognitive-map statement (class)"^^xsd:string .
+    rdfs:label "causal-fuzzy-cognitive-map statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100012> a owl:Class ;
-    rdfs:label "measurement statement (class)"^^xsd:string .
+    rdfs:label "measurement statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100013> a owl:Class ;
     rdfs:label "continuity-of-two-material-entities statement (class)"^^xsd:string .
@@ -96,37 +102,46 @@
     rdfs:label "overlap-of-two-material-entities (class)"^^xsd:string .
 
 <http://orkg.org/orkg/class/C100015> a owl:Class ;
-    rdfs:label "overlap-of-two-material-entities statement (class)"^^xsd:string .
+    rdfs:label "overlap-of-two-material-entities statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100016> a owl:Class ;
-    rdfs:label "continuity-of-two-material-entities statement (class)"^^xsd:string .
+    rdfs:label "continuity-of-two-material-entities statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100017> a owl:Class ;
-    rdfs:label "connectedness-of-two-material-entities-via-a-third-entity statement (class)"^^xsd:string .
+    rdfs:label "connectedness-of-two-material-entities-via-a-third-entity statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100018> a owl:Class ;
-    rdfs:label "spatial-disconnectedness-of-two-material-entities statement (class)"^^xsd:string .
+    rdfs:label "spatial-disconnectedness-of-two-material-entities statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100019> a owl:Class ;
-    rdfs:label "adjacency-of-two-matieral-entities statement (class)"^^xsd:string .
+    rdfs:label "adjacency-of-two-matieral-entities statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C10002> a owl:Class ;
     rdfs:label "homogeneous phase"^^xsd:string .
 
 <http://orkg.org/orkg/class/C100020> a owl:Class ;
-    rdfs:label "material-entity-surrounded-by-material-entity statement (class)"^^xsd:string .
+    rdfs:label "material-entity-surrounded-by-material-entity statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100021> a owl:Class ;
-    rdfs:label "location-between-two-material-entities-or-spatial-regions statement (class)"^^xsd:string .
+    rdfs:label "location-between-two-material-entities-or-spatial-regions statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100022> a owl:Class ;
     rdfs:label "Small-Language-Model"^^xsd:string .
 
 <http://orkg.org/orkg/class/C100023> a owl:Class ;
-    rdfs:label "open-education-resource-description (class)"^^xsd:string .
+    rdfs:label "open-education-resource-description (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C100024> a owl:Class ;
-    rdfs:label "Open-Education-Resources-description (class)"^^xsd:string .
+    rdfs:label "Open-Education-Resources-description (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C10003> a owl:Class ;
     rdfs:label "confirmatory assay"^^xsd:string .
@@ -267,28 +282,36 @@
     rdfs:label "ff"^^xsd:string .
 
 <http://orkg.org/orkg/class/C101000> a owl:Class ;
-    rdfs:label "hypothesis-description-in-invasion-biology statement (class)"^^xsd:string .
+    rdfs:label "hypothesis-description-in-invasion-biology statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101001> a owl:Class ;
-    rdfs:label "WIP_DON'T_USE!_hypothesis-test-in-invasion-biology statement (class)"^^xsd:string .
+    rdfs:label "WIP_DON'T_USE!_hypothesis-test-in-invasion-biology statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101002> a owl:Class ;
-    rdfs:label "WIP_DO_NOT_USE! invasion-biology-study-research-question statement (class)"^^xsd:string .
+    rdfs:label "WIP_DO_NOT_USE! invasion-biology-study-research-question statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101003> a owl:Class ;
-    rdfs:label "restoration-study statement (class)"^^xsd:string .
+    rdfs:label "restoration-study statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101004> a owl:Class ;
-    rdfs:label "result-of-structural-equation-modeling (class)"^^xsd:string .
+    rdfs:label "result-of-structural-equation-modeling (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101005> a owl:Class ;
-    rdfs:label "optimization_method_application (class)"^^xsd:string .
+    rdfs:label "optimization_method_application (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101006> a owl:Class ;
-    rdfs:label "result-of-generalized-linear-mixed-models statement (class)"^^xsd:string .
+    rdfs:label "result-of-generalized-linear-mixed-models statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101007> a owl:Class ;
-    rdfs:label "fake_news_detection_application (class)"^^xsd:string .
+    rdfs:label "fake_news_detection_application (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C101008> a owl:Class ;
     rdfs:label "hypothesis evaluation status"^^xsd:string .
@@ -324,7 +347,8 @@
     rdfs:label "soil"^^xsd:string .
 
 <http://orkg.org/orkg/class/C102009> a owl:Class ;
-    rdfs:label "Soil classification statement applicatition (class)"^^xsd:string .
+    rdfs:label "Soil classification statement applicatition (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C102010> a owl:Class ;
     rdfs:label "Template energy procurement [C]"^^xsd:string .
@@ -1356,7 +1380,8 @@
     rdfs:label "test name"^^xsd:string .
 
 <http://orkg.org/orkg/class/C119000> a owl:Class ;
-    rdfs:label "Prokaryotic growth Condition (class)"^^xsd:string .
+    rdfs:label "Prokaryotic growth Condition (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C119001> a owl:Class ;
     rdfs:label "treatment strategies"^^xsd:string .
@@ -2039,7 +2064,8 @@
     rdfs:label "treatment"^^xsd:string .
 
 <http://orkg.org/orkg/class/C123127> a owl:Class ;
-    rdfs:label " Harm reduction intervention statement (class)"^^xsd:string .
+    rdfs:label " Harm reduction intervention statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C123128> a owl:Class ;
     rdfs:label "chemical compound"^^xsd:string .
@@ -2054,7 +2080,8 @@
     rdfs:label "Pesticides [C]"^^xsd:string .
 
 <http://orkg.org/orkg/class/C123132> a owl:Class ;
-    rdfs:label "evolutionary sequela statement (class)"^^xsd:string .
+    rdfs:label "evolutionary sequela statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C123133> a owl:Class ;
     rdfs:label "cohort"^^xsd:string .
@@ -2115,6 +2142,216 @@
 
 <http://orkg.org/orkg/class/C123152> a owl:Class ;
     rdfs:label "cloud cover"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123153> a owl:Class ;
+    rdfs:label "research question"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123154> a owl:Class ;
+    rdfs:label "object of study"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123155> a owl:Class ;
+    rdfs:label "research object"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123156> a owl:Class ;
+    rdfs:label "hypothesis"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123157> a owl:Class ;
+    rdfs:label "NFDIxCS BI Schema [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123158> a owl:Class ;
+    rdfs:label "Keywords"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123159> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123160> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123161> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123162> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123163> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123164> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123165> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123166> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123167> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123168> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123169> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123170> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123171> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123172> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123173> a owl:Class ;
+    rdfs:label "research components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123174> a owl:Class ;
+    rdfs:label "reseach components"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123175> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123176> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123177> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123178> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123179> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123180> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123181> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123182> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123183> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123184> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123185> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123186> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123187> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123188> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123189> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123190> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123191> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123192> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123193> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123194> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123195> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123196> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123197> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123198> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123199> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123200> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123201> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123202> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123203> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123204> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123205> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123206> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123207> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123208> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123209> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123210> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123211> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123212> a owl:Class ;
+    rdfs:label "research artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C123213> a owl:Class ;
+    rdfs:label "focus and intent"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124000> a owl:Class ;
+    rdfs:label "m4i [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124001> a owl:Class ;
+    rdfs:label "has simulation type"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124002> a owl:Class ;
+    rdfs:label "has simulation type"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124003> a owl:Class ;
+    rdfs:label "Method"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124004> a owl:Class ;
+    rdfs:label "Agent"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124005> a owl:Class ;
+    rdfs:label "ProcessingStep"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124006> a owl:Class ;
+    rdfs:label "Variable"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124007> a owl:Class ;
+    rdfs:label "Tool"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124008> a owl:Class ;
+    rdfs:label "Property"^^xsd:string .
 
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string .
@@ -7683,7 +7920,8 @@
     rdfs:label "benchmarked result / task-dataset-model-metric-score (TDMS) statement (class)"^^xsd:string .
 
 <http://orkg.org/orkg/class/C99009> a owl:Class ;
-    rdfs:label "benchmarked result / task-dataset-model-metric-score (TDMS) statement (class)"^^xsd:string .
+    rdfs:label "benchmarked result / task-dataset-model-metric-score (TDMS) statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C99010> a owl:Class ;
     rdfs:label "LLM-Hallu-Bench"^^xsd:string .
@@ -7737,10 +7975,12 @@
     rdfs:label "large language model"^^xsd:string .
 
 <http://orkg.org/orkg/class/C99027> a owl:Class ;
-    rdfs:label "Text2KGBenchmark (class)"^^xsd:string .
+    rdfs:label "Text2KGBenchmark (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C99028> a owl:Class ;
-    rdfs:label "biodiversity occurrence record (organism sighting) statement (class)"^^xsd:string .
+    rdfs:label "biodiversity occurrence record (organism sighting) statement (class)"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
 
 <http://orkg.org/orkg/class/C99029> a owl:Class ;
     rdfs:label "Nutrient [C]"^^xsd:string .
@@ -8057,9 +8297,6 @@
 <http://orkg.org/orkg/class/RosettaNodeShape> a owl:Class ;
     rdfs:label "Rosetta Stone Node Shape"^^xsd:string .
 
-<http://orkg.org/orkg/class/RosettaStoneStatement> a owl:Class ;
-    rdfs:label "Rosetta Stone Statement"^^xsd:string .
-
 <http://orkg.org/orkg/class/Row> a owl:Class ;
     rdfs:label "Row"^^xsd:string .
 
@@ -8227,4 +8464,7 @@ owl:Thing a owl:Class ;
 
 <http://orkg.org/orkg/class/C58031> a owl:Class ;
     rdfs:label "Pattern"^^xsd:string .
+
+<http://orkg.org/orkg/class/RosettaStoneStatement> a owl:Class ;
+    rdfs:label "Rosetta Stone Statement"^^xsd:string .
 

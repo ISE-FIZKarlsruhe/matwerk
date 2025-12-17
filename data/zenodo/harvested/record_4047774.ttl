@@ -19,8 +19,8 @@
     dcterms:source <https://doi.org/10.5281/zenodo.4047774> ;
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.4047774> .
 
-<https://purls.helmholtz-metadaten.de/msekg/74b44c8cb3bf4400b1ba9bf19f99fe84> a prov:Activity ;
-    prov:startedAtTime "2025-12-16T11:00:41+00:00"^^xsd:dateTime .
+<https://purls.helmholtz-metadaten.de/msekg/3240a5e760154453aedbfdcf01775717> a prov:Activity ;
+    prov:startedAtTime "2025-12-17T10:43:01+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759767918218> rdfs:label "Large-scale statistical learning for mass transport prediction in porous materials using 90,000 artificially generated microstructures" ;
     obo:OBI_0002135 "Large-scale statistical learning for mass transport prediction in porous materials using 90,000 artificially generated microstructures" .

@@ -5,6 +5,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://purls.helmholtz-metadaten.de/msekg/10643aab2908431ba0069bfb3b7e9ca9> a prov:Activity ;
+    prov:startedAtTime "2025-12-17T10:42:15+00:00"^^xsd:dateTime .
+
 <https://purls.helmholtz-metadaten.de/msekg/1758983993017> a nfdi:NFDI_0000190 ;
     rdfs:label "https://zenodo.org/records/16753542" ;
     obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1758983993019>,
@@ -455,9 +458,6 @@
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.10566837>,
         <https://doi.org/10.5281/zenodo.10794162>,
         <https://doi.org/10.5281/zenodo.14012860> .
-
-<https://purls.helmholtz-metadaten.de/msekg/42b41e4f779e43e6800f3d6ec62a135b> a prov:Activity ;
-    prov:startedAtTime "2025-12-16T11:11:58+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1758983993018> rdfs:label "NFDI-MatWerk Renewal Proposal Part B-1",
         "NFDI-MatWerk Renewal Proposal Part B-1 updated version" ;

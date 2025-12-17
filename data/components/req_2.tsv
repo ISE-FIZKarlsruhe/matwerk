@@ -5,6 +5,7 @@ https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008	owl:DataProperty	has url				
 http://purls.helmholtz-metadaten.de/mwo/MWO_0001143	owl:DataProperty	has acronym											
 https://purls.helmholtz-metadaten.de/msekg/17451391861361	http://purl.obolibrary.org/obo/IAO_0020016	Sarath	Sarath										
 https://purls.helmholtz-metadaten.de/msekg/17451398105881	http://purl.obolibrary.org/obo/IAO_0020016	Angelika	Angelika										
+https://purls.helmholtz-metadaten.de/msekg/17646663526911	http://purl.obolibrary.org/obo/IAO_0020016	Hossein	Hossein										
 https://purls.helmholtz-metadaten.de/msekg/17451391861362	http://purl.obolibrary.org/obo/IAO_0020016	Felix	Felix										
 https://purls.helmholtz-metadaten.de/msekg/17451391861363	http://purl.obolibrary.org/obo/IAO_0020016	Amir	Amir										
 https://purls.helmholtz-metadaten.de/msekg/17451391861364	http://purl.obolibrary.org/obo/IAO_0020016	Birgit	Birgit										
@@ -107,7 +108,9 @@ https://purls.helmholtz-metadaten.de/msekg/174513918613761	http://purl.obolibrar
 https://purls.helmholtz-metadaten.de/msekg/174513918613762	http://purl.obolibrary.org/obo/IAO_0020017	Aversa	Aversa										
 https://purls.helmholtz-metadaten.de/msekg/174513918613763	http://purl.obolibrary.org/obo/IAO_0020017	Norouzi	Norouzi										
 https://purls.helmholtz-metadaten.de/msekg/174513918613764	http://purl.obolibrary.org/obo/IAO_0020017	Waitelonis	Waitelonis										
+https://purls.helmholtz-metadaten.de/msekg/174513918613765	http://purl.obolibrary.org/obo/IAO_0020017	Beygi Nasrabadi	Beygi Nasrabadi										
 https://purls.helmholtz-metadaten.de/msekg/17451391999331	http://purl.obolibrary.org/obo/IAO_0000429	s.menon@mpie.de	s.menon@mpie.de										
+https://purls.helmholtz-metadaten.de/msekg/17646663931761	http://purl.obolibrary.org/obo/IAO_0000429	hossein.beygi_nasrabadi@fiz-karlsruhe.de	hossein.beygi_nasrabadi@fiz-karlsruhe.de										
 https://purls.helmholtz-metadaten.de/msekg/17451391999332	http://purl.obolibrary.org/obo/IAO_0000429	fritzen@simtech.uni-stuttgart.de	fritzen@simtech.uni-stuttgart.de										
 https://purls.helmholtz-metadaten.de/msekg/17451391999333	http://purl.obolibrary.org/obo/IAO_0000429	amir.laadhar@mib.uni-stuttgart.de	amir.laadhar@mib.uni-stuttgart.de										
 https://purls.helmholtz-metadaten.de/msekg/17451391999334	http://purl.obolibrary.org/obo/IAO_0000429	birgit.skrotzki@bam.de	birgit.skrotzki@bam.de										
@@ -414,6 +417,7 @@ https://purls.helmholtz-metadaten.de/msekg/17451393497006	http://purl.obolibrary
 https://purls.helmholtz-metadaten.de/msekg/17451393561551	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001013	ror 22						https://ror.org/01hcx6992					
 https://purls.helmholtz-metadaten.de/msekg/17451474815421	http://purl.obolibrary.org/obo/IAO_0000429	angelika.gedsun@imtek.uni-freiburg.de	angelika.gedsun@imtek.uni-freiburg.de										
 https://purls.helmholtz-metadaten.de/msekg/17451474815431	http://purl.obolibrary.org/obo/IAO_0000708	orcid 46						https://orcid.org/0000-0002-1141-7704					
+https://purls.helmholtz-metadaten.de/msekg/17451474815432	http://purl.obolibrary.org/obo/IAO_0000708	orcid 47						https://orcid.org/0000-0002-3092-0532					
 https://purls.helmholtz-metadaten.de/msekg/17451474931961	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019	Datasets for the analysis of dislocations at grain boundaries and during vein formation in cyclically deformed Ni micropillars	Datasets for the analysis of dislocations at grain boundaries and during vein formation in cyclically deformed Ni micropillars										
 https://purls.helmholtz-metadaten.de/msekg/17451474931962	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019	Equivalent 2 Point Correlation Microstructures	Equivalent 2 Point Correlation Microstructures										
 https://purls.helmholtz-metadaten.de/msekg/17451474931963	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019	Data on the effective constitutive behavior of parametric beam lattice metamaterials	Data on the effective constitutive behavior of parametric beam lattice metamaterials										
@@ -6377,6 +6381,7 @@ https://purls.helmholtz-metadaten.de/msekg/174677574236256	http://purls.helmholt
 https://purls.helmholtz-metadaten.de/msekg/174677574236257	http://purls.helmholtz-metadaten.de/mwo/MWO_0001002	matwerk project process 57											
 https://purls.helmholtz-metadaten.de/msekg/174677574236258	http://purls.helmholtz-metadaten.de/mwo/MWO_0001002	matwerk project process 58											
 https://purls.helmholtz-metadaten.de/msekg/174677574236259	http://purls.helmholtz-metadaten.de/mwo/MWO_0001002	matwerk project process 59											
+https://purls.helmholtz-metadaten.de/msekg/174677574236260	http://purls.helmholtz-metadaten.de/mwo/MWO_0001002	matwerk project process 60											
 https://purls.helmholtz-metadaten.de/msekg/17467759620941	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118	PersonRole 1											
 https://purls.helmholtz-metadaten.de/msekg/17467759620942	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118	PersonRole 2											
 https://purls.helmholtz-metadaten.de/msekg/17467759620943	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118	PersonRole 3											
@@ -6436,6 +6441,7 @@ https://purls.helmholtz-metadaten.de/msekg/174677596209456	https://nfdi.fiz-karl
 https://purls.helmholtz-metadaten.de/msekg/174677596209457	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118	PersonRole 57											
 https://purls.helmholtz-metadaten.de/msekg/174677596209458	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118	PersonRole 58											
 https://purls.helmholtz-metadaten.de/msekg/174677596209459	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118	PersonRole 59											
+https://purls.helmholtz-metadaten.de/msekg/174677596209460	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118	PersonRole 60											
 https://purls.helmholtz-metadaten.de/msekg/174653521755226	http://purls.helmholtz-metadaten.de/mwo/MWO_0001022	IUC1_organization											
 https://purls.helmholtz-metadaten.de/msekg/174653521755227	http://purls.helmholtz-metadaten.de/mwo/MWO_0001022	IUC2_organization											
 https://purls.helmholtz-metadaten.de/msekg/174653521755228	http://purls.helmholtz-metadaten.de/mwo/MWO_0001022	IUC3_organization											

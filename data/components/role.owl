@@ -21942,6 +21942,12 @@
     
 
 
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174677574236260 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677574236260"/>
+    
+
+
     <!-- https://purls.helmholtz-metadaten.de/msekg/17467757423627 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17467757423627"/>
@@ -22578,6 +22584,17 @@
         <obo:BFO_0000054 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17467757423626"/>
         <obo:BFO_0000197 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451394390864"/>
         <rdfs:label>PersonRole 6</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174677596209460 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174677596209460">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118"/>
+        <obo:BFO_0000054 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174677574236260"/>
+        <obo:BFO_0000197 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451394390865"/>
+        <rdfs:label>PersonRole 60</rdfs:label>
     </NamedIndividual>
     
 
