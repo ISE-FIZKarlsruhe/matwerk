@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+    tags: ['v*']
     paths-ignore:
       - 'Submissions/**'
       - '.github/**'
@@ -38,7 +39,18 @@ jobs:
           REGISTRY: ghcr.io
         run: |
           set -euxo pipefail
-          docker build -t $REGISTRY/${REPO}:latest -t $REGISTRY/${REPO}:$(date +%s) .
+
+          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
+            VERSION="${GITHUB_REF_NAME}"   # e.g. v2.0.1
+          else
+            VERSION="$(git rev-parse --short HEAD)"
+          fi
+
+          docker build \
+            -t $REGISTRY/${REPO}:latest \
+            -t $REGISTRY/${REPO}:${VERSION} \
+            .
+
           docker push $REGISTRY/${REPO} --all-tags
 
       - name: Extract generated data dir from image
