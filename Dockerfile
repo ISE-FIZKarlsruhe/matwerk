@@ -66,7 +66,7 @@ RUN java -jar widoco-1.4.25-jar-with-dependencies_JDK-11.jar \
 # ==========================
 # Stage 2: Run Shmarql
 # ==========================
-FROM ghcr.io/epoz/shmarql:v0.65
+FROM ghcr.io/epoz/shmarql:v0.61
 
 COPY --from=widoco /app/data /data
 COPY --from=widoco /app/docs /src/docs
