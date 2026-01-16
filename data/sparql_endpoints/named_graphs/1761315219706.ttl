@@ -3194,6 +3194,134 @@ Atopic dermatitis is an evolutionary sequela of vitamin D3 deficiency in norther
     rdfs:label "Property"^^xsd:string ;
     owl:equivalentClass <http://www.molmod.info/semantics/pims-ii.ttl#Property> .
 
+<http://orkg.org/orkg/class/C124009> a owl:Class ;
+    rdfs:label "Distribution"^^xsd:string ;
+    owl:equivalentClass dcat:Distribution .
+
+<http://orkg.org/orkg/class/C124010> a owl:Class ;
+    rdfs:label "EducationalResource"^^xsd:string ;
+    owl:equivalentClass <https://github.com/tibonto/educor#EducationalResource> .
+
+<http://orkg.org/orkg/class/C124011> a owl:Class ;
+    rdfs:label "Organization"^^xsd:string ;
+    owl:equivalentClass <http://schema.org/Organization> .
+
+<http://orkg.org/orkg/class/C124012> a owl:Class ;
+    rdfs:label "NumericalVariable"^^xsd:string ;
+    owl:equivalentClass <http://w3id.org/nfdi4ing/metadata4ing#NumericalVariable> .
+
+<http://orkg.org/orkg/class/C124013> a owl:Class ;
+    rdfs:label "Hydropower resource assessment [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124014> a owl:Class ;
+    rdfs:label "stopwatch"^^xsd:string ;
+    ns1:description "analog or digital timepiece designed to measure an amount of time, having push buttons to start/stop and reset a time stopping action"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q843994> .
+
+<http://orkg.org/orkg/class/C124015> a owl:Class ;
+    rdfs:label "multiple-criteria decision analysis"^^xsd:string ;
+    ns1:description "sub-discipline of operations research that explicitly evaluates multiple conflicting criteria in decision making"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1895805> .
+
+<http://orkg.org/orkg/class/C124016> a owl:Class ;
+    rdfs:label "BENCHMARK_DATASET"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124017> a owl:Class ;
+    rdfs:label "Krippendorff's alpha"^^xsd:string ;
+    ns1:description "Statistical measure of inter-rater agreement"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q6437118> .
+
+<http://orkg.org/orkg/class/C124018> a owl:Class ;
+    rdfs:label "scientific claim"^^xsd:string ;
+    ns1:description "statement"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q111972243> .
+
+<http://orkg.org/orkg/class/C124019> a owl:Class ;
+    rdfs:label "hydraulic head"^^xsd:string ;
+    ns1:description "specific measurement of liquid pressure above a vertical datum"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q369743> .
+
+<http://orkg.org/orkg/class/C124020> a owl:Class ;
+    rdfs:label "firm power"^^xsd:string ;
+    ns1:description "electric power required to be available at all times"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q135981391> .
+
+<http://orkg.org/orkg/class/C124021> a owl:Class ;
+    rdfs:label "waterlines"^^xsd:string ;
+    ns1:description "defensive works surrounded by inundated areas"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q2923447> .
+
+<http://orkg.org/orkg/class/C124022> a owl:Class ;
+    rdfs:label "power density"^^xsd:string ;
+    ns1:description "power per volume"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q3503313> .
+
+<http://orkg.org/orkg/class/C124023> a owl:Class ;
+    rdfs:label "river longitudinal profile"^^xsd:string ;
+    ns1:description ""^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q356207> .
+
+<http://orkg.org/orkg/class/C124024> a owl:Class ;
+    rdfs:label "Landsat data"^^xsd:string ;
+    ns1:description "satellite imagery data gained through Landsat program"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q124424918> .
+
+<http://orkg.org/orkg/class/C124025> a owl:Class ;
+    rdfs:label "Research_Artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124026> a owl:Class ;
+    rdfs:label "Evaluation method BI"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124027> a owl:Class ;
+    rdfs:label "Evaluation method BI"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124028> a owl:Class ;
+    rdfs:label "Evaluation method BI"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124029> a owl:Class ;
+    rdfs:label "Research Method BI"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124030> a owl:Class ;
+    rdfs:label "Type of Artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124031> a owl:Class ;
+    rdfs:label "Data Collection"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124032> a owl:Class ;
+    rdfs:label "Type of Data"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124033> a owl:Class ;
+    rdfs:label "Participants count"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124034> a owl:Class ;
+    rdfs:label "Implementation [c]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124035> a owl:Class ;
+    rdfs:label "Type of Theory"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124036> a owl:Class ;
+    rdfs:label "Emphasis [c]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124037> a owl:Class ;
+    rdfs:label "Type of Inquiry"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124038> a owl:Class ;
+    rdfs:label "Duplicate Detection, Resolution, Prevention [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124039> a owl:Class ;
+    rdfs:label "Duplicate Detection [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124040> a owl:Class ;
+    rdfs:label "Duplicate Resolution [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C125000> a owl:Class ;
+    rdfs:label "Duplicate Prevention [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C125001> a owl:Class ;
+    rdfs:label "linked open data"^^xsd:string ;
+    ns1:description "linked data available under an open license"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q18692990> .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string ;
     owl:equivalentClass <http://purl.obolibrary.org/obo/ZFS_0100000> .

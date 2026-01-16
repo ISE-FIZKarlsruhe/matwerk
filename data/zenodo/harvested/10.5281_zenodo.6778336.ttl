@@ -5,6 +5,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://purls.helmholtz-metadaten.de/msekg/048e3361a7644f50a1b71d208d26c626> a prov:Activity ;
+    prov:startedAtTime "2026-01-16T14:51:18+00:00"^^xsd:dateTime .
+
 <https://purls.helmholtz-metadaten.de/msekg/1759757749285> a nfdi:NFDI_0000009 ;
     rdfs:label "https://zenodo.org/records/6778335" ;
     obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759757750895>,
@@ -18,9 +21,6 @@
     dcterms:modified "2024-07-16T12:44:29.652660+00:00"^^xsd:dateTime ;
     dcterms:source <https://doi.org/10.5281/zenodo.6778336> ;
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.6778336> .
-
-<https://purls.helmholtz-metadaten.de/msekg/5969374dbbeb49eda8c666e8f3fa894c> a prov:Activity ;
-    prov:startedAtTime "2025-12-17T10:44:32+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759757749286> rdfs:label "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" ;
     obo:OBI_0002135 "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" .

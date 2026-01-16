@@ -2330,6 +2330,108 @@
 <http://orkg.org/orkg/class/C124008> a owl:Class ;
     rdfs:label "Property"^^xsd:string .
 
+<http://orkg.org/orkg/class/C124009> a owl:Class ;
+    rdfs:label "Distribution"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124010> a owl:Class ;
+    rdfs:label "EducationalResource"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124011> a owl:Class ;
+    rdfs:label "Organization"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124012> a owl:Class ;
+    rdfs:label "NumericalVariable"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124013> a owl:Class ;
+    rdfs:label "Hydropower resource assessment [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124014> a owl:Class ;
+    rdfs:label "stopwatch"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124015> a owl:Class ;
+    rdfs:label "multiple-criteria decision analysis"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124016> a owl:Class ;
+    rdfs:label "BENCHMARK_DATASET"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124017> a owl:Class ;
+    rdfs:label "Krippendorff's alpha"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124018> a owl:Class ;
+    rdfs:label "scientific claim"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124019> a owl:Class ;
+    rdfs:label "hydraulic head"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124020> a owl:Class ;
+    rdfs:label "firm power"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124021> a owl:Class ;
+    rdfs:label "waterlines"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124022> a owl:Class ;
+    rdfs:label "power density"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124023> a owl:Class ;
+    rdfs:label "river longitudinal profile"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124024> a owl:Class ;
+    rdfs:label "Landsat data"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124025> a owl:Class ;
+    rdfs:label "Research_Artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124026> a owl:Class ;
+    rdfs:label "Evaluation method BI"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124027> a owl:Class ;
+    rdfs:label "Evaluation method BI"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124028> a owl:Class ;
+    rdfs:label "Evaluation method BI"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124029> a owl:Class ;
+    rdfs:label "Research Method BI"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124030> a owl:Class ;
+    rdfs:label "Type of Artifact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124031> a owl:Class ;
+    rdfs:label "Data Collection"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124032> a owl:Class ;
+    rdfs:label "Type of Data"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124033> a owl:Class ;
+    rdfs:label "Participants count"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124034> a owl:Class ;
+    rdfs:label "Implementation [c]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124035> a owl:Class ;
+    rdfs:label "Type of Theory"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124036> a owl:Class ;
+    rdfs:label "Emphasis [c]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124037> a owl:Class ;
+    rdfs:label "Type of Inquiry"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124038> a owl:Class ;
+    rdfs:label "Duplicate Detection, Resolution, Prevention [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124039> a owl:Class ;
+    rdfs:label "Duplicate Detection [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C124040> a owl:Class ;
+    rdfs:label "Duplicate Resolution [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C125000> a owl:Class ;
+    rdfs:label "Duplicate Prevention [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C125001> a owl:Class ;
+    rdfs:label "linked open data"^^xsd:string .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string .
 

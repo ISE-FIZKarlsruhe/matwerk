@@ -5,9 +5,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://purls.helmholtz-metadaten.de/msekg/0ab05fea718e4472814ce2441555303e> a prov:Activity ;
-    prov:startedAtTime "2025-12-17T10:42:45+00:00"^^xsd:dateTime .
-
 <https://purls.helmholtz-metadaten.de/msekg/1759758153083> a nfdi:NFDI_0000190 ;
     rdfs:label "https://zenodo.org/records/10663832" ;
     obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759758153085> ;
@@ -16,6 +13,9 @@
     dcterms:modified "2024-07-07T05:43:06.094765+00:00"^^xsd:dateTime ;
     dcterms:source <https://doi.org/10.5281/zenodo.10663833> ;
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.10663833> .
+
+<https://purls.helmholtz-metadaten.de/msekg/b8ad12acaf2e4c9a98b7b8e198e2f5c5> a prov:Activity ;
+    prov:startedAtTime "2026-01-16T14:49:31+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759758153084> rdfs:label "The MDMC-NEP Glossary of Terms" ;
     obo:OBI_0002135 "The MDMC-NEP Glossary of Terms" .

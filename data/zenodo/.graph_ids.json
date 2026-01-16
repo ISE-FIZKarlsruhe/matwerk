@@ -52,7 +52,10 @@
     "4047773": "https://purls.helmholtz-metadaten.de/msekg/1759767918217",
     "5000610": "https://purls.helmholtz-metadaten.de/msekg/1759767937740",
     "17533124": "https://purls.helmholtz-metadaten.de/msekg/1763729383621",
-    "10566836": "https://purls.helmholtz-metadaten.de/msekg/1763729383640"
+    "10566836": "https://purls.helmholtz-metadaten.de/msekg/1763729383640",
+    "17846616": "https://purls.helmholtz-metadaten.de/msekg/1768574950079",
+    "17628976": "https://purls.helmholtz-metadaten.de/msekg/1768574950095",
+    "17846435": "https://purls.helmholtz-metadaten.de/msekg/1768574950098"
   },
   "nodes": {
     "16753542": [
@@ -213,6 +216,15 @@
     ],
     "10566836": [
       "https://purls.helmholtz-metadaten.de/msekg/1763729383641"
+    ],
+    "17846616": [
+      "https://purls.helmholtz-metadaten.de/msekg/1768574950080"
+    ],
+    "17628976": [
+      "https://purls.helmholtz-metadaten.de/msekg/1768574950096"
+    ],
+    "17846435": [
+      "https://purls.helmholtz-metadaten.de/msekg/1768574950099"
     ]
   },
   "file_graphs": {
@@ -448,7 +460,25 @@
     "17533124|Towards FAIRness using an Interoperable Research Data-RDA-2025.pdf": "https://purls.helmholtz-metadaten.de/msekg/1763729383623",
     "10566836|Poster_DataStewardship_DSGG_2024.pdf": "https://purls.helmholtz-metadaten.de/msekg/1763729383642",
     "10566836|Datasteardship Workflow -NFDIMatWerk.png": "https://purls.helmholtz-metadaten.de/msekg/1763729384935",
-    "10566836|123.png": "https://purls.helmholtz-metadaten.de/msekg/1763729384936"
+    "10566836|123.png": "https://purls.helmholtz-metadaten.de/msekg/1763729384936",
+    "17846616|Vh5205_T-74.LIS": "https://purls.helmholtz-metadaten.de/msekg/1768574950081",
+    "17846616|Dendrite-overview.jpg": "https://purls.helmholtz-metadaten.de/msekg/1768574950082",
+    "17846616|TestPiece-TensileTests-HT-CMSX-6.pdf": "https://purls.helmholtz-metadaten.de/msekg/1768574950083",
+    "17846616|2025-12_HT-Tensile-reference-data-CMSX-6_v1.0.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1768574950084",
+    "17846616|Vh5205_T-71.LIS": "https://purls.helmholtz-metadaten.de/msekg/1768574950085",
+    "17846616|Dendrite-SEM.tif": "https://purls.helmholtz-metadaten.de/msekg/1768574950086",
+    "17846616|Interdentritic-region-detail.tif": "https://purls.helmholtz-metadaten.de/msekg/1768574950087",
+    "17846616|Figure-Rohling.jpg": "https://purls.helmholtz-metadaten.de/msekg/1768574950088",
+    "17846616|Vh5205_T-84.LIS": "https://purls.helmholtz-metadaten.de/msekg/1768574950089",
+    "17846616|Interdentritic-region-overview.jpg": "https://purls.helmholtz-metadaten.de/msekg/1768574950090",
+    "11668375|2025-12_Data-Schema_Creep_v2.0.csv": "https://purls.helmholtz-metadaten.de/msekg/1768574950091",
+    "11668375|Figure1.pdf": "https://purls.helmholtz-metadaten.de/msekg/1768574950092",
+    "11668375|2025-12_Data-Schema_Creep_v2.0.json": "https://purls.helmholtz-metadaten.de/msekg/1768574950093",
+    "11668375|2025-12_Data-Schema_Creep_v2.0.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1768574950094",
+    "17628976|Growing_Cultural_Change_CORDI_2025.pdf": "https://purls.helmholtz-metadaten.de/msekg/1768574950097",
+    "17846435|2025-12_Data-Schema-Tensile-HT_v1.0.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1768574950100",
+    "17846435|Figure1.pdf": "https://purls.helmholtz-metadaten.de/msekg/1768574950101",
+    "17846435|2025-12_Data-Schema-Tensile-HT_v1.0.csv": "https://purls.helmholtz-metadaten.de/msekg/1768574950102"
   },
   "graphs": {},
   "by_record": {

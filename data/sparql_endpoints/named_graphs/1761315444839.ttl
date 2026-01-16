@@ -133,6 +133,24 @@
     rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
     skos:inScheme <http://nfdi4earth.de/ontology> .
 
+<http://nfdi4earth.de/ontology/certificateName> a owl:DatatypeProperty ;
+    rdfs:label "certificateName" ;
+    rdfs:comment "The official name or type of the certificate awarded to the repository." ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/certificateUrl> a owl:DatatypeProperty ;
+    rdfs:label "certificateUrl" ;
+    rdfs:comment "URL with more information about the certificate." ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/certificateWidget> a owl:DatatypeProperty ;
+    rdfs:label "certificateWidget" ;
+    rdfs:comment "URL of a badge or widget visualizing the certificate." ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
 <http://nfdi4earth.de/ontology/chargeFree> a owl:DatatypeProperty ;
     rdfs:label "chargeFree" ;
     dcterms:title "Charge-free" ;
@@ -293,6 +311,13 @@
     rdfs:range <http://nfdi4earth.de/ontology/Distribution> ;
     skos:inScheme <http://nfdi4earth.de/ontology> .
 
+<http://nfdi4earth.de/ontology/downloadURL> a owl:DatatypeProperty ;
+    rdfs:label "downloadURL" ;
+    rdfs:comment "The URL of a direct link to a downloadable file." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Distribution> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
 <http://nfdi4earth.de/ontology/educationalLevel> a owl:ObjectProperty ;
     rdfs:label "educationalLevel" ;
     rdfs:comment "The level in terms of progression through an educational or training context." ;
@@ -362,10 +387,11 @@
     rdfs:range <http://nfdi4earth.de/ontology/API> ;
     skos:inScheme <http://nfdi4earth.de/ontology> .
 
-<http://nfdi4earth.de/ontology/hasCertificate> a owl:DatatypeProperty ;
+<http://nfdi4earth.de/ontology/hasCertificate> a owl:ObjectProperty ;
     rdfs:label "hasCertificate" ;
-    rdfs:comment "A certification of the repository NOTE: This is currently being handled as a string since the source metadata for this property are still according to re3data schema 2.2. This will change in the future into a more complex property with a certificateURL" ;
+    rdfs:comment "Certificates awarded to the repository." ;
     rdfs:domain <http://nfdi4earth.de/ontology/Repository> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Certificate> ;
     skos:exactMatch <http://www.re3data.org/schema/4-0certificate> ;
     skos:inScheme <http://nfdi4earth.de/ontology> .
 
@@ -866,6 +892,26 @@ Note: Currently no controlled voabulary is enforced, but the same values as in t
     rdfs:range xsd:string ;
     skos:inScheme <http://nfdi4earth.de/ontology> .
 
+<http://nfdi4earth.de/ontology/simMeasure> a owl:DatatypeProperty ;
+    rdfs:label "simMeasure" ;
+    rdfs:comment "The similarity measure that was used " ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Similarity> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/simValue> a owl:DatatypeProperty ;
+    rdfs:label "simValue" ;
+    rdfs:comment "The value of the similarity measure for the two entities  " ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Similarity> ;
+    rdfs:range xsd:float ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/similarTo> a owl:ObjectProperty ;
+    rdfs:label "similarTo" ;
+    rdfs:comment "Another entity that is similar to this one and the degree of similarity between the two entities. " ;
+    rdfs:range <http://nfdi4earth.de/ontology/Similarity> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
 <http://nfdi4earth.de/ontology/sourceSystem> a owl:ObjectProperty ;
     rdfs:label "sourceSystem" ;
     rdfs:comment "A provisional (!) attribute for temporary backwards compatibility. Domain: Any Thing, Resource or Organization" ;
@@ -929,6 +975,12 @@ Note: Currently no controlled voabulary is enforced, but the same values as in t
     rdfs:comment "The key performance indicators (KPI) applicable to the service; The required KPI is dependent on the service type." ;
     rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
     rdfs:range <http://nfdi4earth.de/ontology/ServiceKPI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/target> a owl:DatatypeProperty ;
+    rdfs:label "target" ;
+    rdfs:comment "The resource or thing that is similar to the entity." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Similarity> ;
     skos:inScheme <http://nfdi4earth.de/ontology> .
 
 <http://nfdi4earth.de/ontology/targetProduct> a owl:ObjectProperty ;
@@ -2804,10 +2856,10 @@ owl:Nothing a owl:Class ;
     rdfs:comment "Classes with this mixin are allowed in the KH to exist as full entities with an IRI (= the KH ID) but also as dependent object with blank nodes (= no KH ID). This functional mixin is used as a flag in order to generate the Python code (gen-python) in a customized way, because per default LinkML currently does not allow blank nodes for classes with an identifier." ;
     skos:inScheme <http://nfdi4earth.de/ontology> .
 
-<http://nfdi4earth.de/ontology/Distribution> a owl:Class ;
-    rdfs:label "Distribution" ;
-    rdfs:comment "A specific representation of a dataset. NOTE: More properties will be added when needed." ;
-    owl:equivalentClass dcat:Distribution ;
+<http://nfdi4earth.de/ontology/Certificate> a owl:Class ;
+    rdfs:label "Certificate" ;
+    rdfs:comment "A certificate awarded to a repository, including its name, validity period, and related URLs. Conforms to the re3data schema 4.0" ;
+    owl:equivalentClass <http://nfdi4earth.de/ontology/Certificate> ;
     skos:inScheme <http://nfdi4earth.de/ontology> .
 
 <http://purl.obolibrary.org/obo/T4FS_0000053> a owl:Class ;
@@ -2945,6 +2997,12 @@ owl:Nothing a owl:Class ;
     rdfs:subClassOf <http://nfdi4earth.de/ontology/CreativeWork>,
         <http://nfdi4earth.de/ontology/KHMetaDataObject> ;
     owl:equivalentClass <http://schema.org/Article> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Distribution> a owl:Class ;
+    rdfs:label "Distribution" ;
+    rdfs:comment "A specific representation of a dataset. NOTE: More properties will be added when needed." ;
+    owl:equivalentClass dcat:Distribution ;
     skos:inScheme <http://nfdi4earth.de/ontology> .
 
 <http://nfdi4earth.de/ontology/Location> a owl:Class ;
@@ -3113,6 +3171,12 @@ owl:Nothing a owl:Class ;
     rdfs:label "ServiceKPI" ;
     rdfs:comment "The key performance indicators (KPI) applicable to RDM services; The required KPI is dependent on service type." ;
     owl:equivalentClass <http://nfdi4earth.de/ontology/ServiceKPI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Similarity> a owl:Class ;
+    rdfs:label "Similarity" ;
+    rdfs:comment "Models a similarity relationship between two entities. " ;
+    owl:equivalentClass <http://nfdi4earth.de/ontology/Similarity> ;
     skos:inScheme <http://nfdi4earth.de/ontology> .
 
 owl:Thing a owl:Class ;

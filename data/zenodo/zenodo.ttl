@@ -5,8 +5,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://purls.helmholtz-metadaten.de/msekg/10643aab2908431ba0069bfb3b7e9ca9> a prov:Activity ;
-    prov:startedAtTime "2025-12-17T10:42:15+00:00"^^xsd:dateTime .
+<https://purls.helmholtz-metadaten.de/msekg/072534584ebe4c85819830cb0f57d7f6> a prov:Activity ;
+    prov:startedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1758983993017> a nfdi:NFDI_0000190 ;
     rdfs:label "https://zenodo.org/records/16753542" ;
@@ -253,16 +253,24 @@
         <https://purls.helmholtz-metadaten.de/msekg/1758983993133>,
         <https://purls.helmholtz-metadaten.de/msekg/1758983993134>,
         <https://purls.helmholtz-metadaten.de/msekg/1758983993135>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993136> ;
+        <https://purls.helmholtz-metadaten.de/msekg/1758983993136>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950091>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950092>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950093>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950094> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1758983993116> ;
     dcterms:created "2024-07-23T16:00:11.340258+00:00"^^xsd:dateTime,
-        "2024-09-20T15:24:11.374727+00:00"^^xsd:dateTime ;
+        "2024-09-20T15:24:11.374727+00:00"^^xsd:dateTime,
+        "2025-12-18T11:33:28.886997+00:00"^^xsd:dateTime ;
     dcterms:modified "2024-08-14T15:37:24.922335+00:00"^^xsd:dateTime,
-        "2024-09-20T15:24:11.777679+00:00"^^xsd:dateTime ;
+        "2024-09-20T15:24:11.777679+00:00"^^xsd:dateTime,
+        "2025-12-18T11:33:29.382999+00:00"^^xsd:dateTime ;
     dcterms:source <https://doi.org/10.5281/zenodo.11668376>,
-        <https://doi.org/10.5281/zenodo.13820070> ;
+        <https://doi.org/10.5281/zenodo.13820070>,
+        <https://doi.org/10.5281/zenodo.17975526> ;
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.11668376>,
-        <https://doi.org/10.5281/zenodo.13820070> .
+        <https://doi.org/10.5281/zenodo.13820070>,
+        <https://doi.org/10.5281/zenodo.17975526> .
 
 <https://purls.helmholtz-metadaten.de/msekg/1758983993121> a nfdi:NFDI_0000190 ;
     rdfs:label "https://zenodo.org/records/13628019" ;
@@ -458,6 +466,47 @@
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.10566837>,
         <https://doi.org/10.5281/zenodo.10794162>,
         <https://doi.org/10.5281/zenodo.14012860> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950079> a nfdi:NFDI_0000009 ;
+    rdfs:label "https://zenodo.org/records/17846616" ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1768574950081>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950082>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950083>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950084>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950085>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950086>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950087>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950088>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950089>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950090> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1768574950080> ;
+    dcterms:created "2026-01-09T09:48:49.880801+00:00"^^xsd:dateTime ;
+    dcterms:modified "2026-01-09T09:48:52.249530+00:00"^^xsd:dateTime ;
+    dcterms:source <https://doi.org/10.5281/zenodo.17846617> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.17846617> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950095> a nfdi:NFDI_0010022 ;
+    rdfs:label "https://zenodo.org/records/17628976" ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1768574950097> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1768574950096> ;
+    dcterms:created "2025-12-10T10:38:52.776477+00:00"^^xsd:dateTime ;
+    dcterms:modified "2025-12-11T11:06:17.652938+00:00"^^xsd:dateTime ;
+    dcterms:source <https://doi.org/10.5281/zenodo.17628977> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.17628977> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950098> a nfdi:NFDI_0000190 ;
+    rdfs:label "https://zenodo.org/records/17846435" ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1768574950100>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950101>,
+        <https://purls.helmholtz-metadaten.de/msekg/1768574950102> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1768574950099> ;
+    dcterms:created "2025-12-09T09:38:05.527625+00:00"^^xsd:dateTime ;
+    dcterms:modified "2025-12-09T09:38:05.889260+00:00"^^xsd:dateTime ;
+    dcterms:source <https://doi.org/10.5281/zenodo.17846436> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.17846436> .
 
 <https://purls.helmholtz-metadaten.de/msekg/1758983993018> rdfs:label "NFDI-MatWerk Renewal Proposal Part B-1",
         "NFDI-MatWerk Renewal Proposal Part B-1 updated version" ;
@@ -1372,4 +1421,157 @@
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10566837> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10566837>,
         <https://zenodo.org/api/records/10566837/files/123.png/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950080> rdfs:label "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950081> rdfs:label "Vh5205_T-74.LIS" ;
+    obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
+        <https://zenodo.org/api/records/17846617/files/Vh5205_T-74.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950082> rdfs:label "Dendrite-overview.jpg" ;
+    obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
+        <https://zenodo.org/api/records/17846617/files/Dendrite-overview.jpg/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950083> rdfs:label "TestPiece-TensileTests-HT-CMSX-6.pdf" ;
+    obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
+        <https://zenodo.org/api/records/17846617/files/TestPiece-TensileTests-HT-CMSX-6.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950084> rdfs:label "2025-12_HT-Tensile-reference-data-CMSX-6_v1.0.xlsx" ;
+    obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
+        <https://zenodo.org/api/records/17846617/files/2025-12_HT-Tensile-reference-data-CMSX-6_v1.0.xlsx/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950085> rdfs:label "Vh5205_T-71.LIS" ;
+    obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
+        <https://zenodo.org/api/records/17846617/files/Vh5205_T-71.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950086> rdfs:label "Dendrite-SEM.tif" ;
+    obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
+        <https://zenodo.org/api/records/17846617/files/Dendrite-SEM.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950087> rdfs:label "Interdentritic-region-detail.tif" ;
+    obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
+        <https://zenodo.org/api/records/17846617/files/Interdentritic-region-detail.tif/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950088> rdfs:label "Figure-Rohling.jpg" ;
+    obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
+        <https://zenodo.org/api/records/17846617/files/Figure-Rohling.jpg/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950089> rdfs:label "Vh5205_T-84.LIS" ;
+    obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
+        <https://zenodo.org/api/records/17846617/files/Vh5205_T-84.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950090> rdfs:label "Interdentritic-region-overview.jpg" ;
+    obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
+        <https://zenodo.org/api/records/17846617/files/Interdentritic-region-overview.jpg/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950091> rdfs:label "2025-12_Data-Schema_Creep_v2.0.csv" ;
+    obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17975526> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17975526> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17975526>,
+        <https://zenodo.org/api/records/17975526/files/2025-12_Data-Schema_Creep_v2.0.csv/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950092> rdfs:label "Figure1.pdf" ;
+    obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17975526> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17975526> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17975526>,
+        <https://zenodo.org/api/records/17975526/files/Figure1.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950093> rdfs:label "2025-12_Data-Schema_Creep_v2.0.json" ;
+    obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17975526> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17975526> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17975526>,
+        <https://zenodo.org/api/records/17975526/files/2025-12_Data-Schema_Creep_v2.0.json/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950094> rdfs:label "2025-12_Data-Schema_Creep_v2.0.xlsx" ;
+    obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17975526> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17975526> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17975526>,
+        <https://zenodo.org/api/records/17975526/files/2025-12_Data-Schema_Creep_v2.0.xlsx/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950096> rdfs:label "Growing Cultural Change: Sustainable Research Data Management Rooted in Governance, Incentives, and Training" ;
+    obo:OBI_0002135 "Growing Cultural Change: Sustainable Research Data Management Rooted in Governance, Incentives, and Training" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950097> rdfs:label "Growing_Cultural_Change_CORDI_2025.pdf" ;
+    obo:OBI_0002135 "Growing Cultural Change: Sustainable Research Data Management Rooted in Governance, Incentives, and Training" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17628977> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17628977> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17628977>,
+        <https://zenodo.org/api/records/17628977/files/Growing_Cultural_Change_CORDI_2025.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950099> rdfs:label "NFDI-MatWerk/IUC02 Data schema for elevated temperature tensile data of Ni-based superalloys" ;
+    obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for elevated temperature tensile data of Ni-based superalloys" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950100> rdfs:label "2025-12_Data-Schema-Tensile-HT_v1.0.xlsx" ;
+    obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for elevated temperature tensile data of Ni-based superalloys" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846436> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846436> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846436>,
+        <https://zenodo.org/api/records/17846436/files/2025-12_Data-Schema-Tensile-HT_v1.0.xlsx/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950101> rdfs:label "Figure1.pdf" ;
+    obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for elevated temperature tensile data of Ni-based superalloys" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846436> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846436> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846436>,
+        <https://zenodo.org/api/records/17846436/files/Figure1.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/1768574950102> rdfs:label "2025-12_Data-Schema-Tensile-HT_v1.0.csv" ;
+    obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for elevated temperature tensile data of Ni-based superalloys" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846436> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846436> ;
+    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.17846436>,
+        <https://zenodo.org/api/records/17846436/files/2025-12_Data-Schema-Tensile-HT_v1.0.csv/content> .
 

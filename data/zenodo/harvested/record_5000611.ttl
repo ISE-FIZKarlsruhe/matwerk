@@ -5,6 +5,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://purls.helmholtz-metadaten.de/msekg/0bb01ebcd5544f699c5489bd34132fcd> a prov:Activity ;
+    prov:startedAtTime "2026-01-16T14:51:12+00:00"^^xsd:dateTime .
+
 <https://purls.helmholtz-metadaten.de/msekg/1759767937740> a nfdi:NFDI_0000009 ;
     rdfs:label "https://zenodo.org/records/5000610" ;
     obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759767937744>,
@@ -59,9 +62,6 @@
     dcterms:modified "2024-07-19T00:16:47.822883+00:00"^^xsd:dateTime ;
     dcterms:source <https://doi.org/10.5061/dryad.ttdz08kt4> ;
     prov:wasDerivedFrom <https://doi.org/10.5061/dryad.ttdz08kt4> .
-
-<https://purls.helmholtz-metadaten.de/msekg/9a40d681cbd04cffb25769249a39e177> a prov:Activity ;
-    prov:startedAtTime "2025-12-17T10:44:28+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759767937741> rdfs:label "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
     obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" .

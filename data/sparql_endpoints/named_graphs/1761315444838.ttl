@@ -76,6 +76,9 @@
     rdfs:subClassOf <http://nfdi4earth.de/ontology/Catalog>,
         <http://nfdi4earth.de/ontology/KHMetaDataObject> .
 
+<http://nfdi4earth.de/ontology/Certificate> a owl:Class ;
+    rdfs:label "Certificate" .
+
 <http://nfdi4earth.de/ontology/DataService> a owl:Class ;
     rdfs:label "DataService" ;
     rdfs:subClassOf <http://nfdi4earth.de/ontology/KHMetaDataObject>,
@@ -324,6 +327,9 @@
 <http://nfdi4earth.de/ontology/ServiceTypeEnum#Workflow/Pipelilne> a owl:Class ;
     rdfs:label "Workflow/Pipelilne" ;
     rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceTypeEnum> .
+
+<http://nfdi4earth.de/ontology/Similarity> a owl:Class ;
+    rdfs:label "Similarity" .
 
 <http://nfdi4earth.de/ontology/SoftwareSourceCode> a owl:Class ;
     rdfs:label "SoftwareSourceCode" ;
