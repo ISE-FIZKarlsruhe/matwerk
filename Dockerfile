@@ -74,5 +74,6 @@ COPY mkdocs.yml a.yml
 
 RUN uv run python -m shmarql docs_build -f a.yml
 
-RUN mkdir /src/site/ontology
+#RUN mkdir /src/site/ontology
+
 
