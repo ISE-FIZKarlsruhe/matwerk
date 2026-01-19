@@ -2432,6 +2432,12 @@
 <http://orkg.org/orkg/class/C125001> a owl:Class ;
     rdfs:label "linked open data"^^xsd:string .
 
+<http://orkg.org/orkg/class/C125002> a owl:Class ;
+    rdfs:label "Jaro–Winkler distance"^^xsd:string .
+
+<http://orkg.org/orkg/class/C125003> a owl:Class ;
+    rdfs:label "Lexical similarity"^^xsd:string .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string .
 

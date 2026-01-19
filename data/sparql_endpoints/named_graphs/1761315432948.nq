@@ -1,179 +1,179 @@
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTask> <http://www.w3.org/2000/01/rdf-schema#label> "persona task" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SubTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SpokespersonRole> <http://www.w3.org/2000/01/rdf-schema#label> "SpokespersonRole" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskArea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000033> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PageRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureContributorRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaOccupationRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDomainKnowledgeLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureContributorRole> <http://www.w3.org/2000/01/rdf-schema#label> "measure contributor role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Place> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Lecture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <http://www.w3.org/2000/01/rdf-schema#label> "organized event" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Hackathon> <http://www.w3.org/2000/01/rdf-schema#label> "hackathon" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/LODRating> <http://www.w3.org/2000/01/rdf-schema#label> "LOD rating" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Tutorial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://www.w3.org/2006/time#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.org/spar/fabio/JournalIssue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SharedTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/IAO_0000578> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTechnicalSkillLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTechnicalSkillLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.org/spar/fabio/JournalIssue> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SpokespersonRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Event> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaProblemDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Lecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupContactPointRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/NewsArticle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000033> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaContributorRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Event> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupContactPointRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.org/spar/fabio/Journal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#label> "Instant" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupContactPointRole> <http://www.w3.org/2000/01/rdf-schema#label> "working group contact point role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Workshop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureContributorRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/CoSpokespersonRole> <http://www.w3.org/2000/01/rdf-schema#label> "co-spokesperson role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaOccupationRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/JournalArticle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Publication> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Project> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.org/spar/fabio/Journal> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/IAO_0000030> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SubTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/BFO_0000034> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaLeadRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SpokespersonRole> <http://www.w3.org/2000/01/rdf-schema#label> "spokesperson role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EducationalFunction> <http://www.w3.org/2000/01/rdf-schema#label> "educational function" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/CoSpokespersonRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/FAIRDataPriniciple> <http://www.w3.org/2000/01/rdf-schema#label> "FAIR data principle" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaLeadRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/BecomingAMember> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/OBI_0000011> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Conference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/CoSpokespersonRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaSoftSkillLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Tutorial> <http://www.w3.org/2000/01/rdf-schema#label> "tutorial" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaOccupationRole> <http://www.w3.org/2000/01/rdf-schema#label> "persona occupation role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/ScienceSlam> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/FAIRDataPriniciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaSoftSkillLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.org/spar/fabio/JournalVolume> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SummerSchool> <http://www.w3.org/2000/01/rdf-schema#label> "summer school" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Lecture> <http://www.w3.org/2000/01/rdf-schema#label> "lecture" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/JournalArticle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/IAO_0000708> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/OBI_0002110> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000578> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Persona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Publication> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDomainKnowledgeLevel> <http://www.w3.org/2000/01/rdf-schema#label> "persona domain knowledge level" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SpokespersonRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SharedTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Agent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaProblemDescription> <http://www.w3.org/2000/01/rdf-schema#label> "persona problem description" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/OBI_0002110> <http://www.w3.org/2000/01/rdf-schema#label> "digital object identifier" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaContributorRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/NewsArticle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/ScienceSlam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://schema.org/EventAttendanceModeEnumeration> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaEthicalOrLegalSkillLevel> <http://www.w3.org/2000/01/rdf-schema#label> "persona ethical or legal skill level" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SharedTask> <http://www.w3.org/2000/01/rdf-schema#label> "shared task" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EducationalFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EvaluationMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/CoSpokespersonRole> <http://www.w3.org/2000/01/rdf-schema#label> "CoSpokespersonRole" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Persona> <http://www.w3.org/2000/01/rdf-schema#label> "persona" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureLeadRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
 <https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaContributorRole> <http://www.w3.org/2000/01/rdf-schema#label> "task area contributor role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Proceedings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaWishDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroup> <http://www.w3.org/2000/01/rdf-schema#label> "working group" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaLeadRole> <http://www.w3.org/2000/01/rdf-schema#label> "task area lead role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Hackathon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#label> "Interval" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaEthicalOrLegalSkillLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupMemberRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Tutorial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EducationalFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000034> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaWishDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Conference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Leading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SubTask> <http://www.w3.org/2000/01/rdf-schema#label> "sub-task" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/FAIRDataPriniciple> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SummerSchool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTechnicalSkillLevel> <http://www.w3.org/2000/01/rdf-schema#label> "persona technical skill level" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDescription> <http://www.w3.org/2000/01/rdf-schema#label> "persona description" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/OBI_0000011> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Leading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/OBI_0000011> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/BecomingAMember> <http://www.w3.org/2000/01/rdf-schema#label> "becoming a member" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <http://www.w3.org/2000/01/rdf-schema#label> "academic event" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/JournalArticle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Publication> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaOccupationRole> <http://www.w3.org/2000/01/rdf-schema#label> "persona occupation role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaLeadRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureContributorRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/IAO_0000033> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/JournalArticle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupContactPointRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Lecture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/FAIRDataPriniciple> <http://www.w3.org/2000/01/rdf-schema#label> "FAIR data principle" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/IAO_0000030> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SpokespersonRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/FAIRDataPriniciple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
 <https://nfdi.fiz-karlsruhe.de/nfdi4dso/PageRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/BFO_0000034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/IAO_0000033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaEthicalOrLegalSkillLevel> <http://www.w3.org/2000/01/rdf-schema#label> "persona ethical or legal skill level" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EducationalFunction> <http://www.w3.org/2000/01/rdf-schema#label> "educational function" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupMemberRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SpokespersonRole> <http://www.w3.org/2000/01/rdf-schema#label> "spokesperson role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Proceedings> <http://www.w3.org/2000/01/rdf-schema#label> "Proceedings" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureLeadRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.org/spar/fabio/Journal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/BecomingAMember> <http://www.w3.org/2000/01/rdf-schema#label> "becoming a member" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SpokespersonRole> <http://www.w3.org/2000/01/rdf-schema#label> "SpokespersonRole" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupMemberRole> <http://www.w3.org/2000/01/rdf-schema#label> "working group member role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Hackathon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
 <https://nfdi.fiz-karlsruhe.de/nfdi4dso/Workshop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
 <https://nfdi.fiz-karlsruhe.de/ontology/Person> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupMemberRole> <http://www.w3.org/2000/01/rdf-schema#label> "working group member role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Proceedings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Publication> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDomainKnowledgeLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/IAO_0000030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Hackathon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/BFO_0000023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/IAO_0000033> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Agent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
 <https://nfdi.fiz-karlsruhe.de/ontology/Organization> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/JournalArticle> <http://www.w3.org/2000/01/rdf-schema#label> "journal article" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EvaluationMetric> <http://www.w3.org/2000/01/rdf-schema#label> "evaluation metric" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/ScienceSlam> <http://www.w3.org/2000/01/rdf-schema#label> "science slam" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/BecomingAMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureLeadRole> <http://www.w3.org/2000/01/rdf-schema#label> "measure lead role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/BFO_0000023> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "task area measure" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EvaluationMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SummerSchool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/NewsArticle> <http://www.w3.org/2000/01/rdf-schema#label> "news article" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaEthicalOrLegalSkillLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/IAO_0000442> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/LODRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/BFO_0000023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Persona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.org/spar/fabio/JournalIssue> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
 <https://nfdi.fiz-karlsruhe.de/nfdi4dso/LODRating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Proceedings> <http://www.w3.org/2000/01/rdf-schema#label> "Proceedings" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.org/spar/fabio/JournalVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Conference> <http://www.w3.org/2000/01/rdf-schema#label> "conference" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/IAO_0000578> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://purl.obolibrary.org/obo/IAO_0000708> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureLeadRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/ontology/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SummerSchool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
 <http://purl.obolibrary.org/obo/IAO_0000442> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskArea> <http://www.w3.org/2000/01/rdf-schema#label> "task area" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaSoftSkillLevel> <http://www.w3.org/2000/01/rdf-schema#label> "persona soft skill level" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EvaluationMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaContributorRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaEthicalOrLegalSkillLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/NewsArticle> <http://www.w3.org/2000/01/rdf-schema#label> "news article" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaLeadRole> <http://www.w3.org/2000/01/rdf-schema#label> "task area lead role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.org/spar/fabio/JournalVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDomainKnowledgeLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/IAO_0000578> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureLeadRole> <http://www.w3.org/2000/01/rdf-schema#label> "measure lead role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SpokespersonRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Project> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
 <https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaProblemDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupMemberRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<http://schema.org/EventAttendanceModeEnumeration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PageRange> <http://www.w3.org/2000/01/rdf-schema#label> "page range" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Workshop> <http://www.w3.org/2000/01/rdf-schema#label> "workshop" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
-<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Leading> <http://www.w3.org/2000/01/rdf-schema#label> "leading" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTechnicalSkillLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/2000/01/rdf-schema#label> "Instant" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/ScienceSlam> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <http://www.w3.org/2000/01/rdf-schema#label> "academic event" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTechnicalSkillLevel> <http://www.w3.org/2000/01/rdf-schema#label> "persona technical skill level" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/FAIRDataPriniciple> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
 <http://purl.obolibrary.org/obo/OBI_0002110> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PageRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaOccupationRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.org/spar/fabio/Journal> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Leading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/OBI_0000011> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Tutorial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Tutorial> <http://www.w3.org/2000/01/rdf-schema#label> "tutorial" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/BFO_0000034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Publication> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDomainKnowledgeLevel> <http://www.w3.org/2000/01/rdf-schema#label> "persona domain knowledge level" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PageRange> <http://www.w3.org/2000/01/rdf-schema#label> "page range" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EducationalFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Tutorial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaSoftSkillLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupContactPointRole> <http://www.w3.org/2000/01/rdf-schema#label> "working group contact point role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Event> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Conference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaWishDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Publication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.org/spar/fabio/JournalVolume> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/IAO_0000578> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaWishDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EvaluationMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
 <https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaWishDescription> <http://www.w3.org/2000/01/rdf-schema#label> "persona wish description" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Conference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Workshop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Proceedings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Publication> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/CoSpokespersonRole> <http://www.w3.org/2000/01/rdf-schema#label> "co-spokesperson role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SubTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Proceedings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Leading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/JournalArticle> <http://www.w3.org/2000/01/rdf-schema#label> "journal article" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/CoSpokespersonRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaProblemDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://www.w3.org/2006/time#Instant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <http://www.w3.org/2000/01/rdf-schema#label> "organized event" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTechnicalSkillLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskArea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000033> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://schema.org/EventAttendanceModeEnumeration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Hackathon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaTask> <http://www.w3.org/2000/01/rdf-schema#label> "persona task" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureContributorRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupContactPointRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Hackathon> <http://www.w3.org/2000/01/rdf-schema#label> "hackathon" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/CoSpokespersonRole> <http://www.w3.org/2000/01/rdf-schema#label> "CoSpokespersonRole" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroupMemberRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Leading> <http://www.w3.org/2000/01/rdf-schema#label> "leading" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Agent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/OBI_0002110> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000578> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000033> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Workshop> <http://www.w3.org/2000/01/rdf-schema#label> "workshop" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureLeadRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Event> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Persona> <http://www.w3.org/2000/01/rdf-schema#label> "persona" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/BFO_0000023> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaSoftSkillLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/ScienceSlam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SharedTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaProblemDescription> <http://www.w3.org/2000/01/rdf-schema#label> "persona problem description" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/NewsArticle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://www.w3.org/2006/time#Interval> <http://www.w3.org/2000/01/rdf-schema#label> "Interval" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://schema.org/EventAttendanceModeEnumeration> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SummerSchool> <http://www.w3.org/2000/01/rdf-schema#label> "summer school" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SharedTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaContributorRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SubTask> <http://www.w3.org/2000/01/rdf-schema#label> "sub-task" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EducationalFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000034> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/ontology/Agent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroup> <http://www.w3.org/2000/01/rdf-schema#label> "working group" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Conference> <http://www.w3.org/2000/01/rdf-schema#label> "conference" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/IAO_0000708> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Place> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/WorkingGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/BFO_0000034> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/EvaluationMetric> <http://www.w3.org/2000/01/rdf-schema#label> "evaluation metric" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SubTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/AcademicEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaOccupationRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/OBI_0002110> <http://www.w3.org/2000/01/rdf-schema#label> "digital object identifier" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SummerSchool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/BecomingAMember> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/OBI_0000011> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "task area measure" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaSoftSkillLevel> <http://www.w3.org/2000/01/rdf-schema#label> "persona soft skill level" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/IAO_0000033> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/LODRating> <http://www.w3.org/2000/01/rdf-schema#label> "LOD rating" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/IAO_0000030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/ScienceSlam> <http://www.w3.org/2000/01/rdf-schema#label> "science slam" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskArea> <http://www.w3.org/2000/01/rdf-schema#label> "task area" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDomainKnowledgeLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDescription> <http://www.w3.org/2000/01/rdf-schema#label> "persona description" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/OBI_0000011> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Lecture> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://nfdi.fiz-karlsruhe.de/nfdi4dso/OrganizedEvent> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/MeasureContributorRole> <http://www.w3.org/2000/01/rdf-schema#label> "measure contributor role" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/LODRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/NewsArticle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/IAO_0000708> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/SharedTask> <http://www.w3.org/2000/01/rdf-schema#label> "shared task" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/TaskAreaLeadRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/Lecture> <http://www.w3.org/2000/01/rdf-schema#label> "lecture" <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.org/spar/fabio/JournalIssue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/PersonaEthicalOrLegalSkillLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/BecomingAMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<https://nfdi.fiz-karlsruhe.de/nfdi4dso/CoSpokespersonRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
+<http://purl.obolibrary.org/obo/IAO_0000442> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/1761315432948> .
 

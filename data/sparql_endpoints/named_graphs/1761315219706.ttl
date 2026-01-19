@@ -3322,6 +3322,16 @@ Atopic dermatitis is an evolutionary sequela of vitamin D3 deficiency in norther
     ns1:description "linked data available under an open license"^^xsd:string ;
     owl:equivalentClass <https://www.wikidata.org/entity/Q18692990> .
 
+<http://orkg.org/orkg/class/C125002> a owl:Class ;
+    rdfs:label "Jaro–Winkler distance"^^xsd:string ;
+    ns1:description "string distance measure"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q3030677> .
+
+<http://orkg.org/orkg/class/C125003> a owl:Class ;
+    rdfs:label "Lexical similarity"^^xsd:string ;
+    ns1:description "similarity of languages' vocabulary (lexicon)"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q4257687> .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string ;
     owl:equivalentClass <http://purl.obolibrary.org/obo/ZFS_0100000> .

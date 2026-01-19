@@ -5,9 +5,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://purls.helmholtz-metadaten.de/msekg/072534584ebe4c85819830cb0f57d7f6> a prov:Activity ;
-    prov:startedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime .
-
 <https://purls.helmholtz-metadaten.de/msekg/1758983993017> a nfdi:NFDI_0000190 ;
     rdfs:label "https://zenodo.org/records/16753542" ;
     obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1758983993019>,
@@ -483,7 +480,6 @@
     dcterms:created "2026-01-09T09:48:49.880801+00:00"^^xsd:dateTime ;
     dcterms:modified "2026-01-09T09:48:52.249530+00:00"^^xsd:dateTime ;
     dcterms:source <https://doi.org/10.5281/zenodo.17846617> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.17846617> .
 
 <https://purls.helmholtz-metadaten.de/msekg/1768574950095> a nfdi:NFDI_0010022 ;
@@ -493,7 +489,6 @@
     dcterms:created "2025-12-10T10:38:52.776477+00:00"^^xsd:dateTime ;
     dcterms:modified "2025-12-11T11:06:17.652938+00:00"^^xsd:dateTime ;
     dcterms:source <https://doi.org/10.5281/zenodo.17628977> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.17628977> .
 
 <https://purls.helmholtz-metadaten.de/msekg/1768574950098> a nfdi:NFDI_0000190 ;
@@ -505,8 +500,10 @@
     dcterms:created "2025-12-09T09:38:05.527625+00:00"^^xsd:dateTime ;
     dcterms:modified "2025-12-09T09:38:05.889260+00:00"^^xsd:dateTime ;
     dcterms:source <https://doi.org/10.5281/zenodo.17846436> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.17846436> .
+
+<https://purls.helmholtz-metadaten.de/msekg/8059e7337ebe42879119d85cbc0747e1> a prov:Activity ;
+    prov:startedAtTime "2026-01-19T18:28:35+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1758983993018> rdfs:label "NFDI-MatWerk Renewal Proposal Part B-1",
         "NFDI-MatWerk Renewal Proposal Part B-1 updated version" ;
@@ -1429,7 +1426,6 @@
     obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
         <https://zenodo.org/api/records/17846617/files/Vh5205_T-74.LIS/content> .
 
@@ -1437,7 +1433,6 @@
     obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
         <https://zenodo.org/api/records/17846617/files/Dendrite-overview.jpg/content> .
 
@@ -1445,7 +1440,6 @@
     obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
         <https://zenodo.org/api/records/17846617/files/TestPiece-TensileTests-HT-CMSX-6.pdf/content> .
 
@@ -1453,7 +1447,6 @@
     obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
         <https://zenodo.org/api/records/17846617/files/2025-12_HT-Tensile-reference-data-CMSX-6_v1.0.xlsx/content> .
 
@@ -1461,7 +1454,6 @@
     obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
         <https://zenodo.org/api/records/17846617/files/Vh5205_T-71.LIS/content> .
 
@@ -1469,7 +1461,6 @@
     obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
         <https://zenodo.org/api/records/17846617/files/Dendrite-SEM.tif/content> .
 
@@ -1477,7 +1468,6 @@
     obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
         <https://zenodo.org/api/records/17846617/files/Interdentritic-region-detail.tif/content> .
 
@@ -1485,7 +1475,6 @@
     obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
         <https://zenodo.org/api/records/17846617/files/Figure-Rohling.jpg/content> .
 
@@ -1493,7 +1482,6 @@
     obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
         <https://zenodo.org/api/records/17846617/files/Vh5205_T-84.LIS/content> .
 
@@ -1501,7 +1489,6 @@
     obo:OBI_0002135 "BAM Reference Data: High Temperature Tensile Data of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846617> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846617> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846617>,
         <https://zenodo.org/api/records/17846617/files/Interdentritic-region-overview.jpg/content> .
 
@@ -1509,7 +1496,6 @@
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17975526> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17975526> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17975526>,
         <https://zenodo.org/api/records/17975526/files/2025-12_Data-Schema_Creep_v2.0.csv/content> .
 
@@ -1517,7 +1503,6 @@
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17975526> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17975526> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17975526>,
         <https://zenodo.org/api/records/17975526/files/Figure1.pdf/content> .
 
@@ -1525,7 +1510,6 @@
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17975526> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17975526> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17975526>,
         <https://zenodo.org/api/records/17975526/files/2025-12_Data-Schema_Creep_v2.0.json/content> .
 
@@ -1533,7 +1517,6 @@
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17975526> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17975526> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17975526>,
         <https://zenodo.org/api/records/17975526/files/2025-12_Data-Schema_Creep_v2.0.xlsx/content> .
 
@@ -1544,7 +1527,6 @@
     obo:OBI_0002135 "Growing Cultural Change: Sustainable Research Data Management Rooted in Governance, Incentives, and Training" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17628977> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17628977> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17628977>,
         <https://zenodo.org/api/records/17628977/files/Growing_Cultural_Change_CORDI_2025.pdf/content> .
 
@@ -1555,7 +1537,6 @@
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for elevated temperature tensile data of Ni-based superalloys" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846436> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846436> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846436>,
         <https://zenodo.org/api/records/17846436/files/2025-12_Data-Schema-Tensile-HT_v1.0.xlsx/content> .
 
@@ -1563,7 +1544,6 @@
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for elevated temperature tensile data of Ni-based superalloys" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846436> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846436> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846436>,
         <https://zenodo.org/api/records/17846436/files/Figure1.pdf/content> .
 
@@ -1571,7 +1551,6 @@
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for elevated temperature tensile data of Ni-based superalloys" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.17846436> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.17846436> ;
-    prov:generatedAtTime "2026-01-16T14:49:05+00:00"^^xsd:dateTime ;
     nfdi:NFDI_0001006 <10.5281/zenodo.17846436>,
         <https://zenodo.org/api/records/17846436/files/2025-12_Data-Schema-Tensile-HT_v1.0.csv/content> .
 

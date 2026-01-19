@@ -1583,6 +1583,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/c26bf24bf831c2ee>,
         <https://purls.helmholtz-metadaten.de/msekg/c29932b9b47488d6>,
         <https://purls.helmholtz-metadaten.de/msekg/c2c4a27bb1e4aa81>,
+        <https://purls.helmholtz-metadaten.de/msekg/c2c9fd9ccb7f6944>,
         <https://purls.helmholtz-metadaten.de/msekg/c325a2c55a8a0954>,
         <https://purls.helmholtz-metadaten.de/msekg/c325df4cd050fa86>,
         <https://purls.helmholtz-metadaten.de/msekg/c33eec376d706b49>,
@@ -2004,8 +2005,8 @@
         <https://purls.helmholtz-metadaten.de/msekg/ff918d350805fe70>,
         <https://purls.helmholtz-metadaten.de/msekg/ffba162ececefc28>,
         <https://purls.helmholtz-metadaten.de/msekg/ffbe7ae88c460787> ;
-    void:classes 2825 ;
-    void:entities 500639 ;
+    void:classes 2827 ;
+    void:entities 500752 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://orkg.org/triplestore> ;
     void:vocabulary <http://orkg.org/orkg/class/>,
@@ -3023,7 +3024,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/06cc1f446b0ac87b> rdfs:label "Problem" ;
     void:class <http://orkg.org/orkg/class/Problem> ;
-    void:entities 7418 .
+    void:entities 7425 .
 
 <https://purls.helmholtz-metadaten.de/msekg/06e5a7292fa17646> rdfs:label "Data" ;
     void:class <http://orkg.org/orkg/class/C58020> ;
@@ -3879,7 +3880,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/1c09499fa5cd21f6> rdfs:label "Published Comparison" ;
     void:class <http://orkg.org/orkg/class/ComparisonPublished> ;
-    void:entities 2120 .
+    void:entities 2122 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1c2c3ab55fd66ac5> rdfs:label "Knowledge representation" ;
     void:class <http://orkg.org/orkg/class/C77042> ;
@@ -3999,7 +4000,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/1efdec983bb0605a> rdfs:label "Contribution" ;
     void:class <http://orkg.org/orkg/class/Contribution> ;
-    void:entities 76504 .
+    void:entities 76518 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1f0c61e449a2165f> rdfs:label "Hydropower resource assessment [C]" ;
     void:class <http://orkg.org/orkg/class/C124013> ;
@@ -4397,7 +4398,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/2a9611ff54e191ff> rdfs:label "Material" ;
     void:class <http://orkg.org/orkg/class/Material> ;
-    void:entities 754 .
+    void:entities 761 .
 
 <https://purls.helmholtz-metadaten.de/msekg/2aafb5d25ecdaab8> rdfs:label "electrolyte" ;
     void:class <http://orkg.org/orkg/class/C63004> ;
@@ -4719,7 +4720,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/349bc1ec1d86d6b4> rdfs:label "Venue" ;
     void:class <http://orkg.org/orkg/class/Venue> ;
-    void:entities 12133 .
+    void:entities 12142 .
 
 <https://purls.helmholtz-metadaten.de/msekg/34ce8da28de53bc2> rdfs:label "organization" ;
     void:class <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ;
@@ -5007,7 +5008,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/3b4817d3b8d3fa19> rdfs:label "Model" ;
     void:class <http://orkg.org/orkg/class/Model> ;
-    void:entities 15759 .
+    void:entities 15761 .
 
 <https://purls.helmholtz-metadaten.de/msekg/3b7fa7e254d91e62> rdfs:label "Cycadophyta" ;
     void:class <http://orkg.org/orkg/class/C13007> ;
@@ -5510,7 +5511,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/48cf949e1acd0524> rdfs:label "Latest version" ;
     void:class <http://orkg.org/orkg/class/LatestVersion> ;
-    void:entities 1817 .
+    void:entities 1819 .
 
 <https://purls.helmholtz-metadaten.de/msekg/48ebf5b7b831ce91> rdfs:label "beta lactamase induction" ;
     void:class <http://orkg.org/orkg/class/C14099> ;
@@ -6231,7 +6232,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/5ad6e3c8df48f0ff> rdfs:label "Author" ;
     void:class <http://orkg.org/orkg/class/Author> ;
-    void:entities 10435 .
+    void:entities 10472 .
 
 <https://purls.helmholtz-metadaten.de/msekg/5b1e18aa7b582adf> rdfs:label "R282321" ;
     void:class <http://orkg.org/orkg/class/C51003> ;
@@ -6275,7 +6276,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/5b68a2df031bad18> rdfs:label "Comparison" ;
     void:class <http://orkg.org/orkg/class/Comparison> ;
-    void:entities 1836 .
+    void:entities 1838 .
 
 <https://purls.helmholtz-metadaten.de/msekg/5b7e58206916a58f> rdfs:label "amount" ;
     void:class <http://orkg.org/orkg/class/C68000> ;
@@ -6505,7 +6506,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/623515faa146700f> rdfs:label "Result" ;
     void:class <http://orkg.org/orkg/class/Result> ;
-    void:entities 1958 .
+    void:entities 1966 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6244efd9d22fc004> rdfs:label "Chlorocebus aethiops" ;
     void:class <http://orkg.org/orkg/class/C14424> ;
@@ -6973,7 +6974,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/6f1eebd02cf1df19> rdfs:label "Paper" ;
     void:class <http://orkg.org/orkg/class/Paper> ;
-    void:entities 54423 .
+    void:entities 54437 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6f75957dac0b4bd6> rdfs:label "e31" ;
     void:class <http://w3id.org/sensotwin/applicationontology#e31> ;
@@ -7620,7 +7621,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/80bb0611a21198b0> rdfs:label "Duplicate Detection, Resolution, Prevention [C]" ;
     void:class <http://orkg.org/orkg/class/C124038> ;
-    void:entities 2 .
+    void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/80c74896a382ab20> rdfs:label "generic hydrolase" ;
     void:class <http://orkg.org/orkg/class/C14103> ;
@@ -8279,7 +8280,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/9294cc88bf901b05> rdfs:label "Method" ;
     void:class <http://orkg.org/orkg/class/Method> ;
-    void:entities 2714 .
+    void:entities 2722 .
 
 <https://purls.helmholtz-metadaten.de/msekg/929b304dd7d53bb6> rdfs:label "Strain-Fatigue Life Curve" ;
     void:class <https://gitlab.com/kupferdigital/process-graphs/lcf-test/StrainFatigueLifeCurve> ;
@@ -8957,7 +8958,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/a579ea51bf7f797a> rdfs:label "Mathematical models [C]" ;
     void:class <http://orkg.org/orkg/class/C116020> ;
-    void:entities 41 .
+    void:entities 46 .
 
 <https://purls.helmholtz-metadaten.de/msekg/a5847b7814835c75> rdfs:label "Measurement Unit of thermal diffusivity" ;
     void:class <https://w3id.org/ODE_AM/MAO/MeasurementUnitOfThermalDiffusivity> ;
@@ -9798,7 +9799,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/bc007b6bc4befa0e> rdfs:label "Duplicate Detection [C]" ;
     void:class <http://orkg.org/orkg/class/C124039> ;
-    void:entities 2 .
+    void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/bc28586f38b7e21a> rdfs:label "Rosetta Stone Node Shape" ;
     void:class <http://orkg.org/orkg/class/RosettaNodeShape> ;
@@ -10036,6 +10037,10 @@
 <https://purls.helmholtz-metadaten.de/msekg/c2c4a27bb1e4aa81> rdfs:label "ResearchField" ;
     void:class <http://orkg.org/orkg/class/ResearchField> ;
     void:entities 725 .
+
+<https://purls.helmholtz-metadaten.de/msekg/c2c9fd9ccb7f6944> rdfs:label "Duplicate Resolution [C]" ;
+    void:class <http://orkg.org/orkg/class/C124040> ;
+    void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/c2e757bdd04fbc97> void:class <https://gitlab.com/kupferdigital/process-graphs/relaxation-test/ResidualStrain> ;
     void:entities 2 .
@@ -11658,7 +11663,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/f2866a1a0b5dc112> rdfs:label "Equation type" ;
     void:class <http://orkg.org/orkg/class/C116022> ;
-    void:entities 11 .
+    void:entities 12 .
 
 <https://purls.helmholtz-metadaten.de/msekg/f2afc0bee7e15de6> rdfs:label "Stibavirin" ;
     void:class <http://orkg.org/orkg/class/C14589> ;
