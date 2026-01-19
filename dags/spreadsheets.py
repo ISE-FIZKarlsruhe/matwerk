@@ -93,7 +93,7 @@ def process_spreadsheets():
             token = " -i " + os.path.join(DATA, i + ".owl")
             insert = insert + token
         cmd =  ROBOT + " merge --include-annotations true  " + insert + " template --merge-before  --template  " + os.path.join(DATA, name + ".tsv") + " --output " + os.path.join(DATA, name + ".owl")
-        cmd += " & " 
+        cmd += " && " 
         cmd += ROBOT + " explain --reasoner hermit --input " + os.path.join(DATA, name + ".owl") + " -M inconsistency --explanation " + os.path.join(DATA, name + ".md")
         return cmd
 
