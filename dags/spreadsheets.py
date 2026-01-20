@@ -15,6 +15,32 @@ from airflow.providers.standard.operators.empty import EmptyOperator
 
 from airflow.sdk import Variable
 
+"""
+Airflow DAG: process_spreadsheets
+
+This DAG builds and validates a set of ontology modules from Google Sheets
+published as TSV templates. Each template is processed using the ROBOT
+toolchain to generate an OWL file and verify logical consistency.
+
+Workflow overview:
+1. Download a base ontology (ontology.owl).
+2. Download multiple TSV templates from Google Sheets.
+3. Generate OWL ontologies by merging required inputs and applying templates.
+4. Validate each generated ontology using ROBOT explanations.
+
+Configuration:
+- Airflow Variables:
+  - `sharedfs`: Shared filesystem for inputs and outputs.
+  - `robotcmd`: Command or path used to invoke the ROBOT CLI.
+- The DAG is manually triggered (no schedule) and does not perform catchup.
+
+Failure handling:
+- A task fails if ROBOT reports inconsistencies in the generated ontology.
+
+Outputs:
+- `<name>.owl`: Generated ontology file.
+- `<name>.md`: Consistency explanation report.
+"""
 @dag(
     schedule=None,
     catchup=False,
@@ -83,7 +109,7 @@ def process_spreadsheets():
             s = f.read() 
             if s != "No explanations found.":
                 print (s)
-                #raise ValueError('File not parsed completely/correctly')
+                raise ValueError('File not parsed completely/correctly')
 
     def robotCmdTemplate(inputs, name):
         insert = ""
