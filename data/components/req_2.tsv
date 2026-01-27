@@ -1,8 +1,5 @@
-#	TYPE	label	Value	temporal region	denoted by	has file format	has acronym	has url	is quality measured as	has measurement datum	is about	Domain	Range
-ID	TYPE	A rdfs:label	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007	I http://purl.obolibrary.org/obo/BFO_0000199	I http://purl.obolibrary.org/obo/IAO_0000235	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132	A https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010015	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008	I http://purl.obolibrary.org/obo/IAO_0000417	I http://purls.helmholtz-metadaten.de/mwo/MWO_0001116	I http://purl.obolibrary.org/obo/IAO_0000136	DOMAIN	RANGE
-http://purl.obolibrary.org/obo/OBI_0002135	owl:DataProperty	has value											
-https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008	owl:DataProperty	has url											xsd:anyURI
-http://purls.helmholtz-metadaten.de/mwo/MWO_0001143	owl:DataProperty	has acronym											
+l 5	TYPE	label	Value	temporal region	denoted by	has file format	has acronym	has url	is quality measured as	has measurement datum	is about	Domain	Range
+ID	TYPE	A rdfs:label	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007	I http://purl.obolibrary.org/obo/BFO_0000199	I http://purl.obolibrary.org/obo/IAO_0000235	I https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000132	A https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010015	AT https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008^^xsd:anyURI	I http://purl.obolibrary.org/obo/IAO_0000417	I http://purls.helmholtz-metadaten.de/mwo/MWO_0001116	I http://purl.obolibrary.org/obo/IAO_0000136	DOMAIN	RANGE
 https://purls.helmholtz-metadaten.de/msekg/17451391861361	http://purl.obolibrary.org/obo/IAO_0020016	Sarath	Sarath										
 https://purls.helmholtz-metadaten.de/msekg/17451398105881	http://purl.obolibrary.org/obo/IAO_0020016	Angelika	Angelika										
 https://purls.helmholtz-metadaten.de/msekg/17646663526911	http://purl.obolibrary.org/obo/IAO_0020016	Hossein	Hossein										
@@ -6955,7 +6952,7 @@ https://purls.helmholtz-metadaten.de/msekg/17588918337771	http://purls.helmholtz
 https://purls.helmholtz-metadaten.de/msekg/17611344064251	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of Chemotion KG						https://ditrare.ise.fiz-karlsruhe.de/chemotion-kg/shmarql/					
 https://purls.helmholtz-metadaten.de/msekg/17611344064252	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of GESIS Knowledge Graph (GESIS KG)						https://data.gesis.org/gesiskg/sparql					
 https://purls.helmholtz-metadaten.de/msekg/17611344064253	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of MaRDI						https://query.portal.mardi4nfdi.de/					
-https://purls.helmholtz-metadaten.de/msekg/17611344064254	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4Bioimage						https://kg.nfdi4bioimage.de/#/dataset/N4BIKG/query 					
+https://purls.helmholtz-metadaten.de/msekg/17611344064254	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4Bioimage						https://kg.nfdi4bioimage.de/#/dataset/N4BIKG/query					
 https://purls.helmholtz-metadaten.de/msekg/17611344064255	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4Chem						https://search.nfdi4chem.de/sparql					
 https://purls.helmholtz-metadaten.de/msekg/17611344064256	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4Culture						https://nfdi4culture.de/sparql					
 https://purls.helmholtz-metadaten.de/msekg/17611344064257	http://purls.helmholtz-metadaten.de/mwo/MWO_0001060	sparql endpoint of NFDI4DataScience						https://nfdi.fiz-karlsruhe.de/4ds/sparql					

@@ -160,6 +160,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/0939d2a0fe973ebd>,
         <https://purls.helmholtz-metadaten.de/msekg/09d865d3e60ff23d>,
         <https://purls.helmholtz-metadaten.de/msekg/09ef669751cf6c7c>,
+        <https://purls.helmholtz-metadaten.de/msekg/0a0bde4298d229c2>,
         <https://purls.helmholtz-metadaten.de/msekg/0a14d4781043a14f>,
         <https://purls.helmholtz-metadaten.de/msekg/0a1a92c3f5903e2d>,
         <https://purls.helmholtz-metadaten.de/msekg/0a46c26e6ad7e12a>,
@@ -308,6 +309,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/1b3458e89c2e6311>,
         <https://purls.helmholtz-metadaten.de/msekg/1b3684d129ef964a>,
         <https://purls.helmholtz-metadaten.de/msekg/1b379c261b09fb59>,
+        <https://purls.helmholtz-metadaten.de/msekg/1b852d49583af55a>,
         <https://purls.helmholtz-metadaten.de/msekg/1b87bb783da1d6f8>,
         <https://purls.helmholtz-metadaten.de/msekg/1b932db4ec499a50>,
         <https://purls.helmholtz-metadaten.de/msekg/1b9ebf7431168a60>,
@@ -429,6 +431,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/2aafb5d25ecdaab8>,
         <https://purls.helmholtz-metadaten.de/msekg/2ae75755a268e3e4>,
         <https://purls.helmholtz-metadaten.de/msekg/2af7f9040c65cedc>,
+        <https://purls.helmholtz-metadaten.de/msekg/2b010833b228b541>,
         <https://purls.helmholtz-metadaten.de/msekg/2b0a9a5fa8e35c0f>,
         <https://purls.helmholtz-metadaten.de/msekg/2b4146307a5e2957>,
         <https://purls.helmholtz-metadaten.de/msekg/2b43c7a583f114a0>,
@@ -621,6 +624,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/43c4d73a88dff71e>,
         <https://purls.helmholtz-metadaten.de/msekg/440f5030b8d3ea96>,
         <https://purls.helmholtz-metadaten.de/msekg/442741d4e8f44824>,
+        <https://purls.helmholtz-metadaten.de/msekg/44533dabef65757a>,
         <https://purls.helmholtz-metadaten.de/msekg/448f53ffee1eeaaf>,
         <https://purls.helmholtz-metadaten.de/msekg/45194e0ffface115>,
         <https://purls.helmholtz-metadaten.de/msekg/4526cca5664a0b08>,
@@ -648,6 +652,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/47ae1f1c68c1c5a0>,
         <https://purls.helmholtz-metadaten.de/msekg/47d5b53884867156>,
         <https://purls.helmholtz-metadaten.de/msekg/47e884b43dfcc19c>,
+        <https://purls.helmholtz-metadaten.de/msekg/47ea711f0370556f>,
         <https://purls.helmholtz-metadaten.de/msekg/480dc92d3df683c8>,
         <https://purls.helmholtz-metadaten.de/msekg/4810dafaa1e42b25>,
         <https://purls.helmholtz-metadaten.de/msekg/481af6822c5d5bbb>,
@@ -672,6 +677,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/4a72a0aac7916502>,
         <https://purls.helmholtz-metadaten.de/msekg/4a741fb6a03b545b>,
         <https://purls.helmholtz-metadaten.de/msekg/4a77e6a3c456a207>,
+        <https://purls.helmholtz-metadaten.de/msekg/4ac33e830e4f77d2>,
         <https://purls.helmholtz-metadaten.de/msekg/4b0c02775879f517>,
         <https://purls.helmholtz-metadaten.de/msekg/4b1182f8e20db9f1>,
         <https://purls.helmholtz-metadaten.de/msekg/4b1ba802f052ef17>,
@@ -715,6 +721,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/4fe1dddee386d635>,
         <https://purls.helmholtz-metadaten.de/msekg/500763a527bc6111>,
         <https://purls.helmholtz-metadaten.de/msekg/501442223eaed4d8>,
+        <https://purls.helmholtz-metadaten.de/msekg/5019893843c84c49>,
         <https://purls.helmholtz-metadaten.de/msekg/503193e4ea18f67e>,
         <https://purls.helmholtz-metadaten.de/msekg/506a0937a0107db3>,
         <https://purls.helmholtz-metadaten.de/msekg/508f05326f7d8003>,
@@ -745,6 +752,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/52fa88751fec3b43>,
         <https://purls.helmholtz-metadaten.de/msekg/531878efe43147c8>,
         <https://purls.helmholtz-metadaten.de/msekg/5339080ab090db1a>,
+        <https://purls.helmholtz-metadaten.de/msekg/534c0a6230bd01ef>,
         <https://purls.helmholtz-metadaten.de/msekg/5355e062a1b799cf>,
         <https://purls.helmholtz-metadaten.de/msekg/53609c61f4a77d4f>,
         <https://purls.helmholtz-metadaten.de/msekg/53944e4d7927be84>,
@@ -823,6 +831,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/5e274ebd8b7c0dca>,
         <https://purls.helmholtz-metadaten.de/msekg/5e447a28699a98a7>,
         <https://purls.helmholtz-metadaten.de/msekg/5e6bb9d70cb178a6>,
+        <https://purls.helmholtz-metadaten.de/msekg/5e962211feb93142>,
         <https://purls.helmholtz-metadaten.de/msekg/5ec3c96d95068d7d>,
         <https://purls.helmholtz-metadaten.de/msekg/5ed38d09d1cb2e85>,
         <https://purls.helmholtz-metadaten.de/msekg/5f2c4e8ee4ce9f79>,
@@ -945,6 +954,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/6e23967f075f61a1>,
         <https://purls.helmholtz-metadaten.de/msekg/6e2fb1950bb32ec3>,
         <https://purls.helmholtz-metadaten.de/msekg/6e3f259234b51a16>,
+        <https://purls.helmholtz-metadaten.de/msekg/6e7116473e11cd2c>,
         <https://purls.helmholtz-metadaten.de/msekg/6e781528227e3d34>,
         <https://purls.helmholtz-metadaten.de/msekg/6e78a24f4bb26188>,
         <https://purls.helmholtz-metadaten.de/msekg/6e86666aabf18415>,
@@ -952,6 +962,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/6eb76c588f503046>,
         <https://purls.helmholtz-metadaten.de/msekg/6ec3b3346baa0b80>,
         <https://purls.helmholtz-metadaten.de/msekg/6f1eebd02cf1df19>,
+        <https://purls.helmholtz-metadaten.de/msekg/6f2a1defac8772fb>,
         <https://purls.helmholtz-metadaten.de/msekg/6f82517cb36d07fc>,
         <https://purls.helmholtz-metadaten.de/msekg/6f866a9c5cfb90cf>,
         <https://purls.helmholtz-metadaten.de/msekg/6f89224eafbe6aaa>,
@@ -967,6 +978,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/7099825dcb929f33>,
         <https://purls.helmholtz-metadaten.de/msekg/70a9bc04043ec7de>,
         <https://purls.helmholtz-metadaten.de/msekg/70bc35ce8ca39c09>,
+        <https://purls.helmholtz-metadaten.de/msekg/70e67f47864b3a41>,
         <https://purls.helmholtz-metadaten.de/msekg/70e87d1dd7ba7092>,
         <https://purls.helmholtz-metadaten.de/msekg/7129f28f762f0b70>,
         <https://purls.helmholtz-metadaten.de/msekg/716759377a0a5ba9>,
@@ -985,6 +997,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/72a388e953fff9d7>,
         <https://purls.helmholtz-metadaten.de/msekg/72aa2e4a1ba81b9c>,
         <https://purls.helmholtz-metadaten.de/msekg/72c5a22f908969df>,
+        <https://purls.helmholtz-metadaten.de/msekg/72d64bd1cfd1ffc4>,
         <https://purls.helmholtz-metadaten.de/msekg/72eee71e4c523d37>,
         <https://purls.helmholtz-metadaten.de/msekg/731d19998f865a2e>,
         <https://purls.helmholtz-metadaten.de/msekg/732fe54829d9ad6f>,
@@ -997,6 +1010,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/741041bf19368f34>,
         <https://purls.helmholtz-metadaten.de/msekg/7418b70c3d6c5b7c>,
         <https://purls.helmholtz-metadaten.de/msekg/741a341f940cbeb0>,
+        <https://purls.helmholtz-metadaten.de/msekg/7433bc165d065872>,
         <https://purls.helmholtz-metadaten.de/msekg/7434a2c8ea08ee0b>,
         <https://purls.helmholtz-metadaten.de/msekg/744f8cb83c98faab>,
         <https://purls.helmholtz-metadaten.de/msekg/74c9be86c486ffc8>,
@@ -1143,6 +1157,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/898a279fe87a6326>,
         <https://purls.helmholtz-metadaten.de/msekg/89a74cf1d16ae643>,
         <https://purls.helmholtz-metadaten.de/msekg/89baafea4a881729>,
+        <https://purls.helmholtz-metadaten.de/msekg/89c85b011e80ff44>,
         <https://purls.helmholtz-metadaten.de/msekg/8a01405814f27711>,
         <https://purls.helmholtz-metadaten.de/msekg/8a1ba14a073cddc7>,
         <https://purls.helmholtz-metadaten.de/msekg/8a1dc11de7e9bbd0>,
@@ -1162,6 +1177,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/8c3da88d084ee225>,
         <https://purls.helmholtz-metadaten.de/msekg/8c3fe1930219d7fd>,
         <https://purls.helmholtz-metadaten.de/msekg/8c54b875170654b7>,
+        <https://purls.helmholtz-metadaten.de/msekg/8c775aefd75678b4>,
         <https://purls.helmholtz-metadaten.de/msekg/8c78701f61440b99>,
         <https://purls.helmholtz-metadaten.de/msekg/8c7ebd8cb96ebdf4>,
         <https://purls.helmholtz-metadaten.de/msekg/8cb14a171a68ae15>,
@@ -1235,6 +1251,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/938d682cc7980a63>,
         <https://purls.helmholtz-metadaten.de/msekg/93b123f96936cb63>,
         <https://purls.helmholtz-metadaten.de/msekg/93c5d06239ebdbf7>,
+        <https://purls.helmholtz-metadaten.de/msekg/93c9218a87b049aa>,
         <https://purls.helmholtz-metadaten.de/msekg/94019f031246d5bd>,
         <https://purls.helmholtz-metadaten.de/msekg/940b713c6398d83e>,
         <https://purls.helmholtz-metadaten.de/msekg/9439e1195ef549ea>,
@@ -1401,6 +1418,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/ab475d01aba4a2e5>,
         <https://purls.helmholtz-metadaten.de/msekg/abc24e1c15faacef>,
         <https://purls.helmholtz-metadaten.de/msekg/abcf394deb9ca379>,
+        <https://purls.helmholtz-metadaten.de/msekg/abffb220a2841b9e>,
         <https://purls.helmholtz-metadaten.de/msekg/ac1cc52134f6b997>,
         <https://purls.helmholtz-metadaten.de/msekg/ac25ae28891e980f>,
         <https://purls.helmholtz-metadaten.de/msekg/ac2e59b392a4df25>,
@@ -1462,6 +1480,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/b45b657c9615832a>,
         <https://purls.helmholtz-metadaten.de/msekg/b465f3ba579bcc4d>,
         <https://purls.helmholtz-metadaten.de/msekg/b4df4b18b954d1eb>,
+        <https://purls.helmholtz-metadaten.de/msekg/b4e79fa7298bdde8>,
         <https://purls.helmholtz-metadaten.de/msekg/b512d67be963ae77>,
         <https://purls.helmholtz-metadaten.de/msekg/b53a2f7cfc6dcc74>,
         <https://purls.helmholtz-metadaten.de/msekg/b59a71ac076c193c>,
@@ -1792,6 +1811,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/e172fa765881042f>,
         <https://purls.helmholtz-metadaten.de/msekg/e1d9200c1d26adee>,
         <https://purls.helmholtz-metadaten.de/msekg/e21c8dc5d23c73ab>,
+        <https://purls.helmholtz-metadaten.de/msekg/e23bbc3b2993f851>,
         <https://purls.helmholtz-metadaten.de/msekg/e2517eed0237151e>,
         <https://purls.helmholtz-metadaten.de/msekg/e2930c1c6f15fa12>,
         <https://purls.helmholtz-metadaten.de/msekg/e2c85924ed44ea59>,
@@ -1871,6 +1891,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/edbb9385c2a5202d>,
         <https://purls.helmholtz-metadaten.de/msekg/edd521386154d090>,
         <https://purls.helmholtz-metadaten.de/msekg/edd8782ed5fecb1f>,
+        <https://purls.helmholtz-metadaten.de/msekg/edfaf4533f4d4dbd>,
         <https://purls.helmholtz-metadaten.de/msekg/ee1f9e393d7a83df>,
         <https://purls.helmholtz-metadaten.de/msekg/ee8c57eb4815bdf5>,
         <https://purls.helmholtz-metadaten.de/msekg/eea40badc8878b53>,
@@ -1989,6 +2010,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/fdaf07a65f265d26>,
         <https://purls.helmholtz-metadaten.de/msekg/fdc46dda90da9a92>,
         <https://purls.helmholtz-metadaten.de/msekg/fdda4e01e8487391>,
+        <https://purls.helmholtz-metadaten.de/msekg/fdf774b4477b9461>,
         <https://purls.helmholtz-metadaten.de/msekg/fe0eef4cf2084b60>,
         <https://purls.helmholtz-metadaten.de/msekg/fe312f56548825d5>,
         <https://purls.helmholtz-metadaten.de/msekg/fe59b4f5049795a8>,
@@ -2005,8 +2027,8 @@
         <https://purls.helmholtz-metadaten.de/msekg/ff918d350805fe70>,
         <https://purls.helmholtz-metadaten.de/msekg/ffba162ececefc28>,
         <https://purls.helmholtz-metadaten.de/msekg/ffbe7ae88c460787> ;
-    void:classes 2827 ;
-    void:entities 500752 ;
+    void:classes 2869 ;
+    void:entities 501419 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://orkg.org/triplestore> ;
     void:vocabulary <http://orkg.org/orkg/class/>,
@@ -2290,7 +2312,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/eacc8b8f4e11a87a>,
         <https://purls.helmholtz-metadaten.de/msekg/ff3d8a2a991793b7> ;
     void:classes 459 ;
-    void:entities 603 ;
+    void:entities 604 ;
     void:properties 152 ;
     void:sparqlEndpoint <https://sparql.knowledgehub.nfdi4earth.de/> ;
     stat:numberOfClassesReusedFromMWO 0 ;
@@ -3024,7 +3046,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/06cc1f446b0ac87b> rdfs:label "Problem" ;
     void:class <http://orkg.org/orkg/class/Problem> ;
-    void:entities 7425 .
+    void:entities 7449 .
 
 <https://purls.helmholtz-metadaten.de/msekg/06e5a7292fa17646> rdfs:label "Data" ;
     void:class <http://orkg.org/orkg/class/C58020> ;
@@ -3140,6 +3162,10 @@
 <https://purls.helmholtz-metadaten.de/msekg/09ef669751cf6c7c> rdfs:label "culture serum" ;
     void:class <http://orkg.org/orkg/class/C14041> ;
     void:entities 1 .
+
+<https://purls.helmholtz-metadaten.de/msekg/0a0bde4298d229c2> rdfs:label "Plasmodium species" ;
+    void:class <http://orkg.org/orkg/class/C126008> ;
+    void:entities 11 .
 
 <https://purls.helmholtz-metadaten.de/msekg/0a14d4781043a14f> rdfs:label "Permeation flux units" ;
     void:class <http://orkg.org/orkg/class/C20154> ;
@@ -3765,7 +3791,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/196c5422cead7273> rdfs:label "LHBArticle" ;
     void:class <http://nfdi4earth.de/ontology/LHBArticle> ;
-    void:entities 144 .
+    void:entities 145 .
 
 <https://purls.helmholtz-metadaten.de/msekg/198ce281b8c2b29e> rdfs:label "GenePattern software" ;
     void:class obo:OBI_0000713 ;
@@ -3850,6 +3876,10 @@
     void:class <http://orkg.org/orkg/class/C14547> ;
     void:entities 2 .
 
+<https://purls.helmholtz-metadaten.de/msekg/1b852d49583af55a> rdfs:label "Inflammatory mediators reported" ;
+    void:class <http://orkg.org/orkg/class/C126035> ;
+    void:entities 11 .
+
 <https://purls.helmholtz-metadaten.de/msekg/1b87bb783da1d6f8> rdfs:label "alphascreen" ;
     void:class <http://orkg.org/orkg/class/C14485> ;
     void:entities 1 .
@@ -3880,7 +3910,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/1c09499fa5cd21f6> rdfs:label "Published Comparison" ;
     void:class <http://orkg.org/orkg/class/ComparisonPublished> ;
-    void:entities 2122 .
+    void:entities 2127 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1c2c3ab55fd66ac5> rdfs:label "Knowledge representation" ;
     void:class <http://orkg.org/orkg/class/C77042> ;
@@ -4000,11 +4030,11 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/1efdec983bb0605a> rdfs:label "Contribution" ;
     void:class <http://orkg.org/orkg/class/Contribution> ;
-    void:entities 76518 .
+    void:entities 76617 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1f0c61e449a2165f> rdfs:label "Hydropower resource assessment [C]" ;
     void:class <http://orkg.org/orkg/class/C124013> ;
-    void:entities 32 .
+    void:entities 33 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1f188c70fd640f72> rdfs:label "ecological study system" ;
     void:class <http://orkg.org/orkg/class/C65002> ;
@@ -4398,7 +4428,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/2a9611ff54e191ff> rdfs:label "Material" ;
     void:class <http://orkg.org/orkg/class/Material> ;
-    void:entities 761 .
+    void:entities 770 .
 
 <https://purls.helmholtz-metadaten.de/msekg/2aafb5d25ecdaab8> rdfs:label "electrolyte" ;
     void:class <http://orkg.org/orkg/class/C63004> ;
@@ -4411,6 +4441,10 @@
 <https://purls.helmholtz-metadaten.de/msekg/2af7f9040c65cedc> rdfs:label "measures of frequency" ;
     void:class <http://orkg.org/orkg/class/C28009> ;
     void:entities 79 .
+
+<https://purls.helmholtz-metadaten.de/msekg/2b010833b228b541> rdfs:label "Host type" ;
+    void:class <http://orkg.org/orkg/class/C126015> ;
+    void:entities 5 .
 
 <https://purls.helmholtz-metadaten.de/msekg/2b0910b264d595e2> rdfs:label "TrueDensity" ;
     void:class <http://www.semanticweb.org/ontologies/KnowNow#TrueDensity> ;
@@ -4648,7 +4682,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/321e80494d3ce788> rdfs:label "Node shape" ;
     void:class <http://orkg.org/orkg/class/NodeShape> ;
-    void:entities 907 .
+    void:entities 917 .
 
 <https://purls.helmholtz-metadaten.de/msekg/3236bcefc5218540> rdfs:label "Epstein-Barr virus" ;
     void:class <http://orkg.org/orkg/class/C14398> ;
@@ -4720,7 +4754,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/349bc1ec1d86d6b4> rdfs:label "Venue" ;
     void:class <http://orkg.org/orkg/class/Venue> ;
-    void:entities 12142 .
+    void:entities 12174 .
 
 <https://purls.helmholtz-metadaten.de/msekg/34ce8da28de53bc2> rdfs:label "organization" ;
     void:class <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ;
@@ -5008,7 +5042,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/3b4817d3b8d3fa19> rdfs:label "Model" ;
     void:class <http://orkg.org/orkg/class/Model> ;
-    void:entities 15761 .
+    void:entities 15762 .
 
 <https://purls.helmholtz-metadaten.de/msekg/3b7fa7e254d91e62> rdfs:label "Cycadophyta" ;
     void:class <http://orkg.org/orkg/class/C13007> ;
@@ -5043,7 +5077,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/3ca74ba6f49e50d0> rdfs:label "Software" ;
     void:class <http://orkg.org/orkg/class/Software> ;
-    void:entities 1618 .
+    void:entities 1619 .
 
 <https://purls.helmholtz-metadaten.de/msekg/3cc5a93d54e55111> rdfs:label "R598477" ;
     void:class <http://orkg.org/orkg/class/C67009> ;
@@ -5334,6 +5368,10 @@
     void:class obo:OBI_0000245 ;
     void:entities 1 .
 
+<https://purls.helmholtz-metadaten.de/msekg/44533dabef65757a> rdfs:label "Bone marrow pathology caused" ;
+    void:class <http://orkg.org/orkg/class/C126031> ;
+    void:entities 21 .
+
 <https://purls.helmholtz-metadaten.de/msekg/448f53ffee1eeaaf> rdfs:label "Tabular dataset" ;
     void:class <http://orkg.org/orkg/class/C52011> ;
     void:entities 67 .
@@ -5473,6 +5511,10 @@
     void:class <http://orkg.org/orkg/class/C15001> ;
     void:entities 3 .
 
+<https://purls.helmholtz-metadaten.de/msekg/47ea711f0370556f> rdfs:label "Immune signaling pathways" ;
+    void:class <http://orkg.org/orkg/class/C126036> ;
+    void:entities 9 .
+
 <https://purls.helmholtz-metadaten.de/msekg/480dc92d3df683c8> rdfs:label "cell culture" ;
     void:class <http://orkg.org/orkg/class/C107021> ;
     void:entities 9 .
@@ -5511,7 +5553,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/48cf949e1acd0524> rdfs:label "Latest version" ;
     void:class <http://orkg.org/orkg/class/LatestVersion> ;
-    void:entities 1819 .
+    void:entities 1822 .
 
 <https://purls.helmholtz-metadaten.de/msekg/48ebf5b7b831ce91> rdfs:label "beta lactamase induction" ;
     void:class <http://orkg.org/orkg/class/C14099> ;
@@ -5592,6 +5634,10 @@
 <https://purls.helmholtz-metadaten.de/msekg/4a9971d28aa21f58> rdfs:label "International Federation of Gynecology and Obstetrics cervical cancer stage value specification" ;
     void:class obo:OBI_0002326 ;
     void:entities 14 .
+
+<https://purls.helmholtz-metadaten.de/msekg/4ac33e830e4f77d2> rdfs:label "Interactions Between Malaria, Nutrition, and Bone Loss [C]" ;
+    void:class <http://orkg.org/orkg/class/C126005> ;
+    void:entities 20 .
 
 <https://purls.helmholtz-metadaten.de/msekg/4b0c02775879f517> rdfs:label "Papertype" ;
     void:class <http://orkg.org/orkg/class/C22066> ;
@@ -5817,6 +5863,10 @@
     void:class <http://orkg.org/orkg/class/C14358> ;
     void:entities 2 .
 
+<https://purls.helmholtz-metadaten.de/msekg/5019893843c84c49> rdfs:label "geographical area" ;
+    void:class <http://orkg.org/orkg/class/C126010> ;
+    void:entities 10 .
+
 <https://purls.helmholtz-metadaten.de/msekg/5027f799cd3e0315> void:class <https://gitlab.com/kupferdigital/process-graphs/relaxation-test/LoadDisplacementCurve> ;
     void:entities 1 .
 
@@ -5958,6 +6008,10 @@
 <https://purls.helmholtz-metadaten.de/msekg/5339080ab090db1a> rdfs:label "Substance" ;
     void:class <http://orkg.org/orkg/class/C11007> ;
     void:entities 13 .
+
+<https://purls.helmholtz-metadaten.de/msekg/534c0a6230bd01ef> rdfs:label "Bone health outcomes" ;
+    void:class <http://orkg.org/orkg/class/C126033> ;
+    void:entities 6 .
 
 <https://purls.helmholtz-metadaten.de/msekg/5355e062a1b799cf> rdfs:label "R135242" ;
     void:class <http://orkg.org/orkg/class/C18001> ;
@@ -6232,7 +6286,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/5ad6e3c8df48f0ff> rdfs:label "Author" ;
     void:class <http://orkg.org/orkg/class/Author> ;
-    void:entities 10472 .
+    void:entities 10544 .
 
 <https://purls.helmholtz-metadaten.de/msekg/5b1e18aa7b582adf> rdfs:label "R282321" ;
     void:class <http://orkg.org/orkg/class/C51003> ;
@@ -6276,7 +6330,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/5b68a2df031bad18> rdfs:label "Comparison" ;
     void:class <http://orkg.org/orkg/class/Comparison> ;
-    void:entities 1838 .
+    void:entities 1843 .
 
 <https://purls.helmholtz-metadaten.de/msekg/5b7e58206916a58f> rdfs:label "amount" ;
     void:class <http://orkg.org/orkg/class/C68000> ;
@@ -6364,6 +6418,10 @@
 <https://purls.helmholtz-metadaten.de/msekg/5e6e54b6b5bc18af> rdfs:label "ExactPressure" ;
     void:class <http://w3id.org/sensotwin/applicationontology#ExactPressure> ;
     void:entities 2 .
+
+<https://purls.helmholtz-metadaten.de/msekg/5e962211feb93142> rdfs:label "Parasitemia level" ;
+    void:class <http://orkg.org/orkg/class/C126013> ;
+    void:entities 12 .
 
 <https://purls.helmholtz-metadaten.de/msekg/5ec3c96d95068d7d> rdfs:label "R172526" ;
     void:class <http://orkg.org/orkg/class/C23037> ;
@@ -6506,7 +6564,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/623515faa146700f> rdfs:label "Result" ;
     void:class <http://orkg.org/orkg/class/Result> ;
-    void:entities 1966 .
+    void:entities 1976 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6244efd9d22fc004> rdfs:label "Chlorocebus aethiops" ;
     void:class <http://orkg.org/orkg/class/C14424> ;
@@ -6948,6 +7006,10 @@
     void:class obo:OBI_0200051 ;
     void:entities 1 .
 
+<https://purls.helmholtz-metadaten.de/msekg/6e7116473e11cd2c> rdfs:label "Bone remodeling markers" ;
+    void:class <http://orkg.org/orkg/class/C126032> ;
+    void:entities 3 .
+
 <https://purls.helmholtz-metadaten.de/msekg/6e781528227e3d34> rdfs:label "LLM-Hallu-Bench-Task [C]" ;
     void:class <http://orkg.org/orkg/class/C99012> ;
     void:entities 35 .
@@ -6974,7 +7036,11 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/6f1eebd02cf1df19> rdfs:label "Paper" ;
     void:class <http://orkg.org/orkg/class/Paper> ;
-    void:entities 54437 .
+    void:entities 54518 .
+
+<https://purls.helmholtz-metadaten.de/msekg/6f2a1defac8772fb> rdfs:label "Nutrition–malaria–bone link identified" ;
+    void:class <http://orkg.org/orkg/class/C126041> ;
+    void:entities 2 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6f75957dac0b4bd6> rdfs:label "e31" ;
     void:class <http://w3id.org/sensotwin/applicationontology#e31> ;
@@ -7059,6 +7125,10 @@
 <https://purls.helmholtz-metadaten.de/msekg/70bc35ce8ca39c09> rdfs:label "chaperone activity assay" ;
     void:class <http://orkg.org/orkg/class/C14252> ;
     void:entities 1 .
+
+<https://purls.helmholtz-metadaten.de/msekg/70e67f47864b3a41> rdfs:label "Anemia mechanism" ;
+    void:class <http://orkg.org/orkg/class/C126037> ;
+    void:entities 20 .
 
 <https://purls.helmholtz-metadaten.de/msekg/70e87d1dd7ba7092> rdfs:label "DABCYL-Thr-Pro-Leu-Lys~Ser-Pro-Pro-Pro-Ser-Pro-Arg-EDANS" ;
     void:class <http://orkg.org/orkg/class/C14488> ;
@@ -7153,6 +7223,10 @@
     void:class <http://orkg.org/orkg/class/C20149> ;
     void:entities 1 .
 
+<https://purls.helmholtz-metadaten.de/msekg/72d64bd1cfd1ffc4> rdfs:label "Skeletal development impact" ;
+    void:class <http://orkg.org/orkg/class/C126034> ;
+    void:entities 2 .
+
 <https://purls.helmholtz-metadaten.de/msekg/72eee71e4c523d37> rdfs:label "ALD Film Properties [C]" ;
     void:class <http://orkg.org/orkg/class/C99006> ;
     void:entities 326 .
@@ -7212,6 +7286,10 @@
 <https://purls.helmholtz-metadaten.de/msekg/741a341f940cbeb0> rdfs:label "ML Component" ;
     void:class <http://orkg.org/orkg/class/C58027> ;
     void:entities 669 .
+
+<https://purls.helmholtz-metadaten.de/msekg/7433bc165d065872> rdfs:label "nutritional status" ;
+    void:class <http://orkg.org/orkg/class/C126019> ;
+    void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/7434a2c8ea08ee0b> rdfs:label "R651243" ;
     void:class <http://orkg.org/orkg/class/C76004> ;
@@ -7729,7 +7807,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/83d408b7d17d5341> rdfs:label "PaperDeleted" ;
     void:class <http://orkg.org/orkg/class/PaperDeleted> ;
-    void:entities 2104 .
+    void:entities 2105 .
 
 <https://purls.helmholtz-metadaten.de/msekg/83e2ad8798af9311> void:class <https://w3id.org/pmd/co/PercentageYieldPointExtension> ;
     void:entities 1 .
@@ -7938,6 +8016,10 @@
     void:class <http://orkg.org/orkg/class/C15022> ;
     void:entities 1 .
 
+<https://purls.helmholtz-metadaten.de/msekg/89c85b011e80ff44> rdfs:label "Anemia indicators" ;
+    void:class <http://orkg.org/orkg/class/C126029> ;
+    void:entities 15 .
+
 <https://purls.helmholtz-metadaten.de/msekg/8a01405814f27711> rdfs:label "System Maturity" ;
     void:class <http://orkg.org/orkg/class/C58043> ;
     void:entities 5 .
@@ -8025,6 +8107,10 @@
     void:class <http://orkg.org/orkg/class/C14044> ;
     void:entities 1 .
 
+<https://purls.helmholtz-metadaten.de/msekg/8c775aefd75678b4> rdfs:label "Bone compartment affected" ;
+    void:class <http://orkg.org/orkg/class/C126030> ;
+    void:entities 12 .
+
 <https://purls.helmholtz-metadaten.de/msekg/8c78701f61440b99> rdfs:label "Content" ;
     void:class <http://orkg.org/orkg/class/C23029> ;
     void:entities 15 .
@@ -8075,7 +8161,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/8d4c87d1b895591a> rdfs:label "ContributionDeleted" ;
     void:class <http://orkg.org/orkg/class/ContributionDeleted> ;
-    void:entities 2487 .
+    void:entities 2488 .
 
 <https://purls.helmholtz-metadaten.de/msekg/8d58451f5a62dc89> rdfs:label "data type" ;
     void:class <http://orkg.org/orkg/class/C29031> ;
@@ -8280,7 +8366,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/9294cc88bf901b05> rdfs:label "Method" ;
     void:class <http://orkg.org/orkg/class/Method> ;
-    void:entities 2722 .
+    void:entities 2734 .
 
 <https://purls.helmholtz-metadaten.de/msekg/929b304dd7d53bb6> rdfs:label "Strain-Fatigue Life Curve" ;
     void:class <https://gitlab.com/kupferdigital/process-graphs/lcf-test/StrainFatigueLifeCurve> ;
@@ -8368,6 +8454,10 @@
     void:class <http://orkg.org/orkg/class/C15002> ;
     void:entities 189 .
 
+<https://purls.helmholtz-metadaten.de/msekg/93c9218a87b049aa> rdfs:label "study type" ;
+    void:class <http://orkg.org/orkg/class/C126009> ;
+    void:entities 21 .
+
 <https://purls.helmholtz-metadaten.de/msekg/94019f031246d5bd> rdfs:label "R597226" ;
     void:class <http://orkg.org/orkg/class/C67006> ;
     void:entities 3 .
@@ -8389,7 +8479,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/947cf8ab466cb9e2> rdfs:label "empirical research practice" ;
     void:class <http://orkg.org/orkg/class/C27001> ;
-    void:entities 779 .
+    void:entities 780 .
 
 <https://purls.helmholtz-metadaten.de/msekg/948c6eaf2d89f986> rdfs:label "NINDS library" ;
     void:class <http://orkg.org/orkg/class/C14483> ;
@@ -8958,7 +9048,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/a579ea51bf7f797a> rdfs:label "Mathematical models [C]" ;
     void:class <http://orkg.org/orkg/class/C116020> ;
-    void:entities 46 .
+    void:entities 53 .
 
 <https://purls.helmholtz-metadaten.de/msekg/a5847b7814835c75> rdfs:label "Measurement Unit of thermal diffusivity" ;
     void:class <https://w3id.org/ODE_AM/MAO/MeasurementUnitOfThermalDiffusivity> ;
@@ -9183,6 +9273,10 @@
 <https://purls.helmholtz-metadaten.de/msekg/abcf394deb9ca379> rdfs:label "R54875" ;
     void:class <http://orkg.org/orkg/class/C12001> ;
     void:entities 69 .
+
+<https://purls.helmholtz-metadaten.de/msekg/abffb220a2841b9e> rdfs:label "Infection pattern" ;
+    void:class <http://orkg.org/orkg/class/C126011> ;
+    void:entities 21 .
 
 <https://purls.helmholtz-metadaten.de/msekg/ac1cc52134f6b997> rdfs:label "R209505" ;
     void:class <http://orkg.org/orkg/class/C37003> ;
@@ -9483,6 +9577,10 @@
     void:class <http://orkg.org/orkg/class/C21084> ;
     void:entities 2 .
 
+<https://purls.helmholtz-metadaten.de/msekg/b4e79fa7298bdde8> rdfs:label "severity" ;
+    void:class <http://orkg.org/orkg/class/C126012> ;
+    void:entities 16 .
+
 <https://purls.helmholtz-metadaten.de/msekg/b512d67be963ae77> rdfs:label "secondary assay" ;
     void:class <http://orkg.org/orkg/class/C14045> ;
     void:entities 1 .
@@ -9623,7 +9721,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/b8561739a31448ff> rdfs:label "Property shape" ;
     void:class <http://orkg.org/orkg/class/PropertyShape> ;
-    void:entities 9420 .
+    void:entities 9476 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b856ed6f6689ec2a> rdfs:label "pathologic distant metastases stage for ovary according to AJCC 7th edition" ;
     void:class obo:OBI_0002310 ;
@@ -11112,6 +11210,10 @@
     void:class <http://orkg.org/orkg/class/C23013> ;
     void:entities 16 .
 
+<https://purls.helmholtz-metadaten.de/msekg/e23bbc3b2993f851> rdfs:label "Physiological status" ;
+    void:class <http://orkg.org/orkg/class/C126018> ;
+    void:entities 21 .
+
 <https://purls.helmholtz-metadaten.de/msekg/e2517eed0237151e> rdfs:label "Young modulus" ;
     void:class <http://orkg.org/orkg/class/C33001> ;
     void:entities 37 .
@@ -11478,6 +11580,10 @@
 <https://purls.helmholtz-metadaten.de/msekg/edd8782ed5fecb1f> rdfs:label "Methods" ;
     void:class <http://orkg.org/orkg/class/Methods> ;
     void:entities 82 .
+
+<https://purls.helmholtz-metadaten.de/msekg/edfaf4533f4d4dbd> rdfs:label "Treatment status" ;
+    void:class <http://orkg.org/orkg/class/C126014> ;
+    void:entities 10 .
 
 <https://purls.helmholtz-metadaten.de/msekg/ee05babefda4de90> rdfs:label "person" ;
     void:class <https://nfdi.fiz-karlsruhe.de/ontology/Person> ;
@@ -12044,6 +12150,10 @@
 <https://purls.helmholtz-metadaten.de/msekg/fddabd3874b7e9e5> rdfs:label "time unit" ;
     void:class obo:UO_0000003 ;
     void:entities 7 .
+
+<https://purls.helmholtz-metadaten.de/msekg/fdf774b4477b9461> rdfs:label "Study population" ;
+    void:class <http://orkg.org/orkg/class/C126017> ;
+    void:entities 17 .
 
 <https://purls.helmholtz-metadaten.de/msekg/fe0eef4cf2084b60> rdfs:label "Entity" ;
     void:class <http://orkg.org/orkg/class/C67004> ;

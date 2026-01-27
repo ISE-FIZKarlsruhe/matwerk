@@ -2438,6 +2438,132 @@
 <http://orkg.org/orkg/class/C125003> a owl:Class ;
     rdfs:label "Lexical similarity"^^xsd:string .
 
+<http://orkg.org/orkg/class/C126000> a owl:Class ;
+    rdfs:label "research_object"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126001> a owl:Class ;
+    rdfs:label "name of object"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126002> a owl:Class ;
+    rdfs:label "artifact / contribution"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126003> a owl:Class ;
+    rdfs:label "Investigated Property"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126004> a owl:Class ;
+    rdfs:label "research_problem"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126005> a owl:Class ;
+    rdfs:label "Interactions Between Malaria, Nutrition, and Bone Loss [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126006> a owl:Class ;
+    rdfs:label "Interactions Between Malaria, Nutrition, and Bone Loss [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126007> a owl:Class ;
+    rdfs:label "Geographical context"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126008> a owl:Class ;
+    rdfs:label "Plasmodium species"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126009> a owl:Class ;
+    rdfs:label "study type"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126010> a owl:Class ;
+    rdfs:label "geographical area"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126011> a owl:Class ;
+    rdfs:label "Infection pattern"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126012> a owl:Class ;
+    rdfs:label "severity"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126013> a owl:Class ;
+    rdfs:label "Parasitemia level"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126014> a owl:Class ;
+    rdfs:label "Treatment status"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126015> a owl:Class ;
+    rdfs:label "Host type"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126016> a owl:Class ;
+    rdfs:label "age group"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126017> a owl:Class ;
+    rdfs:label "Study population"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126018> a owl:Class ;
+    rdfs:label "Physiological status"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126019> a owl:Class ;
+    rdfs:label "nutritional status"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126020> a owl:Class ;
+    rdfs:label "Organization"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126021> a owl:Class ;
+    rdfs:label "Person"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126022> a owl:Class ;
+    rdfs:label "Journal [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126023> a owl:Class ;
+    rdfs:label "Article [C]"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126024> a owl:Class ;
+    rdfs:label "Disease severity"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126025> a owl:Class ;
+    rdfs:label "Age/sex group"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126026> a owl:Class ;
+    rdfs:label "Anthropometric indicators"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126027> a owl:Class ;
+    rdfs:label "Micronutrients evaluated"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126028> a owl:Class ;
+    rdfs:label "Iron status markers"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126029> a owl:Class ;
+    rdfs:label "Anemia indicators"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126030> a owl:Class ;
+    rdfs:label "Bone compartment affected"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126031> a owl:Class ;
+    rdfs:label "Bone marrow pathology caused"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126032> a owl:Class ;
+    rdfs:label "Bone remodeling markers"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126033> a owl:Class ;
+    rdfs:label "Bone health outcomes"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126034> a owl:Class ;
+    rdfs:label "Skeletal development impact"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126035> a owl:Class ;
+    rdfs:label "Inflammatory mediators reported"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126036> a owl:Class ;
+    rdfs:label "Immune signaling pathways"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126037> a owl:Class ;
+    rdfs:label "Anemia mechanism"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126038> a owl:Class ;
+    rdfs:label "Bone–immune interaction described"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126039> a owl:Class ;
+    rdfs:label "Key Findings"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126040> a owl:Class ;
+    rdfs:label "Beta regression"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126041> a owl:Class ;
+    rdfs:label "Nutrition–malaria–bone link identified"^^xsd:string .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string .
 

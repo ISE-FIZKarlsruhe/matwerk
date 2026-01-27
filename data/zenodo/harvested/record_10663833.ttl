@@ -1,6 +1,29 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://purls.helmholtz-metadaten.de/msekg/dbac3c9192ea4391ab73880e7c09bc2c> a prov:Activity ;
-    prov:startedAtTime "2026-01-19T18:32:27+00:00"^^xsd:dateTime .
+<https://purls.helmholtz-metadaten.de/msekg/1759758153083> a nfdi:NFDI_0000190 ;
+    rdfs:label "https://zenodo.org/records/10663832" ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759758153085> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1759758153084> ;
+    dcterms:created "2024-02-15T10:13:25.136922+00:00"^^xsd:dateTime ;
+    dcterms:modified "2024-07-07T05:43:06.094765+00:00"^^xsd:dateTime ;
+    dcterms:source <https://doi.org/10.5281/zenodo.10663833> ;
+    prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.10663833> .
+
+<https://purls.helmholtz-metadaten.de/msekg/2a8885542ee04ae7b7e6f93294488d17> a prov:Activity ;
+    prov:startedAtTime "2026-01-27T10:08:59+00:00"^^xsd:dateTime .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758153084> rdfs:label "The MDMC-NEP Glossary of Terms" ;
+    obo:OBI_0002135 "The MDMC-NEP Glossary of Terms" .
+
+<https://purls.helmholtz-metadaten.de/msekg/1759758153085> rdfs:label "glossary.pdf" ;
+    obo:OBI_0002135 "The MDMC-NEP Glossary of Terms" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.10663833> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.10663833> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.10663833>,
+        <https://zenodo.org/api/records/10663833/files/glossary.pdf/content> .
 
