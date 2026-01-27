@@ -1,0 +1,42 @@
+version: "3.8"
+
+x-airflow-with-docker: &airflow-with-docker
+  build:
+    context: .
+    dockerfile: Dockerfile.airflow
+  image: mse-airflow:local
+  group_add:
+    - "1001"
+  environment:
+    DOCKER_HOST: "unix:///var/run/docker.sock"
+  volumes:
+    # Repeat base mounts (compose list overrides are not reliably additive)
+    - ./dags:/opt/airflow/dags
+    - ./logs:/opt/airflow/logs
+    - ./config:/opt/airflow/config
+    - ./plugins:/opt/airflow/plugins
+
+    # Allow DockerOperator to run sibling containers
+    - /var/run/docker.sock:/var/run/docker.sock
+
+    # Shared volume for KG artifacts across tasks/containers
+    - kg_workspace:/workspace
+
+services:
+  airflow-scheduler:
+    <<: *airflow-with-docker
+
+  airflow-worker:
+    <<: *airflow-with-docker
+
+  airflow-dag-processor:
+    <<: *airflow-with-docker
+
+  airflow-api-server:
+    <<: *airflow-with-docker
+
+  airflow-triggerer:
+    <<: *airflow-with-docker
+
+volumes:
+  kg_workspace:

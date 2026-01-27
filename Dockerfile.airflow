@@ -1,0 +1,6 @@
+# The official 3.1.6 compose file uses apache/airflow:3.1.6
+FROM apache/airflow:3.1.6
+
+USER airflow
+COPY requirements-airflow.txt /requirements-airflow.txt
+RUN pip install --no-cache-dir -r /requirements-airflow.txt
