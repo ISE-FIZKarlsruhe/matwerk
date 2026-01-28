@@ -450,65 +450,65 @@ EOF
     )
     
     bulk_load_to_virtuoso = DockerOperator(
-        task_id="bulk_load_to_virtuoso",
-        image=VIRTUOSO_IMAGE,
-        mounts=VIRTUOSO_LOADER_MOUNTS,
-        working_dir="/",
-        auto_remove="success",
-        mount_tmp_dir=False,
-        network_mode=COMPOSE_NETWORK,
-        environment=ENV,
-        force_pull=False,
-        command=["bash", "-lc", f"""
-    set -eEuo pipefail
-    IFS=$'\\n\\t'
+task_id="bulk_load_to_virtuoso",
+image=VIRTUOSO_IMAGE,
+mounts=VIRTUOSO_LOADER_MOUNTS,
+working_dir="/",
+auto_remove="success",
+mount_tmp_dir=False,
+network_mode=COMPOSE_NETWORK,
+environment=ENV,
+force_pull=False,
 
-    DATA_TTL="{RUN_DIR}/data/spreadsheets_asserted.ttl"
-    PROV_TTL="{RUN_DIR}/data/spreadsheets_provenance.ttl"
-    GRAPH_FILE="{RUN_DIR}/data/spreadsheets_graph_iri.txt"
-    REG_GRAPH="${{MSEKG_REGISTRY_GRAPH}}"
+# IMPORTANT: override Virtuoso image entrypoint so bash runs
+entrypoint=["bash", "-lc"],
 
-    test -s "$DATA_TTL"
-    test -s "$PROV_TTL"
-    test -s "$GRAPH_FILE"
+# IMPORTANT: do NOT use f-string here (SPARQL uses { } )
+command=r"""
+set -eEuo pipefail
+IFS=$'\n\t'
+set -x
 
-    G="$(cat "$GRAPH_FILE")"
-    echo "Data graph: $G"
-    echo "Registry graph: $REG_GRAPH"
+DATA_TTL="__RUN_DIR__/data/spreadsheets_asserted.ttl"
+PROV_TTL="__RUN_DIR__/data/spreadsheets_provenance.ttl"
+GRAPH_FILE="__RUN_DIR__/data/spreadsheets_graph_iri.txt"
+REG_GRAPH="${MSEKG_REGISTRY_GRAPH}"
 
-    # Copy files into /database (allowed by DirsAllowed)
-    LOAD_DIR="/database/airflow/kg_spreadsheets_asserted/{RUN_ID_SAFE}"
-    mkdir -p "$LOAD_DIR"
+test -s "$DATA_TTL"
+test -s "$PROV_TTL"
+test -s "$GRAPH_FILE"
 
-    DATA_BASENAME="spreadsheets_asserted.ttl"
-    PROV_BASENAME="spreadsheets_provenance.ttl"
+G="$(cat "$GRAPH_FILE")"
+echo "Data graph: $G"
+echo "Registry graph: $REG_GRAPH"
 
-    cp -f "$DATA_TTL" "$LOAD_DIR/$DATA_BASENAME"
-    cp -f "$PROV_TTL" "$LOAD_DIR/$PROV_BASENAME"
-    chmod 0644 "$LOAD_DIR/$DATA_BASENAME" "$LOAD_DIR/$PROV_BASENAME"
+LOAD_DIR="/database/airflow/kg_spreadsheets_asserted/__RUN_ID_SAFE__"
+mkdir -p "$LOAD_DIR"
 
-    # Bulk load into Virtuoso (running service) via isql-vt
-    # Clear graphs first so retries don't duplicate
-    isql-vt "virtuoso:1111" "$TRIPLESTORE_USER" "$TRIPLESTORE_PASSWORD" <<SQL
-    SPARQL CLEAR GRAPH <$G>;
-    SPARQL CLEAR GRAPH <$REG_GRAPH>;
+cp -f "$DATA_TTL" "$LOAD_DIR/spreadsheets_asserted.ttl"
+cp -f "$PROV_TTL" "$LOAD_DIR/spreadsheets_provenance.ttl"
+chmod 0644 "$LOAD_DIR/"*.ttl
 
-    ld_dir('$LOAD_DIR', '$DATA_BASENAME', '$G');
-    ld_dir('$LOAD_DIR', '$PROV_BASENAME', '$REG_GRAPH');
+# Clear + load (idempotent on retries)
+isql-vt "virtuoso:1111" "$TRIPLESTORE_USER" "$TRIPLESTORE_PASSWORD" <<SQL
+SPARQL CLEAR GRAPH <$G>;
+SPARQL CLEAR GRAPH <$REG_GRAPH>;
 
-    rdf_loader_run();
-    checkpoint;
-    SQL
+ld_dir('$LOAD_DIR', 'spreadsheets_asserted.ttl', '$G');
+ld_dir('$LOAD_DIR', 'spreadsheets_provenance.ttl', '$REG_GRAPH');
 
-    # Verify something landed (fast sanity)
-    isql-vt "virtuoso:1111" "$TRIPLESTORE_USER" "$TRIPLESTORE_PASSWORD" <<SQL | sed -n '1,120p'
-    SPARQL ASK {{ GRAPH <$G> {{ ?s ?p ?o }} }};
-    SPARQL ASK {{ GRAPH <$REG_GRAPH> {{ ?s ?p ?o }} }};
-    SQL
+rdf_loader_run();
+checkpoint;
+SQL
 
-    echo "Bulk load finished."
-    """],
-    )
+# Verify: count triples in data graph
+isql-vt "virtuoso:1111" "$TRIPLESTORE_USER" "$TRIPLESTORE_PASSWORD" <<SQL
+SPARQL SELECT (COUNT(*) AS ?triples) WHERE { GRAPH <$G> { ?s ?p ?o } };
+SQL
+
+echo "Bulk load finished."
+""".replace("__RUN_DIR__", RUN_DIR).replace("__RUN_ID_SAFE__", RUN_ID_SAFE),
+)
 
 
     init_run_dir >> download_ontology_and_tsvs >> build_components >> merge_and_upload

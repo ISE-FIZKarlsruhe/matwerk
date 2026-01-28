@@ -9,7 +9,8 @@ from airflow.providers.standard.operators.bash import BashOperator
 from airflow.providers.standard.operators.python import PythonOperator
 from airflow.utils.task_group import TaskGroup
 
-from airflow.sdk import Variable  # server-style
+from airflow.models import Variable
+
 
 # Assumes repo layout: <repo_root>/dags/<this_file>
 REPO_ROOT = str(Path(__file__).resolve().parents[1])
