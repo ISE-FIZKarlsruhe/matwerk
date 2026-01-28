@@ -13,10 +13,10 @@ from airflow.utils.task_group import TaskGroup
 REPO_ROOT = str(Path(__file__).resolve().parents[1])
 
 RUN_ID_SAFE = "{{ dag_run.run_id | replace(':', '_') | replace('+', '_') | replace('/', '_') }}"
-RUN_DIR = "{{ var.value.sharedfs }}/runs/kg_spreadsheets_asserted/" + RUN_ID_SAFE
+RUN_DIR = "{{ var.value.sharedfs }}/runs/server_spreadsheets_asserted/" + RUN_ID_SAFE
 
 # Publish location on server filesystem
-PUBLISH_ROOT = "{{ var.value.sharedfs }}/output/kg_spreadsheets_asserted/" + RUN_ID_SAFE
+PUBLISH_ROOT = "{{ var.value.sharedfs }}/output/server_spreadsheets_asserted/" + RUN_ID_SAFE
 
 # ROBOT command (Airflow Variable). Fallback to "robot" if not set.
 ROBOT = "{{ var.value.robotcmd if var.value.robotcmd is defined else 'robot' }}"
@@ -37,7 +37,7 @@ def validate_md_exact_sentinel(md_path: str, owl_path: str) -> None:
 
 
 with DAG(
-    dag_id="kg_spreadsheets_asserted",
+    dag_id="server_spreadsheets_asserted",
     start_date=datetime(2024, 1, 1),
     schedule="@daily",
     catchup=False,

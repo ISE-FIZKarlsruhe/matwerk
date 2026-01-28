@@ -10,16 +10,16 @@ from airflow.providers.standard.operators.bash import BashOperator
 REPO_ROOT = str(Path(__file__).resolve().parents[1])
 
 RUN_ID_SAFE = "{{ dag_run.run_id | replace(':', '_') | replace('+', '_') | replace('/', '_') }}"
-RUN_DIR = "{{ var.value.sharedfs }}/runs/kg_harvesters_asserted/" + RUN_ID_SAFE
+RUN_DIR = "{{ var.value.sharedfs }}/runs/server_harvesters_asserted/" + RUN_ID_SAFE
 
 # Where to publish a copy of the run artifacts (server filesystem)
-PUBLISH_ROOT = "{{ var.value.sharedfs }}/output/kg_harvesters_asserted/" + RUN_ID_SAFE
+PUBLISH_ROOT = "{{ var.value.sharedfs }}/output/server_harvesters_asserted/" + RUN_ID_SAFE
 
 # Where to locate spreadsheets runs to pick latest spreadsheets_asserted.ttl
-SPREADSHEETS_RUNS_ROOT = "{{ var.value.sharedfs }}/runs/kg_spreadsheets_asserted"
+SPREADSHEETS_RUNS_ROOT = "{{ var.value.sharedfs }}/runs/server_spreadsheets_asserted"
 
 with DAG(
-    dag_id="kg_harvesters_asserted",
+    dag_id="server_harvesters_asserted",
     start_date=datetime(2024, 1, 1),
     schedule="@weekly",
     catchup=False,
