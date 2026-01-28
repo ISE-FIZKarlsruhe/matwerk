@@ -35,6 +35,10 @@ HOST_OUT_MOUNT = Mount(source=HOST_OUT_DIR, target="/host_out", type="bind")
 MOUNTS = [WORKSPACE_MOUNT, CODE_MOUNT]
 PUBLISH_MOUNTS = [WORKSPACE_MOUNT, HOST_OUT_MOUNT]
 
+VIRTUOSO_IMAGE = "openlink/virtuoso-opensource-7:latest"
+VIRTUOSO_DB_MOUNT = Mount(source="virtuoso_db", target="/database", type="volume")
+VIRTUOSO_LOADER_MOUNTS = [WORKSPACE_MOUNT, VIRTUOSO_DB_MOUNT]
+
 # -----------------------------
 # Env passthrough
 # -----------------------------
@@ -303,7 +307,100 @@ EOF
         mem_limit="2g",
         cpus=1.0,
     )
+    
+    bulk_load_to_virtuoso = DockerOperator(
+        task_id="bulk_load_to_virtuoso",
+        image=VIRTUOSO_IMAGE,
+        mounts=VIRTUOSO_LOADER_MOUNTS,
+        working_dir="/",
+        auto_remove="success",
+        mount_tmp_dir=False,
+        network_mode=COMPOSE_NETWORK,
+        environment=ENV,
+        force_pull=False,
+        command=["bash", "-lc", r"""
+    set -eEuo pipefail
+    IFS=$'\n\t'
+
+    RUN_DIR="__RUN_DIR__"
+    RUN_ID_SAFE="$(basename "$RUN_DIR")"
+
+    LOAD_ROOT="/database/airflow/kg_harvesters_asserted/${RUN_ID_SAFE}"
+    mkdir -p "$LOAD_ROOT"
+
+    # helper: copy a file into /database and load into a graph (clearing first for idempotency)
+    load_one() {
+      local src="$1"
+      local graph="$2"
+      local dest_dir="$3"
+
+      test -s "$src"
+      test -n "$graph"
+
+      mkdir -p "$dest_dir"
+      local base="$(basename "$src")"
+      cp -f "$src" "$dest_dir/$base"
+      chmod 0644 "$dest_dir/$base"
+
+      # NOTE: use isql-vt to talk to the running virtuoso container on the docker network
+      isql-vt "virtuoso:1111" "$TRIPLESTORE_USER" "$TRIPLESTORE_PASSWORD" <<SQL
+    SPARQL CLEAR GRAPH <$graph>;
+    ld_dir('$dest_dir', '$base', '$graph');
+    rdf_loader_run();
+    checkpoint;
+    SQL
+
+      # verify something landed
+      isql-vt "virtuoso:1111" "$TRIPLESTORE_USER" "$TRIPLESTORE_PASSWORD" <<SQL | sed -n '1,200p'
+    SPARQL ASK { GRAPH <$graph> { ?s ?p ?o } };
+    SQL
+    }
+
+    REG_GRAPH="${MSEKG_REGISTRY_GRAPH}"
+
+    # -------------------------
+    # Zenodo outputs
+    # -------------------------
+    ZEN_DIR="$RUN_DIR/data/zenodo"
+    if [ -d "$ZEN_DIR" ]; then
+      ZEN_DATA="$ZEN_DIR/zenodo.ttl"
+      ZEN_G="$(cat "$ZEN_DIR/zenodo_graph_iri.txt" 2>/dev/null || true)"
+      if [ -n "${ZEN_G}" ] && [ -s "$ZEN_DATA" ]; then
+        load_one "$ZEN_DATA" "$ZEN_G" "$LOAD_ROOT/zenodo"
+      else
+        echo "[WARN] Zenodo graph IRI or data TTL missing; skipping zenodo bulk load."
+      fi
+
+      ZEN_PROV="$ZEN_DIR/zenodo_provenance.ttl"
+      if [ -s "$ZEN_PROV" ]; then
+        load_one "$ZEN_PROV" "$REG_GRAPH" "$LOAD_ROOT/provenance"
+      fi
+    fi
+
+    # -------------------------
+    # Endpoints outputs
+    # -------------------------
+    EP_DIR="$RUN_DIR/data/sparql_endpoints"
+    if [ -d "$EP_DIR" ]; then
+      EP_DATA="$EP_DIR/dataset_stats.ttl"
+      EP_G="$(cat "$EP_DIR/sparql_endpoints_graph_iri.txt" 2>/dev/null || true)"
+      if [ -n "${EP_G}" ] && [ -s "$EP_DATA" ]; then
+        load_one "$EP_DATA" "$EP_G" "$LOAD_ROOT/sparql_endpoints"
+      else
+        echo "[WARN] Endpoints graph IRI or dataset_stats.ttl missing; skipping endpoints bulk load."
+      fi
+
+      EP_PROV="$EP_DIR/sparql_endpoints_provenance.ttl"
+      if [ -s "$EP_PROV" ]; then
+        load_one "$EP_PROV" "$REG_GRAPH" "$LOAD_ROOT/provenance"
+      fi
+    fi
+
+    echo "Bulk load done for run: $RUN_ID_SAFE"
+    """.replace("__RUN_DIR__", RUN_DIR)],
+    )
+
 
     # If endpoints runs in parallel, gate publish on BOTH
-    init_run_dir >> [harvester_zenodo, harvester_endpoints] >> publish
+    init_run_dir >> [harvester_zenodo, harvester_endpoints] >> bulk_load_to_virtuoso >> publish
 

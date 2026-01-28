@@ -9,6 +9,8 @@ from airflow.providers.standard.operators.bash import BashOperator
 from airflow.providers.standard.operators.python import PythonOperator
 from airflow.utils.task_group import TaskGroup
 
+from airflow.sdk import Variable  # server-style
+
 # Assumes repo layout: <repo_root>/dags/<this_file>
 REPO_ROOT = str(Path(__file__).resolve().parents[1])
 
@@ -18,9 +20,12 @@ RUN_DIR = "{{ var.value.sharedfs }}/runs/server_spreadsheets_asserted/" + RUN_ID
 # Publish location on server filesystem
 PUBLISH_ROOT = "{{ var.value.sharedfs }}/output/server_spreadsheets_asserted/" + RUN_ID_SAFE
 
-# ROBOT command (Airflow Variable). Fallback to "robot" if not set.
-ROBOT = "{{ var.value.robotcmd if var.value.robotcmd is defined else 'robot' }}"
-ROBOT_JAVA_ARGS = "{{ var.value.ROBOT_JAVA_ARGS if var.value.ROBOT_JAVA_ARGS is defined else '-Xmx16G -Dfile.encoding=UTF-8' }}"
+# Read robotcmd at parse-time; strip whitespace/newlines to prevent "robot" running alone.
+ROBOT_CMD = Variable.get("robotcmd", default_var="robot")
+ROBOT_CMD = " ".join(ROBOT_CMD.replace("\r", " ").replace("\n", " ").split()).strip()
+
+# Hard default to avoid VARIABLE_NOT_FOUND
+ROBOT_JAVA_ARGS = "-Xmx16G -Dfile.encoding=UTF-8"
 
 
 def validate_md_exact_sentinel(md_path: str, owl_path: str) -> None:
@@ -89,13 +94,11 @@ with DAG(
         IFS=$'\\n\\t'
         mkdir -p "{RUN_DIR}/data/components"
 
-        # base ontology
         curl -fsSL \\
           "https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/refs/tags/v3.0.0/mwo.owl" \\
           -o "{RUN_DIR}/data/components/ontology.owl"
         test -s "{RUN_DIR}/data/components/ontology.owl"
 
-        # TSV templates
         for item in {" ".join([f"{t['name']}::{t['gid']}" for t in TSVS])}; do
           name="${{item%%::*}}"
           gid="${{item##*::}}"
@@ -133,6 +136,16 @@ with DAG(
         "FDOs": ["req_1", "req_2", "organization", "temporal", "agent", "role", "process", "dataset"],
     }
 
+    def robot_prelude() -> str:
+        # Convert ROBOT_CMD into argv[] safely (handles "java -jar ...", etc.)
+        return f"""
+        export ROBOT_JAVA_ARGS="{ROBOT_JAVA_ARGS}"
+        ROBOT_CMD="{ROBOT_CMD}"
+        # Split ROBOT_CMD into an argv array
+        read -r -a ROBOT_ARR <<< "$ROBOT_CMD"
+        echo "Using ROBOT_CMD: $ROBOT_CMD"
+        """
+
     def robot_build_cmd(name: str, deps: list[str]) -> str:
         if name == "req_1":
             inputs = f'-i "{RUN_DIR}/data/components/ontology.owl"'
@@ -142,18 +155,17 @@ with DAG(
         return f"""
         set -eEuo pipefail
         IFS=$'\\n\\t'
-
-        export ROBOT_JAVA_ARGS="{ROBOT_JAVA_ARGS}"
+        {robot_prelude()}
 
         mkdir -p "{RUN_DIR}/data/components/reasoner"
 
-        {ROBOT} merge --include-annotations true {inputs} \\
+        "${{ROBOT_ARR[@]}}" merge --include-annotations true {inputs} \\
           template --merge-before --template "{RUN_DIR}/data/components/{name}.tsv" \\
           --output "{RUN_DIR}/data/components/{name}.owl"
 
         test -s "{RUN_DIR}/data/components/{name}.owl"
 
-        {ROBOT} explain --reasoner hermit --input "{RUN_DIR}/data/components/{name}.owl" \\
+        "${{ROBOT_ARR[@]}}" explain --reasoner hermit --input "{RUN_DIR}/data/components/{name}.owl" \\
           -M inconsistency --explanation "{RUN_DIR}/data/components/reasoner/{name}_inconsistency.md"
 
         test -s "{RUN_DIR}/data/components/reasoner/{name}_inconsistency.md"
@@ -189,12 +201,11 @@ with DAG(
         bash_command=f"""
         set -eEuo pipefail
         IFS=$'\\n\\t'
-
-        export ROBOT_JAVA_ARGS="{ROBOT_JAVA_ARGS}"
+        {robot_prelude()}
 
         OUT_TTL="{RUN_DIR}/data/spreadsheets_asserted.ttl"
 
-        {ROBOT} merge --include-annotations true \\
+        "${{ROBOT_ARR[@]}}" merge --include-annotations true \\
           $(for f in "{RUN_DIR}/data/components"/*.owl; do
               [ "$(basename "$f")" = "ontology.owl" ] && continue
               echo -n " -i \\"$f\\""
@@ -202,37 +213,6 @@ with DAG(
           --output "$OUT_TTL"
 
         test -s "$OUT_TTL"
-
-        # Graph IRI
-        TS="$(date +%s%3N)"
-        GRAPH_BASE="https://purls.helmholtz-metadaten.de/msekg/"
-        G="$GRAPH_BASE$TS"
-        echo "$G" > "{RUN_DIR}/data/spreadsheets_graph_iri.txt"
-
-        # Provenance (local)
-        NOW_ISO="$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-        DAG_ID="{{{{ dag.dag_id }}}}"
-        RUN_ID="{{{{ dag_run.run_id }}}}"
-        TASK_ID="{{{{ ti.task_id }}}}"
-        LOG_URL="{{{{ ti.log_url }}}}"
-
-        PROV_TTL="{RUN_DIR}/data/spreadsheets_provenance.ttl"
-        cat > "$PROV_TTL" <<EOF
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix mse: <https://purls.helmholtz-metadaten.de/msekg/vocab/> .
-
-[] a prov:Activity ;
-  dct:created "$NOW_ISO"^^<http://www.w3.org/2001/XMLSchema#dateTime> ;
-  mse:airflowDagId "$DAG_ID" ;
-  mse:airflowRunId "$RUN_ID" ;
-  mse:airflowTaskId "$TASK_ID" ;
-  mse:producedGraph <$G> ;
-  mse:producedFile "spreadsheets_asserted.ttl" ;
-  rdfs:seeAlso <$LOG_URL> .
-EOF
-        test -s "$PROV_TTL"
         """,
     )
 
@@ -241,8 +221,7 @@ EOF
         bash_command=f"""
         set -eEuo pipefail
         IFS=$'\\n\\t'
-
-        export ROBOT_JAVA_ARGS="{ROBOT_JAVA_ARGS}"
+        {robot_prelude()}
 
         mkdir -p "{RUN_DIR}/data/validation"
         DATA_TTL="{RUN_DIR}/data/spreadsheets_asserted.ttl"
@@ -251,7 +230,7 @@ EOF
         QUERIES="{REPO_ROOT}/shapes/verify1.sparql"
         test -f "$QUERIES"
 
-        {ROBOT} verify --input "$DATA_TTL" --queries "$QUERIES" \\
+        "${{ROBOT_ARR[@]}}" verify --input "$DATA_TTL" --queries "$QUERIES" \\
           --output-dir "{RUN_DIR}/data/validation/" -vvv > "{RUN_DIR}/data/validation/verify_sparql.md"
 
         test -s "{RUN_DIR}/data/validation/verify_sparql.md"
@@ -264,7 +243,6 @@ EOF
             bash_command=f"""
             set -eEuo pipefail
             IFS=$'\\n\\t'
-
             mkdir -p "{RUN_DIR}/data/validation"
 
             DATA="{RUN_DIR}/data/spreadsheets_asserted.ttl"
@@ -274,11 +252,7 @@ EOF
             test -s "$DATA"
             test -f "$SHAPE"
 
-            if ! command -v pyshacl >/dev/null 2>&1; then
-              echo "[ERROR] pyshacl is not installed on the Airflow worker; cannot run SHACL validation."
-              exit 1
-            fi
-
+            command -v pyshacl >/dev/null 2>&1 || (echo "[ERROR] pyshacl not installed" && exit 1)
             pyshacl -s "$SHAPE" -d "$DATA" > "$OUT" || true
             test -s "$OUT"
             """,
@@ -296,7 +270,6 @@ EOF
 
         RUN_DIR="{RUN_DIR}"
 
-        echo "=== Checking component inconsistency reports ==="
         REPORT_DIR="$RUN_DIR/data/components/reasoner"
         test -d "$REPORT_DIR"
 
@@ -310,23 +283,14 @@ EOF
             bad=1
           fi
         done
-        if [ "$bad" -eq 1 ]; then
-          echo "FAIL: At least one component has inconsistencies."
-          exit 1
-        fi
-        echo "OK: No component inconsistencies found."
+        [ "$bad" -eq 0 ] || exit 1
 
-        echo "=== Checking SHACL validation outputs ==="
         VAL_DIR="$RUN_DIR/data/validation"
         test -d "$VAL_DIR"
-
         if grep -RInE "(Conforms:\\s*False|SHACL\\s*Violation|Violations|violation)" "$VAL_DIR"/*.md 2>/dev/null; then
           echo "FAIL: SHACL violations detected."
           exit 1
         fi
-        echo "OK: No SHACL violations detected (by report scan)."
-
-        echo "=== Final gate passed ==="
         """,
     )
 
@@ -343,7 +307,6 @@ EOF
         cp -a "$SRC/." "$DEST/"
 
         echo "Published run artifacts to: $DEST"
-        find "$DEST" -maxdepth 4 -type f | sed -n '1,200p'
         """,
     )
 

@@ -35,6 +35,9 @@ CODE_MOUNT = Mount(
 HOST_OUT_DIR = "/mnt/c/Users/eno/Documents/NFDI-MatWerk/gitlab/matwerk/output"
 HOST_OUT_MOUNT = Mount(source=HOST_OUT_DIR, target="/host_out", type="bind")
 
+VIRTUOSO_IMAGE = "openlink/virtuoso-opensource-7:latest"
+VIRTUOSO_DB_MOUNT_DB = Mount(source="virtuoso_db", target="/database", type="volume")
+VIRTUOSO_LOADER_MOUNTS = [WORKSPACE_MOUNT, VIRTUOSO_DB_MOUNT_DB]
 VIRTUOSO_DB_MOUNT = Mount(source="virtuoso_db", target="/virtuoso_db", type="volume")
 MOUNTS = [WORKSPACE_MOUNT, CODE_MOUNT, VIRTUOSO_DB_MOUNT]
 PUBLISH_MOUNTS = [WORKSPACE_MOUNT, HOST_OUT_MOUNT, VIRTUOSO_DB_MOUNT]
@@ -445,6 +448,68 @@ EOF
         mem_limit="2g",
         cpus=1.0,
     )
+    
+    bulk_load_to_virtuoso = DockerOperator(
+        task_id="bulk_load_to_virtuoso",
+        image=VIRTUOSO_IMAGE,
+        mounts=VIRTUOSO_LOADER_MOUNTS,
+        working_dir="/",
+        auto_remove="success",
+        mount_tmp_dir=False,
+        network_mode=COMPOSE_NETWORK,
+        environment=ENV,
+        force_pull=False,
+        command=["bash", "-lc", f"""
+    set -eEuo pipefail
+    IFS=$'\\n\\t'
+
+    DATA_TTL="{RUN_DIR}/data/spreadsheets_asserted.ttl"
+    PROV_TTL="{RUN_DIR}/data/spreadsheets_provenance.ttl"
+    GRAPH_FILE="{RUN_DIR}/data/spreadsheets_graph_iri.txt"
+    REG_GRAPH="${{MSEKG_REGISTRY_GRAPH}}"
+
+    test -s "$DATA_TTL"
+    test -s "$PROV_TTL"
+    test -s "$GRAPH_FILE"
+
+    G="$(cat "$GRAPH_FILE")"
+    echo "Data graph: $G"
+    echo "Registry graph: $REG_GRAPH"
+
+    # Copy files into /database (allowed by DirsAllowed)
+    LOAD_DIR="/database/airflow/kg_spreadsheets_asserted/{RUN_ID_SAFE}"
+    mkdir -p "$LOAD_DIR"
+
+    DATA_BASENAME="spreadsheets_asserted.ttl"
+    PROV_BASENAME="spreadsheets_provenance.ttl"
+
+    cp -f "$DATA_TTL" "$LOAD_DIR/$DATA_BASENAME"
+    cp -f "$PROV_TTL" "$LOAD_DIR/$PROV_BASENAME"
+    chmod 0644 "$LOAD_DIR/$DATA_BASENAME" "$LOAD_DIR/$PROV_BASENAME"
+
+    # Bulk load into Virtuoso (running service) via isql-vt
+    # Clear graphs first so retries don't duplicate
+    isql-vt "virtuoso:1111" "$TRIPLESTORE_USER" "$TRIPLESTORE_PASSWORD" <<SQL
+    SPARQL CLEAR GRAPH <$G>;
+    SPARQL CLEAR GRAPH <$REG_GRAPH>;
+
+    ld_dir('$LOAD_DIR', '$DATA_BASENAME', '$G');
+    ld_dir('$LOAD_DIR', '$PROV_BASENAME', '$REG_GRAPH');
+
+    rdf_loader_run();
+    checkpoint;
+    SQL
+
+    # Verify something landed (fast sanity)
+    isql-vt "virtuoso:1111" "$TRIPLESTORE_USER" "$TRIPLESTORE_PASSWORD" <<SQL | sed -n '1,120p'
+    SPARQL ASK {{ GRAPH <$G> {{ ?s ?p ?o }} }};
+    SPARQL ASK {{ GRAPH <$REG_GRAPH> {{ ?s ?p ?o }} }};
+    SQL
+
+    echo "Bulk load finished."
+    """],
+    )
+
 
     init_run_dir >> download_ontology_and_tsvs >> build_components >> merge_and_upload
 
@@ -453,5 +518,6 @@ EOF
     merge_and_upload >> shacl_validate
 
     # Gate waits for both
-    [verify_sparql, shacl_validate] >> final_consistency_gate >> publish
+    [verify_sparql, shacl_validate] >> final_consistency_gate >> bulk_load_to_virtuoso >> publish
+
 
