@@ -19,9 +19,11 @@ You can explore the deployed version of the knowledge graph here:
 To run a local test instance using Docker:
 
 ```shell
-docker build -t ghcr.io/ise-fizkarlsruhe/matwerk:latest .
+docker build -f Dockerfile.kg-runner -t mse-kg-runner:local .
+docker compose up -d
+#docker build -t ghcr.io/ise-fizkarlsruhe/matwerk:latest .
 
-docker run --rm -it -p 8000:8000 -e DEBUG=1 -e MOUNT=/matwerk/ -e DATA_LOAD_PATHS=/data/all.ttl -e PREFIXES_FILEPATH=/data/all.ttl -v "$(pwd)/data:/data" ghcr.io/ise-fizkarlsruhe/matwerk:latest
+#docker run --rm -it -p 8000:8000 -e DEBUG=1 -e MOUNT=/matwerk/ -e DATA_LOAD_PATHS=/data/all.ttl -e PREFIXES_FILEPATH=/data/all.ttl -v "$(pwd)/data:/data" ghcr.io/ise-fizkarlsruhe/matwerk:latest
 ```
 
 After starting, you can access it at:

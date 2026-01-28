@@ -7,36 +7,88 @@ x-airflow-with-docker: &airflow-with-docker
   image: mse-airflow:local
   group_add:
     - "1001"
+  env_file:
+    - .env
   environment:
     DOCKER_HOST: "unix:///var/run/docker.sock"
   volumes:
-    # Repeat base mounts (compose list overrides are not reliably additive)
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./config:/opt/airflow/config
     - ./plugins:/opt/airflow/plugins
 
-    # Allow DockerOperator to run sibling containers
     - /var/run/docker.sock:/var/run/docker.sock
-
-    # Shared volume for KG artifacts across tasks/containers
     - kg_workspace:/workspace
 
 services:
   airflow-scheduler:
     <<: *airflow-with-docker
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./config:/opt/airflow/config
+      - ./plugins:/opt/airflow/plugins
+      - /var/run/docker.sock:/var/run/docker.sock
+      - kg_workspace:/workspace
+      - virtuoso_db:/virtuoso_db
 
   airflow-worker:
     <<: *airflow-with-docker
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./config:/opt/airflow/config
+      - ./plugins:/opt/airflow/plugins
+      - /var/run/docker.sock:/var/run/docker.sock
+      - kg_workspace:/workspace
+      - virtuoso_db:/virtuoso_db
 
   airflow-dag-processor:
     <<: *airflow-with-docker
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./config:/opt/airflow/config
+      - ./plugins:/opt/airflow/plugins
+      - /var/run/docker.sock:/var/run/docker.sock
+      - kg_workspace:/workspace
+      - virtuoso_db:/virtuoso_db
 
   airflow-api-server:
     <<: *airflow-with-docker
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./config:/opt/airflow/config
+      - ./plugins:/opt/airflow/plugins
+      - /var/run/docker.sock:/var/run/docker.sock
+      - kg_workspace:/workspace
+      - virtuoso_db:/virtuoso_db
 
   airflow-triggerer:
     <<: *airflow-with-docker
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./config:/opt/airflow/config
+      - ./plugins:/opt/airflow/plugins
+      - /var/run/docker.sock:/var/run/docker.sock
+      - kg_workspace:/workspace
+      - virtuoso_db:/virtuoso_db
+
+  virtuoso:
+    image: openlink/virtuoso-opensource-7:latest
+    container_name: virtuoso
+    restart: unless-stopped
+    ports:
+      - "8890:8890"
+    environment:
+      DBA_PASSWORD: ${VIRTUOSO_DBA_PASSWORD:?set VIRTUOSO_DBA_PASSWORD in .env}
+      SPARQL_UPDATE: "true"
+    volumes:
+      - virtuoso_db:/database
+      - kg_workspace:/workspace
 
 volumes:
   kg_workspace:
+  virtuoso_db:
