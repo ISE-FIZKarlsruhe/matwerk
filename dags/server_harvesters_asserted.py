@@ -6,30 +6,32 @@ from pathlib import Path
 from airflow import DAG
 from airflow.providers.standard.operators.bash import BashOperator
 
-# Repo root = dags/.. (assumes dags folder inside repo)
+# Assumes repo layout: <repo_root>/dags/<this_file>
 REPO_ROOT = str(Path(__file__).resolve().parents[1])
 
-# SharedFS + per-run directory (templated)
 RUN_ID_SAFE = "{{ dag_run.run_id | replace(':', '_') | replace('+', '_') | replace('/', '_') }}"
-RUN_DIR = "{{ var.value.sharedfs }}/runs/server_harvesters_asserted/" + RUN_ID_SAFE
+RUN_DIR = "{{ var.value.sharedfs }}/runs/kg_harvesters_asserted/" + RUN_ID_SAFE
 
-# Optional output root (defaults to <sharedfs>/output if Variable not defined)
-OUT_ROOT = "{{ var.value.output_dir if var.value.output_dir is defined else (var.value.sharedfs ~ '/output') }}"
+# Where to publish a copy of the run artifacts (server filesystem)
+PUBLISH_ROOT = "{{ var.value.sharedfs }}/output/kg_harvesters_asserted/" + RUN_ID_SAFE
+
+# Where to locate spreadsheets runs to pick latest spreadsheets_asserted.ttl
+SPREADSHEETS_RUNS_ROOT = "{{ var.value.sharedfs }}/runs/kg_spreadsheets_asserted"
 
 with DAG(
-    dag_id="server_harvesters_asserted",
+    dag_id="kg_harvesters_asserted",
     start_date=datetime(2024, 1, 1),
     schedule="@weekly",
     catchup=False,
     default_args={"retries": 1},
     tags=["kg", "harvester"],
 ) as dag:
+
     init_run_dir = BashOperator(
         task_id="init_run_dir",
         bash_command=f"""
         set -eEuo pipefail
         IFS=$'\\n\\t'
-
         RUN_DIR="{RUN_DIR}"
         mkdir -p "$RUN_DIR/data/zenodo"
         mkdir -p "$RUN_DIR/data/sparql_endpoints"
@@ -42,7 +44,6 @@ with DAG(
         set -eEuo pipefail
         IFS=$'\\n\\t'
 
-        # Ensure repo code is importable
         export PYTHONPATH="{REPO_ROOT}:{REPO_ROOT}/dags:${{PYTHONPATH:-}}"
         cd "{REPO_ROOT}"
 
@@ -54,8 +55,8 @@ with DAG(
         python -m scripts.zenodo.export_zenodo --make-snapshots --out "$ZENODO_TTL"
         test -s "$ZENODO_TTL"
 
-        # 2) Use most recent spreadsheets asserted TTL as source KG
-        SPREADSHEETS_ROOT="{{{{ var.value.sharedfs }}}}/runs/server_spreadsheets_asserted"
+        # 2) Fetch (harvest) based on most recent spreadsheets asserted TTL
+        SPREADSHEETS_ROOT="{SPREADSHEETS_RUNS_ROOT}"
         LATEST_TTL="$(ls -1t "$SPREADSHEETS_ROOT"/*/data/spreadsheets_asserted.ttl 2>/dev/null | head -n 1 || true)"
         if [ -z "${{LATEST_TTL}}" ]; then
           echo "[ERROR] No $SPREADSHEETS_ROOT/*/data/spreadsheets_asserted.ttl found."
@@ -72,7 +73,7 @@ with DAG(
         test -s "$RUN_DIR/data/zenodo/datasets_urls.csv"
         test -d "$RUN_DIR/data/zenodo/harvested"
 
-        # 3) Graph IRI + provenance (local)
+        # Graph IRI + provenance (local)
         TS="$(date +%s%3N)"
         GRAPH_BASE="https://purls.helmholtz-metadaten.de/msekg/"
         G="${{GRAPH_BASE}}${{TS}}"
@@ -122,8 +123,8 @@ EOF
         OUT_DIR="$RUN_DIR/data/sparql_endpoints"
         mkdir -p "$OUT_DIR"
 
-        # Pick most recent spreadsheets TTL (source KG)
-        SPREADSHEETS_ROOT="{{{{ var.value.sharedfs }}}}/runs/server_spreadsheets_asserted"
+        # Pick most recent spreadsheets asserted TTL (source KG)
+        SPREADSHEETS_ROOT="{SPREADSHEETS_RUNS_ROOT}"
         LATEST_TTL="$(ls -1t "$SPREADSHEETS_ROOT"/*/data/spreadsheets_asserted.ttl 2>/dev/null | head -n 1 || true)"
         if [ -z "${{LATEST_TTL}}" ]; then
           echo "[ERROR] No $SPREADSHEETS_ROOT/*/data/spreadsheets_asserted.ttl found."
@@ -132,7 +133,7 @@ EOF
         test -s "${{LATEST_TTL}}"
         echo "${{LATEST_TTL}}" > "$OUT_DIR/source_spreadsheets_asserted_path.txt"
 
-        # Run fetch_endpoints (expects env vars)
+        # Run fetch_endpoints with RUN_DIR-local outputs
         export ALL_TTL="${{LATEST_TTL}}"
         export STATE_JSON="$OUT_DIR/sparql_sources.json"
         export SUMMARY_JSON="$OUT_DIR/sparql_sources_list.json"
@@ -141,10 +142,11 @@ EOF
 
         python "{REPO_ROOT}/scripts/fetch_endpoints.py"
 
-        test -s "$STATE_JSON"
-        test -s "$SUMMARY_JSON"
-        test -s "$STATS_TTL"
-        test -d "$NAMED_GRAPHS_DIR"
+        # sanity checks
+        test -s "$STATE_JSON" || (echo "[ERROR] state json missing" && exit 1)
+        test -s "$SUMMARY_JSON" || (echo "[ERROR] summary json missing" && exit 1)
+        test -s "$STATS_TTL" || (echo "[ERROR] stats ttl missing" && exit 1)
+        test -d "$NAMED_GRAPHS_DIR" || (echo "[ERROR] named graphs dir missing" && exit 1)
 
         # Graph IRI + provenance (local)
         TS="$(date +%s%3N)"
@@ -191,27 +193,12 @@ EOF
         IFS=$'\\n\\t'
 
         RUN_DIR="{RUN_DIR}"
-        RUN_ID_SAFE="{RUN_ID_SAFE}"
-        DAG_ID="server_harvesters_asserted"
+        DEST="{PUBLISH_ROOT}"
 
-        DEST="{OUT_ROOT}/${{DAG_ID}}/${{RUN_ID_SAFE}}"
-        mkdir -p "$DEST/data"
+        mkdir -p "$DEST"
+        cp -a "$RUN_DIR/." "$DEST/"
 
-        if [ -d "$RUN_DIR/data/zenodo" ]; then
-          mkdir -p "$DEST/data/zenodo"
-          cp -a "$RUN_DIR/data/zenodo/." "$DEST/data/zenodo/"
-        else
-          echo "[WARN] No $RUN_DIR/data/zenodo to publish."
-        fi
-
-        if [ -d "$RUN_DIR/data/sparql_endpoints" ]; then
-          mkdir -p "$DEST/data/sparql_endpoints"
-          cp -a "$RUN_DIR/data/sparql_endpoints/." "$DEST/data/sparql_endpoints/"
-        else
-          echo "[WARN] No $RUN_DIR/data/sparql_endpoints to publish."
-        fi
-
-        echo "Published to: $DEST"
+        echo "Published run artifacts to: $DEST"
         find "$DEST" -maxdepth 7 -type f | sed -n '1,200p'
         """,
     )
