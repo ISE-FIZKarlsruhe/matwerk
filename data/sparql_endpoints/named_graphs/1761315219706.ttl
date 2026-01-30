@@ -3472,6 +3472,19 @@ Atopic dermatitis is an evolutionary sequela of vitamin D3 deficiency in norther
 <http://orkg.org/orkg/class/C126041> a owl:Class ;
     rdfs:label "Nutrition–malaria–bone link identified"^^xsd:string .
 
+<http://orkg.org/orkg/class/C126042> a owl:Class ;
+    rdfs:label "ScholarlyArticle"^^xsd:string ;
+    owl:equivalentClass <http://schema.org/ScholarlyArticle> .
+
+<http://orkg.org/orkg/class/C126043> a owl:Class ;
+    rdfs:label "Periodical"^^xsd:string ;
+    owl:equivalentClass <http://schema.org/Periodical> .
+
+<http://orkg.org/orkg/class/C126044> a owl:Class ;
+    rdfs:label "absolute error"^^xsd:string ;
+    ns1:description "magnitude of the difference between the exact value and the measured or approximate value"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q3057447> .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string ;
     owl:equivalentClass <http://purl.obolibrary.org/obo/ZFS_0100000> .

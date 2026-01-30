@@ -19,8 +19,8 @@
     dcterms:source <https://doi.org/10.5281/zenodo.6778336> ;
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.6778336> .
 
-<https://purls.helmholtz-metadaten.de/msekg/6f379ade2516458f9b2eeaa4828e2978> a prov:Activity ;
-    prov:startedAtTime "2026-01-27T10:10:39+00:00"^^xsd:dateTime .
+<https://purls.helmholtz-metadaten.de/msekg/f9a096f8b8594d44845669081dbba6c9> a prov:Activity ;
+    prov:startedAtTime "2026-01-30T17:36:38+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759757749286> rdfs:label "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" ;
     obo:OBI_0002135 "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" .

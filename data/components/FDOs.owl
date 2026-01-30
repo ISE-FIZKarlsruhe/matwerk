@@ -15,6 +15,23 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008 -->
+
+    <AnnotationProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Object Properties
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -26,26 +43,6 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
 
     <ObjectProperty rdf:about="http://purl.obolibrary.org/obo/BFO_0000050"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008 -->
-
-    <DatatypeProperty rdf:about="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:label>has url</rdfs:label>
-    </DatatypeProperty>
     
 
 
@@ -88,8 +85,8 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453329995091">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
         <obo:BFO_0000050 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451474931969"/>
-        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/21.11152/253e0f2a-4d4a-4916-a45a-ef7cd8ad1f9b</ontology:NFDI_0001008>
         <rdfs:label>BCR425-280-1.LIS</rdfs:label>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/21.11152/253e0f2a-4d4a-4916-a45a-ef7cd8ad1f9b</ontology:NFDI_0001008>
     </NamedIndividual>
     
 
@@ -99,8 +96,8 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453329995092">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
         <obo:BFO_0000050 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451474931969"/>
-        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/21.11152/28f4733f-a457-430f-9482-f5259f91cfc2</ontology:NFDI_0001008>
         <rdfs:label>Inhalt_Content_V1.1.pdf</rdfs:label>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/21.11152/28f4733f-a457-430f-9482-f5259f91cfc2</ontology:NFDI_0001008>
     </NamedIndividual>
     
 
@@ -110,8 +107,8 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453329995093">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
         <obo:BFO_0000050 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451474931969"/>
-        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/21.11152/fa8ce096-b98b-4ec9-8ca9-fa140454bb86</ontology:NFDI_0001008>
         <rdfs:label>BCR-425_cert.pdf</rdfs:label>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/21.11152/fa8ce096-b98b-4ec9-8ca9-fa140454bb86</ontology:NFDI_0001008>
     </NamedIndividual>
     
 
@@ -121,8 +118,8 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453329995094">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
         <obo:BFO_0000050 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451474931969"/>
-        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/21.11152/ce406c08-74ea-4294-8af2-4d28c9ebf53f</ontology:NFDI_0001008>
         <rdfs:label>Ergebnisse-N75-BCR425.pdf</rdfs:label>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/21.11152/ce406c08-74ea-4294-8af2-4d28c9ebf53f</ontology:NFDI_0001008>
     </NamedIndividual>
     
 
@@ -132,8 +129,8 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453329995095">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
         <obo:BFO_0000050 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451474931969"/>
-        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/21.11152/f66b53a9-38d5-4b4b-a701-a69adce1c68b</ontology:NFDI_0001008>
         <rdfs:label>Pruefmittel_Messmittel-Kriechversuche.pdf</rdfs:label>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://hdl.handle.net/21.11152/f66b53a9-38d5-4b4b-a701-a69adce1c68b</ontology:NFDI_0001008>
     </NamedIndividual>
 </rdf:RDF>
 
