@@ -32,7 +32,7 @@ Thumbs.db
 /data/reasoned/*.owl
 /output/*
 /logs/*
-
+/server/*
 # Ignore documentation and site builds
 /site/
 public/
