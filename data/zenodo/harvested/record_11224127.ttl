@@ -5,6 +5,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<https://purls.helmholtz-metadaten.de/msekg/08ff500c11004b0a9705cd7018a06d66> a prov:Activity ;
+    prov:startedAtTime "2026-01-30T17:35:30+00:00"^^xsd:dateTime .
+
 <https://purls.helmholtz-metadaten.de/msekg/1759767916972> a nfdi:NFDI_0000009 ;
     rdfs:label "https://zenodo.org/records/11224126" ;
     obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759767917179> ;
@@ -13,9 +16,6 @@
     dcterms:modified "2024-05-27T16:55:10.707240+00:00"^^xsd:dateTime ;
     dcterms:source <https://doi.org/10.5281/zenodo.11224127> ;
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.11224127> .
-
-<https://purls.helmholtz-metadaten.de/msekg/3d0684bbe4eb401eb3767781a72e47b4> a prov:Activity ;
-    prov:startedAtTime "2026-01-27T10:09:14+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759767916973> rdfs:label "Automated Segmentation of Large Image Datasets using Artificial Intelligence for Microstructure Characterisation and Damage Analysis" ;
     obo:OBI_0002135 "Automated Segmentation of Large Image Datasets using Artificial Intelligence for Microstructure Characterisation and Damage Analysis" .

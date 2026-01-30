@@ -5572,10 +5572,8 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174514906404223">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014"/>
         <ontology:NFDI_0001007>10/30/2019</ontology:NFDI_0001007>
         <rdfs:label>DatasetPublishingDate 1</rdfs:label>
-        <rdfs:label>dataset publishing process 23</rdfs:label>
     </NamedIndividual>
     
 
@@ -53324,7 +53322,7 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359633099121">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
         <rdfs:label>RoleWebsite 299</rdfs:label>
-        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.trr285.de/</ontology:NFDI_0001008>
+        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.trr285.de</ontology:NFDI_0001008>
     </NamedIndividual>
     
 
@@ -67120,6 +67118,15 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000429"/>
         <ontology:NFDI_0001007>hossein.beygi_nasrabadi@fiz-karlsruhe.de</ontology:NFDI_0001007>
         <rdfs:label>hossein.beygi_nasrabadi@fiz-karlsruhe.de</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17695106617941 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17695106617941">
+        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014"/>
+        <rdfs:label>dataset publishing process 23</rdfs:label>
     </NamedIndividual>
 </rdf:RDF>
 
