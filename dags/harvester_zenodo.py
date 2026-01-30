@@ -9,7 +9,7 @@ DAG_ID = "harvester_zenodo"
 RUN_ID_SAFE = "{{ dag_run.run_id | replace(':', '_') | replace('+', '_') | replace('/', '_') }}"
 RUN_DIR = "{{ var.value.sharedfs }}/runs/" + DAG_ID + "/" + RUN_ID_SAFE
 
-# merge_validation now writes here:
+# merge_validation writes here:
 MERGE_RUNS_ROOT = "{{ var.value.sharedfs }}/runs/merge_validation"
 
 SCRIPTS_REPO = "https://github.com/ISE-FIZKarlsruhe/matwerk"
@@ -108,7 +108,7 @@ ROOT="{MERGE_RUNS_ROOT}"
 LATEST_TTL=""
 LATEST_RUN=""
 
-# Prefer _SUCCESS marker (recommended).
+# Prefer any run with a TTL (you can tighten to _SUCCESS later)
 for d in $(ls -1dt "$ROOT"/* 2>/dev/null); do
   if [ -s "$d/spreadsheets_asserted.ttl" ]; then
     LATEST_RUN="$d"
@@ -117,7 +117,7 @@ for d in $(ls -1dt "$ROOT"/* 2>/dev/null); do
   fi
 done
 
-# Fallback: accept runs with ttl + all shape conforms (no _SUCCESS available)
+# Fallback: ttl + validation files with Conforms True
 if [ -z "$LATEST_TTL" ]; then
   for d in $(ls -1dt "$ROOT"/* 2>/dev/null); do
     CAND="$d/spreadsheets_asserted.ttl"
@@ -135,8 +135,7 @@ if [ -z "$LATEST_TTL" ]; then
 fi
 
 if [ -z "$LATEST_TTL" ]; then
-  echo "[ERROR] No successful spreadsheets_asserted.ttl found under $ROOT" >&2
-  echo "Hint: run merge_validation successfully (and ideally write _SUCCESS at the end)." >&2
+  echo "[ERROR] No spreadsheets_asserted.ttl found under $ROOT" >&2
   ls -lah "$ROOT" | sed -n '1,200p' >&2 || true
   exit 1
 fi
@@ -158,9 +157,135 @@ python "$REPO_DIR/scripts/fetch_zenodo.py" \\
 
 test -s "$OUT_DIR/datasets_urls.csv"
 test -d "$OUT_DIR/harvested"
-
-
 """,
     )
 
-    init_run_dir >> fetch_scripts >> harvester_zenodo
+    load_zenodo_to_virtuoso = BashOperator(
+    task_id="load_zenodo_to_virtuoso",
+    bash_command=r"""
+set -eEuo pipefail
+IFS=$'\n\t'
+
+RUN_DIR="{{ var.value.sharedfs }}/runs/harvester_zenodo/{{ dag_run.run_id | replace(':', '_') | replace('+', '_') | replace('/', '_') }}"
+
+# Prefer the new location:
+TTL="$RUN_DIR/zenodo.ttl"
+
+echo "[INFO] RUN_DIR=$RUN_DIR"
+echo "[INFO] Expect TTL at: $TTL"
+echo "[INFO] Listing $RUN_DIR:"
+ls -lah "$RUN_DIR" || true
+echo "[INFO] Listing $RUN_DIR:"
+ls -lah "$RUN_DIR" || true
+
+# If not found there, fall back to old location:
+if [ ! -s "$TTL" ] && [ -s "$RUN_DIR/zenodo.ttl" ]; then
+  echo "[WARN] TTL not found in data/zenodo; using legacy path $RUN_DIR/zenodo.ttl"
+  TTL="$RUN_DIR/zenodo.ttl"
+fi
+
+# Now enforce existence
+test -s "$TTL"
+
+GRAPH="https://purls.helmholtz-metadaten.de/msekg/harvester_zenodo/{{ dag_run.run_id | replace(':', '_') | replace('+', '_') | replace('/', '_') }}"
+export TTL_FILE="$TTL"
+export GRAPH_VAL="$GRAPH"
+
+VCRUD="{{ var.value.get('virtuoso_crud', '') }}"
+VSPARQL="{{ var.value.get('virtuoso_sparql', '') }}"
+VUSER="{{ var.value.get('virtuoso_user', '') }}"
+VPASS="{{ var.value.get('virtuoso_pass', '') }}"
+
+export VIRTUOSO_CRUD="${VCRUD:-${VIRTUOSO_CRUD:-}}"
+export VIRTUOSO_SPARQL="${VSPARQL:-${VIRTUOSO_SPARQL:-}}"
+export VIRTUOSO_USER="${VUSER:-${VIRTUOSO_USER:-}}"
+export VIRTUOSO_PASS="${VPASS:-${VIRTUOSO_PASS:-}}"
+
+test -n "$VIRTUOSO_CRUD"
+test -n "$VIRTUOSO_SPARQL"
+test -n "$VIRTUOSO_USER"
+test -n "$VIRTUOSO_PASS"
+
+export VIRTUOSO_DELETE_FIRST="{{ var.value.get('virtuoso_delete_first', '0') }}"
+export VIRTUOSO_CHUNK_BYTES="{{ var.value.get('virtuoso_chunk_bytes', '5242880') }}"
+export VIRTUOSO_RETRY="{{ var.value.get('virtuoso_retry', '5') }}"
+
+python3 - <<'PY'
+import os, time
+import requests
+from requests.auth import HTTPDigestAuth
+
+ttl_path = os.environ["TTL_FILE"]
+graph = os.environ["GRAPH_VAL"]
+
+endpoint = os.environ["VIRTUOSO_SPARQL"].rstrip("/")
+endpoint_crud = os.environ["VIRTUOSO_CRUD"].rstrip("/")
+username = os.environ["VIRTUOSO_USER"]
+password = os.environ["VIRTUOSO_PASS"]
+
+retry = int(os.environ.get("VIRTUOSO_RETRY", "5"))
+chunk_bytes = int(os.environ.get("VIRTUOSO_CHUNK_BYTES", "5242880"))
+delete_first = os.environ.get("VIRTUOSO_DELETE_FIRST", "0") == "1"
+
+def delete_graph(g: str):
+    api_url = (
+        endpoint
+        + "?default-graph-uri=&query=drop+silent+graph+%3CGGGGG%3E+&format=text%2Fhtml&timeout=0&signal_void=on"
+    ).replace("GGGGG", g)
+    last = None
+    for _ in range(retry):
+        try:
+            last = requests.get(api_url, auth=HTTPDigestAuth(username, password), timeout=60)
+            if last.status_code == 200:
+                return
+        except Exception:
+            pass
+        time.sleep(2)
+    raise RuntimeError(f"deleteGraph failed: {last.status_code if last else 'no response'} {last.text if last else ''}")
+
+def post_chunk(g: str, data: bytes):
+    api_url = endpoint_crud + "?graph=" + g
+    headers = {"Content-Type": "text/turtle"}
+    last_exc = None
+    for attempt in range(1, retry + 1):
+        try:
+            r = requests.post(
+                api_url,
+                data=data,
+                headers=headers,
+                auth=HTTPDigestAuth(username, password),
+                timeout=(10, 300),  # (connect timeout, read timeout)
+                verify=os.environ.get("VIRTUOSO_VERIFY_TLS", "1") == "1",
+            )
+            if r.status_code in (200, 201, 204):
+                return
+            raise RuntimeError(f"HTTP {r.status_code}: {r.text[:500]}")
+        except Exception as e:
+            last_exc = e
+            print(f"[Virtuoso] POST attempt {attempt}/{retry} failed: {type(e).__name__}: {e}", flush=True)
+            time.sleep(2)
+    raise RuntimeError(f"storeDataToGraph failed: {type(last_exc).__name__}: {last_exc}")
+
+def stream_file(path: str, chunk: int):
+    with open(path, "rb") as f:
+        while True:
+            b = f.read(chunk)
+            if not b:
+                break
+            yield b
+
+print(f"Virtuoso load: {ttl_path} -> <{graph}>")
+
+if delete_first:
+    delete_graph(graph)
+
+for chunk in stream_file(ttl_path, chunk_bytes):
+    post_chunk(graph, chunk)
+
+print("Virtuoso load complete")
+PY
+""",
+)
+
+
+    init_run_dir >> fetch_scripts >> harvester_zenodo >> load_zenodo_to_virtuoso
