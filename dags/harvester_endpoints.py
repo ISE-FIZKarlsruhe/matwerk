@@ -168,6 +168,123 @@ echo "Done."
 ls -lah "$OUT_DIR" | sed -n '1,200p'
 """,
 )
+    load_endpoints_to_virtuoso = BashOperator(
+    task_id="load_endpoints_to_virtuoso",
+    bash_command=r"""
+set -eEuo pipefail
+IFS=$'\n\t'
+
+RUN_DIR="{{ var.value.sharedfs }}/runs/harvester_endpoints/{{ dag_run.run_id | replace(':', '_') | replace('+', '_') | replace('/', '_') }}"
+
+# This DAG writes outputs directly into RUN_DIR (per your current file)
+TTL="$RUN_DIR/dataset_stats.ttl"
+
+echo "[INFO] RUN_DIR=$RUN_DIR"
+echo "[INFO] Expect TTL at: $TTL"
+ls -lah "$RUN_DIR" || true
+
+test -s "$TTL"
+
+GRAPH="https://purls.helmholtz-metadaten.de/msekg/harvester_endpoints/{{ dag_run.run_id | replace(':', '_') | replace('+', '_') | replace('/', '_') }}"
+export TTL_FILE="$TTL"
+export GRAPH_VAL="$GRAPH"
+
+VCRUD="{{ var.value.get('virtuoso_crud', '') }}"
+VSPARQL="{{ var.value.get('virtuoso_sparql', '') }}"
+VUSER="{{ var.value.get('virtuoso_user', '') }}"
+VPASS="{{ var.value.get('virtuoso_pass', '') }}"
+
+export VIRTUOSO_CRUD="${VCRUD:-${VIRTUOSO_CRUD:-}}"
+export VIRTUOSO_SPARQL="${VSPARQL:-${VIRTUOSO_SPARQL:-}}"
+export VIRTUOSO_USER="${VUSER:-${VIRTUOSO_USER:-}}"
+export VIRTUOSO_PASS="${VPASS:-${VIRTUOSO_PASS:-}}"
+
+test -n "$VIRTUOSO_CRUD"
+test -n "$VIRTUOSO_SPARQL"
+test -n "$VIRTUOSO_USER"
+test -n "$VIRTUOSO_PASS"
+
+export VIRTUOSO_DELETE_FIRST="{{ var.value.get('virtuoso_delete_first', '0') }}"
+export VIRTUOSO_CHUNK_BYTES="{{ var.value.get('virtuoso_chunk_bytes', '5242880') }}"
+export VIRTUOSO_RETRY="{{ var.value.get('virtuoso_retry', '5') }}"
+
+python3 - <<'PY'
+import os, time
+import requests
+from requests.auth import HTTPDigestAuth
+
+ttl_path = os.environ["TTL_FILE"]
+graph = os.environ["GRAPH_VAL"]
+
+endpoint = os.environ["VIRTUOSO_SPARQL"].rstrip("/")
+endpoint_crud = os.environ["VIRTUOSO_CRUD"].rstrip("/")
+username = os.environ["VIRTUOSO_USER"]
+password = os.environ["VIRTUOSO_PASS"]
+
+retry = int(os.environ.get("VIRTUOSO_RETRY", "5"))
+chunk_bytes = int(os.environ.get("VIRTUOSO_CHUNK_BYTES", "5242880"))
+delete_first = os.environ.get("VIRTUOSO_DELETE_FIRST", "0") == "1"
+
+def delete_graph(g: str):
+    api_url = (
+        endpoint
+        + "?default-graph-uri=&query=drop+silent+graph+%3CGGGGG%3E+&format=text%2Fhtml&timeout=0&signal_void=on"
+    ).replace("GGGGG", g)
+    last = None
+    for _ in range(retry):
+        try:
+            last = requests.get(api_url, auth=HTTPDigestAuth(username, password), timeout=60)
+            if last.status_code == 200:
+                return
+        except Exception:
+            pass
+        time.sleep(2)
+    raise RuntimeError(f"deleteGraph failed: {last.status_code if last else 'no response'} {last.text if last else ''}")
+
+def post_chunk(g: str, data: bytes):
+    api_url = endpoint_crud + "?graph=" + g
+    headers = {"Content-Type": "text/turtle"}
+    last_exc = None
+    for attempt in range(1, retry + 1):
+        try:
+            r = requests.post(
+                api_url,
+                data=data,
+                headers=headers,
+                auth=HTTPDigestAuth(username, password),
+                timeout=(10, 300),
+                verify=os.environ.get("VIRTUOSO_VERIFY_TLS", "1") == "1",
+            )
+            if r.status_code in (200, 201, 204):
+                return
+            raise RuntimeError(f"HTTP {r.status_code}: {r.text[:500]}")
+        except Exception as e:
+            last_exc = e
+            print(f"[Virtuoso] POST attempt {attempt}/{retry} failed: {type(e).__name__}: {e}", flush=True)
+            time.sleep(2)
+    raise RuntimeError(f"storeDataToGraph failed: {type(last_exc).__name__}: {last_exc}")
+
+def stream_file(path: str, chunk: int):
+    with open(path, "rb") as f:
+        while True:
+            b = f.read(chunk)
+            if not b:
+                break
+            yield b
+
+print(f"Virtuoso load: {ttl_path} -> <{graph}>")
+
+if delete_first:
+    delete_graph(graph)
+
+for chunk in stream_file(ttl_path, chunk_bytes):
+    post_chunk(graph, chunk)
+
+print("Virtuoso load complete")
+PY
+""",
+)
 
 
-    init_run_dir >> fetch_scripts >> harvester_endpoints
+    init_run_dir >> fetch_scripts >> harvester_endpoints >> load_endpoints_to_virtuoso
+
