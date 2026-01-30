@@ -448,67 +448,6 @@ EOF
         mem_limit="2g",
         cpus=1.0,
     )
-    
-    bulk_load_to_virtuoso = DockerOperator(
-task_id="bulk_load_to_virtuoso",
-image=VIRTUOSO_IMAGE,
-mounts=VIRTUOSO_LOADER_MOUNTS,
-working_dir="/",
-auto_remove="success",
-mount_tmp_dir=False,
-network_mode=COMPOSE_NETWORK,
-environment=ENV,
-force_pull=False,
-
-# IMPORTANT: override Virtuoso image entrypoint so bash runs
-entrypoint=["bash", "-lc"],
-
-# IMPORTANT: do NOT use f-string here (SPARQL uses { } )
-command=r"""
-set -eEuo pipefail
-IFS=$'\n\t'
-set -x
-
-DATA_TTL="__RUN_DIR__/data/spreadsheets_asserted.ttl"
-PROV_TTL="__RUN_DIR__/data/spreadsheets_provenance.ttl"
-GRAPH_FILE="__RUN_DIR__/data/spreadsheets_graph_iri.txt"
-REG_GRAPH="${MSEKG_REGISTRY_GRAPH}"
-
-test -s "$DATA_TTL"
-test -s "$PROV_TTL"
-test -s "$GRAPH_FILE"
-
-G="$(cat "$GRAPH_FILE")"
-echo "Data graph: $G"
-echo "Registry graph: $REG_GRAPH"
-
-LOAD_DIR="/database/airflow/kg_spreadsheets_asserted/__RUN_ID_SAFE__"
-mkdir -p "$LOAD_DIR"
-
-cp -f "$DATA_TTL" "$LOAD_DIR/spreadsheets_asserted.ttl"
-cp -f "$PROV_TTL" "$LOAD_DIR/spreadsheets_provenance.ttl"
-chmod 0644 "$LOAD_DIR/"*.ttl
-
-# Clear + load (idempotent on retries)
-isql-vt "virtuoso:1111" "$TRIPLESTORE_USER" "$TRIPLESTORE_PASSWORD" <<SQL
-SPARQL CLEAR GRAPH <$G>;
-SPARQL CLEAR GRAPH <$REG_GRAPH>;
-
-ld_dir('$LOAD_DIR', 'spreadsheets_asserted.ttl', '$G');
-ld_dir('$LOAD_DIR', 'spreadsheets_provenance.ttl', '$REG_GRAPH');
-
-rdf_loader_run();
-checkpoint;
-SQL
-
-# Verify: count triples in data graph
-isql-vt "virtuoso:1111" "$TRIPLESTORE_USER" "$TRIPLESTORE_PASSWORD" <<SQL
-SPARQL SELECT (COUNT(*) AS ?triples) WHERE { GRAPH <$G> { ?s ?p ?o } };
-SQL
-
-echo "Bulk load finished."
-""".replace("__RUN_DIR__", RUN_DIR).replace("__RUN_ID_SAFE__", RUN_ID_SAFE),
-)
 
 
     init_run_dir >> download_ontology_and_tsvs >> build_components >> merge_and_upload
@@ -518,6 +457,6 @@ echo "Bulk load finished."
     merge_and_upload >> shacl_validate
 
     # Gate waits for both
-    [verify_sparql, shacl_validate] >> final_consistency_gate >> bulk_load_to_virtuoso >> publish
+    [verify_sparql, shacl_validate] >> final_consistency_gate >> publish
 
 
