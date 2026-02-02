@@ -9,8 +9,8 @@ from airflow.providers.standard.operators.bash import BashOperator
 """
 Airflow DAG: merge_validation
 
-Merges all component OWLs from the latest successful process_spreadsheets run,
-converts to spreadsheets_asserted.ttl, then runs SHACL + SPARQL validations and gates the run.
+Merges all component OWLs from the latest successful process_spreadsheets run 
+(spreadsheets_asserted.ttl), then runs SHACL + SPARQL validations and gates the run.
 
 Outputs:
   {{ var.value.sharedfs }}/runs/merge_validation/<run_id>/
@@ -21,7 +21,6 @@ Outputs:
 """
 
 OUT_BASENAME = "spreadsheets_asserted"
-OUT_OWL = f"{OUT_BASENAME}_NotReasoned.owl"
 OUT_TTL = f"{OUT_BASENAME}.ttl"
 
 RUN_ID_SAFE = "{{ dag_run.run_id | replace(':', '_') | replace('+', '_') | replace('/', '_') }}"
@@ -30,13 +29,14 @@ COMPONENTS_DIR = RUN_DIR + "/components"
 VALIDATION_DIR = RUN_DIR + "/validation"
 SHAPES_DIR = RUN_DIR + "/_shapes"  # cache shapes per-run
 
-# NOTE: you said process_spreadsheets writes flat here:
 PROCESS_RUNS_ROOT = "{{ var.value.sharedfs }}/runs/spreadsheet_asserted"
 
 SHAPES_REPO = "https://github.com/ISE-FIZKarlsruhe/matwerk"
 SHAPES_REF = "main"
 SHAPES_PATH_IN_REPO = "shapes"
 REQUIRED_ASSETS = [f"shape{i}.ttl" for i in (1, 2, 3, 4)] + ["verify1.sparql"]
+
+HERMIT_REPORT = "inconsistency_hermit.md"
 
 
 @dag(
@@ -206,17 +206,76 @@ ls -1 "$COMP"/*.owl >/dev/null 2>&1 || {{
 echo "Merging OWL components from $COMP"
 {{{{ var.value.robotcmd }}}} merge --include-annotations true \
   --inputs "$COMP/*.owl" \
-  --output "$OUT/{OUT_OWL}"
-
-echo "Convert merged OWL to Turtle"
-{{{{ var.value.robotcmd }}}} convert \
-  --input "$OUT/{OUT_OWL}" \
-  --format ttl \
   --output "$OUT/{OUT_TTL}"
 
 test -s "$OUT/{OUT_TTL}"
 """,
     )
+
+    hermit_consistency = BashOperator(
+    task_id="hermit_consistency",
+    bash_command=rf"""
+set -euo pipefail
+IFS=$'\n\t'
+
+OUT="{RUN_DIR}"
+VDIR="{VALIDATION_DIR}"
+TTL="$OUT/{OUT_TTL}"
+REPORT="$VDIR/{HERMIT_REPORT}"
+
+test -s "$TTL"
+
+TMPDIR="$(mktemp -d)"
+trap 'rm -rf "$TMPDIR"' EXIT
+
+# First: reasoner check (fast signal; non-zero means issues like inconsistency/unsatisfiable)
+if {{{{ var.value.robotcmd }}}} reason --reasoner hermit --input "$TTL" > "$TMPDIR/reason.log" 2>&1; then
+  cat > "$REPORT" <<'MD'
+# HermiT consistency check
+
+Status: CONSISTENT
+
+## robot reason output
+MD
+  echo '```' >> "$REPORT"
+  sed -n '1,200p' "$TMPDIR/reason.log" >> "$REPORT"
+  echo '```' >> "$REPORT"
+else
+  cat > "$REPORT" <<'MD'
+# HermiT consistency check
+
+Status: INCONSISTENT
+
+## robot reason output
+MD
+  echo '```' >> "$REPORT"
+  sed -n '1,200p' "$TMPDIR/reason.log" >> "$REPORT"
+  echo '```' >> "$REPORT"
+
+  echo "" >> "$REPORT"
+  echo "## Explanation (robot explain -M inconsistency)" >> "$REPORT"
+  echo "" >> "$REPORT"
+
+  EXPL="$TMPDIR/explain.md"
+  # Try to generate an explanation; do not fail the task here—let the Python gate decide.
+  if ! {{{{ var.value.robotcmd }}}} explain --reasoner hermit --input "$TTL" -M inconsistency --explanation "$EXPL" \
+      > "$TMPDIR/explain.log" 2>&1; then
+    echo "_robot explain returned non-zero; log excerpt:_ " >> "$REPORT"
+    echo '```' >> "$REPORT"
+    sed -n '1,200p' "$TMPDIR/explain.log" >> "$REPORT"
+    echo '```' >> "$REPORT"
+  fi
+
+  if [ -s "$EXPL" ]; then
+    cat "$EXPL" >> "$REPORT"
+  else
+    echo "_No explanation produced._" >> "$REPORT"
+  fi
+fi
+
+test -s "$REPORT"
+""",
+)
 
     verify_sparql = BashOperator(
         task_id="verify_sparql",
@@ -266,10 +325,21 @@ done
 
     @task()
     def final_consistency_check():
+        from airflow.operators.python import get_current_context
+
+        ctx = get_current_context()
+        run_id = ctx["dag_run"].run_id
+        run_id_safe = run_id.replace(":", "_").replace("+", "_").replace("/", "_")
+
+        sharedfs = Variable.get("sharedfs")
+        run_dir = os.path.join(sharedfs, "runs", "merge_validation", run_id_safe)
+        validation_dir = os.path.join(run_dir, "validation")
+
         problems: list[str] = []
 
+        # SHACL checks
         for i in (1, 2, 3, 4):
-            p = os.path.join(VALIDATION_DIR, f"shape{i}.md")
+            p = os.path.join(validation_dir, f"shape{i}.md")
             if not os.path.exists(p):
                 problems.append(f"Missing SHACL output: {p}")
                 continue
@@ -277,7 +347,8 @@ done
             if "Conforms: True" not in txt:
                 problems.append(f"SHACL non-conformance or error in shape{i} (see {p})")
 
-        vp = os.path.join(VALIDATION_DIR, "verify1.md")
+        # SPARQL verify checks
+        vp = os.path.join(validation_dir, "verify1.md")
         if not os.path.exists(vp):
             problems.append(f"Missing SPARQL verify output: {vp}")
         else:
@@ -285,6 +356,15 @@ done
             bad_markers = ["fail", "violation", "violations", "error", "exception"]
             if any(m in vtxt for m in bad_markers):
                 problems.append(f"SPARQL verification indicates failures (see {vp})")
+
+        # HermiT consistency gate
+        hp = os.path.join(validation_dir, "inconsistency_hermit.md")
+        if not os.path.exists(hp):
+            problems.append(f"Missing HermiT consistency report: {hp}")
+        else:
+            htxt = open(hp, "r", encoding="utf-8", errors="replace").read()
+            if "Status: CONSISTENT" not in htxt:
+                problems.append(f"Ontology not consistent according to HermiT (see {hp})")
 
         if problems:
             raise AirflowFailException("Final consistency gate failed:\n- " + "\n- ".join(problems))
@@ -407,10 +487,13 @@ PY
 
     inputs_ok = assert_inputs()
     inputs_ok >> init_run_dir >> fetch_shapes_from_github >> stage_latest_components >> merge_and_convert
-    merge_and_convert >> [verify_sparql, shacl_validate]
+
+    merge_and_convert >> [verify_sparql, shacl_validate, hermit_consistency]
+
     gate = final_consistency_check()
-    [verify_sparql, shacl_validate] >> gate
+    [verify_sparql, shacl_validate, hermit_consistency] >> gate
     gate >> load_merge_to_virtuoso
+
 
 
 
