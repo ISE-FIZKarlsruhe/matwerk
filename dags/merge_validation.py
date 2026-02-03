@@ -18,16 +18,6 @@ DAG_ID = "merge_validation"
 OUT_TTL = "spreadsheets_asserted.ttl"
 GRAPH_BASE = "https://purls.helmholtz-metadaten.de/msekg/merge_validation/"
 
-
-def github_token(conn_id: str) -> str | None:
-    try:
-        c = BaseHook.get_connection(conn_id)
-    except Exception:
-        return None
-    t = c.password or (c.extra_dejson.get("token") if c.extra_dejson else None)
-    return t or None
-
-
 @dag(
     schedule=None,
     catchup=False,
@@ -64,14 +54,7 @@ def merge_validation():
         shapes_dir = os.path.join(data_dir, "_shapes")
 
         api = "https://api.github.com/repos/ISE-FIZKarlsruhe/matwerk/contents/shapes?ref=main"
-
-        # via Connection
-        tok = github_token("matwerk-github")
-        headers = {"Accept": "application/vnd.github+json"}
-        if tok:
-            headers["Authorization"] = f"Bearer {tok}"
-
-        items = requests.get(api, headers=headers, timeout=60).json()
+        items = requests.get(api).json()
 
         for it in items:
             if it.get("type") != "file":
@@ -81,7 +64,7 @@ def merge_validation():
             if not name or not dl:
                 continue
             out = os.path.join(shapes_dir, name)
-            r = requests.get(dl, headers=headers if tok else None, timeout=60)
+            r = requests.get(dl)
             r.raise_for_status()
             with open(out, "wb") as f:
                 f.write(r.content)
