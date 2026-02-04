@@ -42,6 +42,10 @@ def reason():
         in_path = os.path.join(source_run_dir, IN_FILE)
         out_path = os.path.join(DATA_DIR, OUT_FILE)
 
+        # the reasoner will not merge the inferences with in original ontology, 
+        # it just creates an rdf/owl file containing the inferred axioms.
+        # (we later want to put the inferences in a separate named graph)
+
         cmd = (f"{REASONER} --input '{in_path}' --output {out_path}")
 
         return cmd.replace(DATA_DIR, XCOM_DATADIR)
@@ -51,7 +55,7 @@ def reason():
         bash_command=reasonCmdTemplate()
     )
 
-        @task
+    @task
     def mark_reason_success(ti=None):
         run_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
         out_path = os.path.join(run_dir, OUT_FILE)
