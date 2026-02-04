@@ -195,6 +195,7 @@ def validation_checks():
             if not conforms:
                 print(f"---- SHACL report for {shp_name} ----")
                 print("\n".join((results_text or "").splitlines()))
+                any_bad = True
 
         summary_path = os.path.join(out_dir, "summary.txt")
         with open(summary_path, "w", encoding="utf-8") as f:
