@@ -11,8 +11,8 @@ DAG_ID = "reason-example"
 LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "last_sucessfull_merge_run"
 LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "last_sucessfull_reason_run"
 
-OUT_TTL = "spreadsheets_asserted.ttl"
-OUT_REASONED_TTL = "spreadsheets_inferences.owl"
+IN_FILE = "spreadsheets_asserted.ttl"
+OUT_FILE = "spreadsheets_inferences.owl"
 
 @dag(
     schedule=None,
@@ -33,21 +33,21 @@ def reason():
         ti.xcom_push(key="datadir", value=run_dir)
 
     def reasonCmdTemplate() -> str:
-        REASONER = "{{ var.value.lletinatorcmd }}"
+        REASONER = "{{ var.value.sunletcmd }}"
         DATA_DIR = "DATA_DIR"
         XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
         source_run_dir = Variable.get(LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME)
 
-        in_ttl = os.path.join(source_run_dir, OUT_TTL)
-        out_ttl = os.path.join(DATA_DIR, OUT_REASONED_TTL)
+        in_path = os.path.join(source_run_dir, IN_FILE)
+        out_path = os.path.join(DATA_DIR, OUT_FILE)
 
-        cmd = (f"{REASONER} --input '{in_ttl}' --output {in_ttl}")
+        cmd = (f"{REASONER} --input '{in_path}' --output {out_path}")
 
         return cmd.replace(DATA_DIR, XCOM_DATADIR)
 
     reason = BashOperator(
-        task_id="robot_reason",
+        task_id="sunlet_reasoning",
         bash_command=reasonCmdTemplate()
     )
 
