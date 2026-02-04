@@ -12,9 +12,9 @@ ex:OntoVariantShape
     a sh:NodeShape ;
     sh:targetClass <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000024> ;    # nfdi:ontology_variant
     sh:property [
-        sh:path <http://purl.obolibrary.org/obo/BFO_0000176> ;       # bfo:continuant part of
+        sh:path <http://purl.obolibrary.org/obo/BFO_0000050> ;       # bfo: part of
         sh:minCount 1 ;
 		sh:class <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023>;
-        sh:message "an 'ontology variant' (NFDI_0000024) must always 'continuant part of' (BFO_0000176) an 'ontology' (NFDI_0000023)"
+        sh:message "an 'ontology variant' (NFDI_0000024) must always 'part of' (BFO_0000050) an 'ontology' (NFDI_0000023)"
     ] ;
     .
