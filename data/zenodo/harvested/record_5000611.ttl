@@ -60,8 +60,8 @@
     dcterms:source <https://doi.org/10.5061/dryad.ttdz08kt4> ;
     prov:wasDerivedFrom <https://doi.org/10.5061/dryad.ttdz08kt4> .
 
-<https://purls.helmholtz-metadaten.de/msekg/5ec146a76f264f14a656e0c14b31b8f7> a prov:Activity ;
-    prov:startedAtTime "2026-01-30T17:36:34+00:00"^^xsd:dateTime .
+<https://purls.helmholtz-metadaten.de/msekg/d3ad59dfb077410c9907b9b93356c940> a prov:Activity ;
+    prov:startedAtTime "2026-02-04T12:36:26+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1759767937741> rdfs:label "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" ;
     obo:OBI_0002135 "Automated analysis of scanning electron microscopic images for assessment of hair surface damage" .

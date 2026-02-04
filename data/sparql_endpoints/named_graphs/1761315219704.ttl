@@ -2573,6 +2573,21 @@
 <http://orkg.org/orkg/class/C126044> a owl:Class ;
     rdfs:label "absolute error"^^xsd:string .
 
+<http://orkg.org/orkg/class/C126045> a owl:Class ;
+    rdfs:label "Francis turbine"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126046> a owl:Class ;
+    rdfs:label "plain text"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126047> a owl:Class ;
+    rdfs:label "plaintext"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126048> a owl:Class ;
+    rdfs:label "development of new frameworks for analysing a specific parameter in existing software application (class)"^^xsd:string .
+
+<http://orkg.org/orkg/class/C126049> a owl:Class ;
+    rdfs:label "residual neural network"^^xsd:string .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string .
 

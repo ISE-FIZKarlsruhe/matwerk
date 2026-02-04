@@ -3485,6 +3485,34 @@ Atopic dermatitis is an evolutionary sequela of vitamin D3 deficiency in norther
     ns1:description "magnitude of the difference between the exact value and the measured or approximate value"^^xsd:string ;
     owl:equivalentClass <https://www.wikidata.org/entity/Q3057447> .
 
+<http://orkg.org/orkg/class/C126045> a owl:Class ;
+    rdfs:label "Francis turbine"^^xsd:string ;
+    ns1:description "type of water turbine"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q217817> .
+
+<http://orkg.org/orkg/class/C126046> a owl:Class ;
+    rdfs:label "plain text"^^xsd:string ;
+    ns1:description "computer data consisting only of unformatted characters of readable material"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1145976> .
+
+<http://orkg.org/orkg/class/C126047> a owl:Class ;
+    rdfs:label "plaintext"^^xsd:string ;
+    ns1:description "unencrypted information, as opposed to information encrypted for storage or transmission; usually means unencrypted information pending input into cryptographic algorithms"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q1162538> .
+
+<http://orkg.org/orkg/class/C126048> a owl:Class ;
+    rdfs:label "development of new frameworks for analysing a specific parameter in existing software application (class)"^^xsd:string ;
+    ns1:description """the statement covers all methods for analysing specific parameters in exisiting software applications 
+
+This is a Rosetta Statement class. Every Rosetta Stone Statement class has a template associated that should be used when adding a statement of this type to the ORKG."""^^xsd:string ;
+    ns1:exampleOfUsage "a FRAMEWORK was developed for ANALYSING the LEVEL OF LEARNING CONTENT INTEGRATION in SERIOUS GAMES"^^xsd:string ;
+    rdfs:subClassOf <http://orkg.org/orkg/class/RosettaStoneStatement> .
+
+<http://orkg.org/orkg/class/C126049> a owl:Class ;
+    rdfs:label "residual neural network"^^xsd:string ;
+    ns1:description "type of artificial neural network"^^xsd:string ;
+    owl:equivalentClass <https://www.wikidata.org/entity/Q43744058> .
+
 <http://orkg.org/orkg/class/C13000> a owl:Class ;
     rdfs:label "Stages"^^xsd:string ;
     owl:equivalentClass <http://purl.obolibrary.org/obo/ZFS_0100000> .

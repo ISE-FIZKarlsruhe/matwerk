@@ -17,8 +17,8 @@
     dcterms:source <https://doi.org/10.5281/zenodo.13820070> ;
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.13820070> .
 
-<https://purls.helmholtz-metadaten.de/msekg/4b6340bf0ff948d195ea8030fb9d4da0> a prov:Activity ;
-    prov:startedAtTime "2026-01-30T17:35:21+00:00"^^xsd:dateTime .
+<https://purls.helmholtz-metadaten.de/msekg/8a6688e2992f4d9db0b0c050e4ba0cc9> a prov:Activity ;
+    prov:startedAtTime "2026-02-04T12:35:26+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1758983993116> rdfs:label "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" ;
     obo:OBI_0002135 "NFDI-MatWerk/IUC02 Data schema for creep data of Ni-based superalloys including a comprehensive  documentation of test results and metadata" .

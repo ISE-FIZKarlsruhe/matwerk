@@ -502,8 +502,8 @@
     dcterms:source <https://doi.org/10.5281/zenodo.17846436> ;
     prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.17846436> .
 
-<https://purls.helmholtz-metadaten.de/msekg/ccee5915019f482faedb44b28adf9a5f> a prov:Activity ;
-    prov:startedAtTime "2026-01-30T17:35:03+00:00"^^xsd:dateTime .
+<https://purls.helmholtz-metadaten.de/msekg/acb7034bd4b646eba4ff554dcae001ec> a prov:Activity ;
+    prov:startedAtTime "2026-02-04T12:35:07+00:00"^^xsd:dateTime .
 
 <https://purls.helmholtz-metadaten.de/msekg/1758983993018> rdfs:label "NFDI-MatWerk Renewal Proposal Part B-1",
         "NFDI-MatWerk Renewal Proposal Part B-1 updated version" ;
