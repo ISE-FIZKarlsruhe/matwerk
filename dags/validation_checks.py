@@ -144,15 +144,18 @@ def validation_checks():
 
         # One log per query file
         cmd = (
-            "set -euo pipefail\n"
             f"mkdir -p '{out_dir}'\n"
+            
             "{% for q in ti.xcom_pull(task_ids='fetch_shapes', key='sparql_files') %}\n"
-            f"echo 'Running ROBOT verify with: {os.path.join(DATA_DIR, '_shapes', '{{ q }}')}'\n"
+            f"LOG='{os.path.join(out_dir, '{{ q }}')}.log'\n"
+            
             f"{ROBOT} verify --input \"{merged_ttl}\" "
             f"--queries '{os.path.join(DATA_DIR, '_shapes', '{{ q }}')}' -vvv "
-            f"> '{os.path.join(out_dir, '{{ q }}')}.log' 2>&1\n"
+            f"> \"$LOG\" 2>&1 || (tail -n 120 \"$LOG\"; exit 1)\n"
+            
             "{% endfor %}\n"
         )
+
         return cmd.replace(DATA_DIR, XCOM_DATADIR)
 
     # -----------------------------
@@ -181,10 +184,6 @@ def validation_checks():
                 shacl_graph=shp,
                 data_graph_format="turtle",
                 shacl_graph_format="turtle",
-                inference="rdfs",
-                abort_on_error=False,
-                meta_shacl=False,
-                debug=False,
             )
 
             out_path = os.path.join(out_dir, f"{shp_name}.txt")
@@ -194,7 +193,8 @@ def validation_checks():
             summary_lines.append(f"{shp_name}: {'OK' if conforms else 'FAIL'}  (details: {out_path})")
 
             if not conforms:
-                any_bad = True
+                print(f"---- SHACL report for {shp_name} ----")
+                print("\n".join((results_text or "").splitlines()))
 
         summary_path = os.path.join(out_dir, "summary.txt")
         with open(summary_path, "w", encoding="utf-8") as f:
