@@ -27,35 +27,13 @@ def merge():
         ctx = get_current_context()
         run_id = ctx["dag_run"].run_id
 
-        data_dir = os.path.join(
-            Variable.get("sharedfs"),
-            "runs",
-            ctx["dag"].dag_id,
-            run_id,
-        )
+        data_dir = os.path.join(Variable.get("sharedfs"), "runs", ctx["dag"].dag_id, run_id,)
+        
         print("Creating directory for run:", data_dir)
-        os.makedirs(os.path.join(data_dir, "components"), exist_ok=True)
         ti.xcom_push(key="datadir", value=data_dir)
         ti.xcom_push(key="run_id", value=run_id)
+        ti.xcom_push(key="source_run_dir", value=Variable.get(SUCCESFULL_RUN_VARIABLE_NAME))
 
-    @task()
-    def stage_components(ti=None):
-        source_run_dir = Variable.get(SUCCESFULL_RUN_VARIABLE_NAME)
-
-        data_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
-        components_dir = os.path.join(data_dir, "components")
-
-        owls = glob(os.path.join(source_run_dir, "*.owl"))
-        component_names: list[str] = []
-        for f in owls:
-            base = os.path.basename(f)
-            name, _ = os.path.splitext(base)
-            component_names.append(name)
-            shutil.copyfile(f, os.path.join(components_dir, f"{name}.owl"))
-
-        print("Staged OWL components to:", components_dir)
-        print("Component names:", component_names)
-        ti.xcom_push(key="component_names", value=component_names)
 
     # -----------------------------
     # ROBOT command templates
@@ -63,16 +41,21 @@ def merge():
     def robotMergeCmdTemplate() -> str:
         ROBOT = "{{ var.value.robotcmd }}"
         DATA_DIR = "DATA_DIR"
+        SOURCE_DIR = "SOURCE_DIR"
+        
         XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
-
+        XCOM_SOURCEDIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="source_run_dir") }}'
+        
         ttl = os.path.join(DATA_DIR, OUT_TTL)
 
         cmd = (
             f"{ROBOT} merge --include-annotations true"
-            f" --inputs '{os.path.join(DATA_DIR, 'components', '*.owl')}'"
+            f" --inputs '{os.path.join('SOURCE_DIR', '*.owl')}'"
             f" --output '{ttl}'"
         )
-        return cmd.replace(DATA_DIR, XCOM_DATADIR)
+        cmd = cmd.replace(DATA_DIR, XCOM_DATADIR)
+        cmd = cmd.replace(SOURCE_DIR, XCOM_SOURCEDIR)
+        return cmd
 
     def robotHermitExplainCmdTemplate() -> str:
         ROBOT = "{{ var.value.robotcmd }}"
@@ -111,25 +94,14 @@ def merge():
     wait = EmptyOperator(task_id="wait_for_inputs")
 
     init = init_data_dir()
-    staged = stage_components()
 
-    init >> staged >> wait
+    init >> wait
 
-    robot_merge = BashOperator(
-        task_id="robot_merge_and_convert",
-        bash_command=robotMergeCmdTemplate(),
-    )
+    robot_merge = BashOperator(task_id="robot_merge_and_convert", bash_command=robotMergeCmdTemplate(),)
 
-    robot_hermit_explain = BashOperator(
-        task_id="robot_hermit_explain",
-        bash_command=robotHermitExplainCmdTemplate(),
-    )
+    robot_hermit_explain = BashOperator(task_id="robot_hermit_explain", bash_command=robotHermitExplainCmdTemplate(),)
 
-    robot_hermit_valid = PythonOperator(
-        task_id="robot_hermit_valid",
-        python_callable=isvalid,
-        op_kwargs={"filename": "hermit_inconsistency.md"},
-    )
+    robot_hermit_valid = PythonOperator(task_id="robot_hermit_valid", python_callable=isvalid, op_kwargs={"filename": "hermit_inconsistency.md"},)
 
     done = mark_merge_successful()
 
