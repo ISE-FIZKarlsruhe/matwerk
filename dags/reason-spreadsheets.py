@@ -37,7 +37,7 @@ def reason():
         DATA_DIR = "DATA_DIR"
         XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
-        source_run_dir = Variable.get(LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME)
+        source_run_dir = "{{ var.value." + LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME + " }}"
 
         in_path = os.path.join(source_run_dir, IN_FILE)
         out_path = os.path.join(DATA_DIR, OUT_FILE)
