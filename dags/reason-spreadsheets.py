@@ -7,7 +7,7 @@ from airflow.exceptions import AirflowFailException
 from airflow.providers.standard.operators.bash import BashOperator
 
 
-DAG_ID = "reason-example"
+DAG_ID = "reason-spreadsheets"
 LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "last_sucessfull_merge_run"
 LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "last_sucessfull_reason_run"
 
@@ -51,6 +51,18 @@ def reason():
         bash_command=reasonCmdTemplate()
     )
 
-    init_data_dir() >> reason 
+        @task
+    def mark_reason_success(ti=None):
+        run_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
+        out_path = os.path.join(run_dir, OUT_FILE)
+
+        if not os.path.exists(out_path) or os.path.getsize(out_path) == 0:
+            raise AirflowFailException(f"Reasoned TTL missing/empty: {out_path}")
+
+        Variable.set(LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME, run_dir)
+        print(f"Set {LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME}={run_dir}")
+
+
+    init_data_dir() >> reason >> mark_reason_success()
 
 reason()
