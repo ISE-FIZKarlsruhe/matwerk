@@ -40,8 +40,17 @@ RUN chmod +x /app/robot-download.sh /app/robot-merge.sh \
  && test -s data/all_NotReasoned.ttl
 
 # endpoint fetch at build time
-RUN chmod +x /app/scripts/fetch_endpoints.py \
- && python /app/scripts/fetch_endpoints.py
+RUN set -eux; \
+    chmod +x /app/scripts/fetch_endpoints.py; \
+    mkdir -p /app/data/sparql_endpoints/named_graphs; \
+    python /app/scripts/fetch_endpoints.py \
+      --all-ttl /app/data/all_NotReasoned.ttl \
+      --mwo-owl /app/ontology/mwo-full.owl \
+      --state-json /app/data/sparql_endpoints/sparql_sources.json \
+      --summary-json /app/data/sparql_endpoints/sparql_sources_list.json \
+      --stats-ttl /app/data/sparql_endpoints/dataset_stats.ttl \
+      --named-graphs-dir /app/data/sparql_endpoints/named_graphs
+
 
 # reason the knowledge graph
 RUN chmod +x /app/robot-reaon.sh\
