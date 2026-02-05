@@ -9,32 +9,46 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix schema1: <http://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix stat: <https://purls.helmholtz-metadaten.de/msekg/stat/> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://purls.helmholtz-metadaten.de/msekg/17588917500551> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1759747764517>,
-        <https://purls.helmholtz-metadaten.de/msekg/1759747764518>,
-        <https://purls.helmholtz-metadaten.de/msekg/1759747764519> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/a772a1822f6ff2ead1fbe16a>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/c0b81c9d0ff80d6a022edc92>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/57b032b59f72c11673db524d> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17588918337771> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://sparql-nfdi-matwerk-02.web.vulcanus.otc.coscine.dev/> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://sparql-nfdi-matwerk-02.web.vulcanus.otc.coscine.dev/
+Counts:
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289021> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315165455>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315165456>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315165457> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/305659d788de6fe52ea6a92b>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/b2014840eb0f69e0c5d1234d>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/a4eb7563763ce40e119eebca> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064251> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/0071dc030a82fc54>,
         <https://purls.helmholtz-metadaten.de/msekg/0b6e660b78e40714>,
@@ -64,31 +78,110 @@
         rdfs:,
         owl:,
         <https://nfdi.fiz-karlsruhe.de/ontology/> ;
-    stat:numberOfClassesReusedFromMWO 18 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 1 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 15 .
+    rdfs:comment """SPARQL endpoint: https://ditrare.ise.fiz-karlsruhe.de/chemotion-kg/shmarql/
+Counts:
+- classes: 18
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 83497
+
+Vocabularies (namespaces observed):
+- total: 6
+  - http://purl.obolibrary.org/obo/
+  - http://purl.obolibrary.org/obo/chebi/
+  - http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  - http://www.w3.org/2000/01/rdf-schema#
+  - http://www.w3.org/2002/07/owl#
+  - https://nfdi.fiz-karlsruhe.de/ontology/
+
+Reused from MWO (heuristic):
+- classes: 18
+- objectProperties: 15
+- dataProperties: 1
+
+MWO classes reused: 18
+  - http://purl.obolibrary.org/obo/BFO_0000015
+  - http://purl.obolibrary.org/obo/IAO_0000003
+  - http://purl.obolibrary.org/obo/IAO_0000027
+  - http://purl.obolibrary.org/obo/IAO_0000028
+  - http://purl.obolibrary.org/obo/IAO_0000578
+  - http://purl.obolibrary.org/obo/IAO_0000708
+  - http://purl.obolibrary.org/obo/IAO_0020016
+  - http://purl.obolibrary.org/obo/IAO_0020017
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000015
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000115
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000215
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019
+
+MWO objectProperties reused: 15
+  - http://purl.obolibrary.org/obo/BFO_0000054
+  - http://purl.obolibrary.org/obo/BFO_0000055
+  - http://purl.obolibrary.org/obo/BFO_0000056
+  - http://purl.obolibrary.org/obo/BFO_0000057
+  - http://purl.obolibrary.org/obo/BFO_0000129
+  - http://purl.obolibrary.org/obo/BFO_0000178
+  - http://purl.obolibrary.org/obo/BFO_0000196
+  - http://purl.obolibrary.org/obo/BFO_0000197
+  - http://purl.obolibrary.org/obo/IAO_0000235
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001027
+
+MWO dataProperties reused: 1
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289031> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315234557>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315234558>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315234559> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/282eef4ab819f523c9dbf2a3>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/37248453b53bc539eb8129c2>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/42f0abd00524e6e9cb14bcf7> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064252> ;
     void:classes 26 ;
     void:entities 3723819 ;
     void:properties 141 ;
     void:sparqlEndpoint <https://data.gesis.org/gesiskg/sparql> ;
-    stat:numberOfClassesReusedFromMWO 7 ;
-    stat:numberOfDataProperties 116 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 25 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://data.gesis.org/gesiskg/sparql
+Counts:
+- classes: 26
+- objectProperties: 25
+- dataProperties: 116
+- propertiesTotal: 141
+- instances: 3723819
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 7
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 7
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000110
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000118
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001026
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001039
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890310> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315219704>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315219705>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315219706> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/3de4b686aed38c58cf33053f>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/0a3ac819123764180f5aeefb>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/9b404e2ddcff2d5b070916f0> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/176113440642511> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/00123ea5a97ba4d4>,
         <https://purls.helmholtz-metadaten.de/msekg/002505e95e10cef8>,
@@ -1081,6 +1174,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/7f51066579f3b579>,
         <https://purls.helmholtz-metadaten.de/msekg/7f60c210d8645f36>,
         <https://purls.helmholtz-metadaten.de/msekg/7f75aff77b5c57b2>,
+        <https://purls.helmholtz-metadaten.de/msekg/7fb53f2f83b46a14>,
         <https://purls.helmholtz-metadaten.de/msekg/7fce626a2c54c1b4>,
         <https://purls.helmholtz-metadaten.de/msekg/7ffbedeba377c5e1>,
         <https://purls.helmholtz-metadaten.de/msekg/8020b540c2699e6f>,
@@ -1423,6 +1517,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/ac25ae28891e980f>,
         <https://purls.helmholtz-metadaten.de/msekg/ac2e59b392a4df25>,
         <https://purls.helmholtz-metadaten.de/msekg/ac455e239985d628>,
+        <https://purls.helmholtz-metadaten.de/msekg/ac4d1ab4c250b25c>,
         <https://purls.helmholtz-metadaten.de/msekg/ac85d68dc0de3a45>,
         <https://purls.helmholtz-metadaten.de/msekg/ac8b633919e3643a>,
         <https://purls.helmholtz-metadaten.de/msekg/ac96146169abb70a>,
@@ -1460,6 +1555,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/b1626a862680cf21>,
         <https://purls.helmholtz-metadaten.de/msekg/b1678a02eece3e19>,
         <https://purls.helmholtz-metadaten.de/msekg/b17ee488ab6f8e24>,
+        <https://purls.helmholtz-metadaten.de/msekg/b1be602c012402da>,
         <https://purls.helmholtz-metadaten.de/msekg/b201d4b5505b090c>,
         <https://purls.helmholtz-metadaten.de/msekg/b21740970afc846d>,
         <https://purls.helmholtz-metadaten.de/msekg/b227c66b98e973ca>,
@@ -1966,6 +2062,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/f76360433a59962e>,
         <https://purls.helmholtz-metadaten.de/msekg/f79b2fd77b5fa63c>,
         <https://purls.helmholtz-metadaten.de/msekg/f7ace84ed5bbb6ef>,
+        <https://purls.helmholtz-metadaten.de/msekg/f7c13f100c159079>,
         <https://purls.helmholtz-metadaten.de/msekg/f7d723af60cbb25e>,
         <https://purls.helmholtz-metadaten.de/msekg/f8010683cc75c0f7>,
         <https://purls.helmholtz-metadaten.de/msekg/f8187e7875ae10d8>,
@@ -2031,7 +2128,7 @@
         <https://purls.helmholtz-metadaten.de/msekg/ffba162ececefc28>,
         <https://purls.helmholtz-metadaten.de/msekg/ffbe7ae88c460787> ;
     void:classes 2877 ;
-    void:entities 502301 ;
+    void:entities 502384 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://orkg.org/triplestore> ;
     void:vocabulary <http://orkg.org/orkg/class/>,
@@ -2043,92 +2140,197 @@
         rdfs:,
         owl:,
         <http://www.w3.org/ns/sparql-service-description#> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://orkg.org/triplestore
+Counts:
+- classes: 2877
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 502384
+
+Vocabularies (namespaces observed):
+- total: 9
+  - http://orkg.org/orkg/class/
+  - http://orkg.org/orkg/predicate/
+  - http://purl.org/dc/terms/
+  - http://www.openlinksw.com/schemas/DAV#
+  - http://www.openlinksw.com/schemas/virtrdf#
+  - http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  - http://www.w3.org/2000/01/rdf-schema#
+  - http://www.w3.org/2002/07/owl#
+  - http://www.w3.org/ns/sparql-service-description#
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890311> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316053473>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316053474>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316053475> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/34a16f5ae0bbc4d8f7a9cba0>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/e6db95ee99af07c3af9d90e5>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/e560d338ba61b59dcc37e25f> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506664> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://graph.nfdi4objects.net/sparql> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://graph.nfdi4objects.net/sparql
+Counts:
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890312> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316078426>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316078427>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316078428> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/a92cb0dd83300975319f2369>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/ae515fbb9124db3925056804>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/7e02879c7b90da3143efd4c9> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506665> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://query.mbi.kgi.uni-mannheim.de/> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://query.mbi.kgi.uni-mannheim.de/
+Counts:
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890313> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316097927>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316097928>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316097929> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/63e8399ea9f51f983c9f8669>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/23885f63c15832f0b5a92025>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/4efe6e7508ae0497a96ee1d7> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506666> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://lod.b3kat.de/doc/sparql-endpoint> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://lod.b3kat.de/doc/sparql-endpoint
+Counts:
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890314> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316117185>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316117186>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316117187> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/c048272563d3d8d83d63f695>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/8a502bbe74d26676bd4068e5>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/22771e1bda17e5cc13b4bf2f> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506667> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://slod.fiz-karlsruhe.de/sparql> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://slod.fiz-karlsruhe.de/sparql
+Counts:
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890315> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316667916>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316667917>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316667918> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/4642540eb90be12ae3756d60>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/57ee974dc029552d201a42e7>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/dcbd45d2dea5588d1dc7da02> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506668> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/31b6ca902205d044> ;
     void:classes 3 ;
     void:entities 121 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://data.gesis.org/claimskg/sparql> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://data.gesis.org/claimskg/sparql
+Counts:
+- classes: 3
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 121
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890316> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316687329>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316687330>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316687331> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/fa9752baf7dd0a088be15aaa>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/799fbdccf1238373b9352c60>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/7f803a627a770898d67d996e> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506669> ;
     void:classes 2 ;
     void:entities 0 ;
@@ -2138,7 +2340,7 @@
         <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#>,
         dcterms:,
         void:,
-        schema1:,
+        <http://schema.org/>,
         <http://www.openlinksw.com/schemas/DAV#>,
         <http://www.openlinksw.com/schemas/virtrdf#>,
         rdf:,
@@ -2149,16 +2351,47 @@
         dcat:,
         <http://www.w3.org/ns/sparql-service-description#>,
         foaf: ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://data.gesis.org/somesci/sparql
+Counts:
+- classes: 2
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 15
+  - http://data.gesis.org/somesci/
+  - http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#
+  - http://purl.org/dc/terms/
+  - http://rdfs.org/ns/void#
+  - http://schema.org/
+  - http://www.openlinksw.com/schemas/DAV#
+  - http://www.openlinksw.com/schemas/virtrdf#
+  - http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  - http://www.w3.org/2000/01/rdf-schema#
+  - http://www.w3.org/2002/07/owl#
+  - http://www.w3.org/2005/11/its/rdf#
+  - http://www.w3.org/TR/prov-o/#
+  - http://www.w3.org/ns/dcat#
+  - http://www.w3.org/ns/sparql-service-description#
+  - http://xmlns.com/foaf/0.1/
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/176113442890317> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316701163>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316701164>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316701165> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/7d69d59a19e99a16203f4a20>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/12a8d2a8d3d3cdf1939df91b>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/a4df4b1ddd0cd9c88e12a3a1> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506670> ;
     void:classes 2 ;
     void:entities 0 ;
@@ -2170,7 +2403,7 @@
         dc:,
         dcterms:,
         <http://purl.org/spar/datacite/>,
-        schema1:,
+        <http://schema.org/>,
         <http://www.openlinksw.com/schemas/DAV#>,
         <http://www.openlinksw.com/schemas/virtrdf#>,
         rdf:,
@@ -2178,76 +2411,218 @@
         owl:,
         <http://www.w3.org/2003/g/data-view#>,
         <http://www.w3.org/ns/sparql-service-description#> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 2 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 2 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://data.gesis.org/softwarekg/sparql
+Counts:
+- classes: 2
+- objectProperties: 2
+- dataProperties: 2
+- propertiesTotal: 4
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 14
+  - http://data.gesis.org/softwarekg/
+  - http://dbpedia.org/ontology/
+  - http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#
+  - http://purl.org/dc/elements/1.1/
+  - http://purl.org/dc/terms/
+  - http://purl.org/spar/datacite/
+  - http://schema.org/
+  - http://www.openlinksw.com/schemas/DAV#
+  - http://www.openlinksw.com/schemas/virtrdf#
+  - http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  - http://www.w3.org/2000/01/rdf-schema#
+  - http://www.w3.org/2002/07/owl#
+  - http://www.w3.org/2003/g/data-view#
+  - http://www.w3.org/ns/sparql-service-description#
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289032> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315340486>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315340487>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315340488> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/6ed90ac408979f6585054d57>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/2f2738e3e2611906c5402f13>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/edbd69e7a0dcfca8c529a57a> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064253> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://query.portal.mardi4nfdi.de/> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://query.portal.mardi4nfdi.de/
+Counts:
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289033> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315362950>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315362951>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315362952> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/1d815a876b4db4c344e613c8>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/5269149d2b1fe72a4d163bf9>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/ccfb3aa5cb9cb76d04266670> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064254> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://kg.nfdi4bioimage.de/#/dataset/N4BIKG/query> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://kg.nfdi4bioimage.de/#/dataset/N4BIKG/query
+Counts:
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289034> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315382077>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315382078>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315382079> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/f58ccf55bf5c8634ad271141>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/d8ddd8b1e9888c9f75650675>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/796bdb0298c0a64a45320191> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064255> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://search.nfdi4chem.de/sparql> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://search.nfdi4chem.de/sparql
+Counts:
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289035> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315410130>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315410131>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315410132> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/abd57d0cbd781be70a7a3deb>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/9e236d5a189fa826c86f8087>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/3018e8d72d7ef70471732966> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064256> ;
-    void:classes 0 ;
+    void:classes 2 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://nfdi4culture.de/sparql> ;
-    stat:numberOfClassesReusedFromMWO 24 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 21 .
+    rdfs:comment """SPARQL endpoint: https://nfdi4culture.de/sparql
+Counts:
+- classes: 2
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 26
+- objectProperties: 21
+- dataProperties: 1
+
+MWO classes reused: 26
+  - http://purl.obolibrary.org/obo/IAO_0000578
+  - http://purl.obolibrary.org/obo/IAO_0000708
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000001
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000002
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000005
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000131
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000141
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000145
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000206
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001009
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001010
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001011
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001012
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001013
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001014
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001016
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001039
+
+MWO objectProperties reused: 21
+  - http://purl.obolibrary.org/obo/BFO_0000050
+  - http://purl.obolibrary.org/obo/BFO_0000176
+  - http://purl.obolibrary.org/obo/BFO_0000178
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000112
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000113
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000116
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000117
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000125
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000137
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000146
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000182
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000191
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000192
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000211
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000213
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000216
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001027
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001028
+
+MWO dataProperties reused: 1
+  - https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289036> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315432947>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315432948>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315432949> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/61037a66673211c263e471b9>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/40fba4de5dfa6aa83ddf8f84>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/48aae8e7d64b455b34f70f17> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064257> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/002ecdb3c81a6db9>,
         <https://purls.helmholtz-metadaten.de/msekg/0cacdd579baf4e97>,
@@ -2287,7 +2662,7 @@
         dcterms:,
         <http://purl.org/ontology/bibo/>,
         vann:,
-        schema1:,
+        <http://schema.org/>,
         <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#>,
         rdf:,
         rdfs:,
@@ -2297,16 +2672,56 @@
         foaf:,
         <https://nfdi.fiz-karlsruhe.de/nfdi4dso/>,
         <https://nfdi.fiz-karlsruhe.de/ontology/> ;
-    stat:numberOfClassesReusedFromMWO 6 ;
-    stat:numberOfDataProperties 12 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 52 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 4 .
+    rdfs:comment """SPARQL endpoint: https://nfdi.fiz-karlsruhe.de/4ds/sparql
+Counts:
+- classes: 66
+- objectProperties: 52
+- dataProperties: 12
+- propertiesTotal: 64
+- instances: 242
+
+Vocabularies (namespaces observed):
+- total: 14
+  - http://purl.obolibrary.org/obo/
+  - http://purl.org/dc/terms/
+  - http://purl.org/ontology/bibo/
+  - http://purl.org/vocab/vann/
+  - http://schema.org/
+  - http://swrl.stanford.edu/ontologies/3.3/swrla.owl#
+  - http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  - http://www.w3.org/2000/01/rdf-schema#
+  - http://www.w3.org/2002/07/owl#
+  - http://www.w3.org/2003/11/swrl#
+  - http://www.w3.org/2004/02/skos/core#
+  - http://xmlns.com/foaf/0.1/
+  - https://nfdi.fiz-karlsruhe.de/nfdi4dso/
+  - https://nfdi.fiz-karlsruhe.de/ontology/
+
+Reused from MWO (heuristic):
+- classes: 6
+- objectProperties: 4
+- dataProperties: 0
+
+MWO classes reused: 6
+  - http://purl.obolibrary.org/obo/BFO_0000023
+  - http://purl.obolibrary.org/obo/BFO_0000034
+  - http://purl.obolibrary.org/obo/IAO_0000030
+  - http://purl.obolibrary.org/obo/IAO_0000033
+  - http://purl.obolibrary.org/obo/IAO_0000578
+  - http://purl.obolibrary.org/obo/IAO_0000708
+
+MWO objectProperties reused: 4
+  - http://purl.obolibrary.org/obo/BFO_0000051
+  - http://purl.obolibrary.org/obo/BFO_0000054
+  - http://purl.obolibrary.org/obo/IAO_0000136
+  - http://purl.obolibrary.org/obo/IAO_0000219
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289037> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315444837>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315444838>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315444839> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/2554f9abe388039a0aa1b267>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/b88fb42782a9ae01613b6d73>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/ff3deb5a350193ec50901967> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064258> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/04aead2a1b357781>,
         <https://purls.helmholtz-metadaten.de/msekg/196c5422cead7273>,
@@ -2318,16 +2733,32 @@
     void:entities 604 ;
     void:properties 152 ;
     void:sparqlEndpoint <https://sparql.knowledgehub.nfdi4earth.de/> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 85 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 67 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://sparql.knowledgehub.nfdi4earth.de/
+Counts:
+- classes: 459
+- objectProperties: 67
+- dataProperties: 85
+- propertiesTotal: 152
+- instances: 604
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289038> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315458914>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315458915>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315458916> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/f8779127880edfac261dd5d5>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/f2c28fccd1cbb7f4835093b4>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/3b3f1d54cef594cfca772828> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611344064259> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/1635f3ef7cde3155>,
         <https://purls.helmholtz-metadaten.de/msekg/1c58f27111a304ed>,
@@ -2369,31 +2800,113 @@
         <https://nfdi.fiz-karlsruhe.de/4memory/ontology/>,
         <https://nfdi.fiz-karlsruhe.de/ontology/>,
         schema: ;
-    stat:numberOfClassesReusedFromMWO 28 ;
-    stat:numberOfDataProperties 8 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 81 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 7 .
+    rdfs:comment """SPARQL endpoint: https://nfdi.fiz-karlsruhe.de/4memory/shmarql/
+Counts:
+- classes: 88
+- objectProperties: 81
+- dataProperties: 8
+- propertiesTotal: 89
+- instances: 206
+
+Vocabularies (namespaces observed):
+- total: 15
+  - http://purl.obolibrary.org/obo/
+  - http://purl.org/dc/elements/1.1/
+  - http://purl.org/dc/terms/
+  - http://purl.org/ontology/bibo/
+  - http://purl.org/vocab/vann/
+  - http://swrl.stanford.edu/ontologies/3.3/swrla.owl#
+  - http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  - http://www.w3.org/2000/01/rdf-schema#
+  - http://www.w3.org/2002/07/owl#
+  - http://www.w3.org/2003/11/swrl#
+  - http://www.w3.org/2004/02/skos/core#
+  - http://www.w3.org/ns/org#
+  - https://nfdi.fiz-karlsruhe.de/4memory/ontology/
+  - https://nfdi.fiz-karlsruhe.de/ontology/
+  - https://schema.org/
+
+Reused from MWO (heuristic):
+- classes: 28
+- objectProperties: 7
+- dataProperties: 0
+
+MWO classes reused: 28
+  - http://purl.obolibrary.org/obo/BFO_0000001
+  - http://purl.obolibrary.org/obo/BFO_0000002
+  - http://purl.obolibrary.org/obo/BFO_0000003
+  - http://purl.obolibrary.org/obo/BFO_0000004
+  - http://purl.obolibrary.org/obo/BFO_0000006
+  - http://purl.obolibrary.org/obo/BFO_0000015
+  - http://purl.obolibrary.org/obo/BFO_0000016
+  - http://purl.obolibrary.org/obo/BFO_0000017
+  - http://purl.obolibrary.org/obo/BFO_0000019
+  - http://purl.obolibrary.org/obo/BFO_0000020
+  - http://purl.obolibrary.org/obo/BFO_0000023
+  - http://purl.obolibrary.org/obo/BFO_0000029
+  - http://purl.obolibrary.org/obo/BFO_0000031
+  - http://purl.obolibrary.org/obo/BFO_0000034
+  - http://purl.obolibrary.org/obo/BFO_0000040
+  - http://purl.obolibrary.org/obo/BFO_0000141
+  - http://purl.obolibrary.org/obo/IAO_0000005
+  - http://purl.obolibrary.org/obo/IAO_0000007
+  - http://purl.obolibrary.org/obo/IAO_0000025
+  - http://purl.obolibrary.org/obo/IAO_0000027
+  - http://purl.obolibrary.org/obo/IAO_0000030
+  - http://purl.obolibrary.org/obo/IAO_0000033
+  - http://purl.obolibrary.org/obo/IAO_0000078
+  - http://purl.obolibrary.org/obo/IAO_0000102
+  - http://purl.obolibrary.org/obo/IAO_0000104
+  - http://purl.obolibrary.org/obo/IAO_0000225
+  - http://purl.obolibrary.org/obo/IAO_0000409
+  - http://www.ebi.ac.uk/swo/SWO_0000002
+
+MWO objectProperties reused: 7
+  - http://purl.obolibrary.org/obo/BFO_0000050
+  - http://purl.obolibrary.org/obo/BFO_0000051
+  - http://purl.obolibrary.org/obo/BFO_0000054
+  - http://purl.obolibrary.org/obo/BFO_0000055
+  - http://purl.obolibrary.org/obo/IAO_0000136
+  - http://purl.obolibrary.org/obo/IAO_0000219
+  - http://purl.obolibrary.org/obo/IAO_0000235
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611344289039> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315198796>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315198797>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315198798> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/a1c5206d013abe350af531ab>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/adc601dd2c7c574e67cd61e2>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/4315f10fee079bf2f663341d> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/176113440642510> ;
     void:classes 0 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://nfdi4microbiota.de/services/sparql_query/> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://nfdi4microbiota.de/services/sparql_query/
+Counts:
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611348076041> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315480209>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315480210>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315480211> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/dc856c06e8817aeb483ddcda>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/8464776be480a4d1800f3fff>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/38a4515a35a4693b916a6f06> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506661> ;
     void:classPartition <https://purls.helmholtz-metadaten.de/msekg/01549a031746eab0>,
         <https://purls.helmholtz-metadaten.de/msekg/0194f1e7ce233ac5>,
@@ -2801,41 +3314,218 @@
         <https://w3id.org/steel/ProcessOntology/>,
         <https://www.dipromag.de/dipromag_onto/0.1/>,
         <https://www.tib.eu/digitrubber#> ;
-    stat:numberOfClassesReusedFromMWO 29 ;
-    stat:numberOfDataProperties 567 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 565 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 7 .
+    rdfs:comment """SPARQL endpoint: https://pmdkg.ise.fiz-karlsruhe.de/sparql
+Counts:
+- classes: 3045
+- objectProperties: 565
+- dataProperties: 567
+- propertiesTotal: 1132
+- instances: 1394
+
+Vocabularies (namespaces observed):
+- total: 40
+  - http://emmo.info/emmo/middle/models#
+  - http://emmo.info/emmo/top/annotations#
+  - http://material-digital.de/pmdco/
+  - http://purl.obolibrary.org/obo/
+  - http://purl.obolibrary.org/obo/chebi/
+  - http://purl.org/dc/elements/1.1/
+  - http://purl.org/dc/terms/
+  - http://purl.org/pav/
+  - http://qudt.org/schema/qudt/
+  - http://qudt.org/vocab/
+  - http://swrl.stanford.edu/ontologies/3.3/swrla.owl#
+  - http://w3id.org/sensotwin/applicationontology#
+  - http://www.geneontology.org/formats/oboInOwl#
+  - http://www.ontologyrepository.com/CommonCoreOntologies/
+  - http://www.openlinksw.com/schemas/DAV#
+  - http://www.openlinksw.com/schemas/virtrdf#
+  - http://www.semanticweb.org/ontologies/KnowNow#
+  - http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  - http://www.w3.org/2000/01/rdf-schema#
+  - http://www.w3.org/2002/07/owl#
+  - http://www.w3.org/2003/11/swrl#
+  - http://www.w3.org/2004/02/skos/core#
+  - http://www.w3.org/ns/dcat#
+  - http://www.w3.org/ns/prov#
+  - http://www.w3.org/ns/sparql-service-description#
+  - https://gitlab.com/kupferdigital/process-graphs/lcf-test/
+  - https://gitlab.com/kupferdigital/process-graphs/relaxation-test/
+  - https://gitlab.com/kupferdigital/process-graphs/tensile-test/
+  - https://material-digital.de/pmdco/
+  - https://w3.org/ns/csvw#
+  - https://w3.org/ns/prov#
+  - https://w3id.org/ODE_AM/AMAO/
+  - https://w3id.org/ODE_AM/MAO/
+  - https://w3id.org/cpto/
+  - https://w3id.org/pmd/co/
+  - https://w3id.org/pmd/mo/
+  - https://w3id.org/pmd/tto/
+  - https://w3id.org/steel/ProcessOntology/
+  - https://www.dipromag.de/dipromag_onto/0.1/
+  - https://www.tib.eu/digitrubber#
+
+Reused from MWO (heuristic):
+- classes: 29
+- objectProperties: 7
+- dataProperties: 0
+
+MWO classes reused: 29
+  - http://purl.obolibrary.org/obo/BFO_0000001
+  - http://purl.obolibrary.org/obo/BFO_0000002
+  - http://purl.obolibrary.org/obo/BFO_0000003
+  - http://purl.obolibrary.org/obo/BFO_0000004
+  - http://purl.obolibrary.org/obo/BFO_0000015
+  - http://purl.obolibrary.org/obo/BFO_0000016
+  - http://purl.obolibrary.org/obo/BFO_0000017
+  - http://purl.obolibrary.org/obo/BFO_0000019
+  - http://purl.obolibrary.org/obo/BFO_0000020
+  - http://purl.obolibrary.org/obo/BFO_0000023
+  - http://purl.obolibrary.org/obo/BFO_0000031
+  - http://purl.obolibrary.org/obo/BFO_0000034
+  - http://purl.obolibrary.org/obo/BFO_0000040
+  - http://purl.obolibrary.org/obo/BFO_0000141
+  - http://purl.obolibrary.org/obo/IAO_0000003
+  - http://purl.obolibrary.org/obo/IAO_0000005
+  - http://purl.obolibrary.org/obo/IAO_0000007
+  - http://purl.obolibrary.org/obo/IAO_0000009
+  - http://purl.obolibrary.org/obo/IAO_0000027
+  - http://purl.obolibrary.org/obo/IAO_0000030
+  - http://purl.obolibrary.org/obo/IAO_0000033
+  - http://purl.obolibrary.org/obo/IAO_0000078
+  - http://purl.obolibrary.org/obo/IAO_0000098
+  - http://purl.obolibrary.org/obo/IAO_0000102
+  - http://purl.obolibrary.org/obo/IAO_0000104
+  - http://purl.obolibrary.org/obo/IAO_0000109
+  - http://purl.obolibrary.org/obo/IAO_0000225
+  - http://purl.obolibrary.org/obo/IAO_0000308
+  - http://purl.obolibrary.org/obo/IAO_0000409
+
+MWO objectProperties reused: 7
+  - http://purl.obolibrary.org/obo/BFO_0000050
+  - http://purl.obolibrary.org/obo/BFO_0000051
+  - http://purl.obolibrary.org/obo/BFO_0000054
+  - http://purl.obolibrary.org/obo/BFO_0000055
+  - http://purl.obolibrary.org/obo/BFO_0000062
+  - http://purl.obolibrary.org/obo/BFO_0000063
+  - http://purl.obolibrary.org/obo/IAO_0000136
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611348774371> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761316039934>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316039935>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761316039936> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/9fc3fc41ec3980bbfdf64817>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/2e590bda2f6c0ceaed2c3d5c>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/575e4e1bbcb62c8a90c32ef6> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506663> ;
     void:classes 2 ;
     void:entities 0 ;
     void:properties 0 ;
     void:sparqlEndpoint <https://sparql.unhide.helmholtz-metadaten.de/> ;
-    stat:numberOfClassesReusedFromMWO 0 ;
-    stat:numberOfDataProperties 0 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 0 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 0 .
+    rdfs:comment """SPARQL endpoint: https://sparql.unhide.helmholtz-metadaten.de/
+Counts:
+- classes: 2
+- objectProperties: 0
+- dataProperties: 0
+- propertiesTotal: 0
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 0
+- objectProperties: 0
+- dataProperties: 0
+
+MWO classes reused: 0
+
+MWO objectProperties reused: 0
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/17611349780261> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1761315494185>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315494186>,
-        <https://purls.helmholtz-metadaten.de/msekg/1761315494187> ;
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/1d12b4b38e44ff27347fbdbe>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/a372050f28481d3c3eadee82>,
+        <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/caf0e5ed005b2f6f900e0b6a> ;
     obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/17611350506662> ;
     void:classes 929276 ;
     void:entities 0 ;
     void:properties 2274 ;
     void:sparqlEndpoint <https://rdfportal.org/primary/sparql> ;
-    stat:numberOfClassesReusedFromMWO 43 ;
-    stat:numberOfDataProperties 596 ;
-    stat:numberOfDataPropertiesReusedFromMWO 0 ;
-    stat:numberOfObjectProperties 1678 ;
-    stat:numberOfObjectPropertiesReusedFromMWO 10 .
+    rdfs:comment """SPARQL endpoint: https://rdfportal.org/primary/sparql
+Counts:
+- classes: 929276
+- objectProperties: 1678
+- dataProperties: 596
+- propertiesTotal: 2274
+- instances: 0
+
+Vocabularies (namespaces observed):
+- total: 0
+
+Reused from MWO (heuristic):
+- classes: 43
+- objectProperties: 10
+- dataProperties: 0
+
+MWO classes reused: 43
+  - http://edamontology.org/format_2197
+  - http://edamontology.org/format_2376
+  - http://edamontology.org/format_3252
+  - http://edamontology.org/format_3253
+  - http://edamontology.org/format_3255
+  - http://edamontology.org/format_3256
+  - http://edamontology.org/format_3257
+  - http://edamontology.org/format_3261
+  - http://edamontology.org/format_3262
+  - http://edamontology.org/format_3749
+  - http://edamontology.org/format_3956
+  - http://purl.obolibrary.org/obo/BFO_0000001
+  - http://purl.obolibrary.org/obo/BFO_0000002
+  - http://purl.obolibrary.org/obo/BFO_0000003
+  - http://purl.obolibrary.org/obo/BFO_0000004
+  - http://purl.obolibrary.org/obo/BFO_0000006
+  - http://purl.obolibrary.org/obo/BFO_0000015
+  - http://purl.obolibrary.org/obo/BFO_0000016
+  - http://purl.obolibrary.org/obo/BFO_0000017
+  - http://purl.obolibrary.org/obo/BFO_0000019
+  - http://purl.obolibrary.org/obo/BFO_0000020
+  - http://purl.obolibrary.org/obo/BFO_0000023
+  - http://purl.obolibrary.org/obo/BFO_0000024
+  - http://purl.obolibrary.org/obo/BFO_0000029
+  - http://purl.obolibrary.org/obo/BFO_0000030
+  - http://purl.obolibrary.org/obo/BFO_0000031
+  - http://purl.obolibrary.org/obo/BFO_0000034
+  - http://purl.obolibrary.org/obo/BFO_0000040
+  - http://purl.obolibrary.org/obo/BFO_0000141
+  - http://purl.obolibrary.org/obo/IAO_0000003
+  - http://purl.obolibrary.org/obo/IAO_0000005
+  - http://purl.obolibrary.org/obo/IAO_0000007
+  - http://purl.obolibrary.org/obo/IAO_0000009
+  - http://purl.obolibrary.org/obo/IAO_0000027
+  - http://purl.obolibrary.org/obo/IAO_0000030
+  - http://purl.obolibrary.org/obo/IAO_0000033
+  - http://purl.obolibrary.org/obo/IAO_0000078
+  - http://purl.obolibrary.org/obo/IAO_0000098
+  - http://purl.obolibrary.org/obo/IAO_0000102
+  - http://purl.obolibrary.org/obo/IAO_0000104
+  - http://purl.obolibrary.org/obo/IAO_0000109
+  - http://purl.obolibrary.org/obo/IAO_0000225
+  - http://purl.obolibrary.org/obo/IAO_0000409
+
+MWO objectProperties reused: 10
+  - http://purl.obolibrary.org/obo/BFO_0000050
+  - http://purl.obolibrary.org/obo/BFO_0000051
+  - http://purl.obolibrary.org/obo/BFO_0000054
+  - http://purl.obolibrary.org/obo/BFO_0000055
+  - http://purl.obolibrary.org/obo/BFO_0000056
+  - http://purl.obolibrary.org/obo/BFO_0000062
+  - http://purl.obolibrary.org/obo/BFO_0000063
+  - http://purl.obolibrary.org/obo/BFO_0000066
+  - http://purl.obolibrary.org/obo/IAO_0000136
+  - http://www.w3.org/ns/dcat#downloadURL
+
+MWO dataProperties reused: 0""" .
 
 <https://purls.helmholtz-metadaten.de/msekg/00123ea5a97ba4d4> rdfs:label "Research Infrastructure Deployment" ;
     void:class <http://orkg.org/orkg/class/C115013> ;
@@ -3049,7 +3739,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/06cc1f446b0ac87b> rdfs:label "Problem" ;
     void:class <http://orkg.org/orkg/class/Problem> ;
-    void:entities 7493 .
+    void:entities 7496 .
 
 <https://purls.helmholtz-metadaten.de/msekg/06e5a7292fa17646> rdfs:label "Data" ;
     void:class <http://orkg.org/orkg/class/C58020> ;
@@ -3913,7 +4603,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/1c09499fa5cd21f6> rdfs:label "Published Comparison" ;
     void:class <http://orkg.org/orkg/class/ComparisonPublished> ;
-    void:entities 2141 .
+    void:entities 2149 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1c2c3ab55fd66ac5> rdfs:label "Knowledge representation" ;
     void:class <http://orkg.org/orkg/class/C77042> ;
@@ -4033,7 +4723,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/1efdec983bb0605a> rdfs:label "Contribution" ;
     void:class <http://orkg.org/orkg/class/Contribution> ;
-    void:entities 76758 .
+    void:entities 76779 .
 
 <https://purls.helmholtz-metadaten.de/msekg/1f0c61e449a2165f> rdfs:label "Hydropower resource assessment [C]" ;
     void:class <http://orkg.org/orkg/class/C124013> ;
@@ -4431,7 +5121,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/2a9611ff54e191ff> rdfs:label "Material" ;
     void:class <http://orkg.org/orkg/class/Material> ;
-    void:entities 796 .
+    void:entities 799 .
 
 <https://purls.helmholtz-metadaten.de/msekg/2aafb5d25ecdaab8> rdfs:label "electrolyte" ;
     void:class <http://orkg.org/orkg/class/C63004> ;
@@ -4757,7 +5447,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/349bc1ec1d86d6b4> rdfs:label "Venue" ;
     void:class <http://orkg.org/orkg/class/Venue> ;
-    void:entities 12263 .
+    void:entities 12268 .
 
 <https://purls.helmholtz-metadaten.de/msekg/34ce8da28de53bc2> rdfs:label "organization" ;
     void:class <https://nfdi.fiz-karlsruhe.de/ontology/Organization> ;
@@ -5556,7 +6246,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/48cf949e1acd0524> rdfs:label "Latest version" ;
     void:class <http://orkg.org/orkg/class/LatestVersion> ;
-    void:entities 1831 .
+    void:entities 1838 .
 
 <https://purls.helmholtz-metadaten.de/msekg/48ebf5b7b831ce91> rdfs:label "beta lactamase induction" ;
     void:class <http://orkg.org/orkg/class/C14099> ;
@@ -6289,7 +6979,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/5ad6e3c8df48f0ff> rdfs:label "Author" ;
     void:class <http://orkg.org/orkg/class/Author> ;
-    void:entities 10558 .
+    void:entities 10565 .
 
 <https://purls.helmholtz-metadaten.de/msekg/5b1e18aa7b582adf> rdfs:label "R282321" ;
     void:class <http://orkg.org/orkg/class/C51003> ;
@@ -6333,7 +7023,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/5b68a2df031bad18> rdfs:label "Comparison" ;
     void:class <http://orkg.org/orkg/class/Comparison> ;
-    void:entities 1855 .
+    void:entities 1864 .
 
 <https://purls.helmholtz-metadaten.de/msekg/5b7e58206916a58f> rdfs:label "amount" ;
     void:class <http://orkg.org/orkg/class/C68000> ;
@@ -6567,7 +7257,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/623515faa146700f> rdfs:label "Result" ;
     void:class <http://orkg.org/orkg/class/Result> ;
-    void:entities 2001 .
+    void:entities 2004 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6244efd9d22fc004> rdfs:label "Chlorocebus aethiops" ;
     void:class <http://orkg.org/orkg/class/C14424> ;
@@ -7035,11 +7725,11 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/6ec3b3346baa0b80> rdfs:label "Visualization" ;
     void:class <http://orkg.org/orkg/class/Visualization> ;
-    void:entities 776 .
+    void:entities 777 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6f1eebd02cf1df19> rdfs:label "Paper" ;
     void:class <http://orkg.org/orkg/class/Paper> ;
-    void:entities 54659 .
+    void:entities 54675 .
 
 <https://purls.helmholtz-metadaten.de/msekg/6f2a1defac8772fb> rdfs:label "Nutrition–malaria–bone link identified" ;
     void:class <http://orkg.org/orkg/class/C126041> ;
@@ -7658,6 +8348,10 @@
     void:entities 8 .
 
 <https://purls.helmholtz-metadaten.de/msekg/7f8668b801c1c0ff> void:class <https://gitlab.com/kupferdigital/process-graphs/relaxation-test/TestForceDuration> ;
+    void:entities 1 .
+
+<https://purls.helmholtz-metadaten.de/msekg/7fb53f2f83b46a14> rdfs:label "Organization" ;
+    void:class <http://orkg.org/orkg/class/C126020> ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/7fbde925b52e1c24> rdfs:label "Operator" ;
@@ -8369,7 +9063,7 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/9294cc88bf901b05> rdfs:label "Method" ;
     void:class <http://orkg.org/orkg/class/Method> ;
-    void:entities 2762 .
+    void:entities 2765 .
 
 <https://purls.helmholtz-metadaten.de/msekg/929b304dd7d53bb6> rdfs:label "Strain-Fatigue Life Curve" ;
     void:class <https://gitlab.com/kupferdigital/process-graphs/lcf-test/StrainFatigueLifeCurve> ;
@@ -8395,7 +9089,7 @@
     void:class <http://orkg.org/orkg/class/C14351> ;
     void:entities 2 .
 
-<https://purls.helmholtz-metadaten.de/msekg/92d3f8aec1b675f0> void:class schema1:EventAttendanceModeEnumeration ;
+<https://purls.helmholtz-metadaten.de/msekg/92d3f8aec1b675f0> void:class <http://schema.org/EventAttendanceModeEnumeration> ;
     void:entities 3 .
 
 <https://purls.helmholtz-metadaten.de/msekg/92f242c599bcab2a> rdfs:label "Recommended items" ;
@@ -9301,6 +9995,10 @@
     void:class <http://orkg.org/orkg/class/C52004> ;
     void:entities 4 .
 
+<https://purls.helmholtz-metadaten.de/msekg/ac4d1ab4c250b25c> rdfs:label "Periodical" ;
+    void:class <http://orkg.org/orkg/class/C126043> ;
+    void:entities 1 .
+
 <https://purls.helmholtz-metadaten.de/msekg/ac85d68dc0de3a45> rdfs:label "model" ;
     void:class <http://orkg.org/orkg/class/C21025> ;
     void:entities 3 .
@@ -9482,6 +10180,10 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/b17ee488ab6f8e24> rdfs:label "Influenza virus" ;
     void:class <http://orkg.org/orkg/class/C14500> ;
+    void:entities 1 .
+
+<https://purls.helmholtz-metadaten.de/msekg/b1be602c012402da> rdfs:label "Person" ;
+    void:class <http://orkg.org/orkg/class/C126021> ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/b201d4b5505b090c> rdfs:label "Dendrobias" ;
@@ -11935,6 +12637,10 @@
 
 <https://purls.helmholtz-metadaten.de/msekg/f7ace84ed5bbb6ef> rdfs:label "membrane potential measurement method" ;
     void:class <http://orkg.org/orkg/class/C14124> ;
+    void:entities 1 .
+
+<https://purls.helmholtz-metadaten.de/msekg/f7c13f100c159079> rdfs:label "ScholarlyArticle" ;
+    void:class <http://orkg.org/orkg/class/C126042> ;
     void:entities 1 .
 
 <https://purls.helmholtz-metadaten.de/msekg/f7d723af60cbb25e> rdfs:label "BENCHMARK_DATASET" ;

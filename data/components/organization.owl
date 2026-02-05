@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
      xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:mwo="http://purls.helmholtz-metadaten.de/mwo/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -21,6 +22,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purls.helmholtz-metadaten.de/mwo/MWO_0001143 -->
+
+    <AnnotationProperty rdf:about="http://purls.helmholtz-metadaten.de/mwo/MWO_0001143"/>
     
 
 
@@ -102,144 +109,6 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451392359571 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458261 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458261"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582610 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582610"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582611 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582611"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582612 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582612"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582613 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582613"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582614 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582614"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582615 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582615"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582616 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582616"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582617 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582617"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582618 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582618"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582619 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582619"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458262 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458262"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582621 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582621"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582622 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582622"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582623 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582623"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582624 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582624"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458263 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458263"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458264 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458264"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458265 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458265"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458266 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458266"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458267 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458267"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458268 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458268"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458269 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458269"/>
     
 
 
@@ -795,12 +664,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742191"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392458261"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392557111"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392697731"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17466192215831"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908628"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392793301"/>
+        <mwo:MWO_0001143>MPIE</mwo:MWO_0001143>
         <label:de>Max-Planck-Institut für Eisenforschung</label:de>
         <label:en>Max Planck Institute for Iron Research</label:en>
     </NamedIndividual>
@@ -813,12 +682,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742194"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392458269"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571110"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977310"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158310"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908630"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392793313"/>
+        <mwo:MWO_0001143>RZ</mwo:MWO_0001143>
         <label:en>Rechenzentrum der Christian-Albrechts-Universität</label:en>
     </NamedIndividual>
     
@@ -847,12 +716,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421910"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582610"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571112"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977312"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158312"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908637"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513927933110"/>
+        <mwo:MWO_0001143>ITM</mwo:MWO_0001143>
         <label:de>Institut für Technische Mechanik</label:de>
         <label:en>Institute of Applied Mechanics</label:en>
     </NamedIndividual>
@@ -882,12 +751,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421911"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582611"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571113"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977314"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158314"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908638"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513927933111"/>
+        <mwo:MWO_0001143>IMTEK</mwo:MWO_0001143>
         <label:de>Institut für Mikrosystemtechnik</label:de>
         <label:en>Department of Microsystems Engineering</label:en>
     </NamedIndividual>
@@ -900,12 +769,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421911"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582612"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571114"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977315"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158315"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908639"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513927933112"/>
+        <mwo:MWO_0001143>IWM</mwo:MWO_0001143>
         <label:de>Fraunhofer-Institut für Werkstoffmechanik</label:de>
         <label:en>Fraunhofer Institute for Mechanics of Materials</label:en>
     </NamedIndividual>
@@ -918,12 +787,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421912"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582610"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571115"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977316"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158316"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908640"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513927933113"/>
+        <mwo:MWO_0001143>ITM</mwo:MWO_0001143>
         <label:de>Institut für Technische Mechanik (ITM)</label:de>
         <label:en>Institute of Engineering Mechanics</label:en>
     </NamedIndividual>
@@ -936,12 +805,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421913"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582614"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571116"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977317"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158317"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908639"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513927933114"/>
+        <mwo:MWO_0001143>IMWS</mwo:MWO_0001143>
         <label:de>Fraunhofer-Institut für Mikrostruktur von Werkstoffen und Systemen</label:de>
         <label:en>Fraunhofer Institute for Microstructure of Materials and Systems</label:en>
     </NamedIndividual>
@@ -954,12 +823,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421914"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582615"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571117"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977318"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158318"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908641"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513927933115"/>
+        <mwo:MWO_0001143>WKK</mwo:MWO_0001143>
         <label:de>Lehrstuhl für Werkstoffkunde</label:de>
         <label:en>Institute of Materials Science and Engineering</label:en>
     </NamedIndividual>
@@ -989,12 +858,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742192"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392458262"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392557112"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392697732"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17466192215832"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908629"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392793311"/>
+        <mwo:MWO_0001143>MIB, SC SimTech</mwo:MWO_0001143>
         <label:de>Institut für Mechanik, Stuttgarter Zentrum für Simulationswissenschaft</label:de>
         <label:en>Institute of Applied Mechanics, Stuttgart Center for Simulation Science</label:en>
     </NamedIndividual>
@@ -1007,12 +876,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421915"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582616"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571118"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977320"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158320"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908631"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513927933116"/>
+        <mwo:MWO_0001143>IWT Bremen</mwo:MWO_0001143>
         <label:de>Leibniz-Institut für Werkstofforientierte Technologien</label:de>
         <label:en>Leibniz Institute for Materials Engineering</label:en>
     </NamedIndividual>
@@ -1025,11 +894,11 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421916"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582617"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571119"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977321"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158321"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513927933117"/>
+        <mwo:MWO_0001143>PTB</mwo:MWO_0001143>
         <label:de>Physikalisch-Technische Bundesanstalt</label:de>
         <label:en>National Metrology Institute of Germany</label:en>
     </NamedIndividual>
@@ -1042,12 +911,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421917"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392458265"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571120"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977322"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158322"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908632"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392793315"/>
+        <mwo:MWO_0001143>FZJ</mwo:MWO_0001143>
         <label:de>Forschungszentrum Jülich, Werkstoffstruktur und -eigenschaften (IEK2)</label:de>
         <label:en>Forschungszentrum Jülich-Structure and Function of Materials (IEK2)</label:en>
     </NamedIndividual>
@@ -1060,12 +929,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421918"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582618"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571121"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977323"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158323"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908642"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513927933118"/>
+        <mwo:MWO_0001143>MWWT</mwo:MWO_0001143>
         <label:en>Materialwissenschaft und Werkstofftechnik an der Universität des Saarlandes</label:en>
     </NamedIndividual>
     
@@ -1093,11 +962,11 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421918"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582619"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571122"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977325"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158325"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513927933119"/>
+        <mwo:MWO_0001143>DFKI</mwo:MWO_0001143>
         <label:de>DEuropetsches Forschungszentrum für Künstliche Intelligenz</label:de>
         <label:en>German Research Center for Artificial Intelligence</label:en>
     </NamedIndividual>
@@ -1112,10 +981,10 @@
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742195"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392557115"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977326"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453287150474"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158326"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908632"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513927933113"/>
+        <mwo:MWO_0001143>SCC</mwo:MWO_0001143>
         <label:en>Steinbuch Centre for Computing (SCC)</label:en>
     </NamedIndividual>
     
@@ -1127,12 +996,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421919"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582621"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513925571123"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513926977327"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158327"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908639"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513927933120"/>
+        <mwo:MWO_0001143>IWS</mwo:MWO_0001143>
         <label:de>Fraunhofer-Institut für Werkstoff- und Strahltechnik</label:de>
         <label:en>Fraunhofer Institute for Material and Beam Technology</label:en>
     </NamedIndividual>
@@ -1168,11 +1037,11 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742193"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392458263"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392557113"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392697733"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17466192215833"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392793312"/>
+        <mwo:MWO_0001143>BAM</mwo:MWO_0001143>
         <label:de>Bundesanstalt für Materialforschung und -prüfung</label:de>
         <label:en>Federal Institute For Materials Research and Testing</label:en>
     </NamedIndividual>
@@ -1185,8 +1054,8 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742194"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582622"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158330"/>
+        <mwo:MWO_0001143>CAU</mwo:MWO_0001143>
         <label:en>Christian-Albrechts-Universität zu Kiel</label:en>
     </NamedIndividual>
     
@@ -1220,8 +1089,8 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742197"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582623"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158333"/>
+        <mwo:MWO_0001143>RUB</mwo:MWO_0001143>
         <label:en>Ruhr-Universität Bochum</label:en>
     </NamedIndividual>
     
@@ -1233,8 +1102,8 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742196"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461958840491"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158334"/>
+        <mwo:MWO_0001143>RWTH</mwo:MWO_0001143>
         <label:en>RWTH Aachen University</label:en>
     </NamedIndividual>
     
@@ -1283,8 +1152,8 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421911"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582624"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158338"/>
+        <mwo:MWO_0001143>Uni-Freiburg</mwo:MWO_0001143>
         <label:de>Albert-Ludwigs-Universität Freiburg</label:de>
         <label:en>Albert-Ludwigs-University of Freiburg</label:en>
     </NamedIndividual>
@@ -1325,8 +1194,8 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513937421912"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513924582613"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158340"/>
+        <mwo:MWO_0001143>KIT</mwo:MWO_0001143>
         <label:de>Karlsruher Institut für Technologie</label:de>
         <label:en>Karlsruhe Institute of Technology</label:en>
     </NamedIndividual>
@@ -1376,12 +1245,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742195"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392458264"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392557115"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392697735"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17466192215835"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908631"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392793314"/>
+        <mwo:MWO_0001143>FIZ Karlsruhe</mwo:MWO_0001143>
         <label:de>FIZ Karlsruhe - Leibniz-Institut für Informationsinfrastruktur</label:de>
         <label:en>FIZ Karlsruhe - Leibniz Institute for Information Infrastructure</label:en>
     </NamedIndividual>
@@ -1394,12 +1263,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742196"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392458265"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392557116"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392697736"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17466192215836"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908632"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392793315"/>
+        <mwo:MWO_0001143>FZJ</mwo:MWO_0001143>
         <label:en>Forschungszentrum Jülich, Materials Data Science and Informatics (IAS9)</label:en>
     </NamedIndividual>
     
@@ -1411,12 +1280,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742197"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392458266"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392557117"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392697737"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17466192215837"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908633"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392793316"/>
+        <mwo:MWO_0001143>ICAMS</mwo:MWO_0001143>
         <label:en>Interdisciplinary Centre for Advanced Materials Simulation</label:en>
     </NamedIndividual>
     
@@ -1428,12 +1297,12 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742196"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392458267"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392557118"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392697738"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17466192215838"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908634"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392793317"/>
+        <mwo:MWO_0001143>IMM</mwo:MWO_0001143>
         <label:de>Institut für Metallkunde und Materialphysik</label:de>
         <label:en>Institute for physical metallurgy and materials physics</label:en>
     </NamedIndividual>
@@ -1446,33 +1315,15 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392359571"/>
         <obo:BFO_0000171 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451393742198"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392458268"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392557119"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392697739"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17466192215839"/>
         <ontology:NFDI_0000182 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513943908635"/>
         <ontology:NFDI_0001006 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17451392793318"/>
+        <mwo:MWO_0001143>ILH</mwo:MWO_0001143>
         <label:de>Institut für Leichtbau mit Hybridsystemen</label:de>
         <label:en>Institute for Lightweight Design with Hybrid Systems</label:en>
     </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174515976939040 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939040"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174515976939041 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939041"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17453287150474 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453287150474"/>
     
 
 
@@ -1560,8 +1411,8 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17459121821963">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174515976939040"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158353"/>
+        <mwo:MWO_0001143>DGM</mwo:MWO_0001143>
         <label:en>German Society for Materials Science</label:en>
     </NamedIndividual>
     
@@ -1581,16 +1432,10 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17459121821965">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174515976939041"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174661922158355"/>
+        <mwo:MWO_0001143>MPCDF</mwo:MWO_0001143>
         <label:en>Max Planck Computing and Data Facility</label:en>
     </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17461958840491 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461958840491"/>
     
 
 
