@@ -20,7 +20,7 @@ LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME = "last_sucessfull_validated_run"
 LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "last_sucessfull_reason_run"
 # Inputs produced by other DAGs
 ASSERTED_TTL = "spreadsheets_asserted.ttl" 
-INFERENCES_FILE = "spreadsheets_inferences.owl"
+INFERENCES_FILE = "spreadsheets_inferences.ttl"
 
 @dag(
     schedule=None,

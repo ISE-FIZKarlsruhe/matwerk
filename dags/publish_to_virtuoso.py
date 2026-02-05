@@ -6,8 +6,15 @@ from datetime import datetime
 
 from airflow.sdk import dag, task, Variable, get_current_context
 from airflow.exceptions import AirflowFailException
-
 from common.virtuoso import upload_ttl_file
+from common.graph_metadata import (
+    GraphPublishFacts,
+    build_metadata_ttl,
+    utc_now_iso_seconds,
+    compute_rdf_stats,
+)
+import socket
+
 
 
 DAG_ID = "publish_to_virtuoso"
@@ -16,14 +23,11 @@ GRAPH_ROOT = "https://purls.helmholtz-metadaten.de/msekg"
 # Sources to publish (edit freely)
 PUBLISH_SOURCES = [
     ("merge", "last_sucessfull_merge_run", "spreadsheets_asserted.ttl"),
-    ("reason", "last_sucessfull_reason_run", "spreadsheets_reasoned.ttl"),
-    # later add harvesters
+    ("reason-spreadsheets", "last_sucessfull_reason_run", "spreadsheets_inferences.owl"),
+    ("validation_checks", "last_sucessfull_validated_run", "spreadsheets_merged_for_validation.ttl"),
+    ("harvester_zenodo", "last_sucessfull_harvester_zenodo_run", "zenodo.ttl"),
+    ("harvester_endpoints", "last_sucessfull_harvester_endpoints_run", "dataset_stats.ttl"),
 ]
-
-
-
-def build_graph_uri(graph_root: str, stage: str, run_id_safe: str) -> str:
-    return f"{graph_root.rstrip('/')}/{stage}/{run_id_safe}"
 
 
 @dag(
@@ -90,11 +94,10 @@ def publish_to_virtuoso():
                 report["results"].append(entry)
                 continue
 
-            run_id_safe = os.path.basename(source_dir.rstrip("/"))
             ttl_path = os.path.join(source_dir, ttl_name)
 
             entry["ttl_path"] = ttl_path
-            entry["graph"] = build_graph_uri(GRAPH_ROOT, stage, run_id_safe)
+            entry["graph"] = f"{GRAPH_ROOT}/{stage}"
 
             if not os.path.exists(ttl_path) or os.path.getsize(ttl_path) == 0:
                 entry["status"] = "failed"
@@ -108,7 +111,45 @@ def publish_to_virtuoso():
                 print(f"[INFO] ttl_path={ttl_path}")
                 print(f"[INFO] graph={entry['graph']}")
 
-                upload_ttl_file(graph=entry["graph"], ttl_path=ttl_path, delete_first=True)
+                data_graph = f"{GRAPH_ROOT}/{stage}"
+                
+                started_iso = utc_now_iso_seconds()
+                # Upload DATA graph (clears data graph)
+                upload_ttl_file(graph=data_graph, ttl_path=ttl_path, delete_first=True)
+                ended_iso = utc_now_iso_seconds()
+
+                # Collect “more data” from Airflow context
+                ctx = get_current_context()
+                task = ctx.get("task")
+                ti = ctx.get("ti")
+
+                operator = task.__class__.__name__ if task else None
+                log_url = getattr(ti, "log_url", None)
+                hostname = socket.gethostname()
+
+                facts = GraphPublishFacts(
+                    graph_root=data_graph,
+                    stage=stage,
+                    dag_id=DAG_ID,
+                    run_id=ctx["dag_run"].run_id,
+                    data_graph_uri=data_graph,
+                    ttl_path=ttl_path,
+                    started_at=started_iso,
+                    ended_at=ended_iso,
+                    task_id=getattr(task, "task_id", None),
+                    operator=operator,
+                    log_url=log_url,
+                    hostname=hostname,
+                    stats=compute_rdf_stats(ttl_path),
+                )
+
+                meta_ttl = build_metadata_ttl(facts)
+                meta_path = os.path.join(run_dir, f"{stage}__metadata.ttl")
+                with open(meta_path, "w", encoding="utf-8") as f:
+                    f.write(meta_ttl)
+
+                # Upload METADATA graph (separate graph; clear then load)
+                upload_ttl_file(graph=data_graph, ttl_path=meta_path, delete_first=False)
 
                 entry["status"] = "published"
             except Exception as e:

@@ -1,291 +1,105 @@
 from __future__ import annotations
 
+import os
+import subprocess
 from datetime import datetime
-from airflow import DAG
-from airflow.providers.standard.operators.bash import BashOperator
+
+import requests
+from common.utils import safe_run_id, run_cmd, download_github_dir
+from airflow.sdk import dag, task, Variable, get_current_context
+from airflow.exceptions import AirflowFailException
+
 
 DAG_ID = "harvester_zenodo"
 
-RUN_ID_SAFE = "{{ dag_run.run_id | replace(':', '_') | replace('+', '_') | replace('/', '_') }}"
-RUN_DIR = "{{ var.value.sharedfs }}/runs/" + DAG_ID + "/" + RUN_ID_SAFE
+LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "last_sucessfull_merge_run"
+LAST_SUCCESSFUL_HARVESTER_ZENODO_RUN_VARIABLE_NAME = "last_sucessfull_harvester_zenodo_run"
 
-# merge_validation writes here:
-MERGE_RUNS_ROOT = "{{ var.value.sharedfs }}/runs/merge_validation"
+OUT_TTL = "spreadsheets_asserted.ttl"
+OUTPUT = "zenodo.ttl"
 
-SCRIPTS_REPO = "https://github.com/ISE-FIZKarlsruhe/matwerk"
+SCRIPTS_REPO = "ISE-FIZKarlsruhe/matwerk"
 SCRIPTS_REF = "main"
+SCRIPTS_PATH = "scripts"  # repo folder
 
-with DAG(
+
+@dag(
     dag_id=DAG_ID,
     start_date=datetime(2024, 1, 1),
     schedule="@weekly",
-    catchup=False,
-    default_args={"retries": 1},
-    tags=["kg", "harvester", "zenodo"],
-) as dag:
-
-    init_run_dir = BashOperator(
-        task_id="init_run_dir",
-        bash_command=f"""
-set -eEuo pipefail
-IFS=$'\\n\\t'
-RUN_DIR="{RUN_DIR}"
-mkdir -p "$RUN_DIR"
-""",
-    )
-
-    fetch_scripts = BashOperator(
-        task_id="fetch_scripts_from_github",
-        bash_command=f"""
-set -eEuo pipefail
-IFS=$'\\n\\t'
-
-RUN_DIR="{RUN_DIR}"
-REPO_DIR="$RUN_DIR/repo"
-
-rm -rf "$REPO_DIR"
-mkdir -p "$REPO_DIR"
-
-echo "Fetching scripts/ from {SCRIPTS_REPO} (ref: {SCRIPTS_REF}) into $REPO_DIR"
-
-TMP_REPO="$(mktemp -d)"
-cleanup() {{ rm -rf "$TMP_REPO"; }}
-trap cleanup EXIT
-
-copy_scripts() {{
-  local SRC="$1"
-  rm -rf "$REPO_DIR/scripts"
-  mkdir -p "$REPO_DIR"
-
-  if tar --help 2>/dev/null | grep -q -- '--touch'; then
-    (cd "$SRC" && tar -cf - scripts) | (cd "$REPO_DIR" && tar -xf - --touch --no-same-owner --no-same-permissions)
-  else
-    cp -R "$SRC/scripts" "$REPO_DIR/"
-  fi
-
-  if command -v find >/dev/null 2>&1; then
-    find "$REPO_DIR/scripts" -exec touch -c {{}} + >/dev/null 2>&1 || true
-  fi
-}}
-
-if command -v git >/dev/null 2>&1; then
-  echo "git found; cloning into temp dir $TMP_REPO"
-  git clone --depth 1 --filter=blob:none --sparse --branch "{SCRIPTS_REF}" "{SCRIPTS_REPO}" "$TMP_REPO"
-  (cd "$TMP_REPO" && git sparse-checkout set "scripts")
-  copy_scripts "$TMP_REPO"
-else
-  echo "git not found; falling back to GitHub tarball download" >&2
-  ARCH="$TMP_REPO/repo.tgz"
-  curl -fsSL -L "{SCRIPTS_REPO}/archive/refs/heads/{SCRIPTS_REF}.tar.gz" -o "$ARCH"
-  tar -xzf "$ARCH" -C "$TMP_REPO"
-  ROOT="$(tar -tzf "$ARCH" | head -n 1 | cut -d/ -f1)"
-  copy_scripts "$TMP_REPO/$ROOT"
-fi
-
-test -s "$REPO_DIR/scripts/fetch_zenodo.py"
-test -d "$REPO_DIR/scripts/zenodo" || (echo "[ERROR] missing scripts/zenodo package dir" && exit 1)
-
-echo "Fetched scripts OK:"
-find "$REPO_DIR/scripts" -maxdepth 3 -type f | sed -n '1,200p'
-""",
-    )
-
-    harvester_zenodo = BashOperator(
-        task_id="harvester_zenodo",
-        bash_command=f"""
-set -eEuo pipefail
-IFS=$'\\n\\t'
-
-RUN_DIR="{RUN_DIR}"
-REPO_DIR="$RUN_DIR/repo"
-OUT_DIR="$RUN_DIR"
-mkdir -p "$OUT_DIR"
-
-export PYTHONPATH="$REPO_DIR:${{PYTHONPATH:-}}"
-cd "$REPO_DIR"
-
-ROOT="{MERGE_RUNS_ROOT}"
-LATEST_TTL=""
-LATEST_RUN=""
-
-# Prefer any run with a TTL (you can tighten to _SUCCESS later)
-for d in $(ls -1dt "$ROOT"/* 2>/dev/null); do
-  if [ -s "$d/spreadsheets_asserted.ttl" ]; then
-    LATEST_RUN="$d"
-    LATEST_TTL="$d/spreadsheets_asserted.ttl"
-    break
-  fi
-done
-
-# Fallback: ttl + validation files with Conforms True
-if [ -z "$LATEST_TTL" ]; then
-  for d in $(ls -1dt "$ROOT"/* 2>/dev/null); do
-    CAND="$d/spreadsheets_asserted.ttl"
-    if [ -s "$CAND" ] \
-       && [ -s "$d/validation/verify1.md" ] \
-       && grep -q "Conforms: True" "$d/validation/shape1.md" 2>/dev/null \
-       && grep -q "Conforms: True" "$d/validation/shape2.md" 2>/dev/null \
-       && grep -q "Conforms: True" "$d/validation/shape3.md" 2>/dev/null \
-       && grep -q "Conforms: True" "$d/validation/shape4.md" 2>/dev/null; then
-      LATEST_RUN="$d"
-      LATEST_TTL="$CAND"
-      break
-    fi
-  done
-fi
-
-if [ -z "$LATEST_TTL" ]; then
-  echo "[ERROR] No spreadsheets_asserted.ttl found under $ROOT" >&2
-  ls -lah "$ROOT" | sed -n '1,200p' >&2 || true
-  exit 1
-fi
-
-echo "Using merge_validation run: $LATEST_RUN"
-echo "$LATEST_TTL" > "$OUT_DIR/source_spreadsheets_asserted_path.txt"
-test -s "$LATEST_TTL"
-
-# 1) Export Zenodo
-ZENODO_TTL="$OUT_DIR/zenodo.ttl"
-python -m scripts.zenodo.export_zenodo --make-snapshots --out "$ZENODO_TTL"
-test -s "$ZENODO_TTL"
-
-# 2) Harvest based on asserted TTL
-python "$REPO_DIR/scripts/fetch_zenodo.py" \\
-  --data "$LATEST_TTL" \\
-  --out-csv "$OUT_DIR/datasets_urls.csv" \\
-  --out-dir "$OUT_DIR/harvested"
-
-test -s "$OUT_DIR/datasets_urls.csv"
-test -d "$OUT_DIR/harvested"
-""",
-    )
-
-    load_zenodo_to_virtuoso = BashOperator(
-    task_id="load_zenodo_to_virtuoso",
-    bash_command=r"""
-set -eEuo pipefail
-IFS=$'\n\t'
-
-RUN_DIR="{{ var.value.sharedfs }}/runs/harvester_zenodo/{{ dag_run.run_id | replace(':', '_') | replace('+', '_') | replace('/', '_') }}"
-
-# Prefer the new location:
-TTL="$RUN_DIR/zenodo.ttl"
-
-echo "[INFO] RUN_DIR=$RUN_DIR"
-echo "[INFO] Expect TTL at: $TTL"
-echo "[INFO] Listing $RUN_DIR:"
-ls -lah "$RUN_DIR" || true
-echo "[INFO] Listing $RUN_DIR:"
-ls -lah "$RUN_DIR" || true
-
-# If not found there, fall back to old location:
-if [ ! -s "$TTL" ] && [ -s "$RUN_DIR/zenodo.ttl" ]; then
-  echo "[WARN] TTL not found in data/zenodo; using legacy path $RUN_DIR/zenodo.ttl"
-  TTL="$RUN_DIR/zenodo.ttl"
-fi
-
-# Now enforce existence
-test -s "$TTL"
-
-GRAPH="https://purls.helmholtz-metadaten.de/msekg/harvester_zenodo/{{ dag_run.run_id | replace(':', '_') | replace('+', '_') | replace('/', '_') }}"
-export TTL_FILE="$TTL"
-export GRAPH_VAL="$GRAPH"
-
-VCRUD="{{ var.value.get('virtuoso_crud', '') }}"
-VSPARQL="{{ var.value.get('virtuoso_sparql', '') }}"
-VUSER="{{ var.value.get('virtuoso_user', '') }}"
-VPASS="{{ var.value.get('virtuoso_pass', '') }}"
-
-export VIRTUOSO_CRUD="${VCRUD:-${VIRTUOSO_CRUD:-}}"
-export VIRTUOSO_SPARQL="${VSPARQL:-${VIRTUOSO_SPARQL:-}}"
-export VIRTUOSO_USER="${VUSER:-${VIRTUOSO_USER:-}}"
-export VIRTUOSO_PASS="${VPASS:-${VIRTUOSO_PASS:-}}"
-
-test -n "$VIRTUOSO_CRUD"
-test -n "$VIRTUOSO_SPARQL"
-test -n "$VIRTUOSO_USER"
-test -n "$VIRTUOSO_PASS"
-
-export VIRTUOSO_DELETE_FIRST="{{ var.value.get('virtuoso_delete_first', '0') }}"
-export VIRTUOSO_CHUNK_BYTES="{{ var.value.get('virtuoso_chunk_bytes', '5242880') }}"
-export VIRTUOSO_RETRY="{{ var.value.get('virtuoso_retry', '5') }}"
-
-python3 - <<'PY'
-import os, time
-import requests
-from requests.auth import HTTPDigestAuth
-
-ttl_path = os.environ["TTL_FILE"]
-graph = os.environ["GRAPH_VAL"]
-
-endpoint = os.environ["VIRTUOSO_SPARQL"].rstrip("/")
-endpoint_crud = os.environ["VIRTUOSO_CRUD"].rstrip("/")
-username = os.environ["VIRTUOSO_USER"]
-password = os.environ["VIRTUOSO_PASS"]
-
-retry = int(os.environ.get("VIRTUOSO_RETRY", "5"))
-chunk_bytes = int(os.environ.get("VIRTUOSO_CHUNK_BYTES", "5242880"))
-delete_first = os.environ.get("VIRTUOSO_DELETE_FIRST", "0") == "1"
-
-def delete_graph(g: str):
-    api_url = (
-        endpoint
-        + "?default-graph-uri=&query=drop+silent+graph+%3CGGGGG%3E+&format=text%2Fhtml&timeout=0&signal_void=on"
-    ).replace("GGGGG", g)
-    last = None
-    for _ in range(retry):
-        try:
-            last = requests.get(api_url, auth=HTTPDigestAuth(username, password), timeout=60)
-            if last.status_code == 200:
-                return
-        except Exception:
-            pass
-        time.sleep(2)
-    raise RuntimeError(f"deleteGraph failed: {last.status_code if last else 'no response'} {last.text if last else ''}")
-
-def post_chunk(g: str, data: bytes):
-    api_url = endpoint_crud + "?graph=" + g
-    headers = {"Content-Type": "text/turtle"}
-    last_exc = None
-    for attempt in range(1, retry + 1):
-        try:
-            r = requests.post(
-                api_url,
-                data=data,
-                headers=headers,
-                auth=HTTPDigestAuth(username, password),
-                timeout=(10, 300),  # (connect timeout, read timeout)
-                verify=os.environ.get("VIRTUOSO_VERIFY_TLS", "1") == "1",
-            )
-            if r.status_code in (200, 201, 204):
-                return
-            raise RuntimeError(f"HTTP {r.status_code}: {r.text[:500]}")
-        except Exception as e:
-            last_exc = e
-            print(f"[Virtuoso] POST attempt {attempt}/{retry} failed: {type(e).__name__}: {e}", flush=True)
-            time.sleep(2)
-    raise RuntimeError(f"storeDataToGraph failed: {type(last_exc).__name__}: {last_exc}")
-
-def stream_file(path: str, chunk: int):
-    with open(path, "rb") as f:
-        while True:
-            b = f.read(chunk)
-            if not b:
-                break
-            yield b
-
-print(f"Virtuoso load: {ttl_path} -> <{graph}>")
-
-if delete_first:
-    delete_graph(graph)
-
-for chunk in stream_file(ttl_path, chunk_bytes):
-    post_chunk(graph, chunk)
-
-print("Virtuoso load complete")
-PY
-""",
 )
+def harvester_zenodo():
+
+    @task()
+    def init_data_dir(ti=None):
+        ctx = get_current_context()
+        sharedfs = Variable.get("sharedfs")
+
+        rid = safe_run_id(ctx["dag_run"].run_id)
+        run_dir = os.path.join(sharedfs, "runs", ctx["dag"].dag_id, rid)
+        scripts_dir = os.path.join(run_dir, "scripts")
+
+        os.makedirs(run_dir, exist_ok=True)
+        os.makedirs(scripts_dir, exist_ok=True)
+
+        ti.xcom_push(key="run_dir", value=run_dir)
+        ti.xcom_push(key="scripts_dir", value=scripts_dir)
+
+    @task()
+    def fetchscripts(ti=None):
+        scripts_dir = ti.xcom_pull(task_ids="init_data_dir", key="scripts_dir")
+        download_github_dir(SCRIPTS_REPO, SCRIPTS_PATH, SCRIPTS_REF, scripts_dir)
 
 
-    init_run_dir >> fetch_scripts >> harvester_zenodo >> load_zenodo_to_virtuoso
+    @task()
+    def run_harvester(ti=None):
+        run_dir = ti.xcom_pull(task_ids="init_data_dir", key="run_dir")
+        scripts_dir = ti.xcom_pull(task_ids="init_data_dir", key="scripts_dir")
+
+        source_merge_dir = Variable.get(LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME)
+        merge_ttl = os.path.join(source_merge_dir, OUT_TTL)
+        if not os.path.exists(merge_ttl) or os.path.getsize(merge_ttl) == 0:
+            raise AirflowFailException(f"Missing/empty merge TTL: {merge_ttl}")
+
+        print("Using merge TTL from variable:", merge_ttl)
+
+        env = os.environ.copy()
+        env["PYTHONPATH"] = run_dir + (":" + env["PYTHONPATH"] if env.get("PYTHONPATH") else "")
+
+        # 1) Export Zenodo (writes zenodo.ttl)
+        zenodo_ttl = os.path.join(run_dir, OUTPUT)
+        run_cmd(
+            ["python", "-m", "scripts.zenodo.export_zenodo", "--make-snapshots", "--out", zenodo_ttl],
+            cwd=run_dir,
+            env=env 
+        )
+        if not os.path.exists(zenodo_ttl) or os.path.getsize(zenodo_ttl) == 0:
+            raise AirflowFailException(f"{OUTPUT} missing/empty: {zenodo_ttl}")
+
+        # 2) Harvest based on asserted TTL
+        out_csv = os.path.join(run_dir, "datasets_urls.csv")
+        out_harvested = os.path.join(run_dir, "harvested")
+
+        run_cmd(
+            ["python", os.path.join(scripts_dir, "fetch_zenodo.py"), "--data", merge_ttl, "--out-csv", out_csv, "--out-dir", out_harvested],
+            cwd=run_dir,
+            env=env,
+        )
+
+        print("Harvester done. Output:", run_dir)
+
+    @task()
+    def mark_success(ti=None):
+        run_dir = ti.xcom_pull(task_ids="init_data_dir", key="run_dir")
+        Variable.set(LAST_SUCCESSFUL_HARVESTER_ZENODO_RUN_VARIABLE_NAME, run_dir)
+        print(f"Set {LAST_SUCCESSFUL_HARVESTER_ZENODO_RUN_VARIABLE_NAME}={run_dir}")
+
+    init = init_data_dir()
+    scripts = fetchscripts()
+    harvest = run_harvester()
+    done = mark_success()
+
+    init >> scripts >> harvest >> done
+
+
+harvester_zenodo()

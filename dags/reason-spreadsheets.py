@@ -12,7 +12,7 @@ LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "last_sucessfull_merge_run"
 LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "last_sucessfull_reason_run"
 
 IN_FILE = "spreadsheets_asserted.ttl"
-OUT_FILE = "spreadsheets_inferences.owl"
+OUT_FILE = "spreadsheets_inferences.ttl"
 
 @dag(
     schedule=None,

@@ -4,7 +4,6 @@
 import argparse
 import json
 import os
-import time
 import tempfile
 import hashlib
 import contextlib
@@ -12,9 +11,9 @@ import warnings
 from pathlib import Path
 import subprocess
 from typing import Iterable, Set, List, Dict, Any
-import rdflib
+
 from rdflib import Graph, URIRef, RDF, Literal, Namespace, BNode
-from rdflib.namespace import RDF, RDFS, OWL, SKOS, DCTERMS, XSD
+from rdflib.namespace import RDFS, OWL, SKOS, XSD
 
 # rdflib Dataset fallback (older versions)
 try:
@@ -22,6 +21,7 @@ try:
 
     def new_dataset():
         return RDFDataset()
+
 except Exception:
     from rdflib import ConjunctiveGraph as RDFDataset  # rdflib <= 5.x
 
@@ -57,31 +57,30 @@ STATS_TTL = os.environ.get("STATS_TTL", "data/sparql_endpoints/dataset_stats.ttl
 NAMED_GRAPHS_DIR = os.environ.get("NAMED_GRAPHS_DIR", "data/sparql_endpoints/named_graphs/").rstrip("/") + "/"
 
 # Namespaces
-STAT = Namespace("https://purls.helmholtz-metadaten.de/msekg/stat/")
 VOID = Namespace("http://rdfs.org/ns/void#")
 
-# Functionality keys → stable graph IRIs per endpoint
+# Functionality keys → deterministic graph IRIs per endpoint
 FUNC_CLASSES = "classes"
 FUNC_CLASS_HIER = "classHierarchy"
 FUNC_TBOX = "tbox"
 
 
-# ------------------ CLI (NEW) ------------------
+# ------------------ CLI ------------------
 def parse_args():
     p = argparse.ArgumentParser(
-        description="Harvest SPARQL endpoints from an input Turtle catalog and write stats + named-graph snapshots."
+        description="Harvest SPARQL endpoints from an input Turtle catalog and write named-graph snapshots + annotation stats."
     )
     p.add_argument("--all-ttl", required=True, help="Input Turtle catalog (e.g. spreadsheets_asserted.ttl)")
     p.add_argument("--mwo-owl", required=True, help="Path to MWO ontology file (mwo-full.owl)")
-    p.add_argument("--state-json", required=True, help="State JSON output path")
+    p.add_argument("--state-json", required=True, help="State JSON output path (optional; mapping/debug only)")
     p.add_argument("--summary-json", required=True, help="Summary JSON output path")
-    p.add_argument("--stats-ttl", required=True, help="Stats TTL output path")
+    p.add_argument("--stats-ttl", required=True, help="Stats TTL output path (annotation-only graph)")
     p.add_argument("--named-graphs-dir", required=True, help="Directory for named graph outputs (.nq/.ttl)")
 
     p.add_argument(
         "--base-graph-iri",
         default=BASE_GRAPH_IRI,
-        help="Base IRI for minted graph IRIs (default from env/defaults).",
+        help="Base IRI for named graphs (default from env/defaults).",
     )
     p.add_argument(
         "--request-timeout",
@@ -157,7 +156,7 @@ def safe_overwrite_ttl(path: str, graph: Graph):
     os.close(fd)
     try:
         graph.serialize(destination=tmp_path, format="turtle")
-        os.replace(tmp_path, p)  # atomic if same filesystem
+        os.replace(tmp_path, p)
     except Exception:
         with contextlib.suppress(Exception):
             os.remove(tmp_path)
@@ -169,51 +168,32 @@ def looks_like_html(s: str) -> bool:
     return t.startswith("<!doctype html") or t.startswith("<html")
 
 
-def now_ts_ms() -> int:
-    return int(time.time() * 1000)
-
-
-def migrate_old_state_to_new(state: Dict[str, Any]) -> Dict[str, Any]:
-    # New shape: {"by_endpoint": { <url>: { "classes": iri, "classHierarchy": iri, "tbox": iri } } }
-    if "by_endpoint" in state and isinstance(state["by_endpoint"], dict):
-        return state
-    new_state = {"by_endpoint": {}}
-    for k, v in list(state.items()):
-        if isinstance(v, list) and k.startswith("http"):
-            if v:
-                new_state["by_endpoint"].setdefault(k, {})[FUNC_CLASSES] = v[-1]
-    return new_state
-
-
-def iri_timestamp_fragment(graph_iri: str) -> str:
-    frag = graph_iri.rstrip("/").split("/")[-1]
-    return "".join(ch for ch in frag if ch.isalnum() or ch in ("_", "-"))
-
-
-def get_or_create_graph_iri(state: Dict[str, Any], endpoint_url: str, func_key: str) -> str:
+def _stable_endpoint_key(endpoint_url: str) -> str:
     """
-    Stable IRI per (endpoint, functionality). When minting, ensure the timestamp
-    isn't already used by another functionality for this endpoint; if so, increment.
+    Canonicalize endpoint string so trivial differences don't change graph IRIs.
     """
-    state.setdefault("by_endpoint", {})
-    per_ep = state["by_endpoint"].setdefault(endpoint_url, {})
+    u = endpoint_url.strip()
+    # normalize trailing slash
+    u = u[:-1] if u.endswith("/") else u
+    return u
 
-    iri = per_ep.get(func_key)
-    if iri:
-        return iri
 
-    used_ts = set()
-    for existing in per_ep.values():
-        if isinstance(existing, str) and existing.startswith(BASE_GRAPH_IRI):
-            used_ts.add(iri_timestamp_fragment(existing))
+def deterministic_graph_iri(endpoint_url: str, func_key: str) -> str:
+    """
+    Deterministic named-graph IRI from (endpoint_url, func_key).
+    No timestamps, no state dependence.
+    """
+    ep = _stable_endpoint_key(endpoint_url)
+    payload = f"{func_key}|{ep}".encode("utf-8")
+    h = hashlib.sha256(payload).hexdigest()[:24]  # 96 bits
+    return f"{BASE_GRAPH_IRI}snapshot/sparql/{func_key}/{h}"
 
-    ts = now_ts_ms()
-    while str(ts) in used_ts:
-        ts += 1
 
-    iri = f"{BASE_GRAPH_IRI}{ts}"
-    per_ep[func_key] = iri
-    return iri
+def file_stem_for_graph_iri(graph_iri: str) -> str:
+    """
+    Deterministic filename stem from the graph IRI.
+    """
+    return hashlib.sha1(graph_iri.encode("utf-8")).hexdigest()[:16]
 
 
 # ------------------ SPARQL helpers ------------------
@@ -463,26 +443,14 @@ WHERE {
 
 
 def q_construct_tbox_plain() -> str:
-    # TBox approximation: pull axioms about classes and properties (no instances)
     return """
-CONSTRUCT {
-  ?s ?p ?o .
-}
+CONSTRUCT { ?s ?p ?o . }
 WHERE {
-  {
-    ?s a owl:Class .
-    ?s ?p ?o .
-  }
+  { ?s a owl:Class . ?s ?p ?o . }
   UNION
-  {
-    ?s a owl:ObjectProperty .
-    ?s ?p ?o .
-  }
+  { ?s a owl:ObjectProperty . ?s ?p ?o . }
   UNION
-  {
-    ?s a owl:DatatypeProperty .
-    ?s ?p ?o .
-  }
+  { ?s a owl:DatatypeProperty . ?s ?p ?o . }
 }
 """
 
@@ -511,7 +479,7 @@ WHERE {
 GROUP BY ?c
 """
 
-# Used terms (classes as rdf:type, and all predicates) → for void:vocabulary
+# Used terms → for void:vocabulary
 Q_TERMS_USED = """
 SELECT DISTINCT ?term
 WHERE {
@@ -595,10 +563,6 @@ def batch_values(items: Iterable[URIRef], batch_size: int = 150) -> List[List[UR
     return out
 
 
-def uris_from_bindings_set(bindings: list[dict], varname: str) -> Set[URIRef]:
-    return uris_from_bindings(bindings, varname)
-
-
 def reused_classes(ep_url: str, class_iris: Set[URIRef]) -> Set[URIRef]:
     reused: Set[URIRef] = set()
     for chunk in batch_values(class_iris):
@@ -609,7 +573,7 @@ def reused_classes(ep_url: str, class_iris: Set[URIRef]) -> Set[URIRef]:
           {{ ?c a owl:Class . }} UNION {{ ?x a ?c . }}
         }}
         """
-        reused |= uris_from_bindings_set(run_select(ep_url, q, REQUEST_TIMEOUT), "c")
+        reused |= uris_from_bindings(run_select(ep_url, q, REQUEST_TIMEOUT), "c")
     return reused
 
 
@@ -623,7 +587,7 @@ def reused_objprops(ep_url: str, prop_iris: Set[URIRef]) -> Set[URIRef]:
           {{ ?p a owl:ObjectProperty . }} UNION {{ ?s ?p ?o . FILTER(isIRI(?o)) }}
         }}
         """
-        reused |= uris_from_bindings_set(run_select(ep_url, q, REQUEST_TIMEOUT), "p")
+        reused |= uris_from_bindings(run_select(ep_url, q, REQUEST_TIMEOUT), "p")
     return reused
 
 
@@ -637,7 +601,7 @@ def reused_dataprops(ep_url: str, prop_iris: Set[URIRef]) -> Set[URIRef]:
           {{ ?p a owl:DatatypeProperty . }} UNION {{ ?s ?p ?o . FILTER(isLiteral(?o)) }}
         }}
         """
-        reused |= uris_from_bindings_set(run_select(ep_url, q, REQUEST_TIMEOUT), "p")
+        reused |= uris_from_bindings(run_select(ep_url, q, REQUEST_TIMEOUT), "p")
     return reused
 
 
@@ -710,10 +674,68 @@ def namespace_iri(u: str) -> str:
     return u[: i + 1] if i >= 0 else u
 
 
+def make_stats_comment(
+    ep_url: str,
+    num_classes: int,
+    num_objp: int,
+    num_datp: int,
+    num_inst: int,
+    vocab_ns: Set[str],
+    mwo_classes_used: Set[URIRef],
+    mwo_objp_used: Set[URIRef],
+    mwo_datp_used: Set[URIRef],
+) -> str:
+    """
+    Single annotation string; no new predicates.
+    Keep it bounded to avoid gigantic literals.
+    """
+    MAX_LIST = 50
+
+    def fmt_list(title: str, iris: Set[URIRef]) -> str:
+        iris_s = sorted((str(x) for x in iris), key=str)
+        if not iris_s:
+            return f"{title}: 0"
+        head = iris_s[:MAX_LIST]
+        more = len(iris_s) - len(head)
+        lines = "\n  - ".join([""] + head)
+        suffix = f"\n  ... (+{more} more)" if more > 0 else ""
+        return f"{title}: {len(iris_s)}{lines}{suffix}"
+
+    vocab_s = sorted(vocab_ns)[:MAX_LIST]
+    vocab_more = len(vocab_ns) - len(vocab_s)
+    vocab_lines = "\n  - ".join([""] + vocab_s) if vocab_s else ""
+    vocab_suffix = f"\n  ... (+{vocab_more} more)" if vocab_more > 0 else ""
+
+    return (
+        f"SPARQL endpoint: {ep_url}\n"
+        "Counts:\n"
+        f"- classes: {num_classes}\n"
+        f"- objectProperties: {num_objp}\n"
+        f"- dataProperties: {num_datp}\n"
+        f"- propertiesTotal: {num_objp + num_datp}\n"
+        f"- instances: {num_inst}\n"
+        "\n"
+        "Vocabularies (namespaces observed):\n"
+        + (f"- total: {len(vocab_ns)}{vocab_lines}{vocab_suffix}\n" if vocab_ns else "- total: 0\n")
+        + "\n"
+        "Reused from MWO (heuristic):\n"
+        f"- classes: {len(mwo_classes_used)}\n"
+        f"- objectProperties: {len(mwo_objp_used)}\n"
+        f"- dataProperties: {len(mwo_datp_used)}\n"
+        "\n"
+        + fmt_list("MWO classes reused", mwo_classes_used)
+        + "\n\n"
+        + fmt_list("MWO objectProperties reused", mwo_objp_used)
+        + "\n\n"
+        + fmt_list("MWO dataProperties reused", mwo_datp_used)
+    )
+
+
 # ------------------ Main ------------------
 def main():
+    # state is now OPTIONAL mapping/debug only; determinism does NOT depend on it
     state = load_state(STATE_JSON)
-    state = migrate_old_state_to_new(state)
+    state.setdefault("by_endpoint", {})
 
     g_all, discovered = discover_from_all_ttl(ALL_TTL)
     if not discovered:
@@ -723,22 +745,17 @@ def main():
     mwo_classes, mwo_objprops, mwo_datprops = load_mwo_terms(MWO_OWL_PATH)
     print(f"Loaded MWO terms: classes={len(mwo_classes)}, objProps={len(mwo_objprops)}, dataProps={len(mwo_datprops)}")
 
+    # "stats" graph uses existing vocabularies + annotation properties only
     stats = Graph()
-    stats.bind("stat", STAT)
     stats.bind("rdfs", RDFS)
     stats.bind("owl", OWL)
     stats.bind("void", VOID)
     stats.bind("rdf", RDF)
-    stats.bind("rdfs", RDFS)
-    stats.bind("owl", OWL)
     stats.bind("skos", SKOS)
-    stats.bind("dcterms", DCTERMS)
-    stats.bind("schema", Namespace("http://schema.org/"))
     stats.bind("obo", Namespace("http://purl.obolibrary.org/obo/"))
     stats.bind("mwo", Namespace("http://purls.helmholtz-metadaten.de/mwo/"))
 
     summary = []
-
     Path(NAMED_GRAPHS_DIR).mkdir(parents=True, exist_ok=True)
 
     for rec in discovered:
@@ -746,17 +763,25 @@ def main():
         ep_url = rec["endpoint_url"]
         datasets = rec["datasets"]
 
-        iri_classes = get_or_create_graph_iri(state, ep_url, FUNC_CLASSES)
-        iri_hier = get_or_create_graph_iri(state, ep_url, FUNC_CLASS_HIER)
-        iri_tbox = get_or_create_graph_iri(state, ep_url, FUNC_TBOX)
+        # -------- Deterministic graph IRIs (no timestamps) --------
+        iri_classes = deterministic_graph_iri(ep_url, FUNC_CLASSES)
+        iri_hier = deterministic_graph_iri(ep_url, FUNC_CLASS_HIER)
+        iri_tbox = deterministic_graph_iri(ep_url, FUNC_TBOX)
 
-        stamp_classes = iri_timestamp_fragment(iri_classes)
-        stamp_hier = iri_timestamp_fragment(iri_hier)
-        stamp_tbox = iri_timestamp_fragment(iri_tbox)
+        # deterministic filenames
+        stem_classes = file_stem_for_graph_iri(iri_classes)
+        stem_hier = file_stem_for_graph_iri(iri_hier)
+        stem_tbox = file_stem_for_graph_iri(iri_tbox)
 
-        files_classes = (Path(f"{NAMED_GRAPHS_DIR}{stamp_classes}.nq"), Path(f"{NAMED_GRAPHS_DIR}{stamp_classes}.ttl"))
-        files_hier = (Path(f"{NAMED_GRAPHS_DIR}{stamp_hier}.nq"), Path(f"{NAMED_GRAPHS_DIR}{stamp_hier}.ttl"))
-        files_tbox = (Path(f"{NAMED_GRAPHS_DIR}{stamp_tbox}.nq"), Path(f"{NAMED_GRAPHS_DIR}{stamp_tbox}.ttl"))
+        files_classes = (Path(f"{NAMED_GRAPHS_DIR}{stem_classes}.nq"), Path(f"{NAMED_GRAPHS_DIR}{stem_classes}.ttl"))
+        files_hier = (Path(f"{NAMED_GRAPHS_DIR}{stem_hier}.nq"), Path(f"{NAMED_GRAPHS_DIR}{stem_hier}.ttl"))
+        files_tbox = (Path(f"{NAMED_GRAPHS_DIR}{stem_tbox}.nq"), Path(f"{NAMED_GRAPHS_DIR}{stem_tbox}.ttl"))
+
+        # optional: store mapping for debugging
+        state["by_endpoint"].setdefault(ep_url, {})
+        state["by_endpoint"][ep_url][FUNC_CLASSES] = iri_classes
+        state["by_endpoint"][ep_url][FUNC_CLASS_HIER] = iri_hier
+        state["by_endpoint"][ep_url][FUNC_TBOX] = iri_tbox
 
         def one(q):
             return literal_int(run_select(ep_url, q, REQUEST_TIMEOUT), "n")
@@ -801,28 +826,39 @@ def main():
             if t:
                 vocab_ns.add(namespace_iri(t))
 
+        comment = make_stats_comment(
+            ep_url=ep_url,
+            num_classes=num_classes,
+            num_objp=num_objp,
+            num_datp=num_datp,
+            num_inst=num_inst,
+            vocab_ns=vocab_ns,
+            mwo_classes_used=mwo_classes_used,
+            mwo_objp_used=mwo_objp_used,
+            mwo_datp_used=mwo_datp_used,
+        )
+
         for ds in datasets:
             stats.add((ds, RDF.type, DATASET_TYPE))
             stats.add((ds, IAO_0000235, ep_ind))
             stats.add((ds, VOID.sparqlEndpoint, URIRef(ep_url)))
 
+            # Keep VoID core stats (existing vocabulary)
             stats.add((ds, VOID.classes, Literal(num_classes, datatype=XSD.integer)))
             stats.add((ds, VOID.properties, Literal(num_props, datatype=XSD.integer)))
             stats.add((ds, VOID.entities, Literal(num_inst, datatype=XSD.integer)))
 
-            stats.add((ds, STAT.numberOfObjectProperties, Literal(num_objp, datatype=XSD.integer)))
-            stats.add((ds, STAT.numberOfDataProperties, Literal(num_datp, datatype=XSD.integer)))
+            # Stats as annotation only
+            stats.add((ds, RDFS.comment, Literal(comment)))
 
-            stats.add((ds, STAT.numberOfClassesReusedFromMWO, Literal(len(mwo_classes_used), datatype=XSD.integer)))
-            stats.add((ds, STAT.numberOfObjectPropertiesReusedFromMWO, Literal(len(mwo_objp_used), datatype=XSD.integer)))
-            stats.add((ds, STAT.numberOfDataPropertiesReusedFromMWO, Literal(len(mwo_datp_used), datatype=XSD.integer)))
-
+            # Link the three named graphs
             for iri in (iri_classes, iri_hier, iri_tbox):
                 stats.add((ds, HAS_GRAPH_PRED, URIRef(iri)))
                 t = (ds, HAS_GRAPH_PRED, URIRef(iri))
                 if t not in g_all:
                     g_all.add(t)
 
+            # Keep VoID classPartition
             for b in inst_bindings:
                 c = b.get("c", {}).get("value")
                 n = b.get("n", {}).get("value")
@@ -881,6 +917,7 @@ def main():
             }
         )
 
+    # merge stats into unified catalog
     for triple in stats:
         g_all.add(triple)
 
@@ -889,6 +926,7 @@ def main():
 
     safe_overwrite_ttl(STATS_TTL, stats)
 
+    # mapping/debug only
     save_state(STATE_JSON, state)
     ensure_parent(SUMMARY_JSON)
     Path(SUMMARY_JSON).write_text(json.dumps(summary, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -896,7 +934,7 @@ def main():
     print(f"\nUnified catalog + stats written to: {ALL_TTL}")
     print(f"(Stats copy also at: {STATS_TTL})")
     print(f"Named graphs directory: {NAMED_GRAPHS_DIR}")
-    print(f"State: {STATE_JSON}")
+    print(f"State: {STATE_JSON} (mapping/debug only; determinism does not depend on it)")
     print("Done.")
 
 
