@@ -132,7 +132,7 @@ def process_spreadsheets():
         cmd = (
             f"{ROBOT} merge --include-annotations true {insert} "
             f"template --merge-before --template '{os.path.join(DATA_DIR, name + '.tsv')}' "
-            f"--output '{os.path.join(DATA_DIR, name + '.owl')}'"
+            f"--output '{os.path.join(DATA_DIR, name + '.owl')}' -vvv"
         )
         cmd += " && "
         cmd += (
