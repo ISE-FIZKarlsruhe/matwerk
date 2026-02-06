@@ -1,114 +1,114 @@
 {
   "by_endpoint": {
     "https://sparql-nfdi-matwerk-02.web.vulcanus.otc.coscine.dev/": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1759747764517",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1759747764518",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1759747764519"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/c0b81c9d0ff80d6a022edc92",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/a772a1822f6ff2ead1fbe16a",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/57b032b59f72c11673db524d"
     },
     "https://ditrare.ise.fiz-karlsruhe.de/chemotion-kg/shmarql/": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315165455",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315165456",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315165457"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/b2014840eb0f69e0c5d1234d",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/305659d788de6fe52ea6a92b",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/a4eb7563763ce40e119eebca"
     },
     "https://nfdi4microbiota.de/services/sparql_query/": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315198796",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315198797",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315198798"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/adc601dd2c7c574e67cd61e2",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/a1c5206d013abe350af531ab",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/4315f10fee079bf2f663341d"
     },
     "https://orkg.org/triplestore": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315219704",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315219705",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315219706"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/0a3ac819123764180f5aeefb",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/3de4b686aed38c58cf33053f",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/9b404e2ddcff2d5b070916f0"
     },
     "https://data.gesis.org/gesiskg/sparql": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315234557",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315234558",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315234559"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/37248453b53bc539eb8129c2",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/282eef4ab819f523c9dbf2a3",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/42f0abd00524e6e9cb14bcf7"
     },
     "https://query.portal.mardi4nfdi.de/": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315340486",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315340487",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315340488"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/2f2738e3e2611906c5402f13",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/6ed90ac408979f6585054d57",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/edbd69e7a0dcfca8c529a57a"
     },
     "https://kg.nfdi4bioimage.de/#/dataset/N4BIKG/query": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315362950",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315362951",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315362952"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/5269149d2b1fe72a4d163bf9",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/1d815a876b4db4c344e613c8",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/ccfb3aa5cb9cb76d04266670"
     },
     "https://search.nfdi4chem.de/sparql": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315382077",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315382078",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315382079"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/d8ddd8b1e9888c9f75650675",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/f58ccf55bf5c8634ad271141",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/796bdb0298c0a64a45320191"
     },
     "https://nfdi4culture.de/sparql": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315410130",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315410131",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315410132"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/9e236d5a189fa826c86f8087",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/abd57d0cbd781be70a7a3deb",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/3018e8d72d7ef70471732966"
     },
     "https://nfdi.fiz-karlsruhe.de/4ds/sparql": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315432947",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315432948",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315432949"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/40fba4de5dfa6aa83ddf8f84",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/61037a66673211c263e471b9",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/48aae8e7d64b455b34f70f17"
     },
     "https://sparql.knowledgehub.nfdi4earth.de/": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315444837",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315444838",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315444839"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/b88fb42782a9ae01613b6d73",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/2554f9abe388039a0aa1b267",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/ff3deb5a350193ec50901967"
     },
     "https://nfdi.fiz-karlsruhe.de/4memory/shmarql/": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315458914",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315458915",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315458916"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/f2c28fccd1cbb7f4835093b4",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/f8779127880edfac261dd5d5",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/3b3f1d54cef594cfca772828"
     },
     "https://pmdkg.ise.fiz-karlsruhe.de/sparql": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315480209",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315480210",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315480211"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/8464776be480a4d1800f3fff",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/dc856c06e8817aeb483ddcda",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/38a4515a35a4693b916a6f06"
     },
     "https://rdfportal.org/primary/sparql": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761315494185",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761315494186",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761315494187"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/a372050f28481d3c3eadee82",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/1d12b4b38e44ff27347fbdbe",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/caf0e5ed005b2f6f900e0b6a"
     },
     "https://sparql.unhide.helmholtz-metadaten.de/": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316039934",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316039935",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316039936"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/2e590bda2f6c0ceaed2c3d5c",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/9fc3fc41ec3980bbfdf64817",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/575e4e1bbcb62c8a90c32ef6"
     },
     "https://graph.nfdi4objects.net/sparql": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316053473",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316053474",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316053475"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/e6db95ee99af07c3af9d90e5",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/34a16f5ae0bbc4d8f7a9cba0",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/e560d338ba61b59dcc37e25f"
     },
     "https://query.mbi.kgi.uni-mannheim.de/": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316078426",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316078427",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316078428"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/ae515fbb9124db3925056804",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/a92cb0dd83300975319f2369",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/7e02879c7b90da3143efd4c9"
     },
     "https://lod.b3kat.de/doc/sparql-endpoint": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316097927",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316097928",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316097929"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/23885f63c15832f0b5a92025",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/63e8399ea9f51f983c9f8669",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/4efe6e7508ae0497a96ee1d7"
     },
     "https://slod.fiz-karlsruhe.de/sparql": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316117185",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316117186",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316117187"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/8a502bbe74d26676bd4068e5",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/c048272563d3d8d83d63f695",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/22771e1bda17e5cc13b4bf2f"
     },
     "https://data.gesis.org/claimskg/sparql": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316667916",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316667917",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316667918"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/57ee974dc029552d201a42e7",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/4642540eb90be12ae3756d60",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/dcbd45d2dea5588d1dc7da02"
     },
     "https://data.gesis.org/somesci/sparql": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316687329",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316687330",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316687331"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/799fbdccf1238373b9352c60",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/fa9752baf7dd0a088be15aaa",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/7f803a627a770898d67d996e"
     },
     "https://data.gesis.org/softwarekg/sparql": {
-      "classes": "https://purls.helmholtz-metadaten.de/msekg/1761316701163",
-      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1761316701164",
-      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1761316701165"
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classes/12a8d2a8d3d3cdf1939df91b",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/7d69d59a19e99a16203f4a20",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/tbox/a4df4b1ddd0cd9c88e12a3a1"
     }
   }
 }

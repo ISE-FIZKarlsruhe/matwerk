@@ -63,12 +63,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513921413970 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513921413970"/>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17453262240811 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453262240811">
@@ -85,8 +79,8 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453262240812">
         <rdf:type rdf:resource="http://purls.helmholtz-metadaten.de/mwo/MWO_0001027"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174513921413970"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453266100519"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174532669312512"/>
         <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17453287150472"/>
         <ontology:NFDI_0001023 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17467092718062"/>
     </NamedIndividual>
@@ -192,6 +186,12 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174532669312511 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532669312511"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174532669312512 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532669312512"/>
     
 
 

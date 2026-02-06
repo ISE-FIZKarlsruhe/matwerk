@@ -184,12 +184,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/IAO_0000605 -->
-
-    <Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000605"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000642 -->
 
     <Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000642"/>
@@ -2803,16 +2797,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513921413977 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513921413977">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
-        <rdfs:label>Information Service Engineering</rdfs:label>
-        <ontology:NFDI_0001007>Information Service Engineering</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174513921413978 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513921413978">
@@ -3359,246 +3343,6 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000119"/>
         <rdfs:label>Germany</rdfs:label>
         <ontology:NFDI_0001007>Germany</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458261 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458261">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>MPIE</rdfs:label>
-        <ontology:NFDI_0001007>MPIE</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582610 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582610">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>ITM</rdfs:label>
-        <ontology:NFDI_0001007>ITM</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582611 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582611">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>IMTEK</rdfs:label>
-        <ontology:NFDI_0001007>IMTEK</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582612 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582612">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>IWM</rdfs:label>
-        <ontology:NFDI_0001007>IWM</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582613 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582613">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>KIT</rdfs:label>
-        <ontology:NFDI_0001007>KIT</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582614 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582614">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>IMWS</rdfs:label>
-        <ontology:NFDI_0001007>IMWS</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582615 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582615">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>WKK</rdfs:label>
-        <ontology:NFDI_0001007>WKK</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582616 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582616">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>IWT Bremen</rdfs:label>
-        <ontology:NFDI_0001007>IWT Bremen</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582617 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582617">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>PTB</rdfs:label>
-        <ontology:NFDI_0001007>PTB</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582618 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582618">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>MWWT</rdfs:label>
-        <ontology:NFDI_0001007>MWWT</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582619 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582619">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>DFKI</rdfs:label>
-        <ontology:NFDI_0001007>DFKI</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458262 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458262">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>MIB, SC SimTech</rdfs:label>
-        <ontology:NFDI_0001007>MIB, SC SimTech</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582620 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582620">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>KIT</rdfs:label>
-        <ontology:NFDI_0001007>KIT</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582621 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582621">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>IWS</rdfs:label>
-        <ontology:NFDI_0001007>IWS</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582622 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582622">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>CAU</rdfs:label>
-        <ontology:NFDI_0001007>CAU</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582623 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582623">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>RUB</rdfs:label>
-        <ontology:NFDI_0001007>RUB</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174513924582624 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174513924582624">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>Uni-Freiburg</rdfs:label>
-        <ontology:NFDI_0001007>Uni-Freiburg</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458263 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458263">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>BAM</rdfs:label>
-        <ontology:NFDI_0001007>BAM</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458264 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458264">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>FIZ Karlsruhe</rdfs:label>
-        <ontology:NFDI_0001007>FIZ Karlsruhe</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458265 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458265">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>FZJ</rdfs:label>
-        <ontology:NFDI_0001007>FZJ</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458266 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458266">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>ICAMS</rdfs:label>
-        <ontology:NFDI_0001007>ICAMS</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458267 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458267">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>IMM</rdfs:label>
-        <ontology:NFDI_0001007>IMM</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458268 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458268">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>ILH</rdfs:label>
-        <ontology:NFDI_0001007>ILH</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451392458269 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451392458269">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>RZ</rdfs:label>
-        <ontology:NFDI_0001007>RZ</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -5106,7 +4850,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174514749319610">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"/>
-        <rdfs:label>Elastic Constant Demo Data</rdfs:label>
+        <rdfs:label>Elastic Constant Demo Data__name__</rdfs:label>
         <ontology:NFDI_0001007>Elastic Constant Demo Data</ontology:NFDI_0001007>
     </NamedIndividual>
     
@@ -5128,16 +4872,6 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"/>
         <rdfs:label>BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6</rdfs:label>
         <ontology:NFDI_0001007>BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174514749319613 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174514749319613">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"/>
-        <rdfs:label>The MDMC-NEP Glossary of Terms</rdfs:label>
-        <ontology:NFDI_0001007>The MDMC-NEP Glossary of Terms</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -5188,16 +4922,6 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"/>
         <rdfs:label>Three-Dimensional Characterization of Deformation-induced Damage in Dual Phase Steel using Deep Learning</rdfs:label>
         <ontology:NFDI_0001007>Three-Dimensional Characterization of Deformation-induced Damage in Dual Phase Steel using Deep Learning</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174514749319619 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174514749319619">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"/>
-        <rdfs:label>Automated Segmentation of Large Image Datasets using Artificial Intelligence for Microstructure Characterisation and Damage Analysis</rdfs:label>
-        <ontology:NFDI_0001007>Automated Segmentation of Large Image Datasets using Artificial Intelligence for Microstructure Characterisation and Damage Analysis</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -7158,36 +6882,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174515949121413 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515949121413">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
-        <rdfs:label>Fiji</rdfs:label>
-        <ontology:NFDI_0001007>Fiji</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174515949121414 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515949121414">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
-        <rdfs:label>ImageJ</rdfs:label>
-        <ontology:NFDI_0001007>ImageJ</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174515949121415 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515949121415">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
-        <rdfs:label>ImageJ2</rdfs:label>
-        <ontology:NFDI_0001007>ImageJ2</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174515949121416 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515949121416">
@@ -7714,16 +7408,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451594912149 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451594912149">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
-        <rdfs:label>ParaView</rdfs:label>
-        <ontology:NFDI_0001007>ParaView</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451594912151 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451594912151">
@@ -8194,16 +7878,6 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <rdfs:label>SeeK-path</rdfs:label>
         <ontology:NFDI_0001007>SeeK-path</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/1745159491215140 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1745159491215140">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
-        <rdfs:label>CompositionSpace</rdfs:label>
-        <ontology:NFDI_0001007>CompositionSpace</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -8700,7 +8374,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515949121553">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174533170462963"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174515976939031"/>
         <rdfs:label>Virtual materials Marketplace</rdfs:label>
         <ontology:NFDI_0001007>Virtual materials Marketplace</ontology:NFDI_0001007>
         <ontology:NFDI_0010015>VIMMP</ontology:NFDI_0010015>
@@ -8816,16 +8490,6 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <rdfs:label>Pasta ELN</rdfs:label>
         <ontology:NFDI_0001007>Pasta ELN</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174515949121564 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515949121564">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
-        <rdfs:label>eLabFTW</rdfs:label>
-        <ontology:NFDI_0001007>eLabFTW</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -9337,6 +9001,12 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174515976939030 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939030"/>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/174515976939031 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174515976939031"/>
     
 
 
@@ -15634,16 +15304,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145512 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145512">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
-        <rdfs:label>Open Materials Database Software</rdfs:label>
-        <ontology:NFDI_0001007>Open Materials Database Software</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145513 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145513">
@@ -15670,26 +15330,6 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
         <rdfs:label>RO-Crate 1.1 specification</rdfs:label>
         <ontology:NFDI_0001007>RO-Crate 1.1 specification</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145516 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145516">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
-        <rdfs:label>Computational Material Sample Ontology</rdfs:label>
-        <ontology:NFDI_0001007>Computational Material Sample Ontology</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516257145517 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145517">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
-        <rdfs:label>Aluminum Elastic Modulus</rdfs:label>
-        <ontology:NFDI_0001007>Aluminum Elastic Modulus</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -15748,7 +15388,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516257145522">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000"/>
-        <rdfs:label>Pyscal</rdfs:label>
+        <rdfs:label>Pyscal__name__</rdfs:label>
         <ontology:NFDI_0001007>Pyscal</ontology:NFDI_0001007>
     </NamedIndividual>
     
@@ -16688,16 +16328,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516433604621 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516433604621">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>Quantum-mechanical condensed matter simulations with CRYSTAL __name__</rdfs:label>
-        <ontology:NFDI_0001007>Quantum-mechanical condensed matter simulations with CRYSTAL</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516433604622 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516433604622">
@@ -17164,16 +16794,6 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
         <rdfs:label>De Geest, P., Droesbeke, B., Eguinoa, I., Gaignard, A., Huber, S., Leo, S., Pireddu, L., Rodríguez-Navas, L., Sirvent, R., &amp; Soiland-Reyes, S. (2022). ro-crate-py (Version 0.7.0) [Computer software]. https://doi.org/10.5281/zenodo.3956493 __name__</rdfs:label>
         <ontology:NFDI_0001007>De Geest, P., Droesbeke, B., Eguinoa, I., Gaignard, A., Huber, S., Leo, S., Pireddu, L., Rodríguez-Navas, L., Sirvent, R., &amp; Soiland-Reyes, S. (2022). ro-crate-py (Version 0.7.0) [Computer software]. https://doi.org/10.5281/zenodo.3956493</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516433604665 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516433604665">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>TURBOMOLE: Modular program suite for ab initio quantum-chemical and condensed-matter simulations __name__</rdfs:label>
-        <ontology:NFDI_0001007>TURBOMOLE: Modular program suite for ab initio quantum-chemical and condensed-matter simulations</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -18458,16 +18078,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516779743820 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516779743820">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037"/>
-        <rdfs:label>url 441</rdfs:label>
-        <ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://codebase.helmholtz.cloud/em_glossary/em_glossary_owl</ontology:NFDI_0001008>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516779743821 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516779743821">
@@ -19378,16 +18988,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/1745167865945103 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1745167865945103">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>Metadata Extraction Tool and Schema Mapper for Scanning Electron Microscopy (SEM) images __name__</rdfs:label>
-        <ontology:NFDI_0001007>Metadata Extraction Tool and Schema Mapper for Scanning Electron Microscopy (SEM) images</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/1745167865945104 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1745167865945104">
@@ -19562,7 +19162,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594512">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>Atomistic Simulation Methods Ontology __name__</rdfs:label>
+        <rdfs:label>Atomistic Simulation Methods Ontology__name__</rdfs:label>
         <ontology:NFDI_0001007>Atomistic Simulation Methods Ontology</ontology:NFDI_0001007>
     </NamedIndividual>
     
@@ -19614,16 +19214,6 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
         <rdfs:label>Ontologies for defects: applications in atomistic simulation __name__</rdfs:label>
         <ontology:NFDI_0001007>Ontologies for defects: applications in atomistic simulation</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/1745167865945125 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1745167865945125">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>Open Crystallographic Defects Ontologies __name__</rdfs:label>
-        <ontology:NFDI_0001007>Open Crystallographic Defects Ontologies</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -19998,16 +19588,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516786594516 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594516">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>atomRDF __name__</rdfs:label>
-        <ontology:NFDI_0001007>atomRDF</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/1745167865945160 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1745167865945160">
@@ -20138,16 +19718,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516786594519 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594519">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>IUC 05: Towards better digital infrastructures and workflows for experimental labs __name__</rdfs:label>
-        <ontology:NFDI_0001007>IUC 05: Towards better digital infrastructures and workflows for experimental labs</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17451678659452 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451678659452">
@@ -20188,16 +19758,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516786594523 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594523">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>Electron Microscopy Glossary __name__</rdfs:label>
-        <ontology:NFDI_0001007>Electron Microscopy Glossary</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516786594524 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594524">
@@ -20224,16 +19784,6 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
         <rdfs:label>The MDMC-NEP Glossary of Terms __name__</rdfs:label>
         <ontology:NFDI_0001007>The MDMC-NEP Glossary of Terms</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516786594527 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594527">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>IUC 05: Towards better digital infrastructures and workflows for experimental labs __name__</rdfs:label>
-        <ontology:NFDI_0001007>IUC 05: Towards better digital infrastructures and workflows for experimental labs</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -20324,16 +19874,6 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
         <rdfs:label>Webinar on FAIR Data in Physical Sciences in NFDI: Creating and running automated workflows for material science simulations __name__</rdfs:label>
         <ontology:NFDI_0001007>Webinar on FAIR Data in Physical Sciences in NFDI: Creating and running automated workflows for material science simulations</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516786594536 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594536">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>IUC17 demonstrator __name__</rdfs:label>
-        <ontology:NFDI_0001007>IUC17 demonstrator</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -20642,7 +20182,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594564">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>Crystal Structure Ontology __name__</rdfs:label>
+        <rdfs:label>Crystal Structure Ontology__name__</rdfs:label>
         <ontology:NFDI_0001007>Crystal Structure Ontology</ontology:NFDI_0001007>
     </NamedIndividual>
     
@@ -20732,7 +20272,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594572">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>Dislocation Simulation and Model Ontology __name__</rdfs:label>
+        <rdfs:label>Dislocation Simulation and Model Ontology__name__</rdfs:label>
         <ontology:NFDI_0001007>Dislocation Simulation and Model Ontology</ontology:NFDI_0001007>
     </NamedIndividual>
     
@@ -20838,16 +20378,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516786594582 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594582">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>From electrons to phase diagrams with classical and machine learning potentials: automated workflows for materials science with pyiron __name__</rdfs:label>
-        <ontology:NFDI_0001007>From electrons to phase diagrams with classical and machine learning potentials: automated workflows for materials science with pyiron</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174516786594583 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594583">
@@ -20914,16 +20444,6 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
         <rdfs:label>Introduction to Scientific Metadata __name__</rdfs:label>
         <ontology:NFDI_0001007>Introduction to Scientific Metadata</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17451678659459 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17451678659459">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>MatWerk Schemas and Terminology Exchange __name__</rdfs:label>
-        <ontology:NFDI_0001007>MatWerk Schemas and Terminology Exchange</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -21004,16 +20524,6 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
         <rdfs:label>Long Term Interoperability of Distributed Research Data Infrastructures __name__</rdfs:label>
         <ontology:NFDI_0001007>Long Term Interoperability of Distributed Research Data Infrastructures</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174516786594598 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174516786594598">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000305"/>
-        <rdfs:label>Managing locally stored scientific data with PASTA-ELN __name__</rdfs:label>
-        <ontology:NFDI_0001007>Managing locally stored scientific data with PASTA-ELN</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -22924,15 +22434,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174532522931915 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532522931915">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
-        <rdfs:label>MatWerk Ontology</rdfs:label>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174532522931916 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532522931916">
@@ -23005,15 +22506,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174532522931923 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532522931923">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
-        <rdfs:label>Electron Microscopy Glossary</rdfs:label>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174532522931924 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532522931924">
@@ -23028,15 +22520,6 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532522931925">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
         <rdfs:label>Simulation and Data Life Cycle Labs at SCC</rdfs:label>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174532522931926 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532522931926">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
-        <rdfs:label>The MDMC-NEP Glossary of Terms</rdfs:label>
     </NamedIndividual>
     
 
@@ -23091,15 +22574,6 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532522931931">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
         <rdfs:label>Supplemental material for &quot;Molecular dynamics simulation of nanoindentation in Al and Fe&quot;, Applied Surf. Sci., 2021, DOI: 10.5281/zenodo.10850991 (2024).</rdfs:label>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174532522931932 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532522931932">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
-        <rdfs:label>Three-Dimensional Characterization of Deformation-induced Damage in Dual Phase Steel using Deep Learning</rdfs:label>
     </NamedIndividual>
     
 
@@ -23262,15 +22736,6 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532522931949">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
         <rdfs:label>OpenBis GroupSpaces</rdfs:label>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17453252293195 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453252293195">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"/>
-        <rdfs:label>Atomistic Structures discussed in &quot;Segregation-enhanced grain boundary embrittlement of recrystallised tungsten evidenced by site-specific microcantilever fracture</rdfs:label>
     </NamedIndividual>
     
 
@@ -24165,7 +23630,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532669312512">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>High Performance Computing</rdfs:label>
+        <rdfs:label>High Performance Computing__name__</rdfs:label>
         <ontology:NFDI_0001007>High Performance Computing</ontology:NFDI_0001007>
     </NamedIndividual>
     
@@ -25078,42 +24543,12 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/1745329876574118 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1745329876574118">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>Dislocation Simulation and Model Ontology</rdfs:label>
-        <ontology:NFDI_0001007>Dislocation Simulation and Model Ontology</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/1745329876574119 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1745329876574119">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>Crystal Structure Ontology</rdfs:label>
-        <ontology:NFDI_0001007>Crystal Structure Ontology</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657412 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657412">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
         <rdfs:label>Physical Information File (PIF)</rdfs:label>
         <ontology:NFDI_0001007>Physical Information File (PIF)</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/1745329876574120 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1745329876574120">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>Atomistic Simulation Methods Ontology</rdfs:label>
-        <ontology:NFDI_0001007>Atomistic Simulation Methods Ontology</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -25424,16 +24859,6 @@
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
         <rdfs:label>Characterisation Methodology Domain Ontology (CHAMEO)</rdfs:label>
         <ontology:NFDI_0001007>Characterisation Methodology Domain Ontology (CHAMEO)</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174532987657435 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174532987657435">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>Computational Material Sample Ontology</rdfs:label>
-        <ontology:NFDI_0001007>Computational Material Sample Ontology</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -26318,16 +25743,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528319 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528319">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018"/>
-        <rdfs:label>an EN AW 1050A sample is polished and indented and the load-displacement curve is recorded, which is used to calculate the Young&apos;s modulus according to the Oliver-Pharr Method. Afterwards the surface height profile is measured.</rdfs:label>
-        <ontology:NFDI_0001007>an EN AW 1050A sample is polished and indented and the load-displacement curve is recorded, which is used to calculate the Young&apos;s modulus according to the Oliver-Pharr Method. Afterwards the surface height profile is measured.</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17453302652832 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453302652832">
@@ -27114,16 +26529,6 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018"/>
         <rdfs:label>represent the scientific and infrastructural status of the Materials Science and Engineering (MSE) community</rdfs:label>
         <ontology:NFDI_0001007>represent the scientific and infrastructural status of the Materials Science and Engineering (MSE) community</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174533026528391 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533026528391">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018"/>
-        <rdfs:label>computational materials science samples (or structures), including crystalline defects</rdfs:label>
-        <ontology:NFDI_0001007>computational materials science samples (or structures), including crystalline defects</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -28463,12 +27868,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174533170462963 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174533170462963"/>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17453319483821 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453319483821">
@@ -28593,7 +27992,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453996624323">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"/>
-        <rdfs:label>Information Service Engineering</rdfs:label>
+        <rdfs:label>Information Service Engineering__name__</rdfs:label>
         <ontology:NFDI_0001007>Information Service Engineering</ontology:NFDI_0001007>
     </NamedIndividual>
     
@@ -29529,16 +28928,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174539966243369 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174539966243369">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"/>
-        <rdfs:label>Webinar on FAIR Data in Physical Sciences in NFDI: Creating and running automated workflows for material science simulations</rdfs:label>
-        <ontology:NFDI_0001007>Webinar on FAIR Data in Physical Sciences in NFDI: Creating and running automated workflows for material science simulations</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17453996624337 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17453996624337">
@@ -29565,16 +28954,6 @@
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"/>
         <rdfs:label>Workshop “FAIR Data in Plasma Science”, CAU Kiel, May 2024</rdfs:label>
         <ontology:NFDI_0001007>Workshop “FAIR Data in Plasma Science”, CAU Kiel, May 2024</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174539966243372 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174539966243372">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"/>
-        <rdfs:label>Machine Learning Modalities for Materials Science workshop: Maximizing High-Throughput Discovery and Machine Learning Efficiency Through Computational Workflows</rdfs:label>
-        <ontology:NFDI_0001007>Machine Learning Modalities for Materials Science workshop: Maximizing High-Throughput Discovery and Machine Learning Efficiency Through Computational Workflows</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -34035,16 +33414,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17461154483961 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461154483961">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>National Institute for Materials Science (NIMS)_name_</rdfs:label>
-        <ontology:NFDI_0001007>National Institute for Materials Science (NIMS)</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17461154901201 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461154901201">
@@ -34069,7 +33438,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174611559180610">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918068"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918062"/>
         <rdfs:label>Global</rdfs:label>
     </NamedIndividual>
     
@@ -34079,7 +33448,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174611559180611">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918064"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918063"/>
         <rdfs:label>Europe</rdfs:label>
     </NamedIndividual>
     
@@ -34089,7 +33458,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174611559180612">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918065"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918064"/>
         <rdfs:label>United Kingdom</rdfs:label>
     </NamedIndividual>
     
@@ -34099,7 +33468,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174611559180613">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918066"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918065"/>
         <rdfs:label>Switzerland</rdfs:label>
     </NamedIndividual>
     
@@ -34109,7 +33478,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174611559180614">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918067"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918066"/>
         <rdfs:label>USA</rdfs:label>
     </NamedIndividual>
     
@@ -34119,17 +33488,8 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174611559180615">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918068"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918067"/>
         <rdfs:label>Japan</rdfs:label>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174611559180616 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174611559180616">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107"/>
-        <rdfs:label>Europe</rdfs:label>
     </NamedIndividual>
     
 
@@ -34194,21 +33554,11 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17461155918068 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461155918068">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000300"/>
-        <rdfs:label>Europe_name</rdfs:label>
-        <ontology:NFDI_0001007>Europe</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17461155918069 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461155918069">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000107"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918062"/>
+        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17461155918061"/>
         <rdfs:label>National</rdfs:label>
     </NamedIndividual>
     
@@ -39956,102 +39306,12 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17461958840491 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461958840491">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000605"/>
-        <rdfs:label>RWTH</rdfs:label>
-        <ontology:NFDI_0001007>RWTH</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17461977116861 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17461977116861">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100"/>
         <rdfs:label>Material Sience</rdfs:label>
         <ontology:NFDI_0001007>Material Sience</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17463574521921 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17463574521921">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>Phys. Rev. Materials</rdfs:label>
-        <ontology:NFDI_0001007>Phys. Rev. Materials</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17463574521922 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17463574521922">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>Journal of Open Source Software</rdfs:label>
-        <ontology:NFDI_0001007>Journal of Open Source Software</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17463574521923 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17463574521923">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>Proc. R. Soc. A.</rdfs:label>
-        <ontology:NFDI_0001007>Proc. R. Soc. A.</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17463574521924 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17463574521924">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>Advances in Computational Mathematics</rdfs:label>
-        <ontology:NFDI_0001007>Advances in Computational Mathematics</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17463574521925 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17463574521925">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>International Journal for Numerical Methods in Engineering</rdfs:label>
-        <ontology:NFDI_0001007>International Journal for Numerical Methods in Engineering</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17463574521926 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17463574521926">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>Mathematical and Computational Applications</rdfs:label>
-        <ontology:NFDI_0001007>Mathematical and Computational Applications</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17463574521927 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17463574521927">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>Computational Mechanics - Springer</rdfs:label>
-        <ontology:NFDI_0001007>Computational Mechanics - Springer</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17463574521928 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17463574521928">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>The Journal of Chemical Physics</rdfs:label>
-        <ontology:NFDI_0001007>The Journal of Chemical Physics</ontology:NFDI_0001007>
     </NamedIndividual>
     
 
@@ -42068,15 +41328,6 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174635796512088">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014"/>
         <rdfs:label>publication publishing process 88</rdfs:label>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174635796512089 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174635796512089">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014"/>
-        <rdfs:label>publication publishing process 89</rdfs:label>
     </NamedIndividual>
     
 
@@ -44196,15 +43447,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174635808828589 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174635808828589">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193"/>
-        <rdfs:label>PublisherRole 89</rdfs:label>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17463580882859 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17463580882859">
@@ -46316,15 +45558,6 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174635831543188">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
         <rdfs:label>DocumentPublishingDate 88</rdfs:label>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174635831543189 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174635831543189">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/BFO_0000008"/>
-        <rdfs:label>DocumentPublishingDate 89</rdfs:label>
     </NamedIndividual>
     
 
@@ -49445,15 +48678,6 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359141244304">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
         <rdfs:label>WrittenName 404</rdfs:label>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/1746359141244305 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359141244305">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>WrittenName 405</rdfs:label>
     </NamedIndividual>
     
 
@@ -54372,15 +53596,6 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359633099226">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
         <rdfs:label>RoleWebsite 404</rdfs:label>
-    </NamedIndividual>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/1746359633099227 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359633099227">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"/>
-        <rdfs:label>RoleWebsite 405</rdfs:label>
     </NamedIndividual>
     
 
@@ -59598,15 +58813,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/1746359749295405 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359749295405">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000429"/>
-        <rdfs:label>RoleEmail 405</rdfs:label>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/1746359749295406 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359749295406">
@@ -62754,16 +61960,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174637702929843 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174637702929843">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>The MDMC-NEP Glossary of Terms</rdfs:label>
-        <ontology:NFDI_0001007>The MDMC-NEP Glossary of Terms</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174637702929844 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174637702929844">
@@ -62904,21 +62100,11 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174637702929857 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174637702929857">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>pyscal</rdfs:label>
-        <ontology:NFDI_0001007>pyscal</ontology:NFDI_0001007>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/174637702929858 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174637702929858">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>atomRDF</rdfs:label>
+        <rdfs:label>atomRDF__name__</rdfs:label>
         <ontology:NFDI_0001007>atomRDF</ontology:NFDI_0001007>
     </NamedIndividual>
     
@@ -62948,7 +62134,7 @@
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174637702929860">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
-        <rdfs:label>CompositionSpace</rdfs:label>
+        <rdfs:label>CompositionSpace__name__</rdfs:label>
         <ontology:NFDI_0001007>CompositionSpace</ontology:NFDI_0001007>
     </NamedIndividual>
     
@@ -67116,6 +66302,16 @@
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17695106617941">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014"/>
         <rdfs:label>dataset publishing process 23</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://purls.helmholtz-metadaten.de/msekg/17702416491601 -->
+
+    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17702416491601">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/IAO_0000590"/>
+        <rdfs:label>Open Materials Database Software_name_</rdfs:label>
+        <ontology:NFDI_0001007>Open Materials Database Software</ontology:NFDI_0001007>
     </NamedIndividual>
 </rdf:RDF>
 

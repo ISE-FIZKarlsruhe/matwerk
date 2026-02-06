@@ -9540,12 +9540,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174635732584489 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174635732584489"/>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17463573258449 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17463573258449"/>
@@ -10953,12 +10947,6 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174635796512088 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174635796512088"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174635796512089 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174635796512089"/>
     
 
 
@@ -13940,19 +13928,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174635808828589 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174635808828589">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000193"/>
-        <obo:BFO_0000054 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174635796512089"/>
-        <obo:BFO_0000197 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174635732584489"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746359633099227"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746359749295405"/>
-        <rdfs:label>PublisherRole 89</rdfs:label>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17463580882859 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17463580882859">
@@ -16013,12 +15988,6 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/1746359633099226 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359633099226"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/1746359633099227 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359633099227"/>
     
 
 
@@ -19445,12 +19414,6 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/1746359749295404 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359749295404"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/1746359749295405 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359749295405"/>
     
 
 

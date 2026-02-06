@@ -39,8 +39,6 @@ https://purls.helmholtz-metadaten.de/msekg/174515976939036	abbreviation textual 
 https://purls.helmholtz-metadaten.de/msekg/174515976939037	abbreviation textual entity	MODNet	MODNet
 https://purls.helmholtz-metadaten.de/msekg/174515976939038	abbreviation textual entity	OACIS	OACIS
 https://purls.helmholtz-metadaten.de/msekg/174515976939039	abbreviation textual entity	SEAMM	SEAMM
-https://purls.helmholtz-metadaten.de/msekg/174515976939040	abbreviation textual entity	DGM	DGM
-https://purls.helmholtz-metadaten.de/msekg/174515976939041	abbreviation textual entity	MPCDF	MPCDF
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001077	named individual	M.Sc.	M.Sc.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001072	named individual	Dr.	Dr.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001084	named individual	PD Dr.	PD Dr.
@@ -55,101 +53,6 @@ https://purls.helmholtz-metadaten.de/msekg/17453287150472	abbreviation textual e
 https://purls.helmholtz-metadaten.de/msekg/17453287150473	abbreviation textual entity	JSC	JSC
 https://purls.helmholtz-metadaten.de/msekg/17453287150474	abbreviation textual entity	SCC	SCC
 https://purls.helmholtz-metadaten.de/msekg/17453287150475	abbreviation textual entity	IBC	IBC
-https://purls.helmholtz-metadaten.de/msekg/17453317046291	abbreviation textual entity	CMSO	CMSO
-https://purls.helmholtz-metadaten.de/msekg/17453317046292	abbreviation textual entity	PMDCO	PMDCO
-https://purls.helmholtz-metadaten.de/msekg/17453317046293	abbreviation textual entity	EMMO	EMMO
-https://purls.helmholtz-metadaten.de/msekg/17453317046294	abbreviation textual entity	EMMO_mechanical_testing	EMMO_mechanical_testing
-https://purls.helmholtz-metadaten.de/msekg/17453317046295	abbreviation textual entity	EMMO_microstructure	EMMO_microstructure
-https://purls.helmholtz-metadaten.de/msekg/17453317046296	abbreviation textual entity	OBO	OBO
-https://purls.helmholtz-metadaten.de/msekg/17453317046297	abbreviation textual entity	SUMO	SUMO
-https://purls.helmholtz-metadaten.de/msekg/17453317046298	abbreviation textual entity	DOLCE	DOLCE
-https://purls.helmholtz-metadaten.de/msekg/17453317046299	abbreviation textual entity	SSN	SSN
-https://purls.helmholtz-metadaten.de/msekg/174533170462910	abbreviation textual entity	SP	SP
-https://purls.helmholtz-metadaten.de/msekg/174533170462911	abbreviation textual entity	MSEO	MSEO
-https://purls.helmholtz-metadaten.de/msekg/174533170462912	abbreviation textual entity	CCO	CCO
-https://purls.helmholtz-metadaten.de/msekg/174533170462913	abbreviation textual entity	BWMD-MID	BWMD-MID
-https://purls.helmholtz-metadaten.de/msekg/174533170462914	abbreviation textual entity	BWMD-DOMAIN	BWMD-DOMAIN
-https://purls.helmholtz-metadaten.de/msekg/174533170462915	abbreviation textual entity	MOL_TENSILE	MOL_TENSILE
-https://purls.helmholtz-metadaten.de/msekg/174533170462916	abbreviation textual entity	LPBFO	LPBFO
-https://purls.helmholtz-metadaten.de/msekg/174533170462917	abbreviation textual entity	PROV	PROV
-https://purls.helmholtz-metadaten.de/msekg/174533170462918	abbreviation textual entity	GPO	GPO
-https://purls.helmholtz-metadaten.de/msekg/174533170462919	abbreviation textual entity	EMMO_BVC	EMMO_BVC
-https://purls.helmholtz-metadaten.de/msekg/174533170462920	abbreviation textual entity	EMMO_crystallography	EMMO_crystallography
-https://purls.helmholtz-metadaten.de/msekg/174533170462921	abbreviation textual entity	CIF-core	CIF-core
-https://purls.helmholtz-metadaten.de/msekg/174533170462922	abbreviation textual entity	EMMO_datamodel	EMMO_datamodel
-https://purls.helmholtz-metadaten.de/msekg/174533170462923	abbreviation textual entity	EMMO_mappings	EMMO_mappings
-https://purls.helmholtz-metadaten.de/msekg/174533170462924	abbreviation textual entity	EMMO_atomistic	EMMO_atomistic
-https://purls.helmholtz-metadaten.de/msekg/174533170462925	abbreviation textual entity	MatOnto	MatOnto
-https://purls.helmholtz-metadaten.de/msekg/174533170462926	abbreviation textual entity	MatOWL	MatOWL
-https://purls.helmholtz-metadaten.de/msekg/174533170462927	abbreviation textual entity	MATINFO	MATINFO
-https://purls.helmholtz-metadaten.de/msekg/174533170462928	abbreviation textual entity	Plinius	Plinius
-https://purls.helmholtz-metadaten.de/msekg/174533170462929	abbreviation textual entity	PREMAP	PREMAP
-https://purls.helmholtz-metadaten.de/msekg/174533170462930	abbreviation textual entity	ONTORULE	ONTORULE
-https://purls.helmholtz-metadaten.de/msekg/174533170462931	abbreviation textual entity	SLACKS	SLACKS
-https://purls.helmholtz-metadaten.de/msekg/174533170462932	abbreviation textual entity	ELSSI-EMD	ELSSI-EMD
-https://purls.helmholtz-metadaten.de/msekg/174533170462933	abbreviation textual entity	SEMMD	SEMMD
-https://purls.helmholtz-metadaten.de/msekg/174533170462934	abbreviation textual entity	NPO	NPO
-https://purls.helmholtz-metadaten.de/msekg/174533170462935	abbreviation textual entity	eNanomapper	eNanomapper
-https://purls.helmholtz-metadaten.de/msekg/174533170462936	abbreviation textual entity	MaterialsMine	MaterialsMine
-https://purls.helmholtz-metadaten.de/msekg/174533170462937	abbreviation textual entity	MMOY	MMOY
-https://purls.helmholtz-metadaten.de/msekg/174533170462938	abbreviation textual entity	MAMBO	MAMBO
-https://purls.helmholtz-metadaten.de/msekg/174533170462939	abbreviation textual entity	DISO	DISO
-https://purls.helmholtz-metadaten.de/msekg/174533170462940	abbreviation textual entity	MDO	MDO
-https://purls.helmholtz-metadaten.de/msekg/174533170462941	abbreviation textual entity	NanoMine	NanoMine
-https://purls.helmholtz-metadaten.de/msekg/174533170462942	abbreviation textual entity	DEB	DEB
-https://purls.helmholtz-metadaten.de/msekg/174533170462943	abbreviation textual entity	SKOS_MDO	SKOS_MDO
-https://purls.helmholtz-metadaten.de/msekg/174533170462944	abbreviation textual entity	FreeClass	FreeClass
-https://purls.helmholtz-metadaten.de/msekg/174533170462945	abbreviation textual entity	Periodictable	Periodictable
-https://purls.helmholtz-metadaten.de/msekg/174533170462946	abbreviation textual entity	MetalAlloy	MetalAlloy
-https://purls.helmholtz-metadaten.de/msekg/174533170462947	abbreviation textual entity	EMMO_BattINFO	EMMO_BattINFO
-https://purls.helmholtz-metadaten.de/msekg/174533170462948	abbreviation textual entity	IAO	IAO
-https://purls.helmholtz-metadaten.de/msekg/174533170462949	abbreviation textual entity	CheBi	CheBi
-https://purls.helmholtz-metadaten.de/msekg/174533170462950	abbreviation textual entity	OEO	OEO
-https://purls.helmholtz-metadaten.de/msekg/174533170462951	abbreviation textual entity	PATO	PATO
-https://purls.helmholtz-metadaten.de/msekg/174533170462952	abbreviation textual entity	UO	UO
-https://purls.helmholtz-metadaten.de/msekg/174533170462953	abbreviation textual entity	OM	OM
-https://purls.helmholtz-metadaten.de/msekg/174533170462954	abbreviation textual entity	QUDV	QUDV
-https://purls.helmholtz-metadaten.de/msekg/174533170462955	abbreviation textual entity	OBI	OBI
-https://purls.helmholtz-metadaten.de/msekg/174533170462956	abbreviation textual entity	NCIT	NCIT
-https://purls.helmholtz-metadaten.de/msekg/174533170462957	abbreviation textual entity	QUDT	QUDT
-https://purls.helmholtz-metadaten.de/msekg/174533170462958	abbreviation textual entity	OA	OA
-https://purls.helmholtz-metadaten.de/msekg/174533170462959	abbreviation textual entity	WILD	WILD
-https://purls.helmholtz-metadaten.de/msekg/174533170462960	abbreviation textual entity	P-PLAN	P-PLAN
-https://purls.helmholtz-metadaten.de/msekg/174533170462961	abbreviation textual entity	SAREF	SAREF
-https://purls.helmholtz-metadaten.de/msekg/174533170462962	abbreviation textual entity	OSMO	OSMO
-https://purls.helmholtz-metadaten.de/msekg/174533170462963	abbreviation textual entity	VIMMP	VIMMP
-https://purls.helmholtz-metadaten.de/msekg/174533170462964	abbreviation textual entity	BMO	BMO
-https://purls.helmholtz-metadaten.de/msekg/174533170462965	abbreviation textual entity	MOL_BRINELL	MOL_BRINELL
-https://purls.helmholtz-metadaten.de/msekg/174533170462966	abbreviation textual entity	AMONTOLOGY	AMONTOLOGY
-https://purls.helmholtz-metadaten.de/msekg/174533170462967	abbreviation textual entity	SSOS	SSOS
-https://purls.helmholtz-metadaten.de/msekg/174533170462968	abbreviation textual entity	CHAMEO	CHAMEO
-https://purls.helmholtz-metadaten.de/msekg/174533170462969	abbreviation textual entity	MatVoc	MatVoc
-https://purls.helmholtz-metadaten.de/msekg/174533170462970	abbreviation textual entity	M4I	M4I
-https://purls.helmholtz-metadaten.de/msekg/174533170462971	abbreviation textual entity	OPMW	OPMW
-https://purls.helmholtz-metadaten.de/msekg/174533170462972	abbreviation textual entity	MAT	MAT
-https://purls.helmholtz-metadaten.de/msekg/174533170462973	abbreviation textual entity	NFDIcore	NFDIcore
-https://purls.helmholtz-metadaten.de/msekg/174533170462974	abbreviation textual entity	MWO	MWO
-https://purls.helmholtz-metadaten.de/msekg/174533170462975	abbreviation textual entity	tribAIn	tribAIn
-https://purls.helmholtz-metadaten.de/msekg/174533170462976	abbreviation textual entity	EXPO	EXPO
-https://purls.helmholtz-metadaten.de/msekg/174533170462977	abbreviation textual entity	CHMO	CHMO
-https://purls.helmholtz-metadaten.de/msekg/174533170462978	abbreviation textual entity	CHEMINF	CHEMINF
-https://purls.helmholtz-metadaten.de/msekg/174533170462979	abbreviation textual entity	OIE characterisation-methods	OIE characterisation-methods
-https://purls.helmholtz-metadaten.de/msekg/174533170462980	abbreviation textual entity	OIE manufacturing	OIE manufacturing
-https://purls.helmholtz-metadaten.de/msekg/174533170462981	abbreviation textual entity	OIE materials	OIE materials
-https://purls.helmholtz-metadaten.de/msekg/174533170462982	abbreviation textual entity	OIE software	OIE software
-https://purls.helmholtz-metadaten.de/msekg/174533170462983	abbreviation textual entity	OIE models	OIE models
-https://purls.helmholtz-metadaten.de/msekg/174533170462984	abbreviation textual entity	Photovoltaics	Photovoltaics
-https://purls.helmholtz-metadaten.de/msekg/174533170462985	abbreviation textual entity	MDS	MDS
-https://purls.helmholtz-metadaten.de/msekg/174533170462986	abbreviation textual entity	DSIM	DSIM
-https://purls.helmholtz-metadaten.de/msekg/174533170462987	abbreviation textual entity	CSO	CSO
-https://purls.helmholtz-metadaten.de/msekg/174533170462988	abbreviation textual entity	ASMO	ASMO
-https://purls.helmholtz-metadaten.de/msekg/174533170462989	abbreviation textual entity	PODO	PODO
-https://purls.helmholtz-metadaten.de/msekg/174533170462990	abbreviation textual entity	CDCO	CDCO
-https://purls.helmholtz-metadaten.de/msekg/174533170462991	abbreviation textual entity	LDO	LDO
-https://purls.helmholtz-metadaten.de/msekg/174533170462992	abbreviation textual entity	PLDO	PLDO
-https://purls.helmholtz-metadaten.de/msekg/174533170462993	abbreviation textual entity	PRIMA	PRIMA
-https://purls.helmholtz-metadaten.de/msekg/174533170462994	abbreviation textual entity	MSLE	MSLE
-https://purls.helmholtz-metadaten.de/msekg/174533170462995	abbreviation textual entity	RDO	RDO
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001070	named individual	active status	
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001071	named individual	cancelled status	
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001074	named individual	finished status	

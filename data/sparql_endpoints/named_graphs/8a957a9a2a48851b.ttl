@@ -1,0 +1,359 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+<http://purl.obolibrary.org/obo/APOLLO_SV_00000008> a owl:Class ;
+    rdfs:label "software development"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> .
+
+<http://purl.obolibrary.org/obo/BFO_0000006> a owl:Class ;
+    rdfs:label "spatial region"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141> .
+
+<http://purl.obolibrary.org/obo/BFO_0000034> a owl:Class ;
+    rdfs:label "function"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> .
+
+<http://purl.obolibrary.org/obo/IAO_0000005> a owl:Class ;
+    rdfs:label "objective specification"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> .
+
+<http://purl.obolibrary.org/obo/IAO_0000007> a owl:Class ;
+    rdfs:label "action specification"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> .
+
+<http://purl.obolibrary.org/obo/IAO_0000010> a owl:Class ;
+    rdfs:label "software"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104>,
+        <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> .
+
+<http://purl.obolibrary.org/obo/IAO_0000025> a owl:Class ;
+    rdfs:label "programming language"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> .
+
+<http://purl.obolibrary.org/obo/IAO_0000078> a owl:Class ;
+    rdfs:label "curation status specification"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000102> .
+
+<http://purl.obolibrary.org/obo/IAO_0000096> a owl:Class ;
+    rdfs:label "source code module"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> .
+
+<http://purl.obolibrary.org/obo/IAO_0000225> a owl:Class ;
+    rdfs:label "obsolescence reason specification"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000102> .
+
+<http://purl.obolibrary.org/obo/IAO_0000311> a owl:Class ;
+    rdfs:label "publication"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310>,
+        <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> .
+
+<http://purl.obolibrary.org/obo/IAO_0000409> a owl:Class ;
+    rdfs:label "denotator type"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000102> .
+
+<http://purl.obolibrary.org/obo/IAO_0000444> a owl:Class ;
+    rdfs:label "publishing process"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> .
+
+<http://www.ebi.ac.uk/swo/SWO_0000002> a owl:Class ;
+    rdfs:label "software license",
+        "licence"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/4memory/ontology/ObjectType> a owl:Class ;
+    rdfs:label "object type" ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> a owl:Class ;
+    rdfs:label "academic discipline"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/City> a owl:Class ;
+    rdfs:label "city"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Place> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Collection> a owl:Class ;
+    rdfs:label "collection"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> a owl:Class ;
+    rdfs:label "consortium"@en .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMember> a owl:Class ;
+    rdfs:label "consortium member"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Organization> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/ConsortiumMemberRole> a owl:Class ;
+    rdfs:label "consortium member role"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/ContactPointRole> a owl:Class ;
+    rdfs:label "contact point role"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Contacting> a owl:Class ;
+    rdfs:label "contacting"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Contributing> a owl:Class ;
+    rdfs:label "contributing"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/ContributorRole> a owl:Class ;
+    rdfs:label "contributor role"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Country> a owl:Class ;
+    rdfs:label "country"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Place> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/DataCurationService> a owl:Class ;
+    rdfs:label "data curation service"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/DataPortal> a owl:Class ;
+    rdfs:label "data portal"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Website> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/DatabasesService> a owl:Class ;
+    rdfs:label "databases service"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Dataset> a owl:Class ;
+    rdfs:label "dataset"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Event> a owl:Class ;
+    rdfs:label "event"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/FederalState> a owl:Class ;
+    rdfs:label "federal state"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Place> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/FundingOrganizationRole> a owl:Class ;
+    rdfs:label "funding organization role"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Glossary> a owl:Class ;
+    rdfs:label "glossary"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/LibrariesAndAPIsService> a owl:Class ;
+    rdfs:label "libraries & APIs service"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/License> a owl:Class ;
+    rdfs:label "license"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/MIME-Type> a owl:Class ;
+    rdfs:label "MIME-type"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/MediaType> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Ontology> a owl:Class ;
+    rdfs:label "ontology"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Person> a owl:Class ;
+    rdfs:label "person"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Agent> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> a owl:Class ;
+    rdfs:label "programming language"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Project> a owl:Class ;
+    rdfs:label "project"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Publication> a owl:Class ;
+    rdfs:label "publication"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310>,
+        <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/PublisherRole> a owl:Class ;
+    rdfs:label "publisher role"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Software> a owl:Class ;
+    rdfs:label "software"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104>,
+        <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Standard> a owl:Class ;
+    rdfs:label "standard"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Specification> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/StorageService> a owl:Class ;
+    rdfs:label "storage service"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/SupportAndConsultingService> a owl:Class ;
+    rdfs:label "support & consulting service"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Taxonomy> a owl:Class ;
+    rdfs:label "taxonomy"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Thesaurus> a owl:Class ;
+    rdfs:label "thesaurus"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/ToolsAndApplicationsService> a owl:Class ;
+    rdfs:label "tools & applications service"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/TrainingService> a owl:Class ;
+    rdfs:label "training service"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/WebApplicationsService> a owl:Class ;
+    rdfs:label "web applications service"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/WorkflowsAndPipelinesService> a owl:Class ;
+    rdfs:label "workflows & pipelines service"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Service> .
+
+<http://purl.obolibrary.org/obo/BFO_0000015> a owl:Class ;
+    rdfs:label "process"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> .
+
+<http://purl.obolibrary.org/obo/BFO_0000016> a owl:Class ;
+    rdfs:label "disposition"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017> .
+
+<http://purl.obolibrary.org/obo/BFO_0000029> a owl:Class ;
+    rdfs:label "site"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141> .
+
+<http://purl.obolibrary.org/obo/BFO_0000031> a owl:Class ;
+    rdfs:label "generically dependent continuant"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> .
+
+<http://purl.obolibrary.org/obo/BFO_0000040> a owl:Class ;
+    rdfs:label "material entity"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000004> .
+
+<http://purl.obolibrary.org/obo/IAO_0000027> a owl:Class ;
+    rdfs:label "data item"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/ControlledVocabulary> a owl:Class ;
+    rdfs:label "controlled vocabulary"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/MediaType> a owl:Class ;
+    rdfs:label "media type"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Organization> a owl:Class ;
+    rdfs:label "organization"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Agent> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Specification> a owl:Class ;
+    rdfs:label "specification"@en .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Website> a owl:Class ;
+    rdfs:label "website"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> .
+
+schema:CreativeWork a owl:Class ;
+    rdfs:label "CreativeWork"@en .
+
+schema:Service a owl:Class ;
+    rdfs:label "Service"@en .
+
+<http://purl.obolibrary.org/obo/BFO_0000001> a owl:Class ;
+    rdfs:label "entity"@en .
+
+<http://purl.obolibrary.org/obo/BFO_0000003> a owl:Class ;
+    rdfs:label "occurrent"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> .
+
+<http://purl.obolibrary.org/obo/BFO_0000017> a owl:Class ;
+    rdfs:label "realizable entity"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000020> .
+
+<http://purl.obolibrary.org/obo/BFO_0000019> a owl:Class ;
+    rdfs:label "quality"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000020> .
+
+<http://purl.obolibrary.org/obo/BFO_0000020> a owl:Class ;
+    rdfs:label "specifically dependent continuant"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> .
+
+<http://purl.obolibrary.org/obo/BFO_0000141> a owl:Class ;
+    rdfs:label "immaterial entity"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000004> .
+
+<http://purl.obolibrary.org/obo/IAO_0000310> a owl:Class ;
+    rdfs:label "document"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Agent> a owl:Class ;
+    rdfs:label "agent"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000004> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Resource> a owl:Class ;
+    rdfs:label "resource"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> a owl:Class ;
+    rdfs:label "technological means"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> .
+
+<http://purl.obolibrary.org/obo/BFO_0000002> a owl:Class ;
+    rdfs:label "continuant"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> .
+
+<http://purl.obolibrary.org/obo/BFO_0000004> a owl:Class ;
+    rdfs:label "independent continuant"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> .
+
+<http://purl.obolibrary.org/obo/IAO_0000102> a owl:Class ;
+    rdfs:label "data about an ontology part"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> .
+
+<http://purl.obolibrary.org/obo/IAO_0000104> a owl:Class ;
+    rdfs:label "plan specification"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Place> a owl:Class ;
+    rdfs:label "place"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000029> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> a owl:Class ;
+    rdfs:label "semantic expressivity"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> .
+
+<http://purl.obolibrary.org/obo/BFO_0000023> a owl:Class ;
+    rdfs:label "role"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017> .
+
+<http://purl.obolibrary.org/obo/OBI_0000011> a owl:Class ;
+    rdfs:label "planned process"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+<http://purl.obolibrary.org/obo/IAO_0000030> a owl:Class ;
+    rdfs:label "information content entity",
+        "information content entity"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> .
+
+<http://purl.obolibrary.org/obo/IAO_0000033> a owl:Class ;
+    rdfs:label "directive information entity"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/CreativeWork> a owl:Class ;
+    rdfs:label "creative work"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Resource>,
+        schema:CreativeWork .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Service> a owl:Class ;
+    rdfs:label "service"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Resource>,
+        schema:Service .
+

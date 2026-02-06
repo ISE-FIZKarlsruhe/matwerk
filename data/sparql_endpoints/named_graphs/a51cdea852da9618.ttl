@@ -1,0 +1,12 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://dbpedia.org/ontology/President> a owl:Class ;
+    rdfs:label "president"@en .
+
+owl:Nothing a owl:Class ;
+    rdfs:label "Nothing" .
+
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
+

@@ -1,157 +1,148 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://purls.helmholtz-metadaten.de/msekg/1758983993074> a nfdi:NFDI_0000009 ;
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986> a nfdi:NFDI_0000009 ;
     rdfs:label "https://zenodo.org/records/13937986" ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/1758983993076>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993077>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993078>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993079>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993080>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993081>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993082>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993083>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993084>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993085>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993086>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993087>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993088>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993089>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993090>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993091>,
-        <https://purls.helmholtz-metadaten.de/msekg/1758983993096> ;
-    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/1758983993075> ;
-    dcterms:created "2024-11-12T11:33:05.017878+00:00"^^xsd:dateTime ;
-    dcterms:modified "2024-11-12T11:33:06.997990+00:00"^^xsd:dateTime ;
-    dcterms:source <https://doi.org/10.5281/zenodo.13937987> ;
-    prov:wasDerivedFrom <https://doi.org/10.5281/zenodo.13937987> .
+    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/2024-10_RD_CMSX-6-Coversheet.pdf>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Microstructure-before-testing.pdf>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Test-piece-location.pdf>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/TestPieceCreepTests-TechnicalDrawing-FormA.pdf>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-78.LIS>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-80.LIS>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-81.LIS>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-82.LIS>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-85.LIS>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-89.LIS>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-91.LIS>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-94.LIS>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-95.LIS>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-97.LIS>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-98.LIS>,
+        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-99.LIS> ;
+    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/node/0> .
 
-<https://purls.helmholtz-metadaten.de/msekg/5d9b92a1cfcd44f2aa531bb2b4c6826b> a prov:Activity ;
-    prov:startedAtTime "2026-02-04T12:35:25+00:00"^^xsd:dateTime .
-
-<https://purls.helmholtz-metadaten.de/msekg/1758983993075> rdfs:label "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" .
-
-<https://purls.helmholtz-metadaten.de/msekg/1758983993076> rdfs:label "Vh5205_C-97.LIS" ;
-    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
-    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
-    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/Vh5205_C-97.LIS/content> .
-
-<https://purls.helmholtz-metadaten.de/msekg/1758983993077> rdfs:label "Microstructure-before-testing.pdf" ;
-    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
-    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
-    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/Microstructure-before-testing.pdf/content> .
-
-<https://purls.helmholtz-metadaten.de/msekg/1758983993078> rdfs:label "2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx" ;
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx> rdfs:label "2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
         <https://zenodo.org/api/records/13937987/files/2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/1758983993079> rdfs:label "TestPieceCreepTests-TechnicalDrawing-FormA.pdf" ;
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/2024-10_RD_CMSX-6-Coversheet.pdf> rdfs:label "2024-10_RD_CMSX-6-Coversheet.pdf" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/TestPieceCreepTests-TechnicalDrawing-FormA.pdf/content> .
+        <https://zenodo.org/api/records/13937987/files/2024-10_RD_CMSX-6-Coversheet.pdf/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/1758983993080> rdfs:label "Test-piece-location.pdf" ;
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Microstructure-before-testing.pdf> rdfs:label "Microstructure-before-testing.pdf" ;
+    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
+        <https://zenodo.org/api/records/13937987/files/Microstructure-before-testing.pdf/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Test-piece-location.pdf> rdfs:label "Test-piece-location.pdf" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
         <https://zenodo.org/api/records/13937987/files/Test-piece-location.pdf/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/1758983993081> rdfs:label "Vh5205_C-89.LIS" ;
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/TestPieceCreepTests-TechnicalDrawing-FormA.pdf> rdfs:label "TestPieceCreepTests-TechnicalDrawing-FormA.pdf" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/Vh5205_C-89.LIS/content> .
+        <https://zenodo.org/api/records/13937987/files/TestPieceCreepTests-TechnicalDrawing-FormA.pdf/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/1758983993082> rdfs:label "Vh5205_C-82.LIS" ;
-    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
-    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
-    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/Vh5205_C-82.LIS/content> .
-
-<https://purls.helmholtz-metadaten.de/msekg/1758983993083> rdfs:label "Vh5205_C-80.LIS" ;
-    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
-    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
-    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/Vh5205_C-80.LIS/content> .
-
-<https://purls.helmholtz-metadaten.de/msekg/1758983993084> rdfs:label "Vh5205_C-91.LIS" ;
-    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
-    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
-    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/Vh5205_C-91.LIS/content> .
-
-<https://purls.helmholtz-metadaten.de/msekg/1758983993085> rdfs:label "Vh5205_C-99.LIS" ;
-    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
-    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
-    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/Vh5205_C-99.LIS/content> .
-
-<https://purls.helmholtz-metadaten.de/msekg/1758983993086> rdfs:label "Vh5205_C-94.LIS" ;
-    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
-    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
-    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/Vh5205_C-94.LIS/content> .
-
-<https://purls.helmholtz-metadaten.de/msekg/1758983993087> rdfs:label "Vh5205_C-85.LIS" ;
-    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
-    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
-    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/Vh5205_C-85.LIS/content> .
-
-<https://purls.helmholtz-metadaten.de/msekg/1758983993088> rdfs:label "Vh5205_C-98.LIS" ;
-    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
-    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
-    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
-    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/Vh5205_C-98.LIS/content> .
-
-<https://purls.helmholtz-metadaten.de/msekg/1758983993089> rdfs:label "Vh5205_C-78.LIS" ;
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-78.LIS> rdfs:label "Vh5205_C-78.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
         <https://zenodo.org/api/records/13937987/files/Vh5205_C-78.LIS/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/1758983993090> rdfs:label "Vh5205_C-95.LIS" ;
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-80.LIS> rdfs:label "Vh5205_C-80.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/Vh5205_C-95.LIS/content> .
+        <https://zenodo.org/api/records/13937987/files/Vh5205_C-80.LIS/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/1758983993091> rdfs:label "Vh5205_C-81.LIS" ;
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-81.LIS> rdfs:label "Vh5205_C-81.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
         <https://zenodo.org/api/records/13937987/files/Vh5205_C-81.LIS/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/1758983993096> rdfs:label "2024-10_RD_CMSX-6-Coversheet.pdf" ;
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-82.LIS> rdfs:label "Vh5205_C-82.LIS" ;
     obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
-        <https://zenodo.org/api/records/13937987/files/2024-10_RD_CMSX-6-Coversheet.pdf/content> .
+        <https://zenodo.org/api/records/13937987/files/Vh5205_C-82.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-85.LIS> rdfs:label "Vh5205_C-85.LIS" ;
+    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
+        <https://zenodo.org/api/records/13937987/files/Vh5205_C-85.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-89.LIS> rdfs:label "Vh5205_C-89.LIS" ;
+    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
+        <https://zenodo.org/api/records/13937987/files/Vh5205_C-89.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-91.LIS> rdfs:label "Vh5205_C-91.LIS" ;
+    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
+        <https://zenodo.org/api/records/13937987/files/Vh5205_C-91.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-94.LIS> rdfs:label "Vh5205_C-94.LIS" ;
+    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
+        <https://zenodo.org/api/records/13937987/files/Vh5205_C-94.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-95.LIS> rdfs:label "Vh5205_C-95.LIS" ;
+    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
+        <https://zenodo.org/api/records/13937987/files/Vh5205_C-95.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-97.LIS> rdfs:label "Vh5205_C-97.LIS" ;
+    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
+        <https://zenodo.org/api/records/13937987/files/Vh5205_C-97.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-98.LIS> rdfs:label "Vh5205_C-98.LIS" ;
+    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
+        <https://zenodo.org/api/records/13937987/files/Vh5205_C-98.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/file/Vh5205_C-99.LIS> rdfs:label "Vh5205_C-99.LIS" ;
+    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    dcterms:isPartOf <https://doi.org/10.5281/zenodo.13937987> ;
+    rdfs:seeAlso <https://doi.org/10.5281/zenodo.13937987> ;
+    nfdi:NFDI_0001006 <10.5281/zenodo.13937987>,
+        <https://zenodo.org/api/records/13937987/files/Vh5205_C-99.LIS/content> .
+
+<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/13937986/node/0> rdfs:label "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" ;
+    obo:OBI_0002135 "BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6" .
 

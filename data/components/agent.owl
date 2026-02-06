@@ -7913,17 +7913,6 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174635732584489 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174635732584489">
-        <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"/>
-        <obo:BFO_0000196 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/174635808828589"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/1746359141244305"/>
-        <rdfs:label>Publisher 89</rdfs:label>
-    </NamedIndividual>
-    
-
-
     <!-- https://purls.helmholtz-metadaten.de/msekg/17463573258449 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17463573258449">
@@ -9386,12 +9375,6 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/174635808828588 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174635808828588"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/174635808828589 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/174635808828589"/>
     
 
 
@@ -11432,12 +11415,6 @@
     <!-- https://purls.helmholtz-metadaten.de/msekg/1746359141244304 -->
 
     <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359141244304"/>
-    
-
-
-    <!-- https://purls.helmholtz-metadaten.de/msekg/1746359141244305 -->
-
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/1746359141244305"/>
     
 
 
