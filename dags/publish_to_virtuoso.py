@@ -1,9 +1,15 @@
 from __future__ import annotations
+import os, sys
+
+print('getcwd:      ', os.getcwd())
+print('__file__:    ', __file__)
+local_path = os.path.dirname(__file__)
+print('adding local path', local_path)
+sys.path.append(local_path)
+
 
 import json
-import os
 from datetime import datetime
-
 from airflow.sdk import dag, task, Variable, get_current_context
 from airflow.exceptions import AirflowFailException
 from common.virtuoso import upload_ttl_file
