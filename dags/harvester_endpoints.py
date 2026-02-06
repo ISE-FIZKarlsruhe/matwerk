@@ -1,7 +1,12 @@
 from __future__ import annotations
+import os, sys
 
-import os
-import subprocess
+print('getcwd:      ', os.getcwd())
+print('__file__:    ', __file__)
+local_path = os.path.dirname(__file__)
+print('adding local path', local_path)
+sys.path.append(local_path)
+
 from datetime import datetime
 from glob import glob
 from common.utils import run_cmd, download_github_dir
