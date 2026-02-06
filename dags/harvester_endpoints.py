@@ -4,7 +4,7 @@ import os
 import subprocess
 from datetime import datetime
 from glob import glob
-from common.utils import safe_run_id, run_cmd, download_github_dir
+from common.utils import run_cmd, download_github_dir
 import requests
 
 from airflow.sdk import dag, task, Variable, get_current_context

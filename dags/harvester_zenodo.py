@@ -5,7 +5,7 @@ import subprocess
 from datetime import datetime
 
 import requests
-from common.utils import safe_run_id, run_cmd, download_github_dir
+from common.utils import run_cmd, download_github_dir
 from airflow.sdk import dag, task, Variable, get_current_context
 from airflow.exceptions import AirflowFailException
 
@@ -35,7 +35,7 @@ def harvester_zenodo():
         ctx = get_current_context()
         sharedfs = Variable.get("sharedfs")
 
-        rid = safe_run_id(ctx["dag_run"].run_id)
+        rid = ctx["dag_run"].run_id
         run_dir = os.path.join(sharedfs, "runs", ctx["dag"].dag_id, rid)
         scripts_dir = os.path.join(run_dir, "scripts")
 

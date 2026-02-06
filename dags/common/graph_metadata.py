@@ -7,7 +7,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 from urllib.parse import quote
 
-from flask import json
+import json
 
 
 def utc_now_iso_seconds() -> str:

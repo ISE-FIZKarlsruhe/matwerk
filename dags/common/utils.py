@@ -12,11 +12,6 @@ import requests
 from airflow.exceptions import AirflowFailException
 
 
-
-def safe_run_id(run_id: str) -> str:
-    return run_id.replace(":", "_").replace("+", "_").replace("/", "_")
-
-
 def run_cmd(cmd, cwd=None, env=None):
     p = subprocess.run(
         cmd,
