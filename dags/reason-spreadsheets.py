@@ -12,7 +12,11 @@ LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "last_sucessfull_merge_run"
 LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "last_sucessfull_reason_run"
 
 IN_FILE = "spreadsheets_asserted.ttl"
-OUT_FILE = "spreadsheets_inferences.ttl"
+OUT_OWL = "spreadsheets_inferences.owl"
+
+# Final output
+OUT_TTL = "spreadsheets_inferences.ttl"
+
 
 @dag(
     schedule=None,
@@ -27,46 +31,71 @@ def reason():
         run_id = ctx["dag_run"].run_id
 
         sharedfs = Variable.get("sharedfs")
-
         run_dir = os.path.join(sharedfs, "runs", ctx["dag"].dag_id, run_id)
         os.makedirs(run_dir, exist_ok=True)
         ti.xcom_push(key="datadir", value=run_dir)
 
-    def reasonCmdTemplate() -> str:
+    def sunletReasonCmdTemplate() -> str:
         REASONER = "{{ var.value.sunletcmd }}"
         DATA_DIR = "DATA_DIR"
         XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
+        # read last merge run dir from Airflow variable
         source_run_dir = "{{ var.value." + LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME + " }}"
 
         in_path = os.path.join(source_run_dir, IN_FILE)
-        out_path = os.path.join(DATA_DIR, OUT_FILE)
+        out_path = os.path.join(DATA_DIR, OUT_OWL)
 
-        # the reasoner will not merge the inferences with in original ontology, 
-        # it just creates an rdf/owl file containing the inferred axioms.
-        # (we later want to put the inferences in a separate named graph)
-
-        cmd = (f"{REASONER} --input '{in_path}' --output {out_path}")
-
+        # sunlet emits OWL/RDF (often RDF/XML). Keep it as .owl.
+        cmd = f"{REASONER} --input '{in_path}' --output '{out_path}'"
         return cmd.replace(DATA_DIR, XCOM_DATADIR)
 
-    reason = BashOperator(
+    def robotConvertCmdTemplate() -> str:
+        ROBOT = "{{ var.value.robotcmd }}"
+        DATA_DIR = "DATA_DIR"
+        XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
+
+        in_owl = os.path.join(DATA_DIR, OUT_OWL)
+        out_ttl = os.path.join(DATA_DIR, OUT_TTL)
+
+        # Convert whatever OWL syntax sunlet wrote into Turtle
+        # ROBOT auto-detects input format from content/extension.
+        cmd = f"{ROBOT} convert --input '{in_owl}' --output '{out_ttl}'"
+        return cmd.replace(DATA_DIR, XCOM_DATADIR)
+
+    sunlet_reasoning = BashOperator(
         task_id="sunlet_reasoning",
-        bash_command=reasonCmdTemplate()
+        bash_command=sunletReasonCmdTemplate(),
+    )
+
+    robot_convert_to_ttl = BashOperator(
+        task_id="robot_convert_to_ttl",
+        bash_command=robotConvertCmdTemplate(),
     )
 
     @task
     def mark_reason_success(ti=None):
         run_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
-        out_path = os.path.join(run_dir, OUT_FILE)
 
-        if not os.path.exists(out_path) or os.path.getsize(out_path) == 0:
-            raise AirflowFailException(f"Reasoned TTL missing/empty: {out_path}")
+        out_owl_path = os.path.join(run_dir, OUT_OWL)
+        out_ttl_path = os.path.join(run_dir, OUT_TTL)
+
+        if not os.path.exists(out_owl_path) or os.path.getsize(out_owl_path) == 0:
+            raise AirflowFailException(f"Reasoner output missing/empty: {out_owl_path}")
+
+        if not os.path.exists(out_ttl_path) or os.path.getsize(out_ttl_path) == 0:
+            raise AirflowFailException(f"Converted TTL missing/empty: {out_ttl_path}")
+
+        # Optional: cheap sanity check to catch RDF/XML accidentally written to .ttl
+        with open(out_ttl_path, "rb") as f:
+            head = f.read(64).lstrip()
+        if head.startswith(b"<?xml") or head.startswith(b"<rdf:RDF"):
+            raise AirflowFailException(f"Output {out_ttl_path} still looks like RDF/XML, expected Turtle")
 
         Variable.set(LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME, run_dir)
         print(f"Set {LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME}={run_dir}")
 
+    init_data_dir() >> sunlet_reasoning >> robot_convert_to_ttl >> mark_reason_success()
 
-    init_data_dir() >> reason >> mark_reason_success()
 
 reason()
