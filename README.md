@@ -42,15 +42,6 @@ After starting, you can access it at:
 
 ---
 
-## ⚙️ Technologies Used
-
-- **ROBOT** for ontology templating and management
-- **SHACL** for validation of instance data
-- **BFO**, **IAO**, and NFDI Ontologies for modeling
-- **SHMARQL** for serving and querying the data (via Docker)
-
----
-
 ## 📫 Contact
 
 For questions or support, please create issues or contact Ebrahim Norouzi `ebrahim.norouzi@fiz-karlsruhe.de`.
