@@ -27,7 +27,7 @@ RUN wget -q https://github.com/ontodev/robot/releases/download/v1.9.8/robot.jar 
 COPY . /app
 
 # ---- Build KG ----
-RUN python -m scripts.zenodo.export_zenodo.export_zenodo --make-snapshots --out data/zenodo/zenodo.ttl \
+RUN python -m scripts.zenodo.export_zenodo --make-snapshots --out data/zenodo/zenodo.ttl \
  && python ./scripts/fetch_zenodo.py
 
 RUN chmod +x /app/robot-download.sh /app/robot-merge.sh \
