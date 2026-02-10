@@ -1,4 +1,4 @@
-FROM ghcr.io/epoz/shmarql:latest
+FROM ghcr.io/epoz/shmarql:v0.67
 
 # ---- System deps: Java + tooling ----
 RUN set -eux; \
@@ -74,3 +74,4 @@ RUN uv run python -m shmarql docs_build -f /app/a.yml
 RUN mkdir -p /src/site/ontology \
  && cp -r /app/public/doc/* /src/site/ontology/ \
  && cp /src/site/ontology/index-en.html /src/site/ontology/index.html
+
