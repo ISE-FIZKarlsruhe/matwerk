@@ -68,10 +68,12 @@ RUN java -jar /usr/local/bin/widoco.jar \
 
 # ---- Shmarql docs build (mkdocs) ----
 COPY mkdocs.yml /app/a.yml
+COPY docs /src/docs
 RUN uv run python -m shmarql docs_build -f /app/a.yml
 
 # ---- Integrate Widoco output into the final site ----
 RUN mkdir -p /src/site/ontology \
  && cp -r /app/public/doc/* /src/site/ontology/ \
  && cp /src/site/ontology/index-en.html /src/site/ontology/index.html
+
 
