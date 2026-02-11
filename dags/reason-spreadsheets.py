@@ -42,10 +42,10 @@ def reason():
         XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
         # read last merge run dir from Airflow variable
-        source_run_dir = "{{ var.value." + LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME + " }}"
+        #source_run_dir = "{{ var.value." + LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME + " }}"
 
         #in_path = os.path.join(source_run_dir, IN_FILE)
-        in_path = os.path.join(source_run_dir, IN_FILTERED)
+        in_path = os.path.join(DATA_DIR, IN_FILTERED)
         out_path = os.path.join(DATA_DIR, OUT_OWL)
 
         # sunlet emits OWL/RDF (often RDF/XML). Keep it as .owl.
@@ -102,7 +102,9 @@ def reason():
         DATA_DIR = "DATA_DIR"
         XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
-        in_owl = os.path.join(DATA_DIR, IN_FILE)
+        source_run_dir = "{{ var.value." + LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME + " }}"
+
+        in_owl = os.path.join(source_run_dir, IN_FILE)
         filtered = os.path.join(DATA_DIR, IN_FILTERED)
 
         # ROBOT auto-detects input format from content/extension.
