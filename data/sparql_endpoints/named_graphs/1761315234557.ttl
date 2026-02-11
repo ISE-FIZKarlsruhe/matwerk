@@ -1,0 +1,82 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+
+<http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> a owl:Class ;
+    rdfs:label "Instrument" .
+
+<http://rdf-vocabulary.ddialliance.org/lifecycle#Variable> a owl:Class ;
+    rdfs:label "Variable" .
+
+owl:Nothing a owl:Class ;
+    rdfs:label "Nothing" .
+
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
+
+<https://data.gesis.org/gesiskg/schema/DatasetReference> a owl:Class ;
+    rdfs:label "" .
+
+<https://data.gesis.org/gesiskg/schema/DuplicateMetadata> a owl:Class ;
+    rdfs:label "" .
+
+<https://data.gesis.org/gesiskg/schema/LinkMetadata> a owl:Class ;
+    rdfs:label "" .
+
+<https://data.gesis.org/gesiskg/schema/PublicationReference> a owl:Class ;
+    rdfs:label "" .
+
+<https://data.gesis.org/gesiskg/schema/Reference> a owl:Class ;
+    rdfs:label "" .
+
+<https://data.gesis.org/gesiskg/schema/ReferenceMetadata> a owl:Class ;
+    rdfs:label "" .
+
+<https://data.gesis.org/gesiskg/schema/Task> a owl:Class ;
+    rdfs:label "" .
+
+<https://data.gesis.org/gesiskg/schema/Tutorial> a owl:Class ;
+    rdfs:label "" .
+
+<https://data.gesis.org/gesiskg/schema/VariableReference> a owl:Class ;
+    rdfs:label "" .
+
+schema:Collection a owl:Class ;
+    rdfs:label "" .
+
+schema:CreativeWork a owl:Class ;
+    rdfs:label "" .
+
+schema:CreativeWorkSeries a owl:Class ;
+    rdfs:label "" .
+
+schema:DataCatalog a owl:Class ;
+    rdfs:label "" .
+
+schema:Dataset a owl:Class ;
+    rdfs:label "" .
+
+schema:DefinedTerm a owl:Class ;
+    rdfs:label "" .
+
+schema:Organization a owl:Class ;
+    rdfs:label "" .
+
+schema:Periodical a owl:Class ;
+    rdfs:label "" .
+
+schema:Person a owl:Class ;
+    rdfs:label "" .
+
+schema:Place a owl:Class ;
+    rdfs:label "" .
+
+schema:ScholarlyArticle a owl:Class ;
+    rdfs:label "" .
+
+schema:SoftwareApplication a owl:Class ;
+    rdfs:label "" .
+
+schema:SoftwareSourceCode a owl:Class ;
+    rdfs:label "" .
+

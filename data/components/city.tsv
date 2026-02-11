@@ -1,0 +1,40 @@
+#	TYPE	Label	denoted by	Value
+ID	TYPE	A rdfs:label	I http://purl.obolibrary.org/obo/IAO_0000235	A https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007
+https://purls.helmholtz-metadaten.de/msekg/17451393742191	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Dusseldorf	Dusseldorf_	
+https://purls.helmholtz-metadaten.de/msekg/17451393742192	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Stuttgart	Stuttgart_	
+https://purls.helmholtz-metadaten.de/msekg/17451393742193	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Berlin	Berlin_	
+https://purls.helmholtz-metadaten.de/msekg/17451393742194	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Kiel	Kiel_	
+https://purls.helmholtz-metadaten.de/msekg/17451393742195	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Eggenstein-Leopoldshafen	Eggenstein-Leopoldshafen_	
+https://purls.helmholtz-metadaten.de/msekg/17451393742196	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Aachen	Aachen_	
+https://purls.helmholtz-metadaten.de/msekg/17451393742197	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Bochum	Bochum_	
+https://purls.helmholtz-metadaten.de/msekg/17451393742198	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Paderborn	Paderborn_	
+https://purls.helmholtz-metadaten.de/msekg/17451393742199	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Darmstadt	Darmstadt_	
+https://purls.helmholtz-metadaten.de/msekg/174513937421910	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Clausthal-Zellerfeld	Clausthal-Zellerfeld_	
+https://purls.helmholtz-metadaten.de/msekg/174513937421911	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Freiburg	Freiburg_	
+https://purls.helmholtz-metadaten.de/msekg/174513937421912	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Karlsruhe	Karlsruhe_	
+https://purls.helmholtz-metadaten.de/msekg/174513937421913	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Halle (Saale)	Halle (Saale)_	
+https://purls.helmholtz-metadaten.de/msekg/174513937421914	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Kaiserslautern	Kaiserslautern_	
+https://purls.helmholtz-metadaten.de/msekg/174513937421915	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Bremen	Bremen_	
+https://purls.helmholtz-metadaten.de/msekg/174513937421916	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Braunschweig	Braunschweig_	
+https://purls.helmholtz-metadaten.de/msekg/174513937421917	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Jülich	Jülich_	
+https://purls.helmholtz-metadaten.de/msekg/174513937421918	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Saarbrücken	Saarbrücken_	
+https://purls.helmholtz-metadaten.de/msekg/174513937421919	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106	Dresden	Dresden_	
+https://purls.helmholtz-metadaten.de/msekg/17451393152291	http://purl.obolibrary.org/obo/IAO_0000303	Stuttgart_		Stuttgart
+https://purls.helmholtz-metadaten.de/msekg/17451393152292	http://purl.obolibrary.org/obo/IAO_0000303	Berlin_		Berlin
+https://purls.helmholtz-metadaten.de/msekg/17451393152293	http://purl.obolibrary.org/obo/IAO_0000303	Kiel_		Kiel
+https://purls.helmholtz-metadaten.de/msekg/17451393152294	http://purl.obolibrary.org/obo/IAO_0000303	Eggenstein-Leopoldshafen_		Eggenstein-Leopoldshafen
+https://purls.helmholtz-metadaten.de/msekg/17451393152295	http://purl.obolibrary.org/obo/IAO_0000303	Aachen_		Aachen
+https://purls.helmholtz-metadaten.de/msekg/17451393152296	http://purl.obolibrary.org/obo/IAO_0000303	Bochum_		Bochum
+https://purls.helmholtz-metadaten.de/msekg/17451393152297	http://purl.obolibrary.org/obo/IAO_0000303	Paderborn_		Paderborn
+https://purls.helmholtz-metadaten.de/msekg/17451393152298	http://purl.obolibrary.org/obo/IAO_0000303	Darmstadt_		Darmstadt
+https://purls.helmholtz-metadaten.de/msekg/17451393152299	http://purl.obolibrary.org/obo/IAO_0000303	Clausthal-Zellerfeld_		Clausthal-Zellerfeld
+https://purls.helmholtz-metadaten.de/msekg/174513931522910	http://purl.obolibrary.org/obo/IAO_0000303	Freiburg_		Freiburg
+https://purls.helmholtz-metadaten.de/msekg/174513931522911	http://purl.obolibrary.org/obo/IAO_0000303	Karlsruhe_		Karlsruhe
+https://purls.helmholtz-metadaten.de/msekg/174513931522912	http://purl.obolibrary.org/obo/IAO_0000303	Halle (Saale)_		Halle (Saale)
+https://purls.helmholtz-metadaten.de/msekg/174513931522913	http://purl.obolibrary.org/obo/IAO_0000303	Kaiserslautern_		Kaiserslautern
+https://purls.helmholtz-metadaten.de/msekg/174513931522914	http://purl.obolibrary.org/obo/IAO_0000303	Bremen_		Bremen
+https://purls.helmholtz-metadaten.de/msekg/174513931522915	http://purl.obolibrary.org/obo/IAO_0000303	Braunschweig_		Braunschweig
+https://purls.helmholtz-metadaten.de/msekg/174513931522916	http://purl.obolibrary.org/obo/IAO_0000303	Jülich_		Jülich
+https://purls.helmholtz-metadaten.de/msekg/174513931522917	http://purl.obolibrary.org/obo/IAO_0000303	Saarbrücken_		Saarbrücken
+https://purls.helmholtz-metadaten.de/msekg/174513931522918	http://purl.obolibrary.org/obo/IAO_0000303	Dresden_		Dresden
+https://purls.helmholtz-metadaten.de/msekg/174513931522919	http://purl.obolibrary.org/obo/IAO_0000303	Dusseldorf_		Dusseldorf

@@ -1,0 +1,64 @@
+=== Global stats: SCHEMA_MSE ===
+triples: 8143
+num_subjects: 1875
+num_objects: 5012
+num_predicates: 111
+num_literals: 3066
+num_resources: 2678
+num_classes: 136
+num_properties: 157
+num_individuals: 1486
+
+Top 25 types (individual counts):
+  nfdicore:Website: 255
+  nfdicore:Software: 202
+  mwo:Repository: 163
+  nfdicore:AcademicDiscipline: 116
+  nfdicore:Person: 96
+  nfdicore:Publication: 90
+  mwo:Documentation: 89
+  nfdicore:Organization: 72
+  nfdicore:DataPortal: 61
+  mwo:ResearchSoftware: 54
+  nfdicore:Resource: 48
+  ns3:SWO_0000002: 33
+  mwo:ContactPoint: 29
+  nfdicore:Project: 24
+  mwo:Method: 21
+  nfdicore:City: 20
+  ns3:SWO_0000001: 16
+  nfdicore:ProgrammingLanguage: 16
+  mwo:SemanticResource: 15
+  nfdicore:ObjectType: 14
+  mwo:EducationalResource: 13
+  <http://www.ebi.ac.uk/swo/license/SWO_1000043>: 13
+  nfdicore:Specification: 12
+  <http://www.ebi.ac.uk/swo/license/SWO_1000061>: 10
+  nfdicore:Dataset: 9
+
+Top 25 predicates:
+  rdf:type: 1909
+  rdfs:label: 1704
+  nfdicore:url: 506
+  mwo:hasWebsite: 257
+  owl:sameAs: 195
+  mwo:hasRepository: 166
+  ns3:has_license: 148
+  dcterms:description: 141
+  mwo:hasExpertiseIn: 131
+  mwo:description: 131
+  rdfs:comment: 124
+  nfdicore:programmingLanguage: 102
+  ns2:IAO_0000115: 101
+  mwo:hasAffiliation: 99
+  foaf:firstName: 96
+  foaf:surname: 96
+  rdfs:subClassOf: 93
+  mwo:hasVersion: 93
+  mwo:hasDiscipline: 93
+  schema:citation: 91
+  mwo:hasDocumentation: 91
+  mwo:emailAddress: 89
+  rdfs:domain: 86
+  schema:operatingSystem: 80
+  mwo:hasAcronym: 72

@@ -1,0 +1,3526 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix ns1: <https://w3id.org/linkml/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://nfdi4earth.de/ontology/AcademicSubjectEnum> a owl:Class .
+
+<http://nfdi4earth.de/ontology/GDPRCompliant> a owl:DatatypeProperty ;
+    rdfs:label "GDPRCompliant" ;
+    dcterms:title "GDPR Compliant" ;
+    rdfs:comment "Whether the service provider is confirmed to be compliant with the General Data Protection Regulation (GDPR)" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:boolean ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Point> a owl:Class ;
+    rdfs:label "Point" ;
+    rdfs:comment "A geometry to describe the geographical dimension of something." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/Geometry> ;
+    owl:equivalentClass <http://www.opengis.net/ont/sf#Point> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/about> a owl:DatatypeProperty ;
+    rdfs:label "about" ;
+    rdfs:comment "The subject matter of the content. A controlled vocabulary should be used." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Thing> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/accessURL> a owl:DatatypeProperty ;
+    rdfs:label "accessURL" ;
+    rdfs:comment "The URL under which something can be accessed." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Distribution> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/adFree> a owl:DatatypeProperty ;
+    rdfs:label "adFree" ;
+    rdfs:comment "Whether the service will be provided without advertisements" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:boolean ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/additionalType> a owl:DatatypeProperty ;
+    rdfs:label "additionalType" ;
+    rdfs:comment "A more specific type of this thing. NOTE: Currently the range is string, this might change to GenericIRI, or perhaps skos:Concept of specific skos vocabularies in the future." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Thing> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/affiliation> a owl:ObjectProperty ;
+    rdfs:label "affiliation" ;
+    rdfs:comment "The KH identifier of the organization a person is affiliated to." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Person> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Organization> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/altLabel> a owl:DatatypeProperty ;
+    rdfs:label "altLabel" ;
+    rdfs:comment "An alternative name for the object. Domain: Any Thing, Resource or Organization" ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/articleBody> a owl:DatatypeProperty ;
+    rdfs:label "articleBody" ;
+    rdfs:comment "The actual body of the article. This property can be repeated for translated versions." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Article> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/asWKT> a owl:DatatypeProperty ;
+    rdfs:label "asWKT" ;
+    rdfs:comment "WKT serialization of a geometry" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Geometry> ;
+    rdfs:range geo:wktLiteral ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/assignsIdentifierScheme> a owl:ObjectProperty ;
+    rdfs:label "assignsIdentifierScheme" ;
+    rdfs:comment "The identifier scheme which a catalog assigns to its records. TODO: specify controlled vocabulary" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/audience> a owl:ObjectProperty ;
+    rdfs:label "audience" ;
+    rdfs:comment "The intended audience, i.e. the group for whom some creative work was created." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/CreativeWork> ;
+    rdfs:range <http://nfdi4earth.de/ontology/RDMRole> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/author> a owl:ObjectProperty ;
+    rdfs:label "author" ;
+    rdfs:comment "The author of this content." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/CreativeWork> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Person> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/boundingBox> a owl:DatatypeProperty ;
+    rdfs:label "boundingBox" ;
+    rdfs:comment "The geographic bounding box of a resource" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Location> ;
+    rdfs:range geo:wktLiteral ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/businessModel> a owl:DatatypeProperty ;
+    rdfs:label "businessModel" ;
+    rdfs:comment "Description about the long-term financial sustainability of the service" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/catalogAccessRestriction> a owl:ObjectProperty ;
+    rdfs:label "catalogAccessRestriction" ;
+    rdfs:comment "The type of access restriction to the interface of a catalog." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    rdfs:range <http://nfdi4earth.de/ontology/AccessRestriction> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/catalogAccessType> a owl:ObjectProperty ;
+    rdfs:label "catalogAccessType" ;
+    rdfs:comment "The type of access to the interface of a catalog" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    rdfs:range <http://nfdi4earth.de/ontology/AccessType> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/catalogLicense> a owl:ObjectProperty ;
+    rdfs:label "catalogLicense" ;
+    rdfs:comment "The URL to the license of a catalog." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/certificateName> a owl:DatatypeProperty ;
+    rdfs:label "certificateName" ;
+    rdfs:comment "The official name or type of the certificate awarded to the repository." ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/certificateUrl> a owl:DatatypeProperty ;
+    rdfs:label "certificateUrl" ;
+    rdfs:comment "URL with more information about the certificate." ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/certificateWidget> a owl:DatatypeProperty ;
+    rdfs:label "certificateWidget" ;
+    rdfs:comment "URL of a badge or widget visualizing the certificate." ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/chargeFree> a owl:DatatypeProperty ;
+    rdfs:label "chargeFree" ;
+    dcterms:title "Charge-free" ;
+    rdfs:comment "Whether the service usage is free of charge" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:boolean ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/citation> a owl:ObjectProperty ;
+    rdfs:label "citation" ;
+    rdfs:comment "A reference to an article or any other CreativeWork" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/CreativeWork> ;
+    rdfs:range <http://nfdi4earth.de/ontology/CreativeWork> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/codeRepository> a owl:DatatypeProperty ;
+    rdfs:label "codeRepository" ;
+    rdfs:comment "Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex)." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/SoftwareSourceCode> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/competencyRequired> a owl:DatatypeProperty ;
+    rdfs:label "competencyRequired" ;
+    rdfs:comment "Knowledge, skill, ability or personal attribute that must be demonstrated by a person or other entity in order to understand this LearningResource." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/LearningResource> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/conformsTo> a owl:DatatypeProperty ;
+    rdfs:label "conformsTo" ;
+    rdfs:comment "The standard or protocol a resource or distribution conforms to. TODO: consider changing the range to GenericIRI in order to uniquely identify the standard by an URI instead of a string, if possible. (Domain: Distribution or DataService)" ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/contactPoint> a owl:ObjectProperty ;
+    rdfs:label "contactPoint" ;
+    rdfs:comment "The contact point for this resource." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Kind> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/contactWithPortfolioManagement> a owl:DatatypeProperty ;
+    rdfs:label "contactWithPortfolioManagement" ;
+    rdfs:comment "Point of contact for the NFDI4Earth manager regarding maintenance of the service’s metadata in NFDI4Earth's database" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/contentType> a owl:DatatypeProperty ;
+    rdfs:label "contentType" ;
+    rdfs:comment "The content type of the datasets in the catalog. NOTE: re3data is in the process of replacing the range of the matching contentType property with values from the COAR vocabulary (see: https://vocabularies.coar-repositories.org/resource_types/ ). As soon as this change is completed, this will be adapted here as well. Until then the range remains \"string\", with values as in re3data's schema V2.2" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    skos:exactMatch <http://www.re3data.org/schema/4-0contentType> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/contributor> a owl:ObjectProperty ;
+    rdfs:label "contributor" ;
+    rdfs:comment "A secondary contributor to the CreativeWork or Event. NOTE: The range can be a Person or an Organization. Due to an issue with the modelling library, the range is currently formally limited to one class. This will change when the following issue is resolved: https://git.rwth-aachen.de/nfdi4earth/knowledgehub/nfdi4earth-kh-schema/-/issues/8" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/CreativeWork> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Person> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/copyrightNotice> a owl:DatatypeProperty ;
+    rdfs:label "copyrightNotice" ;
+    rdfs:comment "Text of a notice appropriate for describing the copyright aspects of this Creative Work, ideally indicating the owner of the copyright for the Work." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/CreativeWork> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/countryName> a owl:DatatypeProperty ;
+    rdfs:label "countryName" ;
+    rdfs:comment "The name of the country where the organization is based." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/coursePrerequisites> a owl:ObjectProperty ;
+    rdfs:label "coursePrerequisites" ;
+    rdfs:comment "References another course which is a prerequirement before taking this course" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/LearningResource> ;
+    rdfs:range <http://nfdi4earth.de/ontology/LearningResource> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/creator> a owl:ObjectProperty ;
+    rdfs:label "creator" ;
+    rdfs:comment "The creator of this content. Domain: Resource or CreativeWork" ;
+    rdfs:range <http://nfdi4earth.de/ontology/Person> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/dataAccessRestriction> a owl:ObjectProperty ;
+    rdfs:label "dataAccessRestriction" ;
+    rdfs:comment "The type of access restriction to the data in the catalog." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    rdfs:range <http://nfdi4earth.de/ontology/AccessRestriction> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/dataAccessType> a owl:ObjectProperty ;
+    rdfs:label "dataAccessType" ;
+    rdfs:comment "The type of access to the data in the catalog." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    rdfs:range <http://nfdi4earth.de/ontology/AccessType> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/dataLicense> a owl:ObjectProperty ;
+    rdfs:label "dataLicense" ;
+    rdfs:comment "The URL to the license of the data in the catalog." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/dataProtectionAndBackup> a owl:DatatypeProperty ;
+    rdfs:label "dataProtectionAndBackup" ;
+    rdfs:comment "Description of data security and backup strategy, e.g. how are data protected from getting lost and stolen." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/dataUploadRestriction> a owl:DatatypeProperty ;
+    rdfs:label "dataUploadRestriction" ;
+    rdfs:comment "The type of data upload restriction to the catalog." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/dataUploadType> a owl:DatatypeProperty ;
+    rdfs:label "dataUploadType" ;
+    rdfs:comment "The type of upload of data to the catalog." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/dataset> a owl:ObjectProperty ;
+    rdfs:label "dataset" ;
+    rdfs:comment "A dataset that is listed in the catalog." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Dataset> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/dateModified> a owl:DatatypeProperty ;
+    rdfs:label "dateModified" ;
+    rdfs:comment "The date when a creative work was last modified (in its source system)" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/CreativeWork> ;
+    rdfs:range xsd:date ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/datePublished> a owl:DatatypeProperty ;
+    rdfs:label "datePublished" ;
+    rdfs:comment "The date when a creative work was first published." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/CreativeWork> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/description> a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    rdfs:comment "A human-readable description of the object. This property can be repeated for translated versions. (Domain: any subclass of Thing or Resource)" ;
+    skos:exactMatch dcterms:description ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/distribution> a owl:ObjectProperty ;
+    rdfs:label "distribution" ;
+    rdfs:comment "The distribution of a dataset." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Dataset> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Distribution> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/downloadURL> a owl:DatatypeProperty ;
+    rdfs:label "downloadURL" ;
+    rdfs:comment "The URL of a direct link to a downloadable file." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Distribution> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/educationalLevel> a owl:ObjectProperty ;
+    rdfs:label "educationalLevel" ;
+    rdfs:comment "The level in terms of progression through an educational or training context." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/LearningResource> ;
+    rdfs:range <http://nfdi4earth.de/ontology/EducationalLevel> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/email> a owl:DatatypeProperty ;
+    rdfs:label "email" ;
+    rdfs:comment "The email address." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Person> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/endDate> a owl:DatatypeProperty ;
+    rdfs:label "endDate" ;
+    rdfs:comment "End date of a period of time" ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/endpointDescription> a owl:DatatypeProperty ;
+    rdfs:label "endpointDescription" ;
+    rdfs:comment "A description of the services available via the end-points, including their operations, parameters etc." ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/endpointURL> a owl:DatatypeProperty ;
+    rdfs:label "endpointURL" ;
+    rdfs:comment "The root location or primary endpoint of the service (a Web-resolvable IRI)." ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/fees> a owl:DatatypeProperty ;
+    rdfs:label "fees" ;
+    rdfs:comment "Webpage containing information on the price scheme for the service" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/firstLevelSupportContact> a owl:ObjectProperty ;
+    rdfs:label "firstLevelSupportContact" ;
+    rdfs:comment "Name and Email of the service's first level technical support or the helpdesk at the hosting institution" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Kind> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/fn> a owl:DatatypeProperty ;
+    rdfs:label "fn" ;
+    rdfs:comment "Full name of a Kind" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Kind> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/funder> a owl:ObjectProperty ;
+    rdfs:label "funder" ;
+    rdfs:comment "An organization that supports (sponsors) something through some kind of financial contribution." ;
+    rdfs:range <http://nfdi4earth.de/ontology/ResearchProject> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/geometry> a owl:DatatypeProperty ;
+    rdfs:label "geometry" ;
+    rdfs:comment "The geographical area of a resource." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Location> ;
+    rdfs:range geo:wktLiteral ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasAPI> a owl:ObjectProperty ;
+    rdfs:label "hasAPI" ;
+    rdfs:comment "An endpoint which provides an application programming interface to the metadata or data which are stored in this catalog." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    rdfs:range <http://nfdi4earth.de/ontology/API> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasCertificate> a owl:ObjectProperty ;
+    rdfs:label "hasCertificate" ;
+    rdfs:comment "Certificates awarded to the repository." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Repository> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Certificate> ;
+    skos:exactMatch <http://www.re3data.org/schema/4-0certificate> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasChildStandard> a owl:ObjectProperty ;
+    rdfs:label "hasChildStandard" ;
+    rdfs:comment "The child standard which is based on this standard." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/MetadataStandard> ;
+    rdfs:range <http://nfdi4earth.de/ontology/MetadataStandard> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasCommitmentContactPerson> a owl:ObjectProperty ;
+    rdfs:label "hasCommitmentContactPerson" ;
+    rdfs:comment "The contact person for the NFDI4Earth commitment. This can be a person or a functional contact (e.g., using a functional email address)" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Kind> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasContainerFile> a owl:DatatypeProperty ;
+    rdfs:label "hasContainerFile" ;
+    rdfs:comment "A link to a container file (e.g., Dockerfile) which contains all system configurations which are required to run this software and whic can be used to build a runnable image of this software." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/SoftwareSourceCode> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasContributedTo> a owl:ObjectProperty ;
+    rdfs:label "hasContributedTo" ;
+    rdfs:comment "An existing creative work (usually software source code) that was contributed to within a project Range includes any subclasses of CreativeWork, Datasets, ..." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/ResearchProject> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasDocument> a owl:DatatypeProperty ;
+    rdfs:label "hasDocument" ;
+    rdfs:comment "The URL to the standard specification document." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/MetadataStandard> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasEmail> a owl:DatatypeProperty ;
+    rdfs:label "hasEmail" ;
+    rdfs:comment "The email address of somebody. Should preferrably start with \"mailto:\", but not a requirement. Note: The vcard ontology defines this actually as an object property, so values should be IRIs starting with \"mailto:\". However, the LinkML RDF serializer currently cannot handle this, so define it (for the moment as a string here." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Kind> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasGeometry> a owl:ObjectProperty ;
+    rdfs:label "hasGeometry" ;
+    rdfs:comment "The point geometry (latitude + longitude) describing the position where the organization is based. TODO: include speficiation for geometry and which attributes." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Geometry> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasImprint> a owl:DatatypeProperty ;
+    rdfs:label "hasImprint" ;
+    rdfs:comment "Essential information about an organization, incl. name, address, contact information, and any relevant registration and license information " ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasLocality> a owl:ObjectProperty ;
+    rdfs:label "hasLocality" ;
+    rdfs:comment "The URL identifier for the locality. Must use geonames as controlled vocabulary here." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasLogo> a owl:DatatypeProperty ;
+    rdfs:label "hasLogo" ;
+    rdfs:comment "The URL to a digital image of the logo of the organization." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasMembership> a owl:ObjectProperty ;
+    rdfs:label "hasMembership" ;
+    rdfs:comment "Indicates a membership relationship that the Agent plays." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Membership> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasNFDI4EarthContactPerson> a owl:ObjectProperty ;
+    rdfs:label "hasNFDI4EarthContactPerson" ;
+    rdfs:comment "The IRI to the person which acts as NFDI4Earth contact person for an organization." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Person> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasNotebook> a owl:DatatypeProperty ;
+    rdfs:label "hasNotebook" ;
+    rdfs:comment "A link to an executable notebook (e.g., a Jupyter Notebook) which demonstrates the usage of this software or which accompanies this learning resource. Domain: On any SoftwareSourceCode or LearningResource" ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasOutcome> a owl:ObjectProperty ;
+    rdfs:label "hasOutcome" ;
+    rdfs:comment "The outcomes (publications, software, etc.) that were produced during this research project. Range includes any subclasses of CreativeWork, Datasets, ..." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/ResearchProject> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasParentStandard> a owl:ObjectProperty ;
+    rdfs:label "hasParentStandard" ;
+    rdfs:comment "The parent standard this standard is based on." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/MetadataStandard> ;
+    rdfs:range <http://nfdi4earth.de/ontology/MetadataStandard> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasPart> a owl:ObjectProperty ;
+    rdfs:label "hasPart" ;
+    rdfs:comment "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense)." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/CreativeWork> ;
+    rdfs:range <http://nfdi4earth.de/ontology/CreativeWork> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasRorId> a owl:DatatypeProperty ;
+    rdfs:label "hasRorId" ;
+    rdfs:comment "The ID of the entry for this organization in the Research Organization Registry (ROR). (TODO: decide whether this should remain a string (only the ID) or the full URI)" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasSignedCommitment> a owl:DatatypeProperty ;
+    rdfs:label "hasSignedCommitment" ;
+    rdfs:comment "Whether an entity has signed the NFDI4Earth Commitment" ;
+    rdfs:range xsd:boolean ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasURL> a owl:ObjectProperty ;
+    rdfs:label "hasURL" ;
+    rdfs:comment "To specify a uniform resource locator associated with the object." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Kind> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasWebsite> a owl:DatatypeProperty ;
+    rdfs:label "hasWebsite" ;
+    rdfs:comment "The URL to the website of the metadata standard." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/MetadataStandard> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/hasXSD> a owl:DatatypeProperty ;
+    rdfs:label "hasXSD" ;
+    rdfs:comment "The URL to an XSD schema document of the standard." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/MetadataStandard> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/homepage> a owl:ObjectProperty ;
+    rdfs:label "homepage" ;
+    rdfs:comment "The homepage of some thing." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/id> a owl:DatatypeProperty ;
+    rdfs:label "id" ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/identifier> a owl:DatatypeProperty ;
+    rdfs:label "identifier" ;
+    rdfs:comment "Any kind of identifier for any kind of Thing." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Thing> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/inCatalog> a owl:ObjectProperty ;
+    rdfs:label "inCatalog" ;
+    rdfs:comment "Reference to the catalog in which this Dataset or DataService is listed. Inverse of dcat:dataset" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Catalog> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/inLanguage> a owl:ObjectProperty ;
+    rdfs:label "inLanguage" ;
+    rdfs:comment "The language of the content. TODO: try out LinkML functionality like Enum to specifiy range to allowing terms only from http://publications.europa.eu/resource/authority/language/*" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/CreativeWork> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/isNFDI4EarthLabelled> a owl:DatatypeProperty ;
+    rdfs:label "isNFDI4EarthLabelled" ;
+    rdfs:comment "Indicates that a resource has the NFDI4Earth Label." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Repository> ;
+    rdfs:range xsd:boolean ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/isPartOf> a owl:ObjectProperty ;
+    rdfs:label "isPartOf" ;
+    rdfs:comment "Another item which this creative work is part of." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/CreativeWork> ;
+    rdfs:range <http://nfdi4earth.de/ontology/CreativeWork> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/issued> a owl:DatatypeProperty ;
+    rdfs:label "issued" ;
+    rdfs:comment "Date of formal issuance (e.g., publication) of the resource." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    rdfs:range xsd:date ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/keyword> a owl:DatatypeProperty ;
+    rdfs:label "keyword" ;
+    rdfs:comment "Keywords or tags used to describe this resource." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/keywords> a owl:DatatypeProperty ;
+    rdfs:label "keywords" ;
+    rdfs:comment "Keywords or tags used to describe this work." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/CreativeWork> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/kpiNotes> a owl:DatatypeProperty ;
+    rdfs:label "kpiNotes" ;
+    rdfs:comment "Contextual information about a KPI value." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/ServiceKPI> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/kpiType> a owl:ObjectProperty ;
+    rdfs:label "kpiType" ;
+    rdfs:comment "Type of a key perfomance indicator for RDM services." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/ServiceKPI> ;
+    rdfs:range <http://nfdi4earth.de/ontology/KPITypeEnum> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/kpiValue> a owl:DatatypeProperty ;
+    rdfs:label "kpiValue" ;
+    rdfs:comment "Value of a KPI." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/ServiceKPI> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/landingPage> a owl:DatatypeProperty ;
+    rdfs:label "landingPage" ;
+    rdfs:comment "The landing page in the web of a resource." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/language> a owl:ObjectProperty ;
+    rdfs:label "language" ;
+    rdfs:comment "The language of the content of this resource." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/learningResourceType> a owl:ObjectProperty ;
+    rdfs:label "learningResourceType" ;
+    rdfs:comment "The predominant type or kind characterizing the learning resource." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/LearningResource> ;
+    rdfs:range <http://nfdi4earth.de/ontology/LearningResourceType> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/license> a owl:ObjectProperty ;
+    rdfs:label "license" ;
+    rdfs:comment """The URL of the license applied to this resource. This is currently limited to license URIs according to http://spdx.org/licenses/
+Example: http://spdx.org/licenses/MIT
+TODO: Check how to enforce the SPDX entries""" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/CreativeWork> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/limitations> a owl:DatatypeProperty ;
+    rdfs:label "limitations" ;
+    rdfs:comment "Description of maximal resources for the service, such as maximal users, maximal data volume, maximal memory / CPU etc." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/linkToDocumentation> a owl:DatatypeProperty ;
+    rdfs:label "linkToDocumentation" ;
+    rdfs:comment "Link to documentation about the service" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/locality> a owl:DatatypeProperty ;
+    rdfs:label "locality" ;
+    rdfs:comment "The name of the locality where the organization is based (eg. the city)." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/logo> a owl:DatatypeProperty ;
+    rdfs:label "logo" ;
+    rdfs:comment "A picture as logo of the service" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/maxUploadSizeMb> a owl:DatatypeProperty ;
+    rdfs:label "maxUploadSizeMb" ;
+    rdfs:comment "The maximum allowed size of a single resource that can get uploaded to a repository." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Repository> ;
+    rdfs:range xsd:decimal ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/member> a owl:ObjectProperty ;
+    rdfs:label "member" ;
+    rdfs:comment "The member organization of the project. Can be inferred from the org:hasMembership property. This probably might become deprecated within the KH schema, so preferrably use org:hasMembership." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Membership> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Organization> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/modified> a owl:DatatypeProperty ;
+    rdfs:label "modified" ;
+    rdfs:comment "The date when a resource was last modified (in its source system)" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    rdfs:range xsd:date ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/name> a owl:DatatypeProperty ;
+    rdfs:label "name" ;
+    rdfs:comment "The name of the object. This property can be repeated for translated versions. Domain: On any Thing or Organization" ;
+    skos:exactMatch foaf:name ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/nameAbbreviation> a owl:DatatypeProperty ;
+    rdfs:label "nameAbbreviation" ;
+    rdfs:comment "Abbreviation of the service name" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/nonProfit> a owl:DatatypeProperty ;
+    rdfs:label "nonProfit" ;
+    dcterms:title "Non-profit" ;
+    rdfs:comment "Whether the service will run on a non-profit basis" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:boolean ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/orcidId> a owl:DatatypeProperty ;
+    rdfs:label "orcidId" ;
+    dcterms:title "has ORCID ID" ;
+    rdfs:comment "The ORCID of the person." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Person> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/organization> a owl:ObjectProperty ;
+    rdfs:label "organization" ;
+    rdfs:comment "Indicates the organization in which the Agent is a member. NOTE: Range should be ResearchProject or Organization, see: https://git.rwth-aachen.de/nfdi4earth/knowledgehub/nfdi4earth-kh-schema/-/issues/8" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Membership> ;
+    rdfs:range <http://nfdi4earth.de/ontology/ResearchProject> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/originalDataSource> a owl:DatatypeProperty ;
+    rdfs:label "originalDataSource" ;
+    rdfs:comment "Name of the original repository/ catalog where a Dataset or DataService is hosted in" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/personalDataProcessingAndStorage> a owl:DatatypeProperty ;
+    rdfs:label "personalDataProcessingAndStorage" ;
+    dcterms:title "Personal data processing & storage" ;
+    rdfs:comment "Description of how personal data are protected by the service provider; the description should focus on the process of where and how the personal data are processed and stored." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/politicalGeocodingURI> a owl:ObjectProperty ;
+    rdfs:label "politicalGeocodingURI" ;
+    rdfs:comment "For German organizations only: The identifier of the federal state where the organization is based. Must use the controlled vocabulary https://www.dcat-ap.de/def/politicalGeocoding/stateKey/" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/programmingLanguage> a owl:DatatypeProperty ;
+    rdfs:label "programmingLanguage" ;
+    rdfs:comment "The computer programming language." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/SoftwareSourceCode> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/publisher> a owl:ObjectProperty ;
+    rdfs:label "publisher" ;
+    rdfs:comment "The publisher of the resource." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Organization> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/repositoryType> a owl:DatatypeProperty ;
+    rdfs:label "repositoryType" ;
+    rdfs:comment """The type of the repository.
+Note: Currently no controlled voabulary is enforced, but the same values as in the re3data property r3d:type should be used.""" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    skos:exactMatch <http://www.re3data.org/schema/4-0type> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/role> a owl:ObjectProperty ;
+    rdfs:label "role" ;
+    rdfs:comment "Indicates the Role that the Agent plays in a Membership relationship with an Organization." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Membership> ;
+    rdfs:range <http://nfdi4earth.de/ontology/ConsortiumRole> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/sameAs> a owl:ObjectProperty ;
+    rdfs:label "sameAs" ;
+    rdfs:comment "This property can be used to link the metadata object to other URI-resources which describe the same thing. Domain: Any Thing, Resource or Organization" ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/securityIncidentContact> a owl:ObjectProperty ;
+    rdfs:label "securityIncidentContact" ;
+    rdfs:comment "Name and Email of the person who takes care of critical security issues about the service" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Kind> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/service> a owl:ObjectProperty ;
+    rdfs:label "service" ;
+    rdfs:comment "A site or end-point that is listed in the catalog." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    rdfs:range <http://nfdi4earth.de/ontology/DataService> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/serviceAccessType> a owl:ObjectProperty ;
+    rdfs:label "serviceAccessType" ;
+    rdfs:comment "Categories for granting access to users" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range <http://nfdi4earth.de/ontology/ServiceAccessTypeEnum> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/serviceCategory> a owl:ObjectProperty ;
+    rdfs:label "serviceCategory" ;
+    rdfs:comment "A classification of services based on the stages of the research data life cycle they support" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range <http://nfdi4earth.de/ontology/ServiceCategoryEnum> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/serviceEnablement> a owl:DatatypeProperty ;
+    rdfs:label "serviceEnablement" ;
+    rdfs:comment "Necessary IT components that are needed to use the service" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/serviceLevel> a owl:ObjectProperty ;
+    rdfs:label "serviceLevel" ;
+    rdfs:comment "The technology readiness level of the resource" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range <http://nfdi4earth.de/ontology/ServiceLevelEnum> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/serviceLocation> a owl:ObjectProperty ;
+    rdfs:label "serviceLocation" ;
+    rdfs:comment "The geographical position where the service is based" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Geometry> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/serviceManager> a owl:ObjectProperty ;
+    rdfs:label "serviceManager" ;
+    rdfs:comment "Name and Email of the person who is leading the service." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Kind> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/serviceOwner> a owl:ObjectProperty ;
+    rdfs:label "serviceOwner" ;
+    rdfs:comment "Name and Email of the person who is responsible for delivering the service" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Kind> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/servicePrivacyPolicy> a owl:DatatypeProperty ;
+    rdfs:label "servicePrivacyPolicy" ;
+    rdfs:comment "Description of how service/data privacy is maintained" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/serviceProvider> a owl:ObjectProperty ;
+    rdfs:label "serviceProvider" ;
+    rdfs:comment "Organization that provides a research data management service" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Organization> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/servicePublicationConsent> a owl:DatatypeProperty ;
+    rdfs:label "servicePublicationConsent" ;
+    rdfs:comment "Formal agreement from the hosting institution to publish the service metadata via NFDI4Earth services" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:boolean ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/serviceType> a owl:ObjectProperty ;
+    rdfs:label "serviceType" ;
+    rdfs:comment "A classification of services based on their delivery method and user interface" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range <http://nfdi4earth.de/ontology/ServiceTypeEnum> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/shortDescription> a owl:DatatypeProperty ;
+    rdfs:label "shortDescription" ;
+    rdfs:comment "One-liner to be shown in the catalogue on the tile of the service" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/simMeasure> a owl:DatatypeProperty ;
+    rdfs:label "simMeasure" ;
+    rdfs:comment "The similarity measure that was used " ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Similarity> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/simValue> a owl:DatatypeProperty ;
+    rdfs:label "simValue" ;
+    rdfs:comment "The value of the similarity measure for the two entities  " ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Similarity> ;
+    rdfs:range xsd:float ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/similarTo> a owl:ObjectProperty ;
+    rdfs:label "similarTo" ;
+    rdfs:comment "Another entity that is similar to this one and the degree of similarity between the two entities. " ;
+    rdfs:range <http://nfdi4earth.de/ontology/Similarity> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/sourceSystem> a owl:ObjectProperty ;
+    rdfs:label "sourceSystem" ;
+    rdfs:comment "A provisional (!) attribute for temporary backwards compatibility. Domain: Any Thing, Resource or Organization" ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/sourceSystemID> a owl:DatatypeProperty ;
+    rdfs:label "sourceSystemID" ;
+    rdfs:comment "A provisional (!) attribute for temporary backwards compatibility. Domain: Any Thing, Resource or Organization" ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/sourceSystemURL> a owl:DatatypeProperty ;
+    rdfs:label "sourceSystemURL" ;
+    rdfs:comment "It links to the website where the information of this resource was harvested from. Preferably links to a human-readable landing page, if not available to a machine-readable API endpoint. This property is not always available. Domain: Any Thing, Resource or Organization" ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/spatialCoverage> a owl:ObjectProperty ;
+    rdfs:label "spatialCoverage" ;
+    rdfs:comment "A geographic region that is covered by the Dataset, Catalog or DataService." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Dataset> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Location> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/startDate> a owl:DatatypeProperty ;
+    rdfs:label "startDate" ;
+    rdfs:comment "Start date of a period of time" ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/subOrganizationOf> a owl:ObjectProperty ;
+    rdfs:label "subOrganizationOf" ;
+    rdfs:comment "The parent organization if exists." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Organization> ;
+    rdfs:range <http://nfdi4earth.de/ontology/Organization> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/subjectArea> a owl:ObjectProperty ;
+    rdfs:label "subjectArea" ;
+    rdfs:comment "The property is a relationship between a resource and its academic discipline, subject area or domain. Domains: Resource or Thing Note: Currently we use the DFGFO vocabulary for acadamic disciplines. Where this is too coarse, it is allowed to use the broader DFGFO subject and additionally an academic subject from the UNESCO Thesaurus. TODO: make sure that this rule is enforced upon data upload in the KH" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/supportsMetadataStandard> a owl:ObjectProperty ;
+    rdfs:label "supportsMetadataStandard" ;
+    rdfs:comment "The metadata standard supported by the catalog." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    rdfs:range <http://nfdi4earth.de/ontology/MetadataStandard> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/supportsVersioning> a owl:DatatypeProperty ;
+    rdfs:label "supportsVersioning" ;
+    rdfs:comment "Whether the catalog supports versioning of the datasets it contains." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Catalog> ;
+    rdfs:range xsd:boolean ;
+    skos:exactMatch <http://www.re3data.org/schema/4-0versioning> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/tangibleKPI> a owl:ObjectProperty ;
+    rdfs:label "tangibleKPI" ;
+    rdfs:comment "The key performance indicators (KPI) applicable to the service; The required KPI is dependent on the service type." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range <http://nfdi4earth.de/ontology/ServiceKPI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/target> a owl:DatatypeProperty ;
+    rdfs:label "target" ;
+    rdfs:comment "The resource or thing that is similar to the entity." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Similarity> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/targetProduct> a owl:ObjectProperty ;
+    rdfs:label "targetProduct" ;
+    rdfs:comment "A link to the running web application/ web service which is built with this software." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/SoftwareSourceCode> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/teaches> a owl:DatatypeProperty ;
+    rdfs:label "teaches" ;
+    rdfs:comment "Describes a competency which is teached by this learning resource" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/LearningResource> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/temporal> a owl:ObjectProperty ;
+    rdfs:label "temporal" ;
+    rdfs:comment "Temporal coverage of a resource" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    rdfs:range <http://nfdi4earth.de/ontology/PeriodOfTime> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/theme> a owl:ObjectProperty ;
+    rdfs:label "theme" ;
+    rdfs:comment "The subject matter of the content. A controlled vocabulary should be used." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    rdfs:range <http://nfdi4earth.de/ontology/GenericIRI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/title> a owl:DatatypeProperty ;
+    rdfs:label "title" ;
+    rdfs:comment "The title. This property can be repeated for translated versions." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Resource> ;
+    skos:exactMatch <http://www.re3data.org/schema/4-0repositoryName> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/url> a owl:DatatypeProperty ;
+    rdfs:label "url" ;
+    rdfs:comment "The URL where this item can be found." ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Thing> ;
+    rdfs:range xsd:anyURI ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/userEnablement> a owl:DatatypeProperty ;
+    rdfs:label "userEnablement" ;
+    rdfs:comment "Necessary steps of registration and authorisation for users to use the service" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Service> ;
+    rdfs:range xsd:string ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/variableMeasured> a owl:DatatypeProperty ;
+    rdfs:label "variableMeasured" ;
+    rdfs:comment "The variable that is measured in a dataset" ;
+    rdfs:domain <http://nfdi4earth.de/ontology/Dataset> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/version> a owl:DatatypeProperty ;
+    rdfs:label "version" ;
+    rdfs:comment "The version of the resource" ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+owl:Nothing a owl:Class ;
+    rdfs:label "Nothing" ;
+    owl:complementOf owl:Thing .
+
+<https://github.com/tibonto/dfgfo/101-01> a owl:Class ;
+    rdfs:label "Prehistory and World Archaeology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/101> ;
+    skos:altLabel "Ur- und Frühgeschichte (weltweit)"@de .
+
+<https://github.com/tibonto/dfgfo/101-02> a owl:Class ;
+    rdfs:label "Classical Philology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/101> ;
+    skos:altLabel "Klassische Philologie"@de .
+
+<https://github.com/tibonto/dfgfo/101-03> a owl:Class ;
+    rdfs:label "Ancient History"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/101> ;
+    skos:altLabel "Alte Geschichte"@de .
+
+<https://github.com/tibonto/dfgfo/101-04> a owl:Class ;
+    rdfs:label "Classical Archaeology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/101> ;
+    skos:altLabel "Klassische Archäologie"@de .
+
+<https://github.com/tibonto/dfgfo/101-05> a owl:Class ;
+    rdfs:label "Egyptology and Ancient Near Eastern Studies"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/101> ;
+    skos:altLabel "Ägyptische und Vorderasiatische Altertumswissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/102-01> a owl:Class ;
+    rdfs:label "Medieval History"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/102> ;
+    skos:altLabel "Mittelalterliche Geschichte"@de .
+
+<https://github.com/tibonto/dfgfo/102-02> a owl:Class ;
+    rdfs:label "Early Modern History"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/102> ;
+    skos:altLabel "Frühneuzeitliche Geschichte"@de .
+
+<https://github.com/tibonto/dfgfo/102-03> a owl:Class ;
+    rdfs:label "Modern and Current History"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/102> ;
+    skos:altLabel "Neuere und Neueste Geschichte (einschl. Europäische Geschichte der Neuzeit und Außereuropäische Geschichte)"@de .
+
+<https://github.com/tibonto/dfgfo/102-04> a owl:Class ;
+    rdfs:label "History of Science"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/102> ;
+    skos:altLabel "Wissenschaftsgeschichte"@de .
+
+<https://github.com/tibonto/dfgfo/103-01> a owl:Class ;
+    rdfs:label "Art History"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/103> ;
+    skos:altLabel "Kunstgeschichte"@de .
+
+<https://github.com/tibonto/dfgfo/103-02> a owl:Class ;
+    rdfs:label "Musicology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/103> ;
+    skos:altLabel "Musikwissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/103-03> a owl:Class ;
+    rdfs:label "Theatre and Media Studies"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/103> ;
+    skos:altLabel "Theater- und Medienwissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/104-01> a owl:Class ;
+    rdfs:label "General and Comparative Linguistics, Typology, Non-European Languages"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/104> ;
+    skos:altLabel "Allgemeine und Vergleichende Sprachwissenschaft, Typologie, Außereuropäische Sprachen"@de .
+
+<https://github.com/tibonto/dfgfo/104-02> a owl:Class ;
+    rdfs:label "Individual Linguistics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/104> ;
+    skos:altLabel "Einzelsprachwissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/104-03> a owl:Class ;
+    rdfs:label "Historical Linguistics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/104> ;
+    skos:altLabel "Historische Linguistik"@de .
+
+<https://github.com/tibonto/dfgfo/104-04> a owl:Class ;
+    rdfs:label "Applied Linguistics, Experimental Linguistics, Computational Linguistics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/104> ;
+    skos:altLabel "Angewandte Sprachwissenschaften, Experimentelle Linguistik, Computerlinguistik"@de .
+
+<https://github.com/tibonto/dfgfo/105-01> a owl:Class ;
+    rdfs:label "Medieval German Literature"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/105> ;
+    skos:altLabel "Ältere deutsche Literatur"@de .
+
+<https://github.com/tibonto/dfgfo/105-02> a owl:Class ;
+    rdfs:label "Modern German Literature"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/105> ;
+    skos:altLabel "Neuere deutsche Literatur"@de .
+
+<https://github.com/tibonto/dfgfo/105-03> a owl:Class ;
+    rdfs:label "European and American Literature"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/105> ;
+    skos:altLabel "Europäische und Amerikanische Literaturen"@de .
+
+<https://github.com/tibonto/dfgfo/105-04> a owl:Class ;
+    rdfs:label "General and Comparative Literature and Cultural Studies"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/105> ;
+    skos:altLabel "Allgemeine und vergleichende Literaturwissenschaft"@de .
+
+<https://github.com/tibonto/dfgfo/106-01> a owl:Class ;
+    rdfs:label "Social and Cultural Anthropology and Ethnology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/106> ;
+    skos:altLabel "Ethnologie und Europäische Ethnologie"@de .
+
+<https://github.com/tibonto/dfgfo/106-02> a owl:Class ;
+    rdfs:label "Asian Studies"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/106> ;
+    skos:altLabel "Asienbezogene Wissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/106-03> a owl:Class ;
+    rdfs:label "African, American and Oceania Studies"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/106> ;
+    skos:altLabel "Afrika-, Amerika- und Ozeanienbezogene Wissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/106-04> a owl:Class ;
+    rdfs:label "Islamic Studies, Arabian Studies, Semitic Studies"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/106> ;
+    skos:altLabel "Islamwissenschaften, Arabistik, Semitistik"@de .
+
+<https://github.com/tibonto/dfgfo/106-05> a owl:Class ;
+    rdfs:label "Religious Studies and Jewish Studies"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/106> ;
+    skos:altLabel "Religionswissenschaft und Judaistik"@de .
+
+<https://github.com/tibonto/dfgfo/107-01> a owl:Class ;
+    rdfs:label "Protestant Theology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/107> ;
+    skos:altLabel "Evangelische Theologie"@de .
+
+<https://github.com/tibonto/dfgfo/107-02> a owl:Class ;
+    rdfs:label "Roman Catholic Theology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/107> ;
+    skos:altLabel "Katholische Theologie"@de .
+
+<https://github.com/tibonto/dfgfo/108-01> a owl:Class ;
+    rdfs:label "History of Philosophy"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/108> ;
+    skos:altLabel "Geschichte der Philosophie"@de .
+
+<https://github.com/tibonto/dfgfo/108-02> a owl:Class ;
+    rdfs:label "Theoretical Philosophy"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/108> ;
+    skos:altLabel "Theoretische Philosophie"@de .
+
+<https://github.com/tibonto/dfgfo/108-03> a owl:Class ;
+    rdfs:label "Practical Philosophy"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/108> ;
+    skos:altLabel "Praktische Philosophie"@de .
+
+<https://github.com/tibonto/dfgfo/109-01> a owl:Class ;
+    rdfs:label "General Education and History of Education"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/109> ;
+    skos:altLabel "Allgemeine und Historische Erziehungswissenschaft"@de .
+
+<https://github.com/tibonto/dfgfo/109-02> a owl:Class ;
+    rdfs:label "General and Domain-Specific Teaching and Learning"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/109> ;
+    skos:altLabel "Allgemeines und fachbezogenes Lehren und Lernen"@de .
+
+<https://github.com/tibonto/dfgfo/109-03> a owl:Class ;
+    rdfs:label "Education Systems and Educational Institutions"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/109> ;
+    skos:altLabel "Bildungssysteme und Bildungsinstitutionen"@de .
+
+<https://github.com/tibonto/dfgfo/109-04> a owl:Class ;
+    rdfs:label "Educational Research on Socialisation, Welfare and Professionalism Research"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/109> ;
+    skos:altLabel "Erziehungswissenschaftliche Sozialisations- und Professionalitätsforschung"@de .
+
+<https://github.com/tibonto/dfgfo/110-01> a owl:Class ;
+    rdfs:label "General, Cognitive and Mathematical Psychology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/110> ;
+    skos:altLabel "Allgemeine, Kognitive und Mathematische Psychologie"@de .
+
+<https://github.com/tibonto/dfgfo/110-02> a owl:Class ;
+    rdfs:label "Biological Psychology and Cognitive Neuroscience"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/110> ;
+    skos:altLabel "Biologische Psychologie und Kognitive Neurowissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/110-03> a owl:Class ;
+    rdfs:label "Developmental and Educational Psychology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/110> ;
+    skos:altLabel "Entwicklungspsychologie und Pädagogische Psychologie"@de .
+
+<https://github.com/tibonto/dfgfo/110-04> a owl:Class ;
+    rdfs:label "Social Psychology, Industrial and Organisational Psychology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/110> ;
+    skos:altLabel "Sozialpsychologie und Arbeits- und Organisationspsychologie"@de .
+
+<https://github.com/tibonto/dfgfo/110-05> a owl:Class ;
+    rdfs:label "Differential, Clinical and Medical Psychology, Methodology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/110> ;
+    skos:altLabel "Differentielle, Klinische und Medizinische Psychologie, Methoden"@de .
+
+<https://github.com/tibonto/dfgfo/111-01> a owl:Class ;
+    rdfs:label "Sociological Theory"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/111> ;
+    skos:altLabel "Soziologische Theorie"@de .
+
+<https://github.com/tibonto/dfgfo/111-02> a owl:Class ;
+    rdfs:label "Empirical Social Research"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/111> ;
+    skos:altLabel "Empirische Sozialforschung"@de .
+
+<https://github.com/tibonto/dfgfo/111-03> a owl:Class ;
+    rdfs:label "Communication Sciences"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/111> ;
+    skos:altLabel "Publizistik und Kommunikationswissenschaft"@de .
+
+<https://github.com/tibonto/dfgfo/111-04> a owl:Class ;
+    rdfs:label "Political Science"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/111> ;
+    skos:altLabel "Politikwissenschaft"@de .
+
+<https://github.com/tibonto/dfgfo/112-01> a owl:Class ;
+    rdfs:label "Economic Theory"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/112> ;
+    skos:altLabel "Wirtschaftstheorie"@de .
+
+<https://github.com/tibonto/dfgfo/112-02> a owl:Class ;
+    rdfs:label "Economic Policy, Applied Economics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/112> ;
+    skos:altLabel "Wirtschaftspolitik, Angewandte Volkswirtschaftslehre"@de .
+
+<https://github.com/tibonto/dfgfo/112-03> a owl:Class ;
+    rdfs:label "Business Administration"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/112> ;
+    skos:altLabel "Betriebswirtschaftslehre"@de .
+
+<https://github.com/tibonto/dfgfo/112-04> a owl:Class ;
+    rdfs:label "Statistics and Econometrics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/112> ;
+    skos:altLabel "Statistik und Ökonometrie"@de .
+
+<https://github.com/tibonto/dfgfo/112-05> a owl:Class ;
+    rdfs:label "Economic and Social History"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/112> ;
+    skos:altLabel "Wirtschafts- und Sozialgeschichte"@de .
+
+<https://github.com/tibonto/dfgfo/113-01> a owl:Class ;
+    rdfs:label "Principles of Law and Jurisprudence"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/113> ;
+    skos:altLabel "Grundlagen des Rechts und der Rechtswissenschaft"@de .
+
+<https://github.com/tibonto/dfgfo/113-02> a owl:Class ;
+    rdfs:label "Private Law"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/113> ;
+    skos:altLabel "Privatrecht"@de .
+
+<https://github.com/tibonto/dfgfo/113-03> a owl:Class ;
+    rdfs:label "Public Law"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/113> ;
+    skos:altLabel "Öffentliches Recht"@de .
+
+<https://github.com/tibonto/dfgfo/113-04> a owl:Class ;
+    rdfs:label "Criminal Law"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/113> ;
+    skos:altLabel "Strafrecht"@de .
+
+<https://github.com/tibonto/dfgfo/113-05> a owl:Class ;
+    rdfs:label "Criminology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/113> ;
+    skos:altLabel "Kriminologie"@de .
+
+<https://github.com/tibonto/dfgfo/201-01> a owl:Class ;
+    rdfs:label "Biochemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/201> ;
+    skos:altLabel "Biochemie"@de .
+
+<https://github.com/tibonto/dfgfo/201-02> a owl:Class ;
+    rdfs:label "Biophysics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/201> ;
+    skos:altLabel "Biophysik"@de .
+
+<https://github.com/tibonto/dfgfo/201-03> a owl:Class ;
+    rdfs:label "Cell Biology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/201> ;
+    skos:altLabel "Zellbiologie"@de .
+
+<https://github.com/tibonto/dfgfo/201-04> a owl:Class ;
+    rdfs:label "Structural Biology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/201> ;
+    skos:altLabel "Strukturbiologie"@de .
+
+<https://github.com/tibonto/dfgfo/201-05> a owl:Class ;
+    rdfs:label "General Genetics and Functional Genome Biology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/201> ;
+    skos:altLabel "Allgemeine Genetik und funktionelle Genomforschung"@de .
+
+<https://github.com/tibonto/dfgfo/201-06> a owl:Class ;
+    rdfs:label "Developmental Biology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/201> ;
+    skos:altLabel "Entwicklungsbiologie"@de .
+
+<https://github.com/tibonto/dfgfo/201-07> a owl:Class ;
+    rdfs:label "Bioinformatics and Theoretical Biology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/201> ;
+    skos:altLabel "Bioinformatik und Theoretische Biologie"@de .
+
+<https://github.com/tibonto/dfgfo/202-01> a owl:Class ;
+    rdfs:label "Evolution and Systematics of Plants and Fungi"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/202> ;
+    skos:altLabel "Evolution und Systematik der Pflanzen und Pilze"@de .
+
+<https://github.com/tibonto/dfgfo/202-02> a owl:Class ;
+    rdfs:label "Ecology and Biodiversity of Plants and Ecosystems"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/202> ;
+    skos:altLabel "Ökologie und Biodiversität der Pflanzen und Ökosysteme"@de .
+
+<https://github.com/tibonto/dfgfo/202-03> a owl:Class ;
+    rdfs:label "Organismic Interactions, Chemical Ecology and Microbiomes of Plant Systems"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/202> ;
+    skos:altLabel "Organismische Interaktionen, chemische Ökologie und Mikrobiome pflanzlicher Systeme"@de .
+
+<https://github.com/tibonto/dfgfo/202-04> a owl:Class ;
+    rdfs:label "Plant Physiology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/202> ;
+    skos:altLabel "Pflanzenphysiologie"@de .
+
+<https://github.com/tibonto/dfgfo/202-05> a owl:Class ;
+    rdfs:label "Plant Biochemistry and Biophysics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/202> ;
+    skos:altLabel "Biochemie und Biophysik der Pflanzen"@de .
+
+<https://github.com/tibonto/dfgfo/202-06> a owl:Class ;
+    rdfs:label "Plant Cell and Developmental Biology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/202> ;
+    skos:altLabel "Zell- und Entwicklungsbiologie der Pflanzen"@de .
+
+<https://github.com/tibonto/dfgfo/202-07> a owl:Class ;
+    rdfs:label "Plant Genetics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/202> ;
+    skos:altLabel "Genetik der Pflanzen"@de .
+
+<https://github.com/tibonto/dfgfo/203-01> a owl:Class ;
+    rdfs:label "Systematics and Morphology (Zoology)"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/203> ;
+    skos:altLabel "Systematik und Morphologie der Tiere"@de .
+
+<https://github.com/tibonto/dfgfo/203-02> a owl:Class ;
+    rdfs:label "Evolution, Anthropology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/203> ;
+    skos:altLabel "Evolution, Anthropologie"@de .
+
+<https://github.com/tibonto/dfgfo/203-03> a owl:Class ;
+    rdfs:label "Ecology and Biodiversity of Animals and Ecosystems, Organismic Interactions"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/203> ;
+    skos:altLabel "Ökologie und Biodiversität der Tiere und Ökosysteme, Organismische Interaktionen"@de .
+
+<https://github.com/tibonto/dfgfo/203-04> a owl:Class ;
+    rdfs:label "Sensory and Behavioural Biology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/203> ;
+    skos:altLabel "Biologie des Verhaltens und der Sinne"@de .
+
+<https://github.com/tibonto/dfgfo/203-05> a owl:Class ;
+    rdfs:label "Animal Physiology and Biochemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/203> ;
+    skos:altLabel "Biochemie und Physiologie der Tiere"@de .
+
+<https://github.com/tibonto/dfgfo/203-06> a owl:Class ;
+    rdfs:label "Evolutionary Cell and Developmental Biology (Zoology)"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/203> ;
+    skos:altLabel "Evolutionäre Zell- und Entwicklungsbiologie der Tiere"@de .
+
+<https://github.com/tibonto/dfgfo/204-01> a owl:Class ;
+    rdfs:label "Metabolism, Biochemistry and Genetics of Microorganisms"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/204> ;
+    skos:altLabel "Stoffwechselphysiologie, Biochemie und Genetik der Mikroorganismen"@de .
+
+<https://github.com/tibonto/dfgfo/204-02> a owl:Class ;
+    rdfs:label "Microbial Ecology and Applied Microbiology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/204> ;
+    skos:altLabel "Mikrobielle Ökologie und Angewandte Mikrobiologie"@de .
+
+<https://github.com/tibonto/dfgfo/204-03> a owl:Class ;
+    rdfs:label "Medical Microbiology and Mycology, Hygiene, Molecular Infection Biology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/204> ;
+    skos:altLabel "Medizinische Mikrobiologie und Mykologie,Hygiene, Molekulare Infektionsbiologie"@de .
+
+<https://github.com/tibonto/dfgfo/204-04> a owl:Class ;
+    rdfs:label "Virology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/204> ;
+    skos:altLabel "Virologie"@de .
+
+<https://github.com/tibonto/dfgfo/204-05> a owl:Class ;
+    rdfs:label "Immunology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/204> ;
+    skos:altLabel "Immunologie"@de .
+
+<https://github.com/tibonto/dfgfo/204-06> a owl:Class ;
+    rdfs:label "Parasitology and Biology of Tropical Infectious Disease Pathogens"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/204> ;
+    skos:altLabel "Parasitologie und Biologie der Erreger tropischer Infektionskrankheiten"@de .
+
+<https://github.com/tibonto/dfgfo/205-01> a owl:Class ;
+    rdfs:label "Epidemiology and Medical Biometry/Statistics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Epidemiologie und Medizinische Biometrie/Statistik"@de .
+
+<https://github.com/tibonto/dfgfo/205-02> a owl:Class ;
+    rdfs:label "Public Health, Health Services Research, Social Medicine"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Public Health, medizinische Versorgungsforschung, Sozialmedizin"@de .
+
+<https://github.com/tibonto/dfgfo/205-03> a owl:Class ;
+    rdfs:label "Human Genetics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Humangenetik"@de .
+
+<https://github.com/tibonto/dfgfo/205-04> a owl:Class ;
+    rdfs:label "Physiology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Physiologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-05> a owl:Class ;
+    rdfs:label "Nutritional Sciences"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Ernährungswissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/205-06> a owl:Class ;
+    rdfs:label "Pathology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Pathologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-07> a owl:Class ;
+    rdfs:label "Medical Informatics and Medical Bioinformatics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Medizininformatik und medizinische Bioinformatik"@de .
+
+<https://github.com/tibonto/dfgfo/205-08> a owl:Class ;
+    rdfs:label "Pharmacy"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Pharmazie"@de .
+
+<https://github.com/tibonto/dfgfo/205-09> a owl:Class ;
+    rdfs:label "Pharmacology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Pharmakologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-10> a owl:Class ;
+    rdfs:label "Toxicology, Occupational Medicine, Clinical Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Toxikologie, Arbeitsmedizin, Klinische Chemie"@de .
+
+<https://github.com/tibonto/dfgfo/205-11> a owl:Class ;
+    rdfs:label "Anaesthesiology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Anästhesiologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-12> a owl:Class ;
+    rdfs:label "Cardiology, Angiology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Kardiologie, Angiologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-13> a owl:Class ;
+    rdfs:label "Pneumology, Thoracic Surgery"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Pneumologie, Thoraxchirurgie"@de .
+
+<https://github.com/tibonto/dfgfo/205-14> a owl:Class ;
+    rdfs:label "Hematology, Oncology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Hämatologie, Onkologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-15> a owl:Class ;
+    rdfs:label "Gastroenterology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Gastroenterologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-16> a owl:Class ;
+    rdfs:label "Nephrology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Nephrologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-17> a owl:Class ;
+    rdfs:label "Endocrinology, Diabetology, Metabolism"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Endokrinologie, Diabetologie, Metabolismus"@de .
+
+<https://github.com/tibonto/dfgfo/205-18> a owl:Class ;
+    rdfs:label "Rheumatology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Rheumatologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-19> a owl:Class ;
+    rdfs:label "Dermatology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Dermatologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-20> a owl:Class ;
+    rdfs:label "Pediatric and Adolescent Medicine"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Kinder- und Jugendmedizin"@de .
+
+<https://github.com/tibonto/dfgfo/205-21> a owl:Class ;
+    rdfs:label "Gynaecology and Obstetrics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Gynäkologie und Geburtshilfe"@de .
+
+<https://github.com/tibonto/dfgfo/205-22> a owl:Class ;
+    rdfs:label "Clinical Immunology and Allergology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Klinische Immunologie und Allergologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-23> a owl:Class ;
+    rdfs:label "Reproductive Medicine, Urology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Reproduktionsmedizin, Urologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-24> a owl:Class ;
+    rdfs:label "Biogerontology and Geriatric Medicine"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Gerontobiologie und Geriatrie"@de .
+
+<https://github.com/tibonto/dfgfo/205-25> a owl:Class ;
+    rdfs:label "General and Visceral Surgery"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Allgemein- und Viszeralchirurgie"@de .
+
+<https://github.com/tibonto/dfgfo/205-26> a owl:Class ;
+    rdfs:label "Cardiac and Vascular Sugery"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Herz- und Gefäßchirurgie"@de .
+
+<https://github.com/tibonto/dfgfo/205-27> a owl:Class ;
+    rdfs:label "Orthopaedics, Traumatology, Reconstructive Surgery"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Orthopädie, Unfallchirurgie, rekonstruktive Chirurgie"@de .
+
+<https://github.com/tibonto/dfgfo/205-28> a owl:Class ;
+    rdfs:label "Dentistry, Oral Surgery"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Zahnheilkunde; Mund-, Kiefer- und Gesichtschirurgie"@de .
+
+<https://github.com/tibonto/dfgfo/205-29> a owl:Class ;
+    rdfs:label "Otolaryngology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Hals-Nasen-Ohrenheilkunde"@de .
+
+<https://github.com/tibonto/dfgfo/205-30> a owl:Class ;
+    rdfs:label "Radiology, Nuclear Medicine, Radiotherapy, Radiobiology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Radiologie, Nuklearmedizin, Strahlentherapie, Strahlenbiologie"@de .
+
+<https://github.com/tibonto/dfgfo/205-31> a owl:Class ;
+    rdfs:label "Clinical Infectiology and Tropical Medicine"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Klinische Infektiologie und Tropenmedizin"@de .
+
+<https://github.com/tibonto/dfgfo/205-32> a owl:Class ;
+    rdfs:label "Medical Physics, Biomedical Technology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Medizinische Physik, Biomedizinische Technik"@de .
+
+<https://github.com/tibonto/dfgfo/205-33> a owl:Class ;
+    rdfs:label "Anatomy"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/205> ;
+    skos:altLabel "Anatomie"@de .
+
+<https://github.com/tibonto/dfgfo/206-01> a owl:Class ;
+    rdfs:label "Developmental Neurobiology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/206> ;
+    skos:altLabel "Entwicklungsneurobiologie"@de .
+
+<https://github.com/tibonto/dfgfo/206-02> a owl:Class ;
+    rdfs:label "Molecular Biology and Physiology of Neurons and Glial Cells"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/206> ;
+    skos:altLabel "Molekulare Biologie und Physiologie von Nerven- und Gliazellen"@de .
+
+<https://github.com/tibonto/dfgfo/206-03> a owl:Class ;
+    rdfs:label "Experimental and Theoretical Network Neuroscience"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/206> ;
+    skos:altLabel "Experimentelle und theoretische Netzwerk-Neurowissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/206-04> a owl:Class ;
+    rdfs:label "Cognitive, Systems and Behavioural Neurobiology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/206> ;
+    skos:altLabel "Kognitive, systemische und Verhaltensneurobiologie"@de .
+
+<https://github.com/tibonto/dfgfo/206-05> a owl:Class ;
+    rdfs:label "Experimental Models for the Understanding of Nervous System Diseases"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/206> ;
+    skos:altLabel "Experimentelle Modelle zum Verständnis von Erkrankungen des Nervensystems"@de .
+
+<https://github.com/tibonto/dfgfo/206-06> a owl:Class ;
+    rdfs:label "Molecular and Cellular Neurology and Neuropathology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/206> ;
+    skos:altLabel "Molekulare und zelluläre Neurologie und Neuropathologie"@de .
+
+<https://github.com/tibonto/dfgfo/206-07> a owl:Class ;
+    rdfs:label "Clinical Neurosciences; Neurosurgery and Neuroradiology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/206> ;
+    skos:altLabel "Klinische Neurologie; Neurochirurgie und Neuroradiologie"@de .
+
+<https://github.com/tibonto/dfgfo/206-08> a owl:Class ;
+    rdfs:label "Human Cognitive and Systems Neuroscience"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/206> ;
+    skos:altLabel "Kognitive und systemische Humanneurowissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/206-09> a owl:Class ;
+    rdfs:label "Biological Psychiatry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/206> ;
+    skos:altLabel "Biologische Psychiatrie"@de .
+
+<https://github.com/tibonto/dfgfo/206-10> a owl:Class ;
+    rdfs:label "Clinical Psychiatry, Psychotherapy, Child and Adolescent Psychiatry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/206> ;
+    skos:altLabel "Klinische Psychiatrie, Psychotherapie und Kinder- und Jugendpsychiatrie"@de .
+
+<https://github.com/tibonto/dfgfo/206-11> a owl:Class ;
+    rdfs:label "Ophthalmology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/206> ;
+    skos:altLabel "Augenheilkunde"@de .
+
+<https://github.com/tibonto/dfgfo/207-01> a owl:Class ;
+    rdfs:label "Soil Sciences"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/207> ;
+    skos:altLabel "Bodenwissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/207-02> a owl:Class ;
+    rdfs:label "Plant Breeding and Plant Pathology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/207> ;
+    skos:altLabel "Pflanzenzüchtung, Pflanzenpathologie"@de .
+
+<https://github.com/tibonto/dfgfo/207-03> a owl:Class ;
+    rdfs:label "Plant Cultivation, Plant Nutrition, Agricultural Technology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/207> ;
+    skos:altLabel "Pflanzenbau, Pflanzenernährung, Agrartechnik"@de .
+
+<https://github.com/tibonto/dfgfo/207-04> a owl:Class ;
+    rdfs:label "Ecology of Land Use"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/207> ;
+    skos:altLabel "Ökologie der Landnutzung"@de .
+
+<https://github.com/tibonto/dfgfo/207-05> a owl:Class ;
+    rdfs:label "Agricultural Economics, Agricultural Policy, Agricultural Sociology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/207> ;
+    skos:altLabel "Agrarökonomie, Agrarpolitik, Agrarsoziologie"@de .
+
+<https://github.com/tibonto/dfgfo/207-06> a owl:Class ;
+    rdfs:label "Forestry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/207> ;
+    skos:altLabel "Forstwissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/207-07> a owl:Class ;
+    rdfs:label "Animal Breeding, Animal Nutrition, Animal Husbandry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/207> ;
+    skos:altLabel "Tierzucht, Tierernährung, Tierhaltung"@de .
+
+<https://github.com/tibonto/dfgfo/207-08> a owl:Class ;
+    rdfs:label "Veterinary Medical Science"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/207> ;
+    skos:altLabel "Tiermedizin"@de .
+
+<https://github.com/tibonto/dfgfo/307-01> a owl:Class ;
+    rdfs:label "Experimental Condensed Matter Physics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/307> ;
+    skos:altLabel "Experimentelle Physik der kondensierten Materie"@de .
+
+<https://github.com/tibonto/dfgfo/307-02> a owl:Class ;
+    rdfs:label "Theoretical Condensed Matter Physics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/307> ;
+    skos:altLabel "Theoretische Physik der kondensierten Materie"@de .
+
+<https://github.com/tibonto/dfgfo/308-01> a owl:Class ;
+    rdfs:label "Optics, Quantum Optics, Atoms, Molecules, Plasmas"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/308> ;
+    skos:altLabel "Optik, Quantenoptik, Physik der Atome, Moleküle und Plasmen"@de .
+
+<https://github.com/tibonto/dfgfo/309-01> a owl:Class ;
+    rdfs:label "Nuclear and Elementary Particle Physics, Quantum Mechanics, Relativity, Fields"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/309> ;
+    skos:altLabel "Kern- und Elementarteilchenphysik, Quantenmechanik, Relativitätstheorie, Felder"@de .
+
+<https://github.com/tibonto/dfgfo/310-01> a owl:Class ;
+    rdfs:label "Statistical Physics, Soft Matter, Biological Physics, Nonlinear Dynamics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/310> ;
+    skos:altLabel "Statistische Physik, Weiche Materie, Biologische Physik, Nichtlineare Dynamik"@de .
+
+<https://github.com/tibonto/dfgfo/311-01> a owl:Class ;
+    rdfs:label "Astrophysics and Astronomy"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/311> ;
+    skos:altLabel "Astrophysik und Astronomie"@de .
+
+<https://github.com/tibonto/dfgfo/312-01> a owl:Class ;
+    rdfs:label "Mathematics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/312> ;
+    skos:altLabel "Mathematik"@de .
+
+<https://github.com/tibonto/dfgfo/313-01> a owl:Class ;
+    rdfs:label "Atmospheric Science"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/313> ;
+    skos:altLabel "Physik und Chemie der Atmosphäre"@de .
+
+<https://github.com/tibonto/dfgfo/313-02> a owl:Class ;
+    rdfs:label "Oceanography"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/313> ;
+    skos:altLabel "Physik, Chemie und Biologie des Meeres"@de .
+
+<https://github.com/tibonto/dfgfo/314-01> a owl:Class ;
+    rdfs:label "Geology and Palaeontology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/314> ;
+    skos:altLabel "Geologie, Ingenieurgeologie, Paläontologie"@de .
+
+<https://github.com/tibonto/dfgfo/315-01> a owl:Class ;
+    rdfs:label "Geophysics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/315> ;
+    skos:altLabel "Physik des Erdkörpers"@de .
+
+<https://github.com/tibonto/dfgfo/315-02> a owl:Class ;
+    rdfs:label "Geodesy, Photogrammetry, Remote Sensing, Geoinformatics, Cartography"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/315> ;
+    skos:altLabel "Geodäsie, Photogrammetrie, Fernerkundung, Geoinformatik, Kartographie"@de .
+
+<https://github.com/tibonto/dfgfo/316-01> a owl:Class ;
+    rdfs:label "Mineralogy, Petrology and Geochemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/316> ;
+    skos:altLabel "Mineralogie, Petrologie und Geochemie"@de .
+
+<https://github.com/tibonto/dfgfo/317-01> a owl:Class ;
+    rdfs:label "Physical Geography"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/317> ;
+    skos:altLabel "Physische Geographie"@de .
+
+<https://github.com/tibonto/dfgfo/317-02> a owl:Class ;
+    rdfs:label "Human Geography"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/317> ;
+    skos:altLabel "Humangeographie"@de .
+
+<https://github.com/tibonto/dfgfo/318-01> a owl:Class ;
+    rdfs:label "Hydrogeology, Hydrology, Limnology, Urban Water Management, Water Chemistry, Integrated Water Resources Management"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/318> ;
+    skos:altLabel "Hydrogeologie, Hydrologie, Limnologie, Siedlungswasserwirtschaft, Wasserchemie, Integrierte Wasserressourcen-Bewirtschaftung"@de .
+
+<https://github.com/tibonto/dfgfo/321-01> a owl:Class ;
+    rdfs:label "Inorganic Molecular Chemistry - Synthesis and Characterisation"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/321> ;
+    skos:altLabel "Anorganische Molekülchemie - Synthese, Charakterisierung"@de .
+
+<https://github.com/tibonto/dfgfo/321-02> a owl:Class ;
+    rdfs:label "Organic Molecular Chemistry - Synthesis and Characterisation"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/321> ;
+    skos:altLabel "Organische Molekülchemie - Synthese, Charakterisierung"@de .
+
+<https://github.com/tibonto/dfgfo/322-01> a owl:Class ;
+    rdfs:label "Solid State and Surface Chemistry, Material Synthesis"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/322> ;
+    skos:altLabel "Festkörper- und Oberflächenchemie, Materialsynthese"@de .
+
+<https://github.com/tibonto/dfgfo/322-02> a owl:Class ;
+    rdfs:label "Physical Chemistry of Solids and Surfaces, Material Characterisation"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/322> ;
+    skos:altLabel "Physikalische Chemie von Festkörpern und Oberflächen, Materialcharakterisierung"@de .
+
+<https://github.com/tibonto/dfgfo/323-01> a owl:Class ;
+    rdfs:label "Physical Chemistry of Molecules, Liquids and Interfaces, Biophysical Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/323> ;
+    skos:altLabel "Physikalische Chemie von Molekülen, Flüssigkeiten und Grenzflächen; Biophysikalische Chemie"@de .
+
+<https://github.com/tibonto/dfgfo/324-01> a owl:Class ;
+    rdfs:label "Analytical Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/324> ;
+    skos:altLabel "Analytische Chemie"@de .
+
+<https://github.com/tibonto/dfgfo/325-01> a owl:Class ;
+    rdfs:label "Biological and Biomimetic Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/325> ;
+    skos:altLabel "Biologische und Biomimetische Chemie"@de .
+
+<https://github.com/tibonto/dfgfo/325-02> a owl:Class ;
+    rdfs:label "Food Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/325> ;
+    skos:altLabel "Lebensmittelchemie"@de .
+
+<https://github.com/tibonto/dfgfo/326-01> a owl:Class ;
+    rdfs:label "Preparatory and Physical Chemistry of Polymers"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/326> ;
+    skos:altLabel "Präparative und Physikalische Chemie von Polymeren"@de .
+
+<https://github.com/tibonto/dfgfo/326-02> a owl:Class ;
+    rdfs:label "Experimental and Theoretical Physics of Polymers"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/326> ;
+    skos:altLabel "Experimentelle und Theoretische Polymerphysik"@de .
+
+<https://github.com/tibonto/dfgfo/326-03> a owl:Class ;
+    rdfs:label "Polymer Materials"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/326> ;
+    skos:altLabel "Polymermaterialien"@de .
+
+<https://github.com/tibonto/dfgfo/327-01> a owl:Class ;
+    rdfs:label "Electron Structure, Dynamics, Simulation"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/327> ;
+    skos:altLabel "Elektronenstruktur, Dynamik, Simulation"@de .
+
+<https://github.com/tibonto/dfgfo/327-02> a owl:Class ;
+    rdfs:label "Molecules, Materials, Surfaces"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/327> ;
+    skos:altLabel "Moleküle, Materialien, Oberflächen"@de .
+
+<https://github.com/tibonto/dfgfo/401-01> a owl:Class ;
+    rdfs:label "Metal-Cutting and Abrasive Manufacturing Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/401> ;
+    skos:altLabel "Spanende und abtragende Fertigungstechnik"@de .
+
+<https://github.com/tibonto/dfgfo/401-02> a owl:Class ;
+    rdfs:label "Primary Shaping and Reshaping Technology, Additive Manufacturing"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/401> ;
+    skos:altLabel "Ur- und Umformtechnik, Additive Fertigungsverfahren"@de .
+
+<https://github.com/tibonto/dfgfo/401-03> a owl:Class ;
+    rdfs:label "Joining and Separation Technology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/401> ;
+    skos:altLabel "Fügetechnik und Trenntechnik"@de .
+
+<https://github.com/tibonto/dfgfo/401-04> a owl:Class ;
+    rdfs:label "Plastics Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/401> ;
+    skos:altLabel "Kunststofftechnik"@de .
+
+<https://github.com/tibonto/dfgfo/401-05> a owl:Class ;
+    rdfs:label "Production Systems, Operations Management, Quality Management and Factory Planning"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/401> ;
+    skos:altLabel "Produktionssystematik, Betriebswissenschaften, Qualitätsmanagement und Fabrikplanung"@de .
+
+<https://github.com/tibonto/dfgfo/401-06> a owl:Class ;
+    rdfs:label "Production Automation"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/401> ;
+    skos:altLabel "Produktionsautomatisierung"@de .
+
+<https://github.com/tibonto/dfgfo/402-01> a owl:Class ;
+    rdfs:label "Engineering Design, Machine Elements, Product Development"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/402> ;
+    skos:altLabel "Konstruktion, Maschinenelemente, Produktentwicklung"@de .
+
+<https://github.com/tibonto/dfgfo/402-02> a owl:Class ;
+    rdfs:label "Mechanics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/402> ;
+    skos:altLabel "Mechanik"@de .
+
+<https://github.com/tibonto/dfgfo/402-03> a owl:Class ;
+    rdfs:label "Lightweight Construction, Textile Technology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/402> ;
+    skos:altLabel "Leichtbau, Textiltechnik"@de .
+
+<https://github.com/tibonto/dfgfo/402-04> a owl:Class ;
+    rdfs:label "Acoustics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/402> ;
+    skos:altLabel "Akustik"@de .
+
+<https://github.com/tibonto/dfgfo/403-01> a owl:Class ;
+    rdfs:label "Chemical and Thermal Process Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/403> ;
+    skos:altLabel "Chemische und Thermische Verfahrenstechnik"@de .
+
+<https://github.com/tibonto/dfgfo/403-02> a owl:Class ;
+    rdfs:label "Technical Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/403> ;
+    skos:altLabel "Technische Chemie"@de .
+
+<https://github.com/tibonto/dfgfo/403-03> a owl:Class ;
+    rdfs:label "Mechanical Process Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/403> ;
+    skos:altLabel "Mechanische Verfahrenstechnik"@de .
+
+<https://github.com/tibonto/dfgfo/403-04> a owl:Class ;
+    rdfs:label "Biological Process Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/403> ;
+    skos:altLabel "Bioverfahrenstechnik"@de .
+
+<https://github.com/tibonto/dfgfo/404-01> a owl:Class ;
+    rdfs:label "Energy Process Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/404> ;
+    skos:altLabel "Energieverfahrenstechnik"@de .
+
+<https://github.com/tibonto/dfgfo/404-02> a owl:Class ;
+    rdfs:label "Technical Thermodynamics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/404> ;
+    skos:altLabel "Technische Thermodynamik"@de .
+
+<https://github.com/tibonto/dfgfo/404-03> a owl:Class ;
+    rdfs:label "Fluid Mechanics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/404> ;
+    skos:altLabel "Strömungsmechanik"@de .
+
+<https://github.com/tibonto/dfgfo/404-04> a owl:Class ;
+    rdfs:label "Hydraulic and Turbo Engines and Piston Engines"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/404> ;
+    skos:altLabel "Strömungs- und Kolbenmaschinen"@de .
+
+<https://github.com/tibonto/dfgfo/405-01> a owl:Class ;
+    rdfs:label "Metallurgical, Thermal and Thermomechanical Treatment of Materials"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/405> ;
+    skos:altLabel "Metallurgische, thermische und thermomechanische Behandlung von Werkstoffen"@de .
+
+<https://github.com/tibonto/dfgfo/405-02> a owl:Class ;
+    rdfs:label "Materials in Sintering Processes and Generative Manufacturing Processes"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/405> ;
+    skos:altLabel "Materialien und Werkstoffe der Sinterprozesse und der generativen Fertigungsverfahren"@de .
+
+<https://github.com/tibonto/dfgfo/405-03> a owl:Class ;
+    rdfs:label "Coating and Surface Technology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/405> ;
+    skos:altLabel "Beschichtungs- und Oberflächentechnik"@de .
+
+<https://github.com/tibonto/dfgfo/405-04> a owl:Class ;
+    rdfs:label "Mechanical Properties of Metallic Materials and their Microstructural Origins"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/405> ;
+    skos:altLabel "Mechanische Eigenschaften von metallischen Werkstoffen und ihre mikrostrukturellen Ursachen"@de .
+
+<https://github.com/tibonto/dfgfo/405-05> a owl:Class ;
+    rdfs:label "Glass, Ceramics and Derived Composites"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/405> ;
+    skos:altLabel "Glas und Keramik und darauf basierende Verbundwerkstoffe"@de .
+
+<https://github.com/tibonto/dfgfo/405-06> a owl:Class ;
+    rdfs:label "Polymeric and Biogenic Materials and Derived Composites"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/405> ;
+    skos:altLabel "Polymere und biogene Werkstoffe und darauf basierende Verbundwerkstoffe"@de .
+
+<https://github.com/tibonto/dfgfo/406-01> a owl:Class ;
+    rdfs:label "Synthesis and Properties of Functional Materials"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/406> ;
+    skos:altLabel "Herstellung und Eigenschaften von Funktionsmaterialien"@de .
+
+<https://github.com/tibonto/dfgfo/406-02> a owl:Class ;
+    rdfs:label "Biomaterials"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/406> ;
+    skos:altLabel "Biomaterialien"@de .
+
+<https://github.com/tibonto/dfgfo/406-03> a owl:Class ;
+    rdfs:label "Thermodynamics and Kinetics as well as Properties of Phases and Microstructure of Materials"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/406> ;
+    skos:altLabel "Thermodynamik und Kinetik sowie Eigenschaften der Phasen und Gefüge von Werkstoffen"@de .
+
+<https://github.com/tibonto/dfgfo/406-04> a owl:Class ;
+    rdfs:label "Computer-Aided Design of Materials and Simulation of Materials Behaviour from Atomic to Microscopic Scale"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/406> ;
+    skos:altLabel "Computergestütztes Werkstoffdesign und Simulation von Werkstoffverhalten von atomistischer bis mikroskopischer Skala"@de .
+
+<https://github.com/tibonto/dfgfo/407-01> a owl:Class ;
+    rdfs:label "Automation, Control Systems, Robotics, Mechatronics, Cyber Physical Systems"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/407> ;
+    skos:altLabel "Automatisierungstechnik, Regelungssysteme, Robotik, Mechatronik, Cyber Physical Systems"@de .
+
+<https://github.com/tibonto/dfgfo/407-02> a owl:Class ;
+    rdfs:label "Measurement Systems"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/407> ;
+    skos:altLabel "Messsysteme"@de .
+
+<https://github.com/tibonto/dfgfo/407-03> a owl:Class ;
+    rdfs:label "Microsystems"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/407> ;
+    skos:altLabel "Mikrosysteme"@de .
+
+<https://github.com/tibonto/dfgfo/407-04> a owl:Class ;
+    rdfs:label "Traffic and Transport Systems, Logistics, Intelligent and Automated Traffic"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/407> ;
+    skos:altLabel "Verkehrs- und Transportsysteme, Intelligenter und automatisierter Verkehr"@de .
+
+<https://github.com/tibonto/dfgfo/407-05> a owl:Class ;
+    rdfs:label "Human Factors, Ergonomics, Human-Machine Systems"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/407> ;
+    skos:altLabel "Arbeitswissenschaft, Ergonomie, Mensch-Maschine-Systeme"@de .
+
+<https://github.com/tibonto/dfgfo/407-06> a owl:Class ;
+    rdfs:label "Biomedical Systems Technology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/407> ;
+    skos:altLabel "Biomedizinische Systemtechnik"@de .
+
+<https://github.com/tibonto/dfgfo/408-01> a owl:Class ;
+    rdfs:label "Electronic Semiconductors, Components, Circuits, Systems"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/408> ;
+    skos:altLabel "Elektronische Halbleiter, Bauelemente und Schaltungen, Integrierte Systeme"@de .
+
+<https://github.com/tibonto/dfgfo/408-02> a owl:Class ;
+    rdfs:label "Communications, High-Frequency and Network Technology, Theoretical Electrical Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/408> ;
+    skos:altLabel "Nachrichten- und Hochfrequenztechnik, Kommunikationstechnik und -netze, Theoretische Elektrotechnik"@de .
+
+<https://github.com/tibonto/dfgfo/408-03> a owl:Class ;
+    rdfs:label "Electrical Energy Generation, Distribution, Application"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/408> ;
+    skos:altLabel "Elektrische Energieerzeugung, -übertragung, -verteilung und -anwendung"@de .
+
+<https://github.com/tibonto/dfgfo/409-01> a owl:Class ;
+    rdfs:label "Theoretical Computer Science"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/409> ;
+    skos:altLabel "Theoretische Informatik"@de .
+
+<https://github.com/tibonto/dfgfo/409-02> a owl:Class ;
+    rdfs:label "Software Engineering and Programming Languages"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/409> ;
+    skos:altLabel "Softwaretechnik und Programmiersprachen"@de .
+
+<https://github.com/tibonto/dfgfo/409-03> a owl:Class ;
+    rdfs:label "Security and Dependability"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/409> ;
+    skos:altLabel "Sicherheit und Verlässlichkeit"@de .
+
+<https://github.com/tibonto/dfgfo/409-04> a owl:Class ;
+    rdfs:label "Operating, Communication, Database and Distributed Systems"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/409> ;
+    skos:altLabel "Betriebs-, Kommunikations-, Datenbank- und verteilte Systeme"@de .
+
+<https://github.com/tibonto/dfgfo/409-05> a owl:Class ;
+    rdfs:label "Interactive and Intelligent Systems, Image and Language Processing, Computer Graphics and Visualisation"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/409> ;
+    skos:altLabel "Interaktive und intelligente Systeme, Bild- und Sprachverarbeitung, Computergraphik und Visualisierung"@de .
+
+<https://github.com/tibonto/dfgfo/409-06> a owl:Class ;
+    rdfs:label "Information Systems, Process and Knowledge Management"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/409> ;
+    skos:altLabel "Informationssysteme, Prozess- und Wissensmanagement"@de .
+
+<https://github.com/tibonto/dfgfo/409-07> a owl:Class ;
+    rdfs:label "Computer Architecture and Embedded Systems"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/409> ;
+    skos:altLabel "Rechnerarchitekturen und eingebettete Systeme"@de .
+
+<https://github.com/tibonto/dfgfo/409-08> a owl:Class ;
+    rdfs:label "Massively Parallel and Data-Intensive Systems"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/409> ;
+    skos:altLabel "Massiv parallele und datenintensive Systeme"@de .
+
+<https://github.com/tibonto/dfgfo/410-01> a owl:Class ;
+    rdfs:label "Architecture, Building and Construction History, Construction Research, Sustainable Building Technology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/410> ;
+    skos:altLabel "Architektur, Bau- und Konstruktionsgeschichte, Bauforschung, Ressourcenökonomie im Bauwesen"@de .
+
+<https://github.com/tibonto/dfgfo/410-02> a owl:Class ;
+    rdfs:label "Urbanism, Spatial Planning, Transportation and Infrastructure Planning, Landscape Planning"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/410> ;
+    skos:altLabel "Städtebau/Stadtentwicklung, Raumplanung, Verkehrs- und Infrastrukturplanung, Landschaftsplanung"@de .
+
+<https://github.com/tibonto/dfgfo/410-03> a owl:Class ;
+    rdfs:label "Construction Material Sciences, Chemistry, Building Physics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/410> ;
+    skos:altLabel "Baustoffwissenschaften, Bauchemie, Bauphysik"@de .
+
+<https://github.com/tibonto/dfgfo/410-04> a owl:Class ;
+    rdfs:label "Structural Engineering, Building Informatics and Construction Operation"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/410> ;
+    skos:altLabel "Konstruktiver Ingenieurbau, Bauinformatik und Baubetrieb"@de .
+
+<https://github.com/tibonto/dfgfo/410-05> a owl:Class ;
+    rdfs:label "Applied Mechanics, Statics and Dynamics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/410> ;
+    skos:altLabel "Angewandte Mechanik, Statik und Dynamik"@de .
+
+<https://github.com/tibonto/dfgfo/410-06> a owl:Class ;
+    rdfs:label "Geotechnics, Hydraulic Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/410> ;
+    skos:altLabel "Geotechnik, Wasserbau"@de .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Internalconcept1> a owl:Class ;
+    rdfs:label "internalconcept1" ;
+    dcterms:title "NFDI4Earth internal" ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Internalconcept2> a owl:Class ;
+    rdfs:label "internalconcept2" ;
+    dcterms:title "NFDI4Earth external" ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Rdmconcept1> a owl:Class ;
+    rdfs:label "rdmconcept1" ;
+    dcterms:title "Fair Criteria" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Rdmconcept11> a owl:Class ;
+    rdfs:label "rdmconcept11" ;
+    dcterms:title "Electronic Lab (and Field) Notebooks" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Rdmconcept12> a owl:Class ;
+    rdfs:label "rdmconcept12" ;
+    dcterms:title "Metadata - Purpose, Types, Requirements, Standards" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/T4FS_0000527> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Rdmconcept17> a owl:Class ;
+    rdfs:label "rdmconcept17" ;
+    dcterms:title "Workflow" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Rdmconcept18> a owl:Class ;
+    rdfs:label "rdmconcept18" ;
+    dcterms:title "Computational Resources" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/T4FS_0000308> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Rdmconcept19> a owl:Class ;
+    rdfs:label "rdmconcept19" ;
+    dcterms:title "Tools & Techniques" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Rdmconcept22> a owl:Class ;
+    rdfs:label "rdmconcept22" ;
+    dcterms:title "Data Security" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Rdmconcept24> a owl:Class ;
+    rdfs:label "rdmconcept24" ;
+    dcterms:title "Licensing Options / Data Use Agreements" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Rdmconcept25> a owl:Class ;
+    rdfs:label "rdmconcept25" ;
+    dcterms:title "Open Access" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Rdmconcept26> a owl:Class ;
+    rdfs:label "rdmconcept26" ;
+    dcterms:title "Data Service" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Rdmconcept4> a owl:Class ;
+    rdfs:label "rdmconcept4" ;
+    dcterms:title "NFDI4Earth external" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Rdmconcept7> a owl:Class ;
+    rdfs:label "rdmconcept7" ;
+    dcterms:title "Assigning Roles & Responsibilities" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<http://nfdi4earth.de/ontology/APIProtocols#FTP> a owl:Class ;
+    rdfs:label "FTP" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://nfdi4earth.de/ontology/APIProtocols#NetCDF> a owl:Class ;
+    rdfs:label "NetCDF" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://nfdi4earth.de/ontology/APIProtocols#OAI-PMH> a owl:Class ;
+    rdfs:label "OAI-PMH" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://nfdi4earth.de/ontology/APIProtocols#OpenDAP> a owl:Class ;
+    rdfs:label "OpenDAP" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://nfdi4earth.de/ontology/APIProtocols#REST> a owl:Class ;
+    rdfs:label "REST" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://nfdi4earth.de/ontology/APIProtocols#SOAP> a owl:Class ;
+    rdfs:label "SOAP" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://nfdi4earth.de/ontology/APIProtocols#SPARQL> a owl:Class ;
+    rdfs:label "SPARQL" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://nfdi4earth.de/ontology/APIProtocols#SWORD> a owl:Class ;
+    rdfs:label "SWORD" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://nfdi4earth.de/ontology/AccessRestriction#feeRequired> a owl:Class ;
+    rdfs:label "feeRequired" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/AccessRestriction> .
+
+<http://nfdi4earth.de/ontology/AccessRestriction#institutional+membership> a owl:Class ;
+    rdfs:label "institutional membership" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/AccessRestriction> .
+
+<http://nfdi4earth.de/ontology/AccessRestriction#other> a owl:Class ;
+    rdfs:label "other" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/AccessRestriction> .
+
+<http://nfdi4earth.de/ontology/AccessRestriction#registration> a owl:Class ;
+    rdfs:label "registration" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/AccessRestriction> .
+
+<http://nfdi4earth.de/ontology/AccessType#closed> a owl:Class ;
+    rdfs:label "closed" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/AccessType> .
+
+<http://nfdi4earth.de/ontology/AccessType#embargoed> a owl:Class ;
+    rdfs:label "embargoed" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/AccessType> .
+
+<http://nfdi4earth.de/ontology/AccessType#open> a owl:Class ;
+    rdfs:label "open" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/AccessType> .
+
+<http://nfdi4earth.de/ontology/AccessType#restricted> a owl:Class ;
+    rdfs:label "restricted" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/AccessType> .
+
+<http://nfdi4earth.de/ontology/Aggregator> a owl:Class ;
+    rdfs:label "Aggregator" ;
+    rdfs:comment "A catalog which indexes data that is stored in external repositories. It harvests the metadata and possibly provides it in an aggregated or processed way." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/Catalog>,
+        <http://nfdi4earth.de/ontology/KHMetaDataObject> ;
+    owl:equivalentClass <http://nfdi4earth.de/ontology/Aggregator> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/DataService> a owl:Class ;
+    rdfs:label "DataService" ;
+    rdfs:comment "A collection of operations that provides access to one or more datasets or data processing functions." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/KHMetaDataObject>,
+        <http://nfdi4earth.de/ontology/Resource> ;
+    owl:equivalentClass dcat:DataService ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/EducationalLevel#Advanced> a owl:Class ;
+    rdfs:label "Advanced" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/EducationalLevel> .
+
+<http://nfdi4earth.de/ontology/EducationalLevel#Beginner> a owl:Class ;
+    rdfs:label "Beginner" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/EducationalLevel> .
+
+<http://nfdi4earth.de/ontology/EducationalLevel#Intermediate> a owl:Class ;
+    rdfs:label "Intermediate" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/EducationalLevel> .
+
+<http://nfdi4earth.de/ontology/EducationalLevel#Intro> a owl:Class ;
+    rdfs:label "Intro" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/EducationalLevel> .
+
+<http://nfdi4earth.de/ontology/KPITypeEnum#Total+amount+of+provided+space+in+GB> a owl:Class ;
+    rdfs:label "Total amount of provided space in GB" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/KPITypeEnum> .
+
+<http://nfdi4earth.de/ontology/KPITypeEnum#Total+number+of+datasets+curated> a owl:Class ;
+    rdfs:label "Total number of datasets curated" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/KPITypeEnum> .
+
+<http://nfdi4earth.de/ontology/KPITypeEnum#Total+number+of+downloads> a owl:Class ;
+    rdfs:label "Total number of downloads" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/KPITypeEnum> .
+
+<http://nfdi4earth.de/ontology/KPITypeEnum#Total+number+of+executions> a owl:Class ;
+    rdfs:label "Total number of executions" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/KPITypeEnum> .
+
+<http://nfdi4earth.de/ontology/KPITypeEnum#Total+number+of+training+activities> a owl:Class ;
+    rdfs:label "Total number of training activities" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/KPITypeEnum> .
+
+<http://nfdi4earth.de/ontology/KPITypeEnum#Total+number+of+visits> a owl:Class ;
+    rdfs:label "Total number of visits" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/KPITypeEnum> .
+
+<http://nfdi4earth.de/ontology/LHBArticle> a owl:Class ;
+    rdfs:label "LHBArticle" ;
+    rdfs:comment "An article in the NFDI4Earth's Living Handbook." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/Article>,
+        <http://nfdi4earth.de/ontology/KHMetaDataObject> ;
+    owl:equivalentClass <http://nfdi4earth.de/ontology/LHBArticle> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/LearningResourceType#exercise> a owl:Class ;
+    rdfs:label "exercise" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/LearningResourceType> .
+
+<http://nfdi4earth.de/ontology/LearningResourceType#narrative+text> a owl:Class ;
+    rdfs:label "narrative text" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/LearningResourceType> .
+
+<http://nfdi4earth.de/ontology/LearningResourceType#quiz> a owl:Class ;
+    rdfs:label "quiz" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/LearningResourceType> .
+
+<http://nfdi4earth.de/ontology/LearningResourceType#slide> a owl:Class ;
+    rdfs:label "slide" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/LearningResourceType> .
+
+<http://nfdi4earth.de/ontology/LearningResourceType#video> a owl:Class ;
+    rdfs:label "video" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/LearningResourceType> .
+
+<http://nfdi4earth.de/ontology/PeriodOfTime> a owl:Class ;
+    rdfs:label "PeriodOfTime" ;
+    rdfs:comment "A time period" ;
+    owl:equivalentClass dcterms:PeriodOfTime ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Publication> a owl:Class ;
+    rdfs:label "Publication" ;
+    rdfs:comment "Any publication harvested into the KH." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/Article>,
+        <http://nfdi4earth.de/ontology/KHMetaDataObject> ;
+    owl:equivalentClass <http://nfdi4earth.de/ontology/Publication> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Registry> a owl:Class ;
+    rdfs:label "Registry" ;
+    rdfs:comment "A registry is a meta-repository where resources (e.g., repositories, organizations) are registered and possibly receive a persistent identifier. It provides metadata about the resources but does not store any primary research data itself." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/Catalog>,
+        <http://nfdi4earth.de/ontology/KHMetaDataObject> ;
+    owl:equivalentClass <http://nfdi4earth.de/ontology/Registry> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/ServiceAccessTypeEnum#Closed+Access> a owl:Class ;
+    rdfs:label "Closed Access" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceAccessTypeEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceAccessTypeEnum#Open+Access> a owl:Class ;
+    rdfs:label "Open Access" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceAccessTypeEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceAccessTypeEnum#Restricted+Access> a owl:Class ;
+    rdfs:label "Restricted Access" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceAccessTypeEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceCategoryEnum#Data+Analysis+and+Visualization> a owl:Class ;
+    rdfs:label "Data Analysis and Visualization" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceCategoryEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceCategoryEnum#Data+Ingestion+and+Curation> a owl:Class ;
+    rdfs:label "Data Ingestion and Curation" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceCategoryEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceCategoryEnum#Data+Publication,+Discovery+and+Access> a owl:Class ;
+    rdfs:label "Data Publication, Discovery and Access" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceCategoryEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceCategoryEnum#Data+Storage+and+Management> a owl:Class ;
+    rdfs:label "Data Storage and Management" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceCategoryEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceCategoryEnum#Interoperability+and+Integration> a owl:Class ;
+    rdfs:label "Interoperability and Integration" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceCategoryEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceCategoryEnum#User+Support+and+Training> a owl:Class ;
+    rdfs:label "User Support and Training" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceCategoryEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceLevelEnum#trl1+-+basic+principles+observed> a owl:Class ;
+    rdfs:label "trl1 - basic principles observed" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceLevelEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceLevelEnum#trl2+-+technology+concept+formulated> a owl:Class ;
+    rdfs:label "trl2 - technology concept formulated" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceLevelEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceLevelEnum#trl3+-+experimental+proof+of+concept> a owl:Class ;
+    rdfs:label "trl3 - experimental proof of concept" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceLevelEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceLevelEnum#trl4+-+technology+validated+in+lab> a owl:Class ;
+    rdfs:label "trl4 - technology validated in lab" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceLevelEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceLevelEnum#trl5+-+technology+validated+in+relevant+environment> a owl:Class ;
+    rdfs:label "trl5 - technology validated in relevant environment" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceLevelEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceLevelEnum#trl6+-+technology+demonstrated+in+relevant+environment> a owl:Class ;
+    rdfs:label "trl6 - technology demonstrated in relevant environment" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceLevelEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceLevelEnum#trl7+-+system+prototype+demonstration+in+operational+environment> a owl:Class ;
+    rdfs:label "trl7 - system prototype demonstration in operational environment" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceLevelEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceLevelEnum#trl8+-+system+complete+and+qualified> a owl:Class ;
+    rdfs:label "trl8 - system complete and qualified" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceLevelEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceLevelEnum#trl9+-+actual+system+proven+in+operational+environment> a owl:Class ;
+    rdfs:label "trl9 - actual system proven in operational environment" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceLevelEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceTypeEnum#Data+Curation> a owl:Class ;
+    rdfs:label "Data Curation" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceTypeEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceTypeEnum#Database> a owl:Class ;
+    rdfs:label "Database" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceTypeEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceTypeEnum#Library/API> a owl:Class ;
+    rdfs:label "Library/API" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceTypeEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceTypeEnum#Storage> a owl:Class ;
+    rdfs:label "Storage" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceTypeEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceTypeEnum#Support/Consulting> a owl:Class ;
+    rdfs:label "Support/Consulting" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceTypeEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceTypeEnum#Tool/Application> a owl:Class ;
+    rdfs:label "Tool/Application" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceTypeEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceTypeEnum#Training> a owl:Class ;
+    rdfs:label "Training" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceTypeEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceTypeEnum#Web+Application> a owl:Class ;
+    rdfs:label "Web Application" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceTypeEnum> .
+
+<http://nfdi4earth.de/ontology/ServiceTypeEnum#Workflow/Pipelilne> a owl:Class ;
+    rdfs:label "Workflow/Pipelilne" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ServiceTypeEnum> .
+
+<http://purl.obolibrary.org/obo/T4FS_0000347> a owl:Class ;
+    rdfs:label "dataset" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<http://purl.obolibrary.org/obo/T4FS_0000379> a owl:Class ;
+    rdfs:label "data model" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<http://www.opengis.net/def/serviceType/ogc/csw> a owl:Class ;
+    rdfs:label "CSW" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://www.opengis.net/def/serviceType/ogc/sos> a owl:Class ;
+    rdfs:label "SOS" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://www.opengis.net/def/serviceType/ogc/wcs> a owl:Class ;
+    rdfs:label "WCS" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://www.opengis.net/def/serviceType/ogc/wfs> a owl:Class ;
+    rdfs:label "WFS" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://www.opengis.net/def/serviceType/ogc/wms> a owl:Class ;
+    rdfs:label "WMS" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://www.opengis.net/def/serviceType/ogc/wmts> a owl:Class ;
+    rdfs:label "WMTS" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/APIProtocols> .
+
+<http://www.wikidata.org/entity/Q105906738> a owl:Class ;
+    rdfs:label "co-applicant" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ConsortiumRole> .
+
+<http://www.wikidata.org/entity/Q105906860> a owl:Class ;
+    rdfs:label "participant" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ConsortiumRole> .
+
+<http://www.wikidata.org/entity/Q54875338> a owl:Class ;
+    rdfs:label "applicant" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ConsortiumRole> .
+
+<http://www.wikidata.org/entity/Q83878004> a owl:Class ;
+    rdfs:label "network" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/ConsortiumRole> .
+
+<https://github.com/tibonto/dfgfo/23> a owl:Class ;
+    rdfs:label "Agriculture, Forestry and Veterinary Medicine"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/2> ;
+    skos:altLabel "Agrar-, Forstwissen- schaften und Tiermedizin"@de .
+
+<https://github.com/tibonto/dfgfo/308> a owl:Class ;
+    rdfs:label "Optics, Quantum Optics and Physics of Atoms, Molecules and Plasmas"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/32> ;
+    skos:altLabel "Optik, Quantenoptik und Physik der Atome, Moleküle und Plasmen"@de .
+
+<https://github.com/tibonto/dfgfo/309> a owl:Class ;
+    rdfs:label "Particles, Nuclei and Fields"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/32> ;
+    skos:altLabel "Teilchen, Kerne und Felder"@de .
+
+<https://github.com/tibonto/dfgfo/310> a owl:Class ;
+    rdfs:label "Statistical Physics, Soft Matter, Biological Physics, Nonlinear Dynamics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/32> ;
+    skos:altLabel "Statistische Physik, Weiche Materie, Biologische Physik, Nichtlineare Dynamik"@de .
+
+<https://github.com/tibonto/dfgfo/311> a owl:Class ;
+    rdfs:label "Astrophysics and Astronomy"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/32> ;
+    skos:altLabel "Astrophysik und Astronomie"@de .
+
+<https://github.com/tibonto/dfgfo/312> a owl:Class ;
+    rdfs:label "Mathematics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/33> ;
+    skos:altLabel "Mathematik"@de .
+
+<https://github.com/tibonto/dfgfo/314> a owl:Class ;
+    rdfs:label "Geology and Palaeontology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/34> ;
+    skos:altLabel "Geologie und Paläontologie"@de .
+
+<https://github.com/tibonto/dfgfo/316> a owl:Class ;
+    rdfs:label "Mineralogy, Petrology and Geochemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/34> ;
+    skos:altLabel "Mineralogie, Petrologie und Geochemie"@de .
+
+<https://github.com/tibonto/dfgfo/318> a owl:Class ;
+    rdfs:label "Water Research"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/34> ;
+    skos:altLabel "Wasserforschung"@de .
+
+<https://github.com/tibonto/dfgfo/323> a owl:Class ;
+    rdfs:label "Physical Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/31> ;
+    skos:altLabel "Physikalische Chemie"@de .
+
+<https://github.com/tibonto/dfgfo/324> a owl:Class ;
+    rdfs:label "Analytical Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/31> ;
+    skos:altLabel "Analytische Chemie"@de .
+
+<https://github.com/tibonto/dfgfo/33> a owl:Class ;
+    rdfs:label "Mathematics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/3> ;
+    skos:altLabel "Mathematik"@de .
+
+<https://github.com/tibonto/dfgfo/45> a owl:Class ;
+    rdfs:label "Construction Engineering and Architecture"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/4> ;
+    skos:altLabel "Bauwesen und Architektur"@de .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataAdvocate> a owl:Class ;
+    rdfs:label "DataAdvocate",
+        "data advocate" ;
+    dcterms:title "Data advocate" ;
+    rdfs:comment """A person promoting the proper use of research data and technology and providing assistance or guidance in doing so. Such a person could be:
+
+- a communication relay between various departments and their staff involved in data management within an organization or project
+- Providing technical in blogs, tutorials, talks and other means to spread the knowledge about data technologies and related best practices
+- Someone voluntarily providing advice to the members of the research community on good research data management and the implementation of the FAIR principles.""" ;
+    rdfs:seeAlso <https://towardsdatascience.com/what-is-a-data-evangelist-f9dc068dc10a>,
+        <https://www.data.cam.ac.uk/intro-data-champions> ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:exactMatch <http://data.loterre.fr/ark:/67375/TSO-LWJF0BM2-P> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataCollector> a owl:Class ;
+    rdfs:label "DataCollector",
+        "data collector" ;
+    dcterms:title "Data collector" ;
+    rdfs:comment "The person responsible for collecting, generating, or re-using research data and documents contexts and processes that relates to data handling. Similar to data creator and data contributor." ;
+    rdfs:seeAlso <https://geo-data-support.sites.uu.nl/data-management/data-management-roles/> ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataCurator> a owl:Class ;
+    rdfs:label "DataCurator",
+        "data curator" ;
+    dcterms:title "Data curator" ;
+    rdfs:comment "A person who ensures availability and reliability of data. They review and harmonise metadata of datasets submitted for storage and ensure that they are generally compliant with relevant policies before publication. They further monitor access to the data, support data owners in fulfilling data access requests and possess deeper technical knowledge about the backend of the repository or storage system." ;
+    rdfs:seeAlso <https://geo-data-support.sites.uu.nl/data-management/data-management-roles/> ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:exactMatch <http://data.loterre.fr/ark:/67375/TSO-P76ZXX5V-0>,
+        <http://purl.obolibrary.org/obo/T4FS_0000276> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataDepositor> a owl:Class ;
+    rdfs:label "DataDepositor",
+        "data depositor" ;
+    dcterms:title "Data depositor" ;
+    rdfs:comment "Either the data creator or data owner and is the person who will perform the deposit of the data to a data preservation facility, like a repository or data archive. They perform activities such as uploading data after it has been generated, making it suitable for archiving, creating metadata and data documentation and submitting the data to the facility, so it can be preserved for the long-term." ;
+    rdfs:seeAlso <https://geo-data-support.sites.uu.nl/data-management/data-management-roles/> ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataLibrarian> a owl:Class ;
+    rdfs:label "DataLibrarian",
+        "data librarian" ;
+    dcterms:title "Data librarian" ;
+    rdfs:comment "An information professional responsible for developing technical expertise on practical solutions of data management, archiving and dissemination and on data mining and visualization." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:exactMatch <http://data.loterre.fr/ark:/67375/TSO-PVGCQB0S-C> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataOwner> a owl:Class ;
+    rdfs:label "DataOwner",
+        "data owner" ;
+    dcterms:title "Data owner" ;
+    rdfs:comment "The principal researcher of the project or research group leader who is responsible for establishing who has access to the data, and reducing or mitigating the risk of any mishaps; e.g. improper storage facility, non-compliance with specific guidelines." ;
+    rdfs:seeAlso <https://geo-data-support.sites.uu.nl/data-management/data-management-roles/> ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataProvider> a owl:Class ;
+    rdfs:label "DataProvider",
+        "data provider" ;
+    dcterms:title "Data provider" ;
+    rdfs:comment "A person or organization that stores and provides datasets to others." ;
+    rdfs:seeAlso <https://www.snowflake.com/guides/data-suppliers> ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataSteward> a owl:Class ;
+    rdfs:label "DataSteward",
+        "data steward" ;
+    dcterms:title "Data steward" ;
+    rdfs:comment """A supporter who advises researchers (or otherwise involved) persons on data management, privacy and information security aspects and can understand the meaning and applications of the data. They support:
+
+- data creators on quality assurance, storage, policy compliance
+- data depositors on data selection, metadata and data documentation creation, preserving and publishing
+- data custodians on data curation, access controls, FAIR data management""" ;
+    rdfs:seeAlso <https://geo-data-support.sites.uu.nl/data-management/data-management-roles/> ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardShipActivity> a owl:Class ;
+    rdfs:label "DataStewardShipActivity" ;
+    owl:equivalentClass <http://purl.obolibrary.org/obo/T4FS_0000012> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataUser> a owl:Class ;
+    rdfs:label "DataUser",
+        "data user" ;
+    dcterms:title "Data user" ;
+    rdfs:comment "A data consumer/ data user is someone who is interested in access to research data for re-use or verification." ;
+    rdfs:seeAlso <https://geo-data-support.sites.uu.nl/data-management/data-management-roles/> ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/GeneralPublic> a owl:Class ;
+    rdfs:label "GeneralPublic",
+        "general public" ;
+    dcterms:title "General public" ;
+    rdfs:comment "Persons generally interested in RDM to whom none of the other roles in this vocabulary apply." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/PolicyMaker> a owl:Class ;
+    rdfs:label "PolicyMaker",
+        "policy maker" ;
+    dcterms:title "Policy maker" ;
+    rdfs:comment "In research data management, policy makers strive to design effective, technology-neutral, forward-looking and coherent data governance policies across sectors." ;
+    rdfs:seeAlso <https://doi.org/10.1787/40d53904-en> ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage1> a owl:Class ;
+    rdfs:label "RD.1",
+        "ResearchDataLifecycleStage1" ;
+    dcterms:title "Planning data management" ;
+    rdfs:comment "Planning data management, including data management plan (DMP), DMP tools: type, form, file formats, standards, preservation format, size, sensitivity, metadata, research objects to be tracked and documented" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDLStage>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataLifecycleActivity> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> ;
+    skos:narrowMatch <http://purl.obolibrary.org/obo/T4FS_0000132>,
+        <http://purl.obolibrary.org/obo/T4FS_0000154>,
+        <http://purl.obolibrary.org/obo/T4FS_0000196>,
+        <http://purl.obolibrary.org/obo/T4FS_0000333>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept1>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept10>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept4>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept6>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept7>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept9> ;
+    skos:relatedMatch <http://purl.obolibrary.org/obo/T4FS_0000196> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage2> a owl:Class ;
+    rdfs:label "RD.2",
+        "ResearchDataLifecycleStage2" ;
+    dcterms:title "Data acquisition and collection" ;
+    rdfs:comment "Data acquisition and collection, including locating existing data, data collection and management, capturing and creating metadata, clean up" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDLStage>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataLifecycleActivity> ;
+    skos:exactMatch <http://purl.obolibrary.org/obo/T4FS_0000231> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> ;
+    skos:narrowMatch <http://purl.obolibrary.org/obo/T4FS_0000225>,
+        <http://purl.obolibrary.org/obo/rdmconcept13>,
+        <http://purl.obolibrary.org/obo/rdmconcept16>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept11>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept12>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept14> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage3> a owl:Class ;
+    rdfs:label "RD.3",
+        "ResearchDataLifecycleStage3" ;
+    dcterms:title "Data processing" ;
+    rdfs:comment "Data processing, including entering, transcribing, checking, validating, and cleaning data, anonymizing data, describing data, managing and storing data" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDLStage>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataLifecycleActivity> ;
+    skos:broadMatch <http://purl.obolibrary.org/obo/T4FS_0000044> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage4> a owl:Class ;
+    rdfs:label "RD.4",
+        "ResearchDataLifecycleStage4" ;
+    dcterms:title "Data analysis" ;
+    rdfs:comment "Data analysis, including data security, interpreting, & deriving data, producing outputs, authoring publications, preparing for sharing, data analysis, statistical methods, data visualization & exploration options, and research computing" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDLStage>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataLifecycleActivity> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> ;
+    skos:relatedMatch <http://purl.obolibrary.org/obo/T4FS_0000352> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage5> a owl:Class ;
+    rdfs:label "RD.5",
+        "ResearchDataLifecycleStage5" ;
+    dcterms:title "Data preservation" ;
+    rdfs:comment "Data preservation, including data repositories, data storage, backup & archiving, migrating to the best format & medium, creating metadata and documentation" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDLStage>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataLifecycleActivity> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> ;
+    skos:narrowMatch <http://purl.obolibrary.org/obo/T4FS_0000053>,
+        <http://purl.obolibrary.org/obo/T4FS_0000482>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept22> ;
+    skos:relatedMatch <http://purl.obolibrary.org/obo/T4FS_0000017> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage6> a owl:Class ;
+    rdfs:label "RD.6",
+        "ResearchDataLifecycleStage6" ;
+    dcterms:title "Data distribution" ;
+    rdfs:comment "Giving access to data, distributing data, sharing data, controlling access, establishing copyright, promoting data" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDLStage>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataLifecycleActivity> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> ;
+    skos:narrowMatch <http://purl.obolibrary.org/obo/T4FS_0000247>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept24>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept25>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept26>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept27> ;
+    skos:relatedMatch <http://purl.obolibrary.org/obo/T4FS_0000021> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage7> a owl:Class ;
+    rdfs:label "RD.7",
+        "ResearchDataLifecycleStage7" ;
+    dcterms:title "Data reuse" ;
+    rdfs:comment "Reusing data, including follow-up research, new research, undertaking research reviews, scrutinizing findings, teaching & learning, FAIR data" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDLStage>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataLifecycleActivity> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> ;
+    skos:relatedMatch <http://purl.obolibrary.org/obo/T4FS_0000170> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage8> a owl:Class ;
+    rdfs:label "RD.8",
+        "ResearchDataLifecycleStage8" ;
+    dcterms:title "Data disposal" ;
+    rdfs:comment "Disposal of the data" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDLStage>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataLifecycleActivity> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchSoftwareEngineer> a owl:Class ;
+    rdfs:label "ResearchSoftwareEngineer",
+        "research software engineer" ;
+    dcterms:title "Research software engineer" ;
+    rdfs:comment "A person working with researchers to gain an understanding of the problems they face, and then develops, maintains and extends software to provide the answers." ;
+    rdfs:seeAlso <https://www.snowflake.com/guides/data-suppliers> ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:exactMatch <https://www.wikidata.org/wiki/Q106268090> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ServiceProvider> a owl:Class ;
+    rdfs:label "ServiceProvider",
+        "service provider" ;
+    dcterms:title "Service provider" ;
+    rdfs:comment "An organization that provides services related to the processing and management of data, such as, high-performance computing facilities or web-based maps." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMRole>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/internalconcept1> a owl:Class ;
+    rdfs:label "internal nfdi4earth" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/internalconcept2> a owl:Class ;
+    rdfs:label "external nfdi4earth" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept17> a owl:Class ;
+    rdfs:label "workflow" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept18> a owl:Class ;
+    rdfs:label "resources" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept19> a owl:Class ;
+    rdfs:label "tools and techniques" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<http://nfdi4earth.de/ontology/API> a owl:Class ;
+    rdfs:label "API" ;
+    rdfs:comment "An endpoint which provides an application programming interface to some metadata or data." ;
+    owl:equivalentClass <http://nfdi4earth.de/ontology/API> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/AllowsIRIOrBnode> a owl:Class ;
+    rdfs:label "AllowsIRIOrBnode" ;
+    rdfs:comment "Classes with this mixin are allowed in the KH to exist as full entities with an IRI (= the KH ID) but also as dependent object with blank nodes (= no KH ID). This functional mixin is used as a flag in order to generate the Python code (gen-python) in a customized way, because per default LinkML currently does not allow blank nodes for classes with an identifier." ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Certificate> a owl:Class ;
+    rdfs:label "Certificate" ;
+    rdfs:comment "A certificate awarded to a repository, including its name, validity period, and related URLs. Conforms to the re3data schema 4.0" ;
+    owl:equivalentClass <http://nfdi4earth.de/ontology/Certificate> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://purl.obolibrary.org/obo/T4FS_0000053> a owl:Class ;
+    rdfs:label "storage" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<http://purl.obolibrary.org/obo/T4FS_0000132> a owl:Class ;
+    rdfs:label "curation" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<http://purl.obolibrary.org/obo/T4FS_0000225> a owl:Class ;
+    rdfs:label "evaluation" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<http://purl.obolibrary.org/obo/T4FS_0000247> a owl:Class ;
+    rdfs:label "publication" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<http://purl.obolibrary.org/obo/T4FS_0000333> a owl:Class ;
+    rdfs:label "data policies and compliance" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<http://purl.obolibrary.org/obo/T4FS_0000482> a owl:Class ;
+    rdfs:label "sharing data" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://github.com/tibonto/dfgfo/1> a owl:Class ;
+    rdfs:label "Humanities and Social Sciences"@en ;
+    rdfs:subClassOf owl:Thing ;
+    skos:altLabel "Geistes- und Sozialwissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/107> a owl:Class ;
+    rdfs:label "Theology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/11> ;
+    skos:altLabel "Theologie"@de .
+
+<https://github.com/tibonto/dfgfo/307> a owl:Class ;
+    rdfs:label "Condensed Matter Physics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/32> ;
+    skos:altLabel "Physik der kondensierten Materie"@de .
+
+<https://github.com/tibonto/dfgfo/313> a owl:Class ;
+    rdfs:label "Atmospheric Science, Oceanography and Climate Research"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/34> ;
+    skos:altLabel "Atmosphären-, Meeres- und Klimaforschung"@de .
+
+<https://github.com/tibonto/dfgfo/315> a owl:Class ;
+    rdfs:label "Geophysics and Geodesy"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/34> ;
+    skos:altLabel "Geophysik und Geodäsie"@de .
+
+<https://github.com/tibonto/dfgfo/317> a owl:Class ;
+    rdfs:label "Geography"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/34> ;
+    skos:altLabel "Geographie"@de .
+
+<https://github.com/tibonto/dfgfo/321> a owl:Class ;
+    rdfs:label "Molecular Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/31> ;
+    skos:altLabel "Molekülchemie"@de .
+
+<https://github.com/tibonto/dfgfo/322> a owl:Class ;
+    rdfs:label "Chemical Solid State and Surface Research"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/31> ;
+    skos:altLabel "Chemische Festkörper- und Oberflächenforschung"@de .
+
+<https://github.com/tibonto/dfgfo/325> a owl:Class ;
+    rdfs:label "Biological Chemistry and Food Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/31> ;
+    skos:altLabel "Biologische Chemie und Lebensmittelchemie"@de .
+
+<https://github.com/tibonto/dfgfo/327> a owl:Class ;
+    rdfs:label "Theoretical Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/31> ;
+    skos:altLabel "Theoretische Chemie"@de .
+
+<https://github.com/tibonto/dfgfo/41> a owl:Class ;
+    rdfs:label "Mechanical and Industrial Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/4> ;
+    skos:altLabel "Maschinenbau und Produktionstechnik"@de .
+
+<https://github.com/tibonto/dfgfo/42> a owl:Class ;
+    rdfs:label "Thermal Engineering/ Process Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/4> ;
+    skos:altLabel "Wärmetechnik/ Verfahrenstechnik"@de .
+
+<https://github.com/tibonto/dfgfo/43> a owl:Class ;
+    rdfs:label "Materials Science and Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/4> ;
+    skos:altLabel "Materialwissenschaft und Werkstofftechnik"@de .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept1> a owl:Class ;
+    rdfs:label "fair" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept11> a owl:Class ;
+    rdfs:label "electronic lab and field notebooks" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept12> a owl:Class ;
+    rdfs:label "metadata" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept22> a owl:Class ;
+    rdfs:label "data security" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept24> a owl:Class ;
+    rdfs:label "licensing options" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept25> a owl:Class ;
+    rdfs:label "open access" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept26> a owl:Class ;
+    rdfs:label "data service" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept27> a owl:Class ;
+    rdfs:label "synthesis architecture" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept4> a owl:Class ;
+    rdfs:label "legal framework" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept7> a owl:Class ;
+    rdfs:label "assigning roles and responsibilities" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<http://nfdi4earth.de/ontology/Article> a owl:Class ;
+    rdfs:label "Article" ;
+    rdfs:comment "An article, such as a news article or piece of investigative report." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/CreativeWork>,
+        <http://nfdi4earth.de/ontology/KHMetaDataObject> ;
+    owl:equivalentClass <http://schema.org/Article> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Distribution> a owl:Class ;
+    rdfs:label "Distribution" ;
+    rdfs:comment "A specific representation of a dataset. NOTE: More properties will be added when needed." ;
+    owl:equivalentClass dcat:Distribution ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Location> a owl:Class ;
+    rdfs:label "Location" ;
+    rdfs:comment "A spatial region or named place. It can be represented using a controlled vocabulary or with geographic coordinates." ;
+    owl:equivalentClass dcterms:Location ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://purl.obolibrary.org/obo/T4FS_0000196> a owl:Class ;
+    rdfs:label "data management plans" ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/RDMConcept> .
+
+<https://github.com/tibonto/dfgfo/103> a owl:Class ;
+    rdfs:label "Art History, Music, Theatre and Media Studies"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/11> ;
+    skos:altLabel "Kunst-, Musik-, Theater- und Medienwissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/108> a owl:Class ;
+    rdfs:label "Philosophy"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/11> ;
+    skos:altLabel "Philosophie"@de .
+
+<https://github.com/tibonto/dfgfo/2> a owl:Class ;
+    rdfs:label "Life Sciences"@en ;
+    rdfs:subClassOf owl:Thing ;
+    skos:altLabel "Lebenswissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/21> a owl:Class ;
+    rdfs:label "Biology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/2> ;
+    skos:altLabel "Biologie"@de .
+
+<https://github.com/tibonto/dfgfo/22> a owl:Class ;
+    rdfs:label "Medicine"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/2> ;
+    skos:altLabel "Medizin"@de .
+
+<https://github.com/tibonto/dfgfo/326> a owl:Class ;
+    rdfs:label "Polymer Research"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/31> ;
+    skos:altLabel "Polymerforschung"@de .
+
+<https://github.com/tibonto/dfgfo/408> a owl:Class ;
+    rdfs:label "Electrical Engineering and Information Technology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/44> ;
+    skos:altLabel "Elektrotechnik und Informationstechnik"@de .
+
+<https://github.com/tibonto/dfgfo/44> a owl:Class ;
+    rdfs:label "Computer Science, Systems and  Electrical Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/4> ;
+    skos:altLabel "Informatik, System- und Elektrotechnik"@de .
+
+<http://nfdi4earth.de/ontology/Geometry> a owl:Class ;
+    rdfs:label "Geometry" ;
+    rdfs:comment "A geometry to describe the geographical dimension of something." ;
+    owl:equivalentClass geo:Geometry ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Membership> a owl:Class ;
+    rdfs:label "Membership" ;
+    rdfs:comment "Indicates the nature of an Agent's membership of an organization." ;
+    owl:equivalentClass org:Membership ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Repository> a owl:Class ;
+    rdfs:label "Repository" ;
+    rdfs:comment "A public (virtual) platform that hosts data or structured content of metadata and data or only metadata in the field of Earth System Sciences. It may allow to submit user-data. It may be curated." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/Catalog>,
+        <http://nfdi4earth.de/ontology/KHMetaDataObject> ;
+    owl:equivalentClass <http://nfdi4earth.de/ontology/Repository> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/ResearchProject> a owl:Class ;
+    rdfs:label "ResearchProject" ;
+    rdfs:comment "A research project." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/KHMetaDataObject>,
+        <http://nfdi4earth.de/ontology/Thing> ;
+    owl:equivalentClass <http://schema.org/ResearchProject> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/ServiceAccessTypeEnum> a owl:Class ;
+    ns1:permissible_values <http://nfdi4earth.de/ontology/ServiceAccessTypeEnum#Closed+Access>,
+        <http://nfdi4earth.de/ontology/ServiceAccessTypeEnum#Open+Access>,
+        <http://nfdi4earth.de/ontology/ServiceAccessTypeEnum#Restricted+Access> .
+
+<http://nfdi4earth.de/ontology/SoftwareSourceCode> a owl:Class ;
+    rdfs:label "SoftwareSourceCode" ;
+    rdfs:comment "Computer programming source code. Example: Full (compile ready solutions, code snippet samples, scripts, templates." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/CreativeWork>,
+        <http://nfdi4earth.de/ontology/KHMetaDataObject> ;
+    owl:equivalentClass <http://schema.org/SoftwareSourceCode> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<https://github.com/tibonto/dfgfo/102> a owl:Class ;
+    rdfs:label "History"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/11> ;
+    skos:altLabel "Geschichtswissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/104> a owl:Class ;
+    rdfs:label "Linguistics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/11> ;
+    skos:altLabel "Sprachwissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/105> a owl:Class ;
+    rdfs:label "Literary Studies"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/11> ;
+    skos:altLabel "Literaturwissenschaft"@de,
+        "Literaturwissenschaft; Kulturwissenschaft"@de .
+
+<https://github.com/tibonto/dfgfo/109> a owl:Class ;
+    rdfs:label "Educational Research"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/12> ;
+    skos:altLabel "Erziehungswissenschaft und Bildungsforschung"@de .
+
+<https://github.com/tibonto/dfgfo/111> a owl:Class ;
+    rdfs:label "Social Sciences"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/12> ;
+    skos:altLabel "Sozialwissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/3> a owl:Class ;
+    rdfs:label "Natural Sciences"@en ;
+    rdfs:subClassOf owl:Thing ;
+    skos:altLabel "Naturwissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/402> a owl:Class ;
+    rdfs:label "Mechanics and Constructive Mechanical Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/41> ;
+    skos:altLabel "Mechanik und Konstruktiver Maschinenbau"@de .
+
+<https://github.com/tibonto/dfgfo/403> a owl:Class ;
+    rdfs:label "Process Engineering, Technical Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/42> ;
+    skos:altLabel "Verfahrenstechnik, Technische Chemie"@de .
+
+<https://github.com/tibonto/dfgfo/404> a owl:Class ;
+    rdfs:label "Fluid Mechanics, Technical Thermodynamics and Thermal Energy Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/42> ;
+    skos:altLabel "Strömungsmechanik, Technische Thermodynamik und Thermische Energietechnik"@de .
+
+<https://github.com/tibonto/dfgfo/406> a owl:Class ;
+    rdfs:label "Materials Science"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/43> ;
+    skos:altLabel "Materialwissenschaft"@de .
+
+<http://nfdi4earth.de/ontology/ConsortiumRole> a owl:Class ;
+    ns1:permissible_values <http://www.wikidata.org/entity/Q105906738>,
+        <http://www.wikidata.org/entity/Q105906860>,
+        <http://www.wikidata.org/entity/Q54875338>,
+        <http://www.wikidata.org/entity/Q83878004> .
+
+<http://nfdi4earth.de/ontology/Dataset> a owl:Class ;
+    rdfs:label "Dataset" ;
+    rdfs:comment "A dataset ..." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/KHMetaDataObject>,
+        <http://nfdi4earth.de/ontology/Resource> ;
+    owl:equivalentClass dcat:Dataset ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/EducationalLevel> a owl:Class ;
+    ns1:permissible_values <http://nfdi4earth.de/ontology/EducationalLevel#Advanced>,
+        <http://nfdi4earth.de/ontology/EducationalLevel#Beginner>,
+        <http://nfdi4earth.de/ontology/EducationalLevel#Intermediate>,
+        <http://nfdi4earth.de/ontology/EducationalLevel#Intro> .
+
+<http://nfdi4earth.de/ontology/ServiceKPI> a owl:Class ;
+    rdfs:label "ServiceKPI" ;
+    rdfs:comment "The key performance indicators (KPI) applicable to RDM services; The required KPI is dependent on service type." ;
+    owl:equivalentClass <http://nfdi4earth.de/ontology/ServiceKPI> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Similarity> a owl:Class ;
+    rdfs:label "Similarity" ;
+    rdfs:comment "Models a similarity relationship between two entities. " ;
+    owl:equivalentClass <http://nfdi4earth.de/ontology/Similarity> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
+
+<https://github.com/tibonto/dfgfo/101> a owl:Class ;
+    rdfs:label "Ancient Cultures"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/11> ;
+    skos:altLabel "Alte Kulturen"@de .
+
+<https://github.com/tibonto/dfgfo/106> a owl:Class ;
+    rdfs:label "Social and Cultural Anthropology, Non-European Cultures, Jewish Studies and Religious Studies"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/11> ;
+    skos:altLabel "Sozial- und Kulturanthropologie, Außereuropäische Kulturen, Judaistik und Religionswissenschaft"@de .
+
+<https://github.com/tibonto/dfgfo/110> a owl:Class ;
+    rdfs:label "Psychology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/12> ;
+    skos:altLabel "Psychologie"@de .
+
+<https://github.com/tibonto/dfgfo/112> a owl:Class ;
+    rdfs:label "Economics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/12> ;
+    skos:altLabel "Wirtschaftswissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/113> a owl:Class ;
+    rdfs:label "Jurisprudence"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/12> ;
+    skos:altLabel "Rechtswissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/12> a owl:Class ;
+    rdfs:label "Social and Behavioural Sciences"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/1> ;
+    skos:altLabel "Sozial- und Verhaltens- wissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/32> a owl:Class ;
+    rdfs:label "Physics"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/3> ;
+    skos:altLabel "Physik"@de .
+
+<https://github.com/tibonto/dfgfo/4> a owl:Class ;
+    rdfs:label "Engineering Sciences"@en ;
+    rdfs:subClassOf owl:Thing ;
+    skos:altLabel "Ingenieurwissenschaften"@de .
+
+<http://nfdi4earth.de/ontology/AccessRestriction> a owl:Class ;
+    ns1:permissible_values <http://nfdi4earth.de/ontology/AccessRestriction#feeRequired>,
+        <http://nfdi4earth.de/ontology/AccessRestriction#institutional+membership>,
+        <http://nfdi4earth.de/ontology/AccessRestriction#other>,
+        <http://nfdi4earth.de/ontology/AccessRestriction#registration> .
+
+<http://nfdi4earth.de/ontology/AccessType> a owl:Class ;
+    ns1:permissible_values <http://nfdi4earth.de/ontology/AccessType#closed>,
+        <http://nfdi4earth.de/ontology/AccessType#embargoed>,
+        <http://nfdi4earth.de/ontology/AccessType#open>,
+        <http://nfdi4earth.de/ontology/AccessType#restricted> .
+
+<http://nfdi4earth.de/ontology/LearningResource> a owl:Class ;
+    rdfs:label "LearningResource" ;
+    rdfs:comment "The LearningResource type can be used to indicate CreativeWorks (whether physical or digital) that have a particular and explicit orientation towards learning, education, skill acquisition, and other educational purposes." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/CreativeWork>,
+        <http://nfdi4earth.de/ontology/KHMetaDataObject> ;
+    owl:equivalentClass <http://schema.org/LearningResource> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/LearningResourceType> a owl:Class ;
+    ns1:permissible_values <http://nfdi4earth.de/ontology/LearningResourceType#exercise>,
+        <http://nfdi4earth.de/ontology/LearningResourceType#narrative+text>,
+        <http://nfdi4earth.de/ontology/LearningResourceType#quiz>,
+        <http://nfdi4earth.de/ontology/LearningResourceType#slide>,
+        <http://nfdi4earth.de/ontology/LearningResourceType#video> .
+
+<https://github.com/tibonto/dfgfo/203> a owl:Class ;
+    rdfs:label "Zoology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/21> ;
+    skos:altLabel "Zoologie"@de .
+
+<https://github.com/tibonto/dfgfo/204> a owl:Class ;
+    rdfs:label "Microbiology, Virology and Immunology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/22> ;
+    skos:altLabel "Mikrobiologie, Virologie und Immunologie"@de .
+
+<https://github.com/tibonto/dfgfo/34> a owl:Class ;
+    rdfs:label "Geosciences"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/3> ;
+    skos:altLabel "Geowissen-schaften"@de .
+
+<https://github.com/tibonto/dfgfo/401> a owl:Class ;
+    rdfs:label "Production Technology"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/41> ;
+    skos:altLabel "Produktionstechnik"@de .
+
+<https://github.com/tibonto/dfgfo/405> a owl:Class ;
+    rdfs:label "Materials Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/43> ;
+    skos:altLabel "Werkstofftechnik"@de .
+
+<https://github.com/tibonto/dfgfo/407> a owl:Class ;
+    rdfs:label "Systems Engineering"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/44> ;
+    skos:altLabel "Systemtechnik"@de .
+
+<https://github.com/tibonto/dfgfo/410> a owl:Class ;
+    rdfs:label "Construction Engineering and Architecture"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/45> ;
+    skos:altLabel "Bauwesen und Architektur"@de .
+
+<http://nfdi4earth.de/ontology/KPITypeEnum> a owl:Class ;
+    ns1:permissible_values <http://nfdi4earth.de/ontology/KPITypeEnum#Total+amount+of+provided+space+in+GB>,
+        <http://nfdi4earth.de/ontology/KPITypeEnum#Total+number+of+datasets+curated>,
+        <http://nfdi4earth.de/ontology/KPITypeEnum#Total+number+of+downloads>,
+        <http://nfdi4earth.de/ontology/KPITypeEnum#Total+number+of+executions>,
+        <http://nfdi4earth.de/ontology/KPITypeEnum#Total+number+of+training+activities>,
+        <http://nfdi4earth.de/ontology/KPITypeEnum#Total+number+of+visits> .
+
+<http://nfdi4earth.de/ontology/Person> a owl:Class ;
+    rdfs:label "Person" ;
+    rdfs:comment "A person." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/AllowsIRIOrBnode>,
+        <http://nfdi4earth.de/ontology/KHMetaDataObject>,
+        <http://nfdi4earth.de/ontology/Thing> ;
+    owl:equivalentClass <http://schema.org/Person> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/ServiceCategoryEnum> a owl:Class ;
+    ns1:permissible_values <http://nfdi4earth.de/ontology/ServiceCategoryEnum#Data+Analysis+and+Visualization>,
+        <http://nfdi4earth.de/ontology/ServiceCategoryEnum#Data+Ingestion+and+Curation>,
+        <http://nfdi4earth.de/ontology/ServiceCategoryEnum#Data+Publication,+Discovery+and+Access>,
+        <http://nfdi4earth.de/ontology/ServiceCategoryEnum#Data+Storage+and+Management>,
+        <http://nfdi4earth.de/ontology/ServiceCategoryEnum#Interoperability+and+Integration>,
+        <http://nfdi4earth.de/ontology/ServiceCategoryEnum#User+Support+and+Training> .
+
+<https://github.com/tibonto/dfgfo/201> a owl:Class ;
+    rdfs:label "Basic Research in Biology and Medicine"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/21> ;
+    skos:altLabel "Grundlagen der Biologie und Medizin"@de .
+
+<https://github.com/tibonto/dfgfo/202> a owl:Class ;
+    rdfs:label "Plant Sciences"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/21> ;
+    skos:altLabel "Pflanzenwissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/31> a owl:Class ;
+    rdfs:label "Chemistry"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/3> ;
+    skos:altLabel "Chemie"@de .
+
+<http://nfdi4earth.de/ontology/RDLStage> a owl:Class ;
+    ns1:permissible_values <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage1>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage2>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage3>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage4>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage5>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage6>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage7>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchDataLifecycleStage8> .
+
+<http://nfdi4earth.de/ontology/Thing> a owl:Class ;
+    rdfs:label "Thing" ;
+    rdfs:comment "A generic super class from the schema.org vocabulary." ;
+    owl:equivalentClass <http://schema.org/Thing> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<https://github.com/tibonto/dfgfo/11> a owl:Class ;
+    rdfs:label "Humanities"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/1> ;
+    skos:altLabel "Geisteswissenschaften"@de .
+
+<https://github.com/tibonto/dfgfo/207> a owl:Class ;
+    rdfs:label "Agriculture, Forestry and Veterinary Medicine"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/23> ;
+    skos:altLabel "Agrar-, Forstwissenschaften und Tiermedizin"@de .
+
+<https://github.com/tibonto/dfgfo/409> a owl:Class ;
+    rdfs:label "Computer Science"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/44> ;
+    skos:altLabel "Informatik"@de .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataLifecycleActivity> a owl:Class ;
+    rdfs:label "DataLifecycleActivity" ;
+    rdfs:subClassOf <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardShipActivity> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> ;
+    skos:relatedMatch <http://purl.obolibrary.org/obo/T4FS_0000213> .
+
+<http://nfdi4earth.de/ontology/Kind> a owl:Class ;
+    rdfs:label "Kind" ;
+    rdfs:comment "The contact point of a resource." ;
+    owl:equivalentClass <http://www.w3.org/2006/vcard/ns#Kind> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/MetadataStandard> a owl:Class ;
+    rdfs:label "MetadataStandard" ;
+    rdfs:comment "A standard for interoperable exchange of metadata." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/KHMetaDataObject>,
+        <http://nfdi4earth.de/ontology/Resource> ;
+    owl:equivalentClass <http://nfdi4earth.de/ontology/MetadataStandard> ;
+    skos:broadMatch dcterms:Standard ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/ServiceLevelEnum> a owl:Class ;
+    ns1:permissible_values <http://nfdi4earth.de/ontology/ServiceLevelEnum#trl1+-+basic+principles+observed>,
+        <http://nfdi4earth.de/ontology/ServiceLevelEnum#trl2+-+technology+concept+formulated>,
+        <http://nfdi4earth.de/ontology/ServiceLevelEnum#trl3+-+experimental+proof+of+concept>,
+        <http://nfdi4earth.de/ontology/ServiceLevelEnum#trl4+-+technology+validated+in+lab>,
+        <http://nfdi4earth.de/ontology/ServiceLevelEnum#trl5+-+technology+validated+in+relevant+environment>,
+        <http://nfdi4earth.de/ontology/ServiceLevelEnum#trl6+-+technology+demonstrated+in+relevant+environment>,
+        <http://nfdi4earth.de/ontology/ServiceLevelEnum#trl7+-+system+prototype+demonstration+in+operational+environment>,
+        <http://nfdi4earth.de/ontology/ServiceLevelEnum#trl8+-+system+complete+and+qualified>,
+        <http://nfdi4earth.de/ontology/ServiceLevelEnum#trl9+-+actual+system+proven+in+operational+environment> .
+
+<http://nfdi4earth.de/ontology/ServiceTypeEnum> a owl:Class ;
+    ns1:permissible_values <http://nfdi4earth.de/ontology/ServiceTypeEnum#Data+Curation>,
+        <http://nfdi4earth.de/ontology/ServiceTypeEnum#Database>,
+        <http://nfdi4earth.de/ontology/ServiceTypeEnum#Library/API>,
+        <http://nfdi4earth.de/ontology/ServiceTypeEnum#Storage>,
+        <http://nfdi4earth.de/ontology/ServiceTypeEnum#Support/Consulting>,
+        <http://nfdi4earth.de/ontology/ServiceTypeEnum#Tool/Application>,
+        <http://nfdi4earth.de/ontology/ServiceTypeEnum#Training>,
+        <http://nfdi4earth.de/ontology/ServiceTypeEnum#Web+Application>,
+        <http://nfdi4earth.de/ontology/ServiceTypeEnum#Workflow/Pipelilne> .
+
+<https://github.com/tibonto/dfgfo/206> a owl:Class ;
+    rdfs:label "Neurosciences"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/22> ;
+    skos:altLabel "Neurowissenschaften"@de .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataStewardshipTechnicalConcept> a owl:Class ;
+    rdfs:label "DataStewardshipTechnicalConcept" ;
+    owl:equivalentClass <http://purl.obolibrary.org/obo/T4FS_0000372> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/Role> a owl:Class ;
+    rdfs:label "Role" ;
+    owl:equivalentClass <http://purl.obolibrary.org/obo/BFO_0000023> ;
+    skos:inScheme <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary> .
+
+<http://nfdi4earth.de/ontology/APIProtocols> a owl:Class ;
+    ns1:permissible_values <http://nfdi4earth.de/ontology/APIProtocols#FTP>,
+        <http://nfdi4earth.de/ontology/APIProtocols#NetCDF>,
+        <http://nfdi4earth.de/ontology/APIProtocols#OAI-PMH>,
+        <http://nfdi4earth.de/ontology/APIProtocols#OpenDAP>,
+        <http://nfdi4earth.de/ontology/APIProtocols#REST>,
+        <http://nfdi4earth.de/ontology/APIProtocols#SOAP>,
+        <http://nfdi4earth.de/ontology/APIProtocols#SPARQL>,
+        <http://nfdi4earth.de/ontology/APIProtocols#SWORD>,
+        <http://www.opengis.net/def/serviceType/ogc/csw>,
+        <http://www.opengis.net/def/serviceType/ogc/sos>,
+        <http://www.opengis.net/def/serviceType/ogc/wcs>,
+        <http://www.opengis.net/def/serviceType/ogc/wfs>,
+        <http://www.opengis.net/def/serviceType/ogc/wms>,
+        <http://www.opengis.net/def/serviceType/ogc/wmts> .
+
+<http://nfdi4earth.de/ontology/RDMRole> a owl:Class ;
+    ns1:permissible_values <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataAdvocate>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataCollector>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataCurator>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataDepositor>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataLibrarian>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataOwner>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataProvider>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataSteward>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/DataUser>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/GeneralPublic>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/PolicyMaker>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ResearchSoftwareEngineer>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/ServiceProvider> .
+
+<http://nfdi4earth.de/ontology/Resource> a owl:Class ;
+    rdfs:label "Resource" ;
+    rdfs:comment "A resource in the context of data catalogs." ;
+    owl:equivalentClass dcat:Resource ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/GenericIRI> a owl:Class ;
+    rdfs:label "GenericIRI" ;
+    rdfs:comment "This class exists to allow properties to have an IRI where the class is not known as a range, since LinkML-to-RDF/OWL serializations only treat those properties as an owl:ObjectProperty which have a LinkML class as a range. Otherwise, when using \"uriorcurie\" as range, LinkML treats the properties like owl:DatatypeProperties where the value is a literal with datatatype xsd:anyURI." ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/KHMetaDataObject> a owl:Class ;
+    rdfs:label "KHMetaDataObject" ;
+    rdfs:comment "A mixin for all metadata objects in the KH." ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/CreativeWork> a owl:Class ;
+    rdfs:label "CreativeWork" ;
+    rdfs:comment "The most generic kind of creative work." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/KHMetaDataObject>,
+        <http://nfdi4earth.de/ontology/Thing> ;
+    owl:equivalentClass <http://schema.org/CreativeWork> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Organization> a owl:Class ;
+    rdfs:label "Organization" ;
+    rdfs:comment "A research organization, in the sense of a formal institution. Not the same as a community or initiative." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/AllowsIRIOrBnode>,
+        <http://nfdi4earth.de/ontology/KHMetaDataObject> ;
+    owl:equivalentClass foaf:Organization ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/Catalog> a owl:Class ;
+    rdfs:label "Catalog" ;
+    rdfs:comment "A catalog ..." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/Dataset>,
+        <http://nfdi4earth.de/ontology/KHMetaDataObject> ;
+    owl:equivalentClass dcat:Catalog ;
+    skos:closeMatch <http://www.re3data.org/schema/4-0repository> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<http://nfdi4earth.de/ontology/RDMConcept> a owl:Class ;
+    ns1:permissible_values <http://purl.obolibrary.org/obo/T4FS_0000053>,
+        <http://purl.obolibrary.org/obo/T4FS_0000132>,
+        <http://purl.obolibrary.org/obo/T4FS_0000196>,
+        <http://purl.obolibrary.org/obo/T4FS_0000225>,
+        <http://purl.obolibrary.org/obo/T4FS_0000247>,
+        <http://purl.obolibrary.org/obo/T4FS_0000333>,
+        <http://purl.obolibrary.org/obo/T4FS_0000347>,
+        <http://purl.obolibrary.org/obo/T4FS_0000379>,
+        <http://purl.obolibrary.org/obo/T4FS_0000482>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/internalconcept1>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/internalconcept2>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept1>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept11>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept12>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept17>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept18>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept19>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept22>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept24>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept25>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept26>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept27>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept4>,
+        <https://nfdi4earth.pages.rwth-aachen.de/knowledgehub/nfdi4earth-kh-schema/controlled-vocabulary/rdmconcept7> .
+
+<http://nfdi4earth.de/ontology/Service> a owl:Class ;
+    rdfs:label "Service" ;
+    rdfs:comment "A manifestation of a technical-organisational solution, which typically includes storage and computing services, software, processes, and workflows, as well as the necessary personnel support for different service desks." ;
+    rdfs:subClassOf <http://nfdi4earth.de/ontology/KHMetaDataObject>,
+        <http://nfdi4earth.de/ontology/Thing> ;
+    owl:equivalentClass <http://schema.org/Service> ;
+    skos:inScheme <http://nfdi4earth.de/ontology> .
+
+<https://github.com/tibonto/dfgfo/205> a owl:Class ;
+    rdfs:label "Medicine"@en ;
+    rdfs:subClassOf <https://github.com/tibonto/dfgfo/22> ;
+    skos:altLabel "Medizin"@de .
+

@@ -1,0 +1,463 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://emmo.info/emmo#EMMO_4207e895_8b83_4318_996a_72cfb32acd94> a owl:Class ;
+    rdfs:label "Material" .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/City> a owl:Class ;
+    rdfs:label "city"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/Place> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Collection> a owl:Class ;
+    rdfs:label "collection"@en ;
+    rdfs:subClassOf <http://schema.org/Product> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Consortium> a owl:Class ;
+    rdfs:label "consortium"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/Organization> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Country> a owl:Class ;
+    rdfs:label "country"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/Place> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/DataPortal> a owl:Class ;
+    rdfs:label "data portal"@en ;
+    rdfs:subClassOf <http://schema.org/Service> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Dataset> a owl:Class ;
+    rdfs:label "dataset"@en ;
+    rdfs:subClassOf <http://schema.org/CreativeWork> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/FederalState> a owl:Class ;
+    rdfs:label "federal state"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/Place> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/ObjectType> a owl:Class ;
+    rdfs:label "object type"@en .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/ProgrammingLanguage> a owl:Class ;
+    rdfs:label "programming language"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Project> a owl:Class ;
+    rdfs:label "project"@en .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/ProvidedResource> a owl:Class ;
+    rdfs:label "provided resource"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/Resource> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Publication> a owl:Class ;
+    rdfs:label "publication"@en ;
+    rdfs:subClassOf <http://schema.org/CreativeWork> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/SemanticExpressivity> a owl:Class ;
+    rdfs:label "semantic expressivity"@en .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/ServiceType> a owl:Class ;
+    rdfs:label "service type"@en .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Software> a owl:Class ;
+    rdfs:label "software"@en ;
+    rdfs:subClassOf <http://schema.org/Product> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Standard> a owl:Class ;
+    rdfs:label "standard"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/Specification> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/TaskArea> a owl:Class ;
+    rdfs:label "" .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Website> a owl:Class ;
+    rdfs:label "website"@en ;
+    rdfs:subClassOf <http://schema.org/Product> .
+
+dcterms:FileFormat a owl:Class ;
+    rdfs:label "File Format"@en-us ;
+    rdfs:subClassOf dcterms:MediaType .
+
+<http://purls.helmholtz-metadaten.de/mwo/ChemistryDatabase> a owl:Class ;
+    rdfs:label "chemistry database"@en ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/Database> .
+
+<http://purls.helmholtz-metadaten.de/mwo/ComputationalWorkflow> a owl:Class ;
+    rdfs:label "computational workflow"@en ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/Workflow>,
+        <http://www.ebi.ac.uk/swo/SWO_0000001> .
+
+<http://purls.helmholtz-metadaten.de/mwo/ContactPerson> a owl:Class ;
+    rdfs:label "contact person"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023>,
+        <http://purls.helmholtz-metadaten.de/mwo/ContactPoint> .
+
+<http://purls.helmholtz-metadaten.de/mwo/CrystallographyDatabase> a owl:Class ;
+    rdfs:label "crystallography database"@en ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/Database> .
+
+<http://purls.helmholtz-metadaten.de/mwo/DataCollector> a owl:Class ;
+    rdfs:label "data collector"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<http://purls.helmholtz-metadaten.de/mwo/Documentation> a owl:Class ;
+    rdfs:label "documentation"@en ;
+    rdfs:subClassOf <http://schema.org/Product> .
+
+<http://purls.helmholtz-metadaten.de/mwo/EducationalResource> a owl:Class ;
+    rdfs:label "educational resource"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/Resource> .
+
+<http://purls.helmholtz-metadaten.de/mwo/ElectronicLabNotebook> a owl:Class ;
+    rdfs:label "electronic lab notebook"@en ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000001> .
+
+<http://purls.helmholtz-metadaten.de/mwo/ExperimentalWorkflow> a owl:Class ;
+    rdfs:label "Experimental Workflow"@en ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/Workflow> .
+
+<http://purls.helmholtz-metadaten.de/mwo/GitRepository> a owl:Class ;
+    rdfs:label "git repository" ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/Repository> .
+
+<http://purls.helmholtz-metadaten.de/mwo/GroupLeader> a owl:Class ;
+    rdfs:label "group leader"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<http://purls.helmholtz-metadaten.de/mwo/LargeScaleFacility> a owl:Class ;
+    rdfs:label "large-scale facility"@en .
+
+<http://purls.helmholtz-metadaten.de/mwo/Lecture> a owl:Class ;
+    rdfs:label "Lecture" ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/EducationalEvent> .
+
+<http://purls.helmholtz-metadaten.de/mwo/MaterialsDatabase> a owl:Class ;
+    rdfs:label "materials database"@en ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/Database> .
+
+<http://purls.helmholtz-metadaten.de/mwo/MetadataSchema> a owl:Class ;
+    rdfs:label "metadata schema"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/Specification> .
+
+<http://purls.helmholtz-metadaten.de/mwo/Method> a owl:Class ;
+    rdfs:label "method"@en .
+
+<http://purls.helmholtz-metadaten.de/mwo/OntologyRepository> a owl:Class ;
+    rdfs:label "ontology repository"@en ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/Repository> .
+
+<http://purls.helmholtz-metadaten.de/mwo/ParticipantProject> a owl:Class ;
+    rdfs:label "" ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Project> .
+
+<http://purls.helmholtz-metadaten.de/mwo/Patent> a owl:Class ;
+    rdfs:label "patent"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/Specification> .
+
+<http://purls.helmholtz-metadaten.de/mwo/PotentialsRepository> a owl:Class ;
+    rdfs:label "potentials repository"@en ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/Repository> .
+
+<http://purls.helmholtz-metadaten.de/mwo/ProcessingSoftware> a owl:Class ;
+    rdfs:label "processing software"@en ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000001> .
+
+<http://purls.helmholtz-metadaten.de/mwo/ProjectLeader> a owl:Class ;
+    rdfs:label "project leader"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<http://purls.helmholtz-metadaten.de/mwo/ProjectManager> a owl:Class ;
+    rdfs:label "project manager"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<http://purls.helmholtz-metadaten.de/mwo/ProjectMember> a owl:Class ;
+    rdfs:label "project member"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<http://purls.helmholtz-metadaten.de/mwo/ResearchGroup> a owl:Class ;
+    rdfs:label "research group"@en .
+
+<http://purls.helmholtz-metadaten.de/mwo/ResearchSoftware> a owl:Class ;
+    rdfs:label "research software"@en ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000001> .
+
+<http://purls.helmholtz-metadaten.de/mwo/ResearchTopic> a owl:Class ;
+    rdfs:label "research topic"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> .
+
+<http://purls.helmholtz-metadaten.de/mwo/SemanticResource> a owl:Class ;
+    rdfs:label "semantic resource" ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/Resource> .
+
+<http://purls.helmholtz-metadaten.de/mwo/Seminar> a owl:Class ;
+    rdfs:label "Seminar"@en ;
+    rdfs:subClassOf <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> .
+
+<http://purls.helmholtz-metadaten.de/mwo/SoftwareRepository> a owl:Class ;
+    rdfs:label "software repository"@en ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/Repository> .
+
+<http://purls.helmholtz-metadaten.de/mwo/SparqlEndpoint> a owl:Class ;
+    rdfs:label "SPARQL endpoint"@en ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/WebService> .
+
+<http://purls.helmholtz-metadaten.de/mwo/SummerSchool> a owl:Class ;
+    rdfs:label "Summer School"@en ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/EducationalEvent> .
+
+<http://purls.helmholtz-metadaten.de/mwo/Supervisor> a owl:Class ;
+    rdfs:label "supervisor"@en ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<http://purls.helmholtz-metadaten.de/mwo/TrainingCourse> a owl:Class ;
+    rdfs:label "Training Course"@en ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/EducationalEvent> .
+
+<http://purls.helmholtz-metadaten.de/mwo/UseCase> a owl:Class ;
+    rdfs:label "" .
+
+<http://purls.helmholtz-metadaten.de/mwo/VisualizationSoftware> a owl:Class ;
+    rdfs:label "visualization software"@en ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000001> .
+
+<http://purls.helmholtz-metadaten.de/mwo/WorkflowEnvironment> a owl:Class ;
+    rdfs:label "workflow environment"@en ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000001> .
+
+<http://schema.org/Organization> a owl:Class ;
+    rdfs:label "Organization"@en .
+
+<http://schema.org/Person> a owl:Class ;
+    rdfs:label "" .
+
+<http://schema.org/Project> a owl:Class ;
+    rdfs:label "Project"@en .
+
+<http://www.ebi.ac.uk/swo/SWO_0000020> a owl:Class ;
+    rdfs:label "Unix" ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000021> .
+
+<http://www.ebi.ac.uk/swo/SWO_0000022> a owl:Class ;
+    rdfs:label "Linux" ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000021> .
+
+<http://www.ebi.ac.uk/swo/SWO_0000149> a owl:Class ;
+    rdfs:label "Mac OS"@en ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000021> .
+
+<http://www.ebi.ac.uk/swo/SWO_9000072> a owl:Class ;
+    rdfs:label "Microsoft Windows" ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000021> .
+
+<http://www.ebi.ac.uk/swo/interface/SWO_9000051> a owl:Class ;
+    rdfs:label "web service" ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_9000050> .
+
+<http://www.ebi.ac.uk/swo/interface/SWO_9000054> a owl:Class ;
+    rdfs:label "application programming interface" ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_9000050> .
+
+<http://www.ebi.ac.uk/swo/license/SWO_1000001> a owl:Class ;
+    rdfs:label "Creative Commons" ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000002> .
+
+<http://www.ebi.ac.uk/swo/license/SWO_1000002> a owl:Class ;
+    rdfs:label "Proprietary commercial software license" ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000002> .
+
+<http://www.ebi.ac.uk/swo/license/SWO_1000009> a owl:Class ;
+    rdfs:label "License without restrictions on derivatives" ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000002> .
+
+<http://www.ebi.ac.uk/swo/license/SWO_1000043> a owl:Class ;
+    rdfs:label "GNU Project Free License Type" ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/license/SWO_1000008> .
+
+<http://www.ebi.ac.uk/swo/license/SWO_1000056> a owl:Class ;
+    rdfs:label "Artistic License" ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000002> .
+
+<http://www.ebi.ac.uk/swo/license/SWO_1000061> a owl:Class ;
+    rdfs:label "free to use license"@en ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000002> .
+
+<http://www.ebi.ac.uk/swo/license/SWO_1000069> a owl:Class ;
+    rdfs:label "GNU AGPL"@en ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000002> .
+
+<http://www.ebi.ac.uk/swo/license/SWO_1000095> a owl:Class ;
+    rdfs:label "Open Data Commons"@en ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000002> .
+
+<http://www.ebi.ac.uk/swo/license/SWO_1000103> a owl:Class ;
+    rdfs:label "Vendor-specific License"@en ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000002> .
+
+<http://www.ebi.ac.uk/swo/license/SWO_1000137> a owl:Class ;
+    rdfs:label "Fee-Based Commercial License"@en ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000002> .
+
+<http://www.ebi.ac.uk/swo/license/SWO_1000140> a owl:Class ;
+    rdfs:label "Non-Commercial No-Fee License"@en ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000002> .
+
+owl:Nothing a owl:Class ;
+    rdfs:label "Nothing" .
+
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Consortium> a owl:Class ;
+    rdfs:label "consortium"@en ;
+    rdfs:subClassOf <https://nfdi.fiz-karlsruhe.de/ontology/Organization> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Person> a owl:Class ;
+    rdfs:label "person"@en .
+
+<https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Conference> a owl:Class ;
+    rdfs:label "Conference"@en ;
+    rdfs:subClassOf <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> .
+
+<https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Talk> a owl:Class ;
+    rdfs:label "Talk"@en ;
+    rdfs:subClassOf <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> .
+
+<https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Tutorial> a owl:Class ;
+    rdfs:label "Tutorial"@en ;
+    rdfs:subClassOf <http://purls.helmholtz-metadaten.de/mwo/EducationalEvent> .
+
+<https://w3id.org/scholarlydata/ontology/conference-ontology.owl#Workshop> a owl:Class ;
+    rdfs:label "Workshop"@en ;
+    rdfs:subClassOf <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> .
+
+<https://w3id.org/seo#KeynoteSpeaker> a owl:Class ;
+    rdfs:label "Keynote speaker"@en ;
+    rdfs:subClassOf <https://w3id.org/seo#InvitedSpeakers> .
+
+<https://w3id.org/skgo/modsci#LaboratoryInstrument> a owl:Class ;
+    rdfs:label "Laboratory Instrument"@en ;
+    rdfs:subClassOf <https://w3id.org/skgo/modsci#Instrument> .
+
+<https://w3id.org/skgo/modsci#ProgrammingLanguage> a owl:Class ;
+    rdfs:label "Programming Language" ;
+    rdfs:subClassOf <http://schema.org/ComputerLanguage> .
+
+<https://w3id.org/skgo/modsci#ScientificInstrument> a owl:Class ;
+    rdfs:label "Scientific Instrument" ;
+    rdfs:subClassOf <https://w3id.org/skgo/modsci#Instrument> .
+
+<https://w3id.org/skgo/modsci#ScientificInstrumentManufacturer> a owl:Class ;
+    rdfs:label "Scientific Instrument Manufacturer" .
+
+<https://w3id.org/skgo/modsci#Technology> a owl:Class ;
+    rdfs:label "Technology" .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/AcademicDiscipline> a owl:Class ;
+    rdfs:label "academic discipline"@en ;
+    rdfs:subClassOf <https://w3id.org/skgo/modsci#ModernScience> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Organization> a owl:Class ;
+    rdfs:label "organization"@en .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Person> a owl:Class ;
+    rdfs:label "person"@en .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/TechnologicalMeans> a owl:Class ;
+    rdfs:label "technological means"@en .
+
+dcterms:MediaType a owl:Class ;
+    rdfs:label "Media Type"@en-us .
+
+<http://purls.helmholtz-metadaten.de/mwo/ContactPoint> a owl:Class ;
+    rdfs:label "contact point"@en .
+
+<http://purls.helmholtz-metadaten.de/mwo/WebService> a owl:Class ;
+    rdfs:label "web service"@en ;
+    rdfs:subClassOf <http://schema.org/Service> .
+
+<http://schema.org/ComputerLanguage> a owl:Class ;
+    rdfs:label "ComputerLanguage"@en ;
+    rdfs:subClassOf <http://schema.org/Intangible> .
+
+<http://www.ebi.ac.uk/swo/license/SWO_1000008> a owl:Class ;
+    rdfs:label "Open source software license" ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000002> .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Organization> a owl:Class ;
+    rdfs:label "organization"@en .
+
+<https://nfdi.fiz-karlsruhe.de/ontology/Project> a owl:Class ;
+    rdfs:label "project"@en .
+
+<https://w3id.org/seo#InvitedSpeakers> a owl:Class ;
+    rdfs:label "Invited speakers"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/Person> .
+
+<https://w3id.org/skgo/modsci#ModernScience> a owl:Class ;
+    rdfs:label "Science" .
+
+<http://purls.helmholtz-metadaten.de/mwo/Workflow> a owl:Class ;
+    rdfs:label "workflow"@en ;
+    rdfs:subClassOf <http://nfdi.fiz-karlsruhe.de/ontology/Specification> .
+
+<http://schema.org/CreativeWork> a owl:Class ;
+    rdfs:label "" .
+
+<http://schema.org/Intangible> a owl:Class ;
+    rdfs:label "" .
+
+<http://schema.org/Service> a owl:Class ;
+    rdfs:label "Service"@en ;
+    rdfs:subClassOf <http://schema.org/Intangible> .
+
+<http://www.ebi.ac.uk/swo/SWO_9000050> a owl:Class ;
+    rdfs:label "software interface" .
+
+<https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent> a owl:Class ;
+    rdfs:label "Organised event"@en .
+
+<https://w3id.org/skgo/modsci#Instrument> a owl:Class ;
+    rdfs:label "Instrument"@en ;
+    rdfs:subClassOf <http://schema.org/Product> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Place> a owl:Class ;
+    rdfs:label "place"@en .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Resource> a owl:Class ;
+    rdfs:label "resource"@en .
+
+<http://purls.helmholtz-metadaten.de/mwo/Database> a owl:Class ;
+    rdfs:label "database"@en ;
+    rdfs:subClassOf <http://schema.org/Product> .
+
+<http://nfdi.fiz-karlsruhe.de/ontology/Specification> a owl:Class ;
+    rdfs:label "specification"@en ;
+    rdfs:subClassOf <http://schema.org/Product> .
+
+<http://purls.helmholtz-metadaten.de/mwo/EducationalEvent> a owl:Class ;
+    rdfs:label "educational event" ;
+    rdfs:subClassOf <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent> .
+
+<http://purls.helmholtz-metadaten.de/mwo/Repository> a owl:Class ;
+    rdfs:label "repository"@en ;
+    rdfs:subClassOf <http://schema.org/Product> .
+
+<http://www.ebi.ac.uk/swo/SWO_0000021> a owl:Class ;
+    rdfs:label "operating system" ;
+    rdfs:subClassOf <http://www.ebi.ac.uk/swo/SWO_0000001> .
+
+<https://w3id.org/scholarlydata/ontology/conference-ontology.owl#AcademicEvent> a owl:Class ;
+    rdfs:label "Academic event"@en ;
+    rdfs:subClassOf <https://w3id.org/scholarlydata/ontology/conference-ontology.owl#OrganisedEvent> .
+
+<http://purl.obolibrary.org/obo/BFO_0000023> a owl:Class ;
+    rdfs:label "role"@en .
+
+<http://www.ebi.ac.uk/swo/SWO_0000001> a owl:Class ;
+    rdfs:label "software" .
+
+<http://schema.org/Product> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.ebi.ac.uk/swo/SWO_0000002> a owl:Class ;
+    rdfs:label "software license",
+        "licence"@en .
+

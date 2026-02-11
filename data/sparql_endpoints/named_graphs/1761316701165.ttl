@@ -1,0 +1,43 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+owl:Nothing a owl:Class ;
+    rdfs:label "Nothing" ;
+    rdfs:comment "This is the empty class." ;
+    rdfs:isDefinedBy owl: ;
+    rdfs:subClassOf owl:Thing ;
+    owl:complementOf owl:Thing .
+
+owl:bottomDataProperty a owl:DatatypeProperty ;
+    rdfs:label "bottomDataProperty" ;
+    rdfs:comment "The data property that does not relate any individual to any data value." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy owl: ;
+    rdfs:range rdfs:Literal .
+
+owl:bottomObjectProperty a owl:ObjectProperty ;
+    rdfs:label "bottomObjectProperty" ;
+    rdfs:comment "The object property that does not relate any two individuals." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy owl: ;
+    rdfs:range owl:Thing .
+
+owl:topDataProperty a owl:DatatypeProperty ;
+    rdfs:label "topDataProperty" ;
+    rdfs:comment "The data property that relates every individual to every data value." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy owl: ;
+    rdfs:range rdfs:Literal .
+
+owl:topObjectProperty a owl:ObjectProperty ;
+    rdfs:label "topObjectProperty" ;
+    rdfs:comment "The object property that relates every two individuals." ;
+    rdfs:domain owl:Thing ;
+    rdfs:isDefinedBy owl: ;
+    rdfs:range owl:Thing .
+
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" ;
+    rdfs:comment "The class of OWL individuals." ;
+    rdfs:isDefinedBy owl: .
+

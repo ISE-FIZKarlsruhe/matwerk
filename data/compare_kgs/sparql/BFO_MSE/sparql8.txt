@@ -1,0 +1,48 @@
+# What are the data portals present in the MSE-KG?
+
+SELECT ?portal ?name ?link ?repository ?contactpointName ?Email ?Website
+WHERE {
+  # Identify resources of type Data Portal
+  ?portal a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123> .
+
+  # Portal name
+  OPTIONAL {
+    ?portal <http://purl.obolibrary.org/obo/IAO_0000235> ?nameNode .
+    ?nameNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
+    ?nameNode rdfs:label ?title .
+  }
+
+  # Link (URL or PID)
+  OPTIONAL {
+    ?portal <http://purl.obolibrary.org/obo/IAO_0000235> ?linkNode .
+    ?linkNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?link .
+  }
+
+  # Link to repository
+  OPTIONAL {
+    ?portal <http://purl.obolibrary.org/obo/IAO_0000235> ?repositoryNode .
+    ?repositoryNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repository .
+  }
+
+  # Participates in contacting process
+  OPTIONAL {
+    ?portal <http://purl.obolibrary.org/obo/BFO_0000056> ?contactingProcess .
+    ?contactingProcess <http://purl.obolibrary.org/obo/BFO_0000057> ?contactpoint .
+    ?contactingProcess <http://purl.obolibrary.org/obo/BFO_0000055> ?contactpointRole .
+    
+    ?contactpoint <http://purl.obolibrary.org/obo/IAO_0000235> ?contactpointNode .
+    OPTIONAL {?contactpointNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
+              ?contactpointNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?contactpointName
+             }
+    
+    ?contactpointRole <http://purl.obolibrary.org/obo/IAO_0000235> ?EmailWebsite .
+    OPTIONAL {?EmailWebsite a <http://purl.obolibrary.org/obo/IAO_0000429> .
+              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?Email
+             }
+    OPTIONAL {?EmailWebsite a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223> .
+              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?Website
+             }
+  }
+
+}
+LIMIT 999

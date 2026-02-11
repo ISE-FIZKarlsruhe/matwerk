@@ -1,0 +1,3692 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dbpedia.org/ontology/Writer> a owl:Class ;
+    rdfs:label "writer"@en .
+
+<http://purl.org/NET/c4dm/event.owl#Event> a owl:Class ;
+    rdfs:label "Event" .
+
+dcterms:Agent a owl:Class ;
+    rdfs:label "Agent"@en .
+
+<http://purl.org/ontology/bibo/AcademicArticle> a owl:Class ;
+    rdfs:label "Academic Article"@en .
+
+<http://purl.org/ontology/bibo/Article> a owl:Class ;
+    rdfs:label "Article"@en .
+
+<http://purl.org/ontology/bibo/AudioDocument> a owl:Class ;
+    rdfs:label "audio document"@en .
+
+<http://purl.org/ontology/bibo/AudioVisualDocument> a owl:Class ;
+    rdfs:label "audio-visual document"@en .
+
+<http://purl.org/ontology/bibo/Bill> a owl:Class ;
+    rdfs:label "Bill"@en .
+
+<http://purl.org/ontology/bibo/Book> a owl:Class ;
+    rdfs:label "Book"@en .
+
+<http://purl.org/ontology/bibo/BookSection> a owl:Class ;
+    rdfs:label "Book Section"@en .
+
+<http://purl.org/ontology/bibo/Brief> a owl:Class ;
+    rdfs:label "Brief"@en .
+
+<http://purl.org/ontology/bibo/Chapter> a owl:Class ;
+    rdfs:label "Chapter"@en .
+
+<http://purl.org/ontology/bibo/Code> a owl:Class ;
+    rdfs:label "Code"@en .
+
+<http://purl.org/ontology/bibo/CollectedDocument> a owl:Class ;
+    rdfs:label "Collected Document"@en .
+
+<http://purl.org/ontology/bibo/Collection> a owl:Class ;
+    rdfs:label "Collection"@en .
+
+<http://purl.org/ontology/bibo/Conference> a owl:Class ;
+    rdfs:label "Conference"@en .
+
+<http://purl.org/ontology/bibo/CourtReporter> a owl:Class ;
+    rdfs:label "Court Reporter"@en .
+
+<http://purl.org/ontology/bibo/Document> a owl:Class ;
+    rdfs:label "Document"@en .
+
+<http://purl.org/ontology/bibo/DocumentPart> a owl:Class ;
+    rdfs:label "document part"@en .
+
+<http://purl.org/ontology/bibo/DocumentStatus> a owl:Class ;
+    rdfs:label "Document Status"@en .
+
+<http://purl.org/ontology/bibo/EditedBook> a owl:Class ;
+    rdfs:label "Edited Book"@en .
+
+<http://purl.org/ontology/bibo/Email> a owl:Class ;
+    rdfs:label "EMail"@en .
+
+<http://purl.org/ontology/bibo/Event> a owl:Class ;
+    rdfs:label "" .
+
+<http://purl.org/ontology/bibo/Excerpt> a owl:Class ;
+    rdfs:label "Excerpt"@en .
+
+<http://purl.org/ontology/bibo/Film> a owl:Class ;
+    rdfs:label "Film"@en .
+
+<http://purl.org/ontology/bibo/Hearing> a owl:Class ;
+    rdfs:label "Hearing"@en .
+
+<http://purl.org/ontology/bibo/Image> a owl:Class ;
+    rdfs:label "Image"@en .
+
+<http://purl.org/ontology/bibo/Interview> a owl:Class ;
+    rdfs:label "Interview"@en .
+
+<http://purl.org/ontology/bibo/Issue> a owl:Class ;
+    rdfs:label "Issue"@en .
+
+<http://purl.org/ontology/bibo/Journal> a owl:Class ;
+    rdfs:label "Journal"@en .
+
+<http://purl.org/ontology/bibo/LegalCaseDocument> a owl:Class ;
+    rdfs:label "Legal Case Document"@en .
+
+<http://purl.org/ontology/bibo/LegalDecision> a owl:Class ;
+    rdfs:label "Decision"@en .
+
+<http://purl.org/ontology/bibo/LegalDocument> a owl:Class ;
+    rdfs:label "Legal Document"@en .
+
+<http://purl.org/ontology/bibo/Legislation> a owl:Class ;
+    rdfs:label "Legislation"@en .
+
+<http://purl.org/ontology/bibo/Letter> a owl:Class ;
+    rdfs:label "Letter"@en .
+
+<http://purl.org/ontology/bibo/Magazine> a owl:Class ;
+    rdfs:label "Magazine"@en .
+
+<http://purl.org/ontology/bibo/Manual> a owl:Class ;
+    rdfs:label "Manual"@en .
+
+<http://purl.org/ontology/bibo/Manuscript> a owl:Class ;
+    rdfs:label "Manuscript"@en .
+
+<http://purl.org/ontology/bibo/Map> a owl:Class ;
+    rdfs:label "Map"@en .
+
+<http://purl.org/ontology/bibo/MultiVolumeBook> a owl:Class ;
+    rdfs:label "Multivolume Book"@en .
+
+<http://purl.org/ontology/bibo/Newspaper> a owl:Class ;
+    rdfs:label "Newspaper"@en .
+
+<http://purl.org/ontology/bibo/Note> a owl:Class ;
+    rdfs:label "Note"@en .
+
+<http://purl.org/ontology/bibo/Patent> a owl:Class ;
+    rdfs:label "Patent"@en .
+
+<http://purl.org/ontology/bibo/Performance> a owl:Class ;
+    rdfs:label "Performance"@en .
+
+<http://purl.org/ontology/bibo/Periodical> a owl:Class ;
+    rdfs:label "Periodical"@en .
+
+<http://purl.org/ontology/bibo/PersonalCommunication> a owl:Class ;
+    rdfs:label "Personal Communication"@en .
+
+<http://purl.org/ontology/bibo/PersonalCommunicationDocument> a owl:Class ;
+    rdfs:label "Personal Communication Document"@en .
+
+<http://purl.org/ontology/bibo/Proceedings> a owl:Class ;
+    rdfs:label "Proceedings"@en .
+
+<http://purl.org/ontology/bibo/Quote> a owl:Class ;
+    rdfs:label "Quote"@en .
+
+<http://purl.org/ontology/bibo/ReferenceSource> a owl:Class ;
+    rdfs:label "Reference Source"@en .
+
+<http://purl.org/ontology/bibo/Report> a owl:Class ;
+    rdfs:label "Report"@en .
+
+<http://purl.org/ontology/bibo/Series> a owl:Class ;
+    rdfs:label "Series"@en .
+
+<http://purl.org/ontology/bibo/Slide> a owl:Class ;
+    rdfs:label "Slide"@en .
+
+<http://purl.org/ontology/bibo/Slideshow> a owl:Class ;
+    rdfs:label "Slideshow"@en .
+
+<http://purl.org/ontology/bibo/Specification> a owl:Class ;
+    rdfs:label "Specification"@en .
+
+<http://purl.org/ontology/bibo/Standard> a owl:Class ;
+    rdfs:label "Standard"@en .
+
+<http://purl.org/ontology/bibo/Statute> a owl:Class ;
+    rdfs:label "Statute"@en .
+
+<http://purl.org/ontology/bibo/Thesis> a owl:Class ;
+    rdfs:label "Thesis"@en .
+
+<http://purl.org/ontology/bibo/ThesisDegree> a owl:Class ;
+    rdfs:label "Thesis degree"@en .
+
+<http://purl.org/ontology/bibo/Webpage> a owl:Class ;
+    rdfs:label "Webpage"@en .
+
+<http://purl.org/ontology/bibo/Website> a owl:Class ;
+    rdfs:label "Website"@en .
+
+<http://purl.org/ontology/bibo/Workshop> a owl:Class ;
+    rdfs:label "Workshop"@en .
+
+<http://wikiba.se/ontology#BestRank> a owl:Class ;
+    rdfs:label "BestRank" .
+
+<http://wikiba.se/ontology#Dump> a owl:Class ;
+    rdfs:label "Dump" .
+
+<http://wikiba.se/ontology#Entity> a owl:Class ;
+    rdfs:label "Entity" .
+
+<http://wikiba.se/ontology#Form> a owl:Class ;
+    rdfs:label "Form" .
+
+<http://wikiba.se/ontology#GeoAutoPrecision> a owl:Class ;
+    rdfs:label "GeoAutoPrecision" .
+
+<http://wikiba.se/ontology#GlobecoordinateValue> a owl:Class ;
+    rdfs:label "GlobecoordinateValue" .
+
+<http://wikiba.se/ontology#Item> a owl:Class ;
+    rdfs:label "Item" .
+
+<http://wikiba.se/ontology#Lexeme> a owl:Class ;
+    rdfs:label "Lexeme" .
+
+<http://wikiba.se/ontology#Property> a owl:Class ;
+    rdfs:label "Property" .
+
+<http://wikiba.se/ontology#PropertyType> a owl:Class ;
+    rdfs:label "PropertyType" .
+
+<http://wikiba.se/ontology#QuantityValue> a owl:Class ;
+    rdfs:label "QuantityValue" .
+
+<http://wikiba.se/ontology#Rank> a owl:Class ;
+    rdfs:label "Rank" .
+
+<http://wikiba.se/ontology#Reference> a owl:Class ;
+    rdfs:label "Reference" .
+
+<http://wikiba.se/ontology#Sense> a owl:Class ;
+    rdfs:label "Sense" .
+
+<http://wikiba.se/ontology#Statement> a owl:Class ;
+    rdfs:label "Statement" .
+
+<http://wikiba.se/ontology#TimeValue> a owl:Class ;
+    rdfs:label "TimeValue" .
+
+<http://wikiba.se/ontology#Value> a owl:Class ;
+    rdfs:label "Value" .
+
+rdf:List a owl:Class ;
+    rdfs:label "List" .
+
+rdf:Seq a owl:Class ;
+    rdfs:label "Seq" .
+
+rdfs:Class a owl:Class ;
+    rdfs:label "Class" .
+
+rdfs:Literal a owl:Class ;
+    rdfs:label "Literal" .
+
+rdfs:Resource a owl:Class ;
+    rdfs:label "Resource" .
+
+xsd:date a owl:Class ;
+    rdfs:label "date" .
+
+xsd:dateTime a owl:Class ;
+    rdfs:label "dateTime" .
+
+xsd:gYear a owl:Class ;
+    rdfs:label "gYear" .
+
+xsd:gYearMonth a owl:Class ;
+    rdfs:label "gYearMonth" .
+
+owl:Nothing a owl:Class ;
+    rdfs:label "Nothing" .
+
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> a owl:Class ;
+    rdfs:label "Spatial Thing",
+        "SpatialThing" .
+
+skos:Collection a owl:Class ;
+    rdfs:label "Collection"@en .
+
+skos:Concept a owl:Class ;
+    rdfs:label "Concept",
+        "Concept"@en .
+
+skos:ConceptScheme a owl:Class ;
+    rdfs:label "Concept Scheme"@en .
+
+skos:OrderedCollection a owl:Class ;
+    rdfs:label "Ordered Collection"@en .
+
+<http://www.wikidata.org/prop/novalue/P10> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1001> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10018> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1003> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10031> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1004> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1005> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1006> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10069> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10085> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P101> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1011> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1013> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1014> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10141> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1015> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10151> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1017> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10195> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P102> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10227> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10242> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10266> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10280> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10283> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10297> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10298> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P103> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10302> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1036> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1037> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10372> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1038> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10387> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1039> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10397> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1040> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10438> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10469> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10480> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1050> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1051> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10527> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10553> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1056> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10565> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P106> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10608> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1065> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1066> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10689> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10690> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10789> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P108> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1082> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10832> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10864> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P109> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P10916> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1104> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11108> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11156> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11194> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11196> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11249> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1128> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11408> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1144> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1149> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11496> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1150> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1151> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11514> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11550> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11567> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11620> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11683> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11686> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11693> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1174> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11797> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11819> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P11835> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1185> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P119> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1191> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1196> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12062> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12063> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1207> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12098> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P121> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12187> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1219> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1220> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1225> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P123> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1233> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12361> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1237> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12385> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12409> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1242> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1245> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12458> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12483> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1249> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1256> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1258> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12582> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12597> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1260> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12613> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12615> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1263> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1264> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1266> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1269> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1273> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12749> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1280> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12800> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1281> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1284> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12852> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1287> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P12930> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1296> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1299> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1303> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P13049> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P13061> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1309> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P131> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1310> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1315> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1317> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1319> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1325> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1326> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1327> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1332> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1333> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P13337> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1334> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1335> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1341> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1343> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P13455> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P135> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P13509> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P13591> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P13596> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P136> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P13613> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1362> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P13627> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1365> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1366> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1368> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P137> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1375> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1376> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P138> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1382> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1388> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P140> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1411> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1412> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1415> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1417> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1424> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P143> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1430> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1431> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1433> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1435> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1436> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P144> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1441> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1442> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1448> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1454> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1455> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1456> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1464> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1465> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1472> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1476> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1477> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1480> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P150> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1532> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1534> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1539> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P154> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1540> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1542> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1545> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1549> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P155> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1552> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1553> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1559> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P156> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1564> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1566> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P157> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1576> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1580> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P159> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1607> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P161> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1612> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1617> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P162> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1628> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1629> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1630> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1636> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1647> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1659> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P166> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1667> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1670> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1680> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1683> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1686> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1687> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1695> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P17> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P170> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1705> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1709> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1710> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1711> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P172> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1728> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1741> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P175> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1766> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1779> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P179> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1791> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1792> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1793> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P18> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P180> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1801> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1810> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1813> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1816> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1819> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1828> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1830> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P184> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1842> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1855> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1870> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1871> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1877> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1889> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1890> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1896> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1899> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P19> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P190> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1902> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1922> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1932> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1937> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1938> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P194> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P195> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1953> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1963> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1971> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1977> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1986> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1994> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P1997> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P20> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2000> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2002> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2003> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2011> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2013> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2019> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2021> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2025> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2031> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2032> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2034> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2044> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2046> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2047> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2048> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P206> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2067> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2089> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2093> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2096> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P21> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P212> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2121> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P213> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P214> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2142> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2163> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2167> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2168> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P217> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2174> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2188> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2191> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P22> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2208> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2210> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2241> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2264> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2268> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P227> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2277> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2283> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2298> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2302> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2303> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2305> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2306> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2308> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2309> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2316> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2322> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2338> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2340> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2342> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2347> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2354> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2360> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2373> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2381> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2383> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2387> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2388> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2408> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P242> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2427> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2429> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P243> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2435> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P244> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P245> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2469> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P248> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P25> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2503> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2510> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2515> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2519> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2521> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2533> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2554> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2561> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2564> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2579> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2581> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P26> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2600> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2603> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2604> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2605> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2607> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2612> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2626> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2635> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2638> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2639> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2652> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2657> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2666> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2668> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2670> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2671> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P268> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2688> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P269> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2699> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P27> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2701> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P271> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2716> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2722> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2732> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2734> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2741> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P275> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2750> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2754> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2755> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P276> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2769> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P279> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2799> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P281> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2842> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2850> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2868> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2872> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2875> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2886> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2888> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2889> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P291> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2916> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2924> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2937> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2949> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2950> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2959> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2960> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2963> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2966> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2969> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P2977> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P301> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3029> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3035> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P304> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3051> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3056> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3065> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P31> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3106> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3114> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3123> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3132> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3133> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3154> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3192> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3204> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3206> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3218> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3219> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3221> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3222> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3241> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3254> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3280> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3300> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3305> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3321> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3342> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3348> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3360> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3365> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3368> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3373> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3389> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3417> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3430> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3435> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P344> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P345> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3452> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3478> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P349> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3500> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P355> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3553> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P356> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3569> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P358> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3599> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3603> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P361> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3630> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P364> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3642> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P366> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3674> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3680> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3706> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P373> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3740> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3744> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3761> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3762> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3782> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3788> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3803> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3816> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3827> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3831> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3832> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3846> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3847> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3896> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P39> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3903> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3911> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3916> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3919> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3921> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3929> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3935> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P395> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3954> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P396> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3973> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3977> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3980> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3984> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3987> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P3997> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P40> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P402> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P407> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4073> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4084> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P409> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P41> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4104> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4112> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4114> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P412> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4146> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4155> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4179> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4200> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P421> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4223> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4224> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4240> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4293> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P433> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P434> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4342> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4343> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P435> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4359> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P439> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4390> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4399> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P443> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4431> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4432> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4438> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4457> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4491> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P451> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P452> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4527> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P453> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4534> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4549> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4553> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P459> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P460> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4602> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P461> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4613> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4619> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4620> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4629> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P463> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4633> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4638> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4647> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4656> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4657> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4666> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4672> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P47> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4717> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P473> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4733> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4759> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P478> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4789> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P480> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P483> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4839> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4848> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P485> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P486> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4862> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4876> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P488> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4900> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4927> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4931> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P495> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4953> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P496> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4967> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4969> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P497> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4970> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P4985> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P50> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5008> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5017> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5019> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5030> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5033> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5034> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5058> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5063> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5068> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P508> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5088> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P509> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P51> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5101> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5102> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P512> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5125> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P518> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5198> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5202> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5226> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5229> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5247> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5250> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5251> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P527> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5271> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P528> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5284> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P53> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5314> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5337> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5340> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5341> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P535> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5357> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5358> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5359> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5361> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5375> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5395> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5404> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5421> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5431> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5441> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5466> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5491> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5504> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5508> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P551> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5534> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P554> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5542> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5555> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5568> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5570> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5573> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5587> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5592> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5613> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5617> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5631> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P569> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5695> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P57> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P570> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P571> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5731> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5739> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P577> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5775> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P58> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P580> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5800> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P582> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5821> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5833> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P585> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5859> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P586> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5869> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5882> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5905> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P5964> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P605> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6058> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P607> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6091> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6104> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6108> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6119> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6150> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6155> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6173> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6175> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6186> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6194> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6200> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6208> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6211> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6216> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6224> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P625> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6262> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6275> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P629> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6293> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6295> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6298> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6300> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6328> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6332> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6334> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6351> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6366> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6379> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6385> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6394> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P640> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6403> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6404> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6412> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6413> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P642> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P646> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P648> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6482> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P650> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6517> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6541> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6552> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6573> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6578> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6607> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6621> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6645> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6679> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6683> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P669> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6698> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P670> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6706> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6715> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P672> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6721> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P674> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6745> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6750> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P676> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6764> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6766> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6773> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6782> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6821> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6824> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6829> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6844> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6868> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6870> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6873> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6878> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6886> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P69> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6900> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P691> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6925> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P6987> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P701> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7012> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7024> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7026> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7029> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7033> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7039> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7046> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7052> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P706> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7084> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7087> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7141> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7197> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7208> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7212> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7214> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P723> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P725> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7286> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7293> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7305> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7311> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7317> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P734> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P735> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7369> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P737> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7388> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P740> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7400> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7416> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P742> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7421> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7444> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7445> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7452> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P747> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7471> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7487> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P749> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7491> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7497> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P750> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7507> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7512> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7520> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7574> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7580> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7666> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7668> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P767> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7685> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7688> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7697> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7699> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7700> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7704> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7711> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7745> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7749> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7753> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7763> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7772> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7796> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7803> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7818> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7822> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7827> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7829> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7832> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7842> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7846> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7850> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7859> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7865> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7867> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7874> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7900> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7902> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P791> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P792> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7929> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7934> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7937> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7947> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7952> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7982> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P7993> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P800> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P802> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8024> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8034> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8041> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8044> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P805> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8081> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8094> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P812> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8125> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8129> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P813> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8138> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8168> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8172> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8179> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8189> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8234> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8235> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8238> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P825> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8253> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P827> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8272> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P828> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8281> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8290> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8292> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8294> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8295> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8309> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8313> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8317> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8334> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8345> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8349> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8379> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8385> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8386> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P839> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P840> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8402> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8406> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8408> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8432> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8440> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8464> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8496> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8518> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8519> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P854> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8551> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8554> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8555> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P856> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8589> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P859> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8590> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8591> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8592> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P86> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P860> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8603> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P863> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P865> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8653> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P866> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8672> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8687> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8688> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P87> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8713> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8728> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8744> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8748> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8750> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8768> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8795> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8805> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8814> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8826> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8833> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8848> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8849> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8851> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8852> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8854> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8861> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P887> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8870> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8899> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8902> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8914> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8944> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8947> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8966> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8971> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8972> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8974> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8975> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P898> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8980> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8989> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8992> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P8998> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P902> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9037> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P906> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9073> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9081> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9084> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9097> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9098> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P910> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9112> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9113> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9129> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9134> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P915> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9152> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9160> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9164> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9171> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9178> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9179> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P921> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9223> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9226> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9241> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9247> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9248> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9251> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9285> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9287> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9289> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9318> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9328> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9337> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P935> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9352> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9365> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P937> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9371> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9391> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P94> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P941> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9459> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9463> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9466> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P947> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9475> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P948> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P949> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9495> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9497> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P950> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9507> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P951> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P953> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9545> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9556> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P958> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9594> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9619> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9623> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9625> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9631> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9642> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P965> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P966> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9661> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9670> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9675> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9686> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9692> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P97> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9710> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P972> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P973> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9743> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9756> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9757> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9780> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9807> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P982> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9842> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9863> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9905> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9918> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9943> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9957> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9964> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9965> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P998> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9981> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9984> a owl:Class ;
+    rdfs:label "" .
+
+<http://www.wikidata.org/prop/novalue/P9995> a owl:Class ;
+    rdfs:label "" .
+
+foaf:Agent a owl:Class ;
+    rdfs:label "Agent" .
+
+foaf:Document a owl:Class ;
+    rdfs:label "Document" .
+
+foaf:Group a owl:Class ;
+    rdfs:label "Group" .
+
+foaf:Image a owl:Class ;
+    rdfs:label "Image" .
+
+foaf:LabelProperty a owl:Class ;
+    rdfs:label "Label Property" .
+
+foaf:OnlineAccount a owl:Class ;
+    rdfs:label "Online Account" .
+
+foaf:OnlineChatAccount a owl:Class ;
+    rdfs:label "Online Chat Account" .
+
+foaf:OnlineEcommerceAccount a owl:Class ;
+    rdfs:label "Online E-commerce Account" .
+
+foaf:OnlineGamingAccount a owl:Class ;
+    rdfs:label "Online Gaming Account" .
+
+foaf:Organization a owl:Class ;
+    rdfs:label "Organization" .
+
+foaf:Person a owl:Class ;
+    rdfs:label "Person" .
+
+foaf:PersonalProfileDocument a owl:Class ;
+    rdfs:label "PersonalProfileDocument" .
+
+foaf:Project a owl:Class ;
+    rdfs:label "Project" .
+
+<https://d-nb.info/standards/elementset/gnd#AdministrativeUnit> a owl:Class ;
+    rdfs:label "Administrative unit"@en .
+
+<https://d-nb.info/standards/elementset/gnd#AuthorityResource> a owl:Class ;
+    rdfs:label "Authority Resource"@en .
+
+<https://d-nb.info/standards/elementset/gnd#BuildingOrMemorial> a owl:Class ;
+    rdfs:label "Building or memorial"@en .
+
+<https://d-nb.info/standards/elementset/gnd#CharactersOrMorphemes> a owl:Class ;
+    rdfs:label "Characters or morphemes"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Collection> a owl:Class ;
+    rdfs:label "Collection"@en .
+
+<https://d-nb.info/standards/elementset/gnd#CollectiveManuscript> a owl:Class ;
+    rdfs:label "Collective manuscript"@en .
+
+<https://d-nb.info/standards/elementset/gnd#CollectivePseudonym> a owl:Class ;
+    rdfs:label "Collective pseudonym"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Company> a owl:Class ;
+    rdfs:label "Company"@en .
+
+<https://d-nb.info/standards/elementset/gnd#ConferenceOrEvent> a owl:Class ;
+    rdfs:label "Conference or Event"@en .
+
+<https://d-nb.info/standards/elementset/gnd#CorporateBody> a owl:Class ;
+    rdfs:label "Corporate Body"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Country> a owl:Class ;
+    rdfs:label "Country"@en .
+
+<https://d-nb.info/standards/elementset/gnd#DifferentiatedPerson> a owl:Class ;
+    rdfs:label "Differentiated person"@en .
+
+<https://d-nb.info/standards/elementset/gnd#EarlierNameOfThePerson> a owl:Class ;
+    rdfs:label "Earlier name of the person"@en .
+
+<https://d-nb.info/standards/elementset/gnd#EthnographicName> a owl:Class ;
+    rdfs:label "Ethnographic name"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Expression> a owl:Class ;
+    rdfs:label "Expression"@en .
+
+<https://d-nb.info/standards/elementset/gnd#ExtraterrestrialTerritory> a owl:Class ;
+    rdfs:label "Extraterrestrial territory"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Family> a owl:Class ;
+    rdfs:label "Family"@en .
+
+<https://d-nb.info/standards/elementset/gnd#FictiveCorporateBody> a owl:Class ;
+    rdfs:label "Fictive corporate body"@en .
+
+<https://d-nb.info/standards/elementset/gnd#FictivePlace> a owl:Class ;
+    rdfs:label "Fictive place"@en .
+
+<https://d-nb.info/standards/elementset/gnd#FictiveTerm> a owl:Class ;
+    rdfs:label "Fictive term"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Fictive_term> a owl:Class ;
+    rdfs:label "Fictive term"@en .
+
+<https://d-nb.info/standards/elementset/gnd#FullerFormOfNameOfThePerson> a owl:Class ;
+    rdfs:label "Fuller form of the name of the person"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Gods> a owl:Class ;
+    rdfs:label "Gods"@en .
+
+<https://d-nb.info/standards/elementset/gnd#GroupOfPersons> a owl:Class ;
+    rdfs:label "Group of persons"@en .
+
+<https://d-nb.info/standards/elementset/gnd#HistoricSingleEventOrEra> a owl:Class ;
+    rdfs:label "Historic single event or era"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Language> a owl:Class ;
+    rdfs:label "Language"@en .
+
+<https://d-nb.info/standards/elementset/gnd#LaterNameOfThePerson> a owl:Class ;
+    rdfs:label "Later name of the person"@en .
+
+<https://d-nb.info/standards/elementset/gnd#LiteraryOrLegendaryCharacter> a owl:Class ;
+    rdfs:label "Literary or legendary character"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Manuscript> a owl:Class ;
+    rdfs:label "Manuscript"@en .
+
+<https://d-nb.info/standards/elementset/gnd#MeansOfTransportWithIndividualName> a owl:Class ;
+    rdfs:label "Means of transport with individual name"@en .
+
+<https://d-nb.info/standards/elementset/gnd#MeansOfTransportWithIndividual_name> a owl:Class ;
+    rdfs:label "Means of transport with individual name"@en .
+
+<https://d-nb.info/standards/elementset/gnd#MemberState> a owl:Class ;
+    rdfs:label "Member state"@en .
+
+<https://d-nb.info/standards/elementset/gnd#MusicalCorporateBody> a owl:Class ;
+    rdfs:label "Musical corporate body"@en .
+
+<https://d-nb.info/standards/elementset/gnd#MusicalWork> a owl:Class ;
+    rdfs:label "Musical work"@en .
+
+<https://d-nb.info/standards/elementset/gnd#NameOfSmallGeographicUnitLyingWithinAnotherGeographicUnit> a owl:Class ;
+    rdfs:label """Name of small geographic unit lying within another geographic
+      unit"""@en .
+
+<https://d-nb.info/standards/elementset/gnd#NameOfThePerson> a owl:Class ;
+    rdfs:label "Name of the person"@en .
+
+<https://d-nb.info/standards/elementset/gnd#NaturalGeographicUnit> a owl:Class ;
+    rdfs:label "Natural geographic unit"@en .
+
+<https://d-nb.info/standards/elementset/gnd#NomenclatureInBiologyOrChemistry> a owl:Class ;
+    rdfs:label "Nomenclature in biology or chemistry"@en .
+
+<https://d-nb.info/standards/elementset/gnd#OrganOfCorporateBody> a owl:Class ;
+    rdfs:label "Organ of corporate body"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Person> a owl:Class ;
+    rdfs:label "Person"@en .
+
+<https://d-nb.info/standards/elementset/gnd#PlaceOrGeographicName> a owl:Class ;
+    rdfs:label "Place or geographic name"@en .
+
+<https://d-nb.info/standards/elementset/gnd#PreferredNameOfThePerson> a owl:Class ;
+    rdfs:label "Preferred name of the person"@en .
+
+<https://d-nb.info/standards/elementset/gnd#ProductNameOrBrandName> a owl:Class ;
+    rdfs:label "Product name or brand name"@en .
+
+<https://d-nb.info/standards/elementset/gnd#ProjectOrProgram> a owl:Class ;
+    rdfs:label "Project or program"@en .
+
+<https://d-nb.info/standards/elementset/gnd#ProvenanceCharacteristic> a owl:Class ;
+    rdfs:label "Provenance characteristic"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Pseudonym> a owl:Class ;
+    rdfs:label "Pseudonym"@en .
+
+<https://d-nb.info/standards/elementset/gnd#PseudonymNameOfThePerson> a owl:Class ;
+    rdfs:label "Pseudonym name of the person"@en .
+
+<https://d-nb.info/standards/elementset/gnd#RealNameOfThePerson> a owl:Class ;
+    rdfs:label "Real name of the person"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Relationship> a owl:Class ;
+    rdfs:label "Relationship"@en .
+
+<https://d-nb.info/standards/elementset/gnd#ReligiousAdministrativeUnit> a owl:Class ;
+    rdfs:label "Religious administrative unit"@en .
+
+<https://d-nb.info/standards/elementset/gnd#ReligiousCorporateBody> a owl:Class ;
+    rdfs:label "Religious corporate body"@en .
+
+<https://d-nb.info/standards/elementset/gnd#ReligiousTerritory> a owl:Class ;
+    rdfs:label "Religious territory"@en .
+
+<https://d-nb.info/standards/elementset/gnd#RoyalOrMemberOfARoyalHouse> a owl:Class ;
+    rdfs:label "Royal or member of a royal house"@en .
+
+<https://d-nb.info/standards/elementset/gnd#SeriesOfConferenceOrEvent> a owl:Class ;
+    rdfs:label "Series of conference or event"@en .
+
+<https://d-nb.info/standards/elementset/gnd#SoftwareProduct> a owl:Class ;
+    rdfs:label "Software product"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Spirits> a owl:Class ;
+    rdfs:label "Spirits"@en .
+
+<https://d-nb.info/standards/elementset/gnd#SubjectHeading> a owl:Class ;
+    rdfs:label "Subject heading"@en .
+
+<https://d-nb.info/standards/elementset/gnd#SubjectHeadingSensoStricto> a owl:Class ;
+    rdfs:label "Subject heading sensu stricto"@en .
+
+<https://d-nb.info/standards/elementset/gnd#TerritorialCorporateBodyOrAdministrativeUnit> a owl:Class ;
+    rdfs:label "Territorial corporate body or administrative unit"@en .
+
+<https://d-nb.info/standards/elementset/gnd#UndifferentiatedPerson> a owl:Class ;
+    rdfs:label "Undifferentiated person"@en .
+
+<https://d-nb.info/standards/elementset/gnd#VariantNameOfThePerson> a owl:Class ;
+    rdfs:label "Variant name of the person"@en .
+
+<https://d-nb.info/standards/elementset/gnd#VersionOfAMusicalWork> a owl:Class ;
+    rdfs:label "Version of a musical work"@en .
+
+<https://d-nb.info/standards/elementset/gnd#WayBorderOrLine> a owl:Class ;
+    rdfs:label "Way, border or line"@en .
+
+<https://d-nb.info/standards/elementset/gnd#Work> a owl:Class ;
+    rdfs:label "Work"@en .
+

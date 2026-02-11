@@ -1,0 +1,491 @@
+{
+  "instances": {
+    "16753542": "https://purls.helmholtz-metadaten.de/msekg/1758983993017",
+    "17053392": "https://purls.helmholtz-metadaten.de/msekg/1758983993020",
+    "17046189": "https://purls.helmholtz-metadaten.de/msekg/1758983993023",
+    "17034857": "https://purls.helmholtz-metadaten.de/msekg/1758983993026",
+    "17014021": "https://purls.helmholtz-metadaten.de/msekg/1758983993031",
+    "15861513": "https://purls.helmholtz-metadaten.de/msekg/1758983993035",
+    "15744297": "https://purls.helmholtz-metadaten.de/msekg/1758983993039",
+    "15302020": "https://purls.helmholtz-metadaten.de/msekg/1758983993062",
+    "15222660": "https://purls.helmholtz-metadaten.de/msekg/1758983993065",
+    "15210641": "https://purls.helmholtz-metadaten.de/msekg/1758983993068",
+    "15209701": "https://purls.helmholtz-metadaten.de/msekg/1758983993071",
+    "13937986": "https://purls.helmholtz-metadaten.de/msekg/1758983993074",
+    "14178184": "https://purls.helmholtz-metadaten.de/msekg/1758983993093",
+    "14035821": "https://purls.helmholtz-metadaten.de/msekg/1758983993097",
+    "13838505": "https://purls.helmholtz-metadaten.de/msekg/1758983993100",
+    "13838717": "https://purls.helmholtz-metadaten.de/msekg/1758983993103",
+    "13745266": "https://purls.helmholtz-metadaten.de/msekg/1758983993106",
+    "13859315": "https://purls.helmholtz-metadaten.de/msekg/1758983993109",
+    "13846095": "https://purls.helmholtz-metadaten.de/msekg/1758983993112",
+    "11668375": "https://purls.helmholtz-metadaten.de/msekg/1758983993115",
+    "13628019": "https://purls.helmholtz-metadaten.de/msekg/1758983993121",
+    "13220178": "https://purls.helmholtz-metadaten.de/msekg/1758983993124",
+    "13142351": "https://purls.helmholtz-metadaten.de/msekg/1758983993127",
+    "13133718": "https://purls.helmholtz-metadaten.de/msekg/1758983993130",
+    "12749437": "https://purls.helmholtz-metadaten.de/msekg/1758983993137",
+    "12703357": "https://purls.helmholtz-metadaten.de/msekg/1758983993140",
+    "12687142": "https://purls.helmholtz-metadaten.de/msekg/1758983993143",
+    "12594061": "https://purls.helmholtz-metadaten.de/msekg/1758983993146",
+    "12207312": "https://purls.helmholtz-metadaten.de/msekg/1758983993149",
+    "11667673": "https://purls.helmholtz-metadaten.de/msekg/1758983993152",
+    "11615370": "https://purls.helmholtz-metadaten.de/msekg/1758983993155",
+    "11353338": "https://purls.helmholtz-metadaten.de/msekg/1758983993294",
+    "11351399": "https://purls.helmholtz-metadaten.de/msekg/1758983993297",
+    "11071438": "https://purls.helmholtz-metadaten.de/msekg/1758983993300",
+    "10620952": "https://purls.helmholtz-metadaten.de/msekg/1758983993303",
+    "10204104": "https://purls.helmholtz-metadaten.de/msekg/1758983993306",
+    "8399406": "https://purls.helmholtz-metadaten.de/msekg/1758983993309",
+    "7227713": "https://purls.helmholtz-metadaten.de/msekg/1758983993312",
+    "13797438": "https://purls.helmholtz-metadaten.de/msekg/1759746961135",
+    "6787084": "https://purls.helmholtz-metadaten.de/msekg/1759757741871",
+    "6659460": "https://purls.helmholtz-metadaten.de/msekg/1759757743772",
+    "5106605": "https://purls.helmholtz-metadaten.de/msekg/1759757748359",
+    "6778335": "https://purls.helmholtz-metadaten.de/msekg/1759757749285",
+    "10663832": "https://purls.helmholtz-metadaten.de/msekg/1759758153083",
+    "10043613": "https://purls.helmholtz-metadaten.de/msekg/1759758154471",
+    "10850977": "https://purls.helmholtz-metadaten.de/msekg/1759758156248",
+    "10850990": "https://purls.helmholtz-metadaten.de/msekg/1759758157547",
+    "8065751": "https://purls.helmholtz-metadaten.de/msekg/1759767769043",
+    "11224126": "https://purls.helmholtz-metadaten.de/msekg/1759767916972",
+    "4047773": "https://purls.helmholtz-metadaten.de/msekg/1759767918217",
+    "5000610": "https://purls.helmholtz-metadaten.de/msekg/1759767937740",
+    "17533124": "https://purls.helmholtz-metadaten.de/msekg/1763729383621",
+    "10566836": "https://purls.helmholtz-metadaten.de/msekg/1763729383640",
+    "17846616": "https://purls.helmholtz-metadaten.de/msekg/1768574950079",
+    "17628976": "https://purls.helmholtz-metadaten.de/msekg/1768574950095",
+    "17846435": "https://purls.helmholtz-metadaten.de/msekg/1768574950098"
+  },
+  "nodes": {
+    "16753542": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993018"
+    ],
+    "17053392": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993021"
+    ],
+    "17046189": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993024"
+    ],
+    "17034857": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993027"
+    ],
+    "17014021": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993032"
+    ],
+    "15861513": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993036"
+    ],
+    "15744297": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993040"
+    ],
+    "15302020": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993063"
+    ],
+    "15222660": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993066"
+    ],
+    "15210641": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993069"
+    ],
+    "15209701": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993072"
+    ],
+    "13937986": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993075"
+    ],
+    "14178184": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993094"
+    ],
+    "14035821": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993098"
+    ],
+    "13838505": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993101"
+    ],
+    "13838717": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993104"
+    ],
+    "13745266": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993107"
+    ],
+    "13859315": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993110"
+    ],
+    "13846095": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993113"
+    ],
+    "11668375": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993116"
+    ],
+    "13628019": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993122"
+    ],
+    "13220178": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993125"
+    ],
+    "13142351": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993128"
+    ],
+    "13133718": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993131"
+    ],
+    "12749437": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993138"
+    ],
+    "12703357": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993141"
+    ],
+    "12687142": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993144"
+    ],
+    "12594061": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993147"
+    ],
+    "12207312": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993150"
+    ],
+    "11667673": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993153"
+    ],
+    "11615370": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993156"
+    ],
+    "11353338": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993295"
+    ],
+    "11351399": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993298"
+    ],
+    "11071438": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993301"
+    ],
+    "10620952": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993304"
+    ],
+    "10204104": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993307"
+    ],
+    "8399406": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993310"
+    ],
+    "7227713": [
+      "https://purls.helmholtz-metadaten.de/msekg/1758983993313"
+    ],
+    "13797438": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759746961136"
+    ],
+    "6787084": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759757741872"
+    ],
+    "6659460": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759757743773"
+    ],
+    "5106605": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759757748360"
+    ],
+    "6778335": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759757749286"
+    ],
+    "10663832": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759758153084"
+    ],
+    "10043613": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759758154472"
+    ],
+    "10850977": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759758156249"
+    ],
+    "10850990": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759758157548"
+    ],
+    "8065751": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759767769044"
+    ],
+    "11224126": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759767916973"
+    ],
+    "4047773": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759767918218"
+    ],
+    "5000610": [
+      "https://purls.helmholtz-metadaten.de/msekg/1759767937741"
+    ],
+    "17533124": [
+      "https://purls.helmholtz-metadaten.de/msekg/1763729383622"
+    ],
+    "10566836": [
+      "https://purls.helmholtz-metadaten.de/msekg/1763729383641"
+    ],
+    "17846616": [
+      "https://purls.helmholtz-metadaten.de/msekg/1768574950080"
+    ],
+    "17628976": [
+      "https://purls.helmholtz-metadaten.de/msekg/1768574950096"
+    ],
+    "17846435": [
+      "https://purls.helmholtz-metadaten.de/msekg/1768574950099"
+    ]
+  },
+  "file_graphs": {
+    "13797438|Block5-Part2-Krieger-PaperCuttingOntology.owl": "https://purls.helmholtz-metadaten.de/msekg/1759746962100",
+    "13797438|Block5-Part2-Krieger-PaperCuttingOntology.ttl": "https://purls.helmholtz-metadaten.de/msekg/1759746962106"
+  },
+  "file_ids": {
+    "16753542|20250827_NFDI-MatWerk_RenewalProposal_B-1_version 2.0.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993019",
+    "17053392|MaterialsOntologies_MC2025.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993022",
+    "17046189|NFDI-MatWerk-Demos_CoRDI2025.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993025",
+    "17034857|NFDI-MatWerk - Roll-out.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993028",
+    "17034857|CoRDI_2025_paper_171.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993029",
+    "17034857|1min_flash_presentation.svg": "https://purls.helmholtz-metadaten.de/msekg/1758983993030",
+    "17014021|2025-08-31_MC2025_EMGlossary_update.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993033",
+    "17014021|2025-08-31_MC2025_EMGlossary.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993034",
+    "15861513|MSEResearchDataForumIUC04_slides.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993037",
+    "16753542|20250806_NFDI-MatWerk_RenewalProposal_B1.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993038",
+    "15744297|Vh5260_25-11.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993041",
+    "15744297|Vh5299_2-10.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993042",
+    "15744297|Vh5299_1-2.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993043",
+    "15744297|Vh5299_5-25.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993044",
+    "15744297|Vh5260_25-12.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993045",
+    "15744297|Vh5260_25-13.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993046",
+    "15744297|Vh5260_25-14.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993047",
+    "15744297|VH5299_1-1.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993048",
+    "15744297|Vh5299_2-14.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993049",
+    "15744297|Vh5299_1-7.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993050",
+    "15744297|Vh5299_1-8.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993051",
+    "15744297|Vh5299_2-11.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993052",
+    "15744297|Vh5299_1-3.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993053",
+    "15744297|Vh5299_1-9.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993054",
+    "15744297|Vh5299_2-13.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993055",
+    "15744297|Vh5299_2-12.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993056",
+    "15744297|Vh5299_2-15.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993057",
+    "15744297|Vh5299_4-22.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993058",
+    "15744297|Vh5299_3-19.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993059",
+    "15744297|2025-06_Data-Schema_Creep_v1.1_EN AW 2618_v1.0.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1758983993060",
+    "15744297|TestPieceCreepTests-TechnicalDrawing.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993061",
+    "15302020|20250121_Vortrag NFDI-MatWerk_deRSE_Publication.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993064",
+    "15222660|2025-04-10-Riefler-Digitalization+Change-NFDI-MatWerk-SpringSchool.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993067",
+    "15210641|Coscine@NFDI-MatWerk-SpringSchool.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993070",
+    "15209701|20250410_kr_nfdimatwerk_spring_school_2025_slides.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993073",
+    "13937986|Vh5205_C-97.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993076",
+    "13937986|Microstructure-before-testing.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993077",
+    "13937986|2024-10_Creep-reference-data-CMSX-6_v1.0.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1758983993078",
+    "13937986|TestPieceCreepTests-TechnicalDrawing-FormA.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993079",
+    "13937986|Test-piece-location.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993080",
+    "13937986|Vh5205_C-89.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993081",
+    "13937986|Vh5205_C-82.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993082",
+    "13937986|Vh5205_C-80.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993083",
+    "13937986|Vh5205_C-91.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993084",
+    "13937986|Vh5205_C-99.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993085",
+    "13937986|Vh5205_C-94.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993086",
+    "13937986|Vh5205_C-85.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993087",
+    "13937986|Vh5205_C-98.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993088",
+    "13937986|Vh5205_C-78.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993089",
+    "13937986|Vh5205_C-95.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993090",
+    "13937986|Vh5205_C-81.LIS": "https://purls.helmholtz-metadaten.de/msekg/1758983993091",
+    "13937986|2025-01_RDS_CMSX-6-Coversheet_v1.1.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993092",
+    "14178184|2024-10-31_EMG-OBM_HMCconference.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993095",
+    "13937986|2024-10_RD_CMSX-6-Coversheet.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993096",
+    "14035821|2024-11-05-10_30-Group-Charta_RDM-Helpdesks.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993099",
+    "13838505|2024-09-12_Introduction to Research Data Management (RDM) - HedgeDoc.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993102",
+    "13838717|2024-09-12_Data Management Plan (DMP) - HedgeDoc.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993105",
+    "13745266|NFDI-MatWerk_digitalization survey 2024.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993108",
+    "13859315|20240917_SaxFDM2024_FundamentalsOfScientificMetadata_Gerlich.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993111",
+    "13846095|MSE24- Integration of Linked Open Data in Materials Science and Engineering (MSE).pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993114",
+    "11668375|2024-09_Data-Schema-coversheet_v1.1.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993117",
+    "11668375|2024-09_Data-Schema_Creep_v1.1.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1758983993118",
+    "11668375|2024-09_Data-Schema_Creep_v1.1.csv": "https://purls.helmholtz-metadaten.de/msekg/1758983993119",
+    "11668375|2024-09_Schema_IUC02_v1.1.json": "https://purls.helmholtz-metadaten.de/msekg/1758983993120",
+    "13628019|NFDI-Matwerk IUC02_v3.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993123",
+    "13220178|IUC04_Towards_semi_automated_construction_of_DPDs.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993126",
+    "13142351|IUC12_Status report.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993129",
+    "13133718|NFDI-MatWerk_IUC01.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993132",
+    "11668375|2407_Data-Schema_Creep_v1.0.csv": "https://purls.helmholtz-metadaten.de/msekg/1758983993133",
+    "11668375|2407_Schema_IUC02_v1.0.json": "https://purls.helmholtz-metadaten.de/msekg/1758983993134",
+    "11668375|Data-Schema-coversheet.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993135",
+    "11668375|2407_Data-Schema_Creep_v1.0.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1758983993136",
+    "12749437|NFDI-MatWerk-Data-Management-Plan-Guide-v1.0.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993139",
+    "12703357|NFDI-MatWerk Spring School April2024_RDM for every day.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993142",
+    "12687142|IUC_07-report.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993145",
+    "12594061|IUC09_MidTermReport.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993148",
+    "12207312|IUC17_StatusReport.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993151",
+    "11667673|2406_IUC02_BAM-Ref.Data_Definition_v1.0.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993154",
+    "11615370|pyscal/iuc17_demonstrator-1.0.0.zip": "https://purls.helmholtz-metadaten.de/msekg/1758983993293",
+    "11353338|Proceedings_NFDI-MatWerk-Conference-2023.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993296",
+    "11351399|NFDI-Matwerk IUC05.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993299",
+    "11071438|2024-04_EMGlossary_v1-0-4.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993302",
+    "10620952|Hickel-Bitzek-Neugebauer-MPG-Jahrbuch_2022.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993305",
+    "10204104|Long Term Interoperability of Distributed Research Data Infrastructures.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993308",
+    "8399406|DCE-CoRDI2023-Ost_Shakeel_Toegel.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993311",
+    "7227713|FAIR.DO.Commons.27Sep22.pdf": "https://purls.helmholtz-metadaten.de/msekg/1758983993314",
+    "13797438|Block5-Part2-PaperCuttingOntology-GroupSolution.png": "https://purls.helmholtz-metadaten.de/msekg/1759746962095",
+    "13797438|Block6-Riefler-Digitalization+ChangeManagement.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759746962096",
+    "13797438|Block3-ELNs.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759746962097",
+    "13797438|Block5-Part1-Riefler-Ontologies+InformationScience+ProtegeIntroduction.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759746962098",
+    "13797438|Block5-Part2-Krieger-PaperCuttingOntology.owl": "https://purls.helmholtz-metadaten.de/msekg/1759746962099",
+    "13797438|Block5-Part2-Krieger-OntologyDevelopment.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759746962103",
+    "13797438|Block1-Buschmann-Python4RDM.zip": "https://purls.helmholtz-metadaten.de/msekg/1759746962104",
+    "13797438|Block5-Part2-Krieger-PaperCuttingOntology.ttl": "https://purls.helmholtz-metadaten.de/msekg/1759746962105",
+    "6787084|Content.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759757741873",
+    "6787084|Brinell_hardness_ENAW2618A.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1759757741874",
+    "6659460|radii_190C_aging_V1.1.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1759757743783",
+    "6659460|Content.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759757743784",
+    "5106605|KN7180-04.LIS": "https://purls.helmholtz-metadaten.de/msekg/1759757748361",
+    "5106605|KRI011-002_Kriechprobe-50-Bünde.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759757748362",
+    "5106605|KRI012-001_Kriechprobe-30-Bünde.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759757748363",
+    "5106605|Pruefmittel_Messmittel-Kriechversuche.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759757748364",
+    "5106605|Inhalt_Content.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759757748365",
+    "5106605|KN7180-01.LIS": "https://purls.helmholtz-metadaten.de/msekg/1759757748366",
+    "5106605|BCR-425_cert.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759757748367",
+    "5106605|BCR425-280-4.LIS": "https://purls.helmholtz-metadaten.de/msekg/1759757748368",
+    "5106605|BCR425-280-1.LIS": "https://purls.helmholtz-metadaten.de/msekg/1759757748369",
+    "5106605|KN7180-05.LIS": "https://purls.helmholtz-metadaten.de/msekg/1759757748370",
+    "5106605|Ergebnisse-N75-BCR425.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759757748371",
+    "5106605|BCR425-280-2.LIS": "https://purls.helmholtz-metadaten.de/msekg/1759757748372",
+    "5106605|KN7180-08.LIS": "https://purls.helmholtz-metadaten.de/msekg/1759757748373",
+    "5106605|BCR425-280-3.LIS": "https://purls.helmholtz-metadaten.de/msekg/1759757748374",
+    "5106605|KN7180-07.LIS": "https://purls.helmholtz-metadaten.de/msekg/1759757748375",
+    "5106605|KN7180-06.LIS": "https://purls.helmholtz-metadaten.de/msekg/1759757748376",
+    "6778335|charpy_test.zip": "https://purls.helmholtz-metadaten.de/msekg/1759757750895",
+    "6778335|tensile_test.zip": "https://purls.helmholtz-metadaten.de/msekg/1759757750896",
+    "6778335|sonic_resonance_test.zip": "https://purls.helmholtz-metadaten.de/msekg/1759757750897",
+    "6778335|test_piece_extraction_sketch.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759757750898",
+    "6778335|Declaration_of_performance_S355_1.0577.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759757750899",
+    "6778335|_steel_sheet_test_data_mission_abstract_content.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759757750900",
+    "10663832|glossary.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759758153085",
+    "10043613|Sigma7_GB.tar": "https://purls.helmholtz-metadaten.de/msekg/1759758154473",
+    "10850977|reaxff_force_c.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156250",
+    "10850977|setup.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759758156251",
+    "10850977|size_dep_b.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156252",
+    "10850977|reaxff_force_d.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156253",
+    "10850977|cutting2_a.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156254",
+    "10850977|size_dep_a.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156255",
+    "10850977|cutting2_b.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156256",
+    "10850977|temperature_figure3.csv": "https://purls.helmholtz-metadaten.de/msekg/1759758156257",
+    "10850977|force_friction_figure5.csv": "https://purls.helmholtz-metadaten.de/msekg/1759758156258",
+    "10850977|cutting2_d.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156259",
+    "10850977|cutting2_c.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156260",
+    "10850977|energy_figure3.csv": "https://purls.helmholtz-metadaten.de/msekg/1759758156261",
+    "10850977|rdf.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156262",
+    "10850977|reaxff_force_b.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156263",
+    "10850977|rdf2.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156264",
+    "10850977|rdf_figure2.csv": "https://purls.helmholtz-metadaten.de/msekg/1759758156265",
+    "10850977|forces_figure3.csv": "https://purls.helmholtz-metadaten.de/msekg/1759758156266",
+    "10850977|size_dep_d.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156267",
+    "10850977|size_dependency_figure4.csv": "https://purls.helmholtz-metadaten.de/msekg/1759758156268",
+    "10850977|size_dep_c.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156269",
+    "10850977|result_table-4.csv": "https://purls.helmholtz-metadaten.de/msekg/1759758156270",
+    "10850977|reaxff_force_a.png": "https://purls.helmholtz-metadaten.de/msekg/1759758156271",
+    "10850990|Hardness for the four simulations with different size.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157549",
+    "10850990|Von-Misses stress distribution.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157552",
+    "10850990|configuration.xls": "https://purls.helmholtz-metadaten.de/msekg/1759758157553",
+    "10850990|Loading curves for the three interatomic potentials.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157554",
+    "10850990|data_fig8.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1759758157555",
+    "10850990|radius.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1759758157556",
+    "10850990|Indentation velocity dependence of the.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157557",
+    "10850990|Predicted indentation force.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157558",
+    "10850990|Result from nanoindentation on the (100).png": "https://purls.helmholtz-metadaten.de/msekg/1759758157559",
+    "10850990|data_fig4_5.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1759758157560",
+    "10850990|size.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1759758157561",
+    "10850990|Schematic presentation of the simulation mode.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157562",
+    "10850990|data_fig6.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1759758157563",
+    "10850990|velocity.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1759758157564",
+    "10850990|linearmodelal_29_nov.eps": "https://purls.helmholtz-metadaten.de/msekg/1759758157565",
+    "10850990|goodresult.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1759758157566",
+    "10850990|Snapshots showing pile-ups at the surface.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157567",
+    "10850990|Dislocations in the substrate during simulation.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157568",
+    "10850990|Measured hardness of aluminum.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157569",
+    "10850990|Indentation force for different simulation setup.png": "https://purls.helmholtz-metadaten.de/msekg/1759758157570",
+    "8065751|Final Results_25_ForthePaper_Z.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767915793",
+    "8065751|Final Results_14_ForthePaper_Z.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767915794",
+    "8065751|Final Results_19_ForthePaper_Z.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767915795",
+    "8065751|Guide_DataStructure.txt": "https://purls.helmholtz-metadaten.de/msekg/1759767915796",
+    "8065751|3D_Damage.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767915797",
+    "11224126|Microstructure_Segmetation.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767917179",
+    "4047773|cnn.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767934764",
+    "4047773|dt_cnn.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767934765",
+    "4047773|ann.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767934766",
+    "4047773|data.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767934767",
+    "4047773|readme.txt": "https://purls.helmholtz-metadaten.de/msekg/1759767934768",
+    "4047773|analytical.zip": "https://purls.helmholtz-metadaten.de/msekg/1759767934769",
+    "5000610|AQ1_5kV_sp-5_SE_5K_002.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937744",
+    "5000610|AQ1_5kV_sp-5_A-7_SE_6K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937745",
+    "5000610|AQ1_5kV_sp-5_A-6_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937746",
+    "5000610|AQ1_5kV_sp-5_A-5_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937747",
+    "5000610|AQ1_5kV_sp-5_A-5_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937748",
+    "5000610|AQ1_5kV_sp-5_A-4_SE_3K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937749",
+    "5000610|AQ1_5kV_sp-5_A-3_SE_5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937750",
+    "5000610|AQ1_5kV_sp-5_A-3_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937751",
+    "5000610|AQ1_5kV_sp-5_A-2_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937752",
+    "5000610|AQ5_5kV_sp-5_A-3_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937753",
+    "5000610|AQ5_5kV_sp-5_A-3_SE_2.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937754",
+    "5000610|AQ5_5kV_sp-5_A-2_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937755",
+    "5000610|AQ5_5kV_sp-5_A-1_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937756",
+    "5000610|AQ5_5kV_sp-5_A-1_SE_2.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937757",
+    "5000610|AQ5_5kV_sp-5_A-1_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937758",
+    "5000610|AQ4_5kV_sp-5_A-4_SE_6K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937759",
+    "5000610|AQ1_5kV_sp-5_A-7_SE_6K_002.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937760",
+    "5000610|AQ1_5kV_sp-5_A-8_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937761",
+    "5000610|AQ1_5kV_sp-5_A-8_SE_2K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937762",
+    "5000610|AQ1_5kV_sp-5_SE_1K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937763",
+    "5000610|AQ1_5kV_sp-5_SE_2K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937764",
+    "5000610|AQ1_5kV_sp-5_SE_5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937765",
+    "5000610|AQ1_5kV_sp-5_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937766",
+    "5000610|AQ2_5kV_sp-5_A-1_SE_2.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937767",
+    "5000610|AQ2_5kV_sp-5_A-1_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937768",
+    "5000610|AQ2_5kV_sp-5_A-2_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937769",
+    "5000610|AQ2_5kV_sp-5_A-2_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937770",
+    "5000610|AQ2_5kV_sp-5_A-3_SE_4K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937771",
+    "5000610|AQ2_5kV_sp-5_A-3_SE_4K_002.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937772",
+    "5000610|AQ2_5kV_sp-5_A-3_SE_7K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937773",
+    "5000610|AQ2_5kV_sp-5_A-4_SE_1.5K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937774",
+    "5000610|AQ2_5kV_sp-5_A-4_SE_4K_001.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937775",
+    "5000610|AQ3_5kV_sp-5_A-1_SE_1.5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937776",
+    "5000610|AQ3_5kV_sp-5_A-1_SE_2.5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937777",
+    "5000610|AQ3_5kV_sp-5_A-1_SE_7K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937778",
+    "5000610|AQ3_5kV_sp-5_A-2_SE_1.5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937779",
+    "5000610|AQ3_5kV_sp-5_A-2_SE_5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937780",
+    "5000610|AQ3_5kV_sp-5_A-3_SE_1.5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937781",
+    "5000610|AQ3_5kV_sp-5_A-3_SE_4K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937782",
+    "5000610|AQ3_5kV_sp-5_A-4_SE_6K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937783",
+    "5000610|AQ3_5kV_sp-5_A-5_SE_1.5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937784",
+    "5000610|AQ3_5kV_sp-5_A-5_SE_4K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937785",
+    "5000610|AQ4_5kV_sp-5_A-1_SE_7K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937786",
+    "5000610|AQ4_5kV_sp-5_A-2_SE_5K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937787",
+    "5000610|AQ4_5kV_sp-5_A-3_SE_2K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937788",
+    "5000610|AQ4_5kV_sp-5_A-3_SE_4K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937789",
+    "5000610|AQ4_5kV_sp-5_A-4_SE_1K_001r.tif": "https://purls.helmholtz-metadaten.de/msekg/1759767937790",
+    "5106605|BCR-425_report_Characterization.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759767951480",
+    "5106605|Inhalt_Content_V1.1.pdf": "https://purls.helmholtz-metadaten.de/msekg/1759767951492",
+    "17533124|Towards FAIRness using an Interoperable Research Data-RDA-2025.pdf": "https://purls.helmholtz-metadaten.de/msekg/1763729383623",
+    "10566836|Poster_DataStewardship_DSGG_2024.pdf": "https://purls.helmholtz-metadaten.de/msekg/1763729383642",
+    "10566836|Datasteardship Workflow -NFDIMatWerk.png": "https://purls.helmholtz-metadaten.de/msekg/1763729384935",
+    "10566836|123.png": "https://purls.helmholtz-metadaten.de/msekg/1763729384936",
+    "17846616|Vh5205_T-74.LIS": "https://purls.helmholtz-metadaten.de/msekg/1768574950081",
+    "17846616|Dendrite-overview.jpg": "https://purls.helmholtz-metadaten.de/msekg/1768574950082",
+    "17846616|TestPiece-TensileTests-HT-CMSX-6.pdf": "https://purls.helmholtz-metadaten.de/msekg/1768574950083",
+    "17846616|2025-12_HT-Tensile-reference-data-CMSX-6_v1.0.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1768574950084",
+    "17846616|Vh5205_T-71.LIS": "https://purls.helmholtz-metadaten.de/msekg/1768574950085",
+    "17846616|Dendrite-SEM.tif": "https://purls.helmholtz-metadaten.de/msekg/1768574950086",
+    "17846616|Interdentritic-region-detail.tif": "https://purls.helmholtz-metadaten.de/msekg/1768574950087",
+    "17846616|Figure-Rohling.jpg": "https://purls.helmholtz-metadaten.de/msekg/1768574950088",
+    "17846616|Vh5205_T-84.LIS": "https://purls.helmholtz-metadaten.de/msekg/1768574950089",
+    "17846616|Interdentritic-region-overview.jpg": "https://purls.helmholtz-metadaten.de/msekg/1768574950090",
+    "11668375|2025-12_Data-Schema_Creep_v2.0.csv": "https://purls.helmholtz-metadaten.de/msekg/1768574950091",
+    "11668375|Figure1.pdf": "https://purls.helmholtz-metadaten.de/msekg/1768574950092",
+    "11668375|2025-12_Data-Schema_Creep_v2.0.json": "https://purls.helmholtz-metadaten.de/msekg/1768574950093",
+    "11668375|2025-12_Data-Schema_Creep_v2.0.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1768574950094",
+    "17628976|Growing_Cultural_Change_CORDI_2025.pdf": "https://purls.helmholtz-metadaten.de/msekg/1768574950097",
+    "17846435|2025-12_Data-Schema-Tensile-HT_v1.0.xlsx": "https://purls.helmholtz-metadaten.de/msekg/1768574950100",
+    "17846435|Figure1.pdf": "https://purls.helmholtz-metadaten.de/msekg/1768574950101",
+    "17846435|2025-12_Data-Schema-Tensile-HT_v1.0.csv": "https://purls.helmholtz-metadaten.de/msekg/1768574950102"
+  },
+  "graphs": {},
+  "by_record": {
+    "10.5281/zenodo.13797439": {
+      "classes": "https://purls.helmholtz-metadaten.de/msekg/1759752788083",
+      "classHierarchy": "https://purls.helmholtz-metadaten.de/msekg/1759752788084",
+      "tbox": "https://purls.helmholtz-metadaten.de/msekg/1759752788085"
+    }
+  }
+}

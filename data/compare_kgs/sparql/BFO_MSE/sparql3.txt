@@ -1,0 +1,53 @@
+# What are the softwares present in the MSE-KG?
+
+SELECT ?software ?softwareLabel_ ?licenseLabel ?languageLabel ?repositoryURL ?publicationLabel WHERE {
+
+  # Match any subject (?software) that is an instance of one of the software-related classes
+  VALUES ?class {
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121>  # Software
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001045>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001046>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001048>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000218>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000140>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010039>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010040>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010041>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000222>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001049>
+    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001044>
+  }
+  ?software a ?class .
+  
+  # Try to extract a human-readable label for the software
+  OPTIONAL { 
+    ?software <http://purl.obolibrary.org/obo/IAO_0000235> ?softwareLabel .
+    ?softwareLabel a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000> .
+    ?softwareLabel rdfs:label ?softwareLabel_ . }
+
+  # Optionally, retrieve the associated license and its label
+  OPTIONAL {
+    ?software <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142> ?license .
+    ?license rdfs:label ?licenseLabel .
+  }
+  # Optionally, retrieve the Programming Language and its label
+  OPTIONAL {
+    ?software <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187> ?language .
+    ?language rdfs:label ?languageLabel .
+  }
+  # Optionally, retrieve the related publication and its label
+  OPTIONAL {
+    ?software <http://purl.obolibrary.org/obo/IAO_0000235> ?publication .
+    ?publication a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190> .
+    ?publication rdfs:label ?publicationLabel .
+  }
+  # Optionally, retrieve the repository link
+  OPTIONAL {
+    ?software <http://purl.obolibrary.org/obo/IAO_0000235> ?repository .
+    ?repository a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001113> .
+    ?repository <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repositoryURL .
+  }
+}
+
+# Limit results to 999 rows
+LIMIT 999

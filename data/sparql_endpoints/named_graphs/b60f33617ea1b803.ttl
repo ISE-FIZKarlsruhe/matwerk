@@ -1,0 +1,667 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://rdf-vocabulary.ddialliance.org/lifecycle#variableName> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the name of a variable."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Variable> .
+
+owl:Nothing a owl:Class ;
+    rdfs:label "Nothing" ;
+    owl:complementOf owl:Thing .
+
+<https://data.gesis.org/gesiskg/schema/DatasetReference> a owl:Class ;
+    rdfs:comment "This class describes a reference from a creative work to a dataset."@en ;
+    rdfs:subClassOf <https://data.gesis.org/gesiskg/schema/Reference> .
+
+<https://data.gesis.org/gesiskg/schema/PublicationReference> a owl:Class ;
+    rdfs:comment "This class describes a reference from a creative work to a publication."@en ;
+    rdfs:subClassOf <https://data.gesis.org/gesiskg/schema/Reference> .
+
+<https://data.gesis.org/gesiskg/schema/VariableReference> a owl:Class ;
+    rdfs:comment "This class describes a reference from a creative work to a variable."@en ;
+    rdfs:subClassOf <https://data.gesis.org/gesiskg/schema/Reference> .
+
+<https://data.gesis.org/gesiskg/schema/abstractiveSummary> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the tldr extreme summary generated out of the abstract of a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/advisoryInstitution> a owl:ObjectProperty ;
+    rdfs:comment "This relation specifies the advisory institution of a dataset."@en ;
+    rdfs:domain schema:Dataset ;
+    rdfs:range schema:Organization .
+
+<https://data.gesis.org/gesiskg/schema/altId> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies any alternative ID not fitting to the other identifier properties."@en ;
+    rdfs:subPropertyOf schema:identifier .
+
+<https://data.gesis.org/gesiskg/schema/analysisUnit> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the analysis unit of a dataset, e.g., an individual, a household, a family, etc."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/associatedTask> a owl:ObjectProperty ;
+    rdfs:comment "This property specifies a relation between a tutorial or software source code to an associated task."@en ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/Tutorial>,
+        schema:SoftwareSourceCode ;
+    rdfs:range <https://data.gesis.org/gesiskg/schema/Task> .
+
+<https://data.gesis.org/gesiskg/schema/category> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies categories of a topic classification to which a creative work is assigned."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/citationString> a owl:DatatypeProperty ;
+    rdfs:comment "This property holds the citation string of a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/citeIdentifier> a owl:DatatypeProperty ;
+    rdfs:comment "This property holds an abbreviation of a citation reference for a creative work, e.g. in the pattern Author Year."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/commonWords> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the identified common words within an identifed sentence of a variable reference."@en ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/Reference> .
+
+<https://data.gesis.org/gesiskg/schema/constructs> a owl:ObjectProperty ;
+    rdfs:comment "This relation specifies the constructs of a survey instrument."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> ;
+    rdfs:range schema:DefinedTerm .
+
+<https://data.gesis.org/gesiskg/schema/criteria> a owl:DatatypeProperty ;
+    rdfs:comment "This property holds a description of the quality criteria of a survey instrument."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> .
+
+<https://data.gesis.org/gesiskg/schema/currentVersion> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the version number of the most current version of a creative work and the corresponding date."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/dataCollection> a owl:DatatypeProperty ;
+    rdfs:comment "This property describes the data collection method, e.g., oral survey, mail survey, face-to-face interview, etc."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/dataCollector> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the agent carrying out the data collection. This can be an institute, an individual person, a research group, etc."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/dataSource> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the source of a dataset cited in a publication."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/datasetDatatype> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the datatype of data in a dataset, e.g. numerical data, textual data, etc."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/datasetType> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the type of a dataset, e.g, SPSS or Stata."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/dateEmbargoEnd> a owl:DatatypeProperty ;
+    rdfs:comment "This property allows the specification of an end date for a publication embargo of a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/dateVersion> a owl:DatatypeProperty ;
+    rdfs:comment "This property describes the date of the (current) version of a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/development> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies a description of the development of a survey instrument."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> .
+
+<https://data.gesis.org/gesiskg/schema/doi> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies a DOI."@en ;
+    rdfs:subPropertyOf schema:identifier .
+
+<https://data.gesis.org/gesiskg/schema/duplicate> a owl:ObjectProperty ;
+    rdfs:comment "This property is used to specify a duplicate resource of the resource in the domain."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range <https://data.gesis.org/gesiskg/schema/DuplicateMetadata> .
+
+<https://data.gesis.org/gesiskg/schema/editingInstitute> a owl:ObjectProperty ;
+    rdfs:comment "This property indicates that for a creative work there is an institution or organization in a editing role."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:Organization .
+
+<https://data.gesis.org/gesiskg/schema/eprint> a owl:DatatypeProperty ;
+    rdfs:comment "This property indicates a direct link to a pdf file of a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/extractiveSummary> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the most comprehensive sentence of abstract sentences from a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/fromPage> a owl:DatatypeProperty ;
+    rdfs:comment "This property indicates the first page of a publication if it is part of a creative work series."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/gitReference> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the ID of a GitHub repository."@en ;
+    rdfs:subPropertyOf schema:identifier .
+
+<https://data.gesis.org/gesiskg/schema/groupDescription> a owl:DatatypeProperty ;
+    rdfs:comment "The property allows to describe the group who created or maintains a dataset, e.g., a research data centre."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/groupNumber> a owl:DatatypeProperty ;
+    rdfs:comment "This property indicates an internal ID of the group who created or maintains a dataset."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/hasFulltext> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies whether a fulltext of the creative work is available or not, e.g., values are true or false."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range xsd:boolean .
+
+<https://data.gesis.org/gesiskg/schema/hasSocialSurveyItems> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies a boolean value whether a survey instrument has social survey items included or not."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> ;
+    rdfs:range xsd:boolean .
+
+<https://data.gesis.org/gesiskg/schema/hasSoftwareSourceCode> a owl:ObjectProperty ;
+    rdfs:comment "This property links from a tutorial to a corresponding software source code."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:SoftwareSourceCode .
+
+<https://data.gesis.org/gesiskg/schema/hasTutorial> a owl:ObjectProperty ;
+    rdfs:comment "This property links a software source code to its corresponding tutorial."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range <https://data.gesis.org/gesiskg/schema/Tutorial> .
+
+<https://data.gesis.org/gesiskg/schema/initsFirst> a owl:DatatypeProperty ;
+    rdfs:comment "This property indicates the initials of the first name of a person."@en ;
+    rdfs:domain schema:Person .
+
+<https://data.gesis.org/gesiskg/schema/levelOfDifficulty> a owl:DatatypeProperty ;
+    rdfs:comment "This property indicates the level of difficulty of a tutorial, e.g., beginner or intermediate."@en ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/Tutorial> .
+
+<https://data.gesis.org/gesiskg/schema/libraryLocation> a owl:ObjectProperty ;
+    rdfs:comment "This property indicates the location of the library where this creative work is located at."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:Place .
+
+<https://data.gesis.org/gesiskg/schema/license> a owl:DatatypeProperty ;
+    rdfs:comment "This property captures free text information about the license of a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/linkContext> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the context, e.g. a text snippet or annotation indicating the reason or evidence for the detected link."@en ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/ReferenceMetadata> .
+
+<https://data.gesis.org/gesiskg/schema/linkScore> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies computed confidence score assigned to an automatically generated link."@en ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/ReferenceMetadata> .
+
+<https://data.gesis.org/gesiskg/schema/linkSource> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies information about the source of a link, e.g., naming the pipeline by which a link has been generated or the project in which a manual link has been identified."@en ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/ReferenceMetadata> .
+
+<https://data.gesis.org/gesiskg/schema/linkType> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the nature of the relationship such as a citation or the methodological use of a dataset."@en ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/ReferenceMetadata> .
+
+<https://data.gesis.org/gesiskg/schema/linkingMethod> a owl:DatatypeProperty ;
+    rdfs:comment "This property describes whether a link has been manually curated, automatically generated, or identified as a search link."@en ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/ReferenceMetadata> .
+
+<https://data.gesis.org/gesiskg/schema/linksCodebook> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the link to the codebook of a dataset."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/linksDOI> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the full http resolvable DOI link of a resource if available in the metadata."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/linksDataset> a owl:DatatypeProperty ;
+    rdfs:comment "This property provides links to the actual physical or raw dataset."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/linksDocumentation> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies one or more links to a documentation."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/linksGroup> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies a link to the group which created or maintains a dataset, e.g., a research data centre."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/linksGuide> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies a link to a guide, guideline, or best practice document related to a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/linksLabel> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies a label to a given link in the url property."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/linksOtherdocs> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies links to further documents related to a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/linksProjectReport> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies a link to a project report related to a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/linksQuestionnaire> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the link to the questionnaire of a dataset."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/linksRdc> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies a link to the website of the corresponding research data centre."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/linksRemarks> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies links to further remarks corresponding to a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/linksResponseSheet> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies a link to the response sheet of a survey instrument."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> .
+
+<https://data.gesis.org/gesiskg/schema/linksURN> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the full http resolvable URN link of a resource."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/linksVariable> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies a link to an informative resource describing a variable in more detail."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Variable> .
+
+<https://data.gesis.org/gesiskg/schema/locationsFree> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the countries in which the access to the creative work is free."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/locationsId> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the ISO code of a location."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/mentionID> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies an ID for authors, contributors, editors, etc. for a person mention"@en ;
+    rdfs:domain schema:Organization,
+        schema:Person .
+
+<https://data.gesis.org/gesiskg/schema/methodology> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the applied methodology within a reference."@en ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/Reference> .
+
+<https://data.gesis.org/gesiskg/schema/multilingual> a owl:DatatypeProperty ;
+    rdfs:comment "This property describes the multilingual availability of a survey instrument."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> .
+
+<https://data.gesis.org/gesiskg/schema/numberOfItems> a owl:DatatypeProperty ;
+    rdfs:comment "Specifies the number of social survey items."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> .
+
+<https://data.gesis.org/gesiskg/schema/numberOfUnits> a owl:DatatypeProperty ;
+    rdfs:comment "This property describes the number of units of a dataset."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/numberOfVariables> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the number of variables used in a dataset."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/orcid> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies an ORCID."@en ;
+    rdfs:domain schema:Person ;
+    rdfs:subPropertyOf schema:identifier .
+
+<https://data.gesis.org/gesiskg/schema/portalUrl> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the URL in the corresponding web portal."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/principalInvestigator> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the principal investigators of a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/quality> a owl:DatatypeProperty ;
+    rdfs:comment "This property describes the investigated quality criteria of the instrument."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> .
+
+<https://data.gesis.org/gesiskg/schema/reference> a owl:ObjectProperty ;
+    rdfs:comment "This relation indicates that the resource in the domain holds a reference to another resource."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range <https://data.gesis.org/gesiskg/schema/Reference> .
+
+<https://data.gesis.org/gesiskg/schema/referenceMetadata> a owl:ObjectProperty ;
+    rdfs:comment "This property indicates a relation between a reference class and a metadata class which provides more information about the reference."@en ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/Reference> ;
+    rdfs:range <https://data.gesis.org/gesiskg/schema/LinkMetadata> .
+
+<https://data.gesis.org/gesiskg/schema/relatedDataset> a owl:ObjectProperty ;
+    rdfs:comment "This property specifies a link to one or more related datasets."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/relatedPublication> a owl:ObjectProperty ;
+    rdfs:comment "This property specifies a link to one or more related publications."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:ScholarlyArticle .
+
+<https://data.gesis.org/gesiskg/schema/relatedVariable> a owl:ObjectProperty ;
+    rdfs:comment "This property specifies a link to one or more related variables."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range <http://rdf-vocabulary.ddialliance.org/lifecycle#Variable> .
+
+<https://data.gesis.org/gesiskg/schema/report> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the report about a survey instrument."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> .
+
+<https://data.gesis.org/gesiskg/schema/reviewedWork> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the title of the creative work which is reviewed within a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/selectionMethod> a owl:DatatypeProperty ;
+    rdfs:comment "This property describes the method underlying a data selection."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/sentence> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the identified sentence within a variable reference."@en ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/Reference> .
+
+<https://data.gesis.org/gesiskg/schema/sentenceID> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the associated sentence ID within a variable reference."@en ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/Reference> .
+
+<https://data.gesis.org/gesiskg/schema/sourceCollection> a owl:DatatypeProperty ;
+    rdfs:comment "This property describes the collection of which the creative work is part of."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/sourceInfo> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the source data collection from which a resource is originating from."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/studyComponent> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies a study component of the detected study which has been cited."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/studyGroup> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the study group of the detected study which has been cited, e.g., a survey programme."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/studyNumber> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the GESIS study number."@en ;
+    rdfs:subPropertyOf schema:identifier .
+
+<https://data.gesis.org/gesiskg/schema/studyPublications> a owl:DatatypeProperty ;
+    rdfs:comment "This property captures publications about a dataset which are not available as separate resources."@en ;
+    rdfs:domain schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/system> a owl:ObjectProperty ;
+    rdfs:comment "This property is used to specify in which technical system, software, or format a dataset is available."@en ;
+    rdfs:domain schema:Dataset ;
+    rdfs:range schema:SoftwareApplication .
+
+<https://data.gesis.org/gesiskg/schema/tags> a owl:DatatypeProperty ;
+    rdfs:comment "This property captures annotated tags for a creative work."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/thematicClassification> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies items of a thematic classification or taxonomy for a survey variable."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Variable> .
+
+<https://data.gesis.org/gesiskg/schema/theory> a owl:DatatypeProperty ;
+    rdfs:comment "This property contains a description of the theory of a survey instrument."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> .
+
+<https://data.gesis.org/gesiskg/schema/timeCollection> a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/toPage> a owl:DatatypeProperty ;
+    rdfs:comment "This property indicates the last page of a publication if it is part of a creative work series."@en ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/urn> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies an URN."@en ;
+    rdfs:subPropertyOf schema:identifier .
+
+<https://data.gesis.org/gesiskg/schema/usedIn> a owl:ObjectProperty ;
+    rdfs:comment "This relation indicates that an instrument has been used in a dataset."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> ;
+    rdfs:range schema:Dataset .
+
+<https://data.gesis.org/gesiskg/schema/validity> a owl:DatatypeProperty ;
+    rdfs:comment "This property provides information on the validity of a survey instrument."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> .
+
+<https://data.gesis.org/gesiskg/schema/variableInterviewInstructions> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies instructions to interviewers for specific survey variables."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Variable> .
+
+<https://data.gesis.org/gesiskg/schema/variableLabel> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the label of a variable."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Variable> .
+
+<https://data.gesis.org/gesiskg/schema/variableType> a owl:DatatypeProperty ;
+    rdfs:comment "This property specifies the type of a variable, e.g., cross-sectional, panel, yearly, etc."@en ;
+    rdfs:domain <http://rdf-vocabulary.ddialliance.org/lifecycle#Variable> .
+
+schema:Collection a owl:Class ;
+    rdfs:comment "A collection of items, e.g. creative works or products."@en ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:DataCatalog a owl:Class ;
+    rdfs:comment "A collection or group of datasets."@en ;
+    rdfs:subClassOf schema:CreativeWorkSeries .
+
+schema:Periodical a owl:Class ;
+    rdfs:comment "A publication in any medium issued in successive parts bearing numerical or chronological designations and intended to continue indefinitely, such as a magazine, scholarly journal, or newspaper."@en ;
+    rdfs:subClassOf schema:CreativeWorkSeries .
+
+schema:about a owl:ObjectProperty ;
+    rdfs:comment "The subject matter of the content."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range owl:Thing .
+
+schema:abstract a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:alternateName a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:archivedAt a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:author a owl:ObjectProperty ;
+    rdfs:comment "The author of this content."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:Organization,
+        schema:Person .
+
+schema:citation a owl:ObjectProperty ;
+    rdfs:comment "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:CreativeWork .
+
+schema:codeRepository a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:comment a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:conditionsOfAccess a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:contributor a owl:ObjectProperty ;
+    rdfs:comment "A secondary contributor to the CreativeWork or Event."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:Organization,
+        schema:Person .
+
+schema:dateModified a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:datePublished a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:description a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:downloadURL a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:editor a owl:ObjectProperty ;
+    rdfs:comment "Specifies the Person who edited the CreativeWork."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:Person .
+
+schema:endDate a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:familyName a owl:DatatypeProperty ;
+    rdfs:domain schema:Person .
+
+schema:format a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:funder a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:givenName a owl:DatatypeProperty ;
+    rdfs:domain schema:Person .
+
+schema:hasPart a owl:ObjectProperty ;
+    rdfs:comment "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:CreativeWork .
+
+schema:inLanguage a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:isPartOf a owl:ObjectProperty ;
+    rdfs:comment "Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense)."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:CreativeWork .
+
+schema:isbn a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:issn a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:issueNumber a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:mainEntity a owl:ObjectProperty ;
+    rdfs:comment "Indicates the primary entity described in some page or other CreativeWork."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range owl:Thing .
+
+schema:measurementTechnique a owl:DatatypeProperty ;
+    rdfs:domain schema:Dataset .
+
+schema:name a owl:DatatypeProperty ;
+    rdfs:domain owl:Thing .
+
+schema:programmingLanguage a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:provider a owl:ObjectProperty ;
+    rdfs:comment "The service provider, service operator, or service performer; the goods producer."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:Organization,
+        schema:Person .
+
+schema:publicationType a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:publisher a owl:ObjectProperty ;
+    rdfs:comment "The publisher of the creative work."@en ;
+    rdfs:domain schema:CreativeWork ;
+    rdfs:range schema:Organization,
+        schema:Person .
+
+schema:spatialCoverage a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:startDate a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:status a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:temporalCoverage a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:timeRequired a owl:DatatypeProperty ;
+    rdfs:domain <https://data.gesis.org/gesiskg/schema/Tutorial> .
+
+schema:uploadDate a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+schema:url a owl:DatatypeProperty ;
+    rdfs:domain owl:Thing .
+
+schema:version a owl:DatatypeProperty ;
+    rdfs:domain owl:Thing .
+
+schema:volumeNumber a owl:DatatypeProperty ;
+    rdfs:domain schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/DuplicateMetadata> a owl:Class ;
+    rdfs:comment "Metadata related to a link or reference between two duplicate creative works."@en ;
+    rdfs:subClassOf <https://data.gesis.org/gesiskg/schema/ReferenceMetadata> .
+
+<https://data.gesis.org/gesiskg/schema/LinkMetadata> a owl:Class ;
+    rdfs:comment "Metadata related to a link or reference between two creative works from the same or different type."@en ;
+    rdfs:subClassOf <https://data.gesis.org/gesiskg/schema/ReferenceMetadata> .
+
+<https://data.gesis.org/gesiskg/schema/Task> a owl:Class ;
+    rdfs:comment "This class is used to describe a task which is, e.g., addressed by a computational method or software source code."@en ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:DefinedTerm a owl:Class ;
+    rdfs:comment "A word, name, acronym, phrase, etc. with a formal definition. Often used in the context of category or subject classification, glossaries or dictionaries, product or creative work types, etc."@en .
+
+schema:Place a owl:Class ;
+    rdfs:comment "Entities that have a somewhat fixed, physical extension."@en .
+
+schema:ScholarlyArticle a owl:Class ;
+    rdfs:comment "A scholarly article."@en ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:SoftwareApplication a owl:Class ;
+    rdfs:comment "A software application."@en ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:CreativeWorkSeries a owl:Class ;
+    rdfs:comment "A CreativeWorkSeries in schema.org is a group of related items, typically but not necessarily of the same kind."@en ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:SoftwareSourceCode a owl:Class ;
+    rdfs:comment "Computer programming source code. Example: Full (compile ready) solutions, code snippet samples, scripts, templates."@en ;
+    rdfs:subClassOf schema:CreativeWork .
+
+<https://data.gesis.org/gesiskg/schema/Tutorial> a owl:Class ;
+    rdfs:comment "A tutorial is a written, recorded and/or interactive introduction to a workflow, tool, or one or more methods. It is documented in a code repository, e.g., as a Jupyter Notebook or Quarto document."@en ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:identifier a owl:DatatypeProperty ;
+    rdfs:domain owl:Thing .
+
+<http://rdf-vocabulary.ddialliance.org/lifecycle#Variable> a owl:Class ;
+    rdfs:comment "A survey variable."@en ;
+    rdfs:subClassOf schema:CreativeWork .
+
+owl:Thing a owl:Class ;
+    rdfs:label "Thing" .
+
+<https://data.gesis.org/gesiskg/schema/ReferenceMetadata> a owl:Class ;
+    rdfs:comment "This class captures metadata about a reference between two creative works."@en ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:Organization a owl:Class ;
+    rdfs:comment "An organization such as a school, NGO, corporation, club, etc."@en .
+
+<https://data.gesis.org/gesiskg/schema/Reference> a owl:Class ;
+    rdfs:comment "This class is used to describe a reference from a creative work to another creative work."@en ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:Person a owl:Class ;
+    rdfs:comment "A person (alive, dead, undead, or fictional)."@en .
+
+<http://rdf-vocabulary.ddialliance.org/lifecycle#Instrument> a owl:Class ;
+    rdfs:comment "A survey instrument or scale."@en ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:Dataset a owl:Class ;
+    rdfs:comment "A body of structured information describing some topic(s) of interest."@en ;
+    rdfs:subClassOf schema:CreativeWork .
+
+schema:CreativeWork a owl:Class ;
+    rdfs:comment "The most generic kind of creative work, including books, movies, photographs, software programs, etc."@en .
+
