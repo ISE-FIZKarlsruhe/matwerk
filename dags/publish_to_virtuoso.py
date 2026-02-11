@@ -28,11 +28,11 @@ GRAPH_ROOT = "https://purls.helmholtz-metadaten.de/msekg"
 
 # Sources to publish (edit freely)
 PUBLISH_SOURCES = [
-    ("merge", "last_sucessfull_merge_run", "spreadsheets_asserted.ttl"),
-    ("reason-spreadsheets", "last_sucessfull_reason_run", "spreadsheets_inferences.ttl"),
-    ("validation_checks", "last_sucessfull_validated_run", "spreadsheets_merged_for_validation.ttl"),
-    ("harvester_zenodo", "last_sucessfull_harvester_zenodo_run", "zenodo.ttl"),
-    ("harvester_endpoints", "last_sucessfull_harvester_endpoints_run", "dataset_stats.ttl"),
+    ("merge", "matwerk_last_sucessfull_merge_run", "spreadsheets_asserted.ttl"),
+    ("reason-spreadsheets", "matwerk_last_sucessfull_reason_run", "spreadsheets_inferences.ttl"),
+    ("validation_checks", "matwerk_last_sucessfull_validated_run", "spreadsheets_merged_for_validation.ttl"),
+    ("harvester_zenodo", "matwerk_last_sucessfull_harvester_zenodo_run", "zenodo.ttl"),
+    ("harvester_endpoints", "matwerk_last_sucessfull_harvester_endpoints_run", "dataset_stats.ttl"),
 ]
 
 
@@ -46,7 +46,7 @@ def publish_to_virtuoso():
     @task
     def init_publish_dir(ti=None):
         ctx = get_current_context()
-        sharedfs = Variable.get("sharedfs")
+        sharedfs = Variable.get("matwerk_sharedfs")
         if not sharedfs or not os.path.isdir(sharedfs):
             raise AirflowFailException(f"sharedfs missing/not a dir: {sharedfs}")
 

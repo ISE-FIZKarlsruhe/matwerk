@@ -8,7 +8,7 @@ from airflow.providers.standard.operators.bash import BashOperator
 from airflow.providers.standard.operators.python import PythonOperator
 from airflow.providers.standard.operators.empty import EmptyOperator
 
-SUCCESFULL_RUN_VARIABLE_NAME = "last_sucessfull_spreadsheet_run"
+SUCCESFULL_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_spreadsheet_run"
 
 """
 Airflow DAG: process_spreadsheets
@@ -65,7 +65,7 @@ def process_spreadsheets():
         context = get_current_context()
         RUN_ID = context['dag_run'].run_id
         DAG_ID = context['task'].dag_id
-        DATA_DIR = os.path.join(Variable.get("sharedfs"), "runs", DAG_ID, RUN_ID)
+        DATA_DIR = os.path.join(Variable.get("matwerk_sharedfs"), "runs", DAG_ID, RUN_ID)
         print("Creating directory for run: ", DATA_DIR)
         os.makedirs(DATA_DIR)
         ti.xcom_push(key="datadir", value=DATA_DIR)

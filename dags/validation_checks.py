@@ -15,9 +15,9 @@ DAG_ID = "validation_checks"
 
 MERGED_FOR_VALIDATION_TTL = "spreadsheets_merged_for_validation.ttl"
 
-LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "last_sucessfull_merge_run"
-LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME = "last_sucessfull_validated_run"
-LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "last_sucessfull_reason_run"
+LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_merge_run"
+LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_validated_run"
+LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_reason_run"
 # Inputs produced by other DAGs
 ASSERTED_TTL = "spreadsheets_asserted.ttl" 
 INFERENCES_FILE = "spreadsheets_inferences.ttl"
@@ -34,7 +34,7 @@ def validation_checks():
         ctx = get_current_context()
         run_id = ctx["dag_run"].run_id
 
-        data_dir = os.path.join(Variable.get("sharedfs"), "runs", ctx["dag"].dag_id, run_id,)
+        data_dir = os.path.join(Variable.get("matwerk_sharedfs"), "runs", ctx["dag"].dag_id, run_id,)
         os.makedirs(data_dir, exist_ok=True)
 
         # Where we keep downloaded shapes and validation outputs

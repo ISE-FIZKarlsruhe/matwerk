@@ -21,8 +21,8 @@ DAG_ID = "harvester_endpoints"
 SCRIPTS_REPO = "ISE-FIZKarlsruhe/matwerk"
 SCRIPTS_REF = "main"
 
-LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "last_sucessfull_merge_run"
-LAST_SUCCESSFUL_HARVESTER_ENDPOINTS_RUN_VARIABLE_NAME = "last_sucessfull_harvester_endpoints_run"
+LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_merge_run"
+LAST_SUCCESSFUL_HARVESTER_ENDPOINTS_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_harvester_endpoints_run"
 
 MERGE_TTL_NAME = "spreadsheets_asserted.ttl"
 OUTPUT = "dataset_stats.ttl"
@@ -41,7 +41,7 @@ def harvester_endpoints():
     @task()
     def init_data_dir(ti=None):
         ctx = get_current_context()
-        sharedfs = Variable.get("sharedfs")
+        sharedfs = Variable.get("matwerk_sharedfs")
         rid = ctx["dag_run"].run_id
         run_dir = os.path.join(sharedfs, "runs", ctx["dag"].dag_id, rid)
 

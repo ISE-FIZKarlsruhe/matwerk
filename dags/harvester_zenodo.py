@@ -15,8 +15,8 @@ from airflow.exceptions import AirflowFailException
 
 DAG_ID = "harvester_zenodo"
 
-LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "last_sucessfull_merge_run"
-LAST_SUCCESSFUL_HARVESTER_ZENODO_RUN_VARIABLE_NAME = "last_sucessfull_harvester_zenodo_run"
+LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_merge_run"
+LAST_SUCCESSFUL_HARVESTER_ZENODO_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_harvester_zenodo_run"
 
 OUT_TTL = "spreadsheets_asserted.ttl"
 OUTPUT = "zenodo.ttl"
@@ -36,7 +36,7 @@ def harvester_zenodo():
     @task()
     def init_data_dir(ti=None):
         ctx = get_current_context()
-        sharedfs = Variable.get("sharedfs")
+        sharedfs = Variable.get("matwerk_sharedfs")
 
         rid = ctx["dag_run"].run_id
         run_dir = os.path.join(sharedfs, "runs", ctx["dag"].dag_id, rid)

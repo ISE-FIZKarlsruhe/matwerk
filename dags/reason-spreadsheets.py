@@ -8,8 +8,8 @@ from airflow.providers.standard.operators.bash import BashOperator
 
 
 DAG_ID = "reason-spreadsheets"
-LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "last_sucessfull_merge_run"
-LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "last_sucessfull_reason_run"
+LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_merge_run"
+LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_reason_run"
 
 IN_FILE = "spreadsheets_asserted.ttl"
 OUT_OWL = "spreadsheets_inferences.owl"
@@ -30,7 +30,7 @@ def reason():
         ctx = get_current_context()
         run_id = ctx["dag_run"].run_id
 
-        sharedfs = Variable.get("sharedfs")
+        sharedfs = Variable.get("matwerk_sharedfs")
         run_dir = os.path.join(sharedfs, "runs", ctx["dag"].dag_id, run_id)
         os.makedirs(run_dir, exist_ok=True)
         ti.xcom_push(key="datadir", value=run_dir)

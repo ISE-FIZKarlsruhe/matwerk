@@ -12,8 +12,8 @@ from airflow.providers.standard.operators.empty import EmptyOperator
 DAG_ID = "merge"
 OUT_TTL = "spreadsheets_asserted.ttl"
 
-SUCCESFULL_RUN_VARIABLE_NAME = "last_sucessfull_spreadsheet_run"
-LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "last_sucessfull_merge_run"
+SUCCESFULL_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_spreadsheet_run"
+LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_merge_run"
 
 
 @dag(
@@ -27,7 +27,7 @@ def merge():
         ctx = get_current_context()
         run_id = ctx["dag_run"].run_id
 
-        data_dir = os.path.join(Variable.get("sharedfs"), "runs", ctx["dag"].dag_id, run_id,)
+        data_dir = os.path.join(Variable.get("matwerk_sharedfs"), "runs", ctx["dag"].dag_id, run_id,)
         
         print("Creating directory for run:", data_dir)
         ti.xcom_push(key="datadir", value=data_dir)

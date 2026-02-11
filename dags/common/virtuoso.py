@@ -11,10 +11,10 @@ from airflow.exceptions import AirflowFailException
 
 
 def _get_virtuoso_config() -> tuple[str, str, str, str]:
-    vcrud = Variable.get("virtuoso_crud")
-    vsparql = Variable.get("virtuoso_sparql")
-    vuser = Variable.get("virtuoso_user")
-    vpass = Variable.get("virtuoso_pass")
+    vcrud = Variable.get("matwerk-virtuoso_crud")
+    vsparql = Variable.get("matwerk-virtuoso_sparql")
+    vuser = Variable.get("matwerk-virtuoso_user")
+    vpass = Variable.get("matwerk-virtuoso_pass")
 
     if not (vcrud and vsparql and vuser and vpass):
         raise AirflowFailException("Missing virtuoso_* variables (crud/sparql/user/pass)")
