@@ -29,7 +29,7 @@ GRAPH_ROOT = "https://purls.helmholtz-metadaten.de/msekg"
 # Sources to publish (edit freely)
 PUBLISH_SOURCES = [
     ("merge", "matwerk_last_successful_merge_run", "spreadsheets_asserted.ttl"),
-    ("reason-spreadsheets", "matwerk_last_successful_reason_run", "spreadsheets_inferences.ttl"),
+    ("reason", "matwerk_last_successful_reason_run", "spreadsheets_inferences.ttl"),
     ("validation_checks", "matwerk_last_successful_validated_run", "spreadsheets_merged_for_validation.ttl"),
     ("harvester_zenodo", "matwerk_last_successful_harvester_zenodo_run", "zenodo.ttl"),
     ("harvester_endpoints", "matwerk_last_successful_harvester_endpoints_run", "dataset_stats.ttl"),

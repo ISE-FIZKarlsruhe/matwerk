@@ -15,6 +15,7 @@ import requests
 from airflow.sdk import dag, task, Variable, get_current_context
 from airflow.exceptions import AirflowFailException
 from airflow.providers.standard.operators.bash import BashOperator
+from airflow.providers.standard.operators.trigger_dagrun import TriggerDagRunOperator
 
 DAG_ID = "harvester_endpoints"
 
@@ -29,7 +30,7 @@ OUTPUT = "dataset_stats.ttl"
 
 SCRIPTS_REPO = "ISE-FIZKarlsruhe/matwerk"
 SCRIPTS_REF = "main"
-SCRIPTS_PATH = "scripts"  # repo folder
+SCRIPTS_PATH = "scripts"
 
 @dag(
     dag_id=DAG_ID,
@@ -104,7 +105,37 @@ def harvester_endpoints():
     harvest = run_harvester()
     done = mark_success()
 
-    init >> scripts >> harvest >> done
+    trigger_reason_endpoints = TriggerDagRunOperator(
+        task_id="trigger_reason_endpoints",
+        trigger_dag_id="reason",
+        wait_for_completion=True,
+        conf={
+            "artifact": "endpoints",
+            "source_run_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+            "target_run_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+            "in_ttl": "dataset_stats.ttl",
+        },
+    )
+
+    trigger_validation_endpoints = TriggerDagRunOperator(
+        task_id="trigger_validation_endpoints",
+        trigger_dag_id="validation_checks",
+        wait_for_completion=True,
+        conf={
+            "artifact": "endpoints",
+
+            "target_run_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+
+            "asserted_source_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+            "asserted_ttl": "dataset_stats.ttl",
+
+            "reason_source_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+            "inferences_ttl": "endpoints_inferences.ttl",
+        },
+    )
+
+    init >> scripts >> harvest >> done >> trigger_reason_endpoints >> trigger_validation_endpoints
+
 
 
 harvester_endpoints()

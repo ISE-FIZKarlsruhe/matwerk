@@ -34,7 +34,7 @@ except Exception:
 # ------------------ Config (env-overridable; may be overridden by CLI) ------------------
 BASE_GRAPH_IRI = os.environ.get("BASE_GRAPH_IRI", "https://purls.helmholtz-metadaten.de/msekg/").rstrip("/") + "/"
 
-ENDPOINT_CLASS = URIRef(os.environ.get("ENDPOINT_CLASS", "http://purls.helmholtz-metadaten.de/mwo/MWO_0001060"))
+ENDPOINT_CLASS = URIRef(os.environ.get("ENDPOINT_CLASS", "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095"))
 ENDPOINT_PREDICATE = URIRef(
     os.environ.get("ENDPOINT_PREDICATE", "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008")
 )  # xsd:anyURI endpoint URL

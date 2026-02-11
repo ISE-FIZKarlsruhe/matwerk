@@ -11,6 +11,7 @@ from datetime import datetime
 from common.utils import run_cmd, download_github_dir
 from airflow.sdk import dag, task, Variable, get_current_context
 from airflow.exceptions import AirflowFailException
+from airflow.providers.standard.operators.trigger_dagrun import TriggerDagRunOperator
 
 
 DAG_ID = "harvester_zenodo"
@@ -53,7 +54,6 @@ def harvester_zenodo():
         scripts_dir = ti.xcom_pull(task_ids="init_data_dir", key="scripts_dir")
         download_github_dir(SCRIPTS_REPO, SCRIPTS_PATH, SCRIPTS_REF, scripts_dir)
 
-
     @task()
     def run_harvester(ti=None):
         run_dir = ti.xcom_pull(task_ids="init_data_dir", key="run_dir")
@@ -74,7 +74,7 @@ def harvester_zenodo():
         run_cmd(
             ["python", "-m", "scripts.zenodo.export_zenodo", "--make-snapshots", "--out", zenodo_ttl],
             cwd=run_dir,
-            env=env 
+            env=env
         )
         if not os.path.exists(zenodo_ttl) or os.path.getsize(zenodo_ttl) == 0:
             raise AirflowFailException(f"{OUTPUT} missing/empty: {zenodo_ttl}")
@@ -84,7 +84,8 @@ def harvester_zenodo():
         out_harvested = os.path.join(run_dir, "harvested")
 
         run_cmd(
-            ["python", os.path.join(scripts_dir, "fetch_zenodo.py"), "--data", merge_ttl, "--out-csv", out_csv, "--out-dir", out_harvested],
+            ["python", os.path.join(scripts_dir, "fetch_zenodo.py"),
+             "--data", merge_ttl, "--out-csv", out_csv, "--out-dir", out_harvested],
             cwd=run_dir,
             env=env,
         )
@@ -102,7 +103,40 @@ def harvester_zenodo():
     harvest = run_harvester()
     done = mark_success()
 
-    init >> scripts >> harvest >> done
+    trigger_reason_zenodo = TriggerDagRunOperator(
+        task_id="trigger_reason_zenodo",
+        trigger_dag_id="reason",
+        wait_for_completion=True,
+        conf={
+            "artifact": "zenodo",
+            "source_run_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+            "target_run_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+            "in_ttl": "zenodo.ttl",
+        },
+    )
+
+
+    trigger_validation_zenodo = TriggerDagRunOperator(
+        task_id="trigger_validation_zenodo",
+        trigger_dag_id="validation_checks",
+        wait_for_completion=True,
+        conf={
+            "artifact": "zenodo",
+
+            "target_run_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+
+            "asserted_source_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+            "asserted_ttl": "zenodo.ttl",
+            
+            "reason_source_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+            "inferences_ttl": "zenodo_inferences.ttl",
+        },
+    )
+
+
+
+
+    init >> scripts >> harvest >> done >> trigger_reason_zenodo >> trigger_validation_zenodo
 
 
 harvester_zenodo()

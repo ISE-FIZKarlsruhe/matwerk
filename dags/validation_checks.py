@@ -19,8 +19,10 @@ LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_successful_merge_run"
 LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME = "matwerk_last_successful_validated_run"
 LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "matwerk_last_successful_reason_run"
 # Inputs produced by other DAGs
-ASSERTED_TTL = "spreadsheets_asserted.ttl" 
+ASSERTED_TTL = "spreadsheets_asserted.ttl"
 INFERENCES_FILE = "spreadsheets_inferences.ttl"
+
+DEFAULT_ARTIFACT = "spreadsheets"
 
 @dag(
     schedule=None,
@@ -34,46 +36,108 @@ def validation_checks():
         ctx = get_current_context()
         run_id = ctx["dag_run"].run_id
 
-        data_dir = os.path.join(Variable.get("matwerk_sharedfs"), "runs", ctx["dag"].dag_id, run_id,)
-        os.makedirs(data_dir, exist_ok=True)
+        conf = (ctx["dag_run"].conf or {})
+        artifact = conf.get("artifact", DEFAULT_ARTIFACT)
 
-        # Where we keep downloaded shapes and validation outputs
+        target_run_dir = conf.get("target_run_dir")
+
+        if target_run_dir:
+            data_dir = target_run_dir
+            os.makedirs(data_dir, exist_ok=True)
+        else:
+            data_dir = os.path.join(
+                Variable.get("matwerk_sharedfs"),
+                "runs",
+                ctx["dag"].dag_id,
+                run_id,
+            )
+            os.makedirs(data_dir, exist_ok=True)
+
         os.makedirs(os.path.join(data_dir, "_shapes"), exist_ok=True)
         os.makedirs(os.path.join(data_dir, "validation", "robot_verify"), exist_ok=True)
         os.makedirs(os.path.join(data_dir, "validation", "shacl"), exist_ok=True)
 
         ti.xcom_push(key="datadir", value=data_dir)
+        ti.xcom_push(key="artifact", value=artifact)
         print("Validation run dir:", data_dir)
+
+        asserted_ttl = conf.get("asserted_ttl", ASSERTED_TTL)
+        asserted_source_dir = conf.get("asserted_source_dir", "")
+
+        inferences_ttl = conf.get("inferences_ttl", INFERENCES_FILE)
+        reason_source_dir = conf.get("reason_source_dir", "")
+
+        merged_for_validation_ttl = (
+            MERGED_FOR_VALIDATION_TTL
+            if artifact == DEFAULT_ARTIFACT
+            else f"{artifact}_merged_for_validation.ttl"
+        )
+
+        ti.xcom_push(key="asserted_ttl", value=asserted_ttl)
+        ti.xcom_push(key="asserted_source_dir", value=asserted_source_dir)
+        ti.xcom_push(key="inferences_ttl", value=inferences_ttl)
+        ti.xcom_push(key="reason_source_dir", value=reason_source_dir)
+        ti.xcom_push(key="merged_for_validation_ttl", value=merged_for_validation_ttl)
+
+
 
     @task
     def pull_merge_reason_output(ti=None):
 
-        # pull merge output
-        src_dir = Variable.get(LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME)
-        src_ttl = os.path.join(src_dir, ASSERTED_TTL)
-
         data_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
-        dst_ttl = os.path.join(data_dir, ASSERTED_TTL)
-        shutil.copyfile(src_ttl, dst_ttl)
 
-        # Keep track of original merge run id (useful later)
+        asserted_ttl = ti.xcom_pull(task_ids="init_data_dir", key="asserted_ttl") or ASSERTED_TTL
+        asserted_source_dir = ti.xcom_pull(task_ids="init_data_dir", key="asserted_source_dir") or ""
+
+        if asserted_source_dir:
+            src_dir = asserted_source_dir
+        else:
+            src_dir = Variable.get(LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME)
+
+        src_ttl = os.path.join(src_dir, asserted_ttl)
+        dst_ttl = os.path.join(data_dir, asserted_ttl)
+
+        if not os.path.exists(src_ttl) or os.path.getsize(src_ttl) == 0:
+            raise AirflowFailException(f"Missing/empty asserted TTL: {src_ttl}")
+
+        if os.path.abspath(src_ttl) != os.path.abspath(dst_ttl):
+            shutil.copyfile(src_ttl, dst_ttl)
+        else:
+            print("Asserted TTL already in place, skipping copy:", src_ttl)
+
         source_run_id = os.path.basename(src_dir.rstrip("/"))
         ti.xcom_push(key="source_merge_dir", value=src_dir)
         ti.xcom_push(key="source_merge_run_id", value=source_run_id)
 
-        print("Copied merge TTL:", src_ttl, "->", dst_ttl)
-        print("Source merge run_id:", source_run_id)
+        print("Copied asserted TTL:", src_ttl, "->", dst_ttl)
+        print("Source asserted run_id:", source_run_id)
 
-        # pull reason output
-        src_dir = Variable.get(LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME)
-        src_inf = os.path.join(src_dir, INFERENCES_FILE)
+        artifact = ti.xcom_pull(task_ids="init_data_dir", key="artifact")
+        inferences_ttl = ti.xcom_pull(task_ids="init_data_dir", key="inferences_ttl") or INFERENCES_FILE
+        reason_source_dir = ti.xcom_pull(task_ids="init_data_dir", key="reason_source_dir") or ""
 
-        data_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
-        dst_inf = os.path.join(data_dir, INFERENCES_FILE)
-        shutil.copyfile(src_inf, dst_inf)
+        if reason_source_dir:
+            src_reason_dir = reason_source_dir
+        else:
+            namespaced_key = f"{LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME}__{artifact}"
+            try:
+                src_reason_dir = Variable.get(namespaced_key)
+            except Exception:
+                src_reason_dir = Variable.get(LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME)
 
-        source_run_id = os.path.basename(src_dir.rstrip("/"))
-        ti.xcom_push(key="source_reason_dir", value=src_dir)
+        src_inf = os.path.join(src_reason_dir, inferences_ttl)
+        dst_inf = os.path.join(data_dir, inferences_ttl)
+
+        if not os.path.exists(src_inf) or os.path.getsize(src_inf) == 0:
+            raise AirflowFailException(f"Missing/empty inferences TTL: {src_inf}")
+
+        if os.path.abspath(src_inf) != os.path.abspath(dst_inf):
+            shutil.copyfile(src_inf, dst_inf)
+        else:
+            print("Inferences TTL already in place, skipping copy:", src_inf)
+
+        source_run_id = os.path.basename(src_reason_dir.rstrip("/"))
+        ti.xcom_push(key="source_reason_dir", value=src_reason_dir)
         ti.xcom_push(key="source_reason_run_id", value=source_run_id)
 
         print("Copied reason output:", src_inf, "->", dst_inf)
@@ -120,9 +184,14 @@ def validation_checks():
         DATA_DIR = "DATA_DIR"
         XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
-        asserted = os.path.join(DATA_DIR, ASSERTED_TTL)
-        inferences = os.path.join(DATA_DIR, INFERENCES_FILE)
-        merged = os.path.join(DATA_DIR, MERGED_FOR_VALIDATION_TTL)
+        # NEW/CHANGED: file names from XCom
+        asserted_name = '{{ ti.xcom_pull(task_ids="init_data_dir", key="asserted_ttl") }}'
+        inferences_name = '{{ ti.xcom_pull(task_ids="init_data_dir", key="inferences_ttl") }}'
+        merged_name = '{{ ti.xcom_pull(task_ids="init_data_dir", key="merged_for_validation_ttl") }}'
+
+        asserted = os.path.join(DATA_DIR, asserted_name)
+        inferences = os.path.join(DATA_DIR, inferences_name)
+        merged = os.path.join(DATA_DIR, merged_name)
 
         cmd = (
             f"{ROBOT} merge --include-annotations true "
@@ -139,20 +208,21 @@ def validation_checks():
         DATA_DIR = "DATA_DIR"
         XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
-        merged_ttl = os.path.join(DATA_DIR, MERGED_FOR_VALIDATION_TTL)
+        merged_name = '{{ ti.xcom_pull(task_ids="init_data_dir", key="merged_for_validation_ttl") }}'
+
+        merged_ttl = os.path.join(DATA_DIR, merged_name)
         out_dir = os.path.join(DATA_DIR, "validation", "robot_verify")
 
-        # One log per query file
         cmd = (
             f"mkdir -p '{out_dir}'\n"
-            
+
             "{% for q in ti.xcom_pull(task_ids='fetch_shapes', key='sparql_files') %}\n"
             f"LOG='{os.path.join(out_dir, '{{ q }}')}.log'\n"
-            
+
             f"{ROBOT} verify --input \"{merged_ttl}\" "
             f"--queries '{os.path.join(DATA_DIR, '_shapes', '{{ q }}')}' -vvv "
             f"> \"$LOG\" 2>&1 || (tail -n 120 \"$LOG\"; exit 1)\n"
-            
+
             "{% endfor %}\n"
         )
 
@@ -168,7 +238,9 @@ def validation_checks():
         data_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
         shape_files = ti.xcom_pull(task_ids="fetch_shapes", key="shape_files")
 
-        merged_ttl = os.path.join(data_dir, MERGED_FOR_VALIDATION_TTL)
+        merged_name = ti.xcom_pull(task_ids="init_data_dir", key="merged_for_validation_ttl")
+        merged_ttl = os.path.join(data_dir, merged_name)
+
         out_dir = os.path.join(data_dir, "validation", "shacl")
         os.makedirs(out_dir, exist_ok=True)
 
@@ -210,27 +282,39 @@ def validation_checks():
     @task
     def mark_validated_successful(ti=None):
         data_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
+        artifact = ti.xcom_pull(task_ids="init_data_dir", key="artifact")
 
-        Variable.set(LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME, data_dir)
-        print(f"Set {LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME}={data_dir}")
+        if artifact == DEFAULT_ARTIFACT:
+            Variable.set(LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME, data_dir)
+            print(f"Set {LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME}={data_dir}")
+
+        Variable.set(f"{LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME}__{artifact}", data_dir)
+        print(f"Set {LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME}__{artifact}={data_dir}")
+
 
     # -----------------------------
-    # Wiring
+    # Wiring (unchanged)
     # -----------------------------
     init = init_data_dir()
     pull_asserted_inferences = pull_merge_reason_output()
     shapes = fetch_shapes()
 
-    robot_merge_for_validation = BashOperator(task_id="robot_merge_for_validation", bash_command=robotMergeForValidationCmdTemplate(),)
+    robot_merge_for_validation = BashOperator(
+        task_id="robot_merge_for_validation",
+        bash_command=robotMergeForValidationCmdTemplate(),
+    )
 
-    robot_verify = BashOperator(task_id="robot_verify_sparql", bash_command=robotVerifySparqlCmdTemplate(),)
+    robot_verify = BashOperator(
+        task_id="robot_verify_sparql",
+        bash_command=robotVerifySparqlCmdTemplate(),
+    )
 
     shacl = shacl_validate()
     done = mark_validated_successful()
 
     init >> [pull_asserted_inferences, shapes]
     pull_asserted_inferences >> robot_merge_for_validation
-    
+
     robot_merge_for_validation >> [robot_verify, shacl]
     shapes >> [robot_verify, shacl]
 
