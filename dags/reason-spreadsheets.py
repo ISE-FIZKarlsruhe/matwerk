@@ -12,8 +12,6 @@ LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_merge_run"
 LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_reason_run"
 
 IN_FILE = "spreadsheets_asserted.ttl"
-IN_FILTERED = "spreadsheets_asserted-filtered.ttl"
-
 OUT_OWL = "spreadsheets_inferences.owl"
 OUT_TTL = "spreadsheets_inferences.ttl"
 
@@ -42,10 +40,9 @@ def reason():
         XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
         # read last merge run dir from Airflow variable
-        #source_run_dir = "{{ var.value." + LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME + " }}"
+        source_run_dir = "{{ var.value." + LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME + " }}"
 
-        #in_path = os.path.join(source_run_dir, IN_FILE)
-        in_path = os.path.join(DATA_DIR, IN_FILTERED)
+        in_path = os.path.join(source_run_dir, IN_FILE)
         out_path = os.path.join(DATA_DIR, OUT_OWL)
 
         # sunlet emits OWL/RDF (often RDF/XML). Keep it as .owl.
@@ -97,27 +94,8 @@ def reason():
         Variable.set(LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME, run_dir)
         print(f"Set {LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME}={run_dir}")
 
-    def preFilterCmdTemplate() -> str:
-        ROBOT = "{{ var.value.robotcmd }}"
-        DATA_DIR = "DATA_DIR"
-        XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
-        source_run_dir = "{{ var.value." + LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME + " }}"
-
-        in_owl = os.path.join(source_run_dir, IN_FILE)
-        filtered = os.path.join(DATA_DIR, IN_FILTERED)
-
-        # ROBOT auto-detects input format from content/extension.
-        cmd = f"{ROBOT} remove --input '{in_owl}' --term http://purl.obolibrary.org/obo/RO_0000057 --axioms SubPropertyChainOf  remove --term http://purl.obolibrary.org/obo/BFO_0000118 --term http://purl.obolibrary.org/obo/BFO_0000181 --term http://purl.obolibrary.org/obo/BFO_0000138 --term http://purl.obolibrary.org/obo/BFO_0000136 --output '{filtered}'"
-        return cmd.replace(DATA_DIR, XCOM_DATADIR)
-
-
-    pre_filter = BashOperator(
-        task_id="pre_filter",
-        bash_command=preFilterCmdTemplate(),
-    )
-
-    init_data_dir() >> pre_filter >> sunlet_reasoning >> robot_convert_to_ttl >> mark_reason_success()
+    init_data_dir() >> sunlet_reasoning >> robot_convert_to_ttl >> mark_reason_success()
 
 
 reason()
