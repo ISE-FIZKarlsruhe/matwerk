@@ -8,7 +8,7 @@ from airflow.providers.standard.operators.bash import BashOperator
 from airflow.providers.standard.operators.python import PythonOperator
 from airflow.providers.standard.operators.empty import EmptyOperator
 
-SUCCESFULL_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_spreadsheet_run"
+SUCCESFULL_RUN_VARIABLE_NAME = "matwerk_last_successful_spreadsheet_run"
 
 """
 Airflow DAG: process_spreadsheets

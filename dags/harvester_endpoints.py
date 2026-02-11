@@ -21,8 +21,8 @@ DAG_ID = "harvester_endpoints"
 SCRIPTS_REPO = "ISE-FIZKarlsruhe/matwerk"
 SCRIPTS_REF = "main"
 
-LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_merge_run"
-LAST_SUCCESSFUL_HARVESTER_ENDPOINTS_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_harvester_endpoints_run"
+LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_successful_merge_run"
+LAST_SUCCESSFUL_HARVESTER_ENDPOINTS_RUN_VARIABLE_NAME = "matwerk_last_successful_harvester_endpoints_run"
 
 MERGE_TTL_NAME = "spreadsheets_asserted.ttl"
 OUTPUT = "dataset_stats.ttl"

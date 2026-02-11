@@ -15,9 +15,9 @@ DAG_ID = "validation_checks"
 
 MERGED_FOR_VALIDATION_TTL = "spreadsheets_merged_for_validation.ttl"
 
-LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_merge_run"
-LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_validated_run"
-LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_reason_run"
+LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_successful_merge_run"
+LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME = "matwerk_last_successful_validated_run"
+LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "matwerk_last_successful_reason_run"
 # Inputs produced by other DAGs
 ASSERTED_TTL = "spreadsheets_asserted.ttl" 
 INFERENCES_FILE = "spreadsheets_inferences.ttl"

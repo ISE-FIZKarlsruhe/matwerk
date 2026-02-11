@@ -15,8 +15,8 @@ from airflow.exceptions import AirflowFailException
 
 DAG_ID = "harvester_zenodo"
 
-LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_merge_run"
-LAST_SUCCESSFUL_HARVESTER_ZENODO_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_harvester_zenodo_run"
+LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_successful_merge_run"
+LAST_SUCCESSFUL_HARVESTER_ZENODO_RUN_VARIABLE_NAME = "matwerk_last_successful_harvester_zenodo_run"
 
 OUT_TTL = "spreadsheets_asserted.ttl"
 OUTPUT = "zenodo.ttl"

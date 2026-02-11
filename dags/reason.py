@@ -8,8 +8,8 @@ from airflow.providers.standard.operators.bash import BashOperator
 
 
 DAG_ID = "reason"
-LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_merge_run"
-LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "matwerk_last_sucessfull_reason_run"
+LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_successful_merge_run"
+LAST_SUCCESSFUL_REASON_RUN_VARIABLE_NAME = "matwerk_last_successful_reason_run"
 
 OUT_TTL = "spreadsheets_asserted.ttl"
 OUT_REASONED_TTL = "spreadsheets_reasoned.ttl"
