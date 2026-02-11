@@ -8,14 +8,14 @@ The **MSE Knowledge Graph v2.0** is an updated version that is BFO-compliant, al
 
 ## Navigation
 
-- [SHMARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/shmarql/){:target="_blank"}
-- [SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql){:target="_blank"}
-- [Sparklis](http://www.irisa.fr/LIS/ferre/sparklis/osparklis.html?title=Core%20English%20DBpedia&endpoint=https%3A//nfdi.fiz-karlsruhe.de/matwerk/sparql){:target="_blank"}
-- [The MatWerk ontology (MWO)](https://ise-fizkarlsruhe.github.io/mwo/){:target="_blank"}
-- [The NFDI Core Ontology (NFDIcore)](https://ise-fizkarlsruhe.github.io/nfdicore/){:target="_blank"}
-- [Data collection spreadsheets](https://docs.google.com/spreadsheets/d/1tiB4IZTCsjcw5QxBWk70XpRcwfw5-gs7CW2QTM5ZBiI/edit?usp=sharing){:target="_blank"}
-- [NFDI-MatWerk LOD Working Group](https://iuc12-nfdi-matwerk-ta-oms-7fd4826d9051b0dd93b21aa77d06d1d8c71c4.pages.rwth-aachen.de/){:target="_blank"}
-- [About NFDI-MatWerk consortium](https://nfdi-matwerk.de/){:target="_blank"}
+- [SHMARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/shmarql/)
+- [SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql)
+- [Sparklis](http://www.irisa.fr/LIS/ferre/sparklis/osparklis.html?title=Core%20English%20DBpedia&endpoint=https%3A//nfdi.fiz-karlsruhe.de/matwerk/sparql)
+- [The MatWerk ontology (MWO)](https://ise-fizkarlsruhe.github.io/mwo/)
+- [The NFDI Core Ontology (NFDIcore)](https://ise-fizkarlsruhe.github.io/nfdicore/)
+- [Data collection spreadsheets](https://docs.google.com/spreadsheets/d/1tiB4IZTCsjcw5QxBWk70XpRcwfw5-gs7CW2QTM5ZBiI/edit?usp=sharing)
+- [NFDI-MatWerk LOD Working Group](https://iuc12-nfdi-matwerk-ta-oms-7fd4826d9051b0dd93b21aa77d06d1d8c71c4.pages.rwth-aachen.de/)
+- [About NFDI-MatWerk consortium](https://nfdi-matwerk.de/)
 - [Contact Us](mailto:ebrahim.norouzi@fiz-karlsruhe.de)
 
 ## Purpose
@@ -40,6 +40,6 @@ The MSE Knowledge Graph encompasses diverse categories:
 
 ---
 
-_For more information, visit the [NFDI-MatWerk official website](https://nfdi-matwerk.de/){:target="_blank"}._
+_For more information, visit the [NFDI-MatWerk official website](https://nfdi-matwerk.de/)._
 
 

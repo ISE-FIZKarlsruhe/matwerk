@@ -35,26 +35,28 @@ RUN chmod +x /app/robot-download.sh /app/robot-merge.sh \
  && ./robot-merge.sh \
  && test -s data/all_NotReasoned.ttl
 
-RUN set -eux; \
-    chmod +x /app/scripts/fetch_endpoints.py; \
-    mkdir -p /app/data/sparql_endpoints/named_graphs; \
-    python /app/scripts/fetch_endpoints.py \
-      --all-ttl /app/data/all_NotReasoned.ttl \
-      --mwo-owl /app/ontology/mwo-full.owl \
-      --state-json /app/data/sparql_endpoints/sparql_sources.json \
-      --summary-json /app/data/sparql_endpoints/sparql_sources_list.json \
-      --stats-ttl /app/data/sparql_endpoints/dataset_stats.ttl \
-      --named-graphs-dir /app/data/sparql_endpoints/named_graphs
+# RUN set -eux; \
+#     chmod +x /app/scripts/fetch_endpoints.py; \
+#     mkdir -p /app/data/sparql_endpoints/named_graphs; \
+#     python /app/scripts/fetch_endpoints.py \
+#       --all-ttl /app/data/all_NotReasoned.ttl \
+#       --mwo-owl /app/ontology/mwo-full.owl \
+#       --state-json /app/data/sparql_endpoints/sparql_sources.json \
+#       --summary-json /app/data/sparql_endpoints/sparql_sources_list.json \
+#       --stats-ttl /app/data/sparql_endpoints/dataset_stats.ttl \
+#       --named-graphs-dir /app/data/sparql_endpoints/named_graphs
 
 RUN set -eux; \
     chmod +x /app/robot-reason.sh; \
     ./robot-reason.sh; \
     test -s data/all.ttl
 
-# ---- Put predictable artifacts where you want them ----
+RUN printf '<https://purls.helmholtz-metadaten.de/msekg/all> {\n' > data/all.trig \
+ && cat data/all.ttl >> data/all.trig \
+ && printf '\n}\n' >> data/all.trig
 RUN mkdir -p /data && cp data/all.ttl /data/ontology.ttl
 
-# ---- Widoco (match the known-good layout: /public/doc) ----
+# ---- Widoco ----
 RUN java -jar /usr/local/bin/widoco.jar \
     -ontFile /app/data/all.ttl \
     -outFolder public \

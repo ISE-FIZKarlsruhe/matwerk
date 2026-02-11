@@ -1,9 +1,0 @@
-<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/2000/01/rdf-schema#label> "Thing" <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/4642540eb90be12ae3756d60> .
-<http://dbpedia.org/ontology/President> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/4642540eb90be12ae3756d60> .
-<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/2000/01/rdf-schema#label> "Nothing" <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/4642540eb90be12ae3756d60> .
-<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/4642540eb90be12ae3756d60> .
-<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/4642540eb90be12ae3756d60> .
-<http://dbpedia.org/ontology/President> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Politician> <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/4642540eb90be12ae3756d60> .
-<http://dbpedia.org/ontology/Politician> <http://www.w3.org/2000/01/rdf-schema#label> "" <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/4642540eb90be12ae3756d60> .
-<http://dbpedia.org/ontology/President> <http://www.w3.org/2000/01/rdf-schema#label> "president"@en <https://purls.helmholtz-metadaten.de/msekg/snapshot/sparql/classHierarchy/4642540eb90be12ae3756d60> .
-

@@ -1,8 +1,0 @@
-SELECT DISTINCT ?Concept ?label
-WHERE {
-  [] a ?Concept
-  optional {
-    ?Concept rdfs:label ?label .    
-  }
-}
-LIMIT 999
