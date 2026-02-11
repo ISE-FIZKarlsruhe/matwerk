@@ -36,4 +36,3 @@ Thumbs.db
 # Ignore documentation and site builds
 /site/
 public/
-/data/*
