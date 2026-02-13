@@ -54,20 +54,22 @@ RUN set -eux; \
     cp /work/data/all.ttl /data/ontology.ttl
 
 # ---- Widoco ----
-# We will publish it under /matwerk/ontology/
 RUN set -eux; \
     rm -rf /work/public; \
-    java -jar /usr/local/bin/widoco.jar \
-      -ontFile /work/data/all.ttl \
-      -outFolder /work/public \
-      -uniteSections \
-      -includeAnnotationProperties \
-      -lang en-de \
-      -getOntologyMetadata \
-      -noPlaceHolderText \
-      -rewriteAll \
-      -webVowl; \
+    mkdir -p /work/public; \
+    ( java -jar /usr/local/bin/widoco.jar \
+        -ontFile /work/data/all.ttl \
+        -outFolder /work/public \
+        -uniteSections \
+        -includeAnnotationProperties \
+        -lang en-de \
+        -getOntologyMetadata \
+        -noPlaceHolderText \
+        -rewriteAll \
+        -webVowl \
+      || true ); \
     test -s /work/public/index-en.html || test -s /work/public/index.html
+
 
 # ---- Shmarql docs build (mkdocs) ----
 # Build mkdocs in an isolated folder so we don't touch /app/src
@@ -92,3 +94,4 @@ RUN set -eux; \
 
 # ----runtime WORKDIR must be /app/src so shmarql finds "static/*" ----
 WORKDIR /app/src
+
