@@ -937,6 +937,38 @@ def main():
     print(f"State: {STATE_JSON} (mapping/debug only; determinism does not depend on it)")
     print("Done.")
 
+def run(
+    *,
+    all_ttl: str,
+    mwo_owl: str,
+    state_json: str,
+    summary_json: str,
+    stats_ttl: str,
+    named_graphs_dir: str,
+    base_graph_iri: str | None = None,
+    request_timeout: int | None = None,
+):
+    """
+    Programmatic entrypoint (no argparse / no sys.argv).
+    Safe to call from Airflow tasks.
+    """
+    # Build an argparse-like namespace for apply_cli_overrides
+    class _Args:
+        pass
+
+    args = _Args()
+    args.all_ttl = all_ttl
+    args.mwo_owl = mwo_owl
+    args.state_json = state_json
+    args.summary_json = summary_json
+    args.stats_ttl = stats_ttl
+    args.named_graphs_dir = named_graphs_dir
+    args.base_graph_iri = base_graph_iri or BASE_GRAPH_IRI
+    args.request_timeout = int(request_timeout or REQUEST_TIMEOUT)
+    args.print_config = False
+
+    apply_cli_overrides(args)
+    main()
 
 if __name__ == "__main__":
     args = parse_args()

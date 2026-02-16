@@ -196,3 +196,36 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+def run(
+    *,
+    data: str,
+    out_csv: str,
+    out_dir: str,
+    limit: int = -1,
+    dry_run: bool = False,
+    no_snapshots: bool = False,
+    extra_arg: list[str] | None = None,
+) -> None:
+    import sys
+    old = sys.argv
+    try:
+        argv = [
+            "fetch_zenodo",
+            "--data", data,
+            "--out-csv", out_csv,
+            "--out-dir", out_dir,
+        ]
+        if limit and limit > 0:
+            argv += ["--limit", str(limit)]
+        if dry_run:
+            argv += ["--dry-run"]
+        if no_snapshots:
+            argv += ["--no-snapshots"]
+        for a in (extra_arg or []):
+            argv += ["--extra-arg", a]
+
+        sys.argv = argv
+        main()
+    finally:
+        sys.argv = old

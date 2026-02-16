@@ -11,7 +11,7 @@ mkdir -p "$VALIDATIONSDIR"
 # ABox materialization via SPARQL UPDATE rules (replaces Hermit KG reasoning)
 ###############################################################################
 
-RULEDIR="scripts/rules"
+RULEDIR="dags/scripts/rules"
 OUTDIR="$COMPONENTSDIR/reasoned"
 mkdir -p "$OUTDIR"
 

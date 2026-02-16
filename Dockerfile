@@ -26,16 +26,21 @@ RUN wget -q https://github.com/ontodev/robot/releases/download/v1.9.8/robot.jar 
 
 # ---- Build KG ----
 RUN cd /app \
- && python -m scripts.zenodo.export_zenodo --make-snapshots --out data/zenodo/zenodo.ttl \
- && python ./scripts/fetch_zenodo.py
+ && mkdir -p data/zenodo/harvested data/zenodo/named_graphs/record \
+ && PYTHONPATH=/app/dags python -m scripts.zenodo.export_zenodo --make-snapshots --out data/zenodo/zenodo.ttl \
+ && PYTHONPATH=/app/dags python /app/dags/scripts/fetch_zenodo.py \
+      --data data/all_NotReasoned.ttl \
+      --out-csv data/zenodo/datasets_urls.csv \
+      --out-dir data/zenodo/harvested
+
 
 RUN chmod +x /app/robot-download.sh /app/robot-merge.sh \
  && (cd /app && ./robot-download.sh && ./robot-merge.sh) \
  && test -s /app/data/all_NotReasoned.ttl
 
-# RUN chmod +x /app/scripts/fetch_endpoints.py \
+# RUN chmod +x /app/dags/scripts/fetch_endpoints.py \
 #  && mkdir -p /app/data/sparql_endpoints/named_graphs \
-#  && python /app/scripts/fetch_endpoints.py \
+#  && python /app/dags/scripts/fetch_endpoints.py \
 #      --all-ttl /app/data/all_NotReasoned.ttl \
 #      --mwo-owl /app/ontology/mwo-full.owl \
 #      --state-json /app/data/sparql_endpoints/sparql_sources.json \
