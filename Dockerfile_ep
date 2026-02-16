@@ -1,8 +1,0 @@
-FROM ghcr.io/epoz/shmarql:v0.67
-
-COPY mkdocs.yml /app/src/a.yml
-COPY docs /app/src/docs
-RUN uv run python -m shmarql docs_build -f /app/src/a.yml
-RUN mv /app/src/site /app/src/__ && mkdir /app/src/site/ && mv /app/src/__ /app/src/site/matwerk
-
-
