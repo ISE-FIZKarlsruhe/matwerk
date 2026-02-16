@@ -3,186 +3,186 @@
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977> a nfdi:NFDI_0000190 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977> a nfdi:NFDI_0000190 ;
     rdfs:label "https://zenodo.org/records/10850977" ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/cutting2_a.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/cutting2_b.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/cutting2_c.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/cutting2_d.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/energy_figure3.csv>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/force_friction_figure5.csv>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/forces_figure3.csv>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/rdf.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/rdf2.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/rdf_figure2.csv>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/reaxff_force_a.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/reaxff_force_b.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/reaxff_force_c.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/reaxff_force_d.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/result_table-4.csv>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/setup.pdf>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/size_dep_a.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/size_dep_b.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/size_dep_c.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/size_dep_d.png>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/size_dependency_figure4.csv>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/temperature_figure3.csv> ;
-    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/node/0> .
+    obo:BFO_0000051 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/cutting2_a.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/cutting2_b.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/cutting2_c.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/cutting2_d.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/energy_figure3.csv>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/force_friction_figure5.csv>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/forces_figure3.csv>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/rdf.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/rdf2.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/rdf_figure2.csv>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/reaxff_force_a.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/reaxff_force_b.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/reaxff_force_c.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/reaxff_force_d.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/result_table-4.csv>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/setup.pdf>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/size_dep_a.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/size_dep_b.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/size_dep_c.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/size_dep_d.png>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/size_dependency_figure4.csv>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/temperature_figure3.csv> ;
+    obo:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/node/0> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/cutting2_a.png> rdfs:label "cutting2_a.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/cutting2_a.png> rdfs:label "cutting2_a.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/cutting2_a.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/cutting2_b.png> rdfs:label "cutting2_b.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/cutting2_b.png> rdfs:label "cutting2_b.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/cutting2_b.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/cutting2_c.png> rdfs:label "cutting2_c.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/cutting2_c.png> rdfs:label "cutting2_c.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/cutting2_c.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/cutting2_d.png> rdfs:label "cutting2_d.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/cutting2_d.png> rdfs:label "cutting2_d.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/cutting2_d.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/energy_figure3.csv> rdfs:label "energy_figure3.csv" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/energy_figure3.csv> rdfs:label "energy_figure3.csv" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/energy_figure3.csv/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/force_friction_figure5.csv> rdfs:label "force_friction_figure5.csv" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/force_friction_figure5.csv> rdfs:label "force_friction_figure5.csv" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/force_friction_figure5.csv/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/forces_figure3.csv> rdfs:label "forces_figure3.csv" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/forces_figure3.csv> rdfs:label "forces_figure3.csv" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/forces_figure3.csv/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/rdf.png> rdfs:label "rdf.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/rdf.png> rdfs:label "rdf.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/rdf.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/rdf2.png> rdfs:label "rdf2.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/rdf2.png> rdfs:label "rdf2.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/rdf2.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/rdf_figure2.csv> rdfs:label "rdf_figure2.csv" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/rdf_figure2.csv> rdfs:label "rdf_figure2.csv" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/rdf_figure2.csv/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/reaxff_force_a.png> rdfs:label "reaxff_force_a.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/reaxff_force_a.png> rdfs:label "reaxff_force_a.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/reaxff_force_a.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/reaxff_force_b.png> rdfs:label "reaxff_force_b.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/reaxff_force_b.png> rdfs:label "reaxff_force_b.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/reaxff_force_b.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/reaxff_force_c.png> rdfs:label "reaxff_force_c.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/reaxff_force_c.png> rdfs:label "reaxff_force_c.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/reaxff_force_c.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/reaxff_force_d.png> rdfs:label "reaxff_force_d.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/reaxff_force_d.png> rdfs:label "reaxff_force_d.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/reaxff_force_d.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/result_table-4.csv> rdfs:label "result_table-4.csv" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/result_table-4.csv> rdfs:label "result_table-4.csv" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/result_table-4.csv/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/setup.pdf> rdfs:label "setup.pdf" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/setup.pdf> rdfs:label "setup.pdf" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/setup.pdf/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/size_dep_a.png> rdfs:label "size_dep_a.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/size_dep_a.png> rdfs:label "size_dep_a.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/size_dep_a.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/size_dep_b.png> rdfs:label "size_dep_b.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/size_dep_b.png> rdfs:label "size_dep_b.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/size_dep_b.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/size_dep_c.png> rdfs:label "size_dep_c.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/size_dep_c.png> rdfs:label "size_dep_c.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/size_dep_c.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/size_dep_d.png> rdfs:label "size_dep_d.png" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/size_dep_d.png> rdfs:label "size_dep_d.png" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/size_dep_d.png/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/size_dependency_figure4.csv> rdfs:label "size_dependency_figure4.csv" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/size_dependency_figure4.csv> rdfs:label "size_dependency_figure4.csv" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/size_dependency_figure4.csv/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/file/temperature_figure3.csv> rdfs:label "temperature_figure3.csv" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/file/temperature_figure3.csv> rdfs:label "temperature_figure3.csv" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.10850978> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.10850978> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.10850978>,
         <https://zenodo.org/api/records/10850978/files/temperature_figure3.csv/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/10850977/node/0> rdfs:label "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10850977/node/0> rdfs:label "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" ;
     obo:OBI_0002135 "Supplementary material for \"Molecular dynamics simulations of the machining of oxidized and deoxidized titanium work pieces\"" .
 

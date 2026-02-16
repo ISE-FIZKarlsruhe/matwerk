@@ -3,58 +3,58 @@
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335> a nfdi:NFDI_0000009 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335> a nfdi:NFDI_0000009 ;
     rdfs:label "https://zenodo.org/records/6778335" ;
-    obo:BFO_0000051 <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/file/Declaration_of_performance_S355_1.0577.pdf>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/file/_steel_sheet_test_data_mission_abstract_content.pdf>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/file/charpy_test.zip>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/file/sonic_resonance_test.zip>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/file/tensile_test.zip>,
-        <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/file/test_piece_extraction_sketch.pdf> ;
-    obo:IAO_0000235 <https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/node/0> .
+    obo:BFO_0000051 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/file/Declaration_of_performance_S355_1.0577.pdf>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/file/_steel_sheet_test_data_mission_abstract_content.pdf>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/file/charpy_test.zip>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/file/sonic_resonance_test.zip>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/file/tensile_test.zip>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/file/test_piece_extraction_sketch.pdf> ;
+    obo:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/node/0> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/file/Declaration_of_performance_S355_1.0577.pdf> rdfs:label "Declaration_of_performance_S355_1.0577.pdf" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/file/Declaration_of_performance_S355_1.0577.pdf> rdfs:label "Declaration_of_performance_S355_1.0577.pdf" ;
     obo:OBI_0002135 "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.6778336> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.6778336> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.6778336>,
         <https://zenodo.org/api/records/6778336/files/Declaration_of_performance_S355_1.0577.pdf/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/file/_steel_sheet_test_data_mission_abstract_content.pdf> rdfs:label "_steel_sheet_test_data_mission_abstract_content.pdf" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/file/_steel_sheet_test_data_mission_abstract_content.pdf> rdfs:label "_steel_sheet_test_data_mission_abstract_content.pdf" ;
     obo:OBI_0002135 "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.6778336> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.6778336> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.6778336>,
         <https://zenodo.org/api/records/6778336/files/_steel_sheet_test_data_mission_abstract_content.pdf/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/file/charpy_test.zip> rdfs:label "charpy_test.zip" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/file/charpy_test.zip> rdfs:label "charpy_test.zip" ;
     obo:OBI_0002135 "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.6778336> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.6778336> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.6778336>,
         <https://zenodo.org/api/records/6778336/files/charpy_test.zip/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/file/sonic_resonance_test.zip> rdfs:label "sonic_resonance_test.zip" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/file/sonic_resonance_test.zip> rdfs:label "sonic_resonance_test.zip" ;
     obo:OBI_0002135 "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.6778336> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.6778336> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.6778336>,
         <https://zenodo.org/api/records/6778336/files/sonic_resonance_test.zip/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/file/tensile_test.zip> rdfs:label "tensile_test.zip" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/file/tensile_test.zip> rdfs:label "tensile_test.zip" ;
     obo:OBI_0002135 "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.6778336> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.6778336> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.6778336>,
         <https://zenodo.org/api/records/6778336/files/tensile_test.zip/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/file/test_piece_extraction_sketch.pdf> rdfs:label "test_piece_extraction_sketch.pdf" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/file/test_piece_extraction_sketch.pdf> rdfs:label "test_piece_extraction_sketch.pdf" ;
     obo:OBI_0002135 "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" ;
     dcterms:isPartOf <https://doi.org/10.5281/zenodo.6778336> ;
     rdfs:seeAlso <https://doi.org/10.5281/zenodo.6778336> ;
     nfdi:NFDI_0001006 <10.5281/zenodo.6778336>,
         <https://zenodo.org/api/records/6778336/files/test_piece_extraction_sketch.pdf/content> .
 
-<https://purls.helmholtz-metadaten.de/msekg/zenodo/concept/6778335/node/0> rdfs:label "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/6778335/node/0> rdfs:label "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" ;
     obo:OBI_0002135 "Full dataset of several mechanical tests on an S355 steel sheet as reference data for digital representations" .
 

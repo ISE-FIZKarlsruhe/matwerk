@@ -32,7 +32,7 @@ except Exception:
 
 
 # ------------------ Config (env-overridable; may be overridden by CLI) ------------------
-BASE_GRAPH_IRI = os.environ.get("BASE_GRAPH_IRI", "https://purls.helmholtz-metadaten.de/msekg/").rstrip("/") + "/"
+BASE_GRAPH_IRI = os.environ.get("BASE_GRAPH_IRI", "https://nfdi.fiz-karlsruhe.de/matwerk/msekg/").rstrip("/") + "/"
 
 ENDPOINT_CLASS = URIRef(os.environ.get("ENDPOINT_CLASS", "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095"))
 ENDPOINT_PREDICATE = URIRef(

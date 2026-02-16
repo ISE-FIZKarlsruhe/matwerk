@@ -10,7 +10,7 @@ Per dataset (DOI), produce up to three graphs (if non-empty):
   3) tbox            — class & property axioms (compact, bnodes omitted)
 
 Stable IRI per (DOI-or-id, functionality):
-  https://purls.helmholtz-metadaten.de/msekg/<timestamp>
+  https://nfdi.fiz-karlsruhe.de/matwerk/msekg/<timestamp>
 (first run mints; later runs reuse it; collisions across functionalities are prevented).
 
 Output layout (by DOI):
@@ -52,7 +52,7 @@ from .state import load_state, save_state, record_key
 
 # ------------------ Config (env-overridable) ------------------
 BASE_GRAPH_IRI = os.environ.get(
-    "BASE_GRAPH_IRI", "https://purls.helmholtz-metadaten.de/msekg/"
+    "BASE_GRAPH_IRI", "https://nfdi.fiz-karlsruhe.de/matwerk/msekg/"
 ).rstrip("/") + "/"
 
 DEFAULT_OUT_DIR   = Path(os.environ.get("ZEN_OUT_DIR", "data/zenodo/named_graphs/"))
@@ -68,7 +68,7 @@ FUNC_CLASS_HIER     = "classHierarchy"
 FUNC_TBOX           = "tbox"
 
 # Namespace for stats/annotations
-STAT = URIRef("https://purls.helmholtz-metadaten.de/msekg/stat/")
+STAT = URIRef("https://nfdi.fiz-karlsruhe.de/matwerk/msekg/stat/")
 
 # ------------------ Utilities ------------------
 def now_ts_ms() -> int:

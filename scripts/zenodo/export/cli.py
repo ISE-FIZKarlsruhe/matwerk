@@ -31,7 +31,7 @@ from .rdf_import import import_rdf_into_named_graph
 
 # ------------------ Snapshot config ------------------
 BASE_GRAPH_IRI = os.environ.get(
-    "BASE_GRAPH_IRI", "https://purls.helmholtz-metadaten.de/msekg/"
+    "BASE_GRAPH_IRI", "https://nfdi.fiz-karlsruhe.de/matwerk/msekg/"
 ).rstrip("/") + "/"
 
 FUNC_CLASSES = "classes"
