@@ -12,8 +12,10 @@ RUN set -eux; \
 
 ENV ROBOT_JAVA_ARGS="-Xmx16G -Dfile.encoding=UTF-8"
 
+# ---- App sources ----
+COPY . /app
+
 # ---- Python deps for your build scripts ----
-COPY requirements.txt /app/requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
 # ---- Robot + Widoco ----
@@ -22,32 +24,29 @@ RUN wget -q https://github.com/ontodev/robot/releases/download/v1.9.8/robot.jar 
  && chmod +x /usr/local/bin/robot \
  && wget -q https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar -O /usr/local/bin/widoco.jar
 
-# ---- App sources ----
-COPY . /app
-
 # ---- Build KG ----
-RUN python -m scripts.zenodo.export_zenodo --make-snapshots --out data/zenodo/zenodo.ttl \
+RUN cd /app \
+ && python -m scripts.zenodo.export_zenodo --make-snapshots --out data/zenodo/zenodo.ttl \
  && python ./scripts/fetch_zenodo.py
 
 RUN chmod +x /app/robot-download.sh /app/robot-merge.sh \
- && ./robot-download.sh \
- && ./robot-merge.sh \
- && test -s data/all_NotReasoned.ttl
+ && /app/robot-download.sh \
+ && /app/robot-merge.sh \
+ && test -s /app/data/all_NotReasoned.ttl
 
-# RUN chmod +x /app/scripts/fetch_endpoints.py; \
-#     mkdir -p /app/data/sparql_endpoints/named_graphs; \
-#     python /app/scripts/fetch_endpoints.py \
-#       --all-ttl /app/data/all_NotReasoned.ttl \
-#       --mwo-owl /app/ontology/mwo-full.owl \
-#       --state-json /app/data/sparql_endpoints/sparql_sources.json \
-#       --summary-json /app/data/sparql_endpoints/sparql_sources_list.json \
-#       --stats-ttl /app/data/sparql_endpoints/dataset_stats.ttl \
-#       --named-graphs-dir /app/data/sparql_endpoints/named_graphs
+# RUN chmod +x /app/scripts/fetch_endpoints.py \
+#  && mkdir -p /app/data/sparql_endpoints/named_graphs \
+#  && python /app/scripts/fetch_endpoints.py \
+#      --all-ttl /app/data/all_NotReasoned.ttl \
+#      --mwo-owl /app/ontology/mwo-full.owl \
+#      --state-json /app/data/sparql_endpoints/sparql_sources.json \
+#      --summary-json /app/data/sparql_endpoints/sparql_sources_list.json \
+#      --stats-ttl /app/data/sparql_endpoints/dataset_stats.ttl \
+#      --named-graphs-dir /app/data/sparql_endpoints/named_graphs
 
-RUN chmod +x /app/robot-reason.sh; \
-    ./robot-reason.sh; \
-    test -s data/all.ttl
-
+RUN chmod +x /app/robot-reason.sh \
+ && /app/robot-reason.sh \
+ && test -s /app/data/all.ttl
 
 # ---- Widoco ----
 RUN java -jar /usr/local/bin/widoco.jar \
