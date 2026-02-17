@@ -8,3 +8,5 @@ nav:
   - Sample Queries:
     - General Queries: general_queries.md
     - Statistics: statistics.md
+    - Named Graphs Statistics: namedgraphsstatistics.md
+    - IUC Related Queries: iuc_related_queries.md

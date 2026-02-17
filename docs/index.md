@@ -1,10 +1,10 @@
 # Welcome to the Materials Science and Engineering Knowledge Graph (MSE KG)
-Last update: 01.12.2025
+Last update: 17.02.2026
 
 
 ## Introduction
 
-The **MSE Knowledge Graph v2.0** is an updated version that is BFO-compliant, aligning with the Basic Formal Ontology to ensure semantic interoperability and ontological rigor. This updated version aims to represent consortium resources and enable integrative access to distributed, heterogeneous research data within the NFDI-MatWerk community and beyond.
+The **MSE Knowledge Graph v2.1** is an updated version that is BFO-compliant, aligning with the Basic Formal Ontology to ensure semantic interoperability and ontological rigor. This updated version aims to represent consortium resources and enable integrative access to distributed, heterogeneous research data within the NFDI-MatWerk community and beyond.
 
 ## Navigation
 

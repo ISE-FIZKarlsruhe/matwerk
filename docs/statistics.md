@@ -1,4 +1,3 @@
-
 ## General questions related to the statistics of the MSE KG with the corresponding SPARQL queries
 
 ### What are the entity types (concepts) present in the MSE-KG?
@@ -6,16 +5,29 @@
 ```sparql
 SELECT DISTINCT ?Concept ?label
 WHERE {
-  [] a ?Concept
-  optional {
-    ?Concept rdfs:label ?label .    
-  }
+  [] a ?Concept .
+  OPTIONAL { ?Concept rdfs:label ?label . }
 }
 LIMIT 999
 ```
 
 ---
+### How many entities exist for each concept in the MSE-KG?
 
+```sparql
+SELECT ?Concept ?label (COUNT(?entity) AS ?count)
+WHERE {
+  ?entity a ?Concept .
+  optional {
+    ?Concept rdfs:label ?label .    
+  }
+}
+GROUP BY ?Concept ?label
+ORDER BY DESC(?count)
+LIMIT 999
+```
+
+---
 ### How many entities (distinct subjects) are in the KG?
 
 ```sparql
@@ -66,12 +78,11 @@ WHERE {
 SELECT ?p ?plabel (COUNT(*) AS ?usageCount)
 WHERE {
   ?s ?p ?o .
-  optional {
-    ?p rdfs:label ?plabel .    
-  }
+  OPTIONAL { ?p rdfs:label ?plabel . }
 }
 GROUP BY ?p ?plabel
 ORDER BY DESC(?usageCount)
+LIMIT 10
 ```
 
 ---
@@ -104,6 +115,7 @@ WHERE {
 ```
 
 ---
+
 ### What are the most connected entities (by outgoing triples)?
 
 ```sparql
@@ -178,12 +190,8 @@ ORDER BY DESC(?count)
 SELECT ?class ?label
 WHERE {
   ?class a owl:Class .
-  FILTER NOT EXISTS {
-    ?instance a ?class .
-  }
-  optional {
-    ?class rdfs:label ?label .    
-  }
+  FILTER NOT EXISTS { ?instance a ?class . }
+  OPTIONAL { ?class rdfs:label ?label . }
 }
 ```
 
@@ -206,7 +214,11 @@ WHERE {
 SELECT (COUNT(DISTINCT ?o) AS ?externalLinks)
 WHERE {
   ?s ?p ?o .
-  FILTER(STRSTARTS(STR(?o), "http") && !STRSTARTS(STR(?o), "https://nfdi.fiz-karlsruhe.de/"))
+  FILTER(
+    isIRI(?o) &&
+    STRSTARTS(STR(?o), "http") &&
+    !STRSTARTS(STR(?o), "https://nfdi.fiz-karlsruhe.de/")
+  )
 }
 ```
 

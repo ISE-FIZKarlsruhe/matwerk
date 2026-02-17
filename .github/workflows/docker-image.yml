@@ -53,9 +53,49 @@ jobs:
 
           docker push $REGISTRY/${REPO} --all-tags
 
-      - name: Trigger private repo workflow
+      - name: Extract generated data dir from image
+        env:
+          REGISTRY: ghcr.io
         run: |
           set -euxo pipefail
+          cid=$(docker create $REGISTRY/${REPO}:latest)
+          rm -rf data
+          mkdir -p data
+          # copy the *contents* of /data into ./data
+          docker cp "$cid":/app/data/.   ./data/   || echo "⚠️ /app/data not found in image"
+          docker rm "$cid"
+
+      - name: Commit & push data/ (rebased)
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euxo pipefail
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Stage everything in data/, including new/deleted files
+          git add -A data
+
+          git commit -m "[skip ci] Update generated data directory"
+
+          # Rebase our commit on top of the latest remote to avoid non-fast-forward errors
+          git pull --rebase origin "${BRANCH}"
+
+          # Push, retry a couple times in case another run races us
+          for i in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push race detected, retrying ($i/3)…"
+            git pull --rebase origin "${BRANCH}"
+            sleep $((RANDOM%5+1))
+          done
+
+          echo "Push failed after retries." >&2
+          exit 1
+
+      - name: Trigger private repo workflow
+        run: |
           curl -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "Authorization: Bearer ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \

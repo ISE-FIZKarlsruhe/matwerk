@@ -2,749 +2,795 @@
 
 ## General questions with the corresponding SPARQL queries
 
-### What are the entitiy types (concepts) present in the MSE-KG?
-
-```sparql
-SELECT DISTINCT ?Concept ?label
-WHERE {
-  [] a ?Concept
-  optional {
-    ?Concept rdfs:label ?label .    
-  }
-}
-LIMIT 999
-```
-
----
-### How many entities exist for each concept in the MSE-KG?
-
-```sparql
-SELECT ?Concept ?label (COUNT(?entity) AS ?count)
-WHERE {
-  ?entity a ?Concept .
-  optional {
-    ?Concept rdfs:label ?label .    
-  }
-}
-GROUP BY ?Concept ?label
-ORDER BY DESC(?count)
-LIMIT 999
-```
-
----
 ### What are the submitted records in NFDI-MatWerk Zenodo community present in the MSE-KG?
 
 ```sparql
-# This query retrieves NFDI-MatWerk Zenodo community.
+PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX has_part:         <http://purl.obolibrary.org/obo/BFO_0000051>
+PREFIX rdfs:             <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?records ?recordsLabel_ ?filesInRecordLabel_ ?doi WHERE {
+SELECT DISTINCT ?records ?recordsLabel_ ?filesInRecordLabel_ ?doi WHERE {
 
-  # Match any subject (?records) that is an instance of one of the Dataset classes
-  ?records a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> .
-  ?records rdfs:label ?recordsLabel_ .
-  ?records <http://purl.obolibrary.org/obo/BFO_0000051> ?containsInRecord .
-  ?containsInRecord rdfs:label ?filesInRecordLabel_ .
-  ?containsInRecord rdfs:seeAlso ?doi .
+  # Records are datasets (upper class)
+  ?records a nfdicore_dataset: ;
+           rdfs:label ?recordsLabel_ ;
+           has_part: ?containsInRecord .
 
+  ?containsInRecord rdfs:label ?filesInRecordLabel_ ;
+                    rdfs:seeAlso ?doi .
 }
-
-# Limit results to 999 rows
 LIMIT 999
 ```
 
-
 ---
+
 ### What are the Fair Digital Objects present in the MSE-KG?
 
 ```sparql
-# This query retrieves Fair Digital Objects.
+PREFIX nfdicore_fdo:     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037>
+PREFIX part_of:          <http://purl.obolibrary.org/obo/BFO_0000050>
+PREFIX has_url:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX rdfs:             <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?FDOs ?FDOsLabel_ ?FDOsParentDataset ?FDOsURL WHERE {
+SELECT DISTINCT ?FDOs ?FDOsLabel_ ?FDOsParentDataset ?FDOsURL WHERE {
 
-  # Match any subject (?FDOs) that is an instance of one of the digital object identifier classes
-  ?FDOs a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037> .
-  ?FDOs rdfs:label ?FDOsLabel_ .
-  ?FDOs <http://purl.obolibrary.org/obo/BFO_0000050> ?FDOsParentDataset .
-  ?FDOs <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?FDOsURL .
-
+  ?FDOs a nfdicore_fdo: ;
+        rdfs:label ?FDOsLabel_ ;
+        part_of: ?FDOsParentDataset ;
+        has_url: ?FDOsURL .
 }
-
-# Limit results to 999 rows
 LIMIT 999
 ```
 
-
 ---
+
 ### What are the softwares present in the MSE-KG? What are the license, programming language, repository URL and publication of these softwares?
 
 ```sparql
-# This query retrieves software resources.
+PREFIX nfdicore_software:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121>
+PREFIX has_license:             <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142>
+PREFIX has_programming_language:<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187>
+PREFIX nfdicore_publication:    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190>
+PREFIX denoted_by:            <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX has_value:           <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
+PREFIX has_url:               <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX mwo_repository:          <http://purls.helmholtz-metadaten.de/mwo/MWO_0001113>
+PREFIX rdfs:                    <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?software ?softwareLabel_ ?licenseLabel ?languageLabel ?repositoryURL ?publicationLabel WHERE {
+SELECT DISTINCT
+  ?software
+  ?softwareLabel_
+  ?licenseLabel
+  ?languageLabel
+  ?repositoryURL
+  ?publicationLabel
+WHERE {
 
-  # Match any subject (?software) that is an instance of one of the software-related classes
-  VALUES ?class {
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121>  # Software
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001045>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001046>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001048>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000218>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000140>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010039>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010040>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010041>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000222>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001049>
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001044>
-  }
-  ?software a ?class .
-  
-  # Try to extract a human-readable label for the software
-  OPTIONAL { 
-    ?software <http://purl.obolibrary.org/obo/IAO_0000235> ?softwareLabel .
-    ?softwareLabel a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001000> .
-    ?softwareLabel rdfs:label ?softwareLabel_ . }
+  ?software a nfdicore_software: .
 
-  # Optionally, retrieve the associated license and its label
+  # Software label: via a metadata node with rdfs:label
   OPTIONAL {
-    ?software <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142> ?license .
-    ?license rdfs:label ?licenseLabel .
+    ?software denoted_by: ?softwareLabelNode .
+    ?softwareLabelNode rdfs:label ?softwareLabel_ .
   }
-  # Optionally, retrieve the Programming Language and its label
+
   OPTIONAL {
-    ?software <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187> ?language .
-    ?language rdfs:label ?languageLabel .
+    ?software has_license: ?license .
+    OPTIONAL { ?license rdfs:label ?licenseLabel . }
   }
-  # Optionally, retrieve the related publication and its label
+
   OPTIONAL {
-    ?software <http://purl.obolibrary.org/obo/IAO_0000235> ?publication .
-    ?publication a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190> .
-    ?publication rdfs:label ?publicationLabel .
+    ?software has_programming_language: ?language .
+    OPTIONAL { ?language rdfs:label ?languageLabel . }
   }
-  # Optionally, retrieve the repository link
+
   OPTIONAL {
-    ?software <http://purl.obolibrary.org/obo/IAO_0000235> ?repository .
-    ?repository a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001113> .
-    ?repository <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repositoryURL .
+    ?software denoted_by: ?publication .
+    ?publication a nfdicore_publication: ;
+                 rdfs:label ?publicationLabel .
+  }
+
+  OPTIONAL {
+    ?software denoted_by: ?repositoryNode .
+    ?repositoryNode a mwo_repository: ;
+                    has_url: ?repositoryURL .
   }
 }
-
-# Limit results to 999 rows
 LIMIT 999
 ```
 
 ---
+
 ### What are the services present in the MSE-KG? What are the service URL, documentation URL and code URL of these services?
 
 ```sparql
-# This query retrieves service resources and related metadata from the MSE-KG.
+PREFIX nfdicore_service:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232>
+PREFIX has_specification:          <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204>
+PREFIX denoted_by:      <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX written_name:     <http://purl.obolibrary.org/obo/IAO_0000590>
+PREFIX has_url:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX rdfs:              <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?service ?serviceLabel_ ?serviceURL ?docURL ?codeURL WHERE {
 
-  # ?service is a resource of type Service Product
-  ?service a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> .
+  ?service a nfdicore_service: .
 
-  # The label resource for the service
   OPTIONAL {
-    ?service <http://purl.obolibrary.org/obo/IAO_0000235> ?serviceLabel .
-    ?serviceLabel a <http://purl.obolibrary.org/obo/IAO_0000590> .
-    ?serviceLabel rdfs:label ?serviceLabel_ . 
+    ?service denoted_by: ?serviceLabelNode .
+    ?serviceLabelNode a written_name: ;
+                      rdfs:label ?serviceLabel_ .
   }
 
-
-  # Service link (URL)
   OPTIONAL {
-    ?service <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> ?URL .
-    ?URL <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?serviceURL .
+    ?service has_specification: ?urlNode .
+    ?urlNode has_url: ?serviceURL .
   }
 
-  # Documentation link
   OPTIONAL {
-    ?service <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> ?URL .
-    ?URL <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?docURL .
+    ?service has_specification: ?docNode .
+    ?docNode has_url: ?docURL .
   }
 
-  # Source code link
   OPTIONAL {
-    ?service <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204> ?URL .
-    ?URL <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?codeURL .
+    ?service has_specification: ?codeNode .
+    ?codeNode has_url: ?codeURL .
   }
-
 }
 LIMIT 999
-
 ```
 
 ---
+
 ### What are the organizations present in the MSE-KG? What are the acronym, city, rorID of these organizations?
 
 ```sparql
-# This query retrieves organization entities and their metadata from the MSE-KG.
+PREFIX nfdicore_organization: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>
+PREFIX located_in:            <http://purl.obolibrary.org/obo/BFO_0000171>
+PREFIX nfdicore_city:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106>
+PREFIX denoted_by:          <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX abbreviation_textual_entity:         <http://purl.obolibrary.org/obo/IAO_0000605>
+PREFIX has_external_identifier:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006>
+PREFIX has_url:             <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX rdfs:                  <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?org ?label_en ?acronym ?city ?rorID WHERE {
+SELECT DISTINCT ?org ?label_en ?acronym ?city ?rorID WHERE {
 
-  # Restrict to entities of type 'organization'
-  ?org a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003> .
+  ?org a nfdicore_organization: .
+  OPTIONAL { ?org rdfs:label ?label_en . }
 
-  # English label
   OPTIONAL {
-    ?org rdfs:label ?label_en .
+    ?org denoted_by: ?acrNode .
+    ?acrNode a abbreviation_textual_entity: ;
+             rdfs:label ?acronym .
   }
 
-
-  # Acronym
   OPTIONAL {
-    ?org <http://purl.obolibrary.org/obo/IAO_0000235> ?acr .
-    ?acr a <http://purl.obolibrary.org/obo/IAO_0000605> .
-    ?acr rdfs:label ?acronym .
+    ?org located_in: ?cityNode .
+    ?cityNode a nfdicore_city: ;
+              rdfs:label ?city .
   }
 
-  # City
   OPTIONAL {
-    ?org <http://purl.obolibrary.org/obo/BFO_0000171> ?c .
-    ?c a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106> .
-    ?c rdfs:label ?city .
-  }
-
-
-  # ROR ID
-  OPTIONAL {
-    ?org <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> ?ID .
-    ?ID <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?rorID .
+    ?org has_external_identifier: ?idNode .
+    ?idNode has_url: ?rorID .
   }
 }
 LIMIT 999
-
 ```
 
 ---
+
+### What are the people present in the MSE-KG? What are the email addresses and ORCID IDs of these people?
+
+```sparql
+PREFIX nfdicore_person:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>
+PREFIX denoted_by:     <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX email_address:      <http://purl.obolibrary.org/obo/IAO_0000429>
+PREFIX has_external_identifier:   <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006>
+PREFIX has_url:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX rdfs:             <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?person ?label ?email ?orcid WHERE {
+
+  ?person a nfdicore_person: .
+  OPTIONAL { ?person rdfs:label ?label . }
+
+  OPTIONAL {
+    ?person denoted_by: ?emailNode .
+    ?emailNode a email_address: ;
+               rdfs:label ?email .
+  }
+
+  OPTIONAL {
+    ?person has_external_identifier: ?idNode .
+    ?idNode has_url: ?orcid .
+  }
+}
+LIMIT 999
+```
+
+---
+
 ### What are the events present in the MSE-KG? What are the URL, associated organization and participating consortia of these events?
 
 ```sparql
-SELECT ?event ?contributionLabel ?eventURL ?orgLabel ?consortiumLabel WHERE {
+PREFIX nfdicore_event:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018>
+PREFIX denoted_by:          <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX nfdicore_title:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
+PREFIX has_url:             <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX participant:           <http://purl.obolibrary.org/obo/BFO_0000057>
+PREFIX nfdicore_organization: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>
+PREFIX nfdicore_consortium:   <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000006>
+PREFIX rdfs:                  <http://www.w3.org/2000/01/rdf-schema#>
 
-  # Find resources typed as one of the event types
-  ?event a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018> .
+SELECT DISTINCT ?event ?contributionLabel ?eventURL ?orgLabel ?consortiumLabel WHERE {
 
-  # Retrieve event contribution label (main label)
+  ?event a nfdicore_event: .
+
+  # Event contribution label
   OPTIONAL {
-    ?event <http://purl.obolibrary.org/obo/IAO_0000235> ?contributionLabelNode .
-    ?contributionLabelNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
-    ?contributionLabelNode rdfs:label ?contributionLabel .
+    ?event denoted_by: ?contributionLabelNode .
+    ?contributionLabelNode a nfdicore_title: ;
+                           rdfs:label ?contributionLabel .
   }
-
 
   # Link (URL / PID)
   OPTIONAL {
-    ?event <http://purl.obolibrary.org/obo/IAO_0000235> ?URL .
-    ?URL <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?eventURL .
+    ?event denoted_by: ?URL .
+    ?URL has_url: ?eventURL .
   }
 
   # Associated organization
   OPTIONAL {
-    ?event <http://purl.obolibrary.org/obo/BFO_0000057> ?org .
-    ?org a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003> .
-    ?org rdfs:label ?orgLabel .
+    ?event participant: ?org .
+    ?org a nfdicore_organization: ;
+         rdfs:label ?orgLabel .
   }
 
-  # Participating consortia (multiple possible)
+  # Participating consortia
   OPTIONAL {
-    ?event <http://purl.obolibrary.org/obo/BFO_0000057> ?consortium .
-    ?consortium a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000006> .
-    ?consortium rdfs:label ?consortiumLabel .
+    ?event participant: ?consortium .
+    ?consortium a nfdicore_consortium: ;
+                rdfs:label ?consortiumLabel .
   }
-
 }
 LIMIT 999
-
 ```
 
 ---
+
 ### What are the people present in the MSE-KG? What are the email addresses and ORCID IDs of these people?
 
 ```sparql
-SELECT ?person ?label ?email ?orcid WHERE {
+PREFIX nfdicore_person: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>
+PREFIX denoted_by:    <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX email_address:   <http://purl.obolibrary.org/obo/IAO_0000429>
+PREFIX has_external_identifier:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006>
+PREFIX has_url:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX rdfs:            <http://www.w3.org/2000/01/rdf-schema#>
 
-  # Filter to only retrieve individuals (persons)
-  ?person a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> .
-  # NFDI_0000004 represents the class 'Person' in the MSE ontology
+SELECT DISTINCT ?person ?label ?email ?orcid WHERE {
 
-  # Retrieve the main label of the person
+  ?person a nfdicore_person: .
+
+  OPTIONAL { ?person rdfs:label ?label . }
+
+  # Title (kept from original; guarded to literals to avoid LANG() on IRIs)
   OPTIONAL {
-    ?person rdfs:label ?label .
+    ?person denoted_by: ?title .
+    FILTER(isLiteral(?title))
+    FILTER(LANG(?title) = "" || LANG(?title) = "en")
   }
 
-  # Retrieve the title (e.g., Dr., Prof.)
+  # E-mail (via email node)
   OPTIONAL {
-    ?person <http://purl.obolibrary.org/obo/IAO_0000235> ?title .
-    FILTER (LANG(?title) = "" || LANG(?title) = "en")
+    ?person denoted_by: ?emailNode .
+    ?emailNode a email_address: ;
+               rdfs:label ?email .
   }
-
-  # E-mail
-  OPTIONAL {
-    ?person <http://purl.obolibrary.org/obo/IAO_0000235> ?emailNode .
-    ?emailNode a <http://purl.obolibrary.org/obo/IAO_0000429> .
-    ?emailNode rdfs:label ?email .
-  }
-
 
   # ORCID ID
   OPTIONAL {
-    ?person <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> ?id .
-    ?id <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?orcid .
+    ?person has_external_identifier: ?id .
+    ?id has_url: ?orcid .
   }
-
 }
 LIMIT 999
-
 ```
+
 ---
 
 ### What are the SPARQL endpoints in the MSE-KG that are about "process"?
 
 ```sparql
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX void: <http://rdfs.org/ns/void#>
-PREFIX IAO:  <http://purl.obolibrary.org/obo/IAO_>
-PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
-PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX BFO:  <http://purl.obolibrary.org/obo/BFO_>
+PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX denoted_by:     <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX has_url:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX bfo_process:      <http://purl.obolibrary.org/obo/BFO_0000015>
+PREFIX rdfs:             <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX void:             <http://rdfs.org/ns/void#>
+PREFIX xsd:              <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?dataset_name ?dataset ?sparql_endpoint ?term_class (xsd:integer(?n) AS ?instances)
+SELECT DISTINCT ?dataset_name ?dataset ?sparql_endpoint ?term_class (xsd:integer(?n) AS ?instances)
 WHERE {
-  ?dataset a nfdi:NFDI_0000009 ;
-           IAO:0000235 ?epInd ;
+  ?dataset a nfdicore_dataset: ;
+           denoted_by: ?epInd ;
            void:classPartition ?cp ;
-           <http://purl.obolibrary.org/obo/IAO_0000235> ?sparql_endpoint_node .
+           denoted_by: ?sparql_endpoint_node .
 
-  ?sparql_endpoint_node nfdi:NFDI_0001008 ?sparql_endpoint .
+  ?sparql_endpoint_node has_url: ?sparql_endpoint .
 
   OPTIONAL {
     ?dataset rdfs:label ?dataset_name .
-    FILTER(LANG(?dataset_name) = "" || LANGMATCHES(LANG(?dataset_name), "en"))
   }
 
   ?cp void:class ?term_class ;
       void:entities ?n .
 
-  # IRI-based restriction
   VALUES ?term_class {
-    BFO:0000015      # BFO process
+    bfo_process:      # BFO process
     # add more IRIs
   }
-
 }
 ORDER BY ?dataset ?term_class
-
 ```
 
 ---
+
 ### What are the datasets present in the MSE-KG? What are creators, creator's affiliations and link of these datasets?
 
 ```sparql
+PREFIX nfdicore_dataset:            <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX denoted_by:                <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX nfdicore_title:              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
+PREFIX has_contributor:             <http://purl.obolibrary.org/obo/BFO_0000178>
+PREFIX nfdicore_creator_role:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001032>
+PREFIX nfdicore_institution_list:   <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033>
+PREFIX has_url:                   <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX rdfs:                        <http://www.w3.org/2000/01/rdf-schema#>
+
 SELECT DISTINCT ?dataset ?title ?creatorLabel ?creatorAffiliationLabel ?link
 WHERE {
-  # Dataset type
-  VALUES ?class {
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>  # Dataset
-    <http://purls.helmholtz-metadaten.de/mwo/MWO_0001058>
-    <http://purls.helmholtz-metadaten.de/mwo/MWO_0001056>
-    <http://purls.helmholtz-metadaten.de/mwo/MWO_0001057>
-  }
-  ?dataset a ?class .
+  ?dataset a nfdicore_dataset: .
 
   # Dataset title
   OPTIONAL {
-    ?dataset <http://purl.obolibrary.org/obo/IAO_0000235> ?titleNode .
-    ?titleNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
-    ?titleNode rdfs:label ?title .
+    ?dataset denoted_by: ?titleNode .
+    ?titleNode a nfdicore_title: ;
+               rdfs:label ?title .
   }
 
+  # Creator
+  OPTIONAL {
+    ?dataset has_contributor: ?creator .
+    ?creator a nfdicore_creator_role: ;
+             rdfs:label ?creatorLabel .
+  }
 
-    ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creator .
-    ?creator a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001032> .
-    ?creator rdfs:label ?creatorLabel .
-
-    ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creatorAffiliation .
-    ?creatorAffiliation a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033> .
-    ?creatorAffiliation rdfs:label ?creatorAffiliationLabel .
-
+  # Creator affiliation
+  OPTIONAL {
+    ?dataset has_contributor: ?creatorAffiliation .
+    ?creatorAffiliation a nfdicore_institution_list: ;
+                        rdfs:label ?creatorAffiliationLabel .
+  }
 
   # Link (URL or PID)
   OPTIONAL {
-    ?dataset <http://purl.obolibrary.org/obo/IAO_0000235> ?linkNode .
-    ?linkNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?link .
+    ?dataset denoted_by: ?linkNode .
+    ?linkNode has_url: ?link .
   }
-
 }
 LIMIT 999
-
 ```
 
 ---
+
 ### What are the data portals present in the MSE-KG? What are the links, repositories and contactpoint names or email addresses or websites of these data portals?
 
 ```sparql
-SELECT ?portal ?name ?link ?repository ?contactpointName ?Email ?Website
+PREFIX nfdicore_dataportal:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123>
+PREFIX denoted_by:         <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX nfdicore_title:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
+PREFIX has_value:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
+PREFIX has_url:            <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX participates_in:      <http://purl.obolibrary.org/obo/BFO_0000056>
+PREFIX participant:          <http://purl.obolibrary.org/obo/BFO_0000057>
+PREFIX has_role:             <http://purl.obolibrary.org/obo/BFO_0000055>
+PREFIX written_name:        <http://purl.obolibrary.org/obo/IAO_0000590>
+PREFIX email_address:        <http://purl.obolibrary.org/obo/IAO_0000429>
+PREFIX nfdicore_website:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223>
+PREFIX rdfs:                 <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?portal ?name ?link ?repository ?contactpointName ?Email ?Website
 WHERE {
-  # Identify resources of type Data Portal
-  ?portal a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123> .
+  ?portal a nfdicore_dataportal: .
 
   # Portal name
   OPTIONAL {
-    ?portal <http://purl.obolibrary.org/obo/IAO_0000235> ?nameNode .
-    ?nameNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
-    ?nameNode rdfs:label ?title .
+    ?portal denoted_by: ?nameNode .
+    ?nameNode a nfdicore_title: ;
+              rdfs:label ?name .
   }
 
   # Link (URL or PID)
   OPTIONAL {
-    ?portal <http://purl.obolibrary.org/obo/IAO_0000235> ?linkNode .
-    ?linkNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?link .
+    ?portal denoted_by: ?linkNode .
+    ?linkNode has_url: ?link .
   }
 
   # Link to repository
   OPTIONAL {
-    ?portal <http://purl.obolibrary.org/obo/IAO_0000235> ?repositoryNode .
-    ?repositoryNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repository .
+    ?portal denoted_by: ?repositoryNode .
+    ?repositoryNode has_url: ?repository .
   }
 
   # Participates in contacting process
   OPTIONAL {
-    ?portal <http://purl.obolibrary.org/obo/BFO_0000056> ?contactingProcess .
-    ?contactingProcess <http://purl.obolibrary.org/obo/BFO_0000057> ?contactpoint .
-    ?contactingProcess <http://purl.obolibrary.org/obo/BFO_0000055> ?contactpointRole .
-    
-    ?contactpoint <http://purl.obolibrary.org/obo/IAO_0000235> ?contactpointNode .
-    OPTIONAL {?contactpointNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
-              ?contactpointNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?contactpointName
-             }
-    
-    ?contactpointRole <http://purl.obolibrary.org/obo/IAO_0000235> ?EmailWebsite .
-    OPTIONAL {?EmailWebsite a <http://purl.obolibrary.org/obo/IAO_0000429> .
-              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?Email
-             }
-    OPTIONAL {?EmailWebsite a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223> .
-              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?Website
-             }
-  }
+    ?portal participates_in: ?contactingProcess .
+    ?contactingProcess participant: ?contactpoint ;
+                      has_role: ?contactpointRole .
 
+    ?contactpoint denoted_by: ?contactpointNode .
+    OPTIONAL {
+      ?contactpointNode a written_name: ;
+                        has_value: ?contactpointName .
+    }
+
+    ?contactpointRole denoted_by: ?EmailWebsite .
+    OPTIONAL {
+      ?EmailWebsite a email_address: ;
+                    has_value: ?Email .
+    }
+    OPTIONAL {
+      ?EmailWebsite a nfdicore_website: ;
+                    has_url: ?Website .
+    }
+  }
 }
 LIMIT 999
-
 ```
 
 ---
+
 ### What are the instruments present in the MSE-KG? What are the contactpoint names or email addresses or websites of these instruments?
 
 ```sparql
+PREFIX pmd_instrument:    <https://w3id.org/pmd/co/PMD_0000602>
+PREFIX denoted_by:      <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX nfdicore_title:    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
+PREFIX has_value:     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
+PREFIX participates_in:   <http://purl.obolibrary.org/obo/BFO_0000056>
+PREFIX participant:       <http://purl.obolibrary.org/obo/BFO_0000057>
+PREFIX has_role:          <http://purl.obolibrary.org/obo/BFO_0000055>
+PREFIX written_name:     <http://purl.obolibrary.org/obo/IAO_0000590>
+PREFIX email_address:     <http://purl.obolibrary.org/obo/IAO_0000429>
+PREFIX nfdicore_website:      <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223>
+PREFIX has_url:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX rdfs:              <http://www.w3.org/2000/01/rdf-schema#>
+
 SELECT DISTINCT ?instrument ?name ?contactpointName ?Email ?Website
 WHERE {
-  ?instrument a <https://w3id.org/pmd/co/PMD_0000602> .
+  ?instrument a pmd_instrument: .
 
   OPTIONAL {
-    ?instrument <http://purl.obolibrary.org/obo/IAO_0000235> ?instrumentNode .
-    ?instrumentNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
-    ?instrumentNode rdfs:label ?name .
+    ?instrument denoted_by: ?instrumentNode .
+    ?instrumentNode a nfdicore_title: ;
+                    rdfs:label ?name .
   }
 
-
-  # Contacting process
   OPTIONAL {
-    ?instrument <http://purl.obolibrary.org/obo/BFO_0000056> ?contactingProcess .
-    ?contactingProcess <http://purl.obolibrary.org/obo/BFO_0000057> ?contactpoint .
-    ?contactingProcess <http://purl.obolibrary.org/obo/BFO_0000055> ?contactpointRole .
-    
-    ?contactpoint <http://purl.obolibrary.org/obo/IAO_0000235> ?contactpointNode .
-    OPTIONAL {?contactpointNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
-              ?contactpointNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?contactpointName
-             }
-    
-    ?contactpointRole <http://purl.obolibrary.org/obo/IAO_0000235> ?EmailWebsite .
-    OPTIONAL {?EmailWebsite a <http://purl.obolibrary.org/obo/IAO_0000429> .
-              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?Email
-             }
-    OPTIONAL {?EmailWebsite a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223> .
-              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?Website
-             }
-  }
+    ?instrument participates_in: ?contactingProcess .
+    ?contactingProcess participant: ?contactpoint ;
+                      has_role: ?contactpointRole .
 
+    ?contactpoint denoted_by: ?contactpointNode .
+    OPTIONAL {
+      ?contactpointNode a written_name: ;
+                        has_value: ?contactpointName .
+    }
+
+    ?contactpointRole denoted_by: ?EmailWebsite .
+    OPTIONAL {
+      ?EmailWebsite a email_address: ;
+                    has_value: ?Email .
+    }
+    OPTIONAL {
+      ?EmailWebsite a nfdicore_website: ;
+                    has_url: ?Website .
+    }
+  }
 }
-
 ```
 
 ---
-### What are the larg scale facilities present in the MSE-KG? What are the of acronyms, organization or emial or website of providersof these larg scale facilities?
+
+### What are the large scale facilities present in the MSE-KG? What are the acronyms, organization or email or website of providers of these large scale facilities?
 
 ```sparql
-SELECT ?facility ?name ?acronym ?orgLabel ?Email ?Website
+PREFIX mwo_facility:          <http://purls.helmholtz-metadaten.de/mwo/MWO_0001027>
+PREFIX denoted_by:          <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX written_name:        <http://purl.obolibrary.org/obo/IAO_0000590>
+PREFIX abbreviation_textual_entity:         <http://purl.obolibrary.org/obo/IAO_0000605>
+PREFIX is_output_of:    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023>
+PREFIX participant:           <http://purl.obolibrary.org/obo/BFO_0000057>
+PREFIX has_role:              <http://purl.obolibrary.org/obo/BFO_0000055>
+PREFIX nfdicore_organization: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>
+PREFIX nfdicore_providerrole: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000230>
+PREFIX email_address:         <http://purl.obolibrary.org/obo/IAO_0000429>
+PREFIX has_value:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
+PREFIX nfdicore_website:          <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223>
+PREFIX has_url:             <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX rdfs:                  <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?facility ?name ?acronym ?orgLabel ?Email ?Website
 WHERE {
-  ?facility a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001027> .
+  ?facility a mwo_facility: .
 
   OPTIONAL {
-    ?facility <http://purl.obolibrary.org/obo/IAO_0000235> ?facilityNode .
-    ?facilityNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
-    ?facilityNode rdfs:label ?name .
-  }
-  # Acronym
-  OPTIONAL {
-    ?facility <http://purl.obolibrary.org/obo/IAO_0000235> ?acr .
-    ?acr a <http://purl.obolibrary.org/obo/IAO_0000605> .
-    ?acr rdfs:label ?acronym .
+    ?facility denoted_by: ?facilityNode .
+    ?facilityNode a written_name: ;
+                  rdfs:label ?name .
   }
 
-  # Output Process
   OPTIONAL {
-    ?facility <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023> ?outputProcess .
-    ?outputProcess <http://purl.obolibrary.org/obo/BFO_0000057> ?org .
-    ?outputProcess <http://purl.obolibrary.org/obo/BFO_0000055> ?Role .
-    
-    OPTIONAL {?org a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003> .
-              ?org rdfs:label ?orgLabel .
-             }
-    
-    ?Role a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000230> .
-    ?Role <http://purl.obolibrary.org/obo/IAO_0000235> ?EmailWebsite .
-    OPTIONAL {?EmailWebsite a <http://purl.obolibrary.org/obo/IAO_0000429> .
-              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?Email
-             }
-    OPTIONAL {?EmailWebsite a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223> .
-              ?EmailWebsite <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?Website
-             }
+    ?facility denoted_by: ?acr .
+    ?acr a abbreviation_textual_entity: ;
+         rdfs:label ?acronym .
+  }
+
+  OPTIONAL {
+    ?facility is_output_of: ?outputProcess .
+    ?outputProcess participant: ?org ;
+                   has_role: ?Role .
+
+    OPTIONAL {
+      ?org a nfdicore_organization: ;
+           rdfs:label ?orgLabel .
+    }
+
+    ?Role a nfdicore_providerrole: ;
+          denoted_by: ?EmailWebsite .
+
+    OPTIONAL {
+      ?EmailWebsite a email_address: ;
+                    has_value: ?Email .
+    }
+    OPTIONAL {
+      ?EmailWebsite a nfdicore_website: ;
+                    has_url: ?Website .
+    }
   }
 }
 LIMIT 999
-
 ```
 
 ---
+
 ### What are the present metadata in the MSE-KG? What are the names and repository links of these metadata?
 
 ```sparql
-SELECT ?metadata ?name ?repoLink
+PREFIX nfdicore_metadata_specification: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054>
+PREFIX denoted_by:      <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX written_name:        <http://purl.obolibrary.org/obo/IAO_0000590>
+PREFIX has_url:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX rdfs:              <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?metadata ?name ?repoLink
 WHERE {
-  ?metadata a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054> .
+  ?metadata a nfdicore_metadata_specification: .
 
   OPTIONAL {
-    ?metadata <http://purl.obolibrary.org/obo/IAO_0000235> ?metadataNode .
-    ?metadataNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
-    ?metadataNode rdfs:label ?name .
+    ?metadata denoted_by: ?metadataNode .
+    ?metadataNode a written_name: ;
+                  rdfs:label ?name .
   }
 
   OPTIONAL {
-    ?metadata <http://purl.obolibrary.org/obo/IAO_0000235> ?Link .
-    ?Link <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repoLink
-  			}
-  OPTIONAL {
-    ?metadata <http://purl.obolibrary.org/obo/IAO_0000235> ?Link .
-    ?Link <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?docLink
-  			}
- 
-}
+    ?metadata denoted_by: ?Link .
+    ?Link has_url: ?repoLink .
+  }
 
+  OPTIONAL {
+    ?metadata denoted_by: ?Link2 .
+    ?Link2 has_url: ?docLink .
+  }
+}
 ```
 
 ---
+
 ### What are the ontologies present in the MSE-KG? What are the name and links of these ontologies?
 
 ```sparql
-SELECT ?ontology ?ontoname ?repoLink
+PREFIX nfdicore_ontology: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023>
+PREFIX is_subject_of:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>
+PREFIX nfdicore_title:    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
+PREFIX has_value:     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
+PREFIX nfdicore_source_code_repository:     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030>
+PREFIX has_url:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+
+SELECT DISTINCT ?ontology ?ontoname ?repoLink
 WHERE {
-  ?ontology a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023> .
+  ?ontology a nfdicore_ontology: .
+
   OPTIONAL {
-    ?ontology <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ?ontologyTitle .
-    ?ontologyTitle a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
-    ?ontologyTitle <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?ontoname.
+    ?ontology is_subject_of: ?ontologyTitle .
+    ?ontologyTitle a nfdicore_title: ;
+                   has_value: ?ontoname .
   }
-   OPTIONAL {
-    ?ontology <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ?ontologyRepo .
-    ?ontologyRepo a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030> .
-    ?ontologyRepo <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repoLink.
-  }
-}
-LIMIT 999
 
-```
-
----
-### What are the international collabrations present in the MSE-KG? What are the of these international collabrations?
-
-```sparql
-SELECT ?int_colaborations ?name 
-WHERE {
-
-  ?int_colaborations a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001005> .
-
-  OPTIONAL { ?int_colaborations <http://purl.obolibrary.org/obo/IAO_0000235> ?nameNode . 
-           ?nameNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
-           ?nameNode rdfs:label ?name .
-           }
-}
-LIMIT 999
-
-```
-
----
-### What are the ontologies present in the MSE-KG? What are the name and links of these ontologies?
-
-```sparql
-SELECT ?ontology ?ontoname ?repoLink
-WHERE {
-  ?ontology a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023> .
   OPTIONAL {
-    ?ontology <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ?ontologyTitle .
-    ?ontologyTitle a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
-    ?ontologyTitle <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?ontoname.
-  }
-   OPTIONAL {
-    ?ontology <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ?ontologyRepo .
-    ?ontologyRepo a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030> .
-    ?ontologyRepo <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?repoLink.
+    ?ontology is_subject_of: ?ontologyRepo .
+    ?ontologyRepo a nfdicore_source_code_repository: ;
+                  has_url: ?repoLink .
   }
 }
 LIMIT 999
-
 ```
 
 ---
-### List the ontologies can be downloaded in turtle serialization format, along with the links
+
+### What are the international collaborations present in the MSE-KG? What are the names of these international collaborations?
 
 ```sparql
-SELECT ?ontology ?ontoname ?filelink
+PREFIX mwo_networking: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001005>
+PREFIX denoted_by:                   <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX nfdicore_title:                 <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
+PREFIX rdfs:                           <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?int_collaboration ?name
 WHERE {
-  ?ontology a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023> .
-    ?ontology <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ?ontologyTitle .
-    ?ontologyTitle a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
-    ?ontologyTitle <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ?ontoname.
-    ?ontology <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226> ?ontologyRepo .
-    ?ontologyRepo a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030> .
-  
-    ?file a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000027> .
-    ?file <http://purl.obolibrary.org/obo/BFO_0000176> ?ontologyRepo .
-    
-    ?extens <http://purl.obolibrary.org/obo/IAO_0000136> ?file .
-    ?extens a <http://edamontology.org/format_3255> .
-    ?file <http://www.w3.org/ns/dcat#downloadURL> ?downlURL .
-    ?downlURL <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?filelink .
+  ?int_collaboration a mwo_networking: .
+
+  OPTIONAL {
+    ?int_collaboration denoted_by: ?nameNode .
+    ?nameNode a nfdicore_title: ;
+              rdfs:label ?name .
+  }
 }
 LIMIT 999
-
 ```
 
 ---
+
 ### What are the publications present in the MSE-KG? What are the DOI, authors and authors affiliations of these publications?
 
 ```sparql
-SELECT ?publications ?name ?DOI ?authorsLabel ?authorsAffiliationLabel
-WHERE {
-  ?publications a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190> .
+PREFIX nfdicore_publication:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190>
+PREFIX has_external_identifier:             <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006>
+PREFIX has_url:                  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX has_contributor:            <http://purl.obolibrary.org/obo/BFO_0000178>
+PREFIX nfdicore_author_list:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001030>
+PREFIX nfdicore_institution_list:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033>
+PREFIX rdfs:                       <http://www.w3.org/2000/01/rdf-schema#>
 
-  OPTIONAL { ?publications rdfs:label ?name .
-           }
-  
+SELECT DISTINCT ?publications ?name ?DOI ?authorsLabel ?authorsAffiliationLabel
+WHERE {
+  ?publications a nfdicore_publication: .
+
+  OPTIONAL { ?publications rdfs:label ?name . }
+
   OPTIONAL {
-    ?publications <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006> ?DOINode .
-    ?DOINode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?DOI
-  			}
-  
-  # Authors
-  OPTIONAL {
-    ?publications <http://purl.obolibrary.org/obo/BFO_0000178> ?authors .
-    ?authors a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001030> .
-    ?authors rdfs:label ?authorsLabel .
+    ?publications has_external_identifier: ?DOINode .
+    ?DOINode has_url: ?DOI .
   }
 
-  # Authors Affiliation
   OPTIONAL {
-    ?publications <http://purl.obolibrary.org/obo/BFO_0000178> ?authorsAffiliation .
-    ?authorsAffiliation a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033> .
-    ?authorsAffiliation rdfs:label ?authorsAffiliationLabel .
+    ?publications has_contributor: ?authors .
+    ?authors a nfdicore_author_list: ;
+             rdfs:label ?authorsLabel .
+  }
+
+  OPTIONAL {
+    ?publications has_contributor: ?authorsAffiliation .
+    ?authorsAffiliation a nfdicore_institution_list: ;
+                        rdfs:label ?authorsAffiliationLabel .
   }
 }
 LIMIT 999
 ```
 
 ---
+
 ### What are the Task Areas in MatWerk which are present in the MSE-KG?
 
 ```sparql
-SELECT *
+PREFIX mwo_nfdi_matwerk_consortium:     <http://purls.helmholtz-metadaten.de/mwo/MWO_0001022>
+PREFIX participates_in:      <http://purl.obolibrary.org/obo/BFO_0000056>
+PREFIX concretizes:         <http://purl.obolibrary.org/obo/RO_0000059>
+PREFIX objective_specification:        <http://purl.obolibrary.org/obo/IAO_0000005>
+PREFIX denoted_by:         <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX nfdicore_description: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018>
+PREFIX rdfs:                 <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?ta_organization ?ta_process ?ta ?label ?description
 WHERE {
-  ?ta_organization a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001022> .
-  ?ta_organization <http://purl.obolibrary.org/obo/BFO_0000056> ?ta_process .
-    ?ta_organization <http://purl.obolibrary.org/obo/BFO_0000056> ?ta_process .
-  	?ta_process <http://purl.obolibrary.org/obo/BFO_0000059> ?ta .
-    ?ta a <http://purl.obolibrary.org/obo/IAO_0000005> .
-    ?ta rdfs:label ?label .
-  OPTIONAL { ?ta <http://purl.obolibrary.org/obo/IAO_0000235> ?descriptionNode . 
-           ?descriptionNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018> .
-           ?descriptionNode rdfs:label ?description .
-           }
+  ?ta_organization a mwo_nfdi_matwerk_consortium: ;
+                   participates_in: ?ta_process .
+
+  ?ta_process concretizes: ?ta .
+  ?ta a objective_specification: ;
+      rdfs:label ?label .
+
+  OPTIONAL {
+    ?ta denoted_by: ?descriptionNode .
+    ?descriptionNode a nfdicore_description: ;
+                     rdfs:label ?description .
+  }
 }
 LIMIT 999
 ```
 
 ---
+
 ### What are the Infrastructure Use Cases in MatWerk which are present in the MSE-KG?
 
 ```sparql
-SELECT ?iuc ?label ?name
-WHERE {
-  ?iuc a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001026> .
+PREFIX mwo_iuc:       <http://purls.helmholtz-metadaten.de/mwo/MWO_0001026>
+PREFIX denoted_by:  <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX written_name:    <http://purl.obolibrary.org/obo/IAO_0000590>
+PREFIX rdfs:          <http://www.w3.org/2000/01/rdf-schema#>
 
+SELECT DISTINCT ?iuc ?label ?name
+WHERE {
+  ?iuc a mwo_iuc: .
   OPTIONAL { ?iuc rdfs:label ?label . }
-  OPTIONAL { ?iuc <http://purl.obolibrary.org/obo/IAO_0000235> ?nameNode . 
-           ?nameNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
-           ?nameNode rdfs:label ?name .
-           }
-  #OPTIONAL { ?iuc <http://purl.obolibrary.org/obo/BFO_0000178> ?mainTask . }
-  #OPTIONAL { ?iuc <http://purl.obolibrary.org/obo/BFO_0000178> ?relatedTA . }
-  #OPTIONAL { ?iuc <http://purl.obolibrary.org/obo/BFO_0000056> ?project . }
+  OPTIONAL {
+    ?iuc denoted_by: ?nameNode .
+    ?nameNode a written_name: ;
+              rdfs:label ?name .
+  }
 }
 LIMIT 999
-
 ```
 
 ---
+
 ### What are the Participant Projects in MatWerk which are present in the MSE-KG?
 
 ```sparql
-SELECT ?pp ?label ?name 
+PREFIX mwo_pp:        <http://purls.helmholtz-metadaten.de/mwo/MWO_0001029>
+PREFIX denoted_by:  <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX written_name:    <http://purl.obolibrary.org/obo/IAO_0000590>
+PREFIX rdfs:          <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?pp ?label ?name 
 WHERE {
-  ?pp a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001029> .
+  ?pp a mwo_pp: .
 
   OPTIONAL { ?pp rdfs:label ?label . }
-  OPTIONAL { ?pp <http://purl.obolibrary.org/obo/IAO_0000235> ?nameNode . 
-           ?nameNode a <http://purl.obolibrary.org/obo/IAO_0000590> .
-           ?nameNode rdfs:label ?name .
-           }
+  OPTIONAL {
+    ?pp denoted_by: ?nameNode .
+    ?nameNode a written_name: ;
+              rdfs:label ?name .
+  }
 }
-
 ```
 
 ---
+
 ### What are the SPARQL endpoints in the MSE-KG?
 
 ```sparql
-PREFIX mwo:    <http://purls.helmholtz-metadaten.de/mwo/>
-PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX ontology: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX obo:    <http://purl.obolibrary.org/obo/>
+PREFIX nfdicore_sparql_endpoint:     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095>
+PREFIX has_url:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX denoted_by:     <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX rdfs:             <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?dataset ?datasetLabel ?endpoint ?endpointLabel ?sparqlURL
+SELECT DISTINCT ?dataset ?datasetLabel ?endpoint ?endpointLabel ?sparqlURL
 WHERE {
-  ?endpoint a mwo:MWO_0001060 ;
+  ?endpoint a nfdicore_sparql_endpoint: ;
             rdfs:label ?endpointLabel ;
-            ontology:NFDI_0001008 ?sparqlURL .
+            has_url: ?sparqlURL .
 
   OPTIONAL {
-    ?dataset a ontology:NFDI_0000009 ;
-             obo:IAO_0000235 ?endpoint .
+    ?dataset a nfdicore_dataset: ;
+             denoted_by: ?endpoint .
     OPTIONAL { ?dataset rdfs:label ?datasetLabel }
   }
 }
 ORDER BY ?dataset ?endpoint
-
 ```
-
 ---
+

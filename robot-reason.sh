@@ -123,7 +123,7 @@ robot explain \
 # SHACL validations (with safe failure handling)
 ###############################################################################
 
-for i in 4 3 2 1; do
+for i in 7 6 5 4 3 2 1; do
     echo "Running SHACL validations: shape $i"
     SHAPE_FILE="shapes/shape$i.ttl"
     OUTPUT_FILE="$VALIDATIONSDIR/shape$i.md"

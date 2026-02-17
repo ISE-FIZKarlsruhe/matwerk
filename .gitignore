@@ -28,8 +28,10 @@ Thumbs.db
 *.log
 *.tmp
 *.bak
-/data/zenodo/download/
-/data/reasoned/*.owl
+/data/zenodo/*
+/data/sparql_endpoints/*
+/data/reasoned/*
+/data/components/*
 /output/*
 /logs/*
 /server/*
