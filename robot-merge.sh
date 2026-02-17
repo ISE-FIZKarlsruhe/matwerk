@@ -27,10 +27,6 @@ robot merge \
     --inputs "data/components/*.owl" \
     --output "$COMPONENTSDIR/all_NotReasoned.owl"
 
-echo "Fix NFDI_0001008 datatype annotation in merged KG"
-sed -i 's|<ontology:NFDI_0001008>|<ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">|g' \
-    "$COMPONENTSDIR/all_NotReasoned.owl"
-
 echo "Merge KG with zenodo data (ABox included) into all_NotReasoned.owl"
 robot merge \
     --include-annotations true \

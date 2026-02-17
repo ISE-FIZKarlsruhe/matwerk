@@ -91,8 +91,6 @@ apply_update "infer-sameas-props.ru"    "infer-sameas-props"    "$OUTDIR/step11.
 
 # Final KG output
 cp "$OUTDIR/step11.ttl" "$COMPONENTSDIR/all.ttl"
-# Remove any default empty prefix
-sed -i '/^@prefix : </d' "$COMPONENTSDIR/all.ttl"
 rm -f "$OUTDIR"/step*.ttl
 
 echo "ABox materialization done: $COMPONENTSDIR/all.ttl (total ${CURRENT_COUNT} triples)"

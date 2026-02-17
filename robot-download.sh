@@ -35,6 +35,8 @@ declare -A files=(
     [service]=130394813
     [sparql_endpoints]=1732373290
     [FDOs]=152649677
+    [ontologies]=2006199416
+    [materials]=497166822
 )
 
 for name in "${!files[@]}"; do
@@ -74,8 +76,6 @@ function run_robot_explain() {
 # Ordered logic with dependency chaining
 run_robot_merge "-i $SRC" "$COMPONENTSDIR/req_1.tsv" "$COMPONENTSDIR/req_1.owl"
 run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl" "$COMPONENTSDIR/req_2.tsv" "$COMPONENTSDIR/req_2.owl"
-sed -i 's|<ontology:NFDI_0001008>|<ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">|g' "$COMPONENTSDIR/req_1.owl"
-sed -i 's|<ontology:NFDI_0001008>|<ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">|g' "$COMPONENTSDIR/req_2.owl"
 
 run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_2.owl" "$COMPONENTSDIR/agent.tsv" "$COMPONENTSDIR/agent.owl"
 run_robot_explain "$COMPONENTSDIR/agent.owl" "$REASONER/agent_inconsistency.md"
@@ -88,6 +88,12 @@ run_robot_explain "$COMPONENTSDIR/process.owl" "$REASONER/process_inconsistency.
 
 run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl" "$COMPONENTSDIR/city.tsv" "$COMPONENTSDIR/city.owl"
 run_robot_explain "$COMPONENTSDIR/city.owl" "$REASONER/city_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl" "$COMPONENTSDIR/ontologies.tsv" "$COMPONENTSDIR/ontologies.owl"
+run_robot_explain "$COMPONENTSDIR/ontologies.owl" "$REASONER/ontologies_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl" "$COMPONENTSDIR/materials.tsv" "$COMPONENTSDIR/materials.owl"
+run_robot_explain "$COMPONENTSDIR/materials.owl" "$REASONER/materials_inconsistency.md"
 
 run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/city.owl" "$COMPONENTSDIR/organization.tsv" "$COMPONENTSDIR/organization.owl"
 run_robot_explain "$COMPONENTSDIR/organization.owl" "$REASONER/organization_inconsistency.md"
@@ -141,8 +147,6 @@ run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl
 run_robot_explain "$COMPONENTSDIR/sparql_endpoints.owl" "$REASONER/sparql_endpoints.md"
 
 run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/temporal.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl -i $COMPONENTSDIR/dataset.owl" "$COMPONENTSDIR/FDOs.tsv" "$COMPONENTSDIR/FDOs.owl"
-sed -i 's|<ontology:NFDI_0001008>|<ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">|g' "$COMPONENTSDIR/FDOs.owl"
 run_robot_explain "$COMPONENTSDIR/FDOs.owl" "$REASONER/FDOs.md"
 
-sed -i 's|<ontology:NFDI_0001008>|<ontology:NFDI_0001008 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">|g' data/components/*.owl
 echo "✅ All components generated and explained."

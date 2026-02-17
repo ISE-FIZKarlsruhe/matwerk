@@ -29,7 +29,7 @@ def class_iri_for_zenodo_record(meta: dict) -> str:
     print(f"Determining class IRI for record type: {record_type}")
     #exit()
 
-    if record_type in {"dataset", "image"}:
+    if record_type in {"dataset"}:
         return NFDI_DATASET
 
     if record_type in {
