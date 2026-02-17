@@ -25,6 +25,10 @@ RUN wget -q https://github.com/ontodev/robot/releases/download/v1.9.8/robot.jar 
  && wget -q https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar -O /usr/local/bin/widoco.jar
 
 # ---- Build KG ----
+RUN chmod +x /app/robot-download.sh /app/robot-merge.sh \
+ && (cd /app && ./robot-download.sh && ./robot-merge.sh) \
+ && test -s /app/data/all_NotReasoned.ttl
+
 RUN cd /app \
  && mkdir -p data/zenodo/harvested data/zenodo/named_graphs/record \
  && PYTHONPATH=/app/dags python -m scripts.zenodo.export_zenodo --make-snapshots --out data/zenodo/zenodo.ttl \
@@ -33,10 +37,8 @@ RUN cd /app \
       --out-csv data/zenodo/datasets_urls.csv \
       --out-dir data/zenodo/harvested
 
-
-RUN chmod +x /app/robot-download.sh /app/robot-merge.sh \
- && (cd /app && ./robot-download.sh && ./robot-merge.sh) \
- && test -s /app/data/all_NotReasoned.ttl
+RUN chmod +x /app/robot-merge-zenodo.sh \
+ && (cd /app && ./robot-download.sh && ./robot-merge-zenodo.sh)
 
 # RUN chmod +x /app/dags/scripts/fetch_endpoints.py \
 #  && mkdir -p /app/data/sparql_endpoints/named_graphs \
