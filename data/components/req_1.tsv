@@ -1,58 +1,58 @@
 #	TYPE	label	Value
 ID	TYPE	A rdfs:label	A https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007
-https://purls.helmholtz-metadaten.de/msekg/17451597693901	abbreviation textual entity	FEAP	FEAP
-https://purls.helmholtz-metadaten.de/msekg/17451597693902	abbreviation textual entity	VTK	VTK
-https://purls.helmholtz-metadaten.de/msekg/17451597693903	abbreviation textual entity	VASP	VASP
-https://purls.helmholtz-metadaten.de/msekg/17451597693904	abbreviation textual entity	CASTEP	CASTEP
-https://purls.helmholtz-metadaten.de/msekg/17451597693905	abbreviation textual entity	CPMD	CPMD
-https://purls.helmholtz-metadaten.de/msekg/17451597693906	abbreviation textual entity	PEtot	PEtot
-https://purls.helmholtz-metadaten.de/msekg/17451597693907	abbreviation textual entity	SPHINX	SPHINX
-https://purls.helmholtz-metadaten.de/msekg/17451597693908	abbreviation textual entity	deMon2k	deMon2k
-https://purls.helmholtz-metadaten.de/msekg/17451597693909	abbreviation textual entity	CRYSTAL17	CRYSTAL17
-https://purls.helmholtz-metadaten.de/msekg/174515976939010	abbreviation textual entity	OpenMX	OpenMX
-https://purls.helmholtz-metadaten.de/msekg/174515976939011	abbreviation textual entity	LAMMPS	LAMMPS
-https://purls.helmholtz-metadaten.de/msekg/174515976939012	abbreviation textual entity	IMD	IMD
-https://purls.helmholtz-metadaten.de/msekg/174515976939013	abbreviation textual entity	MOOSE	MOOSE
-https://purls.helmholtz-metadaten.de/msekg/174515976939014	abbreviation textual entity	DAMASK	DAMASK
-https://purls.helmholtz-metadaten.de/msekg/174515976939015	abbreviation textual entity	AiiDA	AiiDA
-https://purls.helmholtz-metadaten.de/msekg/174515976939016	abbreviation textual entity	ASE	ASE
-https://purls.helmholtz-metadaten.de/msekg/174515976939017	abbreviation textual entity	OVITO	OVITO
-https://purls.helmholtz-metadaten.de/msekg/174515976939018	abbreviation textual entity	VESTA	VESTA
-https://purls.helmholtz-metadaten.de/msekg/174515976939019	abbreviation textual entity	XcrySDen	XcrySDen
-https://purls.helmholtz-metadaten.de/msekg/174515976939020	abbreviation textual entity	VMD	VMD
-https://purls.helmholtz-metadaten.de/msekg/174515976939021	abbreviation textual entity	GIMS	GIMS
-https://purls.helmholtz-metadaten.de/msekg/174515976939022	abbreviation textual entity	Pymatgen	Pymatgen
-https://purls.helmholtz-metadaten.de/msekg/174515976939023	abbreviation textual entity	Yaff	Yaff
-https://purls.helmholtz-metadaten.de/msekg/174515976939024	abbreviation textual entity	CLEASE	CLEASE
-https://purls.helmholtz-metadaten.de/msekg/174515976939025	abbreviation textual entity	ESPEI	ESPEI
-https://purls.helmholtz-metadaten.de/msekg/174515976939026	abbreviation textual entity	KLIFF	KLIFF
-https://purls.helmholtz-metadaten.de/msekg/174515976939027	abbreviation textual entity	HTMD	HTMD
-https://purls.helmholtz-metadaten.de/msekg/174515976939028	abbreviation textual entity	sharc	sharc
-https://purls.helmholtz-metadaten.de/msekg/174515976939029	abbreviation textual entity	pyLabFEA	pyLabFEA
-https://purls.helmholtz-metadaten.de/msekg/174515976939030	abbreviation textual entity	AixViPMaP	AixViPMaP
-https://purls.helmholtz-metadaten.de/msekg/174515976939031	abbreviation textual entity	VIMMP	VIMMP
-https://purls.helmholtz-metadaten.de/msekg/174515976939032	abbreviation textual entity	Kadi4Mat	Kadi4Mat
-https://purls.helmholtz-metadaten.de/msekg/174515976939033	abbreviation textual entity	ASR	ASR
-https://purls.helmholtz-metadaten.de/msekg/174515976939034	abbreviation textual entity	CAMD	CAMD
-https://purls.helmholtz-metadaten.de/msekg/174515976939035	abbreviation textual entity	CrabNet	CrabNet
-https://purls.helmholtz-metadaten.de/msekg/174515976939036	abbreviation textual entity	MDCS	MDCS
-https://purls.helmholtz-metadaten.de/msekg/174515976939037	abbreviation textual entity	MODNet	MODNet
-https://purls.helmholtz-metadaten.de/msekg/174515976939038	abbreviation textual entity	OACIS	OACIS
-https://purls.helmholtz-metadaten.de/msekg/174515976939039	abbreviation textual entity	SEAMM	SEAMM
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451597693901	abbreviation textual entity	FEAP	FEAP
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451597693902	abbreviation textual entity	VTK	VTK
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451597693903	abbreviation textual entity	VASP	VASP
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451597693904	abbreviation textual entity	CASTEP	CASTEP
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451597693905	abbreviation textual entity	CPMD	CPMD
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451597693906	abbreviation textual entity	PEtot	PEtot
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451597693907	abbreviation textual entity	SPHINX	SPHINX
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451597693908	abbreviation textual entity	deMon2k	deMon2k
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451597693909	abbreviation textual entity	CRYSTAL17	CRYSTAL17
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939010	abbreviation textual entity	OpenMX	OpenMX
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939011	abbreviation textual entity	LAMMPS	LAMMPS
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939012	abbreviation textual entity	IMD	IMD
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939013	abbreviation textual entity	MOOSE	MOOSE
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939014	abbreviation textual entity	DAMASK	DAMASK
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939015	abbreviation textual entity	AiiDA	AiiDA
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939016	abbreviation textual entity	ASE	ASE
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939017	abbreviation textual entity	OVITO	OVITO
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939018	abbreviation textual entity	VESTA	VESTA
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939019	abbreviation textual entity	XcrySDen	XcrySDen
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939020	abbreviation textual entity	VMD	VMD
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939021	abbreviation textual entity	GIMS	GIMS
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939022	abbreviation textual entity	Pymatgen	Pymatgen
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939023	abbreviation textual entity	Yaff	Yaff
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939024	abbreviation textual entity	CLEASE	CLEASE
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939025	abbreviation textual entity	ESPEI	ESPEI
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939026	abbreviation textual entity	KLIFF	KLIFF
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939027	abbreviation textual entity	HTMD	HTMD
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939028	abbreviation textual entity	sharc	sharc
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939029	abbreviation textual entity	pyLabFEA	pyLabFEA
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939030	abbreviation textual entity	AixViPMaP	AixViPMaP
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939031	abbreviation textual entity	VIMMP	VIMMP
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939032	abbreviation textual entity	Kadi4Mat	Kadi4Mat
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939033	abbreviation textual entity	ASR	ASR
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939034	abbreviation textual entity	CAMD	CAMD
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939035	abbreviation textual entity	CrabNet	CrabNet
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939036	abbreviation textual entity	MDCS	MDCS
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939037	abbreviation textual entity	MODNet	MODNet
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939038	abbreviation textual entity	OACIS	OACIS
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174515976939039	abbreviation textual entity	SEAMM	SEAMM
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001077	named individual	M.Sc.	M.Sc.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001072	named individual	Dr.	Dr.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001084	named individual	PD Dr.	PD Dr.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001073	named individual	Dr.-Ing.	Dr.-Ing.
-https://purls.helmholtz-metadaten.de/msekg/17467927655511	academic title	Jun. Prof. Dr.	Jun. Prof. Dr.
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467927655511	academic title	Jun. Prof. Dr.	Jun. Prof. Dr.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001087	named individual	Prof.	Prof.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001088	named individual	Prof. Dr.	Prof. Dr.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001089	named individual	Prof. Dr.-Ing.	Prof. Dr.-Ing.
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001085	named individual	PD Dr. habil.	PD Dr. habil.
-https://purls.helmholtz-metadaten.de/msekg/17453287150471	abbreviation textual entity	DESY	DESY
-https://purls.helmholtz-metadaten.de/msekg/17453287150472	abbreviation textual entity	HPC	HPC
-https://purls.helmholtz-metadaten.de/msekg/17453287150473	abbreviation textual entity	JSC	JSC
-https://purls.helmholtz-metadaten.de/msekg/17453287150474	abbreviation textual entity	SCC	SCC
-https://purls.helmholtz-metadaten.de/msekg/17453287150475	abbreviation textual entity	IBC	IBC
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453287150471	abbreviation textual entity	DESY	DESY
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453287150472	abbreviation textual entity	HPC	HPC
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453287150473	abbreviation textual entity	JSC	JSC
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453287150474	abbreviation textual entity	SCC	SCC
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453287150475	abbreviation textual entity	IBC	IBC
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001070	named individual	active status	
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001071	named individual	cancelled status	
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001074	named individual	finished status	
@@ -62,18 +62,13 @@ https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001093	named individual	test phase 
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001092	named individual	self funding	
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001090	named individual	project funding	
 https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001081	named individual	organizational funding	
-https://purls.helmholtz-metadaten.de/msekg/17467208847621	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001063	Artificial Intelligence	Artificial Intelligence
-https://purls.helmholtz-metadaten.de/msekg/17467208847622	http://purls.helmholtz-metadaten.de/mwo/MWO_0001041	Computational Materials Science	Computational Materials Science
-https://purls.helmholtz-metadaten.de/msekg/17467208847623	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001067	Cybersecurity	Cybersecurity
-https://purls.helmholtz-metadaten.de/msekg/17467208847624	http://purls.helmholtz-metadaten.de/mwo/MWO_0001049	Data Driven Material Science	Data Driven Material Science
-https://purls.helmholtz-metadaten.de/msekg/17467208847625	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001066	Data Science	Data Science
-https://purls.helmholtz-metadaten.de/msekg/17467208847626	http://purls.helmholtz-metadaten.de/mwo/MWO_0001044	Materials Characterization	Materials Characterization
-https://purls.helmholtz-metadaten.de/msekg/17467208847627	http://purls.helmholtz-metadaten.de/mwo/MWO_0001046	Materials Design	Materials Design
-https://purls.helmholtz-metadaten.de/msekg/17467208847628	http://purls.helmholtz-metadaten.de/mwo/MWO_0001042	Materials Mechanical Behavior	Materials Mechanical Behavior
-https://purls.helmholtz-metadaten.de/msekg/17467208847629	http://purls.helmholtz-metadaten.de/mwo/MWO_0001048	Materials Microstructural	Materials Microstructural
-https://purls.helmholtz-metadaten.de/msekg/174672088476210	http://purls.helmholtz-metadaten.de/mwo/MWO_0001050	Materials Processing	Materials Processing
-https://purls.helmholtz-metadaten.de/msekg/174672088476211	http://purls.helmholtz-metadaten.de/mwo/MWO_0001047	Materials Surface Science	Materials Surface Science
-https://purls.helmholtz-metadaten.de/msekg/174672088476212	http://purls.helmholtz-metadaten.de/mwo/MWO_0001045	Materials Thermodynamics	Materials Thermodynamics
-https://purls.helmholtz-metadaten.de/msekg/174672088476213	http://purls.helmholtz-metadaten.de/mwo/MWO_0001043	MaterialsDeformation Processes	MaterialsDeformation Processes
-https://purls.helmholtz-metadaten.de/msekg/174672088476214	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001065	Software Engineering	Software Engineering
-https://purls.helmholtz-metadaten.de/msekg/174672088476215	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001064	Theoretical Computer Science	Theoretical Computer Science
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467208847622	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100	Computational Materials Science	Computational Materials Science
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467208847624	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100	Data Driven Material Science	Data Driven Material Science
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467208847626	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100	Materials Characterization	Materials Characterization
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467208847627	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100	Materials Design	Materials Design
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467208847628	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100	Materials Mechanical Behavior	Materials Mechanical Behavior
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467208847629	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100	Materials Microstructural	Materials Microstructural
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174672088476210	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100	Materials Processing	Materials Processing
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174672088476211	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100	Materials Surface Science	Materials Surface Science
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174672088476212	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100	Materials Thermodynamics	Materials Thermodynamics
+https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174672088476213	https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000100	MaterialsDeformation Processes	MaterialsDeformation Processes

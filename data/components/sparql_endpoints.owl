@@ -56,355 +56,355 @@
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17588917500551 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17588917500551 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17588917500551">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17588917500551">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17588918337771"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17588918337771"/>
         <rdfs:label>MSE Knowledge Graph v1.0</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17588918337771 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17588918337771 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17588918337771"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17588918337771"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064251 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064251 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064251"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064251"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/176113440642510 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113440642510 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113440642510"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113440642510"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/176113440642511 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113440642511 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113440642511"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113440642511"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064252 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064252 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064252"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064252"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064253 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064253 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064253"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064253"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064254 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064254 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064254"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064254"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064255 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064255 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064255"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064255"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064256 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064256 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064256"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064256"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064257 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064257 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064257"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064257"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064258 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064258 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064258"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064258"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344064259 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064259 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344064259"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064259"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344289021 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289021 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289021">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289021">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064251"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064251"/>
         <rdfs:label>Chemotion Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344289031 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289031 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289031">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289031">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064252"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064252"/>
         <rdfs:label>GESIS Knowledge Graph (GESIS KG)</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/176113442890310 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890310 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890310">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890310">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/176113440642511"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113440642511"/>
         <rdfs:label>Open Research Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/176113442890311 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890311 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890311">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890311">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506664"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506664"/>
         <rdfs:label>NFDI4Objects Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/176113442890312 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890312 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890312">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890312">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506665"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506665"/>
         <rdfs:label>MaschinenBauIndustrie Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/176113442890313 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890313 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890313">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890313">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506666"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506666"/>
         <rdfs:label>LinkedOpenData-Service des B3Kat</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/176113442890314 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890314 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890314">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890314">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506667"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506667"/>
         <rdfs:label>Linked Stage Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/176113442890315 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890315 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890315">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890315">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506668"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506668"/>
         <rdfs:label>Claims Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/176113442890316 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890316 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890316">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890316">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506669"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506669"/>
         <rdfs:label>Software Mentions in Science Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/176113442890317 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890317 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/176113442890317">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890317">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506670"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506670"/>
         <rdfs:label>Software Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344289032 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289032 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289032">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289032">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064253"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064253"/>
         <rdfs:label>MaRDI Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344289033 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289033 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289033">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289033">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064254"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064254"/>
         <rdfs:label>NFDI4Bioimage Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344289034 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289034 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289034">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289034">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064255"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064255"/>
         <rdfs:label>NFDI4Chem Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344289035 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289035 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289035">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289035">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064256"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064256"/>
         <rdfs:label>NFDI4Culture Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344289036 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289036 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289036">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289036">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064257"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064257"/>
         <rdfs:label>NFDI4DataScience Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344289037 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289037 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289037">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289037">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064258"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064258"/>
         <rdfs:label>NFDI4Earth Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344289038 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289038 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289038">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289038">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611344064259"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344064259"/>
         <rdfs:label>NFDI4Memory Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611344289039 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289039 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611344289039">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611344289039">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/176113440642510"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113440642510"/>
         <rdfs:label>NFDI4Microbiota Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611348076041 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611348076041 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611348076041">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611348076041">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506661"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506661"/>
         <rdfs:label>Platform MaterialDigital Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611348774371 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611348774371 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611348774371">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611348774371">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506663"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506663"/>
         <rdfs:label>Helmholtz Knowledge Graph</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611349780261 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611349780261 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611349780261">
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611349780261">
         <rdf:type rdf:resource="https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"/>
-        <obo:IAO_0000235 rdf:resource="https://purls.helmholtz-metadaten.de/msekg/17611350506662"/>
+        <obo:IAO_0000235 rdf:resource="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506662"/>
         <rdfs:label>RDF portal of life science datasets</rdfs:label>
     </NamedIndividual>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506661 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506661 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506661"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506661"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506662 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506662 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506662"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506662"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506663 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506663 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506663"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506663"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506664 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506664 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506664"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506664"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506665 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506665 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506665"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506665"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506666 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506666 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506666"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506666"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506667 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506667 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506667"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506667"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506668 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506668 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506668"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506668"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506669 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506669 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506669"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506669"/>
     
 
 
-    <!-- https://purls.helmholtz-metadaten.de/msekg/17611350506670 -->
+    <!-- https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506670 -->
 
-    <NamedIndividual rdf:about="https://purls.helmholtz-metadaten.de/msekg/17611350506670"/>
+    <NamedIndividual rdf:about="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506670"/>
 </rdf:RDF>
 
 
