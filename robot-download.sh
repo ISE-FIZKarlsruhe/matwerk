@@ -89,11 +89,11 @@ run_robot_explain "$COMPONENTSDIR/process.owl" "$REASONER/process_inconsistency.
 run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl" "$COMPONENTSDIR/city.tsv" "$COMPONENTSDIR/city.owl"
 run_robot_explain "$COMPONENTSDIR/city.owl" "$REASONER/city_inconsistency.md"
 
-run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/organization.owl" "$COMPONENTSDIR/people.tsv" "$COMPONENTSDIR/people.owl"
-run_robot_explain "$COMPONENTSDIR/people.owl" "$REASONER/people_inconsistency.md"
-
 run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/city.owl" "$COMPONENTSDIR/organization.tsv" "$COMPONENTSDIR/organization.owl"
 run_robot_explain "$COMPONENTSDIR/organization.owl" "$REASONER/organization_inconsistency.md"
+
+run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/organization.owl" "$COMPONENTSDIR/people.tsv" "$COMPONENTSDIR/people.owl"
+run_robot_explain "$COMPONENTSDIR/people.owl" "$REASONER/people_inconsistency.md"
 
 run_robot_merge "-i $SRC -i $COMPONENTSDIR/req_1.owl -i $COMPONENTSDIR/req_2.owl -i $COMPONENTSDIR/organization.owl -i $COMPONENTSDIR/agent.owl -i $COMPONENTSDIR/role.owl -i $COMPONENTSDIR/process.owl" "$COMPONENTSDIR/dataset.tsv" "$COMPONENTSDIR/dataset.owl"
 run_robot_explain "$COMPONENTSDIR/dataset.owl" "$REASONER/dataset_inconsistency.md"
