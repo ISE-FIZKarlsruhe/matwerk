@@ -1,5 +1,0 @@
-<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/snapshot/sparql/classes/12a8d2a8d3d3cdf1939df91b> .
-<http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/2000/01/rdf-schema#label> "Thing" <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/snapshot/sparql/classes/12a8d2a8d3d3cdf1939df91b> .
-<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/snapshot/sparql/classes/12a8d2a8d3d3cdf1939df91b> .
-<http://www.w3.org/2002/07/owl#Nothing> <http://www.w3.org/2000/01/rdf-schema#label> "Nothing" <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/snapshot/sparql/classes/12a8d2a8d3d3cdf1939df91b> .
-

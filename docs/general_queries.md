@@ -385,7 +385,7 @@ LIMIT 999
 
 ---
 
-### What are the data portals present in the MSE-KG? What are the links, repositories and contactpoint names or email addresses or websites of these data portals?
+### What are the data portals present in the MSE-KG? What are the links, repositories and contactpoint names or email addresses of these data portals?
 
 ```sparql
 PREFIX nfdicore_dataportal:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123>
@@ -401,49 +401,36 @@ PREFIX email_address:        <http://purl.obolibrary.org/obo/IAO_0000429>
 PREFIX nfdicore_website:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223>
 PREFIX rdfs:                 <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT DISTINCT ?portal ?name ?link ?repository ?contactpointName ?Email ?Website
+SELECT DISTINCT ?portal ?name ?link ?repository
 WHERE {
   ?portal a nfdicore_dataportal: .
 
-  # Portal name
-  OPTIONAL {
-    ?portal denoted_by: ?nameNode .
-    ?nameNode a nfdicore_title: ;
+  ?portal denoted_by: ?nameNode .
+  ?nameNode a nfdicore_title: ;
               rdfs:label ?name .
-  }
-
-  # Link (URL or PID)
-  OPTIONAL {
-    ?portal denoted_by: ?linkNode .
-    ?linkNode has_url: ?link .
-  }
-
-  # Link to repository
-  OPTIONAL {
-    ?portal denoted_by: ?repositoryNode .
-    ?repositoryNode has_url: ?repository .
-  }
-
+  
+  ?portal denoted_by: ?linkNode .
+  ?linkNode has_url: ?link .
+  
+  ?portal denoted_by: ?repositoryNode .
+  ?repositoryNode has_url: ?repository .
+  
   # Participates in contacting process
   OPTIONAL {
     ?portal participates_in: ?contactingProcess .
     ?contactingProcess participant: ?contactpoint ;
                       has_role: ?contactpointRole .
-
+    
     ?contactpoint denoted_by: ?contactpointNode .
     OPTIONAL {
       ?contactpointNode a written_name: ;
                         has_value: ?contactpointName .
     }
 
-    ?contactpointRole denoted_by: ?EmailWebsite .
+    ?contactpointRole denoted_by: ?Email .
     OPTIONAL {
-      ?EmailWebsite a email_address: ;
-                    has_value: ?Email .
-    }
-    OPTIONAL {
-      ?EmailWebsite a nfdicore_website: ;
-                    has_url: ?Website .
+      ?Email a email_address: ;
+               has_value: ?Email .
     }
   }
 }
@@ -484,6 +471,7 @@ WHERE {
                       has_role: ?contactpointRole .
 
     ?contactpoint denoted_by: ?contactpointNode .
+    }
     OPTIONAL {
       ?contactpointNode a written_name: ;
                         has_value: ?contactpointName .
@@ -498,8 +486,8 @@ WHERE {
       ?EmailWebsite a nfdicore_website: ;
                     has_url: ?Website .
     }
-  }
 }
+LIMIT 999
 ```
 
 ---
@@ -507,7 +495,7 @@ WHERE {
 ### What are the large scale facilities present in the MSE-KG? What are the acronyms, organization or email or website of providers of these large scale facilities?
 
 ```sparql
-PREFIX mwo_facility:          <http://purls.helmholtz-metadaten.de/mwo/MWO_0001027>
+PREFIX nfdicore_large_scale_facility:          <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001206>
 PREFIX denoted_by:          <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX written_name:        <http://purl.obolibrary.org/obo/IAO_0000590>
 PREFIX abbreviation_textual_entity:         <http://purl.obolibrary.org/obo/IAO_0000605>
@@ -524,7 +512,7 @@ PREFIX rdfs:                  <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?facility ?name ?acronym ?orgLabel ?Email ?Website
 WHERE {
-  ?facility a mwo_facility: .
+  ?facility a nfdicore_large_scale_facility: .
 
   OPTIONAL {
     ?facility denoted_by: ?facilityNode .
@@ -633,14 +621,14 @@ LIMIT 999
 ### What are the international collaborations present in the MSE-KG? What are the names of these international collaborations?
 
 ```sparql
-PREFIX mwo_networking: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001005>
+PREFIX mwo_collaboration: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001003>
 PREFIX denoted_by:                   <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX nfdicore_title:                 <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
 PREFIX rdfs:                           <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?int_collaboration ?name
 WHERE {
-  ?int_collaboration a mwo_networking: .
+  ?int_collaboration a mwo_collaboration: .
 
   OPTIONAL {
     ?int_collaboration denoted_by: ?nameNode .
