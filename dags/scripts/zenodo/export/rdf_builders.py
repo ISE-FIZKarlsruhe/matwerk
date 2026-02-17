@@ -7,6 +7,7 @@ NFDI_DATASET      = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"
 NFDI_PUBLICATION  = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"
 NFDI_LECTURE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010022"
 NFDI_SOFTWARE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"
+IAO_0000308_figure = "http://purl.obolibrary.org/obo/IAO_0000308"
 
 IAO_0000235 = "http://purl.obolibrary.org/obo/IAO_0000235"
 OBI_0002135 = "http://purl.obolibrary.org/obo/OBI_0002135"
@@ -32,6 +33,9 @@ def class_iri_for_zenodo_record(meta: dict) -> str:
     if record_type in {"dataset"}:
         return NFDI_DATASET
 
+    if record_type in {"image"}:
+        return IAO_0000308_figure
+
     if record_type in {
         "publication",
         "article",
@@ -43,15 +47,11 @@ def class_iri_for_zenodo_record(meta: dict) -> str:
         "workingpaper",
         "preprint",
         "softwaredocumentation",
-    }:
-        return NFDI_PUBLICATION
-
-    if record_type in {
         "presentation",
         "poster",
         "lesson",
     }:
-        return NFDI_LECTURE
+        return NFDI_PUBLICATION
     
     if record_type in {
         "software",

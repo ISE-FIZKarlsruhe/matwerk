@@ -10,6 +10,7 @@ from airflow.sdk import dag, task, Variable, get_current_context
 from airflow.exceptions import AirflowFailException
 from airflow.providers.standard.operators.bash import BashOperator
 from airflow.providers.standard.operators.empty import EmptyOperator
+from airflow.providers.standard.operators.python import PythonOperator
 
 DAG_ID = "validation_checks"
 
@@ -184,7 +185,6 @@ def validation_checks():
         DATA_DIR = "DATA_DIR"
         XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
-        # NEW/CHANGED: file names from XCom
         asserted_name = '{{ ti.xcom_pull(task_ids="init_data_dir", key="asserted_ttl") }}'
         inferences_name = '{{ ti.xcom_pull(task_ids="init_data_dir", key="inferences_ttl") }}'
         merged_name = '{{ ti.xcom_pull(task_ids="init_data_dir", key="merged_for_validation_ttl") }}'
@@ -193,11 +193,18 @@ def validation_checks():
         inferences = os.path.join(DATA_DIR, inferences_name)
         merged = os.path.join(DATA_DIR, merged_name)
 
+        # download ontology into the run dir and include it in merge
+        ontology_url = "{{ var.value.matwerk_ontology }}"
+        ontology_path = os.path.join(DATA_DIR, "ontology.owl")
+
         cmd = (
+            f"curl -fsSL '{ontology_url}' -o '{ontology_path}'\n"
+            # merge asserted + inferences + ontology
             f"{ROBOT} merge --include-annotations true "
-            f"--input '{asserted}' --input '{inferences}' "
+            f"--input '{asserted}' --input '{inferences}' --input '{ontology_path}' "
             f"--output '{merged}'"
         )
+
         return cmd.replace(DATA_DIR, XCOM_DATADIR)
 
     # -----------------------------
@@ -291,10 +298,32 @@ def validation_checks():
         Variable.set(f"{LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME}__{artifact}", data_dir)
         print(f"Set {LAST_SUCCESSFUL_VALIDATED_RUN_VARIABLE_NAME}__{artifact}={data_dir}")
 
+    def robotHermitExplainValidationCmdTemplate() -> str:
+        ROBOT = "{{ var.value.robotcmd }}"
+        DATA_DIR = "DATA_DIR"
+        XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
-    # -----------------------------
-    # Wiring (unchanged)
-    # -----------------------------
+        merged_name = '{{ ti.xcom_pull(task_ids="init_data_dir", key="merged_for_validation_ttl") }}'
+        merged_ttl = os.path.join(DATA_DIR, merged_name)
+
+        explain_md = os.path.join(DATA_DIR, "validation", "hermit_inconsistency.md")
+
+        cmd = (
+            f"mkdir -p '{os.path.join(DATA_DIR, 'validation')}'\n"
+            f"{ROBOT} explain --reasoner hermit --input '{merged_ttl}' "
+            f"-M inconsistency --explanation '{explain_md}'"
+        )
+        return cmd.replace(DATA_DIR, XCOM_DATADIR)
+
+    def isvalid(filename: str, ti=None):
+        data_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
+        path = os.path.join(data_dir, filename)
+        with open(path, "r", encoding="utf-8", errors="replace") as f:
+            s = f.read()
+        if s.strip() != "No explanations found.":
+            print(s)
+            raise ValueError("Ontology inconsistent or explanation not empty")
+
     init = init_data_dir()
     pull_asserted_inferences = pull_merge_reason_output()
     shapes = fetch_shapes()
@@ -302,6 +331,17 @@ def validation_checks():
     robot_merge_for_validation = BashOperator(
         task_id="robot_merge_for_validation",
         bash_command=robotMergeForValidationCmdTemplate(),
+    )
+
+    robot_hermit_explain = BashOperator(
+        task_id="robot_hermit_explain",
+        bash_command=robotHermitExplainValidationCmdTemplate(),
+    )
+
+    robot_hermit_valid = PythonOperator(
+        task_id="robot_hermit_valid",
+        python_callable=isvalid,
+        op_kwargs={"filename": os.path.join("validation", "hermit_inconsistency.md")},
     )
 
     robot_verify = BashOperator(
@@ -315,10 +355,11 @@ def validation_checks():
     init >> [pull_asserted_inferences, shapes]
     pull_asserted_inferences >> robot_merge_for_validation
 
+    robot_merge_for_validation >> robot_hermit_explain >> robot_hermit_valid
     robot_merge_for_validation >> [robot_verify, shacl]
     shapes >> [robot_verify, shacl]
 
-    [robot_verify, shacl] >> done
+    [robot_verify, shacl, robot_hermit_valid] >> done
 
 
 validation_checks()
