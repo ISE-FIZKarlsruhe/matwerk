@@ -1,14 +1,14 @@
 ## [Thing](http://www.w3.org/2002/07/owl#Thing) SubClassOf [Nothing](http://www.w3.org/2002/07/owl#Nothing) ##
 
-  - [TU Kaiserslautern](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513943908641) Type [material entity](http://purl.obolibrary.org/obo/BFO_0000040)
-  - [TU Kaiserslautern](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513943908641) Type [immaterial entity](http://purl.obolibrary.org/obo/BFO_0000141)
-  - [material entity](http://purl.obolibrary.org/obo/BFO_0000040) DisjointWith [immaterial entity](http://purl.obolibrary.org/obo/BFO_0000141)
+  - [https://zenodo.org/records/10566836](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10566836) Type [occurrent](http://purl.obolibrary.org/obo/BFO_0000003)
+  - [continuant](http://purl.obolibrary.org/obo/BFO_0000002) DisjointWith [occurrent](http://purl.obolibrary.org/obo/BFO_0000003)
+  - [https://zenodo.org/records/10566836](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10566836) Type [continuant](http://purl.obolibrary.org/obo/BFO_0000002)
 
 # Axiom Impact 
 ## Axioms used 1 times
-- [material entity](http://purl.obolibrary.org/obo/BFO_0000040) DisjointWith [immaterial entity](http://purl.obolibrary.org/obo/BFO_0000141) [mwo.owl]
-- [TU Kaiserslautern](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513943908641) Type [material entity](http://purl.obolibrary.org/obo/BFO_0000040) [mwo.owl]
-- [TU Kaiserslautern](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513943908641) Type [immaterial entity](http://purl.obolibrary.org/obo/BFO_0000141) [mwo.owl]
+- [continuant](http://purl.obolibrary.org/obo/BFO_0000002) DisjointWith [occurrent](http://purl.obolibrary.org/obo/BFO_0000003) [mwo.owl]
+- [https://zenodo.org/records/10566836](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10566836) Type [continuant](http://purl.obolibrary.org/obo/BFO_0000002) [mwo.owl]
+- [https://zenodo.org/records/10566836](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/zenodo/concept/10566836) Type [occurrent](http://purl.obolibrary.org/obo/BFO_0000003) [mwo.owl]
 
 
 
