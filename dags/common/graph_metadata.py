@@ -159,7 +159,7 @@ def build_metadata_ttl(f: GraphPublishFacts) -> str:
         "",
         
         # identifier node
-        f"<{id_iri}> a nfdicore:NFDI_0000015 ; nfdicore:NFDI_0001007 {json.dumps(f.run_id)} .",
+        f"<{id_iri}> a <http://purl.obolibrary.org/obo/IAO_0020000> ; nfdicore:NFDI_0001007 {json.dumps(f.run_id)} .",
         "",
             
         f"<{process_iri}>",
