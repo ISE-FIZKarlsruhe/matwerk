@@ -250,6 +250,9 @@ def dashboard():
                 log.info("Processed %d/%d graphs for triples/subjects...", i, len(graphs))
 
         eng = pg_engine()
+        with eng.begin() as cx:
+          cx.execute(text("TRUNCATE TABLE public.kg_graph_stats"))
+          cx.execute(text("TRUNCATE TABLE public.kg_graph_subject_counts"))
         pd.DataFrame(rows_t).to_sql("kg_graph_stats", eng, schema="public", if_exists="append", index=False)
         pd.DataFrame(rows_s).to_sql("kg_graph_subject_counts", eng, schema="public", if_exists="append", index=False)
         log.info("Wrote triples/subjects for %d graphs at ts_utc=%s", len(graphs), now.isoformat())
@@ -287,6 +290,9 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for class counts...", i, len(graphs))
 
+        eng = pg_engine()
+        with eng.begin() as cx:
+          cx.execute(text("TRUNCATE TABLE public.kg_graph_class_counts"))
         pd.DataFrame(rows).to_sql("kg_graph_class_counts", pg_engine(), schema="public", if_exists="append", index=False)
         log.info("Wrote graph-class counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
@@ -315,6 +321,9 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for property counts...", i, len(graphs))
 
+        eng = pg_engine()
+        with eng.begin() as cx:
+          cx.execute(text("TRUNCATE TABLE public.kg_graph_property_counts"))
         pd.DataFrame(rows).to_sql("kg_graph_property_counts", pg_engine(), schema="public", if_exists="append", index=False)
         log.info("Wrote graph-property counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
@@ -375,6 +384,9 @@ def dashboard():
                 log.info("Processed %d/%d graphs for labeled sankey edges...", i, len(graphs))
 
         if rows:
+            eng = pg_engine()
+            with eng.begin() as cx:
+              cx.execute(text("TRUNCATE TABLE public.kg_sankey_class_property"))
             pd.DataFrame(rows).to_sql("kg_sankey_class_property", pg_engine(), schema="public", if_exists="append", index=False)
             log.info("Wrote kg_sankey_class_property rows=%d at ts_utc=%s", len(rows), now.isoformat())
         else:
@@ -413,6 +425,9 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for entity type counts...", i, len(graphs))
 
+        eng = pg_engine()
+        with eng.begin() as cx:
+          cx.execute(text("TRUNCATE TABLE public.kg_entity_type_counts"))
         pd.DataFrame(rows).to_sql("kg_entity_type_counts", pg_engine(), schema="public", if_exists="append", index=False)
         log.info("Wrote kg_entity_type_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
@@ -449,6 +464,9 @@ def dashboard():
                     "count": int(_bval(b, "count") or "0"),
                 })
 
+        eng = pg_engine()
+        with eng.begin() as cx:
+          cx.execute(text("TRUNCATE TABLE public.kg_dataset_type_counts"))
         pd.DataFrame(rows).to_sql("kg_dataset_type_counts", pg_engine(), schema="public", if_exists="append", index=False)
         log.info("Wrote kg_dataset_type_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
@@ -488,6 +506,9 @@ def dashboard():
             if i % 10 == 0:
                 log.info("Processed %d/%d graphs for ds/pub/event counts...", i, len(graphs))
 
+        eng = pg_engine()
+        with eng.begin() as cx:
+          cx.execute(text("TRUNCATE TABLE public.kg_content_counts"))
         pd.DataFrame(rows).to_sql("kg_content_counts", pg_engine(), schema="public", if_exists="append", index=False)
         log.info("Wrote kg_content_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
@@ -541,6 +562,9 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for datasets list...", i, len(graphs))
 
+        eng = pg_engine()
+        with eng.begin() as cx:
+          cx.execute(text("TRUNCATE TABLE public.kg_datasets"))
         pd.DataFrame(rows).to_sql("kg_datasets", pg_engine(), schema="public", if_exists="append", index=False)
         log.info("Wrote kg_datasets rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
@@ -575,6 +599,9 @@ def dashboard():
                     "org_count": int(_bval(b, "orgCount") or "0"),
                 })
 
+        eng = pg_engine()
+        with eng.begin() as cx:
+          cx.execute(text("TRUNCATE TABLE public.kg_org_city_counts"))
         pd.DataFrame(rows).to_sql("kg_org_city_counts", pg_engine(), schema="public", if_exists="append", index=False)
         log.info("Wrote kg_org_city_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
@@ -610,6 +637,9 @@ def dashboard():
                 })
 
         if rows:
+            eng = pg_engine()
+            with eng.begin() as cx:
+              cx.execute(text("TRUNCATE TABLE public.kg_top_org_by_people"))
             pd.DataFrame(rows).to_sql("kg_top_org_by_people", pg_engine(), schema="public", if_exists="append", index=False)
             log.info("Wrote kg_top_org_by_people rows=%d at ts_utc=%s", len(rows), now.isoformat())
         else:
