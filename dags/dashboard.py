@@ -623,7 +623,7 @@ def dashboard():
             SELECT DISTINCT ON (graph)
               graph, ts_utc, triples
             FROM public.kg_graph_stats
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk/msekg%'
+            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, ts_utc DESC;
             """,
             """
@@ -631,7 +631,7 @@ def dashboard():
             SELECT DISTINCT ON (graph)
               graph, ts_utc, subjects
             FROM public.kg_graph_subject_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk/msekg%'
+            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, ts_utc DESC;
             """,
             """
@@ -639,7 +639,7 @@ def dashboard():
             SELECT DISTINCT ON (graph, class_iri)
               graph, class_iri, class_label, ts_utc, instances
             FROM public.kg_graph_class_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk/msekg%'
+            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, class_iri, ts_utc DESC;
             """,
             """
@@ -647,7 +647,7 @@ def dashboard():
             SELECT DISTINCT ON (graph, property_iri)
               graph, property_iri, ts_utc, usage_count
             FROM public.kg_graph_property_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk/msekg%'
+            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, property_iri, ts_utc DESC;
             """,
             """
@@ -659,7 +659,7 @@ def dashboard():
               ts_utc,
               value
             FROM public.kg_sankey_class_property
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk/msekg%'
+            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, source_iri, target_iri, ts_utc DESC;
             """,
 
@@ -668,7 +668,7 @@ def dashboard():
             SELECT DISTINCT ON (graph, concept_iri)
               graph, concept_iri, concept_label, ts_utc, count
             FROM public.kg_entity_type_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk/msekg%'
+            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, concept_iri, ts_utc DESC;
             """,
             """
@@ -676,7 +676,7 @@ def dashboard():
             SELECT DISTINCT ON (graph, dataset_type_iri)
               graph, dataset_type_iri, dataset_type_label, ts_utc, count
             FROM public.kg_dataset_type_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk/msekg%'
+            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, dataset_type_iri, ts_utc DESC;
             """,
             """
@@ -684,7 +684,7 @@ def dashboard():
             SELECT DISTINCT ON (graph)
               graph, ts_utc, datasets, publications, events
             FROM public.kg_content_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk/msekg%'
+            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, ts_utc DESC;
             """,
             """
@@ -692,7 +692,7 @@ def dashboard():
             SELECT DISTINCT ON (graph, city_iri)
               graph, city_iri, city_label, ts_utc, org_count
             FROM public.kg_org_city_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk/msekg%'
+            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, city_iri, ts_utc DESC;
             """,
             """
@@ -700,7 +700,7 @@ def dashboard():
             SELECT DISTINCT ON (graph, org_iri)
               graph, org_iri, org_label, ts_utc, people_count
             FROM public.kg_top_org_by_people
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk/msekg%'
+            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, org_iri, ts_utc DESC;
             """,
             """
@@ -708,7 +708,7 @@ def dashboard():
             SELECT DISTINCT ON (graph, dataset_iri)
               graph, dataset_iri, title, creator, creator_affiliation, link, ts_utc
             FROM public.kg_datasets
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk/msekg%'
+            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, dataset_iri, ts_utc DESC;
             """,
         ]
