@@ -250,8 +250,8 @@ def dashboard():
                 log.info("Processed %d/%d graphs for triples/subjects...", i, len(graphs))
 
         eng = pg_engine()
-        pd.DataFrame(rows_t).to_sql("kg_graph_stats", eng, schema="public", if_exists="append", index=False)
-        pd.DataFrame(rows_s).to_sql("kg_graph_subject_counts", eng, schema="public", if_exists="append", index=False)
+        pd.DataFrame(rows_t).to_sql("kg_graph_stats", eng, schema="public", if_exists="replace", index=False)
+        pd.DataFrame(rows_s).to_sql("kg_graph_subject_counts", eng, schema="public", if_exists="replace", index=False)
         log.info("Wrote triples/subjects for %d graphs at ts_utc=%s", len(graphs), now.isoformat())
 
     @task
@@ -287,7 +287,7 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for class counts...", i, len(graphs))
 
-        pd.DataFrame(rows).to_sql("kg_graph_class_counts", pg_engine(), schema="public", if_exists="append", index=False)
+        pd.DataFrame(rows).to_sql("kg_graph_class_counts", pg_engine(), schema="public", if_exists="replace", index=False)
         log.info("Wrote graph-class counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -315,7 +315,7 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for property counts...", i, len(graphs))
 
-        pd.DataFrame(rows).to_sql("kg_graph_property_counts", pg_engine(), schema="public", if_exists="append", index=False)
+        pd.DataFrame(rows).to_sql("kg_graph_property_counts", pg_engine(), schema="public", if_exists="replace", index=False)
         log.info("Wrote graph-property counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -375,7 +375,7 @@ def dashboard():
                 log.info("Processed %d/%d graphs for labeled sankey edges...", i, len(graphs))
 
         if rows:
-            pd.DataFrame(rows).to_sql("kg_sankey_class_property", pg_engine(), schema="public", if_exists="append", index=False)
+            pd.DataFrame(rows).to_sql("kg_sankey_class_property", pg_engine(), schema="public", if_exists="replace", index=False)
             log.info("Wrote kg_sankey_class_property rows=%d at ts_utc=%s", len(rows), now.isoformat())
         else:
             log.warning("No Sankey rows produced.")
@@ -413,7 +413,7 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for entity type counts...", i, len(graphs))
 
-        pd.DataFrame(rows).to_sql("kg_entity_type_counts", pg_engine(), schema="public", if_exists="append", index=False)
+        pd.DataFrame(rows).to_sql("kg_entity_type_counts", pg_engine(), schema="public", if_exists="replace", index=False)
         log.info("Wrote kg_entity_type_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -449,7 +449,7 @@ def dashboard():
                     "count": int(_bval(b, "count") or "0"),
                 })
 
-        pd.DataFrame(rows).to_sql("kg_dataset_type_counts", pg_engine(), schema="public", if_exists="append", index=False)
+        pd.DataFrame(rows).to_sql("kg_dataset_type_counts", pg_engine(), schema="public", if_exists="replace", index=False)
         log.info("Wrote kg_dataset_type_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -488,7 +488,7 @@ def dashboard():
             if i % 10 == 0:
                 log.info("Processed %d/%d graphs for ds/pub/event counts...", i, len(graphs))
 
-        pd.DataFrame(rows).to_sql("kg_content_counts", pg_engine(), schema="public", if_exists="append", index=False)
+        pd.DataFrame(rows).to_sql("kg_content_counts", pg_engine(), schema="public", if_exists="replace", index=False)
         log.info("Wrote kg_content_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -541,7 +541,7 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for datasets list...", i, len(graphs))
 
-        pd.DataFrame(rows).to_sql("kg_datasets", pg_engine(), schema="public", if_exists="append", index=False)
+        pd.DataFrame(rows).to_sql("kg_datasets", pg_engine(), schema="public", if_exists="replace", index=False)
         log.info("Wrote kg_datasets rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -575,7 +575,7 @@ def dashboard():
                     "org_count": int(_bval(b, "orgCount") or "0"),
                 })
 
-        pd.DataFrame(rows).to_sql("kg_org_city_counts", pg_engine(), schema="public", if_exists="append", index=False)
+        pd.DataFrame(rows).to_sql("kg_org_city_counts", pg_engine(), schema="public", if_exists="replace", index=False)
         log.info("Wrote kg_org_city_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -610,7 +610,7 @@ def dashboard():
                 })
 
         if rows:
-            pd.DataFrame(rows).to_sql("kg_top_org_by_people", pg_engine(), schema="public", if_exists="append", index=False)
+            pd.DataFrame(rows).to_sql("kg_top_org_by_people", pg_engine(), schema="public", if_exists="replace", index=False)
             log.info("Wrote kg_top_org_by_people rows=%d at ts_utc=%s", len(rows), now.isoformat())
         else:
             log.warning("No org-by-people rows produced (affiliation predicate may differ).")
