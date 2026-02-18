@@ -1,6 +1,4 @@
-## Competency Questions
-
-## Infrastructure use cases (IUCs)-related questions with the corresponding SPARQL queries
+## Infrastructure use cases (IUCs)-related Competency Questions with the corresponding SPARQL queries
 
 ### (IUC xx)
 

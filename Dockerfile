@@ -10,49 +10,11 @@ RUN set -eux; \
     ; \
     rm -rf /var/lib/apt/lists/*
 
-ENV ROBOT_JAVA_ARGS="-Xmx16G -Dfile.encoding=UTF-8"
-
 # ---- App sources ----
 COPY . /app
 
-# ---- Python deps for your build scripts ----
-RUN pip install --no-cache-dir -r /app/requirements.txt
-
-# ---- Robot + Widoco ----
-RUN wget -q https://github.com/ontodev/robot/releases/download/v1.9.8/robot.jar -O /usr/local/bin/robot.jar \
- && printf '#!/bin/sh\nexec java $ROBOT_JAVA_ARGS -jar /usr/local/bin/robot.jar "$@"\n' > /usr/local/bin/robot \
- && chmod +x /usr/local/bin/robot \
- && wget -q https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar -O /usr/local/bin/widoco.jar
-
-# ---- Build KG ----
-RUN chmod +x /app/robot-download.sh /app/robot-merge.sh \
- && (cd /app && ./robot-download.sh && ./robot-merge.sh) \
- && test -s /app/data/all_NotReasoned.ttl
-
-RUN cd /app \
- && mkdir -p data/zenodo/harvested data/zenodo/named_graphs/record \
- && PYTHONPATH=/app/dags python -m scripts.zenodo.export_zenodo --make-snapshots --out data/zenodo/zenodo.ttl \
- && PYTHONPATH=/app/dags python /app/dags/scripts/fetch_zenodo.py \
-      --data data/all_NotReasoned.ttl \
-      --out-csv data/zenodo/datasets_urls.csv \
-      --out-dir data/zenodo/harvested
-
-RUN chmod +x /app/robot-merge-zenodo.sh \
- && (cd /app && ./robot-download.sh && ./robot-merge-zenodo.sh)
-
-# RUN chmod +x /app/dags/scripts/fetch_endpoints.py \
-#  && mkdir -p /app/data/sparql_endpoints/named_graphs \
-#  && python /app/dags/scripts/fetch_endpoints.py \
-#      --all-ttl /app/data/all_NotReasoned.ttl \
-#      --mwo-owl /app/ontology/mwo-full.owl \
-#      --state-json /app/data/sparql_endpoints/sparql_sources.json \
-#      --summary-json /app/data/sparql_endpoints/sparql_sources_list.json \
-#      --stats-ttl /app/data/sparql_endpoints/dataset_stats.ttl \
-#      --named-graphs-dir /app/data/sparql_endpoints/named_graphs
-
-RUN chmod +x /app/robot-reason.sh \
- && (cd /app && ./robot-reason.sh) \
- && test -s /app/data/all.ttl
+# ---- Widoco ----
+RUN wget -q https://github.com/dgarijo/Widoco/releases/download/v1.4.25/widoco-1.4.25-jar-with-dependencies_JDK-11.jar -O /usr/local/bin/widoco.jar
 
 # ---- Widoco ----
 RUN java -jar /usr/local/bin/widoco.jar \
