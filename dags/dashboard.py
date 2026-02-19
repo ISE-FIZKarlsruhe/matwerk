@@ -67,9 +67,19 @@ def _bval(b: dict, key: str) -> str | None:
     v = b.get(key)
     return v.get("value") if isinstance(v, dict) else None
 
-def pg_engine():
+def engine():
+    """
+    For SQLite use a file path that Airflow can write to.
+    Example Variable kg_metrics_pg_dsn:
+      sqlite:////tmp/kg_metrics.db
+    or mounted volume path.
+    """
     dsn = _get_var("kg_metrics_pg_dsn")
     return create_engine(dsn, pool_pre_ping=True)
+
+def iso_utc_now() -> str:
+    # ISO string sorts correctly as TEXT, e.g. 2026-02-19T15:42:00+00:00
+    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
 
 
 # ---------------------------
@@ -89,9 +99,9 @@ def dashboard():
             v = Variable.get(n)
             log.info("Variable %s present=%s", n, v is not None)
 
-        with pg_engine().connect() as cx:
+        with engine().connect() as cx:
             ok = cx.execute(text("select 1")).scalar()
-            log.info("Postgres OK: select 1 => %s", ok)
+            log.info("DB OK: select 1 => %s", ok)
 
         js = sparql_json("SELECT (1 AS ?ok) WHERE {}")
         log.info("SPARQL OK: bindings=%s", _bindings(js))
@@ -99,120 +109,120 @@ def dashboard():
     @task
     def ensure_tables():
         """
-        Create metric tables up-front so views never fail if a metric produces 0 rows.
+        SQLite-compatible schema (no schemas like public., no timestamptz).
         """
         ddl = [
             """
-            CREATE TABLE IF NOT EXISTS public.kg_graph_stats (
-              ts_utc timestamptz NOT NULL,
-              graph text NOT NULL,
-              triples bigint NOT NULL
+            CREATE TABLE IF NOT EXISTS kg_graph_stats (
+              ts_utc TEXT NOT NULL,
+              graph TEXT NOT NULL,
+              triples INTEGER NOT NULL
             );
             """,
             """
-            CREATE TABLE IF NOT EXISTS public.kg_graph_subject_counts (
-              ts_utc timestamptz NOT NULL,
-              graph text NOT NULL,
-              subjects bigint NOT NULL
+            CREATE TABLE IF NOT EXISTS kg_graph_subject_counts (
+              ts_utc TEXT NOT NULL,
+              graph TEXT NOT NULL,
+              subjects INTEGER NOT NULL
             );
             """,
             """
-            CREATE TABLE IF NOT EXISTS public.kg_graph_class_counts (
-              ts_utc timestamptz NOT NULL,
-              graph text NOT NULL,
-              class_iri text,
-              class_label text,
-              instances bigint NOT NULL
+            CREATE TABLE IF NOT EXISTS kg_graph_class_counts (
+              ts_utc TEXT NOT NULL,
+              graph TEXT NOT NULL,
+              class_iri TEXT,
+              class_label TEXT,
+              instances INTEGER NOT NULL
             );
             """,
             """
-            CREATE TABLE IF NOT EXISTS public.kg_graph_property_counts (
-              ts_utc timestamptz NOT NULL,
-              graph text NOT NULL,
-              property_iri text,
-              usage_count bigint NOT NULL
+            CREATE TABLE IF NOT EXISTS kg_graph_property_counts (
+              ts_utc TEXT NOT NULL,
+              graph TEXT NOT NULL,
+              property_iri TEXT,
+              usage_count INTEGER NOT NULL
             );
             """,
             """
-            CREATE TABLE IF NOT EXISTS public.kg_sankey_class_property (
-              ts_utc timestamptz NOT NULL,
-              graph text NOT NULL,
-              source_iri text,
-              source_label text,
-              target_iri text,
-              target_label text,
-              value bigint NOT NULL
+            CREATE TABLE IF NOT EXISTS kg_sankey_class_property (
+              ts_utc TEXT NOT NULL,
+              graph TEXT NOT NULL,
+              source_iri TEXT,
+              source_label TEXT,
+              target_iri TEXT,
+              target_label TEXT,
+              value INTEGER NOT NULL
             );
             """,
             """
-            CREATE TABLE IF NOT EXISTS public.kg_entity_type_counts (
-              ts_utc timestamptz NOT NULL,
-              graph text NOT NULL,
-              concept_iri text,
-              concept_label text,
-              count bigint NOT NULL
+            CREATE TABLE IF NOT EXISTS kg_entity_type_counts (
+              ts_utc TEXT NOT NULL,
+              graph TEXT NOT NULL,
+              concept_iri TEXT,
+              concept_label TEXT,
+              count INTEGER NOT NULL
             );
             """,
             """
-            CREATE TABLE IF NOT EXISTS public.kg_dataset_type_counts (
-              ts_utc timestamptz NOT NULL,
-              graph text NOT NULL,
-              dataset_type_iri text,
-              dataset_type_label text,
-              count bigint NOT NULL
+            CREATE TABLE IF NOT EXISTS kg_dataset_type_counts (
+              ts_utc TEXT NOT NULL,
+              graph TEXT NOT NULL,
+              dataset_type_iri TEXT,
+              dataset_type_label TEXT,
+              count INTEGER NOT NULL
             );
             """,
             """
-            CREATE TABLE IF NOT EXISTS public.kg_content_counts (
-              ts_utc timestamptz NOT NULL,
-              graph text NOT NULL,
-              datasets bigint NOT NULL,
-              publications bigint NOT NULL,
-              events bigint NOT NULL
+            CREATE TABLE IF NOT EXISTS kg_content_counts (
+              ts_utc TEXT NOT NULL,
+              graph TEXT NOT NULL,
+              datasets INTEGER NOT NULL,
+              publications INTEGER NOT NULL,
+              events INTEGER NOT NULL
             );
             """,
             """
-            CREATE TABLE IF NOT EXISTS public.kg_datasets (
-              ts_utc timestamptz NOT NULL,
-              graph text NOT NULL,
-              dataset_iri text,
-              title text,
-              creator text,
-              creator_affiliation text,
-              link text
+            CREATE TABLE IF NOT EXISTS kg_datasets (
+              ts_utc TEXT NOT NULL,
+              graph TEXT NOT NULL,
+              dataset_iri TEXT,
+              title TEXT,
+              creator TEXT,
+              creator_affiliation TEXT,
+              link TEXT
             );
             """,
             """
-            CREATE TABLE IF NOT EXISTS public.kg_org_city_counts (
-              ts_utc timestamptz NOT NULL,
-              graph text NOT NULL,
-              city_iri text,
-              city_label text,
-              org_count bigint NOT NULL
+            CREATE TABLE IF NOT EXISTS kg_org_city_counts (
+              ts_utc TEXT NOT NULL,
+              graph TEXT NOT NULL,
+              city_iri TEXT,
+              city_label TEXT,
+              org_count INTEGER NOT NULL
             );
             """,
             """
-            CREATE TABLE IF NOT EXISTS public.kg_top_org_by_people (
-              ts_utc timestamptz NOT NULL,
-              graph text NOT NULL,
-              org_iri text,
-              org_label text,
-              people_count bigint NOT NULL
+            CREATE TABLE IF NOT EXISTS kg_top_org_by_people (
+              ts_utc TEXT NOT NULL,
+              graph TEXT NOT NULL,
+              org_iri TEXT,
+              org_label TEXT,
+              people_count INTEGER NOT NULL
             );
             """,
             """
-            CREATE TABLE IF NOT EXISTS public.kg_top_concepts (
-              ts_utc timestamptz NOT NULL,
-              graph text NOT NULL,
-              concept_iri text NOT NULL,
-              concept_label text,
-              count bigint NOT NULL,
-              rank int NOT NULL
+            CREATE TABLE IF NOT EXISTS kg_top_concepts (
+              ts_utc TEXT NOT NULL,
+              graph TEXT NOT NULL,
+              concept_iri TEXT NOT NULL,
+              concept_label TEXT,
+              count INTEGER NOT NULL,
+              rank INTEGER NOT NULL
             );
             """,
         ]
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
             for stmt in ddl:
                 cx.execute(text(stmt))
@@ -239,7 +249,7 @@ def dashboard():
 
     @task
     def write_graph_triples_and_subjects(graphs: list[str]):
-        now = datetime.now(timezone.utc).replace(microsecond=0)
+        now = iso_utc_now()
         rows_t, rows_s = [], []
 
         for i, g in enumerate(graphs, start=1):
@@ -258,18 +268,18 @@ def dashboard():
             if i % 10 == 0:
                 log.info("Processed %d/%d graphs for triples/subjects...", i, len(graphs))
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
-            cx.execute(text("TRUNCATE TABLE public.kg_graph_stats"))
-            cx.execute(text("TRUNCATE TABLE public.kg_graph_subject_counts"))
+            cx.execute(text("DELETE FROM kg_graph_stats"))
+            cx.execute(text("DELETE FROM kg_graph_subject_counts"))
 
-        pd.DataFrame(rows_t).to_sql("kg_graph_stats", eng, schema="public", if_exists="append", index=False)
-        pd.DataFrame(rows_s).to_sql("kg_graph_subject_counts", eng, schema="public", if_exists="append", index=False)
-        log.info("Wrote triples/subjects for %d graphs at ts_utc=%s", len(graphs), now.isoformat())
+        pd.DataFrame(rows_t).to_sql("kg_graph_stats", eng, if_exists="append", index=False)
+        pd.DataFrame(rows_s).to_sql("kg_graph_subject_counts", eng, if_exists="append", index=False)
+        log.info("Wrote triples/subjects for %d graphs at ts_utc=%s", len(graphs), now)
 
     @task
     def write_graph_class_counts(graphs: list[str], limit_per_graph: int = 200):
-        now = datetime.now(timezone.utc).replace(microsecond=0)
+        now = iso_utc_now()
         rows = []
 
         for i, g in enumerate(graphs, start=1):
@@ -300,16 +310,16 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for class counts...", i, len(graphs))
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
-            cx.execute(text("TRUNCATE TABLE public.kg_graph_class_counts"))
+            cx.execute(text("DELETE FROM kg_graph_class_counts"))
 
-        pd.DataFrame(rows).to_sql("kg_graph_class_counts", eng, schema="public", if_exists="append", index=False)
-        log.info("Wrote graph-class counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
+        pd.DataFrame(rows).to_sql("kg_graph_class_counts", eng, if_exists="append", index=False)
+        log.info("Wrote graph-class counts rows=%d at ts_utc=%s", len(rows), now)
 
     @task
     def write_graph_property_counts(graphs: list[str], limit_per_graph: int = 100):
-        now = datetime.now(timezone.utc).replace(microsecond=0)
+        now = iso_utc_now()
         rows = []
 
         for i, g in enumerate(graphs, start=1):
@@ -332,16 +342,16 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for property counts...", i, len(graphs))
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
-            cx.execute(text("TRUNCATE TABLE public.kg_graph_property_counts"))
+            cx.execute(text("DELETE FROM kg_graph_property_counts"))
 
-        pd.DataFrame(rows).to_sql("kg_graph_property_counts", eng, schema="public", if_exists="append", index=False)
-        log.info("Wrote graph-property counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
+        pd.DataFrame(rows).to_sql("kg_graph_property_counts", eng, if_exists="append", index=False)
+        log.info("Wrote graph-property counts rows=%d at ts_utc=%s", len(rows), now)
 
     @task
     def write_sankey_class_property_labeled(graphs: list[str], limit_per_graph: int = 300):
-        now = datetime.now(timezone.utc).replace(microsecond=0)
+        now = iso_utc_now()
         rows = []
 
         for i, g in enumerate(graphs, start=1):
@@ -394,19 +404,19 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for labeled sankey edges...", i, len(graphs))
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
-            cx.execute(text("TRUNCATE TABLE public.kg_sankey_class_property"))
+            cx.execute(text("DELETE FROM kg_sankey_class_property"))
 
         if rows:
-            pd.DataFrame(rows).to_sql("kg_sankey_class_property", eng, schema="public", if_exists="append", index=False)
-            log.info("Wrote kg_sankey_class_property rows=%d at ts_utc=%s", len(rows), now.isoformat())
+            pd.DataFrame(rows).to_sql("kg_sankey_class_property", eng, if_exists="append", index=False)
+            log.info("Wrote kg_sankey_class_property rows=%d at ts_utc=%s", len(rows), now)
         else:
             log.warning("No Sankey rows produced.")
 
     @task
     def write_entity_type_counts(graphs: list[str], limit_per_graph: int = 500):
-        now = datetime.now(timezone.utc).replace(microsecond=0)
+        now = iso_utc_now()
         rows = []
 
         for i, g in enumerate(graphs, start=1):
@@ -437,20 +447,16 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for entity type counts...", i, len(graphs))
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
-            cx.execute(text("TRUNCATE TABLE public.kg_entity_type_counts"))
+            cx.execute(text("DELETE FROM kg_entity_type_counts"))
 
-        pd.DataFrame(rows).to_sql("kg_entity_type_counts", eng, schema="public", if_exists="append", index=False)
-        log.info("Wrote kg_entity_type_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
+        pd.DataFrame(rows).to_sql("kg_entity_type_counts", eng, if_exists="append", index=False)
+        log.info("Wrote kg_entity_type_counts rows=%d at ts_utc=%s", len(rows), now)
 
     @task
     def write_top_concepts_top10(graphs: list[str], top_n: int = 10):
-        """
-        Top N concepts/classes per graph (bar chart ready).
-        Stores rank=1..N per graph.
-        """
-        now = datetime.now(timezone.utc).replace(microsecond=0)
+        now = iso_utc_now()
         rows = []
 
         for i, g in enumerate(graphs, start=1):
@@ -486,19 +492,19 @@ def dashboard():
             if i % 10 == 0:
                 log.info("Processed %d/%d graphs for top concepts...", i, len(graphs))
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
-            cx.execute(text("TRUNCATE TABLE public.kg_top_concepts"))
+            cx.execute(text("DELETE FROM kg_top_concepts"))
 
         if rows:
-            pd.DataFrame(rows).to_sql("kg_top_concepts", eng, schema="public", if_exists="append", index=False)
-            log.info("Wrote kg_top_concepts rows=%d at ts_utc=%s", len(rows), now.isoformat())
+            pd.DataFrame(rows).to_sql("kg_top_concepts", eng, if_exists="append", index=False)
+            log.info("Wrote kg_top_concepts rows=%d at ts_utc=%s", len(rows), now)
         else:
             log.warning("No kg_top_concepts rows produced (no rdf:type?)")
 
     @task
     def write_dataset_type_counts(graphs: list[str]):
-        now = datetime.now(timezone.utc).replace(microsecond=0)
+        now = iso_utc_now()
         rows = []
         types_values = " ".join(f"<{t}>" for t in DATASET_TYPES)
 
@@ -529,16 +535,16 @@ def dashboard():
                     "count": int(_bval(b, "count") or "0"),
                 })
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
-            cx.execute(text("TRUNCATE TABLE public.kg_dataset_type_counts"))
+            cx.execute(text("DELETE FROM kg_dataset_type_counts"))
 
-        pd.DataFrame(rows).to_sql("kg_dataset_type_counts", eng, schema="public", if_exists="append", index=False)
-        log.info("Wrote kg_dataset_type_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
+        pd.DataFrame(rows).to_sql("kg_dataset_type_counts", eng, if_exists="append", index=False)
+        log.info("Wrote kg_dataset_type_counts rows=%d at ts_utc=%s", len(rows), now)
 
     @task
     def write_counts_datasets_events_publications(graphs: list[str]):
-        now = datetime.now(timezone.utc).replace(microsecond=0)
+        now = iso_utc_now()
         rows = []
 
         for i, g in enumerate(graphs, start=1):
@@ -572,16 +578,16 @@ def dashboard():
             if i % 10 == 0:
                 log.info("Processed %d/%d graphs for ds/pub/event counts...", i, len(graphs))
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
-            cx.execute(text("TRUNCATE TABLE public.kg_content_counts"))
+            cx.execute(text("DELETE FROM kg_content_counts"))
 
-        pd.DataFrame(rows).to_sql("kg_content_counts", eng, schema="public", if_exists="append", index=False)
-        log.info("Wrote kg_content_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
+        pd.DataFrame(rows).to_sql("kg_content_counts", eng, if_exists="append", index=False)
+        log.info("Wrote kg_content_counts rows=%d at ts_utc=%s", len(rows), now)
 
     @task
     def write_datasets_list(graphs: list[str], limit_per_graph: int = 500):
-        now = datetime.now(timezone.utc).replace(microsecond=0)
+        now = iso_utc_now()
         rows = []
         types_values = " ".join(f"<{t}>" for t in DATASET_TYPES)
 
@@ -633,16 +639,16 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for datasets list...", i, len(graphs))
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
-            cx.execute(text("TRUNCATE TABLE public.kg_datasets"))
+            cx.execute(text("DELETE FROM kg_datasets"))
 
-        pd.DataFrame(rows).to_sql("kg_datasets", eng, schema="public", if_exists="append", index=False)
-        log.info("Wrote kg_datasets rows=%d at ts_utc=%s", len(rows), now.isoformat())
+        pd.DataFrame(rows).to_sql("kg_datasets", eng, if_exists="append", index=False)
+        log.info("Wrote kg_datasets rows=%d at ts_utc=%s", len(rows), now)
 
     @task
     def write_orgs_by_city(graphs: list[str], limit_per_graph: int = 200):
-        now = datetime.now(timezone.utc).replace(microsecond=0)
+        now = iso_utc_now()
         rows = []
 
         for i, g in enumerate(graphs, start=1):
@@ -674,16 +680,16 @@ def dashboard():
                     "org_count": int(_bval(b, "orgCount") or "0"),
                 })
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
-            cx.execute(text("TRUNCATE TABLE public.kg_org_city_counts"))
+            cx.execute(text("DELETE FROM kg_org_city_counts"))
 
-        pd.DataFrame(rows).to_sql("kg_org_city_counts", eng, schema="public", if_exists="append", index=False)
-        log.info("Wrote kg_org_city_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
+        pd.DataFrame(rows).to_sql("kg_org_city_counts", eng, if_exists="append", index=False)
+        log.info("Wrote kg_org_city_counts rows=%d at ts_utc=%s", len(rows), now)
 
     @task
     def write_top_orgs_by_people_affiliation(graphs: list[str], limit_per_graph: int = 50):
-        now = datetime.now(timezone.utc).replace(microsecond=0)
+        now = iso_utc_now()
         rows = []
 
         for i, g in enumerate(graphs, start=1):
@@ -715,124 +721,227 @@ def dashboard():
                     "people_count": int(_bval(b, "peopleCount") or "0"),
                 })
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
-            cx.execute(text("TRUNCATE TABLE public.kg_top_org_by_people"))
+            cx.execute(text("DELETE FROM kg_top_org_by_people"))
 
         if rows:
-            pd.DataFrame(rows).to_sql("kg_top_org_by_people", eng, schema="public", if_exists="append", index=False)
-            log.info("Wrote kg_top_org_by_people rows=%d at ts_utc=%s", len(rows), now.isoformat())
+            pd.DataFrame(rows).to_sql("kg_top_org_by_people", eng, if_exists="append", index=False)
+            log.info("Wrote kg_top_org_by_people rows=%d at ts_utc=%s", len(rows), now)
         else:
             log.warning("No org-by-people rows produced (affiliation predicate may differ).")
 
     @task
     def ensure_latest_views():
+        """
+        SQLite: no CREATE OR REPLACE VIEW, so we DROP + CREATE.
+        Also no DISTINCT ON -> use ROW_NUMBER().
+        """
         ddl = [
+            # graph stats latest
             """
-            CREATE OR REPLACE VIEW public.kg_graph_stats_latest AS
-            SELECT DISTINCT ON (graph)
-              graph, ts_utc, triples
-            FROM public.kg_graph_stats
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
-            ORDER BY graph, ts_utc DESC;
+            DROP VIEW IF EXISTS kg_graph_stats_latest;
             """,
             """
-            CREATE OR REPLACE VIEW public.kg_graph_subject_counts_latest AS
-            SELECT DISTINCT ON (graph)
-              graph, ts_utc, subjects
-            FROM public.kg_graph_subject_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
-            ORDER BY graph, ts_utc DESC;
+            CREATE VIEW kg_graph_stats_latest AS
+            SELECT graph, ts_utc, triples
+            FROM (
+              SELECT
+                graph, ts_utc, triples,
+                ROW_NUMBER() OVER (PARTITION BY graph ORDER BY ts_utc DESC) AS rn
+              FROM kg_graph_stats
+              WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
+            )
+            WHERE rn = 1;
+            """,
+
+            # subjects latest
+            """
+            DROP VIEW IF EXISTS kg_graph_subject_counts_latest;
             """,
             """
-            CREATE OR REPLACE VIEW public.kg_graph_class_counts_latest AS
-            SELECT DISTINCT ON (graph, class_iri)
-              graph, class_iri, class_label, ts_utc, instances
-            FROM public.kg_graph_class_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
-            ORDER BY graph, class_iri, ts_utc DESC;
+            CREATE VIEW kg_graph_subject_counts_latest AS
+            SELECT graph, ts_utc, subjects
+            FROM (
+              SELECT
+                graph, ts_utc, subjects,
+                ROW_NUMBER() OVER (PARTITION BY graph ORDER BY ts_utc DESC) AS rn
+              FROM kg_graph_subject_counts
+              WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
+            )
+            WHERE rn = 1;
+            """,
+
+            # class counts latest
+            """
+            DROP VIEW IF EXISTS kg_graph_class_counts_latest;
             """,
             """
-            CREATE OR REPLACE VIEW public.kg_graph_property_counts_latest AS
-            SELECT DISTINCT ON (graph, property_iri)
-              graph, property_iri, ts_utc, usage_count
-            FROM public.kg_graph_property_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
-            ORDER BY graph, property_iri, ts_utc DESC;
+            CREATE VIEW kg_graph_class_counts_latest AS
+            SELECT graph, class_iri, class_label, ts_utc, instances
+            FROM (
+              SELECT
+                graph, class_iri, class_label, ts_utc, instances,
+                ROW_NUMBER() OVER (PARTITION BY graph, class_iri ORDER BY ts_utc DESC) AS rn
+              FROM kg_graph_class_counts
+              WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
+            )
+            WHERE rn = 1;
+            """,
+
+            # property counts latest
+            """
+            DROP VIEW IF EXISTS kg_graph_property_counts_latest;
             """,
             """
-            CREATE OR REPLACE VIEW public.kg_sankey_class_property_latest AS
-            SELECT DISTINCT ON (graph, source_iri, target_iri)
-              graph,
-              source_iri, source_label,
-              target_iri, target_label,
-              ts_utc,
-              value
-            FROM public.kg_sankey_class_property
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
-            ORDER BY graph, source_iri, target_iri, ts_utc DESC;
+            CREATE VIEW kg_graph_property_counts_latest AS
+            SELECT graph, property_iri, ts_utc, usage_count
+            FROM (
+              SELECT
+                graph, property_iri, ts_utc, usage_count,
+                ROW_NUMBER() OVER (PARTITION BY graph, property_iri ORDER BY ts_utc DESC) AS rn
+              FROM kg_graph_property_counts
+              WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
+            )
+            WHERE rn = 1;
+            """,
+
+            # sankey latest
+            """
+            DROP VIEW IF EXISTS kg_sankey_class_property_latest;
             """,
             """
-            CREATE OR REPLACE VIEW public.kg_entity_type_counts_latest AS
-            SELECT DISTINCT ON (graph, concept_iri)
-              graph, concept_iri, concept_label, ts_utc, count
-            FROM public.kg_entity_type_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
-            ORDER BY graph, concept_iri, ts_utc DESC;
+            CREATE VIEW kg_sankey_class_property_latest AS
+            SELECT graph, source_iri, source_label, target_iri, target_label, ts_utc, value
+            FROM (
+              SELECT
+                graph, source_iri, source_label, target_iri, target_label, ts_utc, value,
+                ROW_NUMBER() OVER (PARTITION BY graph, source_iri, target_iri ORDER BY ts_utc DESC) AS rn
+              FROM kg_sankey_class_property
+              WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
+            )
+            WHERE rn = 1;
+            """,
+
+            # entity type latest
+            """
+            DROP VIEW IF EXISTS kg_entity_type_counts_latest;
             """,
             """
-            CREATE OR REPLACE VIEW public.kg_dataset_type_counts_latest AS
-            SELECT DISTINCT ON (graph, dataset_type_iri)
-              graph, dataset_type_iri, dataset_type_label, ts_utc, count
-            FROM public.kg_dataset_type_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
-            ORDER BY graph, dataset_type_iri, ts_utc DESC;
+            CREATE VIEW kg_entity_type_counts_latest AS
+            SELECT graph, concept_iri, concept_label, ts_utc, count
+            FROM (
+              SELECT
+                graph, concept_iri, concept_label, ts_utc, count,
+                ROW_NUMBER() OVER (PARTITION BY graph, concept_iri ORDER BY ts_utc DESC) AS rn
+              FROM kg_entity_type_counts
+              WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
+            )
+            WHERE rn = 1;
+            """,
+
+            # dataset type latest
+            """
+            DROP VIEW IF EXISTS kg_dataset_type_counts_latest;
             """,
             """
-            CREATE OR REPLACE VIEW public.kg_content_counts_latest AS
-            SELECT DISTINCT ON (graph)
-              graph, ts_utc, datasets, publications, events
-            FROM public.kg_content_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
-            ORDER BY graph, ts_utc DESC;
+            CREATE VIEW kg_dataset_type_counts_latest AS
+            SELECT graph, dataset_type_iri, dataset_type_label, ts_utc, count
+            FROM (
+              SELECT
+                graph, dataset_type_iri, dataset_type_label, ts_utc, count,
+                ROW_NUMBER() OVER (PARTITION BY graph, dataset_type_iri ORDER BY ts_utc DESC) AS rn
+              FROM kg_dataset_type_counts
+              WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
+            )
+            WHERE rn = 1;
+            """,
+
+            # content counts latest
+            """
+            DROP VIEW IF EXISTS kg_content_counts_latest;
             """,
             """
-            CREATE OR REPLACE VIEW public.kg_org_city_counts_latest AS
-            SELECT DISTINCT ON (graph, city_iri)
-              graph, city_iri, city_label, ts_utc, org_count
-            FROM public.kg_org_city_counts
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
-            ORDER BY graph, city_iri, ts_utc DESC;
+            CREATE VIEW kg_content_counts_latest AS
+            SELECT graph, ts_utc, datasets, publications, events
+            FROM (
+              SELECT
+                graph, ts_utc, datasets, publications, events,
+                ROW_NUMBER() OVER (PARTITION BY graph ORDER BY ts_utc DESC) AS rn
+              FROM kg_content_counts
+              WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
+            )
+            WHERE rn = 1;
+            """,
+
+            # org city latest
+            """
+            DROP VIEW IF EXISTS kg_org_city_counts_latest;
             """,
             """
-            CREATE OR REPLACE VIEW public.kg_top_org_by_people_latest AS
-            SELECT DISTINCT ON (graph, org_iri)
-              graph, org_iri, org_label, ts_utc, people_count
-            FROM public.kg_top_org_by_people
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
-            ORDER BY graph, org_iri, ts_utc DESC;
+            CREATE VIEW kg_org_city_counts_latest AS
+            SELECT graph, city_iri, city_label, ts_utc, org_count
+            FROM (
+              SELECT
+                graph, city_iri, city_label, ts_utc, org_count,
+                ROW_NUMBER() OVER (PARTITION BY graph, city_iri ORDER BY ts_utc DESC) AS rn
+              FROM kg_org_city_counts
+              WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
+            )
+            WHERE rn = 1;
+            """,
+
+            # top org by people latest
+            """
+            DROP VIEW IF EXISTS kg_top_org_by_people_latest;
             """,
             """
-            CREATE OR REPLACE VIEW public.kg_datasets_latest AS
-            SELECT DISTINCT ON (graph, dataset_iri)
-              graph, dataset_iri, title, creator, creator_affiliation, link, ts_utc
-            FROM public.kg_datasets
-            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
-            ORDER BY graph, dataset_iri, ts_utc DESC;
+            CREATE VIEW kg_top_org_by_people_latest AS
+            SELECT graph, org_iri, org_label, ts_utc, people_count
+            FROM (
+              SELECT
+                graph, org_iri, org_label, ts_utc, people_count,
+                ROW_NUMBER() OVER (PARTITION BY graph, org_iri ORDER BY ts_utc DESC) AS rn
+              FROM kg_top_org_by_people
+              WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
+            )
+            WHERE rn = 1;
+            """,
+
+            # datasets latest
+            """
+            DROP VIEW IF EXISTS kg_datasets_latest;
             """,
             """
-            CREATE OR REPLACE VIEW public.kg_top_concepts_latest AS
+            CREATE VIEW kg_datasets_latest AS
+            SELECT graph, dataset_iri, title, creator, creator_affiliation, link, ts_utc
+            FROM (
+              SELECT
+                graph, dataset_iri, title, creator, creator_affiliation, link, ts_utc,
+                ROW_NUMBER() OVER (PARTITION BY graph, dataset_iri ORDER BY ts_utc DESC) AS rn
+              FROM kg_datasets
+              WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
+            )
+            WHERE rn = 1;
+            """,
+
+            # top concepts latest (these rows already are "top 10 per graph" for the run, so just expose them)
+            """
+            DROP VIEW IF EXISTS kg_top_concepts_latest;
+            """,
+            """
+            CREATE VIEW kg_top_concepts_latest AS
             SELECT *
-            FROM public.kg_top_concepts
+            FROM kg_top_concepts
             WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%';
             """,
         ]
 
-        eng = pg_engine()
+        eng = engine()
         with eng.begin() as cx:
             for stmt in ddl:
                 cx.execute(text(stmt))
-        log.info("Ensured *_latest views exist")
+        log.info("Ensured *_latest views exist (SQLite)")
 
     graphs = list_mse_graphs()
     preflight_task = preflight()
@@ -850,7 +959,7 @@ def dashboard():
     t8 = write_datasets_list(graphs)
     t9 = write_orgs_by_city(graphs)
     t10 = write_top_orgs_by_people_affiliation(graphs)
-    t11 = write_top_concepts_top10(graphs)  
+    t11 = write_top_concepts_top10(graphs)
 
     [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11] >> ensure_latest_views()
 
