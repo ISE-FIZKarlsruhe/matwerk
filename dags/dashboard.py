@@ -144,7 +144,6 @@ def dashboard():
               value bigint NOT NULL
             );
             """,
-            # --- new
             """
             CREATE TABLE IF NOT EXISTS public.kg_entity_type_counts (
               ts_utc timestamptz NOT NULL,
@@ -201,6 +200,16 @@ def dashboard():
               people_count bigint NOT NULL
             );
             """,
+            """
+            CREATE TABLE IF NOT EXISTS public.kg_top_concepts (
+              ts_utc timestamptz NOT NULL,
+              graph text NOT NULL,
+              concept_iri text NOT NULL,
+              concept_label text,
+              count bigint NOT NULL,
+              rank int NOT NULL
+            );
+            """,
         ]
 
         eng = pg_engine()
@@ -223,7 +232,7 @@ def dashboard():
         js = sparql_json(q)
         graphs = [_bval(b, "g") for b in _bindings(js)]
         graphs = [g for g in graphs if g]
-        log.info("Found %d MSE graphs (first 20): %s", len(graphs), graphs[:20])
+        log.info("Found %d graphs (first 20): %s", len(graphs), graphs[:20])
         if not graphs:
             raise RuntimeError(f"No named graphs found with prefix {GRAPH_PREFIX}")
         return graphs
@@ -251,8 +260,9 @@ def dashboard():
 
         eng = pg_engine()
         with eng.begin() as cx:
-          cx.execute(text("TRUNCATE TABLE public.kg_graph_stats"))
-          cx.execute(text("TRUNCATE TABLE public.kg_graph_subject_counts"))
+            cx.execute(text("TRUNCATE TABLE public.kg_graph_stats"))
+            cx.execute(text("TRUNCATE TABLE public.kg_graph_subject_counts"))
+
         pd.DataFrame(rows_t).to_sql("kg_graph_stats", eng, schema="public", if_exists="append", index=False)
         pd.DataFrame(rows_s).to_sql("kg_graph_subject_counts", eng, schema="public", if_exists="append", index=False)
         log.info("Wrote triples/subjects for %d graphs at ts_utc=%s", len(graphs), now.isoformat())
@@ -292,8 +302,9 @@ def dashboard():
 
         eng = pg_engine()
         with eng.begin() as cx:
-          cx.execute(text("TRUNCATE TABLE public.kg_graph_class_counts"))
-        pd.DataFrame(rows).to_sql("kg_graph_class_counts", pg_engine(), schema="public", if_exists="append", index=False)
+            cx.execute(text("TRUNCATE TABLE public.kg_graph_class_counts"))
+
+        pd.DataFrame(rows).to_sql("kg_graph_class_counts", eng, schema="public", if_exists="append", index=False)
         log.info("Wrote graph-class counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -323,8 +334,9 @@ def dashboard():
 
         eng = pg_engine()
         with eng.begin() as cx:
-          cx.execute(text("TRUNCATE TABLE public.kg_graph_property_counts"))
-        pd.DataFrame(rows).to_sql("kg_graph_property_counts", pg_engine(), schema="public", if_exists="append", index=False)
+            cx.execute(text("TRUNCATE TABLE public.kg_graph_property_counts"))
+
+        pd.DataFrame(rows).to_sql("kg_graph_property_counts", eng, schema="public", if_exists="append", index=False)
         log.info("Wrote graph-property counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -368,7 +380,6 @@ def dashboard():
             LIMIT {int(limit_per_graph)}
             """
             js = sparql_json(q)
-
             for b in _bindings(js):
                 rows.append({
                     "ts_utc": now,
@@ -383,11 +394,12 @@ def dashboard():
             if i % 5 == 0:
                 log.info("Processed %d/%d graphs for labeled sankey edges...", i, len(graphs))
 
+        eng = pg_engine()
+        with eng.begin() as cx:
+            cx.execute(text("TRUNCATE TABLE public.kg_sankey_class_property"))
+
         if rows:
-            eng = pg_engine()
-            with eng.begin() as cx:
-              cx.execute(text("TRUNCATE TABLE public.kg_sankey_class_property"))
-            pd.DataFrame(rows).to_sql("kg_sankey_class_property", pg_engine(), schema="public", if_exists="append", index=False)
+            pd.DataFrame(rows).to_sql("kg_sankey_class_property", eng, schema="public", if_exists="append", index=False)
             log.info("Wrote kg_sankey_class_property rows=%d at ts_utc=%s", len(rows), now.isoformat())
         else:
             log.warning("No Sankey rows produced.")
@@ -427,9 +439,62 @@ def dashboard():
 
         eng = pg_engine()
         with eng.begin() as cx:
-          cx.execute(text("TRUNCATE TABLE public.kg_entity_type_counts"))
-        pd.DataFrame(rows).to_sql("kg_entity_type_counts", pg_engine(), schema="public", if_exists="append", index=False)
+            cx.execute(text("TRUNCATE TABLE public.kg_entity_type_counts"))
+
+        pd.DataFrame(rows).to_sql("kg_entity_type_counts", eng, schema="public", if_exists="append", index=False)
         log.info("Wrote kg_entity_type_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
+
+    @task
+    def write_top_concepts_top10(graphs: list[str], top_n: int = 10):
+        """
+        Top N concepts/classes per graph (bar chart ready).
+        Stores rank=1..N per graph.
+        """
+        now = datetime.now(timezone.utc).replace(microsecond=0)
+        rows = []
+
+        for i, g in enumerate(graphs, start=1):
+            q = f"""
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            SELECT ?Concept (SAMPLE(?label) AS ?label) (COUNT(?entity) AS ?count)
+            WHERE {{
+              GRAPH <{g}> {{ ?entity a ?Concept . }}
+              OPTIONAL {{
+                ?Concept rdfs:label ?label .
+                FILTER(lang(?label) = "" || langMatches(lang(?label), "en"))
+              }}
+            }}
+            GROUP BY ?Concept
+            ORDER BY DESC(?count)
+            LIMIT {int(top_n)}
+            """
+            js = sparql_json(q)
+            bs = _bindings(js)
+
+            for rank, b in enumerate(bs, start=1):
+                concept_iri = _bval(b, "Concept")
+                concept_label = _bval(b, "label")
+                rows.append({
+                    "ts_utc": now,
+                    "graph": g,
+                    "concept_iri": concept_iri,
+                    "concept_label": concept_label if concept_label else concept_iri,
+                    "count": int(_bval(b, "count") or "0"),
+                    "rank": rank,
+                })
+
+            if i % 10 == 0:
+                log.info("Processed %d/%d graphs for top concepts...", i, len(graphs))
+
+        eng = pg_engine()
+        with eng.begin() as cx:
+            cx.execute(text("TRUNCATE TABLE public.kg_top_concepts"))
+
+        if rows:
+            pd.DataFrame(rows).to_sql("kg_top_concepts", eng, schema="public", if_exists="append", index=False)
+            log.info("Wrote kg_top_concepts rows=%d at ts_utc=%s", len(rows), now.isoformat())
+        else:
+            log.warning("No kg_top_concepts rows produced (no rdf:type?)")
 
     @task
     def write_dataset_type_counts(graphs: list[str]):
@@ -466,8 +531,9 @@ def dashboard():
 
         eng = pg_engine()
         with eng.begin() as cx:
-          cx.execute(text("TRUNCATE TABLE public.kg_dataset_type_counts"))
-        pd.DataFrame(rows).to_sql("kg_dataset_type_counts", pg_engine(), schema="public", if_exists="append", index=False)
+            cx.execute(text("TRUNCATE TABLE public.kg_dataset_type_counts"))
+
+        pd.DataFrame(rows).to_sql("kg_dataset_type_counts", eng, schema="public", if_exists="append", index=False)
         log.info("Wrote kg_dataset_type_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -508,8 +574,9 @@ def dashboard():
 
         eng = pg_engine()
         with eng.begin() as cx:
-          cx.execute(text("TRUNCATE TABLE public.kg_content_counts"))
-        pd.DataFrame(rows).to_sql("kg_content_counts", pg_engine(), schema="public", if_exists="append", index=False)
+            cx.execute(text("TRUNCATE TABLE public.kg_content_counts"))
+
+        pd.DataFrame(rows).to_sql("kg_content_counts", eng, schema="public", if_exists="append", index=False)
         log.info("Wrote kg_content_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -533,11 +600,15 @@ def dashboard():
                   ?titleNode rdfs:label ?title .
                 }}
 
-                OPTIONAL {{ ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creator .
-                           ?creator rdfs:label ?creatorLabel . }}
+                OPTIONAL {{
+                  ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creator .
+                  ?creator rdfs:label ?creatorLabel .
+                }}
 
-                OPTIONAL {{ ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creatorAffiliation .
-                           ?creatorAffiliation rdfs:label ?creatorAffiliationLabel . }}
+                OPTIONAL {{
+                  ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creatorAffiliation .
+                  ?creatorAffiliation rdfs:label ?creatorAffiliationLabel .
+                }}
 
                 OPTIONAL {{
                   ?dataset <http://purl.obolibrary.org/obo/IAO_0000235> ?linkNode .
@@ -564,8 +635,9 @@ def dashboard():
 
         eng = pg_engine()
         with eng.begin() as cx:
-          cx.execute(text("TRUNCATE TABLE public.kg_datasets"))
-        pd.DataFrame(rows).to_sql("kg_datasets", pg_engine(), schema="public", if_exists="append", index=False)
+            cx.execute(text("TRUNCATE TABLE public.kg_datasets"))
+
+        pd.DataFrame(rows).to_sql("kg_datasets", eng, schema="public", if_exists="append", index=False)
         log.info("Wrote kg_datasets rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -582,7 +654,10 @@ def dashboard():
                 ?org a <{NFDI_ORG}> .
                 ?org <http://purl.obolibrary.org/obo/BFO_0000171> ?c .
                 ?c a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106> .
-                OPTIONAL {{ ?c rdfs:label ?cityLabel . FILTER(lang(?cityLabel) = "" || langMatches(lang(?cityLabel),"en")) }}
+                OPTIONAL {{
+                  ?c rdfs:label ?cityLabel .
+                  FILTER(lang(?cityLabel) = "" || langMatches(lang(?cityLabel),"en"))
+                }}
               }}
             }}
             GROUP BY ?c
@@ -601,8 +676,9 @@ def dashboard():
 
         eng = pg_engine()
         with eng.begin() as cx:
-          cx.execute(text("TRUNCATE TABLE public.kg_org_city_counts"))
-        pd.DataFrame(rows).to_sql("kg_org_city_counts", pg_engine(), schema="public", if_exists="append", index=False)
+            cx.execute(text("TRUNCATE TABLE public.kg_org_city_counts"))
+
+        pd.DataFrame(rows).to_sql("kg_org_city_counts", eng, schema="public", if_exists="append", index=False)
         log.info("Wrote kg_org_city_counts rows=%d at ts_utc=%s", len(rows), now.isoformat())
 
     @task
@@ -619,7 +695,10 @@ def dashboard():
                 ?person a <{NFDI_PERSON}> .
                 ?person <http://purl.obolibrary.org/obo/BFO_0000057> ?org .
                 ?org a <{NFDI_ORG}> .
-                OPTIONAL {{ ?org rdfs:label ?orgLabel . FILTER(lang(?orgLabel) = "" || langMatches(lang(?orgLabel),"en")) }}
+                OPTIONAL {{
+                  ?org rdfs:label ?orgLabel .
+                  FILTER(lang(?orgLabel) = "" || langMatches(lang(?orgLabel),"en"))
+                }}
               }}
             }}
             GROUP BY ?org
@@ -636,11 +715,12 @@ def dashboard():
                     "people_count": int(_bval(b, "peopleCount") or "0"),
                 })
 
+        eng = pg_engine()
+        with eng.begin() as cx:
+            cx.execute(text("TRUNCATE TABLE public.kg_top_org_by_people"))
+
         if rows:
-            eng = pg_engine()
-            with eng.begin() as cx:
-              cx.execute(text("TRUNCATE TABLE public.kg_top_org_by_people"))
-            pd.DataFrame(rows).to_sql("kg_top_org_by_people", pg_engine(), schema="public", if_exists="append", index=False)
+            pd.DataFrame(rows).to_sql("kg_top_org_by_people", eng, schema="public", if_exists="append", index=False)
             log.info("Wrote kg_top_org_by_people rows=%d at ts_utc=%s", len(rows), now.isoformat())
         else:
             log.warning("No org-by-people rows produced (affiliation predicate may differ).")
@@ -692,7 +772,6 @@ def dashboard():
             WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, source_iri, target_iri, ts_utc DESC;
             """,
-
             """
             CREATE OR REPLACE VIEW public.kg_entity_type_counts_latest AS
             SELECT DISTINCT ON (graph, concept_iri)
@@ -741,6 +820,12 @@ def dashboard():
             WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%'
             ORDER BY graph, dataset_iri, ts_utc DESC;
             """,
+            """
+            CREATE OR REPLACE VIEW public.kg_top_concepts_latest AS
+            SELECT *
+            FROM public.kg_top_concepts
+            WHERE graph LIKE 'https://nfdi.fiz-karlsruhe.de/matwerk%';
+            """,
         ]
 
         eng = pg_engine()
@@ -759,15 +844,15 @@ def dashboard():
     t2 = write_graph_class_counts(graphs)
     t3 = write_graph_property_counts(graphs)
     t4 = write_sankey_class_property_labeled(graphs)
-
     t5 = write_entity_type_counts(graphs)
     t6 = write_dataset_type_counts(graphs)
     t7 = write_counts_datasets_events_publications(graphs)
     t8 = write_datasets_list(graphs)
     t9 = write_orgs_by_city(graphs)
     t10 = write_top_orgs_by_people_affiliation(graphs)
+    t11 = write_top_concepts_top10(graphs)  
 
-    [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10] >> ensure_latest_views()
+    [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11] >> ensure_latest_views()
 
 
 dashboard()
