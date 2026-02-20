@@ -40,6 +40,7 @@ PUBLISH_SOURCES = [
     schedule=None,
     catchup=False,
     dag_id=DAG_ID,
+    tags=["matwerk"],
 )
 def publish_to_virtuoso():
 

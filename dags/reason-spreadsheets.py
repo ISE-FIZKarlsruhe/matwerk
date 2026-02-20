@@ -20,6 +20,7 @@ DEFAULT_IN_TTL = "spreadsheets_asserted.ttl"
     schedule=None,
     catchup=False,
     dag_id=DAG_ID,
+    tags=["matwerk"],
 )
 def reason():
 

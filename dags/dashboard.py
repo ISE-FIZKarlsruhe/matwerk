@@ -65,11 +65,11 @@ def _bval(b: dict, key: str) -> str | None:
 def engine():
     """
     For SQLite use a file path that Airflow can write to.
-    Example Variable kg_metrics_pg_dsn:
+    Example Variable matwerk_dashboard_db:
       sqlite:////data/dashboard/kg_metrics.db
     or mounted volume path.
     """
-    dsn = Variable.get("kg_metrics_pg_dsn")
+    dsn = Variable.get("matwerk_dashboard_db")
 
     db_path = urlparse(dsn).path
     if db_path:
@@ -89,12 +89,13 @@ def iso_utc_now() -> str:
     dag_id="dashboard",
     schedule="0 0 * * *",
     catchup=False,
+    tags=["matwerk"],
 )
 def dashboard():
 
     @task
     def preflight():
-        for n in ["matwerk-virtuoso_sparql", "matwerk-virtuoso_user", "matwerk-virtuoso_pass", "kg_metrics_pg_dsn"]:
+        for n in ["matwerk-virtuoso_sparql", "matwerk-virtuoso_user", "matwerk-virtuoso_pass", "matwerk_dashboard_db"]:
             v = Variable.get(n)
             log.info("Variable %s present=%s", n, v is not None)
 

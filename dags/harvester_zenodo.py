@@ -26,6 +26,7 @@ OUTPUT = "zenodo.ttl"
     dag_id=DAG_ID,
     start_date=datetime(2024, 1, 1),
     schedule="@weekly",
+    tags=["matwerk"],
 )
 def harvester_zenodo():
 

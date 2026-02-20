@@ -20,6 +20,7 @@ LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_successful_merge_run"
     schedule=None,
     catchup=False,
     dag_id=DAG_ID,
+    tags=["matwerk"],
 )
 def merge():
     @task

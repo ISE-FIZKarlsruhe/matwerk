@@ -29,6 +29,7 @@ DEFAULT_ARTIFACT = "spreadsheets"
     schedule=None,
     catchup=False,
     dag_id=DAG_ID,
+    tags=["matwerk"],
 )
 def validation_checks():
 

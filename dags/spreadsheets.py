@@ -22,7 +22,7 @@ All outputs are written into:
 @dag(
     schedule=None,
     catchup=False,
-    tags=["kg", "spreadsheets", "production"],
+    tags=["matwerk"],
 )
 def process_spreadsheets():
 
