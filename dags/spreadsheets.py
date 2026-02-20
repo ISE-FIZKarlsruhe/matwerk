@@ -9,6 +9,7 @@ from airflow.providers.standard.operators.python import PythonOperator
 from airflow.providers.standard.operators.empty import EmptyOperator
 
 SUCCESFULL_RUN_VARIABLE_NAME = "matwerk_last_successful_spreadsheet_run"
+DAG_ID = "process_spreadsheets"
 
 """
 Airflow DAG: process_spreadsheets
@@ -22,6 +23,7 @@ All outputs are written into:
 @dag(
     schedule=None,
     catchup=False,
+    dag_id=DAG_ID,
     tags=["matwerk"],
 )
 def process_spreadsheets():
