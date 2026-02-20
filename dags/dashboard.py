@@ -2,7 +2,8 @@ from __future__ import annotations
 
 import logging
 from datetime import datetime, timezone
-
+from pathlib import Path
+from urllib.parse import urlparse
 import pandas as pd
 import requests
 from requests.auth import HTTPDigestAuth
@@ -33,16 +34,10 @@ DATASET_TYPES = [
 # Helpers
 # ---------------------------
 
-def _get_var(name: str) -> str:
-    v = Variable.get(name)
-    if v is None or str(v).strip() == "":
-        raise ValueError(f"Airflow Variable '{name}' is missing/empty")
-    return str(v)
-
 def sparql_json(query: str) -> dict:
-    vsparql = _get_var("matwerk-virtuoso_sparql")
-    vuser = _get_var("matwerk-virtuoso_user")
-    vpass = _get_var("matwerk-virtuoso_pass")
+    vsparql = Variable.get("matwerk-virtuoso_sparql")
+    vuser = Variable.get("matwerk-virtuoso_user")
+    vpass = Variable.get("matwerk-virtuoso_pass")
     auth = HTTPDigestAuth(vuser, vpass)
 
     log.info("SPARQL endpoint: %s", vsparql)
@@ -71,15 +66,19 @@ def engine():
     """
     For SQLite use a file path that Airflow can write to.
     Example Variable kg_metrics_pg_dsn:
-      sqlite:////tmp/kg_metrics.db
+      sqlite:////data/dashboard/kg_metrics.db
     or mounted volume path.
     """
-    dsn = _get_var("kg_metrics_pg_dsn")
+    dsn = Variable.get("kg_metrics_pg_dsn")
+
+    db_path = urlparse(dsn).path
+    if db_path:
+        parent = Path(db_path).parent
+        parent.mkdir(parents=True, exist_ok=True)
     return create_engine(dsn, pool_pre_ping=True)
 
 def iso_utc_now() -> str:
-    # ISO string sorts correctly as TEXT, e.g. 2026-02-19T15:42:00+00:00
-    return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+    return datetime.now(timezone.utc).replace(microsecond=0).strftime("%Y-%m-%d %H:%M:%S")
 
 
 # ---------------------------
