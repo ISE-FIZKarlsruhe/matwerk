@@ -8,6 +8,7 @@ import pandas as pd
 import requests
 from requests.auth import HTTPDigestAuth
 from sqlalchemy import create_engine, text
+from sqlalchemy.engine import make_url
 
 from airflow.sdk import dag, task, Variable
 
@@ -62,19 +63,17 @@ def _bval(b: dict, key: str) -> str | None:
     v = b.get(key)
     return v.get("value") if isinstance(v, dict) else None
 
-def engine():
-    """
-    For SQLite use a file path that Airflow can write to.
-    Example Variable matwerk_dashboard_db:
-      sqlite:////data/dashboard/kg_metrics.db
-    or mounted volume path.
-    """
-    dsn = Variable.get("matwerk_dashboard_db")
 
-    db_path = urlparse(dsn).path
-    if db_path:
-        parent = Path(db_path).parent
-        parent.mkdir(parents=True, exist_ok=True)
+def engine():
+    dsn = Variable.get("matwerk_dashboard_db")
+    url = make_url(dsn)
+
+    # Create parent directory only for file-based sqlite DBs
+    if url.drivername.startswith("sqlite") and url.database:
+      db_file = Path(url.database)
+      db_file.parent.mkdir(parents=True, exist_ok=True)
+      log.info("Ensured SQLite directory exists: %s", db_file.parent)
+
     return create_engine(dsn, pool_pre_ping=True)
 
 def iso_utc_now() -> str:
