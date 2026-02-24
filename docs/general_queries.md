@@ -144,7 +144,7 @@ LIMIT 999
 ### What are the organizations present in the MSE-KG? What are the acronym, city, rorID of these organizations?
 
 ```sparql
-PREFIX nfdicore_organization: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>
+PREFIX organization: <http://purl.obolibrary.org/obo/OBI_0000245>
 PREFIX located_in:            <http://purl.obolibrary.org/obo/BFO_0000171>
 PREFIX nfdicore_city:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106>
 PREFIX denoted_by:          <http://purl.obolibrary.org/obo/IAO_0000235>
@@ -155,7 +155,7 @@ PREFIX rdfs:                  <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?org ?label_en ?acronym ?city ?rorID WHERE {
 
-  ?org a nfdicore_organization: .
+  ?org a organization: .
   OPTIONAL { ?org rdfs:label ?label_en . }
 
   OPTIONAL {
@@ -219,7 +219,7 @@ PREFIX denoted_by:          <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX nfdicore_title:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
 PREFIX has_url:             <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
 PREFIX participant:           <http://purl.obolibrary.org/obo/BFO_0000057>
-PREFIX nfdicore_organization: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>
+PREFIX organization: <http://purl.obolibrary.org/obo/OBI_0000245>
 PREFIX nfdicore_consortium:   <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000006>
 PREFIX rdfs:                  <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -243,7 +243,7 @@ SELECT DISTINCT ?event ?contributionLabel ?eventURL ?orgLabel ?consortiumLabel W
   # Associated organization
   OPTIONAL {
     ?event participant: ?org .
-    ?org a nfdicore_organization: ;
+    ?org a organization: ;
          rdfs:label ?orgLabel .
   }
 
@@ -502,7 +502,7 @@ PREFIX abbreviation_textual_entity:         <http://purl.obolibrary.org/obo/IAO_
 PREFIX is_output_of:    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023>
 PREFIX participant:           <http://purl.obolibrary.org/obo/BFO_0000057>
 PREFIX has_role:              <http://purl.obolibrary.org/obo/BFO_0000055>
-PREFIX nfdicore_organization: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003>
+PREFIX organization: <http://purl.obolibrary.org/obo/OBI_0000245>
 PREFIX nfdicore_providerrole: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000230>
 PREFIX email_address:         <http://purl.obolibrary.org/obo/IAO_0000429>
 PREFIX has_value:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
@@ -532,7 +532,7 @@ WHERE {
                    has_role: ?Role .
 
     OPTIONAL {
-      ?org a nfdicore_organization: ;
+      ?org a organization: ;
            rdfs:label ?orgLabel .
     }
 
