@@ -218,7 +218,7 @@ PREFIX nfdicore_event:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_00000
 PREFIX denoted_by:          <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX nfdicore_title:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
 PREFIX has_url:             <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
-PREFIX participant:           <http://purl.obolibrary.org/obo/BFO_0000057>
+PREFIX participant:           <http://purl.obolibrary.org/obo/RO_0000057>
 PREFIX organization: <http://purl.obolibrary.org/obo/OBI_0000245>
 PREFIX nfdicore_consortium:   <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000006>
 PREFIX rdfs:                  <http://www.w3.org/2000/01/rdf-schema#>
@@ -394,7 +394,7 @@ PREFIX nfdicore_title:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_000101
 PREFIX has_value:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
 PREFIX has_url:            <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
 PREFIX participates_in:      <http://purl.obolibrary.org/obo/BFO_0000056>
-PREFIX participant:          <http://purl.obolibrary.org/obo/BFO_0000057>
+PREFIX participant:          <http://purl.obolibrary.org/obo/RO_0000057>
 PREFIX has_role:             <http://purl.obolibrary.org/obo/BFO_0000055>
 PREFIX written_name:        <http://purl.obolibrary.org/obo/IAO_0000590>
 PREFIX email_address:        <http://purl.obolibrary.org/obo/IAO_0000429>
@@ -444,10 +444,9 @@ LIMIT 999
 ```sparql
 PREFIX pmd_instrument:    <https://w3id.org/pmd/co/PMD_0000602>
 PREFIX denoted_by:      <http://purl.obolibrary.org/obo/IAO_0000235>
-PREFIX nfdicore_title:    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
 PREFIX has_value:     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
 PREFIX participates_in:   <http://purl.obolibrary.org/obo/BFO_0000056>
-PREFIX participant:       <http://purl.obolibrary.org/obo/BFO_0000057>
+PREFIX participant:       <http://purl.obolibrary.org/obo/RO_0000057>
 PREFIX has_role:          <http://purl.obolibrary.org/obo/BFO_0000055>
 PREFIX written_name:     <http://purl.obolibrary.org/obo/IAO_0000590>
 PREFIX email_address:     <http://purl.obolibrary.org/obo/IAO_0000429>
@@ -461,8 +460,7 @@ WHERE {
 
   OPTIONAL {
     ?instrument denoted_by: ?instrumentNode .
-    ?instrumentNode a nfdicore_title: ;
-                    rdfs:label ?name .
+    ?instrumentNode rdfs:label ?name . 
   }
 
   OPTIONAL {
@@ -470,22 +468,24 @@ WHERE {
     ?contactingProcess participant: ?contactpoint ;
                       has_role: ?contactpointRole .
 
-    ?contactpoint denoted_by: ?contactpointNode .
-    }
     OPTIONAL {
+      ?contactpoint denoted_by: ?contactpointNode .
       ?contactpointNode a written_name: ;
                         has_value: ?contactpointName .
     }
 
-    ?contactpointRole denoted_by: ?EmailWebsite .
     OPTIONAL {
+      ?contactpointRole denoted_by: ?EmailWebsite .
       ?EmailWebsite a email_address: ;
                     has_value: ?Email .
     }
+
     OPTIONAL {
-      ?EmailWebsite a nfdicore_website: ;
-                    has_url: ?Website .
+      ?contactpointRole denoted_by: ?EmailWebsite2 .
+      ?EmailWebsite2 a nfdicore_website: ;
+                     has_url: ?Website .
     }
+  }
 }
 LIMIT 999
 ```
@@ -499,8 +499,8 @@ PREFIX nfdicore_large_scale_facility:          <https://nfdi.fiz-karlsruhe.de/on
 PREFIX denoted_by:          <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX written_name:        <http://purl.obolibrary.org/obo/IAO_0000590>
 PREFIX abbreviation_textual_entity:         <http://purl.obolibrary.org/obo/IAO_0000605>
-PREFIX is_output_of:    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001023>
-PREFIX participant:           <http://purl.obolibrary.org/obo/BFO_0000057>
+PREFIX is_output_of:    <http://purl.obolibrary.org/obo/OBI_0000312>
+PREFIX participant:           <http://purl.obolibrary.org/obo/RO_0000057>
 PREFIX has_role:              <http://purl.obolibrary.org/obo/BFO_0000055>
 PREFIX organization: <http://purl.obolibrary.org/obo/OBI_0000245>
 PREFIX nfdicore_providerrole: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000230>

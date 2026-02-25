@@ -698,7 +698,7 @@ def dashboard():
             WHERE {{
               GRAPH <{g}> {{
                 ?person a <{NFDI_PERSON}> .
-                ?person <http://purl.obolibrary.org/obo/BFO_0000057> ?org .
+                ?person <http://purl.obolibrary.org/obo/RO_0000057> ?org .
                 ?org a <{NFDI_ORG}> .
                 OPTIONAL {{
                   ?org rdfs:label ?orgLabel .
