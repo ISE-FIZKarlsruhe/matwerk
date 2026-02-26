@@ -67,7 +67,7 @@ def reason():
         in_path = os.path.join(DATA_DIR, in_filtered)
         out_path = os.path.join(DATA_DIR, out_owl)
 
-        cmd = f"{REASONER} extract -s \"PropertyAssertion SubPropertyOf InverseProperties\" '{in_path}' > '{out_path}'"
+        cmd = f"{REASONER} extract -s \"PropertyAssertion SubPropertyOf InverseProperties SubClassOf ClassAssertion\" '{in_path}' > '{out_path}'"
         return cmd.replace(DATA_DIR, XCOM_DATADIR)
 
     def robotConvertCmdTemplate() -> str:
