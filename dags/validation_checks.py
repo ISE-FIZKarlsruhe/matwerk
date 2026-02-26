@@ -308,9 +308,19 @@ def validation_checks():
         merged_ttl = os.path.join(DATA_DIR, merged_name)
 
         explain_md = os.path.join(DATA_DIR, "validation", "hermit_inconsistency.md")
-
+        ru = os.path.join(DATA_DIR, "validation", "hermit_sanitize.ru")
         cmd = (
             f"mkdir -p '{os.path.join(DATA_DIR, 'validation')}'\n"
+            # removing owl:topDataProperty rdfs:subPropertyOf owl:topDataProperty
+            f"cat > '{ru}' << 'SPARQL'\n"
+            "PREFIX owl:  <http://www.w3.org/2002/07/owl#>\n"
+            "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
+            "DELETE WHERE {\n"
+            "  owl:topDataProperty rdfs:subPropertyOf owl:topDataProperty .\n"
+            "};\n"
+            "SPARQL\n"
+            f"{ROBOT} query --input '{merged_ttl}' --update '{ru}' --output '{merged_ttl}'\n"
+        
             f"{ROBOT} explain --reasoner hermit --input '{merged_ttl}' "
             f"-M inconsistency --explanation '{explain_md}'"
         )
