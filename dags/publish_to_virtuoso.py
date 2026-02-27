@@ -31,9 +31,9 @@ PUBLISH_SOURCES = [
     ("spreadsheets_assertions", "matwerk_last_successful_merge_run", "spreadsheets_asserted.ttl"),
     ("spreadsheets_inferences", "matwerk_last_successful_reason_run", "spreadsheets_inferences.ttl"),
     ("spreadsheets_validated", "matwerk_last_successful_validated_run", "spreadsheets_merged_for_validation.ttl"),
-    ("zenodo_validated", "matwerk_last_successful_harvester_zenodo_run", "zenodo.ttl"),
-    ("endpoints_validated", "matwerk_last_successful_harvester_endpoints_run", "dataset_stats.ttl"),
-    ("harvester_pmd", "matwerk_last_successful_harvester_pmd_run", "pmd_asserted.ttl"),
+    ("zenodo_validated", "matwerk_last_successful_harvester_zenodo_run", "zenodo_merged_for_validation.ttl"),
+    ("endpoints_validated", "matwerk_last_successful_harvester_endpoints_run", "endpoints_merged_for_validation.ttl"),
+    ("pmd_validated", "matwerk_last_successful_harvester_pmd_run", "pmd_merged_for_validation.ttl"),
 ]
 
 
