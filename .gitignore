@@ -32,6 +32,8 @@ Thumbs.db
 /output/*
 /logs/*
 /server/*
+/dags/pmd_harvester/harvest_output
+/dags/pmd_harvester/robot_templates
 # Ignore documentation and site builds
 /site/
 public/
