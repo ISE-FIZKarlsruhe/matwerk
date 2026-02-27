@@ -1,20 +1,21 @@
+# dags/pmd_harvester/template_builder.py
+from __future__ import annotations
+
+import argparse
 import csv
 import os
 import re
 import uuid
-import zipfile
 from datetime import datetime
 
-# =========================
-# CONFIG
-# =========================
-IN_CSV = "harvest_output/full_metadata.csv"
-OUT_DIR = "robot_templates"
-BASE_IRI = "https://nfdi.fiz-karlsruhe.de/matwerk/msekg/"
-NS = uuid.UUID("12345678-1234-5678-1234-567812345678")  # keep constant across runs
+
+# defaults (can be overridden by args)
+DEFAULT_BASE_IRI = "https://nfdi.fiz-karlsruhe.de/matwerk/msekg/"
+DEFAULT_NS = uuid.UUID("12345678-1234-5678-1234-567812345678")
+
 
 # =========================
-# IRIs
+# IRIs (unchanged)
 # =========================
 RDFS_LABEL = "http://www.w3.org/2000/01/rdf-schema#label"
 RDFS_COMMENT = "http://www.w3.org/2000/01/rdf-schema#comment"
@@ -28,13 +29,11 @@ IAO_WRITTEN_NAME = "http://purl.obolibrary.org/obo/IAO_0000590"
 BFO_HAS_CONTRIBUTOR = "http://purl.obolibrary.org/obo/BFO_0000178"
 BFO_PARTICIPATES_IN = "http://purl.obolibrary.org/obo/BFO_0000056"
 
-# Process–agent–role pattern
 RO_HAS_PARTICIPANT = "http://purl.obolibrary.org/obo/RO_0000057"
-BFO_REALIZES = "http://purl.obolibrary.org/obo/BFO_0000055"
+BFO_REALISES = "http://purl.obolibrary.org/obo/BFO_0000055"
 BFO_OCCUPIES_TEMPORAL_REGION = "http://purl.obolibrary.org/obo/BFO_0000199"
 BFO_INHERES_IN = "http://purl.obolibrary.org/obo/BFO_0000197"
 
-# NFDI
 NFDI_DATASET = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"
 NFDI_TITLE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"
 NFDI_PERSON = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"
@@ -42,24 +41,18 @@ NFDI_HAS_VALUE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007"
 NFDI_HAS_URL = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008"
 NFDI_WEBSITE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"
 
-# License (your requirement)
 NFDI_HAS_LICENSE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142"
 SWO_LICENSE = "http://www.ebi.ac.uk/swo/SWO_0000002"
 
-# Publishing classes
 NFDI_DATASET_PUBLISHING_PROCESS = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014"
 NFDI_CONTACT_POINT = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"
 NFDI_CONTACT_POINT_ROLE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114"
 NFDI_STANDARD_PROP = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207"
 
-# Other
 OBI_ORG = "http://purl.obolibrary.org/obo/OBI_0000245"
 BFO_TEMPORAL_REGION = "http://purl.obolibrary.org/obo/BFO_0000008"
 
 
-# =========================
-# HELPERS
-# =========================
 def sanitize(s):
     if s is None:
         return ""
@@ -79,7 +72,6 @@ def clean_person_name(raw: str) -> str:
     raw = sanitize(raw)
     if not raw:
         return ""
-    # remove leading markers like "(a) " or "(b,c) "
     raw = re.sub(r"^\(?[A-Za-z](?:\s*,\s*[A-Za-z])*\)?\)?\s*", "", raw)
     return sanitize(raw)
 
@@ -92,10 +84,6 @@ def name_to_given_family(full_name: str):
     if len(tokens) == 1:
         return tokens[0], ""
     return " ".join(tokens[:-1]), tokens[-1]
-
-
-def mint(key: str) -> str:
-    return BASE_IRI + str(uuid.uuid5(NS, key))
 
 
 def parse_date_mmddyyyy(s: str) -> str:
@@ -120,27 +108,27 @@ def write_tsv(path, header, template_row, rows):
             w.writerow([r.get(col, "") for col in header])
 
 
-# =========================
-# MAIN
-# =========================
-def main():
-    os.makedirs(OUT_DIR, exist_ok=True)
+def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UUID = DEFAULT_NS):
+    os.makedirs(out_dir, exist_ok=True)
+
+    def mint(key: str) -> str:
+        return base_iri + str(uuid.uuid5(ns, key))
 
     orgs = {}
     titles = {}
-    licenses = {}  # license_iri -> label/value
+    licenses = {}
 
-    people = {}        # person_iri -> {label, denoted_by[]}
-    emails = {}        # email_iri -> email
+    people = {}
+    emails = {}
     given_names = {}
     family_names = {}
-    written_names = {} # wn_iri -> full name
-    websites = {}      # url_iri -> url
+    written_names = {}
+    websites = {}
 
-    publ_processes = {}  # proc_iri -> row dict
-    publ_agents = {}     # agent_iri -> row dict
-    publ_roles = {}      # role_iri -> row dict
-    publ_dates = {}      # date_iri -> date literal
+    publ_processes = {}
+    publ_agents = {}
+    publ_roles = {}
+    publ_dates = {}
 
     datasets = []
 
@@ -149,7 +137,7 @@ def main():
         if not email:
             return ""
         eiri = mint(email.lower().strip())
-        emails[eiri] = email
+        emails[eiri] = mint(email)
         return eiri
 
     def ensure_url(url: str) -> str:
@@ -171,8 +159,7 @@ def main():
     def ensure_person(name: str, email: str, role: str) -> str:
         name = clean_person_name(name)
         email = sanitize(email)
-
-        key = (email.lower().strip() if email else f"{name}|{role}").strip()
+        key = (f"{name}|{role}").strip()
         if not key:
             return ""
         person_iri = mint(key)
@@ -212,14 +199,6 @@ def main():
 
     def build_publishing_pattern(ds_iri: str, ds_label: str, created: str,
                                 publisher_name: str, publisher_email: str, publisher_uri: str) -> str:
-        """
-        Creates/updates:
-          - one publishing process per dataset
-          - contact point agent(s)
-          - contact point role(s) per dataset+agent
-          - publishing date node per dataset (from metadata_created)
-        Returns process IRI.
-        """
         proc_iri = mint(ds_iri + "/publishing-process")
         date_iri = mint(ds_iri + "/publishing-date")
 
@@ -241,10 +220,7 @@ def main():
         if not (sanitize(publisher_name) or sanitize(publisher_email) or sanitize(publisher_uri)):
             return proc_iri
 
-        # ContactPoint agent (reuse across datasets by stable key)
-        agent_key = (sanitize(publisher_email).lower().strip()
-                     if sanitize(publisher_email)
-                     else sanitize(publisher_name).strip() or sanitize(publisher_uri).strip())
+        agent_key = (sanitize(publisher_name).strip() or sanitize(publisher_uri).strip())
         agent_iri = mint(agent_key)
         wn_iri = ensure_written_name(publisher_name or publisher_email or agent_key, agent_iri)
 
@@ -256,7 +232,6 @@ def main():
                 "denoted_by_written_name": wn_iri,
             }
 
-        # Role is dataset-contextual (per process+agent)
         role_iri = mint(proc_iri + "/" + agent_iri)
 
         publ_roles[role_iri] = {
@@ -269,9 +244,10 @@ def main():
             "inheres_in": agent_iri,
         }
 
-        # Attach agent+role to process
         proc = publ_processes[proc_iri]
         participants = [p for p in proc["has_participant"].split("|") if p] if proc["has_participant"] else []
+        roles = [p for p in proc["realises_role"].split(",") if p] if proc.get("realises_role") else []
+        # NOTE: you used "realizes_role" previously; keep consistent with your TSV header below:
         roles = [p for p in proc["realizes_role"].split(",") if p] if proc["realizes_role"] else []
 
         if agent_iri not in participants:
@@ -284,49 +260,38 @@ def main():
 
         return proc_iri
 
-    # -------------------------
-    # Read CSV + build rows
-    # -------------------------
-    with open(IN_CSV, "r", encoding="utf-8", newline="") as f:
+    with open(in_csv, "r", encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f)
         for r in reader:
             ds_id = sanitize(r.get("id", ""))
             if not ds_id:
                 continue
 
-            ds_iri = BASE_IRI + ds_id
+            ds_iri = base_iri + ds_id
             title = sanitize(r.get("title", ""))
             desc = sanitize(r.get("description", ""))
             created = sanitize(r.get("metadata_created", ""))
 
-            # title node for denoted_by
             title_node = ""
             if title:
                 title_node = mint(ds_iri + "/title")
                 titles[title_node] = title
 
-            # org
             org_id = sanitize(r.get("organization_id", ""))
             org_iri = ""
             if org_id:
-                org_iri = BASE_IRI + org_id
+                org_iri = base_iri + org_id
                 if org_iri not in orgs:
                     orgs[org_iri] = {
                         "label": sanitize(r.get("organization_title", "")) or org_id,
                         "desc": sanitize(r.get("organization_description", "")),
                     }
 
-            # license node
-            license_iri = ensure_license(
-                r.get("license_id", ""),
-                r.get("license_title", "")  # if you add it later
-            )
+            license_iri = ensure_license(r.get("license_id", ""), r.get("license_title", ""))
 
-            # resource URLs as literals
             resource_urls = [sanitize(u) for u in split_semicolon(r.get("resource_urls", ""))]
             url_joined = ";".join([u for u in resource_urls if u])
 
-            # people from contact/contributor
             contributors = []
             for role, nfield, efield in [
                 ("contact", "contact_name", "contact_email"),
@@ -345,10 +310,8 @@ def main():
                 contributors.append(org_iri)
             contributors = sorted(set([c for c in contributors if c]))
 
-            # always create base process+date
             build_publishing_pattern(ds_iri, title, created, "", "", "")
 
-            # create publisher-based process-agent-role
             pub_names = split_semicolon(r.get("publisher_name", ""))
             pub_emails = split_semicolon(r.get("publisher_email", ""))
             pub_uris = split_semicolon(r.get("publisher_uri", ""))
@@ -372,17 +335,12 @@ def main():
                 "has_url": url_joined,
             })
 
-    # de-dupe denoted_by lists
     for piri, pdata in people.items():
         pdata["denoted_by"] = sorted(set([x for x in pdata["denoted_by"] if x]))
 
-    # =========================
-    # WRITE TSVs
-    # =========================
-
-    # datasets.tsv (license + publishing process links)
+    # TSVs
     write_tsv(
-        os.path.join(OUT_DIR, "datasets.tsv"),
+        os.path.join(out_dir, "datasets.tsv"),
         ["ID","TYPE","label","denoted_by_title","description","license","publishing_process","has_contributor","has_url"],
         [
             "ID","TYPE",
@@ -397,102 +355,92 @@ def main():
         datasets
     )
 
-    # titles.tsv
     write_tsv(
-        os.path.join(OUT_DIR, "titles.tsv"),
+        os.path.join(out_dir, "titles.tsv"),
         ["ID","TYPE","label","value"],
         ["ID","TYPE", f"A {RDFS_LABEL}", f"A {NFDI_HAS_VALUE}"],
         [{"ID": iri, "TYPE": NFDI_TITLE, "label": val, "value": val} for iri, val in titles.items()]
     )
 
-    # organizations.tsv
     write_tsv(
-        os.path.join(OUT_DIR, "organizations.tsv"),
+        os.path.join(out_dir, "organizations.tsv"),
         ["ID","TYPE","label","description"],
         ["ID","TYPE", f"A {RDFS_LABEL}", f"A {RDFS_COMMENT}"],
         [{"ID": iri, "TYPE": OBI_ORG, "label": v["label"], "description": v["desc"]} for iri, v in orgs.items()]
     )
 
-    # persons.tsv
     write_tsv(
-        os.path.join(OUT_DIR, "persons.tsv"),
+        os.path.join(out_dir, "persons.tsv"),
         ["ID","TYPE","label","denoted_by"],
         ["ID","TYPE", f"A {RDFS_LABEL}", f"I {IAO_DENOTED_BY} SPLIT=;"],
         [{"ID": iri, "TYPE": NFDI_PERSON, "label": v["label"], "denoted_by": ";".join(v["denoted_by"])} for iri, v in people.items()]
     )
 
-    # emails.tsv
     write_tsv(
-        os.path.join(OUT_DIR, "emails.tsv"),
+        os.path.join(out_dir, "emails.tsv"),
         ["ID","TYPE","label","value"],
         ["ID","TYPE", f"A {RDFS_LABEL}", f"A {NFDI_HAS_VALUE}"],
         [{"ID": iri, "TYPE": IAO_EMAIL_ADDRESS, "label": val, "value": val} for iri, val in emails.items()]
     )
 
-    # websites.tsv
     write_tsv(
-        os.path.join(OUT_DIR, "websites.tsv"),
+        os.path.join(out_dir, "websites.tsv"),
         ["ID","TYPE","label","url"],
         ["ID","TYPE", f"A {RDFS_LABEL}", f"AT {NFDI_HAS_URL}^^xsd:anyURI"],
         [{"ID": iri, "TYPE": NFDI_WEBSITE, "label": val, "url": val} for iri, val in websites.items()]
     )
 
-    # given/family (optional, kept)
     write_tsv(
-        os.path.join(OUT_DIR, "given_names.tsv"),
+        os.path.join(out_dir, "given_names.tsv"),
         ["ID","TYPE","label","value"],
         ["ID","TYPE", f"A {RDFS_LABEL}", f"A {NFDI_HAS_VALUE}"],
         [{"ID": iri, "TYPE": IAO_GIVEN_NAME, "label": val, "value": val} for iri, val in given_names.items()]
     )
+
     write_tsv(
-        os.path.join(OUT_DIR, "family_names.tsv"),
+        os.path.join(out_dir, "family_names.tsv"),
         ["ID","TYPE","label","value"],
         ["ID","TYPE", f"A {RDFS_LABEL}", f"A {NFDI_HAS_VALUE}"],
         [{"ID": iri, "TYPE": IAO_FAMILY_NAME, "label": val, "value": val} for iri, val in family_names.items()]
     )
 
-    # written_names.tsv
     write_tsv(
-        os.path.join(OUT_DIR, "written_names.tsv"),
+        os.path.join(out_dir, "written_names.tsv"),
         ["ID","TYPE","label","value"],
         ["ID","TYPE", f"A {RDFS_LABEL}", f"A {NFDI_HAS_VALUE}"],
         [{"ID": iri, "TYPE": IAO_WRITTEN_NAME, "label": val, "value": val} for iri, val in written_names.items()]
     )
 
-    # license.tsv (NEW)
     write_tsv(
-        os.path.join(OUT_DIR, "license.tsv"),
+        os.path.join(out_dir, "license.tsv"),
         ["ID","TYPE","label","value"],
         ["ID","TYPE", f"A {RDFS_LABEL}", f"A {NFDI_HAS_VALUE}"],
         [{"ID": iri, "TYPE": SWO_LICENSE, "label": val, "value": val} for iri, val in licenses.items()]
     )
 
-    # process.tsv
     write_tsv(
-        os.path.join(OUT_DIR, "process.tsv"),
+        os.path.join(out_dir, "process.tsv"),
         ["ID","TYPE","label","has_participant","realizes_role","occupies_temporal_region","standard"],
         [
             "ID","TYPE",
             f"A {RDFS_LABEL}",
             f"I {RO_HAS_PARTICIPANT} SPLIT=|",
-            f"I {BFO_REALIZES} SPLIT=,",
+            f"I {BFO_REALISES} SPLIT=,",
             f"I {BFO_OCCUPIES_TEMPORAL_REGION}",
             f"I {NFDI_STANDARD_PROP} SPLIT=,"
         ],
         list(publ_processes.values())
     )
 
-    # agent.tsv
     write_tsv(
-        os.path.join(OUT_DIR, "agent.tsv"),
+        os.path.join(out_dir, "agent.tsv"),
         ["ID","TYPE","label","denoted_by_written_name"],
         ["ID","TYPE", f"A {RDFS_LABEL}", f"I {IAO_DENOTED_BY}"],
         list(publ_agents.values())
     )
 
-    # role.tsv
     write_tsv(
-        os.path.join(OUT_DIR, "role.tsv"),
+        os.path.join(out_dir, "role.tsv"),
         ["ID","TYPE","label","role_email","role_website","written_name","inheres_in"],
         [
             "ID","TYPE",
@@ -505,16 +453,30 @@ def main():
         list(publ_roles.values())
     )
 
-    # dates.tsv
     write_tsv(
-        os.path.join(OUT_DIR, "dates.tsv"),
+        os.path.join(out_dir, "dates.tsv"),
         ["ID","TYPE","label","value"],
         ["ID","TYPE", f"A {RDFS_LABEL}", f"A {NFDI_HAS_VALUE}"],
         [{"ID": iri, "TYPE": BFO_TEMPORAL_REGION, "label": "DatasetPublishingDate", "value": val} for iri, val in publ_dates.items()]
     )
 
+    print("Done. TSVs in:", out_dir)
 
-    print("Done. TSVs in:", OUT_DIR)
+
+def main(argv: list[str] | None = None):
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--in-csv", required=True)
+    ap.add_argument("--out-dir", required=True)
+    ap.add_argument("--base-iri", default=DEFAULT_BASE_IRI)
+    ap.add_argument("--ns", default=str(DEFAULT_NS), help="UUID namespace string (kept constant across runs)")
+    args = ap.parse_args(argv)
+
+    run(
+        in_csv=args.in_csv,
+        out_dir=args.out_dir,
+        base_iri=args.base_iri,
+        ns=uuid.UUID(args.ns),
+    )
 
 
 if __name__ == "__main__":

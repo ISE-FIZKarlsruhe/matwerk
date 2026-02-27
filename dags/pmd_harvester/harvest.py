@@ -1,87 +1,51 @@
-import requests
-import os
-import json
-import time
+# dags/pmd_harvester/harvest.py
+from __future__ import annotations
+
+import argparse
 import csv
+import json
+import os
+import time
 from urllib.parse import urlparse
 
-# ==========================
-# CONFIGURATION
-# ==========================
+import requests
 
-BASE_URL = "https://dataportal.material-digital.de"  # url of dataportal
-SEARCH_ENDPOINT = "/api/3/action/package_search"
 
-OUTPUT_DIR = "harvest_output"
-METADATA_FILE = "metadata.json"
-output_file = "full_metadata.csv"
-
-QUERY = ""
-MAX_DATASETS = 1000
-ROWS_PER_PAGE = 100
-SLEEP_SECONDS = 0.2
-
-# Allowed file extensions
 ALLOWED_EXTENSIONS = [".ttl", ".json", ".rdf", ".owl"]
 
 
-# ==========================
-# SETUP
-# ==========================
-
-os.makedirs(OUTPUT_DIR, exist_ok=True)
-os.makedirs(os.path.join(OUTPUT_DIR, "files"), exist_ok=True)
-
-session = requests.Session()
-session.headers.update({
-    "User-Agent": "CKAN-Harvester"
-})
+def build_session() -> requests.Session:
+    s = requests.Session()
+    s.headers.update({"User-Agent": "CKAN-Harvester"})
+    return s
 
 
-# ==========================
-# FUNCTIONS
-# ==========================
-
-def search_datasets(query="", start=0, rows=100):
-    url = BASE_URL + SEARCH_ENDPOINT
-
-    params = {
-        "q": query,
-        "rows": rows,
-        "start": start
-    }
-
-    response = session.get(url, params=params)
-    response.raise_for_status()
-
-    data = response.json()
+def search_datasets(session: requests.Session, base_url: str, search_endpoint: str, query: str, start: int, rows: int):
+    url = base_url.rstrip("/") + search_endpoint
+    params = {"q": query, "rows": rows, "start": start}
+    r = session.get(url, params=params, timeout=60)
+    r.raise_for_status()
+    data = r.json()
     return data["result"]
 
 
-def save_metadata(dataset):
-    path = os.path.join(OUTPUT_DIR, METADATA_FILE)
-    with open(path, "a", encoding="utf-8") as f:
-        f.write(json.dumps(dataset) + "\n")
+def save_metadata(metadata_path: str, dataset: dict):
+    # jsonl
+    with open(metadata_path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(dataset, ensure_ascii=False) + "\n")
 
 
-def is_allowed_file(resource):
-    # Check format field
-    format_name = resource.get("format", "").lower()
-    if format_name in ["ttl", "turtle", "json", "rdf", "owl"]:
+def is_allowed_file(resource: dict) -> bool:
+    fmt = (resource.get("format") or "").lower().strip()
+    if fmt in ["ttl", "turtle", "json", "rdf", "owl"]:
         return True
 
-    # Check file extension from URL
-    file_url = resource.get("url", "")
+    file_url = resource.get("url") or ""
     path = urlparse(file_url).path.lower()
-
-    for ext in ALLOWED_EXTENSIONS:
-        if path.endswith(ext):
-            return True
-
-    return False
+    return any(path.endswith(ext) for ext in ALLOWED_EXTENSIONS)
 
 
-def download_resource(resource):
+def download_resource(session: requests.Session, files_dir: str, resource: dict):
     if not is_allowed_file(resource):
         return
 
@@ -90,11 +54,10 @@ def download_resource(resource):
         return
 
     filename = os.path.basename(urlparse(file_url).path)
-
     if not filename:
-        filename = resource.get("id")
+        filename = resource.get("id") or "resource"
 
-    filepath = os.path.join(OUTPUT_DIR, "files", filename)
+    filepath = os.path.join(files_dir, filename)
 
     try:
         with session.get(file_url, stream=True, timeout=60) as r:
@@ -103,243 +66,187 @@ def download_resource(resource):
                 for chunk in r.iter_content(chunk_size=8192):
                     if chunk:
                         f.write(chunk)
-
         print("Downloaded:", filename)
+    except Exception as e:
+        print(f"Download failed for {file_url}: {e}")
 
-    except:
-        pass
 
+def harvest(
+    out_dir: str,
+    base_url: str,
+    search_endpoint: str,
+    query: str,
+    max_datasets: int,
+    rows_per_page: int,
+    sleep_seconds: float,
+    download_files: bool,
+):
+    os.makedirs(out_dir, exist_ok=True)
+    files_dir = os.path.join(out_dir, "files")
+    if download_files:
+        os.makedirs(files_dir, exist_ok=True)
 
-def harvest():
+    metadata_path = os.path.join(out_dir, "metadata.jsonl")
+
+    session = build_session()
+
     start = 0
     harvested = 0
 
-    while harvested < MAX_DATASETS:
-        result = search_datasets(
-            query=QUERY,
-            start=start,
-            rows=ROWS_PER_PAGE
-        )
-
-        datasets = result["results"]
-        total = result["count"]
+    while harvested < max_datasets:
+        result = search_datasets(session, base_url, search_endpoint, query, start, rows_per_page)
+        datasets = result.get("results") or []
+        total = int(result.get("count") or 0)
 
         if not datasets:
             break
 
-        for dataset in datasets:
-            print("Harvesting:", dataset.get("title"))
+        for ds in datasets:
+            print("Harvesting:", ds.get("title") or ds.get("id") or "<no-title>")
+            save_metadata(metadata_path, ds)
 
-            # Save metadata
-            save_metadata(dataset)
-
-            # Download only requested format, i.e. TTL and JSON
-            for resource in dataset.get("resources", []):
-                download_resource(resource)
+            if download_files:
+                for res in ds.get("resources", []) or []:
+                    download_resource(session, files_dir, res)
 
             harvested += 1
-            if harvested >= MAX_DATASETS:
+            if harvested >= max_datasets:
                 break
 
-        start += ROWS_PER_PAGE
-        time.sleep(SLEEP_SECONDS)
+        start += rows_per_page
+        time.sleep(sleep_seconds)
 
         if start >= total:
             break
 
     print("Harvest complete. Total datasets:", harvested)
+    return metadata_path
 
 
-def get_full_metadata():
-    path = os.path.join(OUTPUT_DIR, output_file)
-    with open(OUTPUT_DIR + '/' + METADATA_FILE, "r", encoding="utf-8") as infile, \
-      open(path, "w", newline="", encoding="utf-8") as outfile:
+def get_full_metadata(metadata_path: str, out_csv_path: str):
+    os.makedirs(os.path.dirname(out_csv_path), exist_ok=True)
 
-      writer = csv.writer(outfile)
+    with open(metadata_path, "r", encoding="utf-8") as infile, open(out_csv_path, "w", newline="", encoding="utf-8") as outfile:
+        writer = csv.writer(outfile)
 
-    # CSV Header
-      writer.writerow ([
-        # Core dataset fields
-        "id",
-        "title",
-       #  "name",
-        "description",
-       # "state",
-       #  "private",
-       #  "license_title",
-        "license_id",
-        "metadata_created",
-        "metadata_modified",
-       # "version",
-        "type",
+        writer.writerow([
+            "id",
+            "title",
+            "description",
+            "license_id",
+            "metadata_created",
+            "metadata_modified",
+            "type",
+            "contact_name",
+            "contact_email",
+            "contributor_name",
+            "contributor_email",
+            "publisher_name",
+            "publisher_email",
+            "publisher_uri",
+            "organization_id",
+            "organization_title",
+            "organization_description",
+            "resource_count",
+            "resource_formats",
+            "resource_urls",
+            "tag_names",
+        ])
 
-        #contact and creator 
-        "contact_name",
-        "contact_email",
-        "contributor_name",
-        "contributor_email",
-        "publisher_name",
-        "publisher_email",
-        "publisher_uri",
+        for line in infile:
+            try:
+                ds = json.loads(line)
 
-        # Organization
-        "organization_id",
-        "organization_title",
-        #"organization_name",
-        "organization_description",
+                dataset_id = ds.get("id", "") or ""
+                title = ds.get("title", "") or ""
+                notes = ds.get("notes", "") or ""
+                license_id = ds.get("license_id", "") or ""
+                metadata_created = ds.get("metadata_created", "") or ""
+                metadata_modified = ds.get("metadata_modified", "") or ""
+                dataset_type = ds.get("type", "") or ""
 
-        # Statistics
-        "resource_count",
-        # "tag_count",
-        # "semantic_resource_count",
+                contact = ds.get("contact", []) or []
+                contact_name = "; ".join((t.get("name") or "") for t in contact)
+                contact_email = "; ".join((t.get("email") or "") for t in contact)
 
-        # Resource info (flattened)
-        "resource_formats",
-        "resource_urls",
+                contributor = ds.get("contributor", []) or []
+                contributor_name = "; ".join((t.get("name") or "") for t in contributor)
+                contributor_email = "; ".join((t.get("email") or "") for t in contributor)
 
-        # Tags
-        "tag_names",
+                publisher = ds.get("publisher", []) or []
+                publisher_name = "; ".join((t.get("name") or "") for t in publisher)
+                publisher_email = "; ".join((t.get("email") or "") for t in publisher)
+                publisher_uri = "; ".join((t.get("uri") or "") for t in publisher)
 
-        # Extras (flattened key-value pairs)
-       # "extras"
-    ])              
+                org = ds.get("organization", {}) or {}
+                org_id = org.get("id", "") or ""
+                org_title = org.get("title", "") or ""
+                org_description = org.get("description", "") or ""
 
-      for line in infile:
-        try:
-            ds = json.loads(line)
+                tags = ds.get("tags", []) or []
+                tag_names = "; ".join((t.get("name") or "") for t in tags)
 
-            # ------------------------
-            # Core Dataset Fields
-            # ------------------------
-            dataset_id = ds.get("id", "")
-            title = ds.get("title", "")
-          #  name = ds.get("name", "")
-            notes = ds.get("notes", "")
-           # state = ds.get("state", "")
-           # private = ds.get("private", "")
-           # license_title = ds.get("license_title", "")
-            license_id = ds.get("license_id", "")
-            metadata_created = ds.get("metadata_created", "")
-            metadata_modified = ds.get("metadata_modified", "")
-           # version = ds.get("version", "")
-            dataset_type = ds.get("type", "")
+                resources = ds.get("resources", []) or []
+                resource_count = len(resources)
+                resource_formats = "; ".join((r.get("format") or "") for r in resources)
+                resource_urls = "; ".join((r.get("url") or "") for r in resources)
 
-            # -------------------------
-            # contact/contributor fields
-            #--------------------------
-            contact = ds.get("contact", []) or []
-            contact_name =  "; ".join(t.get("name", "") for t in contact)
-            contact_email = "; ".join(t.get("email", "") for t in contact)
-            #------------- contributor
-            contributor = ds.get("contributor", []) or []
-            contributor_name =  "; ".join(t.get("name", "") for t in contributor)
-            contributor_email = "; ".join(t.get("email", "") for t in contributor)
+                writer.writerow([
+                    dataset_id,
+                    title,
+                    notes,
+                    license_id,
+                    metadata_created,
+                    metadata_modified,
+                    dataset_type,
+                    contact_name,
+                    contact_email,
+                    contributor_name,
+                    contributor_email,
+                    publisher_name,
+                    publisher_email,
+                    publisher_uri,
+                    org_id,
+                    org_title,
+                    org_description,
+                    resource_count,
+                    resource_formats,
+                    resource_urls,
+                    tag_names,
+                ])
 
-              #------------- contributor
-            publisher = ds.get("publisher", []) or []
-            publisher_name =  "; ".join(t.get("name", "") for t in publisher)
-            publisher_email = "; ".join(t.get("email", "") for t in publisher)
-            publisher_uri = "; ".join(t.get("uri", "") for t in publisher)
+            except Exception:
+                continue
 
-            # ------------------------
-            # Organization
-            # ------------------------
-            org = ds.get("organization", {}) or {}
+    print("Full metadata extraction complete:", out_csv_path)
 
-            org_id = org.get("id", "")
-            org_title = org.get("title", "")
-            org_name = org.get("name", "")
-            org_description = org.get("description", "")
 
-            # ------------------------
-            # Tags
-            # ------------------------
-            tags = ds.get("tags", []) or []
-            tag_names = "; ".join(t.get("name", "") for t in tags)
-            tag_count = len(tags)
+def main(argv: list[str] | None = None):
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--out-dir", required=True, help="Output directory for this run (will contain metadata.jsonl, full_metadata.csv, files/)")
+    ap.add_argument("--base-url", default="https://dataportal.material-digital.de")
+    ap.add_argument("--search-endpoint", default="/api/3/action/package_search")
+    ap.add_argument("--query", default="")
+    ap.add_argument("--max-datasets", type=int, default=1000)
+    ap.add_argument("--rows-per-page", type=int, default=100)
+    ap.add_argument("--sleep-seconds", type=float, default=0.2)
+    ap.add_argument("--download-files", action="store_true", help="If set, download allowed resources into out-dir/files/")
+    args = ap.parse_args(argv)
 
-            # ------------------------
-            # Resources
-            # ------------------------
-            resources = ds.get("resources", []) or []
-            resource_count = len(resources)
+    metadata_path = harvest(
+        out_dir=args.out_dir,
+        base_url=args.base_url,
+        search_endpoint=args.search_endpoint,
+        query=args.query,
+        max_datasets=args.max_datasets,
+        rows_per_page=args.rows_per_page,
+        sleep_seconds=args.sleep_seconds,
+        download_files=args.download_files,
+    )
 
-            resource_formats = "; ".join(
-                r.get("format", "") for r in resources
-            )
+    out_csv_path = os.path.join(args.out_dir, "full_metadata.csv")
+    get_full_metadata(metadata_path, out_csv_path)
 
-            resource_urls = "; ".join(
-                r.get("url", "") for r in resources
-            )
-
-            # Count semantic resources
-            semantic_formats = ["ttl", "turtle", "json", "rdf", "xml", "jsonld"]
-            semantic_resource_count = sum(
-                1 for r in resources
-                if r.get("format", "").lower() in semantic_formats
-            )
-
-            # ------------------------
-            # Extras (Flatten Key=Value)
-            # ------------------------
-            extras = ds.get("extras", []) or []
-            extras_dict = {
-                e.get("key", ""): e.get("value", "")
-                for e in extras
-            }
-
-            extras_flat = "; ".join(
-                f"{k}={v}" for k, v in extras_dict.items()
-            )
-
-            # ------------------------
-            # Write Row
-            # ------------------------
-            writer.writerow([
-                dataset_id,
-                title,
-               # name,
-                notes,
-              #  state,
-               # private,
-               # license_title,
-                license_id,
-                metadata_created,
-                metadata_modified,
-              #  version,
-                dataset_type,
-                contact_name,
-                contact_email,
-                contributor_name,
-                contributor_email,
-                publisher_name,
-                publisher_email,
-                publisher_uri,
-                org_id,
-                org_title,
-              #  org_name,
-                org_description,
-
-                resource_count,
-               # tag_count,
-               # semantic_resource_count,
-
-                resource_formats,
-                resource_urls,
-
-                tag_names
-              #  extras_flat
-            ])
-
-        except Exception:
-            continue
-
-    print("Full metadata extraction complete.")
-
-# ==========================
-# RUN
-# ==========================
 
 if __name__ == "__main__":
-    harvest()
-    get_full_metadata()
+    main()
