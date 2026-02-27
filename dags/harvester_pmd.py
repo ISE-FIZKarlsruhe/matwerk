@@ -101,7 +101,7 @@ def harvester_pmd():
 
     def isvalid(filename: str, ti=None):
         run_dir = ti.xcom_pull(task_ids="init_data_dir", key="run_dir")
-        path = os.path.join(run_dir, filename)
+        path = os.path.join(run_dir, MODULES_DIRNAME, filename)
         with open(path, "r", encoding="utf-8", errors="replace") as f:
             s = f.read()
         if s.strip() != "No explanations found.":
@@ -158,7 +158,7 @@ def harvester_pmd():
         XCOM_RUN_DIR = "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}"
 
         out_ttl = os.path.join(RUN_DIR, OUT_TTL)
-        explain_md = os.path.join(RUN_DIR, "pmd_merged_inconsistency.md")
+        explain_md = os.path.join(RUN_DIR, MODULES_DIRNAME, "pmd_merged_inconsistency.md")
         cmd = (
             f"{ROBOT} explain --reasoner hermit --input '{out_ttl}' "
             f"-M inconsistency --explanation '{explain_md}'"

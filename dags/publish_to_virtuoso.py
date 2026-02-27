@@ -33,6 +33,7 @@ PUBLISH_SOURCES = [
     ("spreadsheets_validated", "matwerk_last_successful_validated_run", "spreadsheets_merged_for_validation.ttl"),
     ("zenodo_validated", "matwerk_last_successful_harvester_zenodo_run", "zenodo.ttl"),
     ("endpoints_validated", "matwerk_last_successful_harvester_endpoints_run", "dataset_stats.ttl"),
+    ("harvester_pmd", "matwerk_last_successful_harvester_pmd_run", "pmd_asserted.ttl"),
 ]
 
 
