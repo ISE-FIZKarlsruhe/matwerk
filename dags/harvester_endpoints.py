@@ -88,7 +88,7 @@ def harvester_endpoints():
 
     trigger_reason_endpoints = TriggerDagRunOperator(
         task_id="trigger_reason_endpoints",
-        trigger_dag_id="reason",
+        trigger_dag_id="reason_openllet_new",
         wait_for_completion=True,
         conf={
             "artifact": "endpoints",

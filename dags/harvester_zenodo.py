@@ -74,7 +74,7 @@ def harvester_zenodo():
 
     trigger_reason_zenodo = TriggerDagRunOperator(
         task_id="trigger_reason_zenodo",
-        trigger_dag_id="reason",
+        trigger_dag_id="reason_openllet_new",
         wait_for_completion=True,
         conf={
             "artifact": "zenodo",
