@@ -1,6 +1,5 @@
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
 @prefix owl:  <http://www.w3.org/2002/07/owl#> .
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix ex:   <http://www.example.org/#> .
 
 ex:DeprecatedIRIUsageShape
@@ -13,12 +12,17 @@ ex:DeprecatedIRIUsageShape
       SELECT ?this ?iri ?s ?p ?o WHERE {
         ?s ?p ?o .
 
-        # Any IRI occurring as predicate or object (or subject, if you want)
-        VALUES ?iriRole { "p" "o" }
-        BIND(IF(?iriRole="p", ?p, ?o) AS ?iri)
-
-        FILTER(isIRI(?iri))
-        ?iri owl:deprecated true .
+        {
+          BIND(?p AS ?iri)
+          FILTER(isIRI(?iri))
+          ?iri <http://www.w3.org/2002/07/owl#deprecated> true .
+        }
+        UNION
+        {
+          BIND(?o AS ?iri)
+          FILTER(isIRI(?iri))
+          ?iri <http://www.w3.org/2002/07/owl#deprecated> true .
+        }
 
         BIND(?s AS ?this)
       }
