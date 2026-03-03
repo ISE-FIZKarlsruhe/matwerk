@@ -70,7 +70,7 @@ PREFIX time:     <http://www.w3.org/2006/time#>
 SELECT ?graph ?beginTS ?endTS
 WHERE {
   ?graph a nfdicore:NFDI_0000009 ;
-         nfdicore:NFDI_0001023 ?process .
+         obo:RO_0002353 ?process .
 
   ?process obo:BFO_0000199 ?temporalRegion .
   ?temporalRegion obo:BFO_0000222 ?beginNode ;

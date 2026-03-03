@@ -91,7 +91,7 @@ def build_metadata_ttl(f: GraphPublishFacts) -> str:
 
     # local predicate namespace
     ttl_abs = os.path.abspath(f.ttl_path)
-    dataset_iri = f"{f.graph_root}/graph-dataset"
+    dataset_iri = f"{f.graph_root}"
     desc_iri = f"{f.graph_root}/description"
     url_iri  = f"{f.graph_root}/url"
     id_iri   = f"{f.graph_root}/identifier"
@@ -144,7 +144,7 @@ def build_metadata_ttl(f: GraphPublishFacts) -> str:
         f"  nfdicore:NFDI_0000191 <{pub_iri}> ;",
         f"  nfdicore:NFDI_0000142 <{license_iri}> ;",
         f"  nfdicore:NFDI_0001027 <{creator_iri}> ;",
-        f"  nfdicore:NFDI_0001023 <{process_iri}> ;",
+        f"  obo:RO_0002353 <{process_iri}> ;",
         f"  nfdicore:NFDI_0001006 <{id_iri}> ;",
         f"  obo:IAO_0000235 <{desc_iri}> ;",
         f"  obo:IAO_0000235 <{url_iri}> .",

@@ -264,6 +264,7 @@ def validation_checks():
                 shacl_graph=shp,
                 data_graph_format="turtle",
                 shacl_graph_format="turtle",
+                advanced=True,
             )
 
             out_path = os.path.join(out_dir, f"{shp_name}.txt")

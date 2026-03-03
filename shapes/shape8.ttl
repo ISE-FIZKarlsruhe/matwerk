@@ -1,0 +1,20 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix ex:    <http://www.example.org/#> .
+
+ex:ForbiddenPredicateSparqlShape
+  a sh:NodeShape ;
+  sh:targetNode sh:this ;  # dummy target
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Forbidden predicate used: {?p} in triple {?s ?p ?o}" ;
+    sh:select """
+      SELECT ?this ?s ?p ?o WHERE {
+        ?s ?p ?o .
+        VALUES ?p {
+          <http://purl.obolibrary.org/obo/BFO_0000176>
+          # add more temporal properties
+        }
+        BIND(?s AS ?this)
+      }
+    """ ;
+  ] .

@@ -105,7 +105,7 @@ LIMIT 999
 
 ```sparql
 PREFIX nfdicore_service:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232>
-PREFIX has_specification:          <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000204>
+PREFIX is_subject_of:          <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>
 PREFIX denoted_by:      <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX written_name:     <http://purl.obolibrary.org/obo/IAO_0000590>
 PREFIX has_url:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
@@ -122,17 +122,17 @@ SELECT DISTINCT ?service ?serviceLabel_ ?serviceURL ?docURL ?codeURL WHERE {
   }
 
   OPTIONAL {
-    ?service has_specification: ?urlNode .
+    ?service is_subject_of: ?urlNode .
     ?urlNode has_url: ?serviceURL .
   }
 
   OPTIONAL {
-    ?service has_specification: ?docNode .
+    ?service is_subject_of: ?docNode .
     ?docNode has_url: ?docURL .
   }
 
   OPTIONAL {
-    ?service has_specification: ?codeNode .
+    ?service is_subject_of: ?codeNode .
     ?codeNode has_url: ?codeURL .
   }
 }

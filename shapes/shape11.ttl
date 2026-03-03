@@ -1,0 +1,61 @@
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:    <http://www.example.org/#> .
+
+ex:UndefinedPredicateShape
+  a sh:NodeShape ;
+  sh:targetNode sh:this ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Undefined predicate (not declared as a property in ontology): {?p} used in {?s ?p ?o}" ;
+    sh:select """
+      SELECT ?this ?s ?p ?o WHERE {
+        ?s ?p ?o .
+        FILTER(isIRI(?p))
+
+        # Allow built-in vocabularies
+        FILTER(!STRSTARTS(STR(?p), STR(rdf:)))
+        FILTER(!STRSTARTS(STR(?p), STR(rdfs:)))
+        FILTER(!STRSTARTS(STR(?p), STR(owl:)))
+        FILTER(!STRSTARTS(STR(?p), STR(xsd:)))
+
+        FILTER NOT EXISTS {
+          ?p a ?pt .
+          VALUES ?pt { rdf:Property owl:ObjectProperty owl:DatatypeProperty owl:AnnotationProperty }
+        }
+
+        BIND(?s AS ?this)
+      }
+    """ ;
+  ] .
+
+ex:UndefinedClassInTypeShape
+  a sh:NodeShape ;
+  sh:targetNode sh:this ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Undefined class used in rdf:type (not declared as owl:Class/rdfs:Class): {?c} for instance {?s}" ;
+    sh:select """
+      SELECT ?this ?s ?c WHERE {
+        ?s rdf:type ?c .
+        
+        FILTER(isIRI(?c))
+        FILTER(!STRSTARTS(STR(?c), "http://www.w3.org/2003/11/swrl#"))
+
+        FILTER(!STRSTARTS(STR(?c), STR(rdf:)))
+        FILTER(!STRSTARTS(STR(?c), STR(rdfs:)))
+        FILTER(!STRSTARTS(STR(?c), STR(owl:)))
+        FILTER(!STRSTARTS(STR(?c), STR(xsd:)))
+
+        FILTER NOT EXISTS {
+          ?c a ?ct .
+          VALUES ?ct { owl:Class rdfs:Class }
+        }
+
+        BIND(?s AS ?this)
+      }
+    """ ;
+  ] .
