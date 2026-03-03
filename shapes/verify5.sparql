@@ -1,0 +1,23 @@
+##### Predicates must be declared properties in the ontology
+#
+#  Ensures every predicate we use is declared as a property.
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+SELECT ?s ?p ?o WHERE {
+  ?s ?p ?o .
+  FILTER(isIRI(?p))
+
+  # Allow built-in vocabularies
+  FILTER(!STRSTARTS(STR(?p), STR(rdf:)))
+  FILTER(!STRSTARTS(STR(?p), STR(rdfs:)))
+  FILTER(!STRSTARTS(STR(?p), STR(owl:)))
+  FILTER(!STRSTARTS(STR(?p), STR(xsd:)))
+
+  FILTER NOT EXISTS {
+    ?p a ?pt .
+    VALUES ?pt { rdf:Property owl:ObjectProperty owl:DatatypeProperty owl:AnnotationProperty }
+  }
+
+}

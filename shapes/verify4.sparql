@@ -1,0 +1,28 @@
+##### rdf:type object must be a declared class (owl:Class/rdfs:Class)
+#
+#  Ensures all rdf:type classes used in our namespace are present in the ontology.
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+SELECT ?s ?c WHERE {
+  ?s rdf:type ?c .
+
+  # ignore blank nodes (and literals)
+  FILTER(isIRI(?s))
+  FILTER(isIRI(?c))
+  FILTER(!STRSTARTS(STR(?c), "http://www.w3.org/2003/11/swrl#"))
+
+  # ignore built-ins
+  FILTER(!STRSTARTS(STR(?c), STR(rdf:)))
+  FILTER(!STRSTARTS(STR(?c), STR(rdfs:)))
+  FILTER(!STRSTARTS(STR(?c), STR(owl:)))
+  FILTER(!STRSTARTS(STR(?c), STR(xsd:)))
+
+  FILTER NOT EXISTS {
+    ?c a ?ct .
+    VALUES ?ct { owl:Class rdfs:Class }
+  }
+
+}

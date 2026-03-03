@@ -1,0 +1,15 @@
+##### Deprecated term must not be used (owl:deprecated true)
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?iri ?s ?p ?o WHERE {
+  ?s ?p ?o .
+
+  # Any IRI occurring as predicate or object (or subject, if you want)
+  VALUES ?iriRole { "p" "o" }
+  BIND(IF(?iriRole="p", ?p, ?o) AS ?iri)
+
+  FILTER(isIRI(?iri))
+  ?iri owl:deprecated true .
+
+}
