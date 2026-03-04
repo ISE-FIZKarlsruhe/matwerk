@@ -6,6 +6,12 @@ SELECT DISTINCT ?p WHERE {
   ?s ?p ?o .
   FILTER(STRSTARTS(STR(?p), "http://purl.obolibrary.org/obo/BFO_"))
 
+  # skip part_of and has_part, see here: https://oborel.github.io/obo-relations/ro-and-bfo/
+  FILTER(?p NOT IN (
+    <http://purl.obolibrary.org/obo/BFO_0000050>,
+    <http://purl.obolibrary.org/obo/BFO_0000051>
+  ))
+  
   FILTER NOT EXISTS {
     SERVICE <http://matwerk-virtuoso:8890/sparql> {
       GRAPH <https://nfdi.fiz-karlsruhe.de/matwerk/bfo-2020-without-some-all-times> {

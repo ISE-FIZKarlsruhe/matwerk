@@ -217,21 +217,40 @@ def validation_checks():
         XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
         merged_name = '{{ ti.xcom_pull(task_ids="init_data_dir", key="merged_for_validation_ttl") }}'
-
         merged_ttl = os.path.join(DATA_DIR, merged_name)
         out_dir = os.path.join(DATA_DIR, "validation", "robot_verify")
+        shapes_dir = os.path.join(DATA_DIR, "_shapes")
 
         cmd = (
             f"mkdir -p '{out_dir}'\n"
+            f"SUMMARY='{os.path.join(out_dir, 'summary.txt')}'\n"
+            "rm -f \"$SUMMARY\"\n"
+            "FAILED=0\n"
 
             "{% for q in ti.xcom_pull(task_ids='fetch_shapes', key='sparql_files') %}\n"
+            f"Q='{{{{ q }}}}'\n"
             f"LOG='{os.path.join(out_dir, '{{ q }}')}.log'\n"
+            f"QUERY='{os.path.join(shapes_dir, '{{ q }}')}'\n"
 
-            f"{ROBOT} verify --input \"{merged_ttl}\" "
-            f"--queries '{os.path.join(DATA_DIR, '_shapes', '{{ q }}')}' -vvv "
-            f"> \"$LOG\" 2>&1 || (tail -n 120 \"$LOG\"; exit 1)\n"
-
+            # Run verify with low verbosity (huge logs were from -vvv)
+            f"if {ROBOT} verify --input \"{merged_ttl}\" --queries \"$QUERY\" > \"$LOG\" 2>&1; then\n"
+            "  echo \"$Q: PASS\" | tee -a \"$SUMMARY\" >/dev/null\n"
+            "else\n"
+            "  echo \"$Q: FAIL (see $LOG)\" | tee -a \"$SUMMARY\" >/dev/null\n"
+            "  tail -n 120 \"$LOG\" || true\n"
+            "  FAILED=1\n"
+            "fi\n"
             "{% endfor %}\n"
+
+            "echo \"----\" >> \"$SUMMARY\"\n"
+            "if [ \"$FAILED\" -ne 0 ]; then\n"
+            "  echo \"SPARQL verify: FAILED\" >> \"$SUMMARY\"\n"
+            "  cat \"$SUMMARY\"\n"
+            "  exit 1\n"
+            "else\n"
+            "  echo \"SPARQL verify: OK\" >> \"$SUMMARY\"\n"
+            "  cat \"$SUMMARY\"\n"
+            "fi\n"
         )
 
         return cmd.replace(DATA_DIR, XCOM_DATADIR)
