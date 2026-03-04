@@ -10,6 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?s ?p ?o WHERE {
   ?s ?p ?o .
   FILTER(isIRI(?p))
+  FILTER(!STRSTARTS(STR(?p), "http://www.w3.org/2003/11/swrl#"))
 
   # Allow built-in vocabularies
   FILTER(!STRSTARTS(STR(?p), STR(rdf:)))
