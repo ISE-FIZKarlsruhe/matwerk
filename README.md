@@ -14,34 +14,6 @@ You can explore the deployed version of the knowledge graph here:
 
 ---
 
-## 🚀 Quick Start (Test Environment)
-
-To run a local test instance using Docker:
-
-```shell
-docker build -t ghcr.io/ise-fizkarlsruhe/matwerk:latest .
-
-docker run --rm -it -p 8000:8000 -e DEBUG=1 -e MOUNT=/matwerk/ -e DATA_LOAD_PATHS=/data/all.ttl -e PREFIXES_FILEPATH=/data/all.ttl -v "$(pwd)/data:/data" ghcr.io/ise-fizkarlsruhe/matwerk:latest
-```
-
-After starting, you can access it at:
-
-🔗 [http://127.0.0.1:8000/matwerk/](http://127.0.0.1:8000/matwerk/)
-
----
-
-## 📁 Directory Structure
-
-```bash
-📦matwerk/
- ┣ 📂data/             # Combined TTL file for local testing
- ┣ 📂shapes/           # SHACL shapes
- ┣ 📄Dockerfile        # Docker configuration (if building locally)
- ┗ 📄README.md         # This file
-```
-
----
-
 ## 📫 Contact
 
 For questions or support, please create issues or contact Ebrahim Norouzi `ebrahim.norouzi@fiz-karlsruhe.de`.
