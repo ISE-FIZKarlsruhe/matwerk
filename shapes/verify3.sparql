@@ -8,6 +8,7 @@ SELECT DISTINCT ?s ?c WHERE {
   FILTER(!STRSTARTS(STR(?c), STR(owl:)))
 
   VALUES ?ctype { owl:Class rdfs:Class }
+  ?c a ?ctype .
 
   # Class must be declared in the ontology graph as owl:Class or rdfs:Class
   FILTER NOT EXISTS {
@@ -28,4 +29,3 @@ SELECT DISTINCT ?s ?c WHERE {
     }
   }
 }
-ORDER BY ?c

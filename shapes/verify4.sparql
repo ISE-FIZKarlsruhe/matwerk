@@ -11,7 +11,8 @@ SELECT DISTINCT ?p ?ptype WHERE {
   ?s ?p ?o .
 
   VALUES ?ptype { owl:DatatypeProperty owl:ObjectProperty }
-
+  ?p a ?ptype .
+  
   FILTER NOT EXISTS {
     SERVICE <http://matwerk-virtuoso:8890/sparql> {
       GRAPH <https://nfdi.fiz-karlsruhe.de/matwerk/mwo/3.0.1> {
