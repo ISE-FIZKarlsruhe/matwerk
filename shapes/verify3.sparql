@@ -2,8 +2,11 @@
 
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 
-SELECT ?iri ?s ?p ?o WHERE {
+SELECT ?s ?iri WHERE {
   ?s ?p ?o .
+  FILTER(?p NOT IN (rdfs:subClassOf, rdfs:subPropertyOf, rdfs:domain, rdfs:range,
+                  owl:equivalentClass, owl:equivalentProperty, owl:disjointWith,
+                  owl:inverseOf, <http://rdfs.org/ns/void#class>))
 
   # Any IRI occurring as predicate or object (or subject, if you want)
   VALUES ?iriRole { "p" "o" }
