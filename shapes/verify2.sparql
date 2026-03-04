@@ -1,9 +1,16 @@
-##### Forbidden predicate must not be used (BFO_0000176)
+##### Forbidden temporal predicate must not be used (e.g. BFO_0000176)
 
-SELECT ?s ?p ?o WHERE {
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?p WHERE {
   ?s ?p ?o .
-  VALUES ?p {
-    <http://purl.obolibrary.org/obo/BFO_0000176>
-    # add more temporal properties
+  FILTER(STRSTARTS(STR(?p), "http://purl.obolibrary.org/obo/BFO_"))
+
+  FILTER NOT EXISTS {
+    SERVICE <http://matwerk-virtuoso:8890/sparql> {
+      GRAPH <https://nfdi.fiz-karlsruhe.de/matwerk/bfo-2020-without-some-all-times> {
+        ?p a owl:ObjectProperty .
+      }
+    }
   }
 }

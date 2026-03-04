@@ -1,29 +1,23 @@
-##### rdf:type object must be a declared class (owl:Class/rdfs:Class)
+##### Predicates must be declared properties in the ontology
 #
-#  Ensures all rdf:type classes used in our namespace are present in the ontology.
+# Ensures every predicate we use is declared as a property in the ontology graph.
 
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?s ?c WHERE {
-  ?s rdf:type ?c .
+SELECT DISTINCT ?p ?ptype WHERE {
+  ?s ?p ?o .
 
-  # ignore blank nodes (and literals)
-  FILTER(isIRI(?s))
-  FILTER(isIRI(?c))
-  FILTER(!STRSTARTS(STR(?c), "http://www.w3.org/2003/11/swrl#"))
-
-  # ignore built-ins
-  FILTER(!STRSTARTS(STR(?c), STR(rdf:)))
-  FILTER(!STRSTARTS(STR(?c), STR(rdfs:)))
-  FILTER(!STRSTARTS(STR(?c), STR(owl:)))
-  FILTER(!STRSTARTS(STR(?c), STR(xsd:)))
+  VALUES ?ptype { owl:DatatypeProperty owl:ObjectProperty }
 
   FILTER NOT EXISTS {
-    ?c a ?ct .
-    VALUES ?ct { owl:Class rdfs:Class }
+    SERVICE <http://matwerk-virtuoso:8890/sparql> {
+      GRAPH <https://nfdi.fiz-karlsruhe.de/matwerk/mwo/3.0.1> {
+        ?p a ?ptype .
+      }
+    }
   }
 
 }

@@ -1,19 +1,31 @@
-##### Deprecated term must not be used (owl:deprecated true)
-
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 
-SELECT ?s ?iri WHERE {
-  ?s ?p ?o .
-  FILTER(?p NOT IN (rdfs:subClassOf, rdfs:subPropertyOf, rdfs:domain, rdfs:range,
-                  owl:equivalentClass, owl:equivalentProperty, owl:disjointWith,
-                  owl:inverseOf, <http://rdfs.org/ns/void#class>))
+SELECT DISTINCT ?s ?c WHERE {
+  ?s rdf:type ?c .
+  FILTER(isIRI(?c))
+  FILTER(!STRSTARTS(STR(?c), STR(owl:)))
 
-  # Any IRI occurring as predicate or object (or subject, if you want)
-  VALUES ?iriRole { "p" "o" }
-  BIND(IF(?iriRole="p", ?p, ?o) AS ?iri)
+  VALUES ?ctype { owl:Class rdfs:Class }
 
-  FILTER(isIRI(?iri))
-  ?iri owl:deprecated true .
+  # Class must be declared in the ontology graph as owl:Class or rdfs:Class
+  FILTER NOT EXISTS {
+    SERVICE <http://matwerk-virtuoso:8890/sparql> {
+      GRAPH <https://nfdi.fiz-karlsruhe.de/matwerk/mwo/3.0.1> {
+        ?c a ?ctype .
+      }
+    }
+  }
 
+  # Class must NOT be deprecated in the ontology graph
+  FILTER EXISTS {
+    SERVICE <http://matwerk-virtuoso:8890/sparql> {
+      GRAPH <https://nfdi.fiz-karlsruhe.de/matwerk/mwo/3.0.1> {
+        FILTER NOT EXISTS { ?c owl:deprecated true }
+        FILTER NOT EXISTS { ?c a owl:DeprecatedClass }
+      }
+    }
+  }
 }
+ORDER BY ?c
