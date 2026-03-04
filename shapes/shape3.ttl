@@ -1,4 +1,3 @@
-
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix sh:    <http://www.w3.org/ns/shacl#> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
@@ -6,16 +5,21 @@
 @prefix ex:    <http://www.example.org/#> .
 @prefix owl:   <http://www.w3.org/2002/07/owl#> .
 
-#
-#  a "role" should always "role of" something
-#
-
 ex:RoleBearerShape
     a sh:NodeShape ;
     sh:targetClass <http://purl.obolibrary.org/obo/BFO_0000023> ;    # bfo:role
+
+    # role_of
     sh:property [
-        sh:path <http://purl.obolibrary.org/obo/RO_0000081> ;       # role_of
+        sh:path <http://purl.obolibrary.org/obo/RO_0000081> ;       # ro:role_of
         sh:minCount 1 ;
         sh:message "a 'role' (BFO_0000023) must always 'role of' (RO_0000081) something"
     ] ;
-    .
+
+    # realized_in
+    sh:property [
+        sh:path <http://purl.obolibrary.org/obo/BFO_0000054> ;      # bfo:realized_in
+        sh:minCount 1 ;
+        sh:message "a 'role' (BFO_0000023) must always be 'realized in' (BFO_0000054) some process"
+    ] ;
+.
