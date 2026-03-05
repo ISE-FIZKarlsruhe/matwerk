@@ -684,27 +684,21 @@ LIMIT 999
 
 ```sparql
 PREFIX mwo_nfdi_matwerk_consortium:     <http://purls.helmholtz-metadaten.de/mwo/MWO_0001022>
-PREFIX participates_in:      <http://purl.obolibrary.org/obo/BFO_0000056>
+PREFIX participates_in:      <http://purl.obolibrary.org/obo/RO_0000056>
 PREFIX concretizes:         <http://purl.obolibrary.org/obo/RO_0000059>
 PREFIX objective_specification:        <http://purl.obolibrary.org/obo/IAO_0000005>
 PREFIX denoted_by:         <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX nfdicore_description: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001018>
 PREFIX rdfs:                 <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT DISTINCT ?ta_organization ?ta_process ?ta ?label ?description
+SELECT DISTINCT ?ta ?label ?description
 WHERE {
-  ?ta_organization a mwo_nfdi_matwerk_consortium: ;
-                   participates_in: ?ta_process .
-
-  ?ta_process concretizes: ?ta .
   ?ta a objective_specification: ;
       rdfs:label ?label .
 
-  OPTIONAL {
-    ?ta denoted_by: ?descriptionNode .
-    ?descriptionNode a nfdicore_description: ;
+  ?ta denoted_by: ?descriptionNode .
+  ?descriptionNode a nfdicore_description: ;
                      rdfs:label ?description .
-  }
 }
 LIMIT 999
 ```
