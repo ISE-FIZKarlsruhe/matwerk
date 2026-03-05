@@ -1,6 +1,13 @@
 site_name: Matwerk
 site_url: https://nfdi.fiz-karlsruhe.de/matwerk/
 repo_url: https://github.com/ISE-FIZKarlsruhe/matwerk
+theme:
+  name: material
+  custom_dir: docs/overrides
+  features:
+    - navigation.tabs
+  hide:
+    - toc
 nav:
   - Home: index.md
   - How to add data?: upload.md
@@ -9,3 +16,7 @@ nav:
     - General Queries: general_queries.md
     - Statistics: statistics.md
     - Named Graphs Statistics: namedgraphsstatistics.md
+
+markdown_extensions:
+  - pymdownx.superfences:
+      preserve_tabs: true
