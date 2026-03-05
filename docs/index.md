@@ -1,5 +1,5 @@
 # Welcome to the Materials Science and Engineering Knowledge Graph (MSE KG)
-Last update: 04.03.2026
+Last update: 05.03.2026
 
 
 ## Introduction
