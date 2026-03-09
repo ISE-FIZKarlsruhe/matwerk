@@ -26,8 +26,7 @@ IAO_GIVEN_NAME = "http://purl.obolibrary.org/obo/IAO_0020016"
 IAO_FAMILY_NAME = "http://purl.obolibrary.org/obo/IAO_0020017"
 IAO_WRITTEN_NAME = "http://purl.obolibrary.org/obo/IAO_0000590"
 
-BFO_HAS_CONTRIBUTOR = "http://purl.obolibrary.org/obo/BFO_0000178"
-BFO_PARTICIPATES_IN = "http://purl.obolibrary.org/obo/BFO_0000056"
+BFO_PARTICIPATES_IN = "http://purl.obolibrary.org/obo/RO_0000056"
 
 RO_HAS_PARTICIPANT = "http://purl.obolibrary.org/obo/RO_0000057"
 BFO_REALISES = "http://purl.obolibrary.org/obo/BFO_0000055"
@@ -267,7 +266,6 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
             resource_urls = [sanitize(u) for u in split_semicolon(r.get("resource_urls", ""))]
             url_joined = ";".join([u for u in resource_urls if u])
 
-            contributors = []
             for role, nfield, efield in [
                 ("contact", "contact_name", "contact_email"),
                 ("contributor", "contributor_name", "contributor_email"),
@@ -277,13 +275,6 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
                 for i in range(max(len(names), len(ems))):
                     nm = names[i] if i < len(names) else ""
                     em = ems[i] if i < len(ems) else ""
-                    piri = ensure_person(nm, em, role)
-                    if piri:
-                        contributors.append(piri)
-
-            if org_iri:
-                contributors.append(org_iri)
-            contributors = sorted(set([c for c in contributors if c]))
 
             build_publishing_pattern(ds_iri, title, created, "", "", "")
 
@@ -306,7 +297,6 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
                 "description": desc,
                 "license": license_iri,
                 "publishing_process": proc_iri,
-                "has_contributor": ";".join(contributors),
                 "has_url": url_joined,
             })
 
@@ -316,7 +306,7 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
     # TSVs
     write_tsv(
         os.path.join(out_dir, "datasets.tsv"),
-        ["ID","TYPE","label","denoted_by_title","description","license","publishing_process","has_contributor","has_url"],
+        ["ID","TYPE","label","denoted_by_title","description","license","publishing_process","has_url"],
         [
             "ID","TYPE",
             f"A {RDFS_LABEL}",
@@ -324,7 +314,6 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
             f"A {RDFS_COMMENT}",
             f"I {NFDI_HAS_LICENSE}",
             f"I {BFO_PARTICIPATES_IN}",
-            f"I {BFO_HAS_CONTRIBUTOR} SPLIT=;",
             f"AT {NFDI_HAS_URL}^^xsd:anyURI SPLIT=;"
         ],
         datasets
