@@ -194,16 +194,16 @@ code, .md-typeset code {
 /* ── Access Cards Grid ───────────────────────────────────── */
 .access-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin: 1.5rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin: 1.25rem 0;
 }
 
 .access-card {
   background: var(--mse-light-bg);
   border: 1px solid var(--mse-border);
   border-radius: var(--card-radius);
-  padding: 1.5rem;
+  padding: 1rem 1.1rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
   box-shadow: var(--card-shadow);
   position: relative;
@@ -230,37 +230,37 @@ code, .md-typeset code {
 }
 
 .card-icon {
-  font-size: 1.8rem;
-  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
   display: block;
 }
 
 .access-card strong {
   display: block;
   font-family: 'DM Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--mse-text);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.25rem;
 }
 
 .access-card p {
-  font-size: 0.87rem !important;
+  font-size: 0.8rem !important;
   color: var(--mse-muted);
-  line-height: 1.55;
-  margin-bottom: 1rem;
+  line-height: 1.5;
+  margin-bottom: 0.75rem;
 }
 
 .card-btn {
   display: inline-block;
   font-family: 'DM Sans', sans-serif;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 600;
   color: var(--mse-blue) !important;
   text-decoration: none !important;
   border: 1px solid var(--mse-blue);
-  border-radius: 6px;
-  padding: 0.35em 0.85em;
+  border-radius: 5px;
+  padding: 0.28em 0.7em;
   transition: background 0.15s, color 0.15s;
 }
 
@@ -272,15 +272,16 @@ code, .md-typeset code {
 /* ── Scope Grid ──────────────────────────────────────────── */
 .scope-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 0.75rem;
   margin: 1.25rem 0;
 }
 
 .scope-item {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  gap: 0.85rem;
+  gap: 0.4rem;
   background: var(--mse-light-bg);
   border: 1px solid var(--mse-border);
   border-radius: 10px;
@@ -310,7 +311,7 @@ code, .md-typeset code {
 /* ── Ontology Cards ──────────────────────────────────────── */
 .ontology-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1rem;
   margin: 1.25rem 0;
 }
@@ -371,7 +372,7 @@ code, .md-typeset code {
 /* ── Contribute Row ──────────────────────────────────────── */
 .contribute-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 0.75rem;
   margin: 1.25rem 0;
 }
@@ -455,4 +456,31 @@ code, .md-typeset code {
   .hero-banner h1 {
     font-size: 1.8rem;
   }
+}
+
+/* ── Supported Data Types Grid ───────────────────────────── */
+/* Add this to docs/stylesheets/extra.css                    */
+
+.datatype-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 0.35rem;
+  margin: 1rem 0;
+}
+
+.dtype {
+  background: var(--mse-light-bg, #f5f8fc);
+  border: 1px solid var(--mse-border, #d8e4f0);
+  border-radius: 6px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--mse-muted, #6b7f96);
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.dtype:hover {
+  border-color: var(--mse-teal, #0f9e8e);
+  color: var(--mse-teal, #0f9e8e);
+  background: rgba(15, 158, 142, 0.06);
 }

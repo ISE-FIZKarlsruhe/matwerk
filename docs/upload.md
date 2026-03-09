@@ -23,33 +23,34 @@ Adding more data benefits us all. Depending on **your data type** and **how your
 
 The MSE KG currently supports the following resource types:
 
-- City  
-- Materials  
-- Organization  
-- People  
-- Datasets  
-- Software  
-- Data Portals  
-- Instruments  
-- Large-scale Facilities  
-- Metadata  
-- Ontologies  
-- Educational Resources  
-- Patents  
-- FDOs  
-- Workflows  
-- Services  
-- International Collaborations  
-- Events  
-- Publications  
-- Tools (NFDI resources)  
-- OMS Tools  
-- MatWerk-TA  
-- MatWerk-IUC  
-- MatWerk-PP  
-- DFG Preface  
-- DFG General Information (NFDI MatWerk Consortium)
-
+<div class="datatype-grid">
+  <div class="dtype">🏙️ City</div>
+  <div class="dtype">🔬 Materials</div>
+  <div class="dtype">🏛️ Organization</div>
+  <div class="dtype">👤 People</div>
+  <div class="dtype">🗃️ Datasets</div>
+  <div class="dtype">💻 Software</div>
+  <div class="dtype">🌐 Data Portals</div>
+  <div class="dtype">🔭 Instruments</div>
+  <div class="dtype">🏗️ Large-scale Facilities</div>
+  <div class="dtype">🏷️ Metadata</div>
+  <div class="dtype">📐 Ontologies</div>
+  <div class="dtype">🎓 Educational Resources</div>
+  <div class="dtype">📜 Patents</div>
+  <div class="dtype">📦 FDOs</div>
+  <div class="dtype">⚙️ Workflows</div>
+  <div class="dtype">🔧 Services</div>
+  <div class="dtype">🌍 International Collaborations</div>
+  <div class="dtype">📅 Events</div>
+  <div class="dtype">📄 Publications</div>
+  <div class="dtype">🛠️ Tools (NFDI resources)</div>
+  <div class="dtype">🔩 OMS Tools</div>
+  <div class="dtype">🧪 MatWerk-TA</div>
+  <div class="dtype">🔗 MatWerk-IUC</div>
+  <div class="dtype">📋 MatWerk-PP</div>
+  <div class="dtype">📝 DFG Preface</div>
+  <div class="dtype">ℹ️ DFG General Information</div>
+</div>
 ---
 
 ## 🧭 Contribution Scenarios

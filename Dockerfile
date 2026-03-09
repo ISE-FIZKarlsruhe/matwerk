@@ -4,7 +4,5 @@ FROM ghcr.io/epoz/shmarql:latest
 COPY . /app
 
 # ---- Shmarql docs build (mkdocs) ----
-COPY mkdocs.yml /app/src/a.yml
-COPY docs /app/src/docs
-RUN uv run python -m shmarql docs_build -f /app/src/a.yml
-RUN mv /app/src/site /app/src/__ && mkdir /app/src/site/ && mv /app/src/__ /app/src/site/matwerk
+RUN mkdir -p /app/src/site/matwerk \
+    && uv run mkdocs build -f /app/mkdocs.yml -d /app/src/site/matwerk
