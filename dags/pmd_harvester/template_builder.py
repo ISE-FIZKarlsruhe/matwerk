@@ -31,7 +31,7 @@ BFO_PARTICIPATES_IN = "http://purl.obolibrary.org/obo/RO_0000056"
 RO_HAS_PARTICIPANT = "http://purl.obolibrary.org/obo/RO_0000057"
 BFO_REALISES = "http://purl.obolibrary.org/obo/BFO_0000055"
 BFO_OCCUPIES_TEMPORAL_REGION = "http://purl.obolibrary.org/obo/BFO_0000199"
-BFO_INHERES_IN = "http://purl.obolibrary.org/obo/BFO_0000197"
+ROLE_OF = "http://purl.obolibrary.org/obo/RO_0000081"
 
 NFDI_DATASET = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"
 NFDI_TITLE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"
@@ -215,7 +215,7 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
             "role_email": ensure_email(publisher_email),
             "role_website": ensure_url(publisher_uri),
             "written_name": wn_iri,
-            "inheres_in": agent_iri,
+            "role_of": agent_iri,
         }
 
         proc = publ_processes[proc_iri]
@@ -391,14 +391,14 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
 
     write_tsv(
         os.path.join(out_dir, "role.tsv"),
-        ["ID","TYPE","label","role_email","role_website","written_name","inheres_in"],
+        ["ID","TYPE","label","role_email","role_website","written_name","role_of"],
         [
             "ID","TYPE",
             f"A {RDFS_LABEL}",
             f"I {IAO_DENOTED_BY}",
             f"I {IAO_DENOTED_BY}",
             f"I {IAO_DENOTED_BY}",
-            f"I {BFO_INHERES_IN} SPLIT=|"
+            f"I {ROLE_OF} SPLIT=|"
         ],
         list(publ_roles.values())
     )
