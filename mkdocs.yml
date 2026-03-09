@@ -6,10 +6,16 @@ theme:
   custom_dir: docs/overrides
   features:
     - navigation.tabs
-  hide:
-    - toc
+    - navigation.tabs.sticky
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+
 nav:
   - Home: index.md
+  - Dashboard: https://superset.ise.fiz-karlsruhe.de/superset/dashboard/mse-kg-dashboard/
   - How to add data?: upload.md
   - SPARQL Endpoint: /matwerk/shmarql/
   - Sample Queries:
@@ -18,5 +24,25 @@ nav:
     - Named Graphs Statistics: namedgraphsstatistics.md
 
 markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
   - pymdownx.superfences:
       preserve_tabs: true
+  - pymdownx.tabbed:
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/open-dashboard-link.js

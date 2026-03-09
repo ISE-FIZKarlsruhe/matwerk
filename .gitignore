@@ -29,7 +29,7 @@ Thumbs.db
 *.tmp
 *.bak
 /data/*
-/output/*
+/.cache/*
 /logs/*
 /server/*
 /dags/pmd_harvester/harvest_output
