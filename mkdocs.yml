@@ -40,7 +40,8 @@ markdown_extensions:
       alternate_style: true
 
 extra_css:
-  - stylesheets/extra.css
+  - overrides/assets/stylesheets/extra.css
 
 extra_javascript:
-  - javascripts/open-dashboard-link.js
+  - overrides/assets/javascripts/open-dashboard-link.js
+  - overrides/assets/javascripts/extra.js
