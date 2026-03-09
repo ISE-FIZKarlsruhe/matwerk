@@ -1,11 +1,7 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [main]
-    tags: ['v*']
-    paths:
-      - 'docs/**'
+  workflow_dispatch:
 
 permissions:
   packages: write
