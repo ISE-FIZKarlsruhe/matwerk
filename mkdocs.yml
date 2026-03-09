@@ -37,9 +37,7 @@ markdown_extensions:
   - pymdownx.superfences:
       preserve_tabs: true
   - pymdownx.tabbed:
-      slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
+      alternate_style: true
 
 extra_css:
   - stylesheets/extra.css
