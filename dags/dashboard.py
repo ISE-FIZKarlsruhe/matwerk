@@ -268,9 +268,6 @@ def dashboard():
                 log.info("Processed %d/%d graphs for triples/subjects...", i, len(graphs))
 
         eng = engine()
-        with eng.begin() as cx:
-            cx.execute(text("DELETE FROM kg_graph_stats"))
-            cx.execute(text("DELETE FROM kg_graph_subject_counts"))
 
         pd.DataFrame(rows_t).to_sql("kg_graph_stats", eng, if_exists="append", index=False)
         pd.DataFrame(rows_s).to_sql("kg_graph_subject_counts", eng, if_exists="append", index=False)
