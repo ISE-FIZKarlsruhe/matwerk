@@ -1,11 +1,9 @@
-# Materials Science and Engineering Knowledge Graph
-
 <div class="hero-banner" markdown>
 <div class="hero-content" markdown>
 
 <span class="hero-eyebrow">MSE-KG · v2.1</span>
 
-# MSE Knowledge Graph
+# The Materials Science and Engineering (MSE) Knowledge Graph
 
 **Semantic integration of distributed materials science resources** — enabling structured discovery, cross-resource linkage, and machine-actionable reuse across datasets, publications, software, and domain actors.
 
@@ -18,9 +16,9 @@ Aligned with **BFO** and domain ontologies for full semantic interoperability.
 </div>
 
 </div>
+![MSE-KG Visualization](img/matwerkBox.png)
 </div>
 
----
 
 ## Explore the Knowledge Graph
 
@@ -68,7 +66,6 @@ Natural language-style faceted exploration — no SPARQL knowledge required.
 
 </div>
 
----
 
 ## Graph Content at a Glance
 
@@ -108,7 +105,6 @@ Lectures, workshops, lecture notes
 
 </div>
 
----
 
 ## Ontological Foundation
 
@@ -140,15 +136,13 @@ The MatWerk Ontology — domain-specific extensions for materials science and en
 
 </div>
 
----
-
 ## Contribute Your Data
 
 !!! tip "Grow the graph"
     The MSE KG improves with community contributions. Adding your data increases visibility and enables new connections across the materials science ecosystem.
 <div style="text-align:center; margin-top: 1.5rem;" markdown>
 
-<a href="upload.md" class="md-button md-button--primary">How to Contribute?</a>
+<a href="https://nfdi.fiz-karlsruhe.de/matwerk/upload/" class="md-button md-button--primary">How to Contribute?</a>
 </div>
 
 <div class="contribute-row" markdown>
@@ -175,9 +169,6 @@ Semi-automated FDO harvesting
 
 </div>
 
-
----
-
 ## Community & Coordination
 
 <div class="community-row" markdown>
@@ -203,7 +194,3 @@ Broader consortium context and programme information.
 </div>
 
 </div>
-
----
-
-![MSE-KG Visualization](img/matwerkBox.png)
