@@ -68,22 +68,7 @@ def split_semicolon(s):
     return [p.strip() for p in s.split(";") if p.strip()]
 
 
-def clean_person_name(raw: str) -> str:
-    raw = sanitize(raw)
-    if not raw:
-        return ""
-    raw = re.sub(r"^\(?[A-Za-z](?:\s*,\s*[A-Za-z])*\)?\)?\s*", "", raw)
-    return sanitize(raw)
 
-
-def name_to_given_family(full_name: str):
-    full_name = clean_person_name(full_name)
-    tokens = [t for t in full_name.split() if t]
-    if not tokens:
-        return "", ""
-    if len(tokens) == 1:
-        return tokens[0], ""
-    return " ".join(tokens[:-1]), tokens[-1]
 
 
 def parse_date_mmddyyyy(s: str) -> str:
@@ -120,8 +105,6 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
 
     people = {}
     emails = {}
-    given_names = {}
-    family_names = {}
     written_names = {}
     websites = {}
 
@@ -137,7 +120,7 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
         if not email:
             return ""
         eiri = mint(email.lower().strip())
-        emails[eiri] = mint(email)
+        emails[eiri] = email
         return eiri
 
     def ensure_url(url: str) -> str:
@@ -149,7 +132,6 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
         return uiri
 
     def ensure_written_name(full_name: str, salt: str) -> str:
-        full_name = clean_person_name(full_name)
         if not full_name:
             return ""
         wniri = mint(salt + "|" + full_name)
@@ -157,7 +139,6 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
         return wniri
 
     def ensure_person(name: str, email: str, role: str) -> str:
-        name = clean_person_name(name)
         email = sanitize(email)
         key = (f"{name}|{role}").strip()
         if not key:
@@ -171,15 +152,9 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
             people[person_iri]["denoted_by"].append(ensure_email(email))
 
         if name:
-            given, family = name_to_given_family(name)
-            if given:
-                giri = mint(person_iri + "|" + given)
-                given_names[giri] = given
-                people[person_iri]["denoted_by"].append(giri)
-            if family:
-                firi = mint(person_iri + "|" + family)
-                family_names[firi] = family
-                people[person_iri]["denoted_by"].append(firi)
+            giri = mint(person_iri + "|" + name)
+            people[person_iri]["denoted_by"].append(giri)
+            
 
             wniri = mint(person_iri + "|" + name)
             written_names[wniri] = name
@@ -388,20 +363,6 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
         ["ID","TYPE","label","url"],
         ["ID","TYPE", f"A {RDFS_LABEL}", f"AT {NFDI_HAS_URL}^^xsd:anyURI"],
         [{"ID": iri, "TYPE": NFDI_WEBSITE, "label": val, "url": val} for iri, val in websites.items()]
-    )
-
-    write_tsv(
-        os.path.join(out_dir, "given_names.tsv"),
-        ["ID","TYPE","label","value"],
-        ["ID","TYPE", f"A {RDFS_LABEL}", f"A {NFDI_HAS_VALUE}"],
-        [{"ID": iri, "TYPE": IAO_GIVEN_NAME, "label": val, "value": val} for iri, val in given_names.items()]
-    )
-
-    write_tsv(
-        os.path.join(out_dir, "family_names.tsv"),
-        ["ID","TYPE","label","value"],
-        ["ID","TYPE", f"A {RDFS_LABEL}", f"A {NFDI_HAS_VALUE}"],
-        [{"ID": iri, "TYPE": IAO_FAMILY_NAME, "label": val, "value": val} for iri, val in family_names.items()]
     )
 
     write_tsv(
