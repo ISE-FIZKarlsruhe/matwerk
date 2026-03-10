@@ -39,9 +39,9 @@ Visualizations, statistics, and interactive views of the graph's content, struct
 
 **SPARQL Endpoint**
 
-Perform precise queries, integrate data into workflows, and run federated queries across multiple sources.
+Perform queries, integrate data into workflows, and run federated queries across multiple sources.
 
-<a href="https://nfdi.fiz-karlsruhe.de/matwerk/sparql" target="_blank" class="card-btn">Query Endpoint </a>
+<a href="https://nfdi.fiz-karlsruhe.de/matwerk/sparql?query=SELECT%20*%20WHERE%20{%20?s%20?p%20?o%20}%20LIMIT%201" target="_blank" class="card-btn">Query Endpoint </a>
 </div>
 
 <div class="access-card card-search" markdown>
@@ -61,7 +61,7 @@ Guided semantic search and browse interface for users who want to explore the gr
 
 Natural language-style faceted exploration — no SPARQL knowledge required.
 
-<a href="http://www.irisa.fr/LIS/ferre/sparklis/osparklis.html?title=Core%20English%20DBpedia&endpoint=https%3A//nfdi.fiz-karlsruhe.de/matwerk/sparql" target="_blank" class="card-btn">Explore </a>
+<a href="https://www.irisa.fr/LIS/ferre/sparklis/osparklis.html?endpoint=https%3A//nfdi.fiz-karlsruhe.de/matwerk/sparql&proxy_url=https%3A//nfdi.fiz-karlsruhe.de/matwerk/sparql&method_get=true" target="_blank" class="card-btn">Explore </a>
 </div>
 
 </div>
