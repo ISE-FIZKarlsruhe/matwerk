@@ -275,6 +275,7 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
                 for i in range(max(len(names), len(ems))):
                     nm = names[i] if i < len(names) else ""
                     em = ems[i] if i < len(ems) else ""
+                    piri = ensure_person(nm, em, role)
 
             build_publishing_pattern(ds_iri, title, created, "", "", "")
 
