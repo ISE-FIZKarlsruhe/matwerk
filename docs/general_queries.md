@@ -345,7 +345,7 @@ PREFIX denoted_by:         <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX nfdicore_title:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
 PREFIX has_value:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
 PREFIX has_url:            <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
-PREFIX participates_in:      <http://purl.obolibrary.org/obo/BFO_0000056>
+PREFIX participates_in:      <http://purl.obolibrary.org/obo/RO_0000056>
 PREFIX participant:          <http://purl.obolibrary.org/obo/RO_0000057>
 PREFIX has_role:             <http://purl.obolibrary.org/obo/BFO_0000055>
 PREFIX written_name:        <http://purl.obolibrary.org/obo/IAO_0000590>
