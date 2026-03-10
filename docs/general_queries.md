@@ -145,25 +145,18 @@ LIMIT 999
 
 ```sparql
 PREFIX organization: <http://purl.obolibrary.org/obo/OBI_0000245>
-PREFIX located_in:            <http://purl.obolibrary.org/obo/BFO_0000171>
+PREFIX located_in:            <http://purl.obolibrary.org/obo/RO_0001025>
 PREFIX nfdicore_city:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000106>
 PREFIX denoted_by:          <http://purl.obolibrary.org/obo/IAO_0000235>
-PREFIX abbreviation_textual_entity:         <http://purl.obolibrary.org/obo/IAO_0000605>
 PREFIX has_external_identifier:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006>
 PREFIX has_url:             <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
+PREFIX has_acronym:             <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010015>
 PREFIX rdfs:                  <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?org ?label_en ?acronym ?city ?rorID WHERE {
-
   ?org a organization: .
   OPTIONAL { ?org rdfs:label ?label_en . }
-
-  OPTIONAL {
-    ?org denoted_by: ?acrNode .
-    ?acrNode a abbreviation_textual_entity: ;
-             rdfs:label ?acronym .
-  }
-
+  ?org has_acronym: ?acronym .
   OPTIONAL {
     ?org located_in: ?cityNode .
     ?cityNode a nfdicore_city: ;
@@ -259,47 +252,6 @@ LIMIT 999
 
 ---
 
-### What are the people present in the MSE-KG? What are the email addresses and ORCID IDs of these people?
-
-```sparql
-PREFIX nfdicore_person: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>
-PREFIX denoted_by:    <http://purl.obolibrary.org/obo/IAO_0000235>
-PREFIX email_address:   <http://purl.obolibrary.org/obo/IAO_0000429>
-PREFIX has_external_identifier:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006>
-PREFIX has_url:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
-PREFIX rdfs:            <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT DISTINCT ?person ?label ?email ?orcid WHERE {
-
-  ?person a nfdicore_person: .
-
-  OPTIONAL { ?person rdfs:label ?label . }
-
-  # Title (kept from original; guarded to literals to avoid LANG() on IRIs)
-  OPTIONAL {
-    ?person denoted_by: ?title .
-    FILTER(isLiteral(?title))
-    FILTER(LANG(?title) = "" || LANG(?title) = "en")
-  }
-
-  # E-mail (via email node)
-  OPTIONAL {
-    ?person denoted_by: ?emailNode .
-    ?emailNode a email_address: ;
-               rdfs:label ?email .
-  }
-
-  # ORCID ID
-  OPTIONAL {
-    ?person has_external_identifier: ?id .
-    ?id has_url: ?orcid .
-  }
-}
-LIMIT 999
-```
-
----
-
 ### What are the SPARQL endpoints in the MSE-KG that are about "process"?
 
 ```sparql
@@ -343,7 +295,7 @@ ORDER BY ?dataset ?term_class
 PREFIX nfdicore_dataset:            <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
 PREFIX denoted_by:                <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX nfdicore_title:              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
-PREFIX has_contributor:             <http://purl.obolibrary.org/obo/BFO_0000178>
+PREFIX has_part:             <http://purl.obolibrary.org/obo/BFO_0000051>
 PREFIX nfdicore_creator_role:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001032>
 PREFIX nfdicore_institution_list:   <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033>
 PREFIX has_url:                   <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
@@ -362,14 +314,14 @@ WHERE {
 
   # Creator
   OPTIONAL {
-    ?dataset has_contributor: ?creator .
+    ?dataset has_part: ?creator .
     ?creator a nfdicore_creator_role: ;
              rdfs:label ?creatorLabel .
   }
 
   # Creator affiliation
   OPTIONAL {
-    ?dataset has_contributor: ?creatorAffiliation .
+    ?dataset has_part: ?creatorAffiliation .
     ?creatorAffiliation a nfdicore_institution_list: ;
                         rdfs:label ?creatorAffiliationLabel .
   }
@@ -445,7 +397,7 @@ LIMIT 999
 PREFIX pmd_instrument:    <https://w3id.org/pmd/co/PMD_0000602>
 PREFIX denoted_by:      <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX has_value:     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
-PREFIX participates_in:   <http://purl.obolibrary.org/obo/BFO_0000056>
+PREFIX participates_in:   <http://purl.obolibrary.org/obo/RO_0000056>
 PREFIX participant:       <http://purl.obolibrary.org/obo/RO_0000057>
 PREFIX has_role:          <http://purl.obolibrary.org/obo/BFO_0000055>
 PREFIX written_name:     <http://purl.obolibrary.org/obo/IAO_0000590>
@@ -481,8 +433,8 @@ WHERE {
     }
 
     OPTIONAL {
-      ?contactpointRole denoted_by: ?EmailWebsite2 .
-      ?EmailWebsite2 a nfdicore_website: ;
+      ?contactpointRole denoted_by: ?EmailWebsite .
+      ?EmailWebsite a nfdicore_website: ;
                      has_url: ?Website .
     }
   }
@@ -499,7 +451,7 @@ PREFIX nfdicore_large_scale_facility:          <https://nfdi.fiz-karlsruhe.de/on
 PREFIX denoted_by:          <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX written_name:        <http://purl.obolibrary.org/obo/IAO_0000590>
 PREFIX abbreviation_textual_entity:         <http://purl.obolibrary.org/obo/IAO_0000605>
-PREFIX is_output_of:    <http://purl.obolibrary.org/obo/OBI_0000312>
+PREFIX is_output_of:    <http://purl.obolibrary.org/obo/RO_0002353>
 PREFIX participant:           <http://purl.obolibrary.org/obo/RO_0000057>
 PREFIX has_role:              <http://purl.obolibrary.org/obo/BFO_0000055>
 PREFIX organization: <http://purl.obolibrary.org/obo/OBI_0000245>
@@ -520,21 +472,17 @@ WHERE {
                   rdfs:label ?name .
   }
 
-  OPTIONAL {
     ?facility denoted_by: ?acr .
     ?acr a abbreviation_textual_entity: ;
          rdfs:label ?acronym .
-  }
 
   OPTIONAL {
     ?facility is_output_of: ?outputProcess .
     ?outputProcess participant: ?org ;
                    has_role: ?Role .
 
-    OPTIONAL {
-      ?org a organization: ;
+    ?org a organization: ;
            rdfs:label ?orgLabel .
-    }
 
     ?Role a nfdicore_providerrole: ;
           denoted_by: ?EmailWebsite .
@@ -591,8 +539,8 @@ WHERE {
 
 ```sparql
 PREFIX nfdicore_ontology: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023>
-PREFIX is_subject_of:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000226>
-PREFIX nfdicore_title:    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
+PREFIX denoted_by:       <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX written_name:    <http://purl.obolibrary.org/obo/IAO_0000590>
 PREFIX has_value:     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
 PREFIX nfdicore_source_code_repository:     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000030>
 PREFIX has_url:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
@@ -602,13 +550,13 @@ WHERE {
   ?ontology a nfdicore_ontology: .
 
   OPTIONAL {
-    ?ontology is_subject_of: ?ontologyTitle .
-    ?ontologyTitle a nfdicore_title: ;
+    ?ontology denoted_by: ?ontologyTitle .
+    ?ontologyTitle a written_name: ;
                    has_value: ?ontoname .
   }
 
   OPTIONAL {
-    ?ontology is_subject_of: ?ontologyRepo .
+    ?ontology denoted_by: ?ontologyRepo .
     ?ontologyRepo a nfdicore_source_code_repository: ;
                   has_url: ?repoLink .
   }
@@ -647,7 +595,7 @@ LIMIT 999
 PREFIX nfdicore_publication:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190>
 PREFIX has_external_identifier:             <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006>
 PREFIX has_url:                  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
-PREFIX has_contributor:            <http://purl.obolibrary.org/obo/BFO_0000178>
+PREFIX has_part:            <http://purl.obolibrary.org/obo/BFO_0000051>
 PREFIX nfdicore_author_list:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001030>
 PREFIX nfdicore_institution_list:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001033>
 PREFIX rdfs:                       <http://www.w3.org/2000/01/rdf-schema#>
@@ -664,13 +612,13 @@ WHERE {
   }
 
   OPTIONAL {
-    ?publications has_contributor: ?authors .
+    ?publications has_part: ?authors .
     ?authors a nfdicore_author_list: ;
              rdfs:label ?authorsLabel .
   }
 
   OPTIONAL {
-    ?publications has_contributor: ?authorsAffiliation .
+    ?publications has_part: ?authorsAffiliation .
     ?authorsAffiliation a nfdicore_institution_list: ;
                         rdfs:label ?authorsAffiliationLabel .
   }
