@@ -114,7 +114,6 @@ The MSE KG is grounded in explicit ontological modeling using formal vocabularie
 
 <div class="ontology-card" markdown>
 <div class="ont-header" markdown>
-<span class="ont-badge">Core</span>
 **NFDIcore**
 </div>
 
@@ -125,7 +124,6 @@ The NFDI Core Ontology — provides the shared vocabulary for all NFDI consortia
 
 <div class="ontology-card" markdown>
 <div class="ont-header" markdown>
-<span class="ont-badge ont-domain">Domain</span>
 **MWO**
 </div>
 
