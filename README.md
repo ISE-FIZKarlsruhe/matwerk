@@ -1,5 +1,3 @@
-[![shacl validation](https://github.com/ISE-FIZKarlsruhe/matwerk/actions/workflows/kg-validation.yml/badge.svg)](https://github.com/ISE-FIZKarlsruhe/matwerk/actions/workflows/kg-validation.yml)
-
 # MSE Knowledge Graph
 
 This repository contains the ontology and data that form the **MSE Knowledge Graph** for [NFDI-MatWerk](https://nfdi-matwerk.de/), a consortium of the National Research Data Infrastructure (NFDI) focused on materials science and engineering.
