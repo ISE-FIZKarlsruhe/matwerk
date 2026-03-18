@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-title: "The Materials Science and Engineering (MSE) Knowledge Graph"
+title: "The Materials Science and Engineering Knowledge Graph (MSE KG)"
 abstract: >
-  The Materials Science and Engineering (MSE) Knowledge Graph provides
+  The Materials Science and Engineering Knowledge Graph (MSE KG) provides
   structured, interlinked research data for NFDI-MatWerk, a consortium of
   the National Research Data Infrastructure (NFDI) focused on materials
   science and engineering. It includes ontology definitions, harvested data
