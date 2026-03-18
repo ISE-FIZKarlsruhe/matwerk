@@ -21,7 +21,7 @@ If you use this software or data, please cite it as:
   author    = {Norouzi, Ebrahim and Beygi Nasrabadi, Hossein and Singh, Gunjan and Algergawy, Alsayed and Waitelonis, J{\"o}rg and Sack, Harald},
   title     = {The Materials Science and Engineering Knowledge Graph (MSE KG)},
   url       = {https://github.com/ISE-FIZKarlsruhe/matwerk},
-  version   = {1.0.0},
+  version   = {2.1.0},
   date      = {2026-03-11},
 }
 ```
