@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "The Materials Science and Engineering (MSE) Knowledge Graph"
+abstract: >
+  The Materials Science and Engineering (MSE) Knowledge Graph provides
+  structured, interlinked research data for NFDI-MatWerk, a consortium of
+  the National Research Data Infrastructure (NFDI) focused on materials
+  science and engineering. It includes ontology definitions, harvested data
+  from multiple sources, and SPARQL-based validation and reasoning workflows.
+authors:
+  - family-names: Norouzi
+    given-names: Ebrahim
+    email: ebrahim.norouzi@fiz-karlsruhe.de
+    affiliation: "FIZ Karlsruhe – Leibniz Institute for Information Infrastructure"
+  - family-names: Beygi Nasrabadi
+    given-names: Hossein
+    email: hossein.beygi.nasrabadi@fiz-karlsruhe.de
+    affiliation: "FIZ Karlsruhe – Leibniz Institute for Information Infrastructure"
+  - family-names: Singh
+    given-names: Gunjan
+    email: gunjan.singh@fiz-karlsruhe.de
+    affiliation: "FIZ Karlsruhe – Leibniz Institute for Information Infrastructure"
+  - family-names: Algergawy
+    given-names: Alsayed
+    affiliation: "FIZ Karlsruhe – Leibniz Institute for Information Infrastructure"
+  - family-names: Waitelonis
+    given-names: Jörg
+    email: joerg.waitelonis@fiz-karlsruhe.de
+    affiliation: "FIZ Karlsruhe – Leibniz Institute for Information Infrastructure"
+  - family-names: Sack
+    given-names: Harald
+    email: harald.sack@kit.edu
+    affiliation: "FIZ Karlsruhe – Leibniz Institute for Information Infrastructure; Karlsruhe Institute of Technology"
+repository-code: "https://github.com/ISE-FIZKarlsruhe/matwerk"
+url: "https://nfdi.fiz-karlsruhe.de/matwerk/"
+license: MIT
+version: "1.0.0"
+date-released: "2026-03-11"
+keywords:
+  - knowledge graph
+  - materials science and engineering
+  - NFDI
+  - NFDI-MatWerk
+  - linked data
+  - ontology
+  - SPARQL

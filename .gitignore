@@ -30,10 +30,11 @@ Thumbs.db
 *.bak
 /data/*
 /.cache/*
-/logs/*
+/.claude/*
 /server/*
 /dags/pmd_harvester/harvest_output
 /dags/pmd_harvester/robot_templates
+/publication/*
 # Ignore documentation and site builds
 /site/
 public/
