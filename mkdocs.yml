@@ -20,6 +20,7 @@ nav:
   - SPARQL Endpoint: /matwerk/shmarql/
   - Sample Queries:
     - General Queries: general_queries.md
+    - Federated Queries: Federated_queries.md
     - Statistics: statistics.md
     - Named Graphs Statistics: namedgraphsstatistics.md
 

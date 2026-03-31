@@ -10,8 +10,8 @@
 Aligned with **BFO** and domain ontologies for full semantic interoperability.
 
 <div class="hero-badges" markdown>
-<span class="badge badge-updated">🕐 Updated 09.03.2026</span>
-<span class="badge badge-triples">~142K Triples</span>
+<span class="badge badge-updated">🕐 Updated 31.03.2026</span>
+<span class="badge badge-triples">~289K Triples</span>
 <span class="badge badge-open">Open Access</span>
 </div>
 
