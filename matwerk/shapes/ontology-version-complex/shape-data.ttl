@@ -1,0 +1,22 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix mse:   <https://nfdi.fiz-karlsruhe.de/matwerk/> .
+
+# Ontology version with version number and a file data item
+mse:nfdicore_v2_1_0
+    a nfdi:NFDI_0000026 ;
+    rdfs:label "NFDIcore v2.1.0" ;
+    nfdi:NFDI_0000226 mse:nfdicore_v2_1_0_version_number ;
+    nfdi:NFDI_0000226 mse:nfdicore_v2_1_0_owl_file .
+
+mse:nfdicore_v2_1_0_version_number
+    a obo:IAO_0000129 ;
+    rdfs:label "2.1.0" .
+
+mse:nfdicore_v2_1_0_owl_file
+    a nfdi:NFDI_0000027 ;
+    rdfs:label "nfdicore-v2.1.0.owl" .

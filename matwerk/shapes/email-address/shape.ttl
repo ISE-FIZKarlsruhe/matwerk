@@ -1,0 +1,20 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex:    <http://www.example.org/#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+
+#
+#  an "email address" (or textual entity) always needs to have a value
+#
+
+ex:EmailAddressShape
+    a sh:NodeShape ;
+    sh:targetClass <http://purl.obolibrary.org/obo/IAO_0000300> ;    # "Textual Entity"
+    sh:property [
+        sh:path <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007> ;    # has value
+        sh:minCount 1 ;
+        sh:message "an 'email address' / 'textual entity' (IAO_0000300) must always have a value (NFDI_0001007)"
+    ] ;
+    .

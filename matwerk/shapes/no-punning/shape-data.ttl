@@ -1,0 +1,16 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix mse:   <https://nfdi.fiz-karlsruhe.de/matwerk/> .
+
+# Valid: a named individual without rdfs:subClassOf
+mse:researcher_mueller
+    a owl:NamedIndividual , obo:BFO_0000040 ;
+    rdfs:label "Dr. Anna Mueller" .
+
+mse:lab_instrument_sem_01
+    a owl:NamedIndividual , obo:BFO_0000040 ;
+    rdfs:label "Scanning Electron Microscope FEI Quanta 650" .
