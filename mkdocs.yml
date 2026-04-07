@@ -13,11 +13,17 @@ theme:
     - content.code.copy
     - content.tabs.link
 
+plugins:
+  - search
+  - macros:
+      module_name: docs/macros
+
 nav:
   - Home: index.md
   - Dashboard: https://superset.ise.fiz-karlsruhe.de/superset/dashboard/mse-kg-dashboard/
   - How to add data?: upload.md
   - SPARQL Endpoint: /matwerk/shmarql/
+  - RDF Dumps: dumps.md
   - Sample Queries:
     - General Queries: general_queries.md
     - Federated Queries: Federated_queries.md
