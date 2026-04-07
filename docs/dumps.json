@@ -6,8 +6,8 @@
       "publish_date": "2026-04-07",
       "mwo_version": "3.0.1",
       "mwo_version_iri": "http://purls.helmholtz-metadaten.de/mwo/mwo.owl/3.0.1",
-      "zenodo_doi": "",
-      "zenodo_url": "",
+      "zenodo_doi": "10.5281/zenodo.19452992",
+      "zenodo_url": "https://zenodo.org/records/19452992",
       "graphs": [
         {
           "graph_name": "spreadsheets_assertions",
