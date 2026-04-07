@@ -41,7 +41,7 @@ Visualizations, statistics, and interactive views of the graph's content, struct
 
 Perform queries, integrate data into workflows, and run federated queries across multiple sources.
 
-<a href="https://nfdi.fiz-karlsruhe.de/matwerk/sparql?query=SELECT%20*%20WHERE%20{%20?s%20?p%20?o%20}%20LIMIT%201" target="_blank" class="card-btn">Query Endpoint </a>
+<a href="https://nfdi.fiz-karlsruhe.de/matwerk/sparql?query=SELECT%20*%20WHERE%20%7B%20?s%20?p%20?o%20%7D%20LIMIT%201" target="_blank" class="card-btn">Query Endpoint </a>
 </div>
 
 <div class="access-card card-search" markdown>
