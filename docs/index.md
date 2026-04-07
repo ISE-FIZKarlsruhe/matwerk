@@ -1,7 +1,7 @@
 <div class="hero-banner" markdown>
 <div class="hero-content" markdown>
 
-<span class="hero-eyebrow">MSE-KG · v2.1</span>
+<span class="hero-eyebrow">MSE-KG · v[[ kg_version ]]</span>
 
 # The Materials Science and Engineering (MSE) Knowledge Graph
 
@@ -10,9 +10,10 @@
 Aligned with **BFO** and domain ontologies for full semantic interoperability.
 
 <div class="hero-badges" markdown>
-<span class="badge badge-updated">🕐 Updated 31.03.2026</span>
-<span class="badge badge-triples">~289K Triples</span>
+<span class="badge badge-updated">🕐 Updated [[ kg_date ]]</span>
+<span class="badge badge-triples">[[ kg_triples ]] Triples</span>
 <span class="badge badge-open">Open Access</span>
+[% if kg_zenodo_url %]<a href="[[ kg_zenodo_url ]]" target="_blank" class="badge badge-zenodo" style="text-decoration:none">📦 RDF Dump (DOI)</a>[% endif %]
 </div>
 
 </div>

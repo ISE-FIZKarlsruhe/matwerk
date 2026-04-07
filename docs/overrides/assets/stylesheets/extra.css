@@ -190,6 +190,8 @@ code, .md-typeset code {
 .badge-updated  { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); }
 .badge-triples  { background: rgba(15,158,142,0.25); color: #5de6d8; border: 1px solid rgba(15,158,142,0.4); }
 .badge-open     { background: rgba(232,160,32,0.2); color: #f8c660; border: 1px solid rgba(232,160,32,0.35); }
+.badge-zenodo   { background: rgba(68,138,255,0.2); color: #82b1ff; border: 1px solid rgba(68,138,255,0.35); cursor: pointer; transition: background 0.2s; }
+.badge-zenodo:hover { background: rgba(68,138,255,0.35); }
 
 /* ── Access Cards Grid ───────────────────────────────────── */
 .access-grid {

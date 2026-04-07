@@ -8,13 +8,17 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
+    - navigation.sections
     - search.highlight
     - search.suggest
     - content.code.copy
     - content.tabs.link
+  icon:
+    repo: fontawesome/brands/github
 
 plugins:
   - search
+  - ontoink
   - macros:
       module_name: docs/macros
       on_error_fail: true
@@ -30,10 +34,34 @@ nav:
   - SPARQL Endpoint: /matwerk/shmarql/
   - RDF Dumps: dumps.md
   - Sample Queries:
-    - General Queries: general_queries.md
-    - Federated Queries: Federated_queries.md
-    - Statistics: statistics.md
-    - Named Graphs Statistics: namedgraphsstatistics.md
+      - General Queries: general_queries.md
+      - Federated Queries: Federated_queries.md
+      - Statistics: statistics.md
+      - Named Graphs Statistics: namedgraphsstatistics.md
+  - Pipeline:
+      - Overview: pipeline/index.md
+      - Template Processing: pipeline/process-spreadsheets.md
+      - Merge: pipeline/merge.md
+      - Reasoning: pipeline/reason.md
+      - Validation: pipeline/validation.md
+      - Harvesters: pipeline/harvesters.md
+      - Publish to Virtuoso: pipeline/publish.md
+      - Dashboard DAG: pipeline/dashboard.md
+      - Dump & Archive: pipeline/dump-and-archive.md
+      - CQ Tester: pipeline/cq-tester.md
+  - Shapes:
+      - Overview: shapes/index.md
+      - Textual Entity: shapes/textual-entity/pattern.md
+      - No Punning: shapes/no-punning/pattern.md
+      - Role Bearer: shapes/role-bearer/pattern.md
+      - Role Realization: shapes/role-realization/pattern.md
+      - Ontology Variant: shapes/ontology-variant/pattern.md
+      - Ontology Version: shapes/ontology-version/pattern.md
+      - Ontology Version (Complex): shapes/ontology-version-complex/pattern.md
+      - Email Address Value: shapes/email-address/pattern.md
+      - URL Instance: shapes/url-instance/pattern.md
+  - Verification:
+      - SPARQL Checks: verification/index.md
 
 markdown_extensions:
   - admonition
@@ -48,6 +76,10 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences:
       preserve_tabs: true
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
 
@@ -57,3 +89,4 @@ extra_css:
 extra_javascript:
   - overrides/assets/javascripts/open-dashboard-link.js
   - overrides/assets/javascripts/extra.js
+  - https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js
