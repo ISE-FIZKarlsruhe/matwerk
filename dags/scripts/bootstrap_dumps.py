@@ -41,19 +41,74 @@ NAMED_GRAPHS = [
 ]
 
 
-def sparql_construct(endpoint: str, graph_uri: str, user: str, passwd: str) -> bytes:
-    """CONSTRUCT all triples from a named graph, return Turtle bytes."""
-    query = f"CONSTRUCT {{ ?s ?p ?o }} WHERE {{ GRAPH <{graph_uri}> {{ ?s ?p ?o }} }}"
-    r = requests.get(
-        endpoint,
-        params={"query": query, "format": "text/turtle"},
-        auth=HTTPDigestAuth(user, passwd),
-        timeout=(10, 600),
-    )
-    if r.status_code != 200:
-        print(f"[ERROR] CONSTRUCT for {graph_uri} failed ({r.status_code}): {r.text[:500]}")
-        return b""
-    return r.content
+def sparql_dump_ntriples(endpoint: str, graph_uri: str, user: str, passwd: str, page_size: int = 10000) -> str:
+    """
+    Dump all triples from a named graph as N-Triples using SELECT pagination.
+    SELECT avoids the CONSTRUCT hash-dictionary limit in Virtuoso.
+    """
+    auth = HTTPDigestAuth(user, passwd)
+    all_lines = []
+    offset = 0
+    total = 0
+
+    while True:
+        query = (
+            f"SELECT ?s ?p ?o FROM <{graph_uri}> "
+            f"WHERE {{ ?s ?p ?o }} "
+            f"LIMIT {page_size} OFFSET {offset}"
+        )
+        r = requests.get(
+            endpoint,
+            params={"query": query, "format": "application/sparql-results+json"},
+            auth=auth,
+            timeout=(10, 600),
+        )
+        if r.status_code != 200:
+            print(f"[ERROR] SELECT for {graph_uri} failed ({r.status_code}): {r.text[:500]}")
+            return ""
+
+        bindings = r.json().get("results", {}).get("bindings", [])
+        if not bindings:
+            break
+
+        for b in bindings:
+            s = _sparql_val_to_nt(b["s"])
+            p = _sparql_val_to_nt(b["p"])
+            o = _sparql_val_to_nt(b["o"])
+            all_lines.append(f"{s} {p} {o} .")
+
+        total += len(bindings)
+        offset += page_size
+        print(f"    fetched {total} triples so far...")
+
+        if len(bindings) < page_size:
+            break
+
+    return "\n".join(all_lines) + "\n" if all_lines else ""
+
+
+def _sparql_val_to_nt(val: dict) -> str:
+    """Convert a SPARQL JSON result binding value to N-Triples syntax."""
+    t = val["type"]
+    v = val["value"]
+    if t == "uri":
+        return f"<{v}>"
+    elif t == "bnode":
+        # Virtuoso may return bnode values like "b1250563" or "nodeID://b1250563"
+        bnode_id = v.replace("nodeID://", "").replace("://", "").lstrip("/")
+        return f"_:{bnode_id}"
+    elif t == "literal" or t == "typed-literal":
+        # Escape special chars in literal value
+        escaped = v.replace("\\", "\\\\").replace('"', '\\"').replace("\n", "\\n").replace("\r", "\\r")
+        lang = val.get("xml:lang")
+        dt = val.get("datatype")
+        if lang:
+            return f'"{escaped}"@{lang}'
+        elif dt:
+            return f'"{escaped}"^^<{dt}>'
+        else:
+            return f'"{escaped}"'
+    return f'"{v}"'
 
 
 def compute_stats(ttl_path: str) -> dict:
@@ -154,16 +209,20 @@ def main():
         print(f"\n--- {graph_name} ---")
         print(f"  CONSTRUCT from <{graph_uri}> ...")
 
-        ttl_bytes = sparql_construct(args.sparql, graph_uri, args.user, args.passwd)
-        if not ttl_bytes:
+        nt_data = sparql_dump_ntriples(args.sparql, graph_uri, args.user, args.passwd)
+        if not nt_data.strip():
             print(f"  [SKIP] Empty result for {graph_name}")
             continue
 
+        # Parse N-Triples and serialize as Turtle for a cleaner dump
+        from rdflib import Graph as RdfGraph
+        g = RdfGraph()
+        g.parse(data=nt_data, format="nt")
         dump_filename = f"{graph_name}_v{args.version}.ttl"
         dump_path = os.path.join(args.out_dir, dump_filename)
-        with open(dump_path, "wb") as f:
-            f.write(ttl_bytes)
-        print(f"  Wrote {dump_path} ({len(ttl_bytes):,} bytes)")
+        g.serialize(destination=dump_path, format="turtle")
+        file_size = os.path.getsize(dump_path)
+        print(f"  Wrote {dump_path} ({file_size:,} bytes, {len(g):,} triples)")
 
         stats = compute_stats(dump_path)
         print(f"  Stats: {stats['triples']:,} triples, {stats['subjects']:,} subjects, "
