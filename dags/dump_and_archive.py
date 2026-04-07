@@ -8,14 +8,13 @@ print('adding local path', local_path)
 sys.path.append(local_path)
 
 import json
-import hashlib
 import base64
 from datetime import datetime, timezone
 
 import requests
 from airflow.sdk import dag, task, Variable, get_current_context
 from airflow.exceptions import AirflowFailException
-from common.graph_metadata import compute_rdf_stats, utc_now_iso_seconds
+from common.graph_metadata import compute_rdf_stats
 
 
 DAG_ID = "dump_and_archive"
@@ -137,7 +136,7 @@ def _build_dump_metadata_ttl(
 
 def _push_manifest_to_github(manifest: dict, repo: str, path: str, branch: str = "main") -> None:
     """Push docs/dumps.json to GitHub via Contents API."""
-    token = Variable.get("matwerk_github_token", default_var="")
+    token = Variable.get("matwerk_github_token", default="")
     if not token:
         print("[WARN] matwerk_github_token not set, skipping GitHub push")
         return
@@ -310,7 +309,7 @@ def dump_and_archive():
         mwo_version = ti.xcom_pull(task_ids="generate_dumps", key="mwo_version")
 
         # Get concept_id from Variable (None for first-ever deposit)
-        concept_id = Variable.get("matwerk_zenodo_concept_id", default_var="")
+        concept_id = Variable.get("matwerk_zenodo_concept_id", default="")
         deposit = get_or_create_deposit(concept_id if concept_id else None)
 
         print(f"[INFO] Zenodo deposit id={deposit['id']}")
@@ -417,10 +416,10 @@ def dump_and_archive():
         }
 
         # Load existing manifest or start fresh
-        repo = Variable.get("matwerk_github_repo", default_var="ISE-FIZKarlsruhe/matwerk")
+        repo = Variable.get("matwerk_github_repo", default="ISE-FIZKarlsruhe/matwerk")
         manifest_path = "docs/dumps.json"
 
-        token = Variable.get("matwerk_github_token", default_var="")
+        token = Variable.get("matwerk_github_token", default="")
         existing_manifest = {"latest_version": version, "releases": []}
 
         if token:

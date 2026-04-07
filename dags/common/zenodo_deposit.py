@@ -11,7 +11,7 @@ def _get_zenodo_config() -> tuple[str, str]:
     """Return (base_url, access_token) from Airflow Variables."""
     from airflow.sdk import Variable
 
-    base_url = Variable.get("matwerk_zenodo_base_url", default_var="https://zenodo.org/api")
+    base_url = Variable.get("matwerk_zenodo_base_url", default="https://zenodo.org/api")
     token = Variable.get("matwerk_zenodo_token")
     if not token:
         raise AirflowFailException("Missing Airflow Variable: matwerk_zenodo_token")
