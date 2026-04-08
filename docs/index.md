@@ -13,7 +13,7 @@ Aligned with **BFO** and domain ontologies for full semantic interoperability.
 <span class="badge badge-updated">🕐 Updated [[ kg_date ]]</span>
 <span class="badge badge-triples">[[ kg_triples ]] Triples</span>
 <span class="badge badge-open">Open Access</span>
-[% if kg_zenodo_url %]<a href="[[ kg_zenodo_url ]]" target="_blank" class="badge badge-zenodo" style="text-decoration:none">📦 RDF Dump (DOI)</a>[% endif %]
+<a href="https://nfdi.fiz-karlsruhe.de/matwerk/dumps/" class="badge badge-zenodo" style="text-decoration:none">📦 RDF Dumps</a>
 </div>
 
 </div>
@@ -193,3 +193,24 @@ Broader consortium context and programme information.
 </div>
 
 </div>
+
+## How to Cite
+
+If you use the MSE-KG in your research, please cite it using the metadata in our [`CITATION.cff`](https://github.com/ISE-FIZKarlsruhe/matwerk/blob/main/CITATION.cff):
+
+```bibtex
+@software{matwerk_kg,
+  author    = {Norouzi, Ebrahim and Beygi Nasrabadi, Hossein
+               and Singh, Gunjan and Algergawy, Alsayed
+               and Waitelonis, J{\"o}rg and Sack, Harald},
+  title     = {The Materials Science and Engineering
+               Knowledge Graph (MSE KG)},
+  url       = {https://github.com/ISE-FIZKarlsruhe/matwerk},
+  version   = {2.1.1},
+  date      = {2026-04-07},
+}
+```
+
+[% if kg_zenodo_doi %]
+The latest RDF dump is archived on Zenodo: [DOI: [[ kg_zenodo_doi ]]](https://doi.org/[[ kg_zenodo_doi ]])
+[% endif %]

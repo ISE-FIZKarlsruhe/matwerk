@@ -1,113 +1,112 @@
 # Pipeline Overview
 
-## Full pipeline flow
+The MSE-KG is constructed, validated, and published through an automated pipeline orchestrated by [Apache Airflow](https://airflow.apache.org/). The pipeline comprises eleven Directed Acyclic Graphs (DAGs) organised into three architectural tiers: a core processing chain, a parallel harvester tier, and a release tier.
+
+Ontology transformations throughout the pipeline rely on [ROBOT](https://robot.obolibrary.org/), an open-source command-line tool for automating OWL ontology development tasks including template processing, merging, reasoning, module extraction, and quality reporting.
+
+## Pipeline Architecture
+
+```mermaid
+graph TD
+    subgraph "📋 Template Tier"
+        SHEETS["27 Google Sheets<br/>(TSV templates)"]
+    end
+
+    subgraph "⚙️ Core Pipeline"
+        PS["<b>process_spreadsheets</b><br/>ROBOT template → 27 OWL modules"]
+        MG["<b>merge</b><br/>ROBOT merge → spreadsheets_asserted.ttl"]
+        RS["<b>reason_openllet_new</b><br/>Openllet → inferences.ttl"]
+        VC["<b>validation_checks</b><br/>HermiT + SHACL + SPARQL verify"]
+        PV["<b>publish_to_virtuoso</b><br/>Upload 5 named graphs"]
+    end
+
+    subgraph "🌐 Harvester Tier (weekly)"
+        HZ["harvester_zenodo"]
+        HE["harvester_endpoints"]
+        HP["harvester_pmd"]
+    end
+
+    subgraph "📦 Release Tier"
+        DB["<b>dashboard</b><br/>Daily stats → SQLite → Superset"]
+        DA["<b>dump_and_archive</b><br/>Versioned dumps → Zenodo + DOI"]
+        CQ["<b>cq_tester</b><br/>Competency question checks"]
+    end
+
+    SHEETS --> PS --> MG --> RS --> VC --> PV
+    HZ --> RS
+    HE --> RS
+    HP --> RS
+    PV --> DB
+    PV --> DA
+    PV --> CQ
+
+    style PS fill:#e3f2fd,stroke:#1565c0
+    style MG fill:#e3f2fd,stroke:#1565c0
+    style RS fill:#e3f2fd,stroke:#1565c0
+    style VC fill:#e3f2fd,stroke:#1565c0
+    style PV fill:#e3f2fd,stroke:#1565c0
+    style HZ fill:#fff3e0,stroke:#e65100
+    style HE fill:#fff3e0,stroke:#e65100
+    style HP fill:#fff3e0,stroke:#e65100
+    style DB fill:#e8f5e9,stroke:#2e7d32
+    style DA fill:#e8f5e9,stroke:#2e7d32
+    style CQ fill:#e8f5e9,stroke:#2e7d32
+```
+
+## Core Pipeline
+
+The core pipeline is a linear chain that transforms curated spreadsheet data into a published, validated knowledge graph:
+
+| Step | DAG | Tool | Output |
+|------|-----|------|--------|
+| 1 | `process_spreadsheets` | [ROBOT](https://robot.obolibrary.org/) template + merge | 27 individual OWL modules |
+| 2 | `merge` | ROBOT merge + HermiT consistency check | `spreadsheets_asserted.ttl` |
+| 3 | `reason_openllet_new` | [Openllet](https://github.com/Galigator/openllet) extract | `spreadsheets_inferences.ttl` |
+| 4 | `validation_checks` | HermiT + SHACL + SPARQL verify | Validated, merged graph |
+| 5 | `publish_to_virtuoso` | Virtuoso CRUD API | 5 named graphs live |
+
+!!! tip "ROBOT"
+    [ROBOT](https://robot.obolibrary.org/) (ROBOT is an OBO Tool) is used throughout the pipeline for template processing, ontology merging, reasoning pre-filtering, format conversion, and quality checks. It provides a consistent, scriptable interface to OWL operations that integrates naturally with Airflow task orchestration.
+
+## Harvester Tier
+
+Three independent harvesters run weekly and feed into the core pipeline at the reasoning stage:
 
 ```mermaid
 graph LR
-    A[process_spreadsheets] --> B[merge]
-    B --> C[reason]
-    C --> D[validation_checks]
-    D --> E[publish_to_virtuoso]
-    E --> F[dashboard]
-    E --> G[dump_and_archive]
-    E --> H[cq_tester]
-    I[harvester_zenodo] --> C
-    J[harvester_endpoints] --> C
-    K[harvester_pmd] --> C
-```
+    HZ["harvester_zenodo<br/>━━━━━━━━━━━<br/>Zenodo REST API<br/>→ RDF conversion"] --> RS["reason_openllet_new"]
+    HE["harvester_endpoints<br/>━━━━━━━━━━━<br/>SPARQL endpoints<br/>→ schema extraction"] --> RS
+    HP["harvester_pmd<br/>━━━━━━━━━━━<br/>PMD platform<br/>→ 12 OWL modules"] --> RS
+    RS --> VC["validation_checks"]
 
-```
-Google Sheets (27 TSV templates)
-  |
-  v
-process_spreadsheets          (build 27 OWL modules)
-  |
-  v
-merge                         (merge all OWL -> spreadsheets_asserted.ttl)
-  |
-  +---> reason_openllet_new   (OWL reasoning -> spreadsheets_inferences.ttl)
-  |       |
-  |       v
-  +---> validation_checks     (merge + validate with SHACL/SPARQL/HermIT)
-          |
-          v
-        publish_to_virtuoso   (upload 5 named graphs to Virtuoso)
-          |
-          +---> dashboard      (daily: compute stats -> SQLite -> Superset)
-          +---> cq_tester      (test competency questions)
-          +---> dump_and_archive (manual: create versioned dumps -> Zenodo)
-```
-
-## Harvester pipelines (run weekly, in parallel)
-
-```
-harvester_pmd        ---> reason_openllet_new ---> validation_checks
-harvester_zenodo     ---> reason_openllet_new ---> validation_checks
-harvester_endpoints  ---> reason_openllet_new ---> validation_checks
+    style HZ fill:#fff3e0,stroke:#e65100
+    style HE fill:#e3f2fd,stroke:#1565c0
+    style HP fill:#e8f5e9,stroke:#2e7d32
+    style RS fill:#f3e5f5,stroke:#6a1b9a
+    style VC fill:#fce4ec,stroke:#b71c1c
 ```
 
 !!! info "Harvester triggering"
-    Harvesters automatically trigger reasoning and validation. After all succeed, trigger `publish_to_virtuoso` manually.
+    All harvesters automatically trigger `reason_openllet_new` followed by `validation_checks` on completion. After all succeed, trigger `publish_to_virtuoso` manually.
 
-## Named graphs published
+## Release Tier
 
-| Named Graph | Source |
-|-------------|--------|
-| `https://nfdi.fiz-karlsruhe.de/matwerk/spreadsheets_assertions` | Merged OWL modules |
-| `https://nfdi.fiz-karlsruhe.de/matwerk/spreadsheets_inferences` | Reasoned inferences |
-| `https://nfdi.fiz-karlsruhe.de/matwerk/spreadsheets_validated` | Merged + validated |
-| `https://nfdi.fiz-karlsruhe.de/matwerk/zenodo_validated` | Zenodo harvest |
-| `https://nfdi.fiz-karlsruhe.de/matwerk/endpoints_validated` | SPARQL endpoints harvest |
+| DAG | Schedule | Purpose |
+|-----|----------|---------|
+| `dashboard` | Daily | Aggregates SPARQL statistics into SQLite for [Apache Superset](https://superset.apache.org/) |
+| `dump_and_archive` | Manual | Creates versioned RDF dumps, uploads to Zenodo with DOI |
+| `cq_tester` | Manual | Validates competency questions against the live endpoint |
 
-## Airflow Variables reference
+## Named Graphs Published
 
-### Core
+The pipeline publishes five named graphs to the Virtuoso triplestore:
 
-| Variable | Used by | Description |
-|----------|---------|-------------|
-| `matwerk_sharedfs` | All DAGs | Base path for run outputs |
-| `matwerk_ontology` | spreadsheets, harvesters, validation | Base ontology URL |
-| `robotcmd` | spreadsheets, merge, harvesters, validation | ROBOT tool path |
-| `sunletcmd` | reason | Sunlet reasoner path |
-| `openlletnewcmd` | reason_openllet_new | OpenLlet reasoner path |
+| Named Graph | Source | Content |
+|-------------|--------|---------|
+| `matwerk/spreadsheets_assertions` | Core pipeline | Merged OWL modules from 27 templates |
+| `matwerk/spreadsheets_inferences` | Core pipeline | Openllet-derived inferences |
+| `matwerk/spreadsheets_validated` | Core pipeline | Merged assertions + inferences, validated |
+| `matwerk/zenodo_validated` | Zenodo harvester | Zenodo community records as RDF |
+| `matwerk/endpoints_validated` | Endpoint harvester | SPARQL endpoint metadata and statistics |
 
-### Virtuoso
-
-| Variable | Used by | Description |
-|----------|---------|-------------|
-| `matwerk-virtuoso_crud` | publish_to_virtuoso | CRUD endpoint URL |
-| `matwerk-virtuoso_sparql` | publish_to_virtuoso, dashboard | SPARQL endpoint (read-write) |
-| `matwerk-virtuoso_sparql_ro` | cq_tester | SPARQL endpoint (read-only) |
-| `matwerk-virtuoso_user` | publish_to_virtuoso, dashboard | Username |
-| `matwerk-virtuoso_pass` | publish_to_virtuoso, dashboard | Password |
-
-### Dashboard
-
-| Variable | Used by | Description |
-|----------|---------|-------------|
-| `matwerk_dashboard_db` | dashboard | SQLite connection string |
-
-### Zenodo & GitHub (dump_and_archive)
-
-| Variable | Used by | Description |
-|----------|---------|-------------|
-| `matwerk_zenodo_token` | dump_and_archive | Zenodo API token |
-| `matwerk_zenodo_base_url` | dump_and_archive | Optional, defaults to `https://zenodo.org/api` |
-| `matwerk_zenodo_concept_id` | dump_and_archive | Auto-managed, links Zenodo versions |
-| `matwerk_github_token` | dump_and_archive | GitHub PAT for pushing manifest |
-| `matwerk_github_repo` | dump_and_archive | Optional, defaults to `ISE-FIZKarlsruhe/matwerk` |
-
-### Success-tracking (auto-managed)
-
-!!! warning "Do not set these manually"
-    These variables are automatically managed by each DAG on successful completion. Editing them by hand can cause downstream DAGs to read stale data.
-
-| Variable | Set by | Used by |
-|----------|--------|---------|
-| `matwerk_last_successful_spreadsheet_run` | process_spreadsheets | merge |
-| `matwerk_last_successful_merge_run` | merge | reason, validation, harvesters, publish, dump |
-| `matwerk_last_successful_reason_run` | reason | validation, publish, dump |
-| `matwerk_last_successful_validated_run` | validation_checks | publish, dump |
-| `matwerk_last_successful_harvester_pmd_run` | harvester_pmd | publish, dump |
-| `matwerk_last_successful_harvester_zenodo_run` | harvester_zenodo | publish, dump |
-| `matwerk_last_successful_harvester_endpoints_run` | harvester_endpoints | publish, dump |
+All graph IRIs are prefixed with `https://nfdi.fiz-karlsruhe.de/matwerk/`.
