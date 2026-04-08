@@ -1036,10 +1036,110 @@
   <a href="#what-it-does" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What it does
+        What It Does
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Chain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SPARQL Queries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SPARQL Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graph Discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-graph-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-Graph Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-detail-query-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Detail Query (Example)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqlite-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQLite Storage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQLite Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#latest-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latest Views
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1059,17 +1159,6 @@
     <span class="md-ellipsis">
       
         Output
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#task-chain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Task chain
       
     </span>
   </a>
@@ -1615,10 +1704,110 @@
   <a href="#what-it-does" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What it does
+        What It Does
       
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Chain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sparql-queries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SPARQL Queries
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SPARQL Queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graph-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Graph Discovery
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#per-graph-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Per-Graph Metrics
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dataset-detail-query-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dataset Detail Query (Example)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqlite-storage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SQLite Storage
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SQLite Storage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#latest-views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Latest Views
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1638,17 +1827,6 @@
     <span class="md-ellipsis">
       
         Output
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#task-chain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Task chain
       
     </span>
   </a>
@@ -1690,12 +1868,213 @@
 <p><strong>DAG ID:</strong> <code>dashboard</code>
 <strong>Schedule:</strong> Daily at 00:00 UTC (<code>0 0 * * *</code>)
 <strong>File:</strong> <code>dags/dashboard.py</code></p>
-<h2 id="what-it-does">What it does</h2>
-<p>Computes Knowledge Graph statistics by executing SPARQL queries against Virtuoso and stores results in a dashboard database (SQLite). Provides timestamped snapshots and <code>*_latest</code> views for the Superset dashboard.</p>
+<h2 id="what-it-does">What It Does</h2>
+<p>Computes Knowledge Graph statistics by executing SPARQL queries against the Virtuoso triplestore and stores the results in a SQLite database. This database powers the <a href="https://superset.apache.org/">Apache Superset</a> analytics dashboard, which provides interactive visualisations of MSE-KG content without requiring SPARQL expertise.</p>
+<p>The DAG performs a daily snapshot of the graph's state, enabling time-series tracking of growth, content distribution, and structural evolution.</p>
 <div class="admonition info">
 <p class="admonition-title">Automatic scheduling</p>
 <p>This DAG runs automatically every day at midnight UTC. No manual triggering is required.</p>
 </div>
+<h2 id="architecture">Architecture</h2>
+<pre class="mermaid"><code>graph LR
+    V["Virtuoso&lt;br/&gt;Triplestore&lt;br/&gt;━━━━━━━━━━━&lt;br/&gt;5 named graphs"] --&gt;|"13 SPARQL&lt;br/&gt;queries"| DAG["dashboard DAG&lt;br/&gt;━━━━━━━━━━━&lt;br/&gt;Parse JSON results&lt;br/&gt;Build DataFrames"]
+    DAG --&gt;|"pandas&lt;br/&gt;to_sql()"| DB[("SQLite&lt;br/&gt;━━━━━━━━━━━&lt;br/&gt;12 tables&lt;br/&gt;12 latest views")]
+    DB --&gt;|"SQL&lt;br/&gt;queries"| SUP["Apache Superset&lt;br/&gt;━━━━━━━━━━━&lt;br/&gt;Charts, filters,&lt;br/&gt;interactive dashboards"]
+
+    style V fill:#e3f2fd,stroke:#1565c0
+    style DAG fill:#fff3e0,stroke:#e65100
+    style DB fill:#f3e5f5,stroke:#6a1b9a
+    style SUP fill:#e8f5e9,stroke:#2e7d32</code></pre>
+<h2 id="task-chain">Task Chain</h2>
+<pre class="mermaid"><code>graph LR
+    A["preflight"] --&gt; B["ensure_tables"]
+    B --&gt; C["list_mse_graphs"]
+    C --&gt; D["11 parallel&lt;br/&gt;write tasks"]
+    D --&gt; E["ensure_latest_views"]
+
+    style A fill:#e8eaf6,stroke:#283593
+    style B fill:#fff3e0,stroke:#e65100
+    style C fill:#e3f2fd,stroke:#1565c0
+    style D fill:#f3e5f5,stroke:#6a1b9a
+    style E fill:#e8f5e9,stroke:#2e7d32</code></pre>
+<h2 id="sparql-queries">SPARQL Queries</h2>
+<p>The DAG executes 13 distinct SPARQL query patterns against Virtuoso, each targeting the 5 MSE-KG named graphs. Queries use HTTP Digest authentication and return JSON results.</p>
+<h3 id="graph-discovery">Graph Discovery</h3>
+<div class="language-sparql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?g</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">WHERE</span> <span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="k">GRAPH</span> <span class="nv">?g</span> <span class="p">{</span> <span class="nv">?s</span> <span class="nv">?p</span> <span class="nv">?o</span> <span class="p">}</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="k">FILTER</span><span class="p">(</span><span class="nf">STRSTARTS</span><span class="p">(</span><span class="nf">STR</span><span class="p">(</span><span class="nv">?g</span><span class="p">),</span> <span class="s">&quot;https://nfdi.fiz-karlsruhe.de/matwerk&quot;</span><span class="p">))</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="per-graph-metrics">Per-Graph Metrics</h3>
+<table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Purpose</th>
+<th>Key Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Triple &amp; Subject Counts</strong></td>
+<td>Graph size</td>
+<td><code>COUNT(*) AS ?triples, COUNT(DISTINCT ?s) AS ?subjects</code></td>
+</tr>
+<tr>
+<td><strong>Class Counts</strong></td>
+<td>Instance distribution per class</td>
+<td><code>?s a ?class</code> grouped, top 200</td>
+</tr>
+<tr>
+<td><strong>Property Usage</strong></td>
+<td>Predicate frequency</td>
+<td><code>?s ?p ?o</code> grouped by <code>?p</code>, top 100</td>
+</tr>
+<tr>
+<td><strong>Sankey Edges</strong></td>
+<td>Class → Property relationships</td>
+<td>Joins <code>?s a ?sourceClass</code> with <code>?s ?p ?o</code>, top 300</td>
+</tr>
+<tr>
+<td><strong>Entity Type Counts</strong></td>
+<td>Concept distribution</td>
+<td><code>?entity a ?Concept</code>, top 500</td>
+</tr>
+<tr>
+<td><strong>Top 10 Concepts</strong></td>
+<td>Ranked concepts</td>
+<td>Same + <code>ROW_NUMBER()</code> window function</td>
+</tr>
+<tr>
+<td><strong>Dataset Types</strong></td>
+<td>Counts by dataset class</td>
+<td><code>VALUES ?class { NFDI_0000009 ... }</code></td>
+</tr>
+<tr>
+<td><strong>Dataset Details</strong></td>
+<td>Title, creator, affiliation, link</td>
+<td>Property path traversal via <code>IAO_0000235</code>, <code>BFO_0000178</code></td>
+</tr>
+<tr>
+<td><strong>Content Counts</strong></td>
+<td>High-level summary</td>
+<td>Distinct datasets, publications, events</td>
+</tr>
+<tr>
+<td><strong>Organizations by City</strong></td>
+<td>Geographic distribution</td>
+<td><code>?org BFO_0000171 ?city</code></td>
+</tr>
+<tr>
+<td><strong>Top Orgs by People</strong></td>
+<td>Affiliation ranking</td>
+<td><code>?person RO_0000057 ?process</code>, top 50</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dataset-detail-query-example">Dataset Detail Query (Example)</h3>
+<div class="language-sparql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?dataset</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">(</span><span class="nf">SAMPLE</span><span class="p">(</span><span class="nv">?title</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?title</span><span class="p">)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  <span class="p">(</span><span class="nf">SAMPLE</span><span class="p">(</span><span class="nv">?creator</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?creator</span><span class="p">)</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>  <span class="p">(</span><span class="nf">SAMPLE</span><span class="p">(</span><span class="nv">?aff</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?creator_affiliation</span><span class="p">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  <span class="p">(</span><span class="nf">SAMPLE</span><span class="p">(</span><span class="nv">?link</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?link</span><span class="p">)</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="k">WHERE</span> <span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  <span class="k">GRAPH</span> <span class="o">&lt;</span><span class="p">{</span><span class="k">graph</span><span class="p">}</span><span class="o">&gt;</span> <span class="p">{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="nv">?dataset</span> <span class="k">a</span> <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009&gt;</span> <span class="p">.</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="k">OPTIONAL</span> <span class="p">{</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>      <span class="nv">?dataset</span> <span class="nl">&lt;http://purl.obolibrary.org/obo/IAO_0000235&gt;</span> <span class="nv">?titleNode</span> <span class="p">.</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>      <span class="nv">?titleNode</span> <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008&gt;</span> <span class="nv">?title</span> <span class="p">.</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    <span class="p">}</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    <span class="k">OPTIONAL</span> <span class="p">{</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>      <span class="nv">?dataset</span> <span class="nl">&lt;http://purl.obolibrary.org/obo/BFO_0000178&gt;</span> <span class="nv">?creatorNode</span> <span class="p">.</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>      <span class="nv">?creatorNode</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?creator</span> <span class="p">.</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="p">}</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  <span class="p">}</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="p">}</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="k">GROUP BY</span> <span class="nv">?dataset</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="k">LIMIT</span> <span class="mi">500</span>
+</span></code></pre></div>
+<h2 id="sqlite-storage">SQLite Storage</h2>
+<p>Results are stored in 12 timestamped tables with corresponding <code>*_latest</code> views:</p>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Content</th>
+<th>Key Columns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>kg_graph_stats</code></td>
+<td>Triple/subject counts per graph</td>
+<td><code>ts_utc</code>, <code>graph</code>, <code>triples</code>, <code>subjects</code></td>
+</tr>
+<tr>
+<td><code>kg_graph_class_counts</code></td>
+<td>Class usage per graph</td>
+<td><code>class_iri</code>, <code>class_label</code>, <code>instances</code></td>
+</tr>
+<tr>
+<td><code>kg_graph_property_counts</code></td>
+<td>Property usage per graph</td>
+<td><code>property_iri</code>, <code>usage_count</code></td>
+</tr>
+<tr>
+<td><code>kg_sankey_class_property</code></td>
+<td>Class→Property edges (for Sankey diagrams)</td>
+<td><code>source_iri</code>, <code>target_iri</code>, <code>value</code></td>
+</tr>
+<tr>
+<td><code>kg_entity_type_counts</code></td>
+<td>Entity type instance counts</td>
+<td><code>concept_iri</code>, <code>concept_label</code>, <code>count</code></td>
+</tr>
+<tr>
+<td><code>kg_dataset_type_counts</code></td>
+<td>Dataset type counts</td>
+<td><code>dataset_type_iri</code>, <code>count</code></td>
+</tr>
+<tr>
+<td><code>kg_content_counts</code></td>
+<td>Summary (datasets, publications, events)</td>
+<td><code>datasets</code>, <code>publications</code>, <code>events</code></td>
+</tr>
+<tr>
+<td><code>kg_datasets</code></td>
+<td>Dataset list with metadata</td>
+<td><code>dataset_iri</code>, <code>title</code>, <code>creator</code>, <code>link</code></td>
+</tr>
+<tr>
+<td><code>kg_org_city_counts</code></td>
+<td>Organizations by city</td>
+<td><code>city_label</code>, <code>org_count</code></td>
+</tr>
+<tr>
+<td><code>kg_top_org_by_people</code></td>
+<td>Top organizations by affiliation</td>
+<td><code>org_label</code>, <code>people_count</code></td>
+</tr>
+<tr>
+<td><code>kg_top_concepts</code></td>
+<td>Top 10 concepts per graph</td>
+<td><code>concept_label</code>, <code>count</code>, <code>rank</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="latest-views">Latest Views</h3>
+<p>Each table has a <code>*_latest</code> view that exposes only the most recent snapshot:</p>
+<div class="language-sql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">VIEW</span><span class="w"> </span><span class="n">kg_graph_stats_latest</span><span class="w"> </span><span class="k">AS</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="p">,</span><span class="w"> </span><span class="n">ROW_NUMBER</span><span class="p">()</span><span class="w"> </span><span class="n">OVER</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">PARTITION</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">graph</span><span class="w"> </span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">ts_utc</span><span class="w"> </span><span class="k">DESC</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">rn</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="k">FROM</span><span class="w"> </span><span class="n">kg_graph_stats</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="k">WHERE</span><span class="w"> </span><span class="n">graph</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;https://nfdi.fiz-karlsruhe.de/matwerk%&#39;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">)</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="n">rn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+</span></code></pre></div>
+<p>This enables Superset charts to always display current data while preserving historical snapshots for trend analysis.</p>
 <h2 id="input">Input</h2>
 <table>
 <thead>
@@ -1706,84 +2085,25 @@
 </thead>
 <tbody>
 <tr>
-<td><code>matwerk-virtuoso_sparql</code> (Variable)</td>
-<td>Virtuoso SPARQL endpoint</td>
+<td><code>matwerk-virtuoso_sparql</code></td>
+<td>Virtuoso SPARQL endpoint (read-write)</td>
 </tr>
 <tr>
-<td><code>matwerk-virtuoso_user</code> (Variable)</td>
-<td>Virtuoso username</td>
+<td><code>matwerk-virtuoso_user</code> / <code>matwerk-virtuoso_pass</code></td>
+<td>HTTP Digest credentials</td>
 </tr>
 <tr>
-<td><code>matwerk-virtuoso_pass</code> (Variable)</td>
-<td>Virtuoso password</td>
-</tr>
-<tr>
-<td><code>matwerk_dashboard_db</code> (Variable)</td>
-<td>Database connection string (SQLite DSN)</td>
+<td><code>matwerk_dashboard_db</code></td>
+<td>SQLite connection string</td>
 </tr>
 </tbody>
 </table>
 <h2 id="output">Output</h2>
-<p>Database tables (timestamped, with <code>*_latest</code> views):</p>
-<table>
-<thead>
-<tr>
-<th>Table</th>
-<th>Content</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>kg_graph_stats</code></td>
-<td>Triple/subject counts per graph</td>
-</tr>
-<tr>
-<td><code>kg_graph_class_counts</code></td>
-<td>Class usage per graph</td>
-</tr>
-<tr>
-<td><code>kg_graph_property_counts</code></td>
-<td>Property usage per graph</td>
-</tr>
-<tr>
-<td><code>kg_sankey_class_property</code></td>
-<td>Class-property relationships (for Sankey diagrams)</td>
-</tr>
-<tr>
-<td><code>kg_entity_type_counts</code></td>
-<td>Entity type instance counts</td>
-</tr>
-<tr>
-<td><code>kg_dataset_type_counts</code></td>
-<td>Dataset type counts</td>
-</tr>
-<tr>
-<td><code>kg_content_counts</code></td>
-<td>Summary (datasets, publications, events)</td>
-</tr>
-<tr>
-<td><code>kg_datasets</code></td>
-<td>Dataset list with metadata</td>
-</tr>
-<tr>
-<td><code>kg_org_city_counts</code></td>
-<td>Organizations by city</td>
-</tr>
-<tr>
-<td><code>kg_top_org_by_people</code></td>
-<td>Top organizations by people count</td>
-</tr>
-<tr>
-<td><code>kg_top_concepts</code></td>
-<td>Top 10 concepts per graph</td>
-</tr>
-</tbody>
-</table>
-<h2 id="task-chain">Task chain</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>preflight -&gt; ensure_tables -&gt; list_mse_graphs
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  -&gt; [11 parallel write tasks]
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    -&gt; ensure_latest_views
-</span></code></pre></div>
+<ul>
+<li>12 SQLite tables with timestamped rows</li>
+<li>12 <code>*_latest</code> views for current-state dashboards</li>
+<li>Consumed by <a href="https://superset.apache.org/">Apache Superset</a> at <a href="https://superset.ise.fiz-karlsruhe.de/superset/dashboard/mse-kg-dashboard/"><code>superset.ise.fiz-karlsruhe.de</code></a></li>
+</ul>
 <h2 id="downstream">Downstream</h2>
 <p>None. Runs automatically every day.</p>
 

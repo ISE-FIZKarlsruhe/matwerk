@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#reason" class="md-skip">
+        <a href="#reasoning" class="md-skip">
           Skip to content
         </a>
       
@@ -924,7 +924,68 @@
   <a href="#what-it-does" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What it does
+        What It Does
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Chain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-axiom-pre-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Axiom Pre-Filtering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-openllet-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Openllet Reasoning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Openllet Reasoning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generated-axiom-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated Axiom Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-conversion-to-turtle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Conversion to Turtle
       
     </span>
   </a>
@@ -947,17 +1008,6 @@
     <span class="md-ellipsis">
       
         Output
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#task-chain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Task chain
       
     </span>
   </a>
@@ -1615,7 +1665,68 @@
   <a href="#what-it-does" class="md-nav__link">
     <span class="md-ellipsis">
       
-        What it does
+        What It Does
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task Chain
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-axiom-pre-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 1: Axiom Pre-Filtering
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-openllet-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 2: Openllet Reasoning
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 2: Openllet Reasoning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generated-axiom-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generated Axiom Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-conversion-to-turtle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Conversion to Turtle
       
     </span>
   </a>
@@ -1638,17 +1749,6 @@
     <span class="md-ellipsis">
       
         Output
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#task-chain" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Task chain
       
     </span>
   </a>
@@ -1686,16 +1786,127 @@
   
 
 
-<h1 id="reason">Reason</h1>
-<p><strong>DAG IDs:</strong> <code>reason</code> (Sunlet), <code>reason_openllet_new</code> (OpenLlet)
+<h1 id="reasoning">Reasoning</h1>
+<p><strong>DAG IDs:</strong> <code>reason</code> (Sunlet), <code>reason_openllet_new</code> (<a href="https://github.com/Galigator/openllet">Openllet</a>)
 <strong>Schedule:</strong> Manual trigger only
 <strong>Files:</strong> <code>dags/reason-spreadsheets.py</code>, <code>dags/reason_openlletnew.py</code></p>
-<h2 id="what-it-does">What it does</h2>
-<p>Performs OWL reasoning on filtered TTL to produce inferred triples. Filters out problematic axioms before reasoning, runs the reasoner, then converts output to Turtle format.</p>
+<h2 id="what-it-does">What It Does</h2>
+<p>Performs OWL 2 DL reasoning over the MSE-KG to materialise implicit knowledge that is only derivable from the ontological axioms defined in MWO, NFDIcore, and BFO. The reasoner computes the deductive closure of the ABox with respect to the TBox, generating inferred class assertions, subclass relationships, property assertions, and inverse property entailments that are not explicitly stated in the input graph but are logically entailed by the ontology.</p>
+<p>The pipeline uses <a href="https://github.com/Galigator/openllet">Openllet</a>, an open-source OWL 2 DL reasoner forked from Pellet, which supports the full $\mathcal{SROIQ}(\mathcal{D})$ description logic. Openllet is invoked as an external process that reads the pre-filtered ontology and produces an OWL file containing only the inferred axioms.</p>
 <div class="admonition info">
 <p class="admonition-title">Two reasoner variants</p>
-<p>Two variants exist using different reasoners. <code>reason_openllet_new</code> is the current default used by harvesters.</p>
+<p>Two variants exist: <code>reason</code> uses the Sunlet reasoner, while <code>reason_openllet_new</code> uses Openllet. The latter is the current default used by all harvesters and the core pipeline.</p>
 </div>
+<h2 id="task-chain">Task Chain</h2>
+<pre class="mermaid"><code>graph LR
+    A["init_data_dir"] --&gt; B["pre_filter&lt;br/&gt;━━━━━━━━━━━&lt;br/&gt;ROBOT remove"]
+    B --&gt; C["openllet_reasoning&lt;br/&gt;━━━━━━━━━━━&lt;br/&gt;Openllet extract"]
+    C --&gt; D["robot_convert&lt;br/&gt;━━━━━━━━━━━&lt;br/&gt;OWL → Turtle"]
+    D --&gt; E["mark_success"]
+
+    style A fill:#e8eaf6,stroke:#283593
+    style B fill:#fff3e0,stroke:#e65100
+    style C fill:#e3f2fd,stroke:#1565c0
+    style D fill:#f3e5f5,stroke:#6a1b9a
+    style E fill:#e8f5e9,stroke:#2e7d32</code></pre>
+<h2 id="step-1-axiom-pre-filtering">Step 1: Axiom Pre-Filtering</h2>
+<p>Before reasoning, the pipeline uses <a href="https://robot.obolibrary.org/">ROBOT</a> to remove axioms that cause reasoning difficulties or are deprecated:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>robot<span class="w"> </span>remove<span class="w"> </span>--input<span class="w"> </span>input.ttl<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span>--term<span class="w"> </span>http://purl.obolibrary.org/obo/RO_0000057<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span>--axioms<span class="w"> </span>SubPropertyChainOf<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span>remove<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span>--term<span class="w"> </span>http://purl.obolibrary.org/obo/BFO_0000118<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span>--term<span class="w"> </span>http://purl.obolibrary.org/obo/BFO_0000181<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span>--term<span class="w"> </span>http://purl.obolibrary.org/obo/BFO_0000138<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span>--term<span class="w"> </span>http://purl.obolibrary.org/obo/BFO_0000136<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span>--output<span class="w"> </span>filtered.ttl
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Removed Term</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RO_0000057</code> (SubPropertyChainOf only)</td>
+<td>Property chain axioms on <code>has_participant</code> cause reasoning complexity explosion</td>
+</tr>
+<tr>
+<td><code>BFO_0000118</code></td>
+<td>Deprecated BFO class</td>
+</tr>
+<tr>
+<td><code>BFO_0000181</code></td>
+<td>Deprecated BFO class</td>
+</tr>
+<tr>
+<td><code>BFO_0000138</code></td>
+<td>Deprecated BFO class</td>
+</tr>
+<tr>
+<td><code>BFO_0000136</code></td>
+<td>Deprecated BFO class</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Why filter before reasoning?</p>
+<p>SubPropertyChainOf axioms on <code>has_participant</code> (RO_0000057) interact with the large ABox to produce combinatorial explosion in reasoning time. Removing these chain axioms preserves the core semantics while making reasoning tractable. Deprecated BFO terms are removed to prevent spurious inferences from obsolete class definitions.</p>
+</div>
+<h2 id="step-2-openllet-reasoning">Step 2: Openllet Reasoning</h2>
+<p>The reasoner is invoked with an explicit selection of which axiom types to extract:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>openllet<span class="w"> </span>extract<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>-s<span class="w"> </span><span class="s2">&quot;PropertyAssertion SubPropertyOf InverseProperties SubClassOf ClassAssertion&quot;</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>input-filtered.ttl<span class="w"> </span>&gt;<span class="w"> </span>output_inferences.owl
+</span></code></pre></div>
+<h3 id="generated-axiom-types">Generated Axiom Types</h3>
+<table>
+<thead>
+<tr>
+<th>Axiom Type</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ClassAssertion</strong></td>
+<td>Inferred <code>rdf:type</code> statements</td>
+<td>A person bearing an <code>AgentRole</code> is inferred to be an <code>Agent</code></td>
+</tr>
+<tr>
+<td><strong>SubClassOf</strong></td>
+<td>Inferred class subsumption</td>
+<td><code>ArtificialIntelligence ⊑ ComputerScience</code></td>
+</tr>
+<tr>
+<td><strong>SubPropertyOf</strong></td>
+<td>Inferred property hierarchies</td>
+<td>Specialised participation relations</td>
+</tr>
+<tr>
+<td><strong>PropertyAssertion</strong></td>
+<td>Inferred object/data property values</td>
+<td>Inverse of <code>participates_in</code> yields <code>has_participant</code></td>
+</tr>
+<tr>
+<td><strong>InverseProperties</strong></td>
+<td>Materialised inverse property pairs</td>
+<td><code>RO_0000056 ↔ RO_0000057</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Why these axiom types?</p>
+<p>This selection covers the axioms needed for SPARQL query answering: class assertions enable <code>?x a ?Class</code> patterns, property assertions enable <code>?x ?prop ?y</code> traversals, and subsumption enables hierarchical queries. Axiom types like DisjointClasses or EquivalentClasses are not extracted because they are schema-level (TBox) and already present in the input ontology.</p>
+</div>
+<h2 id="step-3-conversion-to-turtle">Step 3: Conversion to Turtle</h2>
+<p>The OWL/XML output from Openllet is converted to Turtle using ROBOT:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>robot<span class="w"> </span>convert<span class="w"> </span>--input<span class="w"> </span>inferences.owl<span class="w"> </span>--output<span class="w"> </span>inferences.ttl
+</span></code></pre></div>
+<p>The pipeline validates that the output is well-formed Turtle (not accidentally RDF/XML) by checking the file header.</p>
 <h2 id="input">Input</h2>
 <table>
 <thead>
@@ -1706,16 +1917,16 @@
 </thead>
 <tbody>
 <tr>
-<td><code>matwerk_sharedfs</code> (Variable)</td>
+<td><code>matwerk_sharedfs</code></td>
 <td>Shared filesystem path</td>
 </tr>
 <tr>
-<td><code>matwerk_last_successful_merge_run</code> (Variable)</td>
+<td><code>matwerk_last_successful_merge_run</code></td>
 <td>Source directory (if <code>source_run_dir</code> not in conf)</td>
 </tr>
 <tr>
-<td><code>sunletcmd</code> / <code>openlletnewcmd</code> (Variable)</td>
-<td>Reasoner command</td>
+<td><code>openlletnewcmd</code></td>
+<td>Openllet command path</td>
 </tr>
 </tbody>
 </table>
@@ -1756,32 +1967,29 @@
 <thead>
 <tr>
 <th>Output</th>
-<th>Location</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>{artifact}-filtered.ttl</code></td>
-<td>Pre-processed TTL</td>
+<td>Pre-processed TTL (problematic axioms removed)</td>
 </tr>
 <tr>
 <td><code>{artifact}_inferences.owl</code></td>
-<td>Reasoner output</td>
+<td>Openllet reasoning output (OWL/XML)</td>
 </tr>
 <tr>
 <td><code>{artifact}_inferences.ttl</code></td>
-<td>Converted Turtle</td>
+<td>Converted Turtle inferences</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Variables set on success:</strong></p>
 <ul>
-<li><code>matwerk_last_successful_reason_run</code> (if artifact is "spreadsheets")</li>
+<li><code>matwerk_last_successful_reason_run</code> (if artifact is <code>spreadsheets</code>)</li>
 <li><code>matwerk_last_successful_reason_run__{artifact}</code> (always)</li>
 </ul>
-<h2 id="task-chain">Task chain</h2>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>init_data_dir -&gt; pre_filter -&gt; sunlet_reasoning -&gt; robot_convert_to_ttl -&gt; mark_reason_success
-</span></code></pre></div>
 <h2 id="downstream">Downstream</h2>
 <p>None. Trigger <code>validation_checks</code> after this DAG succeeds.</p>
 
