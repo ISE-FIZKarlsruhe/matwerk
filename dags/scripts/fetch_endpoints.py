@@ -473,6 +473,12 @@ SELECT (COUNT(DISTINCT ?i) AS ?n) WHERE {
 }
 """
 
+# Fallback counts: for endpoints that don't declare owl:Class/rdfs:Class
+Q_NUM_CLASSES_FALLBACK = "SELECT (COUNT(DISTINCT ?c) AS ?n) WHERE { ?i a ?c . FILTER(isIRI(?c)) }"
+Q_NUM_OBJ_P_FALLBACK = "SELECT (COUNT(DISTINCT ?p) AS ?n) WHERE { ?s ?p ?o . FILTER(isIRI(?o) && ?p != rdf:type) }"
+Q_NUM_DAT_P_FALLBACK = "SELECT (COUNT(DISTINCT ?p) AS ?n) WHERE { ?s ?p ?o . FILTER(isLiteral(?o)) }"
+Q_NUM_INST_FALLBACK = "SELECT (COUNT(DISTINCT ?i) AS ?n) WHERE { ?i a ?t . FILTER(isIRI(?i) && isIRI(?t)) }"
+
 # Per-class instance counts (partition materialization)
 Q_INSTANCES_PER_CLASS = """
 SELECT ?c (SAMPLE(?lbl) AS ?label) (COUNT(DISTINCT ?i) AS ?n)
@@ -480,6 +486,18 @@ WHERE {
   ?i a ?c .
   { ?c a owl:Class . } UNION { ?c a rdfs:Class . }
   FILTER(isIRI(?i))
+  OPTIONAL { ?c rdfs:label ?l . FILTER(LANG(?l) = "" || LANGMATCHES(LANG(?l), "en")) }
+  BIND(COALESCE(?l, STRAFTER(STR(?c), "#"), STRAFTER(STR(?c), "/")) AS ?lbl)
+}
+GROUP BY ?c
+"""
+
+# Fallback: discover classes from usage (for endpoints without class declarations)
+Q_INSTANCES_PER_CLASS_FALLBACK = """
+SELECT ?c (SAMPLE(?lbl) AS ?label) (COUNT(DISTINCT ?i) AS ?n)
+WHERE {
+  ?i a ?c .
+  FILTER(isIRI(?i) && isIRI(?c))
   OPTIONAL { ?c rdfs:label ?l . FILTER(LANG(?l) = "" || LANGMATCHES(LANG(?l), "en")) }
   BIND(COALESCE(?l, STRAFTER(STR(?c), "#"), STRAFTER(STR(?c), "/")) AS ?lbl)
 }
@@ -797,9 +815,25 @@ def main():
         num_objp = one(Q_NUM_OBJ_P)
         num_datp = one(Q_NUM_DAT_P)
         num_inst = one(Q_NUM_INST)
+
+        # Fallback: if owl:Class/rdfs:Class declarations return zero,
+        # discover classes and counts from actual rdf:type usage
+        if num_classes == 0:
+            print(f"[{ep_url}] No declared classes found, using fallback (rdf:type usage)")
+            num_classes = one(Q_NUM_CLASSES_FALLBACK)
+        if num_objp == 0:
+            num_objp = one(Q_NUM_OBJ_P_FALLBACK)
+        if num_datp == 0:
+            num_datp = one(Q_NUM_DAT_P_FALLBACK)
+        if num_inst == 0:
+            num_inst = one(Q_NUM_INST_FALLBACK)
+
         num_props = num_objp + num_datp
 
         inst_bindings = run_select(ep_url, Q_INSTANCES_PER_CLASS, REQUEST_TIMEOUT)
+        if not inst_bindings:
+            print(f"[{ep_url}] No class partitions found, using fallback")
+            inst_bindings = run_select(ep_url, Q_INSTANCES_PER_CLASS_FALLBACK, REQUEST_TIMEOUT)
 
         mwo_classes_used = reused_classes(ep_url, mwo_classes) if mwo_classes else set()
         mwo_objp_used = reused_objprops(ep_url, mwo_objprops) if mwo_objprops else set()
