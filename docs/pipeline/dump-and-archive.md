@@ -22,24 +22,6 @@ Trigger this DAG when you want to create a new **release** of the Knowledge Grap
 
 ## Step-by-step: Releasing a new dump
 
-### Prerequisites
-
-Before your first release, set these Airflow Variables (one-time setup):
-
-| Variable | How to get it |
-|----------|---------------|
-| `matwerk_zenodo_token` | Create at [zenodo.org/account/settings/applications/](https://zenodo.org/account/settings/applications/) with scopes `deposit:actions` and `deposit:write` |
-| `matwerk_github_token` | GitHub PAT with Contents read/write for `ISE-FIZKarlsruhe/matwerk` |
-
-!!! info "Auto-managed variables"
-    The following variables are set automatically -- do not create them manually:
-
-    | Variable | Description |
-    |----------|-------------|
-    | `matwerk_zenodo_concept_id` | Auto-set after first publish, links future versions |
-    | `matwerk_zenodo_base_url` | Defaults to `https://zenodo.org/api` |
-    | `matwerk_github_repo` | Defaults to `ISE-FIZKarlsruhe/matwerk` |
-
 ### Step 1: Decide the version
 
 Use semantic versioning. Examples:

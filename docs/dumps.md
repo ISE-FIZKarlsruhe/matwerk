@@ -18,9 +18,9 @@ Each release includes one Turtle (`.ttl`) file per named graph plus a metadata f
 
 #### Named Graphs
 
-| Graph | Triples | Subjects | Types | Dump File |
-|-------|--------:|----------:|------:|-----------|
-[% for g in dumps.releases[0].graphs %]| [`[[ g.graph_uri ]]`]([[ g.graph_uri ]]) | [[ "{:,}".format(g.stats.triples) ]] | [[ "{:,}".format(g.stats.subjects) ]] | [[ g.stats.distinct_types ]] | [[ g.dump_file ]] |
+| Named Graph | Triples | Subjects | Types | Dump File |
+|-------------|--------:|----------:|------:|-----------|
+[% for g in dumps.releases[0].graphs %]| <a href="[[ g.graph_uri ]]" title="[[ g.graph_uri ]]">[[ g.graph_name ]]</a> | [[ "{:,}".format(g.stats.triples) ]] | [[ "{:,}".format(g.stats.subjects) ]] | [[ g.stats.distinct_types ]] | [[ g.dump_file ]] |
 [% endfor %]
 
 [% if dumps.releases[0].zenodo_url %]
