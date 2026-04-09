@@ -414,7 +414,8 @@ CONSTRUCT {
      rdfs:label ?label .
 }
 WHERE {
-  ?c a owl:Class .
+  { ?c a owl:Class . } UNION { ?c a rdfs:Class . }
+  FILTER(isIRI(?c))
   OPTIONAL { ?c rdfs:label ?l . FILTER(LANG(?l) = "" || LANGMATCHES(LANG(?l), "en")) }
   BIND(COALESCE(?l, STRAFTER(STR(?c), "#"), STRAFTER(STR(?c), "/")) AS ?label)
 }
@@ -430,7 +431,8 @@ CONSTRUCT {
   ?p rdfs:label ?plabel .
 }
 WHERE {
-  ?c a owl:Class .
+  { ?c a owl:Class . } UNION { ?c a rdfs:Class . }
+  FILTER(isIRI(?c))
   OPTIONAL { ?c rdfs:label ?cl . FILTER(LANG(?cl) = "" || LANGMATCHES(LANG(?cl), "en")) }
   BIND(COALESCE(?cl, STRAFTER(STR(?c), "#"), STRAFTER(STR(?c), "/")) AS ?clabel)
   OPTIONAL {
@@ -448,7 +450,11 @@ CONSTRUCT { ?s ?p ?o . }
 WHERE {
   { ?s a owl:Class . ?s ?p ?o . }
   UNION
+  { ?s a rdfs:Class . ?s ?p ?o . }
+  UNION
   { ?s a owl:ObjectProperty . ?s ?p ?o . }
+  UNION
+  { ?s a rdf:Property . ?s ?p ?o . }
   UNION
   { ?s a owl:DatatypeProperty . ?s ?p ?o . }
 }
@@ -456,12 +462,13 @@ WHERE {
 
 
 # Counts
-Q_NUM_CLASSES = "SELECT (COUNT(DISTINCT ?c) AS ?n) WHERE { ?c a owl:Class . FILTER(isIRI(?c)) }"
-Q_NUM_OBJ_P = "SELECT (COUNT(DISTINCT ?p) AS ?n) WHERE { ?p a owl:ObjectProperty . }"
-Q_NUM_DAT_P = "SELECT (COUNT(DISTINCT ?p) AS ?n) WHERE { ?p a owl:DatatypeProperty . }"
+Q_NUM_CLASSES = "SELECT (COUNT(DISTINCT ?c) AS ?n) WHERE { { ?c a owl:Class . } UNION { ?c a rdfs:Class . } FILTER(isIRI(?c)) }"
+Q_NUM_OBJ_P = "SELECT (COUNT(DISTINCT ?p) AS ?n) WHERE { { ?p a owl:ObjectProperty . } UNION { ?p a rdf:Property . FILTER EXISTS { ?s ?p ?o . FILTER(isIRI(?o)) } } }"
+Q_NUM_DAT_P = "SELECT (COUNT(DISTINCT ?p) AS ?n) WHERE { { ?p a owl:DatatypeProperty . } UNION { ?p a rdf:Property . FILTER EXISTS { ?s ?p ?o . FILTER(isLiteral(?o)) } } }"
 Q_NUM_INST = """
 SELECT (COUNT(DISTINCT ?i) AS ?n) WHERE {
-  ?i a ?t . ?t a owl:Class .
+  ?i a ?t .
+  { ?t a owl:Class . } UNION { ?t a rdfs:Class . }
   FILTER(isIRI(?i))
 }
 """
@@ -471,7 +478,7 @@ Q_INSTANCES_PER_CLASS = """
 SELECT ?c (SAMPLE(?lbl) AS ?label) (COUNT(DISTINCT ?i) AS ?n)
 WHERE {
   ?i a ?c .
-  ?c a owl:Class .
+  { ?c a owl:Class . } UNION { ?c a rdfs:Class . }
   FILTER(isIRI(?i))
   OPTIONAL { ?c rdfs:label ?l . FILTER(LANG(?l) = "" || LANGMATCHES(LANG(?l), "en")) }
   BIND(COALESCE(?l, STRAFTER(STR(?c), "#"), STRAFTER(STR(?c), "/")) AS ?lbl)
@@ -570,7 +577,7 @@ def reused_classes(ep_url: str, class_iris: Set[URIRef]) -> Set[URIRef]:
         q = f"""
         SELECT DISTINCT ?c WHERE {{
           VALUES ?c {{ {values} }}
-          {{ ?c a owl:Class . }} UNION {{ ?x a ?c . }}
+          {{ ?c a owl:Class . }} UNION {{ ?c a rdfs:Class . }} UNION {{ ?x a ?c . }}
         }}
         """
         reused |= uris_from_bindings(run_select(ep_url, q, REQUEST_TIMEOUT), "c")
@@ -584,7 +591,7 @@ def reused_objprops(ep_url: str, prop_iris: Set[URIRef]) -> Set[URIRef]:
         q = f"""
         SELECT DISTINCT ?p WHERE {{
           VALUES ?p {{ {values} }}
-          {{ ?p a owl:ObjectProperty . }} UNION {{ ?s ?p ?o . FILTER(isIRI(?o)) }}
+          {{ ?p a owl:ObjectProperty . }} UNION {{ ?p a rdf:Property . }} UNION {{ ?s ?p ?o . FILTER(isIRI(?o)) }}
         }}
         """
         reused |= uris_from_bindings(run_select(ep_url, q, REQUEST_TIMEOUT), "p")
@@ -598,7 +605,7 @@ def reused_dataprops(ep_url: str, prop_iris: Set[URIRef]) -> Set[URIRef]:
         q = f"""
         SELECT DISTINCT ?p WHERE {{
           VALUES ?p {{ {values} }}
-          {{ ?p a owl:DatatypeProperty . }} UNION {{ ?s ?p ?o . FILTER(isLiteral(?o)) }}
+          {{ ?p a owl:DatatypeProperty . }} UNION {{ ?p a rdf:Property . FILTER EXISTS {{ ?s ?p ?o . FILTER(isLiteral(?o)) }} }}
         }}
         """
         reused |= uris_from_bindings(run_select(ep_url, q, REQUEST_TIMEOUT), "p")
