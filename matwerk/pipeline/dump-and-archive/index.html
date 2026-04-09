@@ -1095,17 +1095,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#step-1-decide-the-version" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1829,17 +1818,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Prerequisites
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#step-1-decide-the-version" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2070,52 +2048,6 @@
 </div>
 <hr />
 <h2 id="step-by-step-releasing-a-new-dump">Step-by-step: Releasing a new dump</h2>
-<h3 id="prerequisites">Prerequisites</h3>
-<p>Before your first release, set these Airflow Variables (one-time setup):</p>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>How to get it</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>matwerk_zenodo_token</code></td>
-<td>Create at <a href="https://zenodo.org/account/settings/applications/">zenodo.org/account/settings/applications/</a> with scopes <code>deposit:actions</code> and <code>deposit:write</code></td>
-</tr>
-<tr>
-<td><code>matwerk_github_token</code></td>
-<td>GitHub PAT with Contents read/write for <code>ISE-FIZKarlsruhe/matwerk</code></td>
-</tr>
-</tbody>
-</table>
-<div class="admonition info">
-<p class="admonition-title">Auto-managed variables</p>
-<p>The following variables are set automatically -- do not create them manually:</p>
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>matwerk_zenodo_concept_id</code></td>
-<td>Auto-set after first publish, links future versions</td>
-</tr>
-<tr>
-<td><code>matwerk_zenodo_base_url</code></td>
-<td>Defaults to <code>https://zenodo.org/api</code></td>
-</tr>
-<tr>
-<td><code>matwerk_github_repo</code></td>
-<td>Defaults to <code>ISE-FIZKarlsruhe/matwerk</code></td>
-</tr>
-</tbody>
-</table>
-</div>
 <h3 id="step-1-decide-the-version">Step 1: Decide the version</h3>
 <p>Use semantic versioning. Examples:</p>
 <ul>
