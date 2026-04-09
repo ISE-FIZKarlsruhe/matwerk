@@ -14,13 +14,13 @@ Each release includes one Turtle (`.ttl`) file per named graph plus a metadata f
 |---|---|
 | **Date** | [[ dumps.releases[0].publish_date ]] |
 | **MWO Version** | [[ dumps.releases[0].mwo_version ]] |
-| **Zenodo DOI** | [% if dumps.releases[0].zenodo_doi %][[[ dumps.releases[0].zenodo_doi ]]](https://doi.org/[[ dumps.releases[0].zenodo_doi ]])[% else %]–[% endif %] |
+| **Zenodo DOI** | [% if dumps.releases[0].zenodo_doi %]<a href="https://doi.org/[[ dumps.releases[0].zenodo_doi ]]">[[ dumps.releases[0].zenodo_doi ]]</a>[% else %]–[% endif %] |
 
 #### Named Graphs
 
 | Graph | Triples | Subjects | Types | Dump File |
 |-------|--------:|----------:|------:|-----------|
-[% for g in dumps.releases[0].graphs %]| `[[ g.graph_name ]]` | [[ "{:,}".format(g.stats.triples) ]] | [[ "{:,}".format(g.stats.subjects) ]] | [[ g.stats.distinct_types ]] | [[ g.dump_file ]] |
+[% for g in dumps.releases[0].graphs %]| [`[[ g.graph_uri ]]`]([[ g.graph_uri ]]) | [[ "{:,}".format(g.stats.triples) ]] | [[ "{:,}".format(g.stats.subjects) ]] | [[ g.stats.distinct_types ]] | [[ g.dump_file ]] |
 [% endfor %]
 
 [% if dumps.releases[0].zenodo_url %]
@@ -33,7 +33,7 @@ Each release includes one Turtle (`.ttl`) file per named graph plus a metadata f
 
 | Version | Date | MWO | Triples (total) | DOI |
 |---------|------|-----|----------------:|-----|
-[% for r in dumps.releases %]| v[[ r.version ]] | [[ r.publish_date ]] | [[ r.mwo_version ]] | [[ "{:,}".format(r.graphs | sum(attribute='stats.triples')) ]] | [% if r.zenodo_doi %][[[ r.zenodo_doi ]]](https://doi.org/[[ r.zenodo_doi ]])[% else %]–[% endif %] |
+[% for r in dumps.releases %]| v[[ r.version ]] | [[ r.publish_date ]] | [[ r.mwo_version ]] | [[ "{:,}".format(r.graphs | sum(attribute='stats.triples')) ]] | [% if r.zenodo_doi %]<a href="https://doi.org/[[ r.zenodo_doi ]]">[[ r.zenodo_doi ]]</a>[% else %]–[% endif %] |
 [% endfor %]
 
 [% else %]

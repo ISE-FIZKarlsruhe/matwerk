@@ -351,6 +351,9 @@ def dump_and_archive():
             f"https://nfdi.fiz-karlsruhe.de/matwerk/shmarql/</a></p>"
             f'<p>Source code: <a href="https://github.com/ISE-FIZKarlsruhe/matwerk">'
             f"https://github.com/ISE-FIZKarlsruhe/matwerk</a></p>"
+            f"<hr><p><em>This work is part of the consortium NFDI-MatWerk, funded by the "
+            f"Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under the "
+            f"National Research Data Infrastructure – NFDI 38/1 – project number 460247524.</em></p>"
         )
 
         metadata = build_zenodo_metadata(version, publish_date, desc_html)
