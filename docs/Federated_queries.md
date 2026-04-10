@@ -1,6 +1,6 @@
 ## Federated queries
 
-### atomRDF Kg <-> MSE KG: Which atomistic samples in AtomRDF correspond to a specific dataset entry in MSE-KG, and what are their segregation energies for Fe–Au Σ5 grain boundaries?
+### atomRDF KG <-> MSE KG: Which atomistic samples in AtomRDF correspond to a specific dataset entry in MSE-KG, and what are their segregation energies for Fe–Au Σ5 grain boundaries?
 
 ```sparql
 PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
@@ -60,106 +60,7 @@ ORDER BY ?E_seg
 
 ---
 
-### atomRDF Kg <-> MSE KG: Which datasets in MSE-KG are linked to AtomRDF samples that contain segregation energy values?
-
-```sparql
-PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
-PREFIX denoted_by: <http://purl.obolibrary.org/obo/IAO_0000235>
-PREFIX has_url: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
-
-PREFIX cmso: <http://purls.helmholtz-metadaten.de/cmso/>
-PREFIX asmo: <http://purls.helmholtz-metadaten.de/asmo/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-
-SELECT DISTINCT ?dataset ?link ?sample ?E_seg ?unit
-WHERE {
-
-  # --- MSE-KG ---
-  ?dataset a nfdicore_dataset: .
-  ?dataset denoted_by: ?linkNode .
-  ?linkNode has_url: ?link .
-
-  # --- AtomRDF ---
-  SERVICE <https://atomrdf.fair-workflows.org/sparql> {
-
-    ?sample a cmso:AtomicScaleSample .
-
-    # 🔗 JOIN via shared variable ?link
-    ?sample dcterms:isPartOf ?ds .
-    ?ds dcterms:isReferencedBy ?pub .
-    ?pub dcterms:identifier ?doi .
-
-    # Segregation energy
-    ?sample asmo:hasCalculatedProperty ?prop .
-    ?prop a asmo:SegregationEnergy ;
-          asmo:hasValue ?E_seg ;
-          asmo:hasUnit ?unit .
-  }
-  FILTER(STR(?link) = STR(?doi))
-}
-```
-
----
-
-### atomRDF Kg <-> MSE KG: Which datasets correspond to Fe–Au Σ5 grain boundary simulations, and what are their segregation energies?
-
-```sparql
-PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
-PREFIX denoted_by: <http://purl.obolibrary.org/obo/IAO_0000235>
-PREFIX has_url: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
-
-PREFIX cmso: <http://purls.helmholtz-metadaten.de/cmso/>
-PREFIX cdco: <http://purls.helmholtz-metadaten.de/cdos/cdco/>
-PREFIX pldo: <http://purls.helmholtz-metadaten.de/cdos/pldo/>
-PREFIX asmo: <http://purls.helmholtz-metadaten.de/asmo/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
-
-SELECT DISTINCT ?dataset ?link ?sample ?E_seg
-WHERE {
-
-  # --- MSE-KG ---
-  ?dataset a nfdicore_dataset: .
-  ?dataset denoted_by: ?linkNode .
-  ?linkNode has_url: ?link .
-
-  # --- AtomRDF (filtered science) ---
-  SERVICE <https://atomrdf.fair-workflows.org/sparql> {
-
-    ?sample a cmso:AtomicScaleSample ;
-            cmso:hasMaterial ?mat .
-
-    # 🔗 JOIN
-    ?sample dcterms:isPartOf ?ds .
-    ?ds dcterms:isReferencedBy ?pub .
-    ?pub dcterms:identifier ?doi .
-
-    # Grain boundary Σ5
-    ?mat cdco:hasCrystallographicDefect ?gb .
-    ?gb pldo:hasSigmaValue 5 .
-
-    # Fe
-    ?sample cmso:hasSpecies ?sp1 .
-    ?sp1 cmso:hasElement ?el1 .
-    ?el1 cmso:hasChemicalSymbol "Fe" .
-
-    # Au
-    ?sample cmso:hasSpecies ?sp2 .
-    ?sp2 cmso:hasElement ?el2 .
-    ?el2 cmso:hasChemicalSymbol "Au" .
-
-    # Property
-    ?sample asmo:hasCalculatedProperty ?prop .
-    ?prop a asmo:SegregationEnergy ;
-          asmo:hasValue ?E_seg .
-  }
-  FILTER(STR(?link) = STR(?doi))
-}
-ORDER BY ?E_seg
-```
-
----
-
-### atomRDF Kg <-> MSE KG: Who created datasets that are linked to atomistic segregation energy calculations?
+### atomRDF KG <-> MSE KG: Who created datasets that are linked to atomistic segregation energy calculations?
 
 ```sparql
 PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
