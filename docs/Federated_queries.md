@@ -112,7 +112,7 @@ WHERE {
 
 ---
 
-### atomRDF Kg <-> MSE KG: Which chemical elements are studied in datasets linked to AtomRDF simulations?
+### atomRDF KG <-> MSE KG: Which chemical elements are studied in datasets linked to AtomRDF simulations?
 
 ```sparql
 PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
@@ -148,7 +148,7 @@ WHERE {
 
 ---
 
-### WikiData Kg <-> MSE KG: Which organizations in the MSE-KG can be linked to Wikidata via their ROR ID, and what are their city, acronym, and country?
+### WikiData <-> MSE KG: Which organizations in the MSE-KG can be linked to Wikidata via their ROR ID, and what are their city, acronym, and country?
 
 ```sparql
 PREFIX organization: <http://purl.obolibrary.org/obo/OBI_0000245>
@@ -203,7 +203,7 @@ LIMIT 100
 
 ---
 
-### WikiData Kg <-> MSE KG: Which people in the MSE-KG are linked to Wikidata through ORCID, and what are their employers and countries?
+### WikiData <-> MSE KG: Which people in the MSE-KG are linked to Wikidata through ORCID, and what are their employers and countries?
 
 ```sparql
 PREFIX nfdicore_person:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>
