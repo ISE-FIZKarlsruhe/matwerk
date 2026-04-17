@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import os
+import requests
 
 from airflow.sdk import dag, task, Variable, get_current_context
 from airflow.exceptions import AirflowFailException
@@ -55,16 +56,53 @@ def reason():
         ti.xcom_push(key="out_owl", value=out_owl)
         ti.xcom_push(key="out_ttl", value=out_ttl)
 
+        in_expanded = f"{artifact}-expanded.ttl"
+        ti.xcom_push(key="in_expanded", value=in_expanded)
+
+    @task
+    def retrieve_nfdicore_extension(ti=None):
+        data_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
+        print("Working in datadir ", data_dir)
+        out_path = os.path.join(data_dir, "nfdicore-extension.ttl")
+        nfdicore_ext_url = Variable.get("nfdicore_extension")
+        r = requests.get(nfdicore_ext_url, timeout=60)
+        r.raise_for_status()
+        with open(out_path, "w", encoding="utf-8") as f:
+            f.write(r.text)
+        if not os.path.exists(out_path) or os.path.getsize(out_path) == 0:
+            raise RuntimeError(f"nfdicore-extension.ttl not written: {out_path}")
+
+    def mergeExpandCmdTemplate() -> str:
+        ROBOT = "{{ var.value.robotcmd }}"
+        DATA_DIR = "DATA_DIR"
+        XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
+
+        in_filtered = '{{ ti.xcom_pull(task_ids="init_data_dir", key="in_filtered") }}'
+        in_expanded = '{{ ti.xcom_pull(task_ids="init_data_dir", key="in_expanded") }}'
+
+        in_path = os.path.join(DATA_DIR, in_filtered)
+        ext_path = os.path.join(DATA_DIR, "nfdicore-extension.ttl")
+        out_path = os.path.join(DATA_DIR, in_expanded)
+
+        cmd = (
+            f"{ROBOT} merge"
+            f" --input '{in_path}'"
+            f" --input '{ext_path}'"
+            f" expand"
+            f" --annotate-expansion-axioms true"
+            f" --output '{out_path}'"
+        )
+        return cmd.replace(DATA_DIR, XCOM_DATADIR)
 
     def openlletNewReasonCmdTemplate() -> str:
         REASONER = "{{ var.value.openlletnewcmd }}"
         DATA_DIR = "DATA_DIR"
         XCOM_DATADIR = '{{ ti.xcom_pull(task_ids="init_data_dir", key="datadir") }}'
 
-        in_filtered = '{{ ti.xcom_pull(task_ids="init_data_dir", key="in_filtered") }}'
+        in_expanded = '{{ ti.xcom_pull(task_ids="init_data_dir", key="in_expanded") }}'
         out_owl = '{{ ti.xcom_pull(task_ids="init_data_dir", key="out_owl") }}'
 
-        in_path = os.path.join(DATA_DIR, in_filtered)
+        in_path = os.path.join(DATA_DIR, in_expanded)
         out_path = os.path.join(DATA_DIR, out_owl)
 
         cmd = f"{REASONER} extract -s \"PropertyAssertion SubPropertyOf InverseProperties SubClassOf ClassAssertion\" '{in_path}' > '{out_path}'"
@@ -83,6 +121,11 @@ def reason():
 
         cmd = f"{ROBOT} convert --input '{in_owl}' --output '{out_ttl_path}'"
         return cmd.replace(DATA_DIR, XCOM_DATADIR)
+
+    merge_expand = BashOperator(
+        task_id="merge_expand",
+        bash_command=mergeExpandCmdTemplate(),
+    )
 
     sunlet_reasoning = BashOperator(
         task_id="sunlet_reasoning",
@@ -154,7 +197,11 @@ def reason():
         bash_command=preFilterCmdTemplate(),
     )
 
-    init_data_dir() >> pre_filter >> sunlet_reasoning >> robot_convert_to_ttl >> mark_reason_success()
+    init = init_data_dir()
+    retrieve_ext = retrieve_nfdicore_extension()
+    init >> pre_filter
+    init >> retrieve_ext
+    [pre_filter, retrieve_ext] >> merge_expand >> sunlet_reasoning >> robot_convert_to_ttl >> mark_reason_success()
 
 
 reason()
