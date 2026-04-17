@@ -16,7 +16,7 @@
 .md-typeset details,
 .md-typeset table:not([class]),
 .highlight,
-.md-typeset pre > code {
+.md-typeset pre>code {
   border-radius: var(--matwerk-radius);
 }
 
@@ -68,53 +68,57 @@ a[href*="superset.ise.fiz-karlsruhe.de"]::after {
 
 /* ── Brand Tokens ────────────────────────────────────────── */
 :root {
-  --mse-navy:      #0d1f3c;
-  --mse-blue:      #1a5fa8;
-  --mse-sky:       #3b9edd;
-  --mse-teal:      #0f9e8e;
-  --mse-amber:     #e8a020;
-  --mse-light-bg:  #f5f8fc;
-  --mse-border:    #d8e4f0;
-  --mse-text:      #1a2a3a;
-  --mse-muted:     #6b7f96;
-  --card-radius:   12px;
-  --card-shadow:   0 2px 12px rgba(13,31,60,0.08), 0 1px 3px rgba(13,31,60,0.05);
-  --card-hover:    0 8px 32px rgba(13,31,60,0.14), 0 2px 8px rgba(13,31,60,0.08);
+  --mse-navy: #0d1f3c;
+  --mse-blue: #1a5fa8;
+  --mse-sky: #3b9edd;
+  --mse-teal: #0f9e8e;
+  --mse-amber: #e8a020;
+  --mse-light-bg: #f5f8fc;
+  --mse-border: #d8e4f0;
+  --mse-text: #1a2a3a;
+  --mse-muted: #6b7f96;
+  --card-radius: 12px;
+  --card-shadow: 0 2px 12px rgba(13, 31, 60, 0.08), 0 1px 3px rgba(13, 31, 60, 0.05);
+  --card-hover: 0 8px 32px rgba(13, 31, 60, 0.14), 0 2px 8px rgba(13, 31, 60, 0.08);
 }
 
 [data-md-color-scheme="slate"] {
-  --mse-light-bg:  #1a2535;
-  --mse-border:    #2a3a50;
-  --mse-text:      #d8e8f8;
-  --mse-muted:     #7a9ab8;
-  --card-shadow:   0 2px 12px rgba(0,0,0,0.3);
-  --card-hover:    0 8px 32px rgba(0,0,0,0.4);
+  --mse-light-bg: #1a2535;
+  --mse-border: #2a3a50;
+  --mse-text: #d8e8f8;
+  --mse-muted: #7a9ab8;
+  --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+  --card-hover: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 /* ── Typography ──────────────────────────────────────────── */
-.md-typeset h1, .md-typeset h2 {
+.md-typeset h1,
+.md-typeset h2 {
   font-family: 'DM Serif Display', Georgia, serif;
   letter-spacing: -0.02em;
 }
 
-.md-typeset h3, .md-typeset h4 {
+.md-typeset h3,
+.md-typeset h4 {
   font-family: 'DM Sans', sans-serif;
   font-weight: 600;
 }
 
-.md-typeset p, .md-typeset li {
+.md-typeset p,
+.md-typeset li {
   font-family: 'DM Sans', sans-serif;
   font-size: 0.95rem;
   line-height: 1.7;
 }
 
-code, .md-typeset code {
+code,
+.md-typeset code {
   font-family: 'JetBrains Mono', monospace;
 }
 
 /* ── Hero Banner ─────────────────────────────────────────── */
 .hero-banner {
-  background: linear-gradient(135deg, var(--mse-navy) 0%, #1a3a68 50%, #0f4f7a 100%);
+  background: linear-gradient(135deg, #1767bc 0%, #1767bc 50%, #5d8ae4 100%);
   border-radius: var(--card-radius);
   padding: 3rem 2.5rem;
   margin: -0.5rem 0 2rem;
@@ -126,20 +130,24 @@ code, .md-typeset code {
 .hero-banner::before {
   content: '';
   position: absolute;
-  top: -60px; right: -60px;
-  width: 320px; height: 320px;
+  top: -60px;
+  right: -60px;
+  width: 320px;
+  height: 320px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(59,158,221,0.18) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(59, 158, 221, 0.18) 0%, transparent 70%);
   pointer-events: none;
 }
 
 .hero-banner::after {
   content: '';
   position: absolute;
-  bottom: -80px; left: -40px;
-  width: 280px; height: 280px;
+  bottom: -80px;
+  left: -40px;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(15,158,142,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(15, 158, 142, 0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -150,9 +158,9 @@ code, .md-typeset code {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--mse-sky);
-  background: rgba(59,158,221,0.15);
-  border: 1px solid rgba(59,158,221,0.3);
+  color: #fff;
+  background: rgba(59, 158, 221, 0.15);
+  border: 1px solid rgba(59, 158, 221, 0.3);
   border-radius: 4px;
   padding: 0.2em 0.75em;
   margin-bottom: 1rem;
@@ -167,7 +175,7 @@ code, .md-typeset code {
 }
 
 .hero-banner p {
-  color: rgba(255,255,255,0.82);
+  color: rgba(255, 255, 255, 0.82);
   max-width: 680px;
   font-size: 1.05rem;
 }
@@ -187,11 +195,34 @@ code, .md-typeset code {
   padding: 0.25em 0.9em;
 }
 
-.badge-updated  { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.9); }
-.badge-triples  { background: rgba(15,158,142,0.25); color: #5de6d8; border: 1px solid rgba(15,158,142,0.4); }
-.badge-open     { background: rgba(232,160,32,0.2); color: #f8c660; border: 1px solid rgba(232,160,32,0.35); }
-.badge-zenodo   { background: rgba(68,138,255,0.2); color: #82b1ff; border: 1px solid rgba(68,138,255,0.35); cursor: pointer; transition: background 0.2s; }
-.badge-zenodo:hover { background: rgba(68,138,255,0.35); }
+.badge-updated {
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.badge-triples {
+  background: rgba(15, 158, 142, 0.25);
+  color: #5de6d8;
+  border: 1px solid rgba(15, 158, 142, 0.4);
+}
+
+.badge-open {
+  background: rgba(232, 160, 32, 0.2);
+  color: #f8c660;
+  border: 1px solid rgba(232, 160, 32, 0.35);
+}
+
+.badge-zenodo {
+  background: rgba(68, 138, 255, 0.2);
+  color: #fafafa;
+  border: 1px solid rgba(68, 138, 255, 0.35);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.badge-zenodo:hover {
+  background: rgba(68, 138, 255, 0.35);
+}
 
 /* ── Access Cards Grid ───────────────────────────────────── */
 .access-grid {
@@ -215,15 +246,28 @@ code, .md-typeset code {
 .access-card::before {
   content: '';
   position: absolute;
-  top: 0; left: 0; right: 0;
+  top: 0;
+  left: 0;
+  right: 0;
   height: 3px;
   border-radius: var(--card-radius) var(--card-radius) 0 0;
 }
 
-.card-dashboard::before { background: var(--mse-amber); }
-.card-sparql::before    { background: var(--mse-blue); }
-.card-search::before    { background: var(--mse-teal); }
-.card-sparklis::before  { background: var(--mse-sky); }
+.card-dashboard::before {
+  background: var(--mse-amber);
+}
+
+.card-sparql::before {
+  background: var(--mse-blue);
+}
+
+.card-search::before {
+  background: var(--mse-teal);
+}
+
+.card-sparklis::before {
+  background: var(--mse-sky);
+}
 
 .access-card:hover {
   transform: translateY(-3px);
@@ -351,7 +395,9 @@ code, .md-typeset code {
   padding: 0.15em 0.55em;
 }
 
-.ont-badge.ont-domain { background: var(--mse-teal); }
+.ont-badge.ont-domain {
+  background: var(--mse-teal);
+}
 
 .ontology-card strong {
   font-size: 1rem;
@@ -392,7 +438,7 @@ code, .md-typeset code {
 
 .contribute-item:hover {
   border-color: var(--mse-teal);
-  box-shadow: 0 3px 12px rgba(15,158,142,0.1);
+  box-shadow: 0 3px 12px rgba(15, 158, 142, 0.1);
 }
 
 .contribute-item strong {
@@ -454,6 +500,7 @@ code, .md-typeset code {
   .hero-banner {
     padding: 2rem 1.5rem;
   }
+
   .hero-banner .md-typeset h1,
   .hero-banner h1 {
     font-size: 1.8rem;
