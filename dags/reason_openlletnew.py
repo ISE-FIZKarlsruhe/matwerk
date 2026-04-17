@@ -63,14 +63,14 @@ def reason():
     def retrieve_nfdicore_extension(ti=None):
         data_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
         print("Working in datadir ", data_dir)
-        out_path = os.path.join(data_dir, "nfdicore-extension.ttl")
+        out_path = os.path.join(data_dir, "nfdicore-extension.owl")
         nfdicore_ext_url = Variable.get("nfdicore_extension")
         r = requests.get(nfdicore_ext_url, timeout=60)
         r.raise_for_status()
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(r.text)
         if not os.path.exists(out_path) or os.path.getsize(out_path) == 0:
-            raise RuntimeError(f"nfdicore-extension.ttl not written: {out_path}")
+            raise RuntimeError(f"nfdicore-extension.owl not written: {out_path}")
 
     def mergeExpandCmdTemplate() -> str:
         ROBOT = "{{ var.value.robotcmd }}"
@@ -81,7 +81,7 @@ def reason():
         in_expanded = '{{ ti.xcom_pull(task_ids="init_data_dir", key="in_expanded") }}'
 
         in_path = os.path.join(DATA_DIR, in_filtered)
-        ext_path = os.path.join(DATA_DIR, "nfdicore-extension.ttl")
+        ext_path = os.path.join(DATA_DIR, "nfdicore-extension.owl")
         out_path = os.path.join(DATA_DIR, in_expanded)
 
         cmd = (
