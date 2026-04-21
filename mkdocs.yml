@@ -56,8 +56,7 @@ nav:
       - Role Bearer: shapes/role-bearer/pattern.md
       - Role Realization: shapes/role-realization/pattern.md
       - Ontology Variant: shapes/ontology-variant/pattern.md
-      - Ontology Version: shapes/ontology-version/pattern.md
-      - Ontology Version (Complex): shapes/ontology-version-complex/pattern.md
+      - Ontology Version: shapes/ontology-version-complex/pattern.md
       - Email Address Value: shapes/email-address/pattern.md
       - URL Instance: shapes/url-instance/pattern.md
   - Verification:
