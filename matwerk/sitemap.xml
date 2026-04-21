@@ -2,110 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/Federated_queries/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/dumps/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/general_queries/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/namedgraphsstatistics/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/statistics/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/upload/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/pipeline/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/pipeline/cq-tester/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/pipeline/dashboard/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/pipeline/dump-and-archive/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/pipeline/harvesters/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/pipeline/merge/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/pipeline/process-spreadsheets/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/pipeline/publish/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/pipeline/reason/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/pipeline/validation/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/shapes/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/shapes/email-address/pattern/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/shapes/no-punning/pattern/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/shapes/ontology-variant/pattern/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/shapes/ontology-version-complex/pattern/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/shapes/role-bearer/pattern/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/shapes/role-realization/pattern/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/shapes/textual-entity/pattern/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/shapes/url-instance/pattern/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
     <url>
          <loc>https://nfdi.fiz-karlsruhe.de/matwerk/verification/</loc>
-         <lastmod>2026-04-17</lastmod>
+         <lastmod>2026-04-21</lastmod>
     </url>
 </urlset>
