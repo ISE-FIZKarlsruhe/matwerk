@@ -2181,7 +2181,7 @@
 </span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?person</span> <span class="nv">?label</span> <span class="nv">?email</span> <span class="nv">?orcid</span> <span class="k">WHERE</span> <span class="p">{</span>
 </span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
 </span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  <span class="nv">?person</span> <span class="k">a</span> <span class="nn">nfdicore_person</span><span class="p">:</span> <span class="p">.</span>
-</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?person</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?label</span> <span class="p">.</span> <span class="p">}</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>  <span class="nv">?person</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?label</span> <span class="p">.</span> 
 </span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
 </span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span>
 </span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    <span class="nv">?person</span> <span class="nn">denoted_by</span><span class="p">:</span> <span class="nv">?emailNode</span> <span class="p">.</span>
@@ -2288,33 +2288,31 @@
 </span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>  <span class="nv">?dataset</span> <span class="k">a</span> <span class="nn">nfdicore_dataset</span><span class="p">:</span> <span class="p">.</span>
 </span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
 </span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>  <span class="c"># Dataset title</span>
-</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span>
-</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    <span class="nv">?dataset</span> <span class="nn">denoted_by</span><span class="p">:</span> <span class="nv">?titleNode</span> <span class="p">.</span>
-</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>    <span class="nv">?titleNode</span> <span class="k">a</span> <span class="nn">nfdicore_title</span><span class="p">:</span> <span class="p">;</span>
-</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>               <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?title</span> <span class="p">.</span>
-</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>  <span class="p">}</span>
-</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>
-</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>  <span class="c"># Creator</span>
-</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span>
-</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>    <span class="nv">?dataset</span> <span class="nn">has_part</span><span class="p">:</span> <span class="nv">?creator</span> <span class="p">.</span>
-</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>    <span class="nv">?creator</span> <span class="k">a</span> <span class="nn">nfdicore_creator_role</span><span class="p">:</span> <span class="p">;</span>
-</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>             <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?creatorLabel</span> <span class="p">.</span>
-</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>  <span class="p">}</span>
-</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>
-</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>  <span class="c"># Creator affiliation</span>
-</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span>
-</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>    <span class="nv">?dataset</span> <span class="nn">has_part</span><span class="p">:</span> <span class="nv">?creatorAffiliation</span> <span class="p">.</span>
-</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>    <span class="nv">?creatorAffiliation</span> <span class="k">a</span> <span class="nn">nfdicore_institution_list</span><span class="p">:</span> <span class="p">;</span>
-</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>                        <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?creatorAffiliationLabel</span> <span class="p">.</span>
-</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>  <span class="p">}</span>
-</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>
-</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>  <span class="c"># Link (URL or PID)</span>
-</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span>
-</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>    <span class="nv">?dataset</span> <span class="nn">denoted_by</span><span class="p">:</span> <span class="nv">?linkNode</span> <span class="p">.</span>
-</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>    <span class="nv">?linkNode</span> <span class="nn">has_url</span><span class="p">:</span> <span class="nv">?link</span> <span class="p">.</span>
-</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>  <span class="p">}</span>
-</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="p">}</span>
-</span><span id="__span-8-41"><a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="k">LIMIT</span> <span class="mi">999</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>  <span class="nv">?dataset</span> <span class="nn">denoted_by</span><span class="p">:</span> <span class="nv">?titleNode</span> <span class="p">.</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    <span class="nv">?titleNode</span> <span class="k">a</span> <span class="nn">nfdicore_title</span><span class="p">:</span> <span class="p">;</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>               <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?title</span> <span class="p">.</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>  <span class="c"># Creator</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>    <span class="nv">?dataset</span> <span class="nn">has_part</span><span class="p">:</span> <span class="nv">?creator</span> <span class="p">.</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>    <span class="nv">?creator</span> <span class="k">a</span> <span class="nn">nfdicore_creator_role</span><span class="p">:</span> <span class="p">;</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>             <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?creatorLabel</span> <span class="p">.</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>  <span class="p">}</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>  <span class="c"># Creator affiliation</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>    <span class="nv">?dataset</span> <span class="nn">has_part</span><span class="p">:</span> <span class="nv">?creatorAffiliation</span> <span class="p">.</span>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>    <span class="nv">?creatorAffiliation</span> <span class="k">a</span> <span class="nn">nfdicore_institution_list</span><span class="p">:</span> <span class="p">;</span>
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>                        <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?creatorAffiliationLabel</span> <span class="p">.</span>
+</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>  <span class="p">}</span>
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>
+</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>  <span class="c"># Link (URL or PID)</span>
+</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span>
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>    <span class="nv">?dataset</span> <span class="nn">denoted_by</span><span class="p">:</span> <span class="nv">?linkNode</span> <span class="p">.</span>
+</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>    <span class="nv">?linkNode</span> <span class="nn">has_url</span><span class="p">:</span> <span class="nv">?link</span> <span class="p">.</span>
+</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>  <span class="p">}</span>
+</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="p">}</span>
+</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="k">LIMIT</span> <span class="mi">999</span>
 </span></code></pre></div>
 <hr />
 <h3 id="what-are-the-data-portals-present-in-the-mse-kg-what-are-the-links-repositories-and-contactpoint-names-or-email-addresses-of-these-data-portals">What are the data portals present in the MSE-KG? What are the links, repositories and contactpoint names or email addresses of these data portals?</h3>
