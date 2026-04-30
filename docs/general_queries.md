@@ -184,7 +184,7 @@ PREFIX rdfs:             <http://www.w3.org/2000/01/rdf-schema#>
 SELECT DISTINCT ?person ?label ?email ?orcid WHERE {
 
   ?person a nfdicore_person: .
-  OPTIONAL { ?person rdfs:label ?label . }
+  ?person rdfs:label ?label . 
 
   OPTIONAL {
     ?person denoted_by: ?emailNode .
@@ -303,11 +303,9 @@ WHERE {
   ?dataset a nfdicore_dataset: .
 
   # Dataset title
-  OPTIONAL {
-    ?dataset denoted_by: ?titleNode .
+  ?dataset denoted_by: ?titleNode .
     ?titleNode a nfdicore_title: ;
                rdfs:label ?title .
-  }
 
   # Creator
   OPTIONAL {
