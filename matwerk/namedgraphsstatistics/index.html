@@ -812,6 +812,72 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#what-are-the-zenodo-file-graphs-imported-into-the-mse-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What are the Zenodo file graphs imported into the MSE-KG?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-many-triples-does-each-zenodo-file-graph-carry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How many triples does each Zenodo file graph carry?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-zenodo-records-contributed-rdf-and-how-many-files-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which Zenodo records contributed RDF, and how many files each?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-download-url-of-each-zenodo-file-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the download URL of each Zenodo file graph?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-files-per-zenodo-record-were-imported-with-description-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which files per Zenodo record were imported (with description text)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-was-each-zenodo-file-graph-harvested" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When was each Zenodo file graph harvested?
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1661,6 +1727,72 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#what-are-the-zenodo-file-graphs-imported-into-the-mse-kg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What are the Zenodo file graphs imported into the MSE-KG?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-many-triples-does-each-zenodo-file-graph-carry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How many triples does each Zenodo file graph carry?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-zenodo-records-contributed-rdf-and-how-many-files-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which Zenodo records contributed RDF, and how many files each?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-download-url-of-each-zenodo-file-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is the download URL of each Zenodo file graph?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#which-files-per-zenodo-record-were-imported-with-description-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which files per Zenodo record were imported (with description text)?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#when-was-each-zenodo-file-graph-harvested" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When was each Zenodo file graph harvested?
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1751,6 +1883,131 @@
 </span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>  <span class="nv">?endNode</span>   <span class="nn">time</span><span class="p">:</span><span class="nt">inXSDDateTimeStamp</span> <span class="nv">?endTS</span> <span class="p">.</span>
 </span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="p">}</span>
 </span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="k">ORDER BY</span> <span class="k">DESC</span><span class="p">(</span><span class="nv">?beginTS</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h3 id="what-are-the-zenodo-file-graphs-imported-into-the-mse-kg">What are the Zenodo file graphs imported into the MSE-KG?</h3>
+<div class="language-sparql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">PREFIX</span> <span class="nn">zenodo_metadata</span><span class="p">:</span> <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/matwerk/zenodo_metadata&gt;</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">PREFIX</span> <span class="nn">nfdicore_file</span><span class="p">:</span>   <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000027&gt;</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">PREFIX</span> <span class="nn">part_of</span><span class="p">:</span>         <span class="nl">&lt;http://purl.obolibrary.org/obo/BFO_0000050&gt;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">PREFIX</span> <span class="nn">rdfs</span><span class="p">:</span>            <span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?fileGraph</span> <span class="nv">?fileGraphLabel_</span> <span class="nv">?record</span> <span class="k">WHERE</span> <span class="p">{</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>  <span class="k">GRAPH</span> <span class="nn">zenodo_metadata</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="nv">?fileGraph</span> <span class="k">a</span> <span class="nn">nfdicore_file</span><span class="p">:</span> <span class="p">;</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>               <span class="nn">part_of</span><span class="p">:</span> <span class="nv">?record</span> <span class="p">.</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?fileGraph</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?fileGraphLabel_</span> <span class="p">.</span> <span class="p">}</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  <span class="p">}</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">}</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="k">ORDER BY</span> <span class="nv">?record</span> <span class="nv">?fileGraph</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="k">LIMIT</span> <span class="mi">999</span>
+</span></code></pre></div>
+<hr />
+<h3 id="how-many-triples-does-each-zenodo-file-graph-carry">How many triples does each Zenodo file graph carry?</h3>
+<div class="language-sparql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">PREFIX</span> <span class="nn">zenodo_metadata</span><span class="p">:</span> <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/matwerk/zenodo_metadata&gt;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">PREFIX</span> <span class="nn">nfdicore_file</span><span class="p">:</span>   <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000027&gt;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">PREFIX</span> <span class="nn">part_of</span><span class="p">:</span>         <span class="nl">&lt;http://purl.obolibrary.org/obo/BFO_0000050&gt;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">SELECT</span> <span class="nv">?fileGraph</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?triples</span><span class="p">)</span> <span class="k">WHERE</span> <span class="p">{</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>  <span class="k">GRAPH</span> <span class="nn">zenodo_metadata</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    <span class="nv">?fileGraph</span> <span class="k">a</span> <span class="nn">nfdicore_file</span><span class="p">:</span> <span class="p">;</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>               <span class="nn">part_of</span><span class="p">:</span> <span class="nv">?record</span> <span class="p">.</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  <span class="p">}</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>  <span class="k">GRAPH</span> <span class="nv">?fileGraph</span> <span class="p">{</span> <span class="nv">?s</span> <span class="nv">?p</span> <span class="nv">?o</span> <span class="p">}</span>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="p">}</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="k">GROUP BY</span> <span class="nv">?fileGraph</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="k">ORDER BY</span> <span class="k">DESC</span><span class="p">(</span><span class="nv">?triples</span><span class="p">)</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="k">LIMIT</span> <span class="mi">999</span>
+</span></code></pre></div>
+<hr />
+<h3 id="which-zenodo-records-contributed-rdf-and-how-many-files-each">Which Zenodo records contributed RDF, and how many files each?</h3>
+<div class="language-sparql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">PREFIX</span> <span class="nn">zenodo_metadata</span><span class="p">:</span> <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/matwerk/zenodo_metadata&gt;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">PREFIX</span> <span class="nn">nfdicore_file</span><span class="p">:</span>   <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000027&gt;</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">PREFIX</span> <span class="nn">part_of</span><span class="p">:</span>         <span class="nl">&lt;http://purl.obolibrary.org/obo/BFO_0000050&gt;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">SELECT</span> <span class="nv">?record</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="nv">?fileGraph</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?fileCount</span><span class="p">)</span> <span class="k">WHERE</span> <span class="p">{</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  <span class="k">GRAPH</span> <span class="nn">zenodo_metadata</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="nv">?fileGraph</span> <span class="k">a</span> <span class="nn">nfdicore_file</span><span class="p">:</span> <span class="p">;</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>               <span class="nn">part_of</span><span class="p">:</span> <span class="nv">?record</span> <span class="p">.</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>  <span class="p">}</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">}</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="k">GROUP BY</span> <span class="nv">?record</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="k">ORDER BY</span> <span class="k">DESC</span><span class="p">(</span><span class="nv">?fileCount</span><span class="p">)</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="k">LIMIT</span> <span class="mi">999</span>
+</span></code></pre></div>
+<hr />
+<h3 id="what-is-the-download-url-of-each-zenodo-file-graph">What is the download URL of each Zenodo file graph?</h3>
+<div class="language-sparql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">PREFIX</span> <span class="nn">zenodo_metadata</span><span class="p">:</span> <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/matwerk/zenodo_metadata&gt;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">PREFIX</span> <span class="nn">nfdicore_file</span><span class="p">:</span>   <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000027&gt;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">PREFIX</span> <span class="nn">part_of</span><span class="p">:</span>         <span class="nl">&lt;http://purl.obolibrary.org/obo/BFO_0000050&gt;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">PREFIX</span> <span class="nn">has_url</span><span class="p">:</span>         <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008&gt;</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">SELECT</span> <span class="nv">?record</span> <span class="nv">?fileGraph</span> <span class="nv">?downloadURL</span> <span class="k">WHERE</span> <span class="p">{</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>  <span class="k">GRAPH</span> <span class="nn">zenodo_metadata</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="nv">?fileGraph</span> <span class="k">a</span> <span class="nn">nfdicore_file</span><span class="p">:</span> <span class="p">;</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>               <span class="nn">part_of</span><span class="p">:</span> <span class="nv">?record</span> <span class="p">;</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>               <span class="nn">has_url</span><span class="p">:</span> <span class="nv">?downloadURL</span> <span class="p">.</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>  <span class="p">}</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="p">}</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="k">ORDER BY</span> <span class="nv">?record</span> <span class="nv">?fileGraph</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="k">LIMIT</span> <span class="mi">999</span>
+</span></code></pre></div>
+<hr />
+<h3 id="which-files-per-zenodo-record-were-imported-with-description-text">Which files per Zenodo record were imported (with description text)?</h3>
+<div class="language-sparql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">PREFIX</span> <span class="nn">zenodo_metadata</span><span class="p">:</span>      <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/matwerk/zenodo_metadata&gt;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">PREFIX</span> <span class="nn">nfdicore_file</span><span class="p">:</span>        <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000027&gt;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">PREFIX</span> <span class="nn">nfdicore_description</span><span class="p">:</span> <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018&gt;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">PREFIX</span> <span class="nn">has_value</span><span class="p">:</span>            <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007&gt;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="k">PREFIX</span> <span class="nn">part_of</span><span class="p">:</span>              <span class="nl">&lt;http://purl.obolibrary.org/obo/BFO_0000050&gt;</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="k">PREFIX</span> <span class="nn">denoted_by</span><span class="p">:</span>           <span class="nl">&lt;http://purl.obolibrary.org/obo/IAO_0000235&gt;</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="k">PREFIX</span> <span class="nn">rdfs</span><span class="p">:</span>                 <span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="k">SELECT</span> <span class="nv">?record</span> <span class="nv">?fileGraph</span> <span class="nv">?fileGraphLabel_</span> <span class="nv">?descriptionText</span> <span class="k">WHERE</span> <span class="p">{</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>  <span class="k">GRAPH</span> <span class="nn">zenodo_metadata</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="nv">?fileGraph</span> <span class="k">a</span> <span class="nn">nfdicore_file</span><span class="p">:</span> <span class="p">;</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>               <span class="nn">part_of</span><span class="p">:</span> <span class="nv">?record</span> <span class="p">;</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>               <span class="nn">denoted_by</span><span class="p">:</span> <span class="nv">?descNode</span> <span class="p">.</span>
+</span><span id="__span-9-15"><a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
+</span><span id="__span-9-16"><a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    <span class="nv">?descNode</span> <span class="k">a</span> <span class="nn">nfdicore_description</span><span class="p">:</span> <span class="p">;</span>
+</span><span id="__span-9-17"><a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>              <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">&quot;description&quot;</span> <span class="p">;</span>
+</span><span id="__span-9-18"><a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>              <span class="nn">has_value</span><span class="p">:</span> <span class="nv">?descriptionText</span> <span class="p">.</span>
+</span><span id="__span-9-19"><a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>
+</span><span id="__span-9-20"><a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>    <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?fileGraph</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?fileGraphLabel_</span> <span class="p">.</span> <span class="p">}</span>
+</span><span id="__span-9-21"><a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>  <span class="p">}</span>
+</span><span id="__span-9-22"><a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="p">}</span>
+</span><span id="__span-9-23"><a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="k">ORDER BY</span> <span class="nv">?record</span> <span class="nv">?fileGraph</span>
+</span><span id="__span-9-24"><a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="k">LIMIT</span> <span class="mi">999</span>
+</span></code></pre></div>
+<hr />
+<h3 id="when-was-each-zenodo-file-graph-harvested">When was each Zenodo file graph harvested?</h3>
+<div class="language-sparql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">PREFIX</span> <span class="nn">zenodo_metadata</span><span class="p">:</span>  <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/matwerk/zenodo_metadata&gt;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">PREFIX</span> <span class="nn">nfdicore_file</span><span class="p">:</span>    <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000027&gt;</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">PREFIX</span> <span class="nn">output_of</span><span class="p">:</span>        <span class="nl">&lt;http://purl.obolibrary.org/obo/RO_0002353&gt;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">PREFIX</span> <span class="nn">occupies_temporal_region</span><span class="p">:</span> <span class="nl">&lt;http://purl.obolibrary.org/obo/BFO_0000199&gt;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">PREFIX</span> <span class="nn">has_first_instant</span><span class="p">:</span> <span class="nl">&lt;http://purl.obolibrary.org/obo/BFO_0000222&gt;</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="k">PREFIX</span> <span class="nn">has_last_instant</span><span class="p">:</span>  <span class="nl">&lt;http://purl.obolibrary.org/obo/BFO_0000224&gt;</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="k">PREFIX</span> <span class="nn">time</span><span class="p">:</span>             <span class="nl">&lt;http://www.w3.org/2006/time#&gt;</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="k">SELECT</span> <span class="nv">?fileGraph</span> <span class="nv">?harvestedAt</span> <span class="k">WHERE</span> <span class="p">{</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>  <span class="k">GRAPH</span> <span class="nn">zenodo_metadata</span><span class="p">:</span> <span class="p">{</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    <span class="nv">?fileGraph</span> <span class="k">a</span> <span class="nn">nfdicore_file</span><span class="p">:</span> <span class="p">;</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>               <span class="nn">output_of</span><span class="p">:</span> <span class="nv">?process</span> <span class="p">.</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>    <span class="nv">?process</span> <span class="nn">occupies_temporal_region</span><span class="p">:</span> <span class="nv">?temporalRegion</span> <span class="p">.</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>    <span class="nv">?temporalRegion</span> <span class="nn">has_first_instant</span><span class="p">:</span> <span class="nv">?instant</span> <span class="p">.</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>    <span class="nv">?instant</span> <span class="nn">time</span><span class="p">:</span><span class="nt">inXSDDateTimeStamp</span> <span class="nv">?harvestedAt</span> <span class="p">.</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>  <span class="p">}</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="p">}</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="k">ORDER BY</span> <span class="k">DESC</span><span class="p">(</span><span class="nv">?harvestedAt</span><span class="p">)</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="k">LIMIT</span> <span class="mi">999</span>
 </span></code></pre></div>
 <hr />
 
