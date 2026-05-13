@@ -25,9 +25,23 @@ from .zenodo_api import (
     extract_files,
     get_records_by_ids,
     get_metadata,
+    best_external_url,
 )
 from .mint import get_or_mint_instance, get_or_mint_file_graph, get_or_mint_file_identifier
 from .rdf_import import import_rdf_into_named_graph
+
+# Optional: BFO/MWO per-graph provenance
+try:
+    from common.graph_metadata import (
+        GraphProvenanceFacts,
+        build_graph_provenance_ttl,
+        GRAPH_PROVENANCE_PREFIXES,
+        utc_now_iso_seconds,
+    )
+    _HAVE_PROVENANCE_HELPER = True
+except Exception as _e:
+    print(f"[INFO] Graph provenance helper unavailable ({_e}); continuing without provenance triples")
+    _HAVE_PROVENANCE_HELPER = False
 
 # ------------------ Snapshot config ------------------
 BASE_GRAPH_IRI = os.environ.get(
@@ -273,7 +287,19 @@ def main():
     parser.add_argument("--doi", default=None, help="Process a single DOI (e.g., 10.5281/zenodo.13797439)")
     parser.add_argument("--record-url", default=None, help="Process a single record URL (https://zenodo.org/record/<id>)")
 
+    # Skip own deposit to break the round-trip feedback loop (e.g., the dump_and_archive output).
+    parser.add_argument(
+        "--skip-self-concept",
+        default=None,
+        help="Concept record id of own deposit; matching records are skipped. "
+             "Falls back to env MATWERK_ZENODO_SELF_CONCEPT_ID.",
+    )
+
     args = parser.parse_args()
+
+    self_concept_id = (args.skip_self_concept or os.environ.get("MATWERK_ZENODO_SELF_CONCEPT_ID") or "").strip()
+    if self_concept_id:
+        print(f"[INFO] Will skip records with conceptrecid={self_concept_id} (own deposit)")
 
     token = os.environ.get("ZENODO_TOKEN")
     comm_slug = normalize_community(args.community)
@@ -322,6 +348,13 @@ def main():
     snapshots_root = Path(args.snapshots_dir)
 
     for rec in records_iter:
+        # Layer 1: skip our own deposit to break the harvest -> reason -> dump -> Zenodo loop.
+        if self_concept_id:
+            rec_concept = str(rec.get("conceptrecid") or rec.get("conceptdoi") or "").strip()
+            if rec_concept == self_concept_id:
+                print(f"[SKIP] Own deposit (conceptrecid={rec_concept}), record {rec.get('id')}")
+                continue
+
         count += 1
         key = record_key(rec)
 
@@ -380,6 +413,24 @@ def main():
                 if ok:
                     g.add((fid, RDFS.seeAlso, graph_iri))
                     imported_graphs.append(URIRef(graph_iri))
+
+                    # BFO/MWO provenance for this named graph (default graph)
+                    if _HAVE_PROVENANCE_HELPER:
+                        try:
+                            facts = GraphProvenanceFacts(
+                                graph_iri=str(graph_iri),
+                                record_iri=str(instance_iri),
+                                file_key=combined_key,
+                                download_url=fmeta.get("link"),
+                                record_url=best_external_url(rec),
+                                content_type=content_type,
+                                harvested_at=utc_now_iso_seconds(),
+                                validation=None,
+                            )
+                            ttl_fragment = GRAPH_PROVENANCE_PREFIXES + build_graph_provenance_ttl(facts)
+                            g.parse(data=ttl_fragment, format="turtle")
+                        except Exception as e:
+                            print(f"  ! Failed to emit provenance for {graph_iri}: {e}")
                 else:
                     print(f"  (skipped linking {local_path.name}; parse failed)")
 

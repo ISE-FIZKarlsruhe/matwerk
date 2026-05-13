@@ -10,7 +10,8 @@ sys.path.append(local_path)
 from datetime import datetime
 from airflow.sdk import dag, task, Variable, get_current_context
 from airflow.exceptions import AirflowFailException
-from airflow.providers.standard.operators.trigger_dagrun import TriggerDagRunOperator
+# Re-enable when zenodo reasoning/validation triggers are restored below:
+# from airflow.providers.standard.operators.trigger_dagrun import TriggerDagRunOperator
 from scripts.zenodo import export_zenodo
 from scripts import fetch_zenodo
 
@@ -47,7 +48,17 @@ def harvester_zenodo():
 
         # 1) Export Zenodo (writes zenodo.ttl)
         zenodo_ttl = os.path.join(run_dir, OUTPUT)
-        export_zenodo.run(["--make-snapshots", "--out", zenodo_ttl])
+
+        # Layer 1: skip our own deposit so we don't re-import the dump_and_archive output.
+        export_args = ["--make-snapshots", "--out", zenodo_ttl]
+        try:
+            self_concept_id = Variable.get("matwerk_zenodo_concept_id")
+        except Exception:
+            self_concept_id = ""
+        if self_concept_id:
+            export_args += ["--skip-self-concept", str(self_concept_id)]
+
+        export_zenodo.run(export_args)
 
         # 2) Harvest based on asserted TTL
         out_csv = os.path.join(run_dir, "datasets_urls.csv")
@@ -72,36 +83,39 @@ def harvester_zenodo():
     harvest = run_harvester()
     done = mark_success()
 
-    trigger_reason_zenodo = TriggerDagRunOperator(
-        task_id="trigger_reason_zenodo",
-        trigger_dag_id="reason_openllet_new",
-        wait_for_completion=True,
-        conf={
-            "artifact": "zenodo",
-            "source_run_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
-            "target_run_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
-            "in_ttl": "zenodo.ttl",
-        },
-    )
+    # ---------------------------------------------------------------------
+    # Reasoning and validation triggers for Zenodo are disabled for now.
+    # The harvested zenodo.ttl (TriG with one named graph per Zenodo file) is
+    # published to Virtuoso as-is by the publish_to_virtuoso DAG. When
+    # re-enabling, use the SAME reasoner config as the spreadsheets path —
+    # do not maintain a separate reasoner setup.
+    # ---------------------------------------------------------------------
+    # trigger_reason_zenodo = TriggerDagRunOperator(
+    #     task_id="trigger_reason_zenodo",
+    #     trigger_dag_id="reason_openllet_new",
+    #     wait_for_completion=True,
+    #     conf={
+    #         "artifact": "zenodo",
+    #         "source_run_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+    #         "target_run_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+    #         "in_ttl": "zenodo.ttl",
+    #     },
+    # )
+    #
+    # trigger_validation_zenodo = TriggerDagRunOperator(
+    #     task_id="trigger_validation_zenodo",
+    #     trigger_dag_id="validation_checks",
+    #     wait_for_completion=True,
+    #     conf={
+    #         "artifact": "zenodo",
+    #         "target_run_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+    #         "asserted_source_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+    #         "asserted_ttl": "zenodo.ttl",
+    #         "reason_source_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
+    #         "inferences_ttl": "zenodo_inferences.ttl",
+    #     },
+    # )
 
-
-    trigger_validation_zenodo = TriggerDagRunOperator(
-        task_id="trigger_validation_zenodo",
-        trigger_dag_id="validation_checks",
-        wait_for_completion=True,
-        conf={
-            "artifact": "zenodo",
-
-            "target_run_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
-
-            "asserted_source_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
-            "asserted_ttl": "zenodo.ttl",
-            
-            "reason_source_dir": "{{ ti.xcom_pull(task_ids='init_data_dir', key='run_dir') }}",
-            "inferences_ttl": "zenodo_inferences.ttl",
-        },
-    )
-
-    init >> harvest >> done >> trigger_reason_zenodo >> trigger_validation_zenodo
+    init >> harvest >> done
 
 harvester_zenodo()

@@ -1,7 +1,10 @@
 from __future__ import annotations
 
+import hashlib
 import os
+import re
 import time
+
 import requests
 from requests.auth import HTTPDigestAuth
 
@@ -242,3 +245,98 @@ def upload_ttl_file(
 
     print("Virtuoso load done (chunked)")
     return stats
+
+
+# -----------------------------------------------------------------------------
+# Per-named-graph publishing for TriG inputs (zenodo)
+# -----------------------------------------------------------------------------
+
+_GRAPH_SAFE_RE = re.compile(r"[^A-Za-z0-9._-]+")
+
+
+def _safe_filename_for_graph(graph_iri: str, max_len: int = 60) -> str:
+    base = _GRAPH_SAFE_RE.sub("_", graph_iri).strip("_")[:max_len]
+    digest = hashlib.sha1(graph_iri.encode("utf-8")).hexdigest()[:10]
+    return f"{base}_{digest}" if base else digest
+
+
+def publish_trig_per_graph(
+    trig_path: str,
+    *,
+    workdir: str,
+    delete_first: bool = True,
+    default_graph_iri: str | None = None,
+) -> dict:
+    """
+    Parse a TriG file and upload each named graph to Virtuoso under a graph IRI
+    equal to the named-graph IRI itself. Each context is materialised as a TTL
+    file in `workdir` (so it can be re-uploaded later if needed) and pushed via
+    the existing `upload_ttl_file` chunked uploader.
+
+    If `default_graph_iri` is provided, the TriG's *default* graph (which holds
+    e.g. the harvester's BFO/MWO provenance about each named graph) is uploaded
+    to that graph IRI as well. When `default_graph_iri` is None the default
+    graph contents are not published.
+
+    Returns a report dict suitable for embedding into publish_report.json.
+    """
+    from rdflib import Dataset, Graph
+
+    if not os.path.exists(trig_path) or os.path.getsize(trig_path) == 0:
+        raise AirflowFailException(f"TriG file missing/empty: {trig_path}")
+
+    ds = Dataset()
+    ds.parse(trig_path, format="trig")
+    os.makedirs(workdir, exist_ok=True)
+
+    results: list[dict] = []
+    for ctx in ds.contexts():
+        ctx_id = str(ctx.identifier)
+        is_default = (
+            ctx.identifier == ds.default_context.identifier
+            or ctx_id.startswith("urn:x-rdflib:default")
+        )
+        if is_default:
+            if default_graph_iri is None:
+                continue
+            target_iri = default_graph_iri
+        else:
+            target_iri = ctx_id
+
+        # Materialise this context.
+        flat = Graph()
+        for t in ctx:
+            flat.add(t)
+        n_triples = len(flat)
+        if n_triples == 0:
+            results.append({"graph": target_iri, "status": "skipped", "reason": "empty"})
+            continue
+
+        ttl_path = os.path.join(workdir, f"{_safe_filename_for_graph(target_iri)}.ttl")
+        flat.serialize(destination=ttl_path, format="turtle")
+
+        try:
+            stats = upload_ttl_file(
+                graph=target_iri,
+                ttl_path=ttl_path,
+                delete_first=delete_first,
+            )
+            results.append({
+                "graph": target_iri,
+                "status": "published",
+                "triples": n_triples,
+                "ttl_path": ttl_path,
+                "stats": stats,
+                "from_default_graph": is_default,
+            })
+        except Exception as e:
+            results.append({
+                "graph": target_iri,
+                "status": "failed",
+                "triples": n_triples,
+                "ttl_path": ttl_path,
+                "error": repr(e),
+                "from_default_graph": is_default,
+            })
+
+    return {"trig_path": trig_path, "graphs": results}

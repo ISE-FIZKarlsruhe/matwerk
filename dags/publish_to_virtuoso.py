@@ -12,7 +12,7 @@ import json
 from datetime import datetime
 from airflow.sdk import dag, task, Variable, get_current_context
 from airflow.exceptions import AirflowFailException
-from common.virtuoso import upload_ttl_file
+from common.virtuoso import upload_ttl_file, publish_trig_per_graph
 from common.graph_metadata import (
     GraphPublishFacts,
     build_metadata_ttl,
@@ -26,14 +26,33 @@ import socket
 DAG_ID = "publish_to_virtuoso"
 GRAPH_ROOT = "https://nfdi.fiz-karlsruhe.de/matwerk"
 
-# Sources to publish (edit freely)
+# Sources published as a single Virtuoso graph (one TTL -> one graph IRI).
 PUBLISH_SOURCES = [
     ("spreadsheets_assertions", "matwerk_last_successful_merge_run", "spreadsheets_asserted.ttl"),
     ("spreadsheets_inferences", "matwerk_last_successful_reason_run", "spreadsheets_inferences.ttl"),
     ("spreadsheets_validated", "matwerk_last_successful_validated_run", "spreadsheets_merged_for_validation.ttl"),
-    ("zenodo_validated", "matwerk_last_successful_harvester_zenodo_run", "zenodo_merged_for_validation.ttl"),
     ("endpoints_validated", "matwerk_last_successful_harvester_endpoints_run", "endpoints_merged_for_validation.ttl"),
     #("pmd_validated", "matwerk_last_successful_harvester_pmd_run", "pmd_merged_for_validation.ttl"),
+    # zenodo_validated removed: zenodo is published per-named-graph below so
+    # an inconsistent record is isolated in its own Virtuoso graph instead of
+    # being merged into a single graph.
+]
+
+# Sources published per-named-graph from a TriG file. Each named graph in the
+# TriG becomes its own Virtuoso graph (graph IRI = named-graph IRI). The TriG's
+# default graph (carrying the harvester's BFO/MWO provenance about each named
+# graph) is uploaded to `default_graph_iri` so it remains queryable.
+#
+# Zenodo is published straight from the harvester's `zenodo.ttl` (no reasoning
+# is run for zenodo at the moment — see the disabled triggers in
+# `dags/harvester_zenodo.py` and the zenodo branch in `dags/reason_openlletnew.py`).
+PUBLISH_TRIG_SOURCES = [
+    {
+        "stage": "zenodo_per_graph",
+        "variable": "matwerk_last_successful_harvester_zenodo_run",
+        "trig_name": "zenodo.ttl",
+        "default_graph_iri": f"{GRAPH_ROOT}/zenodo_metadata",
+    },
 ]
 
 
@@ -164,6 +183,84 @@ def publish_to_virtuoso():
                 entry["status"] = "failed"
                 entry["error"] = repr(e)
                 failures.append(f"{stage}:upload_failed")
+
+            report["results"].append(entry)
+
+        # ----- Per-graph TriG sources (zenodo) -----
+        for src in PUBLISH_TRIG_SOURCES:
+            stage = src["stage"]
+            var_name = src["variable"]
+            trig_name = src["trig_name"]
+            default_graph_iri = src.get("default_graph_iri")
+
+            entry = {
+                "stage": stage,
+                "variable": var_name,
+                "ttl_name": trig_name,
+                "default_graph_iri": default_graph_iri,
+                "status": "skipped",
+                "reason": None,
+                "source_dir": None,
+                "ttl_path": None,
+                "mode": "trig_per_graph",
+                "graphs": [],
+                "error": None,
+            }
+
+            try:
+                source_dir = Variable.get(var_name)
+            except Exception as e:
+                entry["reason"] = f"variable not found: {e}"
+                report["results"].append(entry)
+                continue
+            entry["source_dir"] = source_dir
+
+            if not source_dir or not os.path.isdir(source_dir):
+                entry["status"] = "failed"
+                entry["error"] = f"source_dir missing/not a dir: {source_dir}"
+                failures.append(f"{stage}:bad_source_dir")
+                report["results"].append(entry)
+                continue
+
+            trig_path = os.path.join(source_dir, trig_name)
+            entry["ttl_path"] = trig_path
+
+            if not os.path.exists(trig_path) or os.path.getsize(trig_path) == 0:
+                entry["status"] = "failed"
+                entry["error"] = f"trig missing/empty: {trig_path}"
+                failures.append(f"{stage}:missing_trig")
+                report["results"].append(entry)
+                continue
+
+            try:
+                print(f"[INFO] Per-graph publishing stage={stage}")
+                print(f"[INFO] trig_path={trig_path}")
+                if default_graph_iri:
+                    print(f"[INFO] default_graph_iri={default_graph_iri}")
+
+                workdir = os.path.join(run_dir, f"{stage}__per_graph")
+                pg_report = publish_trig_per_graph(
+                    trig_path,
+                    workdir=workdir,
+                    delete_first=True,
+                    default_graph_iri=default_graph_iri,
+                )
+                entry["graphs"] = pg_report.get("graphs", [])
+
+                pub = sum(1 for g in entry["graphs"] if g.get("status") == "published")
+                fail = sum(1 for g in entry["graphs"] if g.get("status") == "failed")
+                entry["published_count"] = pub
+                entry["failed_count"] = fail
+
+                if fail > 0:
+                    entry["status"] = "partial"
+                    failures.append(f"{stage}:{fail}_graph_uploads_failed")
+                else:
+                    entry["status"] = "published"
+            except Exception as e:
+                entry["status"] = "failed"
+                entry["error"] = repr(e)
+                failures.append(f"{stage}:trig_publish_failed")
 
             report["results"].append(entry)
 

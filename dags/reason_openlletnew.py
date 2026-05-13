@@ -7,6 +7,13 @@ from airflow.sdk import dag, task, Variable, get_current_context
 from airflow.exceptions import AirflowFailException
 from airflow.providers.standard.operators.bash import BashOperator
 
+# Zenodo per-graph reasoning is disabled for now.
+# import sys
+# from airflow.providers.standard.operators.python import BranchPythonOperator
+# _DAG_DIR = os.path.dirname(__file__)
+# if _DAG_DIR not in sys.path:
+#     sys.path.append(_DAG_DIR)
+
 
 DAG_ID = "reason_openllet_new"
 LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME = "matwerk_last_successful_merge_run"
@@ -58,6 +65,18 @@ def reason():
 
         in_expanded = f"{artifact}-expanded.ttl"
         ti.xcom_push(key="in_expanded", value=in_expanded)
+
+    # def _branch_by_artifact(**kwargs):
+    #     """
+    #     Route zenodo artifacts through the per-graph reasoner so an inconsistent
+    #     named graph cannot poison the whole reasoning step. Other artifacts use
+    #     the existing flat ROBOT+Openllet chain unchanged.
+    #     """
+    #     ti = kwargs["ti"]
+    #     artifact = ti.xcom_pull(task_ids="init_data_dir", key="artifact")
+    #     if artifact == "zenodo":
+    #         return "reason_zenodo_per_graph"
+    #     return "pre_filter"
 
     @task
     def retrieve_nfdicore_extension(ti=None):
@@ -137,6 +156,73 @@ def reason():
         bash_command=robotConvertCmdTemplate(),
     )
 
+    # ---------------------------------------------------------------------
+    # Zenodo per-graph reasoning is disabled for now.
+    # ---------------------------------------------------------------------
+    # @task
+    # def reason_zenodo_per_graph(ti=None):
+    #     """
+    #     Per-named-graph reasoning for zenodo TriG inputs. Splits the input into
+    #     one TTL per named graph, runs ROBOT pre_filter+merge+expand and then
+    #     Openllet consistency+extract on each, and recombines. An inconsistent
+    #     named graph is kept (no inferences emitted for it) and reported in the
+    #     validation manifest + as rdfs:comment "INCONSISTENT" in the per-graph
+    #     TriG output.
+    #     """
+    #     from common.per_graph_reasoner import ReasonConfig, reason_artifact
+    #
+    #     run_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
+    #     artifact = ti.xcom_pull(task_ids="init_data_dir", key="artifact")
+    #     in_ttl_name = ti.xcom_pull(task_ids="init_data_dir", key="in_ttl")
+    #     source_run_dir = ti.xcom_pull(task_ids="init_data_dir", key="source_run_dir") or ""
+    #
+    #     if not source_run_dir:
+    #         source_run_dir = Variable.get(LAST_SUCCESSFUL_MERGE_RUN_VARIABLE_NAME)
+    #
+    #     in_path = os.path.join(source_run_dir, in_ttl_name)
+    #     ext_path = os.path.join(run_dir, "nfdicore-extension.owl")
+    #
+    #     cfg = ReasonConfig(
+    #         in_path=in_path,
+    #         artifact=artifact,
+    #         extension_owl_path=ext_path,
+    #         out_dir=run_dir,
+    #         robot_cmd=Variable.get("robotcmd"),
+    #         openllet_cmd=Variable.get("openlletnewcmd"),
+    #         pre_filter_terms=[
+    #             "http://purl.obolibrary.org/obo/RO_0000057",
+    #             "http://purl.obolibrary.org/obo/BFO_0000118",
+    #             "http://purl.obolibrary.org/obo/BFO_0000181",
+    #             "http://purl.obolibrary.org/obo/BFO_0000138",
+    #             "http://purl.obolibrary.org/obo/BFO_0000136",
+    #         ],
+    #     )
+    #     manifest = reason_artifact(cfg)
+    #
+    #     out_owl = ti.xcom_pull(task_ids="init_data_dir", key="out_owl")
+    #     out_ttl = ti.xcom_pull(task_ids="init_data_dir", key="out_ttl")
+    #     out_owl_path = os.path.join(run_dir, out_owl)
+    #     out_ttl_path = os.path.join(run_dir, out_ttl)
+    #
+    #     import subprocess
+    #     if os.path.exists(out_ttl_path) and os.path.getsize(out_ttl_path) > 0:
+    #         cmd = [*Variable.get("robotcmd").split(), "convert",
+    #                "--input", out_ttl_path, "--output", out_owl_path]
+    #         print(f"[CMD] {' '.join(cmd)}")
+    #         rc = subprocess.run(cmd).returncode
+    #         if rc != 0:
+    #             with open(out_owl_path, "w", encoding="utf-8") as f:
+    #                 f.write("<?xml version=\"1.0\"?>\n<!-- robot convert failed; see validation_report.txt -->\n")
+    #     else:
+    #         with open(out_owl_path, "w", encoding="utf-8") as f:
+    #             f.write("<?xml version=\"1.0\"?>\n<!-- no inferences produced; see validation_report.txt -->\n")
+    #
+    #     n_total = manifest.get("counts", {}).get("graphs_total", 0)
+    #     n_bad = manifest.get("counts", {}).get("graphs_inconsistent", 0)
+    #     print(f"[INFO] zenodo reasoning summary: {n_bad}/{n_total} inconsistent graphs")
+    #     if n_total == 0:
+    #         raise AirflowFailException("No named graphs found in zenodo input — wrong format?")
+
     @task
     def mark_reason_success(ti=None):
         run_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
@@ -199,9 +285,27 @@ def reason():
 
     init = init_data_dir()
     retrieve_ext = retrieve_nfdicore_extension()
+    done = mark_reason_success()
+
     init >> pre_filter
     init >> retrieve_ext
-    [pre_filter, retrieve_ext] >> merge_expand >> sunlet_reasoning >> robot_convert_to_ttl >> mark_reason_success()
+    [pre_filter, retrieve_ext] >> merge_expand >> sunlet_reasoning >> robot_convert_to_ttl >> done
+
+    # ---------------------------------------------------------------------
+    # Zenodo per-graph reasoning wiring — disabled for now.
+    # branch = BranchPythonOperator(
+    #     task_id="branch_by_artifact",
+    #     python_callable=_branch_by_artifact,
+    # )
+    # zenodo_reason = reason_zenodo_per_graph()
+    # init >> branch
+    # branch >> pre_filter
+    # branch >> zenodo_reason
+    # retrieve_ext >> zenodo_reason >> done
+    # (also switch mark_reason_success back to
+    #  @task(trigger_rule="none_failed_min_one_success") so the skipped branch
+    #  doesn't block it.)
+    # ---------------------------------------------------------------------
 
 
 reason()

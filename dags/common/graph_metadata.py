@@ -1,17 +1,21 @@
 # common/graph_metadata.py
 from __future__ import annotations
 
-import hashlib
 import os
 from dataclasses import dataclass
 from datetime import datetime, timezone
-from urllib.parse import quote
+from typing import Optional
 
 import json
 
 
 def utc_now_iso_seconds() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
+
+
+def _ttl_str(s: str) -> str:
+    """JSON-encoded literal works for Turtle string escaping (matches build_metadata_ttl style)."""
+    return json.dumps(s, ensure_ascii=False)
 
 @dataclass(frozen=True)
 class RdfStats:
@@ -185,3 +189,152 @@ def build_metadata_ttl(f: GraphPublishFacts) -> str:
     ]
     lines.append("")  # trailing newline
     return "\n".join(lines)
+
+
+# ----------------------------------------------------------------------------
+# Per-named-graph provenance for harvested Zenodo RDF + reasoner validation
+# ----------------------------------------------------------------------------
+
+@dataclass(frozen=True)
+class ValidationFacts:
+    """Validation result for a single named graph (filled by the reasoner step)."""
+    consistent: bool
+    reasoner: str                     # e.g. "openllet"
+    log_excerpt: str                  # short, user-facing summary
+    full_log: Optional[str] = None    # full reasoner stdout/stderr if available
+    checked_at: Optional[str] = None  # ISO timestamp
+
+
+@dataclass(frozen=True)
+class GraphProvenanceFacts:
+    """
+    Provenance for a single named graph imported from a Zenodo record file.
+
+    Modeled with BFO/MWO/nfdicore (no PROV), mirroring the patterns used by
+    common/graph_metadata.build_metadata_ttl and dags/dump_and_archive.py.
+    """
+    graph_iri: str                    # named-graph IRI (also serves as file artifact IRI)
+    record_iri: str                   # parent Zenodo concept IRI (already minted by the harvester)
+    file_key: str                     # filename inside the Zenodo deposit
+    download_url: Optional[str]       # direct download URL on Zenodo
+    record_url: Optional[str]         # human-facing Zenodo record URL
+    content_type: Optional[str]       # MIME type, if known
+    harvested_at: str                 # ISO timestamp the harvester parsed this file
+    validation: Optional[ValidationFacts] = None
+
+
+def build_graph_provenance_ttl(facts: GraphProvenanceFacts) -> str:
+    """
+    Build TTL describing a single named graph IRI as an information artifact
+    that is part of a Zenodo record. The output is a TTL fragment intended to
+    be written into the *default graph* of zenodo.ttl.
+
+    Class/predicate choices align with build_metadata_ttl above:
+      - nfdicore:NFDI_0000027  (file)
+      - nfdicore:NFDI_0000018  (description)
+      - nfdicore:NFDI_0001007  (has value)
+      - nfdicore:NFDI_0001008  (has url, anyURI)
+      - obo:BFO_0000050        (part of)
+      - obo:BFO_0000051        (has part)
+      - obo:RO_0002353         (output of)
+      - obo:BFO_0000015        (process)
+      - obo:BFO_0000038        (1D temporal region)
+      - obo:BFO_0000148        (0D temporal region)
+      - obo:IAO_0000235        (denoted by)
+    """
+    g = facts.graph_iri
+    desc_iri = f"{g}/description"
+    val_iri = f"{g}/validation"
+    proc_iri = f"{g}/harvest-process"
+    temp_iri = f"{g}/harvest-temporal"
+    inst_iri = f"{g}/harvest-instant"
+
+    desc_value = (
+        f"Imported RDF graph from Zenodo.\n"
+        f"file: {facts.file_key}\n"
+        f"record: {facts.record_iri}\n"
+        f"download_url: {facts.download_url or ''}\n"
+        f"record_url: {facts.record_url or ''}\n"
+        f"content_type: {facts.content_type or ''}\n"
+        f"harvested_at: {facts.harvested_at}"
+    )
+
+    lines = [
+        f"<{facts.record_iri}> obo:BFO_0000051 <{g}> .",
+        "",
+        f"<{g}>",
+        f"  a nfdicore:NFDI_0000027 ;",
+        f"  rdfs:label {_ttl_str(facts.file_key)} ;",
+        f"  obo:BFO_0000050 <{facts.record_iri}> ;",
+        f"  obo:RO_0002353 <{proc_iri}> ;",
+        f"  obo:IAO_0000235 <{desc_iri}> ;",
+        f"  obo:IAO_0000235 <{val_iri}>" + (" ;" if facts.download_url else " ."),
+    ]
+    if facts.download_url:
+        lines.append(f"  nfdicore:NFDI_0001008 {_ttl_str(facts.download_url)}^^xsd:anyURI .")
+    lines.append("")
+
+    lines += [
+        f"<{desc_iri}>",
+        f"  a nfdicore:NFDI_0000018 ;",
+        f"  rdfs:label \"description\" ;",
+        f"  nfdicore:NFDI_0001007 {_ttl_str(desc_value)} .",
+        "",
+    ]
+
+    val = facts.validation
+    if val is None:
+        val_text = "status: pending\nValidation will be filled in by the reasoner step."
+        val_lines = [
+            f"<{val_iri}>",
+            f"  a nfdicore:NFDI_0000018 ;",
+            f"  rdfs:label \"validation\" ;",
+            f"  nfdicore:NFDI_0001007 {_ttl_str(val_text)} .",
+            "",
+        ]
+    else:
+        val_text = (
+            f"status: {'consistent' if val.consistent else 'INCONSISTENT'}\n"
+            f"reasoner: {val.reasoner}\n"
+            f"checked_at: {val.checked_at or ''}\n"
+            f"summary: {val.log_excerpt}"
+        )
+        if val.full_log:
+            val_text += "\nfull_log:\n" + val.full_log
+        val_lines = [
+            f"<{val_iri}>",
+            f"  a nfdicore:NFDI_0000018 ;",
+            f"  rdfs:label \"validation\" ;",
+            f"  nfdicore:NFDI_0001007 {_ttl_str(val_text)}"
+            + (" ;" if not val.consistent else " ."),
+        ]
+        if not val.consistent:
+            val_lines.append(f"  rdfs:comment \"INCONSISTENT\" .")
+        val_lines.append("")
+    lines += val_lines
+
+    lines += [
+        f"<{proc_iri}>",
+        f"  a obo:BFO_0000015 ;",
+        f"  obo:BFO_0000199 <{temp_iri}> .",
+        "",
+        f"<{temp_iri}>",
+        f"  a obo:BFO_0000038 ;",
+        f"  obo:BFO_0000222 <{inst_iri}> ;",
+        f"  obo:BFO_0000224 <{inst_iri}> .",
+        "",
+        f"<{inst_iri}>",
+        f"  a obo:BFO_0000148 ;",
+        f"  time:inXSDDateTimeStamp \"{facts.harvested_at}\"^^xsd:dateTimeStamp .",
+        "",
+    ]
+    return "\n".join(lines)
+
+
+GRAPH_PROVENANCE_PREFIXES = (
+    "@prefix obo:      <http://purl.obolibrary.org/obo/> .\n"
+    "@prefix nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/> .\n"
+    "@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .\n"
+    "@prefix time:     <http://www.w3.org/2006/time#> .\n"
+    "@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .\n"
+)
