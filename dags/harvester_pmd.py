@@ -257,7 +257,7 @@ def harvester_pmd():
     # 3) Trigger reason + validation (same style as zenodo)
     trigger_reason_pmd = TriggerDagRunOperator(
         task_id="trigger_reason_pmd",
-        trigger_dag_id="reason_openllet_new",
+        trigger_dag_id="reason_koncludix",
         wait_for_completion=True,
         conf={
             "artifact": "pmd",
