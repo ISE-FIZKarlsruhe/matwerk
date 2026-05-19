@@ -10,16 +10,28 @@ SELECT DISTINCT ?s ?c WHERE {
   VALUES ?ctype { owl:Class rdfs:Class }
   ?c a ?ctype .
 
-  # Class must be declared in the ontology graph as owl:Class or rdfs:Class
-  # Class must not be deprecated in the ontology graph
+  # Class must be declared in MWO or in the nfdicore-extension graph as owl:Class
+  # or rdfs:Class. Either graph may also mark the class deprecated.
   FILTER NOT EXISTS {
     SERVICE <http://matwerk-virtuoso:8890/sparql> {
-      GRAPH <https://nfdi.fiz-karlsruhe.de/matwerk/mwo/3.0.1> {
-        { ?c a ?ctype }
-        UNION
-        { ?c owl:deprecated true }
-        UNION
-        { ?c a owl:DeprecatedClass }
+      {
+        GRAPH <https://nfdi.fiz-karlsruhe.de/matwerk/mwo/3.0.1> {
+          { ?c a ?ctype }
+          UNION
+          { ?c owl:deprecated true }
+          UNION
+          { ?c a owl:DeprecatedClass }
+        }
+      }
+      UNION
+      {
+        GRAPH <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-extension/3.0.5> {
+          { ?c a ?ctype }
+          UNION
+          { ?c owl:deprecated true }
+          UNION
+          { ?c a owl:DeprecatedClass }
+        }
       }
     }
   }
