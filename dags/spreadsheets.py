@@ -11,6 +11,23 @@ from airflow.providers.standard.operators.empty import EmptyOperator
 SUCCESFULL_RUN_VARIABLE_NAME = "matwerk_last_successful_spreadsheet_run"
 DAG_ID = "process_spreadsheets"
 
+
+def _un_mojibake(text: str, max_passes: int = 3) -> str:
+    """Reverse Latin-1↔UTF-8 mis-encoding round-trips left over in the source sheet.
+
+    Each pass peels off one bad round-trip; the loop stops once the text is stable
+    or no longer Latin-1-encodable (i.e. it has reached a clean state).
+    """
+    for _ in range(max_passes):
+        try:
+            repaired = text.encode("latin-1").decode("utf-8")
+        except (UnicodeEncodeError, UnicodeDecodeError):
+            return text
+        if repaired == text:
+            return text
+        text = repaired
+    return text
+
 """
 Airflow DAG: process_spreadsheets
 
@@ -94,8 +111,9 @@ def process_spreadsheets():
         )
         r = requests.get(url, timeout=60)
         r.raise_for_status()
-        with open(out_path, "wb") as f:
-            f.write(r.content)
+        repaired = _un_mojibake(r.content.decode("utf-8"))
+        with open(out_path, "w", encoding="utf-8", newline="") as f:
+            f.write(repaired)
         if not os.path.exists(out_path) or os.path.getsize(out_path) == 0:
             raise RuntimeError(f"TSV not written: {out_path}")
 
