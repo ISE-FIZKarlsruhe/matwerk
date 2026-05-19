@@ -130,10 +130,11 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
         websites[uiri] = url
         return uiri
 
-    def ensure_written_name(full_name: str, salt: str) -> str:
+    def ensure_written_name(full_name: str, salt: str = "") -> str:
+        full_name = sanitize(full_name)
         if not full_name:
             return ""
-        wniri = mint(salt + "|" + full_name)
+        wniri = mint("written-name|" + full_name)
         written_names[wniri] = full_name
         return wniri
 
@@ -151,12 +152,7 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
             people[person_iri]["denoted_by"].append(ensure_email(email))
 
         if name:
-            giri = mint(person_iri + "|" + name)
-            people[person_iri]["denoted_by"].append(giri)
-            
-
-            wniri = mint(person_iri + "|" + name)
-            written_names[wniri] = name
+            wniri = ensure_written_name(name)
             people[person_iri]["denoted_by"].append(wniri)
 
         return person_iri
