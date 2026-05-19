@@ -1,4 +1,6 @@
-#  no two "textual entities" may share the same value (NFDI_0001007)
+#  no two entities of the same type may share the same value (NFDI_0001007).
+#  Cross-type collisions (e.g. an Organization label and an abbreviation textual
+#  entity both being "BAM") are legitimate and not flagged.
 
 PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -6,9 +8,9 @@ PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
 
-SELECT $this ?value ?other
+SELECT $this ?value ?other ?type
 WHERE {
-    $this  nfdi:NFDI_0001007 ?value .
-    ?other nfdi:NFDI_0001007 ?value .
+    $this  a ?type ; nfdi:NFDI_0001007 ?value .
+    ?other a ?type ; nfdi:NFDI_0001007 ?value .
     FILTER ( $this != ?other && str($this) < str(?other) )
 }
