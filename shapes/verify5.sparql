@@ -7,10 +7,24 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl:  <http://www.w3.org/2002/07/owl#>
 PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
+PREFIX bfo:  <http://purl.obolibrary.org/obo/>
 
 SELECT $this ?value ?other ?type
 WHERE {
     $this  a ?type ; nfdi:NFDI_0001007 ?value .
     ?other a ?type ; nfdi:NFDI_0001007 ?value .
     FILTER ( $this != ?other && str($this) < str(?other) )
+    # Ignore upper-level inherited types so that cross-type collisions
+    # (e.g. an Organization label and an abbreviation textual entity both
+    # being "BAM") are not flagged for matching only on a common ancestor.
+    FILTER (?type NOT IN (
+        owl:Thing,
+        owl:NamedIndividual,
+        bfo:BFO_0000001,
+        bfo:BFO_0000002,
+        bfo:BFO_0000031,
+        bfo:IAO_0000030,
+        bfo:IAO_0000300,
+        bfo:IAO_0020000
+    ))
 }

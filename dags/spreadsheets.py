@@ -80,8 +80,8 @@ def process_spreadsheets():
         ONTOLOGY=Variable.get("matwerk_ontology")
         r = requests.get(ONTOLOGY, timeout=60)
         r.raise_for_status()
-        with open(out_path, "w", encoding="utf-8") as f:
-            f.write(r.text)
+        with open(out_path, "wb") as f:
+            f.write(r.content)
         if not os.path.exists(out_path) or os.path.getsize(out_path) == 0:
             raise RuntimeError(f"ontology.owl not written: {out_path}")
 
@@ -94,8 +94,8 @@ def process_spreadsheets():
         )
         r = requests.get(url, timeout=60)
         r.raise_for_status()
-        with open(out_path, "w", encoding="utf-8") as f:
-            f.write(r.text)
+        with open(out_path, "wb") as f:
+            f.write(r.content)
         if not os.path.exists(out_path) or os.path.getsize(out_path) == 0:
             raise RuntimeError(f"TSV not written: {out_path}")
 
