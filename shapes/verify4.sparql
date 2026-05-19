@@ -23,7 +23,7 @@ SELECT DISTINCT ?p ?ptype WHERE {
 
   FILTER NOT EXISTS {
     SERVICE <http://matwerk-virtuoso:8890/sparql> {
-      GRAPH <https://nfdi.fiz-karlsruhe.de/matwerk/nfdicore-extension/3.0.5> {
+      GRAPH <https://nfdi.fiz-karlsruhe.de/ontology/nfdicore-extension/3.0.5> {
         ?p a ?ptype .
       }
     }
