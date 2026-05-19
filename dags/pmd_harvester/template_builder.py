@@ -174,11 +174,13 @@ def run(in_csv: str, out_dir: str, base_iri: str = DEFAULT_BASE_IRI, ns: uuid.UU
     def build_publishing_pattern(ds_iri: str, ds_label: str, created: str,
                                 publisher_name: str, publisher_email: str, publisher_uri: str) -> str:
         proc_iri = mint(ds_iri + "/publishing-process")
-        date_iri = mint(ds_iri + "/publishing-date")
 
         date_val = parse_date_mmddyyyy(created)
         if date_val:
+            date_iri = mint("publishing-date|" + date_val)
             publ_dates[date_iri] = date_val
+        else:
+            date_iri = ""
 
         if proc_iri not in publ_processes:
             publ_processes[proc_iri] = {
