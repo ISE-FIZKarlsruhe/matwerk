@@ -1,6 +1,86 @@
 {
-  "latest_version": "2.1.1",
+  "latest_version": "2.1.2",
   "releases": [
+    {
+      "version": "2.1.2",
+      "publish_date": "2026-05-20",
+      "mwo_version": "3.0.1",
+      "mwo_version_iri": "http://purls.helmholtz-metadaten.de/mwo/mwo.owl/3.0.1",
+      "zenodo_doi": "10.5281/zenodo.20303661",
+      "zenodo_url": "https://zenodo.org/records/20303661",
+      "graphs": [
+        {
+          "graph_name": "spreadsheets_assertions",
+          "graph_uri": "https://nfdi.fiz-karlsruhe.de/matwerk/spreadsheets_assertions",
+          "dump_file": "spreadsheets_assertions_v2.1.2.ttl",
+          "metadata_file": "spreadsheets_assertions_v2.1.2_metadata.ttl",
+          "stats": {
+            "triples": 35937,
+            "subjects": 7821,
+            "predicates": 92,
+            "objects": 15398,
+            "type_assertions": 14374,
+            "distinct_types": 131
+          }
+        },
+        {
+          "graph_name": "spreadsheets_inferences",
+          "graph_uri": "https://nfdi.fiz-karlsruhe.de/matwerk/spreadsheets_inferences",
+          "dump_file": "spreadsheets_inferences_v2.1.2.ttl",
+          "metadata_file": "spreadsheets_inferences_v2.1.2_metadata.ttl",
+          "stats": {
+            "triples": 80579,
+            "subjects": 7345,
+            "predicates": 60,
+            "objects": 10346,
+            "type_assertions": 47223,
+            "distinct_types": 162
+          }
+        },
+        {
+          "graph_name": "spreadsheets_validated",
+          "graph_uri": "https://nfdi.fiz-karlsruhe.de/matwerk/spreadsheets_validated",
+          "dump_file": "spreadsheets_validated_v2.1.2.ttl",
+          "metadata_file": "spreadsheets_validated_v2.1.2_metadata.ttl",
+          "stats": {
+            "triples": 97388,
+            "subjects": 7896,
+            "predicates": 116,
+            "objects": 16391,
+            "type_assertions": 54744,
+            "distinct_types": 179
+          }
+        },
+        {
+          "graph_name": "zenodo_validated",
+          "graph_uri": "https://nfdi.fiz-karlsruhe.de/matwerk/zenodo_validated",
+          "dump_file": "zenodo_validated_v2.1.2.ttl",
+          "metadata_file": "zenodo_validated_v2.1.2_metadata.ttl",
+          "stats": {
+            "triples": 13361,
+            "subjects": 1796,
+            "predicates": 71,
+            "objects": 3528,
+            "type_assertions": 4711,
+            "distinct_types": 45
+          }
+        },
+        {
+          "graph_name": "endpoints_validated",
+          "graph_uri": "https://nfdi.fiz-karlsruhe.de/matwerk/endpoints_validated",
+          "dump_file": "endpoints_validated_v2.1.2.ttl",
+          "metadata_file": "endpoints_validated_v2.1.2_metadata.ttl",
+          "stats": {
+            "triples": 15794,
+            "subjects": 3443,
+            "predicates": 74,
+            "objects": 9306,
+            "type_assertions": 1764,
+            "distinct_types": 41
+          }
+        }
+      ]
+    },
     {
       "version": "2.1.1",
       "publish_date": "2026-04-07",
