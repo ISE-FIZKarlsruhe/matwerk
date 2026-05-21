@@ -954,22 +954,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-openllet-reasoning" class="md-nav__link">
+  <a href="#step-2-merge-with-nfdicore-extension" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Openllet Reasoning
+        Step 2: Merge with NFDIcore Extension
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step 2: Openllet Reasoning">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-konclude-reasoning-via-koncludix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Konclude Reasoning via Koncludix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Konclude Reasoning via Koncludix">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generated-axiom-types" class="md-nav__link">
+  <a href="#extracted-axiom-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Generated Axiom Types
+        Extracted Axiom Types
       
     </span>
   </a>
@@ -978,17 +989,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-conversion-to-turtle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Conversion to Turtle
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1667,22 +1667,33 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-openllet-reasoning" class="md-nav__link">
+  <a href="#step-2-merge-with-nfdicore-extension" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Step 2: Openllet Reasoning
+        Step 2: Merge with NFDIcore Extension
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Step 2: Openllet Reasoning">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-konclude-reasoning-via-koncludix" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 3: Konclude Reasoning via Koncludix
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Step 3: Konclude Reasoning via Koncludix">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generated-axiom-types" class="md-nav__link">
+  <a href="#extracted-axiom-types" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Generated Axiom Types
+        Extracted Axiom Types
       
     </span>
   </a>
@@ -1691,17 +1702,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-3-conversion-to-turtle" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Step 3: Conversion to Turtle
-      
-    </span>
-  </a>
   
 </li>
       
@@ -1759,27 +1759,31 @@
 
 
 <h1 id="reasoning">Reasoning</h1>
-<p><strong>DAG IDs:</strong> <code>reason</code> (Sunlet), <code>reason_openllet_new</code> (<a href="https://github.com/Galigator/openllet">Openllet</a>)
+<p><strong>DAG ID:</strong> <code>reason_koncludix</code>
 <strong>Schedule:</strong> Manual trigger only
-<strong>Files:</strong> <code>dags/reason-spreadsheets.py</code>, <code>dags/reason_openlletnew.py</code></p>
+<strong>File:</strong> <code>dags/reason_koncludix.py</code>
+<strong>Reasoner:</strong> <a href="https://github.com/konclude/Konclude">Konclude</a>, driven through the <a href="https://github.com/ISE-FIZKarlsruhe/Koncludix">Koncludix</a> wrapper.</p>
 <h2 id="what-it-does">What It Does</h2>
-<p>Performs OWL 2 DL reasoning over the MSE-KG to materialise implicit knowledge that is only derivable from the ontological axioms defined in MWO, NFDIcore, and BFO. The reasoner computes the deductive closure of the ABox with respect to the TBox, generating inferred class assertions, subclass relationships, property assertions, and inverse property entailments that are not explicitly stated in the input graph but are logically entailed by the ontology.</p>
-<p>The pipeline uses <a href="https://github.com/Galigator/openllet">Openllet</a>, an open-source OWL 2 DL reasoner forked from Pellet, which supports the full $\mathcal{SROIQ}(\mathcal{D})$ description logic. Openllet is invoked as an external process that reads the pre-filtered ontology and produces an OWL file containing only the inferred axioms.</p>
+<p>Performs OWL 2 DL reasoning over the MSE-KG to materialise implicit knowledge that is only derivable from the ontological axioms defined in MWO, NFDIcore, and BFO. The reasoner computes the deductive closure of the ABox with respect to the TBox, generating inferred class assertions, subclass relationships, property assertions, and inverse-property entailments that are not explicitly stated in the input graph but are logically entailed by the ontology.</p>
+<p>The pipeline uses <a href="https://github.com/konclude/Konclude">Konclude</a>, a high-performance OWL 2 reasoner that supports the $\mathcal{SROIQ}(\mathcal{D})$ description logic. Konclude is invoked through the <a href="https://github.com/ISE-FIZKarlsruhe/Koncludix">Koncludix</a> Python wrapper, which drives Konclude through a small set of SPARQL extraction jobs (classes, object/datatype properties, sub-property hierarchies, class assertions) and recombines the XML results into a single inferences Turtle file.</p>
 <div class="admonition info">
-<p class="admonition-title">Two reasoner variants</p>
-<p>Two variants exist: <code>reason</code> uses the Sunlet reasoner, while <code>reason_openllet_new</code> uses Openllet. The latter is the current default used by all harvesters and the core pipeline.</p>
+<p class="admonition-title">Why Konclude?</p>
+<p>Konclude is a fast, optimisation-focused OWL 2 reasoner. The previous pipeline used Openllet and Sunlet variants; both have been retired in favour of Konclude, which is now the default reasoner for the core pipeline and all harvesters. The retired DAG scripts (<code>reason-spreadsheets.py</code>, <code>reason_openlletnew.py</code>) are kept on disk for the reproducibility of older releases but are not part of the production pipeline.</p>
 </div>
 <h2 id="task-chain">Task Chain</h2>
 <pre class="mermaid"><code>graph LR
     A["init_data_dir"] --&gt; B["pre_filter&lt;br/&gt;━━━━━━━━━━━&lt;br/&gt;ROBOT remove"]
-    B --&gt; C["openllet_reasoning&lt;br/&gt;━━━━━━━━━━━&lt;br/&gt;Openllet extract"]
-    C --&gt; D["robot_convert&lt;br/&gt;━━━━━━━━━━━&lt;br/&gt;OWL → Turtle"]
-    D --&gt; E["mark_success"]
+    A --&gt; R["retrieve_nfdicore_extension"]
+    B --&gt; M["merge_expand&lt;br/&gt;━━━━━━━━━━━&lt;br/&gt;ROBOT merge + expand"]
+    R --&gt; M
+    M --&gt; C["reasoning&lt;br/&gt;━━━━━━━━━━━&lt;br/&gt;Konclude (Koncludix)"]
+    C --&gt; E["mark_reason_success"]
 
     style A fill:#e8eaf6,stroke:#283593
     style B fill:#fff3e0,stroke:#e65100
+    style R fill:#fff3e0,stroke:#e65100
+    style M fill:#ede7f6,stroke:#4527a0
     style C fill:#e3f2fd,stroke:#1565c0
-    style D fill:#f3e5f5,stroke:#6a1b9a
     style E fill:#e8f5e9,stroke:#2e7d32</code></pre>
 <h2 id="step-1-axiom-pre-filtering">Step 1: Axiom Pre-Filtering</h2>
 <p>Before reasoning, the pipeline uses <a href="https://robot.obolibrary.org/">ROBOT</a> to remove axioms that cause reasoning difficulties or are deprecated:</p>
@@ -1827,13 +1831,28 @@
 <p class="admonition-title">Why filter before reasoning?</p>
 <p>SubPropertyChainOf axioms on <code>has_participant</code> (RO_0000057) interact with the large ABox to produce combinatorial explosion in reasoning time. Removing these chain axioms preserves the core semantics while making reasoning tractable. Deprecated BFO terms are removed to prevent spurious inferences from obsolete class definitions.</p>
 </div>
-<h2 id="step-2-openllet-reasoning">Step 2: Openllet Reasoning</h2>
-<p>The reasoner is invoked with an explicit selection of which axiom types to extract:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>openllet<span class="w"> </span>extract<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>-s<span class="w"> </span><span class="s2">&quot;PropertyAssertion SubPropertyOf InverseProperties SubClassOf ClassAssertion&quot;</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>input-filtered.ttl<span class="w"> </span>&gt;<span class="w"> </span>output_inferences.owl
+<h2 id="step-2-merge-with-nfdicore-extension">Step 2: Merge with NFDIcore Extension</h2>
+<p>In parallel to the pre-filter step, the pipeline fetches the current NFDIcore extension ontology from the URL stored in the Airflow Variable <code>nfdicore_extension</code> and writes it next to the filtered input. ROBOT is then used to merge the filtered MSE-KG with the NFDIcore extension and to expand any macro axioms:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>robot<span class="w"> </span>merge<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span>--input<span class="w"> </span>spreadsheets-filtered.ttl<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span>--input<span class="w"> </span>nfdicore-extension.owl<span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span>expand<span class="w"> </span>--annotate-expansion-axioms<span class="w"> </span><span class="nb">true</span><span class="w"> </span><span class="se">\</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span>--output<span class="w"> </span>spreadsheets-expanded.ttl
 </span></code></pre></div>
-<h3 id="generated-axiom-types">Generated Axiom Types</h3>
+<p>The expanded file is the input that Konclude consumes.</p>
+<h2 id="step-3-konclude-reasoning-via-koncludix">Step 3: Konclude Reasoning via Koncludix</h2>
+<p>The reasoner is invoked through the Koncludix Python wrapper:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">common.koncludix</span><span class="w"> </span><span class="kn">import</span> <span class="n">koncludix</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">koncludix</span><span class="p">(</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    <span class="n">binary</span>       <span class="o">=</span> <span class="s2">&quot;/opt/Konclude/Binaries/Konclude&quot;</span><span class="p">,</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    <span class="n">input_file</span>   <span class="o">=</span> <span class="s2">&quot;spreadsheets-expanded.ttl&quot;</span><span class="p">,</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="n">output_file</span>  <span class="o">=</span> <span class="s2">&quot;spreadsheets_inferences.ttl&quot;</span><span class="p">,</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    <span class="n">work_dir</span>     <span class="o">=</span> <span class="s2">&quot;./koncludix&quot;</span><span class="p">,</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>The wrapper drives <a href="https://github.com/konclude/Konclude">Konclude</a> through a small set of SPARQL extraction jobs and merges the per-job XML results into one Turtle file containing only the inferred axioms.</p>
+<h3 id="extracted-axiom-types">Extracted Axiom Types</h3>
 <table>
 <thead>
 <tr>
@@ -1872,13 +1891,9 @@
 </table>
 <div class="admonition tip">
 <p class="admonition-title">Why these axiom types?</p>
-<p>This selection covers the axioms needed for SPARQL query answering: class assertions enable <code>?x a ?Class</code> patterns, property assertions enable <code>?x ?prop ?y</code> traversals, and subsumption enables hierarchical queries. Axiom types like DisjointClasses or EquivalentClasses are not extracted because they are schema-level (TBox) and already present in the input ontology.</p>
+<p>This selection covers the axioms needed for SPARQL query answering: class assertions enable <code>?x a ?Class</code> patterns, property assertions enable <code>?x ?prop ?y</code> traversals, and subsumption enables hierarchical queries. Axiom types like <code>DisjointClasses</code> or <code>EquivalentClasses</code> are not extracted because they are schema-level (TBox) axioms that are already present in the input ontology.</p>
 </div>
-<h2 id="step-3-conversion-to-turtle">Step 3: Conversion to Turtle</h2>
-<p>The OWL/XML output from Openllet is converted to Turtle using ROBOT:</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>robot<span class="w"> </span>convert<span class="w"> </span>--input<span class="w"> </span>inferences.owl<span class="w"> </span>--output<span class="w"> </span>inferences.ttl
-</span></code></pre></div>
-<p>The pipeline validates that the output is well-formed Turtle (not accidentally RDF/XML) by checking the file header.</p>
+<p>The downstream pipeline validates that the produced file is well-formed Turtle (not accidentally RDF/XML) by inspecting the file header.</p>
 <h2 id="input">Input</h2>
 <table>
 <thead>
@@ -1897,8 +1912,16 @@
 <td>Source directory (if <code>source_run_dir</code> not in conf)</td>
 </tr>
 <tr>
-<td><code>openlletnewcmd</code></td>
-<td>Openllet command path</td>
+<td><code>nfdicore_extension</code></td>
+<td>URL of the NFDIcore extension OWL file</td>
+</tr>
+<tr>
+<td><code>koncludebin</code></td>
+<td>Path to the Konclude executable</td>
+</tr>
+<tr>
+<td><code>robotcmd</code></td>
+<td>Path to the ROBOT executable</td>
 </tr>
 </tbody>
 </table>
@@ -1948,12 +1971,12 @@
 <td>Pre-processed TTL (problematic axioms removed)</td>
 </tr>
 <tr>
-<td><code>{artifact}_inferences.owl</code></td>
-<td>Openllet reasoning output (OWL/XML)</td>
+<td><code>{artifact}-expanded.ttl</code></td>
+<td>Merged with NFDIcore extension and ROBOT-expanded</td>
 </tr>
 <tr>
 <td><code>{artifact}_inferences.ttl</code></td>
-<td>Converted Turtle inferences</td>
+<td>Konclude reasoning output, materialised as Turtle</td>
 </tr>
 </tbody>
 </table>

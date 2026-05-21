@@ -1563,21 +1563,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-unique-textual-entity-values" class="md-nav__link">
+  <a href="#5-disjoint-class-violation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5 -- Unique Textual Entity Values
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-disjoint-class-violation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6 -- Disjoint Class Violation
+        5 -- Disjoint Class Violation
       
     </span>
   </a>
@@ -1710,21 +1699,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-unique-textual-entity-values" class="md-nav__link">
+  <a href="#5-disjoint-class-violation" class="md-nav__link">
     <span class="md-ellipsis">
       
-        5 -- Unique Textual Entity Values
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#6-disjoint-class-violation" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        6 -- Disjoint Class Violation
+        5 -- Disjoint Class Violation
       
     </span>
   </a>
@@ -1807,11 +1785,6 @@ alone.</p>
 </tr>
 <tr>
 <td>5</td>
-<td><code>verify5.sparql</code></td>
-<td>No two textual entities may share the same value</td>
-</tr>
-<tr>
-<td>6</td>
 <td><code>reasoner_disjoint_violation.sparql</code></td>
 <td>No individual may instantiate two disjoint classes</td>
 </tr>
@@ -1986,39 +1959,7 @@ not declared in any of the reference ontology graphs.</p>
 </span><span id="__span-3-32"><a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="p">}</span>
 </span></code></pre></div>
 <hr />
-<h3 id="5-unique-textual-entity-values">5 -- Unique Textual Entity Values</h3>
-<p><strong>What it checks:</strong>
-Detects pairs of distinct resources that share the exact same value for the
-<code>nfdi:NFDI_0001007</code> (textual entity) property. The query returns one row per
-duplicate pair, ordered to avoid reporting the same pair twice.</p>
-<p><strong>Why it matters:</strong>
-Textual entities in the MSE-KG are expected to be unique identifiers or labels that
-distinguish one resource from another. Duplicate values suggest either a data-entry
-error (the same label assigned to two different things) or a merging problem (two
-IRIs that should have been reconciled into one). Enforcing uniqueness keeps the graph
-clean and prevents ambiguous lookups.</p>
-<div class="admonition warning">
-<p class="admonition-title">Expected result</p>
-<p><strong>0 rows.</strong> Every row returned identifies a pair of resources that incorrectly
-share the same textual entity value.</p>
-</div>
-<div class="language-sparql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c">#  no two &quot;textual entities&quot; may share the same value (NFDI_0001007)</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">PREFIX</span> <span class="nn">rdf</span><span class="p">:</span>  <span class="nl">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">PREFIX</span> <span class="nn">rdfs</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">PREFIX</span> <span class="nn">owl</span><span class="p">:</span>  <span class="nl">&lt;http://www.w3.org/2002/07/owl#&gt;</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">PREFIX</span> <span class="nn">xsd</span><span class="p">:</span>  <span class="nl">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="k">PREFIX</span> <span class="nn">nfdi</span><span class="p">:</span> <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/&gt;</span>
-</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="k">SELECT</span> <span class="nv">$this</span> <span class="nv">?value</span> <span class="nv">?other</span>
-</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="k">WHERE</span> <span class="p">{</span>
-</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="nv">$this</span>  <span class="nn">nfdi</span><span class="p">:</span><span class="nt">NFDI_0001007</span> <span class="nv">?value</span> <span class="p">.</span>
-</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="nv">?other</span> <span class="nn">nfdi</span><span class="p">:</span><span class="nt">NFDI_0001007</span> <span class="nv">?value</span> <span class="p">.</span>
-</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>    <span class="k">FILTER</span> <span class="p">(</span> <span class="nv">$this</span> <span class="o">!=</span> <span class="nv">?other</span> <span class="o">&amp;&amp;</span> <span class="nf">str</span><span class="p">(</span><span class="nv">$this</span><span class="p">)</span> <span class="o">&lt;</span> <span class="nf">str</span><span class="p">(</span><span class="nv">?other</span><span class="p">)</span> <span class="p">)</span>
-</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="p">}</span>
-</span></code></pre></div>
-<hr />
-<h3 id="6-disjoint-class-violation">6 -- Disjoint Class Violation</h3>
+<h3 id="5-disjoint-class-violation">5 -- Disjoint Class Violation</h3>
 <p><strong>What it checks:</strong>
 Finds any individual <code>?x</code> that is simultaneously an instance of two classes <code>?C</code> and
 <code>?D</code> where those classes have been declared <code>owl:disjointWith</code> each other. This is a
@@ -2034,15 +1975,15 @@ lightweight yet effective consistency safeguard.</p>
 <p><strong>0 rows.</strong> Every row returned identifies an individual that belongs to two
 mutually exclusive classes, indicating a logical inconsistency.</p>
 </div>
-<div class="language-sparql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">PREFIX</span> <span class="nn">owl</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2002/07/owl#&gt;</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">PREFIX</span> <span class="nn">rdf</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">SELECT</span> <span class="nv">?x</span> <span class="nv">?C</span> <span class="nv">?D</span>
-</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="k">WHERE</span> <span class="p">{</span>
-</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>  <span class="nv">?C</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">disjointWith</span> <span class="nv">?D</span> <span class="p">.</span>
-</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  <span class="nv">?x</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?C</span> <span class="p">.</span>
-</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>  <span class="nv">?x</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?D</span> <span class="p">.</span>
-</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">}</span>
+<div class="language-sparql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">PREFIX</span> <span class="nn">owl</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2002/07/owl#&gt;</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">PREFIX</span> <span class="nn">rdf</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">SELECT</span> <span class="nv">?x</span> <span class="nv">?C</span> <span class="nv">?D</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">WHERE</span> <span class="p">{</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  <span class="nv">?C</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">disjointWith</span> <span class="nv">?D</span> <span class="p">.</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  <span class="nv">?x</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?C</span> <span class="p">.</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  <span class="nv">?x</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nv">?D</span> <span class="p">.</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
 </span></code></pre></div>
 
 
