@@ -29,8 +29,7 @@ pipeline.
 | 2 | `verify2.sparql` | Forbidden BFO temporal predicates must not appear |
 | 3 | `verify3.sparql` | Every `rdf:type` class must be declared in the ontology |
 | 4 | `verify4.sparql` | Every predicate must be a declared property in the ontology |
-| 5 | `verify5.sparql` | No two textual entities may share the same value |
-| 6 | `reasoner_disjoint_violation.sparql` | No individual may instantiate two disjoint classes |
+| 5 | `reasoner_disjoint_violation.sparql` | No individual may instantiate two disjoint classes |
 
 ---
 
@@ -223,44 +222,7 @@ SELECT DISTINCT ?p ?ptype WHERE {
 
 ---
 
-### 5 -- Unique Textual Entity Values
-
-**What it checks:**
-Detects pairs of distinct resources that share the exact same value for the
-`nfdi:NFDI_0001007` (textual entity) property. The query returns one row per
-duplicate pair, ordered to avoid reporting the same pair twice.
-
-**Why it matters:**
-Textual entities in the MSE-KG are expected to be unique identifiers or labels that
-distinguish one resource from another. Duplicate values suggest either a data-entry
-error (the same label assigned to two different things) or a merging problem (two
-IRIs that should have been reconciled into one). Enforcing uniqueness keeps the graph
-clean and prevents ambiguous lookups.
-
-!!! warning "Expected result"
-    **0 rows.** Every row returned identifies a pair of resources that incorrectly
-    share the same textual entity value.
-
-```sparql
-#  no two "textual entities" may share the same value (NFDI_0001007)
-
-PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl:  <http://www.w3.org/2002/07/owl#>
-PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
-PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
-
-SELECT $this ?value ?other
-WHERE {
-    $this  nfdi:NFDI_0001007 ?value .
-    ?other nfdi:NFDI_0001007 ?value .
-    FILTER ( $this != ?other && str($this) < str(?other) )
-}
-```
-
----
-
-### 6 -- Disjoint Class Violation
+### 5 -- Disjoint Class Violation
 
 **What it checks:**
 Finds any individual `?x` that is simultaneously an instance of two classes `?C` and
