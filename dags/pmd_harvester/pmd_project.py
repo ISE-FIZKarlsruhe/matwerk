@@ -329,7 +329,7 @@ def save_csv(rows, filename):
 def main(args):
 
     # Clear CSV at each run
-    open("harvest_output/pmd_projects_english.csv", "w").close()
+    open("data/pmd/pmd_projects_english.csv", "w").close()
 
     print("Extracting project links...")
 
@@ -358,7 +358,7 @@ def main(args):
 
     save_csv(
         all_rows,
-        "harvest_output/pmd_projects_english.csv"
+        "data/pmd/pmd_projects_english.csv"
     )
 
     print("\nDONE")
