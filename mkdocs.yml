@@ -89,6 +89,14 @@ extra_css:
   - overrides/assets/stylesheets/extra.css
 
 extra_javascript:
+  # MUST be first (and MUST live at docs/ root, not under overrides/) so
+  # the COOP/COEP service worker registers with a scope that covers every
+  # page under /matwerk/. This is what unblocks `crossOriginIsolated` in
+  # the browser, which in turn enables ontoink's "Browser: Konclude WASM"
+  # reasoner option — without it the dropdown greys out and the shape
+  # pages have no interactive reasoning path (the FIZ deploy has no
+  # `/reason` FastAPI backend either).
+  - coi-serviceworker.js
   - overrides/assets/javascripts/open-dashboard-link.js
   - overrides/assets/javascripts/extra.js
   - https://cdn.jsdelivr.net/npm/mermaid@11.12.0/dist/mermaid.min.js
