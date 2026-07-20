@@ -26,9 +26,16 @@ jobs:
         with:
           python-version: '3.x'
 
+      # HermiT (bundled with owlready2) is a Java library, so a JRE is required for build-time OWL reasoning.
+      - name: Set up Java (for HermiT / owlready2)
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
       - name: Install dependencies
         run: |
-          pip install mkdocs mkdocs-material mkdocs-macros-plugin pymdown-extensions ontoink
+          pip install mkdocs mkdocs-material mkdocs-macros-plugin pymdown-extensions "ontoink[reasoning]"
 
       - name: Build MkDocs
         run: mkdocs build -f mkdocs.yml
