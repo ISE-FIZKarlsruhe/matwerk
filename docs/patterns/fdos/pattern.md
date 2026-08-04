@@ -9,10 +9,10 @@ The `fdos` tab of the MatWerk workbook currently holds **5 rows**. Every row fol
 ```ontoink
 source: patterns/fdos/pattern.ttl
 height: 560px
-reasoning: true
+reasoning: false
 ```
 
-> Drag the nodes, change the layout, or press **Reasoning** to see what a reasoner adds to what is asserted.
+> Drag the nodes, change the layout, or use **Group** to collapse a namespace. The picture is the example only; the declarations and annotations behind it are in [`module.ttl`](module.ttl).
 
 ## Columns
 
@@ -53,7 +53,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 |---|---|
 | **Name** | fdos |
 | **Submitted by** | the NFDI-MatWerk consortium |
-| **Also Known As** | DOI; DOI; DOI |
+| **Also Known As** | DOI; DOI |
 | **Intent** | To represent a digital object identifier in the MSE Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
 | **Domains** | research data management; NFDI consortium structure |
 | **Competency Questions** | Which FAIR Digital Objects has NFDI-MatWerk registered?; What is the persistent identifier of a given FDO, and which dataset does it denote? |
@@ -81,7 +81,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Reused ontologies** | BFO 2020 (`http://purl.obolibrary.org/obo/bfo.owl`), NFDIcore (`https://nfdi.fiz-karlsruhe.de/ontology/`), IAO (`http://purl.obolibrary.org/obo/iao.owl`), RO (`http://purl.obolibrary.org/obo/ro.owl`) |
 | **Ontology licence** | CC BY 4.0 (repository); CC0 1.0 declared in the ontology header |
 | **Cite the ontology as** | Hossein Beygi Nasrabadi, Jörg Waitelonis, Ebrahim Norouzi, Kostiantyn Hubaiev, Harald Sack. NFDI MatWerk Ontology (mwo). Revision: v3.0.1. Retrieved from: http://purls.helmholtz-metadaten.de/mwo/3.0.1 |
-| **Generated** | `scripts/gen_patterns.py`, 2026-07-31 |
+| **Generated** | `scripts/gen_patterns.py`, 2026-08-04 |
 
 ### Formal characterisation
 
@@ -89,7 +89,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 |---|---|
 | **Consistency** | **consistent** — ROBOT 1.9.10, reasoner HermiT, merged with MWO 3.0.1 |
 | **DL expressivity** | `RRESTRCUCINTUNIVRESTREROIF(D)` — measured on the pattern together with a STAR module of exactly the terms it uses, so the figure describes this pattern rather than the whole ontology |
-| **Axioms / logical axioms** | 32 / 4 |
+| **Axioms / logical axioms** | 6 / 2 |
 | **Classes / individuals** | 2 / 2 |
 
 ## Consistency

@@ -9,11 +9,18 @@ curator typed. This script makes it explicit and checkable:
 
 for every tab it emits
 
-    docs/patterns/<tab>/pattern.ttl   TBox (the terms the tab uses, declared, with
-                                      their MWO labels) + ABox (one real row from
-                                      the sheet, with its value nodes resolved)
+    docs/patterns/<tab>/pattern.ttl   the example, as a pure instance graph — one
+                                      real row with its value nodes resolved. This is
+                                      what the diagram draws, so it holds no term
+                                      declarations and no metadata: a visualiser turns
+                                      every literal into a node, and those would bury
+                                      the pattern under its own annotations.
+    docs/patterns/<tab>/module.ttl    the citable artefact — the example plus the term
+                                      declarations, the ODP annotations and a STAR
+                                      module of the axioms of every term used, so the
+                                      file stands alone and can be reasoned over.
     docs/patterns/<tab>/pattern.md    the explanation, the column→property table,
-                                      and an ontoink block that draws the pattern
+                                      and an ontoink block that draws the example
 
 and every ``pattern.ttl`` is then checked for consistency against MWO with ROBOT
 (``--reasoner hermit``, the same reasoner ``process_spreadsheets`` uses), so a
@@ -620,7 +627,7 @@ def build_pattern(tab: str, head: List[str], directives: List[str], data: List[L
     """Return (turtle, column-map) for one tab."""
     row = pick_example_row(data, len(directives))
     if row is None:
-        return "", []
+        return "", "", []
 
     entity_iri = row[0].strip()
     entity_type = ""
@@ -759,12 +766,41 @@ def build_pattern(tab: str, head: List[str], directives: List[str], data: List[L
     for iri, kind in sorted(tbox_props.items()):
         lab = labels.get(iri, iri.rsplit("/", 1)[-1])
         out.append(f'{curie(iri)} a {kind} ;\n    rdfs:label "{lab}" .')
-    out += ["", "# --- ABox: one real row from the sheet ---"]
+
+    # ------------------------------------------------------------------ #
+    # The example, on its own.
+    #
+    # This is what the diagram draws, and it deliberately contains *only* the
+    # instance graph. A visualiser renders one node per subject and one green
+    # literal node per literal object, so a term declaration —
+    #   nfdi:NFDI_0000142 a owl:ObjectProperty ; rdfs:label "has license"
+    # — draws the *property itself* as a node with a floating label, unattached to
+    # the data. The same happens to every ODP annotation. Put together they bury
+    # the pattern under its own metadata and make properties look like literals.
+    #
+    # So the declarations, the ontology header and the ODP annotations go to
+    # module.ttl (the citable, reasoner-checked artefact) and the picture shows the
+    # thing itself.
+    # ------------------------------------------------------------------ #
+    example = [
+        f"# {tab} — the example, as an instance graph.",
+        "#",
+        "# One real row of the workbook: the entity, the value nodes that describe it,",
+        "# and the links between them. Declarations, provenance and the ODP annotations",
+        "# live in module.ttl so that this file draws cleanly.",
+        "#",
+        f"# Ontology version: MWO {mwo_version}",
+        "",
+    ]
+    example += [f"@prefix {p}: <{ns}> ." for p, ns in PREFIXES] + [""]
     if abox_hub:
-        out.append(f"{curie(entity_iri)} a {curie(entity_type) if entity_type else 'owl:NamedIndividual'} ;")
-        out.append(" ;\n".join(abox_hub) + " .")
-    out += [""] + abox_sats + [""]
-    return "\n".join(out), cols
+        example.append(
+            f"{curie(entity_iri)} a "
+            f"{curie(entity_type) if entity_type else 'owl:NamedIndividual'} ;")
+        example.append(" ;\n".join(abox_hub) + " .")
+    example += [""] + abox_sats + [""]
+
+    return "\n".join(example), "\n".join(out) + "\n", cols
 
 
 # --------------------------------------------------------------------------- #
@@ -811,11 +847,12 @@ def write_md(tab: str, cols: List[dict], labels: Dict[str, str], out_dir: str,
         "```ontoink",
         f"source: patterns/{tab}/pattern.ttl",
         "height: 560px",
-        "reasoning: true",
+        "reasoning: false",
         "```",
         "",
-        "> Drag the nodes, change the layout, or press **Reasoning** to see what a "
-        "reasoner adds to what is asserted.",
+        "> Drag the nodes, change the layout, or use **Group** to collapse a namespace. "
+        "The picture is the example only; the declarations and annotations behind it "
+        "are in [`module.ttl`](module.ttl).",
         "",
         "## Columns",
         "",
@@ -1042,7 +1079,12 @@ def main(argv: Optional[List[str]] = None) -> None:
     tbox_src = ""
     if args.robot and os.path.exists(args.robot):
         onts = [args.mwo] + ([args.kg] if args.kg and os.path.exists(args.kg) else [])
-        tbox_src = os.path.join(args.out, "_tbox.ttl")
+        # A build intermediate, not documentation: written to a temp directory so it
+        # is never published (the merged source alone is ~450 kB, and mkdocs copies
+        # anything sitting under docs/ into the site verbatim).
+        import tempfile
+
+        tbox_src = os.path.join(tempfile.gettempdir(), "matwerk_pattern_tbox.ttl")
         try:
             build_tbox_source(args.robot, onts, tbox_src)
             print(f"[gen] extraction TBox built from {len(onts)} ontology file(s)")
@@ -1067,9 +1109,9 @@ def main(argv: Optional[List[str]] = None) -> None:
              components: Optional[List[Tuple[str, str, int]]] = None) -> None:
         nonlocal made
         pattern_cqs = CQS.get(name) or CQS.get(name.split('-')[0])
-        ttl, cols = build_pattern(display, head, directives, rows, labels, label_index,
-                                  args.mwo_version, cqs=pattern_cqs,
-                                  components=components, related=None)
+        ttl, formal, cols = build_pattern(display, head, directives, rows, labels,
+                                          label_index, args.mwo_version, cqs=pattern_cqs,
+                                          components=components, related=None)
         if not ttl:
             print(f"[gen] {name}: no usable example row — skipped")
             return
@@ -1087,8 +1129,10 @@ def main(argv: Optional[List[str]] = None) -> None:
             if extract_module(ttl_path, args.robot, tbox_src, module_path):
                 try:
                     from rdflib import Graph as _G
+                    # the module is the whole artefact: example + declarations +
+                    # ODP annotations + the extracted axioms
                     _m1, _m2 = _G(), _G()
-                    _m1.parse(ttl_path, format="turtle")
+                    _m1.parse(data=ttl + formal, format="turtle")
                     _m2.parse(module_path, format="turtle")
                     for _t in _m1:
                         _m2.add(_t)

@@ -41,3 +41,5 @@ public/
 bootstrap_dumps/
 MSE_KG*/*
 docs/apps_script
+# generator intermediates (never published)
+docs/patterns/_tbox*.ttl

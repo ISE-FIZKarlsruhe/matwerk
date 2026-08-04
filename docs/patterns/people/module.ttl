@@ -28,7 +28,6 @@ ns2:RO_0000056 a owl:ObjectProperty ;
     ns2:IAO_0000115 "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en ;
     rdfs:domain ns2:BFO_0000002 ;
     rdfs:range ns2:BFO_0000003 ;
-    owl:equivalentProperty [ owl:inverseOf ns2:RO_0000057 ] ;
     owl:inverseOf ns2:RO_0000057 .
 
 ns2:RO_0000079 a owl:ObjectProperty ;
@@ -37,9 +36,7 @@ ns2:RO_0000079 a owl:ObjectProperty ;
     ns2:IAO_0000115 "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence"@en ;
     ns2:IAO_0000116 "A function inheres in its bearer at all times for which the function exists, however the function need not be realized at all the times that the function exists."@en ;
     rdfs:domain ns2:BFO_0000034 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns2:RO_0000053 ],
-        ns2:RO_0000052 ;
-    owl:equivalentProperty [ owl:inverseOf ns2:RO_0000085 ] ;
+    rdfs:subPropertyOf ns2:RO_0000052 ;
     owl:inverseOf ns2:RO_0000085 .
 
 ns2:RO_0000080 a owl:ObjectProperty ;
@@ -50,9 +47,7 @@ ns2:RO_0000080 a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:intersectionOf ( ns2:BFO_0000019 [ a owl:Class ;
                         owl:complementOf ns2:BFO_0000145 ] ) ] ;
-    rdfs:subPropertyOf [ owl:inverseOf ns2:RO_0000053 ],
-        ns2:RO_0000052 ;
-    owl:equivalentProperty [ owl:inverseOf ns2:RO_0000086 ] ;
+    rdfs:subPropertyOf ns2:RO_0000052 ;
     owl:inverseOf ns2:RO_0000086 .
 
 dc:identifier a owl:AnnotationProperty .
@@ -151,6 +146,14 @@ ns2:BFO_0000015 a owl:Class ;
     skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
     skos:example "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
 
+ns2:BFO_0000030 a owl:Class ;
+    rdfs:label "object"@en ;
+    dc:identifier "024-BFO" ;
+    rdfs:subClassOf ns2:BFO_0000040 ;
+    skos:definition "(Elucidation) An object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested"@en ;
+    skos:example "An organism; a fish tank; a planet; a laptop; a valve; a block of marble; an ice cube"@en ;
+    skos:scopeNote "A description of three primary sorts of causal unity is provided in Basic Formal Ontology 2.0. Specification and User Guide"@en .
+
 ns2:BFO_0000040 a owl:Class ;
     rdfs:label "material entity"@en ;
     ns2:IAO_0000115 "An independent continuant that is spatially extended whose identity is independent of that of other entities and can be maintained through time."@en ;
@@ -190,10 +193,16 @@ every c that is a concretization of g specifically denotes r"""@en ;
     ns2:IAO_0000119 "Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan"@en ;
     rdfs:domain ns2:IAO_0000030 ;
     rdfs:range ns2:BFO_0000001 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns4:NFDI_0000226 ],
-        ns2:IAO_0000136 ;
-    owl:equivalentProperty [ owl:inverseOf ns2:IAO_0000235 ] ;
+    rdfs:subPropertyOf ns2:IAO_0000136 ;
     owl:inverseOf ns2:IAO_0000235 .
+
+ns2:IAO_0000235 a owl:ObjectProperty ;
+    rdfs:label "denoted by",
+        "denoted by"@en ;
+    ns2:IAO_0000115 "inverse of the relation 'denotes'"@en ;
+    rdfs:domain ns2:BFO_0000001 ;
+    rdfs:range ns2:IAO_0000030 ;
+    rdfs:subPropertyOf ns4:NFDI_0000226 .
 
 ns2:IAO_0000429 a owl:Class ;
     rdfs:label "email address",
@@ -244,9 +253,7 @@ ns2:RO_0000081 a owl:ObjectProperty ;
     ns2:IAO_0000112 "this investigator role is a role of this person"@en ;
     ns2:IAO_0000115 "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"@en ;
     ns2:IAO_0000116 "A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists."@en ;
-    rdfs:subPropertyOf [ owl:inverseOf ns2:RO_0000053 ],
-        ns2:RO_0000052 ;
-    owl:equivalentProperty [ owl:inverseOf ns2:RO_0000087 ] ;
+    rdfs:subPropertyOf ns2:RO_0000052 ;
     owl:inverseOf ns2:RO_0000087 .
 
 ns2:RO_0000091 a owl:ObjectProperty ;
@@ -254,10 +261,13 @@ ns2:RO_0000091 a owl:ObjectProperty ;
     ns2:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence"@en ;
     rdfs:domain ns2:BFO_0000004 ;
     rdfs:range ns2:BFO_0000016 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns2:RO_0000052 ],
-        ns2:RO_0000053 ;
-    owl:equivalentProperty [ owl:inverseOf ns2:RO_0000092 ] ;
+    rdfs:subPropertyOf ns2:RO_0000053 ;
     owl:inverseOf ns2:RO_0000092 .
+
+ns2:RO_0000092 a owl:ObjectProperty ;
+    rdfs:label "disposition of"@en ;
+    ns2:IAO_0000115 "inverse of has disposition" ;
+    rdfs:subPropertyOf ns2:RO_0000052 .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451391861361> a ns2:IAO_0020016 ;
     rdfs:label "Sarath" .
@@ -279,7 +289,6 @@ ns4:NFDI_0000004 a owl:Class ;
             owl:intersectionOf ( ns2:BFO_0000030 [ a owl:Restriction ;
                         owl:onProperty ns2:RO_0000087 ;
                         owl:someValuesFrom ns4:NFDI_0000229 ] ) ],
-        ns2:BFO_0000030,
         ns4:NFDI_0000102 ;
     skos:editorialNote "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en ;
     skos:example "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" .
@@ -298,22 +307,18 @@ ns4:NFDI_0001072 a owl:NamedIndividual ;
 <https://orcid.org/0000-0002-6776-1213> a ns2:IAO_0000708 ;
     rdfs:label "orcid 1" .
 
-ns2:BFO_0000030 a owl:Class ;
-    rdfs:label "object"@en ;
-    dc:identifier "024-BFO" ;
-    rdfs:subClassOf ns2:BFO_0000040 ;
-    skos:definition "(Elucidation) An object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested"@en ;
-    skos:example "An organism; a fish tank; a planet; a laptop; a valve; a block of marble; an ice cube"@en ;
-    skos:scopeNote "A description of three primary sorts of causal unity is provided in Basic Formal Ontology 2.0. Specification and User Guide"@en .
+ns2:IAO_0000136 a owl:ObjectProperty ;
+    rdfs:label "is about"@en ;
+    ns2:IAO_0000112 "This document is about information artifacts and their representations"@en ;
+    ns2:IAO_0000115 "A (currently) primitive relation that relates an information artifact to an entity."@en ;
+    ns2:IAO_0000116 """7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of "mentions" relation. Weaken the is_about relationship to be primitive. 
 
-ns2:IAO_0000235 a owl:ObjectProperty ;
-    rdfs:label "denoted by",
-        "denoted by"@en ;
-    ns2:IAO_0000115 "inverse of the relation 'denotes'"@en ;
-    rdfs:domain ns2:BFO_0000001 ;
-    rdfs:range ns2:IAO_0000030 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns2:IAO_0000136 ],
-        ns4:NFDI_0000226 .
+We will try to build it back up by elaborating the various subproperties that are more precisely defined.
+
+Some currently missing phenomena that should be considered "about" are predications - "The only person who knows the answer is sitting beside me" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
+    ns2:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
+    rdfs:domain ns2:IAO_0000030 ;
+    owl:inverseOf ns4:NFDI_0000226 .
 
 ns2:IAO_0000578 a owl:Class ;
     rdfs:label "centrally registered identifier"@en ;
@@ -364,11 +369,33 @@ ns2:IAO_0020017 a owl:Class ;
     ns2:IAO_0000119 "http://en.wikipedia.org/wiki/Family_name" ;
     rdfs:subClassOf ns2:IAO_0020000 .
 
-ns2:RO_0000092 a owl:ObjectProperty ;
-    rdfs:label "disposition of"@en ;
-    ns2:IAO_0000115 "inverse of has disposition" ;
-    rdfs:subPropertyOf [ owl:inverseOf ns2:RO_0000053 ],
-        ns2:RO_0000052 .
+ns2:RO_0000057 a owl:ObjectProperty ;
+    rdfs:label "has participant"@en ;
+    ns2:IAO_0000112 "this blood coagulation has participant this blood clot"@en,
+        "this investigation has participant this investigator"@en,
+        "this process has participant this input material (or this output material)"@en ;
+    ns2:IAO_0000115 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en ;
+    ns2:IAO_0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time."@en ;
+    rdfs:domain ns2:BFO_0000003 ;
+    rdfs:range ns2:BFO_0000002 ;
+    owl:propertyChainAxiom ( ns2:BFO_0000051 ns2:RO_0000057 ) .
+
+ns2:RO_0000085 a owl:ObjectProperty ;
+    rdfs:label "has function"@en ;
+    ns2:IAO_0000112 "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)"@en ;
+    ns2:IAO_0000115 "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"@en ;
+    ns2:IAO_0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists."@en ;
+    rdfs:domain ns2:BFO_0000004 ;
+    rdfs:range ns2:BFO_0000034 ;
+    rdfs:subPropertyOf ns2:RO_0000053 .
+
+ns2:RO_0000086 a owl:ObjectProperty ;
+    rdfs:label "has quality"@en ;
+    ns2:IAO_0000112 "this apple has quality this red color"@en ;
+    ns2:IAO_0000115 "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"@en ;
+    ns2:IAO_0000116 "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist."@en ;
+    rdfs:range ns2:BFO_0000019 ;
+    rdfs:subPropertyOf ns2:RO_0000053 .
 
 ns4:NFDI_0000002 a owl:Class ;
     rdfs:label "project",
@@ -400,6 +427,11 @@ ns4:NFDI_0000102 a owl:Class ;
                         owl:someValuesFrom ns4:NFDI_0000229 ] ) ] ;
     skos:editorialNote "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en ;
     skos:example "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en .
+
+ns4:NFDI_0000226 a owl:ObjectProperty ;
+    rdfs:label "is subject of"@en ;
+    rdfs:comment "inverse of the relation 'is about'" ;
+    skos:altLabel "is described by" .
 
 ns2:BFO_0000016 a owl:Class ;
     rdfs:label "disposition"@en ;
@@ -443,80 +475,13 @@ ns2:BFO_0000034 a owl:Class ;
     skos:definition "(Elucidation) A function is a disposition that exists in virtue of its bearer's physical make-up & this physical make-up is something the bearer possesses because it came into being either through evolution (in the case of natural biological entities) or through intentional design (in the case of artefacts) in order to realize processes of a certain sort"@en ;
     skos:example "The function of a hammer to drive in nails; the function of a heart pacemaker to regulate the beating of a heart through electricity"@en .
 
-ns2:IAO_0000136 a owl:ObjectProperty ;
-    rdfs:label "is about"@en ;
-    ns2:IAO_0000112 "This document is about information artifacts and their representations"@en ;
-    ns2:IAO_0000115 "A (currently) primitive relation that relates an information artifact to an entity."@en ;
-    ns2:IAO_0000116 """7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of "mentions" relation. Weaken the is_about relationship to be primitive. 
-
-We will try to build it back up by elaborating the various subproperties that are more precisely defined.
-
-Some currently missing phenomena that should be considered "about" are predications - "The only person who knows the answer is sitting beside me" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
-    ns2:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
-    rdfs:domain ns2:IAO_0000030 ;
-    owl:equivalentProperty [ owl:inverseOf ns4:NFDI_0000226 ] ;
-    owl:inverseOf ns4:NFDI_0000226 .
-
-ns2:RO_0000057 a owl:ObjectProperty ;
-    rdfs:label "has participant"@en ;
-    ns2:IAO_0000112 "this blood coagulation has participant this blood clot"@en,
-        "this investigation has participant this investigator"@en,
-        "this process has participant this input material (or this output material)"@en ;
-    ns2:IAO_0000115 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en ;
-    ns2:IAO_0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time."@en ;
-    rdfs:domain ns2:BFO_0000003 ;
-    rdfs:range ns2:BFO_0000002 ;
-    owl:propertyChainAxiom ( ns2:BFO_0000051 ns2:RO_0000057 ) .
-
-ns2:RO_0000085 a owl:ObjectProperty ;
-    rdfs:label "has function"@en ;
-    ns2:IAO_0000112 "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)"@en ;
-    ns2:IAO_0000115 "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"@en ;
-    ns2:IAO_0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists."@en ;
-    rdfs:domain ns2:BFO_0000004 ;
-    rdfs:range ns2:BFO_0000034 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns2:RO_0000052 ],
-        ns2:RO_0000053 .
-
-ns2:RO_0000086 a owl:ObjectProperty ;
-    rdfs:label "has quality"@en ;
-    ns2:IAO_0000112 "this apple has quality this red color"@en ;
-    ns2:IAO_0000115 "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"@en ;
-    ns2:IAO_0000116 "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist."@en ;
-    rdfs:range ns2:BFO_0000019 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns2:RO_0000052 ],
-        ns2:RO_0000053 .
-
 ns4:NFDI_0000229 a owl:Class ;
     rdfs:label "agent role"@en ;
     rdfs:comment "Role of an independent continuant that is realized through an agent's actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context."@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns2:BFO_0000023 [ a owl:Restriction ;
                         owl:onProperty ns2:RO_0000081 ;
-                        owl:someValuesFrom ns4:NFDI_0000102 ] ) ],
-        ns2:BFO_0000023 .
-
-ns2:IAO_0020000 a owl:Class ;
-    rdfs:label "identifier"@en ;
-    ns2:IAO_0000115 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en ;
-    ns2:IAO_0000118 "proper name"@en ;
-    rdfs:subClassOf ns2:IAO_0000030 .
-
-ns4:NFDI_0000226 a owl:ObjectProperty ;
-    rdfs:label "is subject of"@en ;
-    rdfs:comment "inverse of the relation 'is about'" ;
-    skos:altLabel "is described by" .
-
-ns2:BFO_0000001 a owl:Class ;
-    rdfs:label "entity"@en ;
-    ns2:IAO_0000112 "Julius Caesar"@en,
-        "Verdi’s Requiem"@en,
-        "the Second World War"@en,
-        "your body mass index"@en ;
-    ns2:IAO_0000116 "BFO 2 Reference: In all areas of empirical inquiry we encounter general terms of two sorts. First are general terms which refer to universals or types:animaltuberculosissurgical procedurediseaseSecond, are general terms used to refer to groups of entities which instantiate a given universal but do not correspond to the extension of any subuniversal of that universal because there is nothing intrinsic to the entities in question by virtue of which they – and only they – are counted as belonging to the given group. Examples are: animal purchased by the Emperortuberculosis diagnosed on a Wednesdaysurgical procedure performed on a patient from Stockholmperson identified as candidate for clinical trial #2056-555person who is signatory of Form 656-PPVpainting by Leonardo da VinciSuch terms, which represent what are called ‘specializations’ in [81"@en ;
-    dc:identifier "001-BFO" ;
-    skos:definition "(Elucidation) An entity is anything that exists or has existed or will exist"@en ;
-    skos:example "Julius Caesar; the Second World War; your body mass index; Verdi's Requiem"@en .
+                        owl:someValuesFrom ns4:NFDI_0000102 ] ) ] .
 
 ns2:BFO_0000023 a owl:Class ;
     rdfs:label "role"@en ;
@@ -535,6 +500,31 @@ ns2:BFO_0000023 a owl:Class ;
     skos:definition "(Elucidation) A role b is a realizable entity such that b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be & b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed"@en ;
     skos:example "The priest role; the student role; the role of subject in a clinical trial; the role of a stone in marking a property boundary; the role of a boundary to demarcate two neighbouring administrative territories; the role of a building in serving as a military target"@en .
 
+ns2:IAO_0020000 a owl:Class ;
+    rdfs:label "identifier"@en ;
+    ns2:IAO_0000115 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en ;
+    ns2:IAO_0000118 "proper name"@en ;
+    rdfs:subClassOf ns2:IAO_0000030 .
+
+ns2:RO_0000052 a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    ns2:IAO_0000112 "this fragility is a characteristic of this vase"@en,
+        "this red color is a characteristic of this apple"@en ;
+    ns2:IAO_0000115 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en ;
+    owl:inverseOf ns2:RO_0000053 .
+
+ns2:BFO_0000001 a owl:Class ;
+    rdfs:label "entity"@en ;
+    ns2:IAO_0000112 "Julius Caesar"@en,
+        "Verdi’s Requiem"@en,
+        "the Second World War"@en,
+        "your body mass index"@en ;
+    ns2:IAO_0000116 "BFO 2 Reference: In all areas of empirical inquiry we encounter general terms of two sorts. First are general terms which refer to universals or types:animaltuberculosissurgical procedurediseaseSecond, are general terms used to refer to groups of entities which instantiate a given universal but do not correspond to the extension of any subuniversal of that universal because there is nothing intrinsic to the entities in question by virtue of which they – and only they – are counted as belonging to the given group. Examples are: animal purchased by the Emperortuberculosis diagnosed on a Wednesdaysurgical procedure performed on a patient from Stockholmperson identified as candidate for clinical trial #2056-555person who is signatory of Form 656-PPVpainting by Leonardo da VinciSuch terms, which represent what are called ‘specializations’ in [81"@en ;
+    dc:identifier "001-BFO" ;
+    skos:definition "(Elucidation) An entity is anything that exists or has existed or will exist"@en ;
+    skos:example "Julius Caesar; the Second World War; your body mass index; Verdi's Requiem"@en .
+
 ns2:BFO_0000031 a owl:Class ;
     rdfs:label "generically dependent continuant"@en ;
     ns2:IAO_0000112 "The entries in your database are patterns instantiated as quality instances in your hard drive. The database itself is an aggregate of such patterns. When you create the database you create a particular instance of the generically dependent continuant type database. Each entry in the database is an instance of the generically dependent continuant type IAO: information content entity."@en,
@@ -549,6 +539,15 @@ ns2:BFO_0000031 a owl:Class ;
     skos:altLabel "g-dependent continuant"@en ;
     skos:definition "(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share"@en ;
     skos:example "The pdf file on your laptop; the pdf file that is a copy thereof on my laptop; the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule; the content that is shared by a string of dots and dashes written on a page and the transmitted Morse code signal; the content of a sentence; an engineering blueprint"@en .
+
+ns2:RO_0000087 a owl:ObjectProperty ;
+    rdfs:label "has role"@en ;
+    ns2:IAO_0000112 "this person has role this investigator role (more colloquially: this person has this role of investigator)"@en ;
+    ns2:IAO_0000115 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en ;
+    ns2:IAO_0000116 "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists."@en ;
+    rdfs:domain ns2:BFO_0000004 ;
+    rdfs:range ns2:BFO_0000023 ;
+    rdfs:subPropertyOf ns2:RO_0000053 .
 
 ns2:BFO_0000003 a owl:Class ;
     rdfs:label "occurrent"@en ;
@@ -604,15 +603,20 @@ ns2:BFO_0000020 a owl:Class ;
     skos:example "(with multiple bearers) John's love for Mary; the ownership relation between John and this statue; the relation of authority between John and his subordinates"@en,
         "(with one bearer) The mass of this tomato; the pink colour of a medium rare piece of grilled filet mignon at its centre; the smell of this portion of mozzarella; the disposition of this fish to decay; the role of being a doctor; the function of this heart to pump blood; the shape of this hole"@en .
 
-ns2:RO_0000087 a owl:ObjectProperty ;
-    rdfs:label "has role"@en ;
-    ns2:IAO_0000112 "this person has role this investigator role (more colloquially: this person has this role of investigator)"@en ;
-    ns2:IAO_0000115 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en ;
-    ns2:IAO_0000116 "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists."@en ;
-    rdfs:domain ns2:BFO_0000004 ;
-    rdfs:range ns2:BFO_0000023 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns2:RO_0000052 ],
-        ns2:RO_0000053 .
+ns2:BFO_0000051 a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "has part"@en ;
+    ns2:IAO_0000112 "my body has part my brain (continuant parthood, two material entities)"@en,
+        "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en,
+        "this year has part this day (occurrent parthood)"@en ;
+    ns2:IAO_0000115 "a core relation that holds between a whole and its part"@en ;
+    ns2:IAO_0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."@en,
+        "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en,
+        """Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
+
+A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."""@en ;
+    ns2:IAO_0000118 "has_part"@en ;
+    rdfs:subPropertyOf ns2:BFO_0000051 .
 
 ns2:BFO_0000002 a owl:Class ;
     rdfs:label "continuant"@en ;
@@ -629,21 +633,6 @@ ns2:BFO_0000002 a owl:Class ;
         ns2:BFO_0000003 ;
     skos:definition "(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity"@en ;
     skos:example "A human being; a tennis ball; a cave; a region of space; someone's temperature"@en .
-
-ns2:BFO_0000051 a owl:ObjectProperty,
-        owl:TransitiveProperty ;
-    rdfs:label "has part"@en ;
-    ns2:IAO_0000112 "my body has part my brain (continuant parthood, two material entities)"@en,
-        "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en,
-        "this year has part this day (occurrent parthood)"@en ;
-    ns2:IAO_0000115 "a core relation that holds between a whole and its part"@en ;
-    ns2:IAO_0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."@en,
-        "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en,
-        """Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
-
-A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."""@en ;
-    ns2:IAO_0000118 "has_part"@en ;
-    rdfs:subPropertyOf ns2:BFO_0000051 .
 
 ns2:IAO_0000030 a owl:Class ;
     rdfs:label "information content entity",
@@ -686,16 +675,16 @@ ns2:BFO_0000004 a owl:Class ;
     skos:definition "b is an independent continuant =Def b is a continuant & there is no c such that b specifically depends on c or b generically depends on c"@en ;
     skos:example "An atom; a molecule; an organism; a heart; a chair; the bottom right portion of a human torso; a leg; the interior of your mouth; a spatial region; an orchestra"@en .
 
-ns2:RO_0000052 a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "characteristic of"@en ;
-    ns2:IAO_0000112 "this fragility is a characteristic of this vase"@en,
-        "this red color is a characteristic of this apple"@en ;
-    ns2:IAO_0000115 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en ;
-    owl:equivalentProperty [ owl:inverseOf ns2:RO_0000053 ] ;
-    owl:inverseOf ns2:RO_0000053 .
-
 <urn:swrl:var#e> a ns1:Variable .
+
+ns2:RO_0000053 a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has characteristic"@en ;
+    ns2:IAO_0000112 "this apple is bearer of this red color"@en,
+        "this vase is bearer of this fragility"@en ;
+    ns2:IAO_0000115 "Inverse of characteristic_of"@en ;
+    ns2:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
+    rdfs:range ns2:BFO_0000020 .
 
 ns2:BFO_0000050 a owl:ObjectProperty,
         owl:TransitiveProperty ;
@@ -710,19 +699,9 @@ ns2:BFO_0000050 a owl:ObjectProperty,
 
 A continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'."""@en ;
     ns2:IAO_0000118 "part_of"@en ;
-    owl:equivalentProperty [ owl:inverseOf ns2:BFO_0000051 ] ;
     owl:inverseOf ns2:BFO_0000051 .
 
 <urn:swrl:var#d> a ns1:Variable .
-
-ns2:RO_0000053 a owl:InverseFunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "has characteristic"@en ;
-    ns2:IAO_0000112 "this apple is bearer of this red color"@en,
-        "this vase is bearer of this fragility"@en ;
-    ns2:IAO_0000115 "Inverse of characteristic_of"@en ;
-    ns2:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
-    rdfs:range ns2:BFO_0000020 .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( ns2:BFO_0000004 ns2:BFO_0000020 ns2:BFO_0000031 ) .

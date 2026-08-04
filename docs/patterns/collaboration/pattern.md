@@ -9,10 +9,10 @@ The `collaboration` tab of the MatWerk workbook currently holds **25 rows**. Eve
 ```ontoink
 source: patterns/collaboration/pattern.ttl
 height: 560px
-reasoning: true
+reasoning: false
 ```
 
-> Drag the nodes, change the layout, or press **Reasoning** to see what a reasoner adds to what is asserted.
+> Drag the nodes, change the layout, or use **Group** to collapse a namespace. The picture is the example only; the declarations and annotations behind it are in [`module.ttl`](module.ttl).
 
 ## Columns
 
@@ -94,7 +94,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Reused ontologies** | BFO 2020 (`http://purl.obolibrary.org/obo/bfo.owl`), NFDIcore (`https://nfdi.fiz-karlsruhe.de/ontology/`), IAO (`http://purl.obolibrary.org/obo/iao.owl`), RO (`http://purl.obolibrary.org/obo/ro.owl`) |
 | **Ontology licence** | CC BY 4.0 (repository); CC0 1.0 declared in the ontology header |
 | **Cite the ontology as** | Hossein Beygi Nasrabadi, Jörg Waitelonis, Ebrahim Norouzi, Kostiantyn Hubaiev, Harald Sack. NFDI MatWerk Ontology (mwo). Revision: v3.0.1. Retrieved from: http://purls.helmholtz-metadaten.de/mwo/3.0.1 |
-| **Generated** | `scripts/gen_patterns.py`, 2026-07-31 |
+| **Generated** | `scripts/gen_patterns.py`, 2026-08-04 |
 
 ### Formal characterisation
 
@@ -102,7 +102,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 |---|---|
 | **Consistency** | **consistent** — ROBOT 1.9.10, reasoner HermiT, merged with MWO 3.0.1 |
 | **DL expressivity** | `RRESTRCUCINTUNIVRESTREROIF` — measured on the pattern together with a STAR module of exactly the terms it uses, so the figure describes this pattern rather than the whole ontology |
-| **Axioms / logical axioms** | 71 / 20 |
+| **Axioms / logical axioms** | 31 / 10 |
 | **Classes / individuals** | 7 / 11 |
 
 ## Consistency
