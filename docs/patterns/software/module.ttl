@@ -1,8 +1,8 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ns1: <http://purl.obolibrary.org/obo/> .
-@prefix ns2: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
-@prefix ns3: <http://www.w3.org/2003/11/swrl#> .
+@prefix ns2: <http://www.w3.org/2003/11/swrl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
 @prefix ns4: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -51,25 +51,25 @@ dcterms:license a owl:AnnotationProperty .
 
 <http://purls.helmholtz-metadaten.de/mwo/mwo.owl> a owl:Ontology .
 
-ns2:coversRequirements a owl:AnnotationProperty .
+ns3:coversRequirements a owl:AnnotationProperty .
 
-ns2:extractedFrom a owl:AnnotationProperty .
+ns3:extractedFrom a owl:AnnotationProperty .
 
-ns2:hasComponent a owl:AnnotationProperty .
+ns3:hasComponent a owl:AnnotationProperty .
 
-ns2:hasConsequences a owl:AnnotationProperty .
+ns3:hasConsequences a owl:AnnotationProperty .
 
-ns2:hasIntent a owl:AnnotationProperty .
+ns3:hasIntent a owl:AnnotationProperty .
 
-ns2:hasUnitTest a owl:AnnotationProperty .
+ns3:hasUnitTest a owl:AnnotationProperty .
 
-ns2:isSpecializationOf a owl:AnnotationProperty .
+ns3:isSpecializationOf a owl:AnnotationProperty .
 
-ns2:reengineeredFrom a owl:AnnotationProperty .
+ns3:reengineeredFrom a owl:AnnotationProperty .
 
-ns2:relatedCPs a owl:AnnotationProperty .
+ns3:relatedCPs a owl:AnnotationProperty .
 
-ns2:scenarios a owl:AnnotationProperty .
+ns3:scenarios a owl:AnnotationProperty .
 
 skos:altLabel a owl:AnnotationProperty .
 
@@ -104,12 +104,12 @@ skos:scopeNote a owl:AnnotationProperty .
         <https://orcid.org/0000-0002-2691-6995>,
         <https://orcid.org/0000-0002-3092-0532> ;
     dcterms:license "CC BY 4.0 (repository); CC0 1.0 declared in the ontology header" ;
-    ns2:coversRequirements "Where is the source-code repository of a given software, and what is its version?",
+    ns3:coversRequirements "Where is the source-code repository of a given software, and what is its version?",
         "Which software does NFDI-MatWerk provide, and under which licence?",
         "Which software supports a given workflow or academic discipline?",
         "Who develops and maintains a given software?" ;
-    ns2:extractedFrom "the software tab of the NFDI-MatWerk curation workbook" ;
-    ns2:hasComponent ns1:IAO_0000025,
+    ns3:extractedFrom "the software tab of the NFDI-MatWerk curation workbook" ;
+    ns3:hasComponent ns1:IAO_0000025,
         ns1:IAO_0000129,
         <http://www.ebi.ac.uk/swo/SWO_0000002>,
         ns4:NFDI_0000022,
@@ -122,12 +122,12 @@ skos:scopeNote a owl:AnnotationProperty .
         ns4:NFDI_0001018,
         ns4:NFDI_0001047,
         ns4:NFDI_0001210 ;
-    ns2:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
-    ns2:hasIntent "To represent a database software in the MSE Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
-    ns2:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
-    ns2:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
-    ns2:reengineeredFrom "ROBOT template directives, row 2 of the software tab" ;
-    ns2:scenarios "“Calphy” is a database software, with software name “Calphy”; short description “Python library and command line tool for calculation of free energies”; subject area “Data Driven Material Science”." ;
+    ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
+    ns3:hasIntent "To represent a database software in the MSE Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
+    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
+    ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
+    ns3:reengineeredFrom "ROBOT template directives, row 2 of the software tab" ;
+    ns3:scenarios "“Calphy” is a database software, with software name “Calphy”; short description “Python library and command line tool for calculation of free energies”; subject area “Data Driven Material Science”." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.1/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/software/1.0.0> ;
     owl:versionInfo "1.0.0" .
@@ -824,7 +824,7 @@ ns1:BFO_0000004 a owl:Class ;
     skos:definition "b is an independent continuant =Def b is a continuant & there is no c such that b specifically depends on c or b generically depends on c"@en ;
     skos:example "An atom; a molecule; an organism; a heart; a chair; the bottom right portion of a human torso; a leg; the interior of your mouth; a spatial region; an orchestra"@en .
 
-<urn:swrl:var#e> a ns3:Variable .
+<urn:swrl:var#e> a ns2:Variable .
 
 ns1:BFO_0000050 a owl:ObjectProperty,
         owl:TransitiveProperty ;
@@ -868,80 +868,80 @@ Previous. An information content entity is a non-realizable information entity t
             owl:someValuesFrom ns1:BFO_0000001 ],
         ns1:BFO_0000031 .
 
-<urn:swrl:var#d> a ns3:Variable .
+<urn:swrl:var#d> a ns2:Variable .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( ns1:BFO_0000004 ns1:BFO_0000020 ns1:BFO_0000031 ) .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000016 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000016 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000091 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000091 ] ;
             rdf:rest () ] .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000019 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000019 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000086 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000086 ] ;
             rdf:rest () ] .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000023 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000023 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000087 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000087 ] ;
             rdf:rest () ] .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000034 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000034 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000085 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000085 ] ;
             rdf:rest () ] .
 
