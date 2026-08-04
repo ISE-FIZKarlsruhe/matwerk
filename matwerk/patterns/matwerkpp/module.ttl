@@ -1,8 +1,8 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ns1: <http://purl.obolibrary.org/obo/> .
-@prefix ns2: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
-@prefix ns3: <http://www.w3.org/2003/11/swrl#> .
+@prefix ns2: <http://www.w3.org/2003/11/swrl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
 @prefix ns4: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -31,21 +31,11 @@ every c that is a concretization of g specifically denotes r"""@en ;
     ns1:IAO_0000119 "Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan"@en ;
     rdfs:domain ns1:IAO_0000030 ;
     rdfs:range ns1:BFO_0000001 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns4:NFDI_0000226 ],
-        ns1:IAO_0000136 ;
-    owl:equivalentProperty [ owl:inverseOf ns1:IAO_0000235 ] ;
+    rdfs:subPropertyOf ns1:IAO_0000136 ;
     owl:inverseOf ns1:IAO_0000235 .
 
-ns1:RO_0000056 a owl:ObjectProperty ;
-    rdfs:label "participates in"@en ;
-    ns1:IAO_0000112 "this blood clot participates in this blood coagulation"@en,
-        "this input material (or this output material) participates in this process"@en,
-        "this investigator participates in this investigation"@en ;
-    ns1:IAO_0000115 "a relation between a continuant and a process, in which the continuant is somehow involved in the process"@en ;
-    rdfs:domain ns1:BFO_0000002 ;
-    rdfs:range ns1:BFO_0000003 ;
-    owl:equivalentProperty [ owl:inverseOf ns1:RO_0000057 ] ;
-    owl:inverseOf ns1:RO_0000057 .
+ns1:RO_0000057 a owl:ObjectProperty ;
+    rdfs:label "has participant" .
 
 ns1:RO_0000079 a owl:ObjectProperty ;
     rdfs:label "function of"@en ;
@@ -53,9 +43,7 @@ ns1:RO_0000079 a owl:ObjectProperty ;
     ns1:IAO_0000115 "a relation between a function and an independent continuant (the bearer), in which the function specifically depends on the bearer for its existence"@en ;
     ns1:IAO_0000116 "A function inheres in its bearer at all times for which the function exists, however the function need not be realized at all the times that the function exists."@en ;
     rdfs:domain ns1:BFO_0000034 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns1:RO_0000053 ],
-        ns1:RO_0000052 ;
-    owl:equivalentProperty [ owl:inverseOf ns1:RO_0000085 ] ;
+    rdfs:subPropertyOf ns1:RO_0000052 ;
     owl:inverseOf ns1:RO_0000085 .
 
 ns1:RO_0000080 a owl:ObjectProperty ;
@@ -66,9 +54,7 @@ ns1:RO_0000080 a owl:ObjectProperty ;
     rdfs:domain [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000019 [ a owl:Class ;
                         owl:complementOf ns1:BFO_0000145 ] ) ] ;
-    rdfs:subPropertyOf [ owl:inverseOf ns1:RO_0000053 ],
-        ns1:RO_0000052 ;
-    owl:equivalentProperty [ owl:inverseOf ns1:RO_0000086 ] ;
+    rdfs:subPropertyOf ns1:RO_0000052 ;
     owl:inverseOf ns1:RO_0000086 .
 
 ns1:RO_0000081 a owl:ObjectProperty ;
@@ -76,9 +62,7 @@ ns1:RO_0000081 a owl:ObjectProperty ;
     ns1:IAO_0000112 "this investigator role is a role of this person"@en ;
     ns1:IAO_0000115 "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"@en ;
     ns1:IAO_0000116 "A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists."@en ;
-    rdfs:subPropertyOf [ owl:inverseOf ns1:RO_0000053 ],
-        ns1:RO_0000052 ;
-    owl:equivalentProperty [ owl:inverseOf ns1:RO_0000087 ] ;
+    rdfs:subPropertyOf ns1:RO_0000052 ;
     owl:inverseOf ns1:RO_0000087 .
 
 dc:identifier a owl:AnnotationProperty .
@@ -93,25 +77,25 @@ dcterms:license a owl:AnnotationProperty .
 
 <http://purls.helmholtz-metadaten.de/mwo/mwo.owl> a owl:Ontology .
 
-ns2:coversRequirements a owl:AnnotationProperty .
+ns3:coversRequirements a owl:AnnotationProperty .
 
-ns2:extractedFrom a owl:AnnotationProperty .
+ns3:extractedFrom a owl:AnnotationProperty .
 
-ns2:hasComponent a owl:AnnotationProperty .
+ns3:hasComponent a owl:AnnotationProperty .
 
-ns2:hasConsequences a owl:AnnotationProperty .
+ns3:hasConsequences a owl:AnnotationProperty .
 
-ns2:hasIntent a owl:AnnotationProperty .
+ns3:hasIntent a owl:AnnotationProperty .
 
-ns2:hasUnitTest a owl:AnnotationProperty .
+ns3:hasUnitTest a owl:AnnotationProperty .
 
-ns2:isSpecializationOf a owl:AnnotationProperty .
+ns3:isSpecializationOf a owl:AnnotationProperty .
 
-ns2:reengineeredFrom a owl:AnnotationProperty .
+ns3:reengineeredFrom a owl:AnnotationProperty .
 
-ns2:relatedCPs a owl:AnnotationProperty .
+ns3:relatedCPs a owl:AnnotationProperty .
 
-ns2:scenarios a owl:AnnotationProperty .
+ns3:scenarios a owl:AnnotationProperty .
 
 skos:altLabel a owl:AnnotationProperty .
 
@@ -139,16 +123,16 @@ skos:scopeNote a owl:AnnotationProperty .
         <https://orcid.org/0000-0002-2691-6995>,
         <https://orcid.org/0000-0002-3092-0532> ;
     dcterms:license "CC BY 4.0 (repository); CC0 1.0 declared in the ontology header" ;
-    ns2:coversRequirements "Which organisation runs a given participant project, and who leads it?",
+    ns3:coversRequirements "Which organisation runs a given participant project, and who leads it?",
         "Which participant projects are part of NFDI-MatWerk?",
         "Which resources has a participant project contributed to the knowledge graph?" ;
-    ns2:extractedFrom "the matwerkpp tab of the NFDI-MatWerk curation workbook" ;
-    ns2:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
-    ns2:hasIntent "To represent a matwerk participant project in the MSE Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
-    ns2:hasUnitTest "SELECT ?x ?label WHERE { ?x a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001029> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
-    ns2:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
-    ns2:reengineeredFrom "ROBOT template directives, row 2 of the matwerkpp tab" ;
-    ns2:scenarios "“PP1” is a matwerk participant project, with participant project collabration name “From atoms to turbine blades”; material/methodology description “Ni-based and Co-based single-crystal superalloys, metallic complex solid solutions / experiments and simulations”; engagement statistics “24 Project collabrations in CRC/TRR103, 10 of them on ‘Machine-Learning and Material Informatics‘”." ;
+    ns3:extractedFrom "the matwerkpp tab of the NFDI-MatWerk curation workbook" ;
+    ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
+    ns3:hasIntent "To represent a matwerk participant project in the MSE Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
+    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001029> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
+    ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
+    ns3:reengineeredFrom "ROBOT template directives, row 2 of the matwerkpp tab" ;
+    ns3:scenarios "“PP1” is a matwerk participant project, with participant project collabration name “From atoms to turbine blades”; material/methodology description “Ni-based and Co-based single-crystal superalloys, metallic complex solid solutions / experiments and simulations”; engagement statistics “24 Project collabrations in CRC/TRR103, 10 of them on ‘Machine-Learning and Material Informatics‘”." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.1/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/matwerkpp/1.0.0> ;
     owl:versionInfo "1.0.0" .
@@ -187,6 +171,14 @@ ns1:IAO_0000033 a owl:Class ;
             owl:someValuesFrom ns1:BFO_0000017 ],
         ns1:IAO_0000030 .
 
+ns1:IAO_0000235 a owl:ObjectProperty ;
+    rdfs:label "denoted by",
+        "denoted by"@en ;
+    ns1:IAO_0000115 "inverse of the relation 'denotes'"@en ;
+    rdfs:domain ns1:BFO_0000001 ;
+    rdfs:range ns1:IAO_0000030 ;
+    rdfs:subPropertyOf ns4:NFDI_0000226 .
+
 ns1:IAO_0000590 a owl:Class ;
     rdfs:label "written name",
         "written name"@en ;
@@ -202,10 +194,13 @@ ns1:RO_0000091 a owl:ObjectProperty ;
     ns1:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence"@en ;
     rdfs:domain ns1:BFO_0000004 ;
     rdfs:range ns1:BFO_0000016 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns1:RO_0000052 ],
-        ns1:RO_0000053 ;
-    owl:equivalentProperty [ owl:inverseOf ns1:RO_0000092 ] ;
+    rdfs:subPropertyOf ns1:RO_0000053 ;
     owl:inverseOf ns1:RO_0000092 .
+
+ns1:RO_0000092 a owl:ObjectProperty ;
+    rdfs:label "disposition of"@en ;
+    ns1:IAO_0000115 "inverse of has disposition" ;
+    rdfs:subPropertyOf ns1:RO_0000052 .
 
 <http://purls.helmholtz-metadaten.de/mwo/MWO_0001029> a owl:Class ;
     rdfs:label "matwerk participant project",
@@ -273,41 +268,55 @@ ns1:BFO_0000117 a owl:ObjectProperty,
     dc:identifier "202-BFO" ;
     rdfs:domain ns1:BFO_0000003 ;
     rdfs:range ns1:BFO_0000003 ;
-    owl:equivalentProperty [ owl:inverseOf ns1:BFO_0000132 ] ;
     owl:inverseOf ns1:BFO_0000132 ;
     skos:definition "b has occurrent part c =Def c occurrent part of b"@en ;
     skos:example "Mary's life has occurrent part Mary's 5th birthday"@en .
 
-ns1:IAO_0000235 a owl:ObjectProperty ;
-    rdfs:label "denoted by",
-        "denoted by"@en ;
-    ns1:IAO_0000115 "inverse of the relation 'denotes'"@en ;
-    rdfs:domain ns1:BFO_0000001 ;
-    rdfs:range ns1:IAO_0000030 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns1:IAO_0000136 ],
-        ns4:NFDI_0000226 .
+ns1:RO_0000085 a owl:ObjectProperty ;
+    rdfs:label "has function"@en ;
+    ns1:IAO_0000112 "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)"@en ;
+    ns1:IAO_0000115 "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"@en ;
+    ns1:IAO_0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists."@en ;
+    rdfs:domain ns1:BFO_0000004 ;
+    rdfs:range ns1:BFO_0000034 ;
+    rdfs:subPropertyOf ns1:RO_0000053 .
 
-ns1:RO_0000057 a owl:ObjectProperty ;
-    rdfs:label "has participant",
-        "has participant"@en ;
-    ns1:IAO_0000112 "this blood coagulation has participant this blood clot"@en,
-        "this investigation has participant this investigator"@en,
-        "this process has participant this input material (or this output material)"@en ;
-    ns1:IAO_0000115 "a relation between a process and a continuant, in which the continuant is somehow involved in the process"@en ;
-    ns1:IAO_0000116 "Has_participant is a primitive instance-level relation between a process, a continuant, and a time at which the continuant participates in some way in the process. The relation obtains, for example, when this particular process of oxygen exchange across this particular alveolar membrane has_participant this particular sample of hemoglobin at this particular time."@en ;
-    rdfs:domain ns1:BFO_0000003 ;
-    rdfs:range ns1:BFO_0000002 .
+ns1:RO_0000086 a owl:ObjectProperty ;
+    rdfs:label "has quality"@en ;
+    ns1:IAO_0000112 "this apple has quality this red color"@en ;
+    ns1:IAO_0000115 "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"@en ;
+    ns1:IAO_0000116 "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist."@en ;
+    rdfs:range ns1:BFO_0000019 ;
+    rdfs:subPropertyOf ns1:RO_0000053 .
 
-ns1:RO_0000092 a owl:ObjectProperty ;
-    rdfs:label "disposition of"@en ;
-    ns1:IAO_0000115 "inverse of has disposition" ;
-    rdfs:subPropertyOf [ owl:inverseOf ns1:RO_0000053 ],
-        ns1:RO_0000052 .
+ns1:RO_0000087 a owl:ObjectProperty ;
+    rdfs:label "has role"@en ;
+    ns1:IAO_0000112 "this person has role this investigator role (more colloquially: this person has this role of investigator)"@en ;
+    ns1:IAO_0000115 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en ;
+    ns1:IAO_0000116 "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists."@en ;
+    rdfs:domain ns1:BFO_0000004 ;
+    rdfs:range ns1:BFO_0000023 ;
+    rdfs:subPropertyOf ns1:RO_0000053 .
 
 <http://purls.helmholtz-metadaten.de/mwo/MWO_0001002> a owl:Class ;
     rdfs:label "matwerk project"@en ;
     rdfs:comment "A MatWerk project is a project within the NFDI MatWerk consortium that involves coordinated research, development, or infrastructure activities aimed at advancing materials science and engineering through data-driven methodologies and digitalization." ;
     rdfs:subClassOf ns4:NFDI_0000002 .
+
+ns4:NFDI_0000226 a owl:ObjectProperty ;
+    rdfs:label "is subject of"@en ;
+    rdfs:comment "inverse of the relation 'is about'" ;
+    skos:altLabel "is described by" .
+
+ns1:BFO_0000002 a owl:Class ;
+    rdfs:label "continuant"@en ;
+    ns1:IAO_0000115 "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts."@en ;
+    ns1:IAO_0000116 "BFO 2 Reference: Continuant entities are entities which can be sliced to yield parts only along the spatial dimension, yielding for example the parts of your table which we call its legs, its top, its nails. ‘My desk stretches from the window to the door. It has spatial parts, and can be sliced (in space) in two. With respect to time, however, a thing is a continuant.’ [60, p. 240"@en ;
+    dc:identifier "008-BFO" ;
+    rdfs:subClassOf ns1:BFO_0000001 ;
+    owl:disjointWith ns1:BFO_0000003 ;
+    skos:definition "(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity"@en ;
+    skos:example "A human being; a tennis ball; a cave; a region of space; someone's temperature"@en .
 
 ns1:BFO_0000016 a owl:Class ;
     rdfs:label "disposition"@en ;
@@ -365,6 +374,19 @@ ns1:BFO_0000034 a owl:Class ;
     skos:definition "(Elucidation) A function is a disposition that exists in virtue of its bearer's physical make-up & this physical make-up is something the bearer possesses because it came into being either through evolution (in the case of natural biological entities) or through intentional design (in the case of artefacts) in order to realize processes of a certain sort"@en ;
     skos:example "The function of a hammer to drive in nails; the function of a heart pacemaker to regulate the beating of a heart through electricity"@en .
 
+ns1:IAO_0000136 a owl:ObjectProperty ;
+    rdfs:label "is about"@en ;
+    ns1:IAO_0000112 "This document is about information artifacts and their representations"@en ;
+    ns1:IAO_0000115 "A (currently) primitive relation that relates an information artifact to an entity."@en ;
+    ns1:IAO_0000116 """7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of "mentions" relation. Weaken the is_about relationship to be primitive. 
+
+We will try to build it back up by elaborating the various subproperties that are more precisely defined.
+
+Some currently missing phenomena that should be considered "about" are predications - "The only person who knows the answer is sitting beside me" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
+    ns1:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
+    rdfs:domain ns1:IAO_0000030 ;
+    owl:inverseOf ns4:NFDI_0000226 .
+
 ns1:IAO_0000300 a owl:Class ;
     rdfs:label "textual entity",
         "textual entity"@en ;
@@ -374,35 +396,6 @@ ns1:IAO_0000300 a owl:Class ;
         "MC, 2009-09-14 (following IAO call 2009-09-01): textual entities live at the FRBR (http://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records) manifestation level. Everything is significant: line break, pdf and html versions of same document are different textual entities."@en ;
     ns1:IAO_0000118 "text"@en ;
     rdfs:subClassOf ns1:IAO_0000030 .
-
-ns1:RO_0000085 a owl:ObjectProperty ;
-    rdfs:label "has function"@en ;
-    ns1:IAO_0000112 "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)"@en ;
-    ns1:IAO_0000115 "a relation between an independent continuant (the bearer) and a function, in which the function specifically depends on the bearer for its existence"@en ;
-    ns1:IAO_0000116 "A bearer can have many functions, and its functions can exist for different periods of time, but none of its functions can exist when the bearer does not exist. A function need not be realized at all the times that the function exists."@en ;
-    rdfs:domain ns1:BFO_0000004 ;
-    rdfs:range ns1:BFO_0000034 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns1:RO_0000052 ],
-        ns1:RO_0000053 .
-
-ns1:RO_0000086 a owl:ObjectProperty ;
-    rdfs:label "has quality"@en ;
-    ns1:IAO_0000112 "this apple has quality this red color"@en ;
-    ns1:IAO_0000115 "a relation between an independent continuant (the bearer) and a quality, in which the quality specifically depends on the bearer for its existence"@en ;
-    ns1:IAO_0000116 "A bearer can have many qualities, and its qualities can exist for different periods of time, but none of its qualities can exist when the bearer does not exist."@en ;
-    rdfs:range ns1:BFO_0000019 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns1:RO_0000052 ],
-        ns1:RO_0000053 .
-
-ns1:RO_0000087 a owl:ObjectProperty ;
-    rdfs:label "has role"@en ;
-    ns1:IAO_0000112 "this person has role this investigator role (more colloquially: this person has this role of investigator)"@en ;
-    ns1:IAO_0000115 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en ;
-    ns1:IAO_0000116 "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists."@en ;
-    rdfs:domain ns1:BFO_0000004 ;
-    rdfs:range ns1:BFO_0000023 ;
-    rdfs:subPropertyOf [ owl:inverseOf ns1:RO_0000052 ],
-        ns1:RO_0000053 .
 
 ns4:NFDI_0000002 a owl:Class ;
     rdfs:label "project"@en ;
@@ -466,24 +459,13 @@ ns1:BFO_0000035 a owl:Class ;
     skos:definition "p is a process boundary =Def p is a temporal part of a process & p has no proper temporal parts"@en ;
     skos:example "The boundary between the 2nd and 3rd year of your life"@en .
 
-ns1:IAO_0000136 a owl:ObjectProperty ;
-    rdfs:label "is about"@en ;
-    ns1:IAO_0000112 "This document is about information artifacts and their representations"@en ;
-    ns1:IAO_0000115 "A (currently) primitive relation that relates an information artifact to an entity."@en ;
-    ns1:IAO_0000116 """7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of "mentions" relation. Weaken the is_about relationship to be primitive. 
-
-We will try to build it back up by elaborating the various subproperties that are more precisely defined.
-
-Some currently missing phenomena that should be considered "about" are predications - "The only person who knows the answer is sitting beside me" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
-    ns1:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
-    rdfs:domain ns1:IAO_0000030 ;
-    owl:equivalentProperty [ owl:inverseOf ns4:NFDI_0000226 ] ;
-    owl:inverseOf ns4:NFDI_0000226 .
-
-ns4:NFDI_0000226 a owl:ObjectProperty ;
-    rdfs:label "is subject of"@en ;
-    rdfs:comment "inverse of the relation 'is about'" ;
-    skos:altLabel "is described by" .
+ns1:RO_0000052 a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "characteristic of"@en ;
+    ns1:IAO_0000112 "this fragility is a characteristic of this vase"@en,
+        "this red color is a characteristic of this apple"@en ;
+    ns1:IAO_0000115 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en ;
+    owl:inverseOf ns1:RO_0000053 .
 
 ns1:BFO_0000001 a owl:Class ;
     rdfs:label "entity"@en ;
@@ -496,27 +478,17 @@ ns1:BFO_0000001 a owl:Class ;
     skos:definition "(Elucidation) An entity is anything that exists or has existed or will exist"@en ;
     skos:example "Julius Caesar; the Second World War; your body mass index; Verdi's Requiem"@en .
 
-ns1:BFO_0000002 a owl:Class ;
-    rdfs:label "continuant"@en ;
-    ns1:IAO_0000115 "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts."@en ;
-    ns1:IAO_0000116 "BFO 2 Reference: Continuant entities are entities which can be sliced to yield parts only along the spatial dimension, yielding for example the parts of your table which we call its legs, its top, its nails. ‘My desk stretches from the window to the door. It has spatial parts, and can be sliced (in space) in two. With respect to time, however, a thing is a continuant.’ [60, p. 240"@en ;
-    dc:identifier "008-BFO" ;
-    rdfs:subClassOf ns1:BFO_0000001 ;
-    owl:disjointWith ns1:BFO_0000003 ;
-    skos:definition "(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity"@en ;
-    skos:example "A human being; a tennis ball; a cave; a region of space; someone's temperature"@en .
-
 ns1:BFO_0000015 a owl:Class ;
     rdfs:label "process"@en ;
     ns1:IAO_0000115 "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])"@en ;
     dc:identifier "083-BFO" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom ns1:BFO_0000015 ;
+            owl:onProperty ns1:BFO_0000132 ],
+        [ a owl:Restriction ;
             owl:allValuesFrom [ a owl:Class ;
                     owl:unionOf ( ns1:BFO_0000015 ns1:BFO_0000035 ) ] ;
             owl:onProperty ns1:BFO_0000117 ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom ns1:BFO_0000015 ;
-            owl:onProperty ns1:BFO_0000132 ],
         ns1:BFO_0000003 ;
     skos:altLabel "event"@en ;
     skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
@@ -583,16 +555,7 @@ ns1:BFO_0000132 a owl:ObjectProperty,
     skos:definition "(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c"@en ;
     skos:example "Mary's 5th birthday is an occurrent part of Mary's life; the first set of the tennis match is an occurrent part of the tennis match"@en .
 
-ns1:RO_0000052 a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "characteristic of"@en ;
-    ns1:IAO_0000112 "this fragility is a characteristic of this vase"@en,
-        "this red color is a characteristic of this apple"@en ;
-    ns1:IAO_0000115 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en ;
-    owl:equivalentProperty [ owl:inverseOf ns1:RO_0000053 ] ;
-    owl:inverseOf ns1:RO_0000053 .
-
-<urn:swrl:var#e> a ns3:Variable .
+<urn:swrl:var#e> a ns2:Variable .
 
 ns1:BFO_0000003 a owl:Class ;
     rdfs:label "occurrent"@en ;
@@ -601,8 +564,6 @@ ns1:BFO_0000003 a owl:Class ;
     rdfs:subClassOf ns1:BFO_0000001 ;
     skos:definition "(Elucidation) An occurrent is an entity that unfolds itself in time or it is the start or end of such an entity or it is a temporal or spatiotemporal region"@en ;
     skos:example "As for process, history, process boundary, spatiotemporal region, zero-dimensional temporal region, one-dimensional temporal region, temporal interval, temporal instant."@en .
-
-<urn:swrl:var#d> a ns3:Variable .
 
 ns1:RO_0000053 a owl:InverseFunctionalProperty,
         owl:ObjectProperty ;
@@ -613,81 +574,83 @@ ns1:RO_0000053 a owl:InverseFunctionalProperty,
     ns1:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
     rdfs:range ns1:BFO_0000020 .
 
+<urn:swrl:var#d> a ns2:Variable .
+
 [] a owl:AllDisjointClasses ;
     owl:members ( ns1:BFO_0000004 ns1:BFO_0000020 ns1:BFO_0000031 ) .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( ns1:BFO_0000008 ns1:BFO_0000011 ns1:BFO_0000015 ns1:BFO_0000035 ) .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000016 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000016 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000091 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000091 ] ;
             rdf:rest () ] .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000019 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000019 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000086 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000086 ] ;
             rdf:rest () ] .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000023 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000023 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000087 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000087 ] ;
             rdf:rest () ] .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000034 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000034 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000085 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000085 ] ;
             rdf:rest () ] .
 
