@@ -1,0 +1,84 @@
+@prefix cto: <https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/> .
+@prefix nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+obo:BFO_0000199 a owl:ObjectProperty .
+
+obo:BFO_0000222 a owl:ObjectProperty .
+
+obo:BFO_0000224 a owl:ObjectProperty .
+
+obo:IAO_0000235 a owl:ObjectProperty .
+
+obo:RO_0002233 a owl:ObjectProperty .
+
+obo:RO_0002353 a owl:ObjectProperty .
+
+void:triples a owl:DatatypeProperty .
+
+time:inXSDDateTimeStamp a owl:DatatypeProperty .
+
+cto:cto-full.ttl a void:Dataset,
+        nfdi:NFDI_0000009 ;
+    rdfs:label "HosseinBeygiNasrabadi/creep-testing-ontology — cto-full.ttl" ;
+    obo:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#desc> ;
+    obo:RO_0002353 <https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#load> ;
+    void:classes 21 ;
+    void:dataDump "https://raw.githubusercontent.com/HosseinBeygiNasrabadi/creep-testing-ontology/1.0.0/cto-full.ttl"^^xsd:anyURI ;
+    void:distinctSubjects 3694 ;
+    void:properties 67 ;
+    void:propertyPartition [ void:property owl:onProperty ;
+            void:triples 718 ],
+        [ void:property rdf:rest ;
+            void:triples 1070 ],
+        [ void:property obo:IAO_0000119 ;
+            void:triples 132 ],
+        [ void:property rdfs:domain ;
+            void:triples 59 ] ;
+    void:triples 13057 .
+
+nfdi:NFDI_0001007 a owl:DatatypeProperty .
+
+nfdi:NFDI_0001008 a owl:DatatypeProperty .
+
+<https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#desc> a nfdi:NFDI_0001018 ;
+    rdfs:label "description" ;
+    nfdi:NFDI_0001007 """Imported RDF graph from github.
+source: HosseinBeygiNasrabadi/creep-testing-ontology
+registered_as: https://github.com/HosseinBeygiNasrabadi/creep-testing-ontology
+file: cto-full.ttl
+version: 1.0.0
+landing_page: https://github.com/HosseinBeygiNasrabadi/creep-testing-ontology/releases/tag/1.0.0
+download_url: https://raw.githubusercontent.com/HosseinBeygiNasrabadi/creep-testing-ontology/1.0.0/cto-full.ttl
+content_type: turtle
+sha256: 984efe8a099214c625f6df77f73c682738999da8cb399b52bff2528cb9a2c754
+harvested_at: 2026-07-30T21:10:39Z
+Statistics:
+  triples: 13057
+  subjects: 3694
+  predicates: 67
+  classes: 21""" .
+
+<https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#load> a obo:BFO_0000015 ;
+    rdfs:label "graph load of cto-full.ttl" ;
+    obo:BFO_0000199 <https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#tr> ;
+    obo:RO_0002233 <https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#source> .
+
+<https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#source> a nfdi:NFDI_0000027 ;
+    rdfs:label "cto-full.ttl" ;
+    nfdi:NFDI_0001007 "sha256:984efe8a099214c625f6df77f73c682738999da8cb399b52bff2528cb9a2c754" ;
+    nfdi:NFDI_0001008 "https://raw.githubusercontent.com/HosseinBeygiNasrabadi/creep-testing-ontology/1.0.0/cto-full.ttl"^^xsd:anyURI .
+
+<https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#tr> a obo:BFO_0000038 ;
+    obo:BFO_0000222 <https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#t0> ;
+    obo:BFO_0000224 <https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#t0> .
+
+<https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#t0> a obo:BFO_0000148 ;
+    time:inXSDDateTimeStamp "2026-07-30T21:10:39Z"^^xsd:dateTimeStamp .
+

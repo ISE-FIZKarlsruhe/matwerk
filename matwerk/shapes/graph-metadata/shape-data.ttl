@@ -1,0 +1,81 @@
+# The descriptive block the pipeline writes into every named graph it publishes.
+#
+# Nothing here describes the dataset's CONTENT — that is the rest of the graph.
+# This is the graph talking about itself: what it is, who made it, when, and how
+# big. It is the same handful of triples in every graph, which is what makes it
+# worth pinning down once.
+#
+# The property declarations at the top are not decoration. An OWL parser that
+# does not see a property declared treats the statement as an annotation, which
+# carries no logical meaning at all — so a reasoner run over a file without them
+# reports "consistent" no matter how broken the data is. Keeping them here is
+# what makes the reasoning panel on this page mean something.
+
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix mse:   <https://nfdi.fiz-karlsruhe.de/matwerk/> .
+# the graph this block describes; `ctg:` on its own is that IRI
+@prefix ctg:   <https://nfdi.fiz-karlsruhe.de/matwerk/graph/creep-testing-ontology> .
+
+obo:IAO_0000235 a owl:ObjectProperty .   # denoted by
+obo:RO_0002353  a owl:ObjectProperty .   # output of
+obo:RO_0000057  a owl:ObjectProperty .   # has participant
+obo:BFO_0000199 a owl:ObjectProperty .   # occupies temporal region
+obo:BFO_0000222 a owl:ObjectProperty .   # has first instant
+obo:BFO_0000224 a owl:ObjectProperty .   # has last instant
+
+# --- the graph itself -------------------------------------------------------
+ctg:
+    a obo:IAO_0001000 ,                  # data collection
+      void:Dataset ;
+    rdfs:label "creep · testing-ontology" ;
+    obo:IAO_0000235 ctg:_desc ;   # denoted by
+    obo:RO_0002353  ctg:_load ;   # output of
+    void:distinctSubjects 1583 ;
+    void:classes 27 ;
+    void:properties 62 .
+
+# --- what it is, in words ---------------------------------------------------
+# A description is INFORMATION. It is not an event, and the distinction is not
+# pedantry: `denoted by` demands an information content entity on its right, and
+# information is a continuant while an event is an occurrent. BFO declares those
+# two disjoint, so getting this type wrong does not merely mislabel the node —
+# it makes the entire graph logically inconsistent.
+ctg:_desc
+    a nfdi:NFDI_0001018 ;                # textual description
+    nfdi:NFDI_0001007 "Creep testing ontology, harvested from the project repository." .
+
+# --- how it got here --------------------------------------------------------
+# The load is the only thing on this page that HAPPENS, and so the only thing
+# allowed to occupy a temporal region.
+ctg:_load
+    a obo:BFO_0000015 ;                  # process
+    rdfs:label "graph load of \"creep · testing-ontology\"" ;
+    obo:RO_0000057  <https://orcid.org/0000-0002-1825-0097> ;   # has participant
+    obo:BFO_0000199 ctg:_tr .       # occupies temporal region
+
+ctg:_tr
+    a obo:BFO_0000038 ;                  # one-dimensional temporal region
+    obo:BFO_0000222 ctg:_begin ;
+    obo:BFO_0000224 ctg:_end .
+
+# Typed `temporal instant`, not its parent `zero-dimensional temporal region`:
+# the parent is accepted by a reasoner and says less, which is exactly how the
+# looser type survived unnoticed in the portal for so long.
+ctg:_begin
+    a obo:BFO_0000203 ;                  # temporal instant
+    time:inXSDDateTimeStamp "2026-07-22T07:22:59Z"^^xsd:dateTimeStamp .
+
+ctg:_end
+    a obo:BFO_0000203 ;
+    time:inXSDDateTimeStamp "2026-07-22T07:23:14Z"^^xsd:dateTimeStamp .
+
+<https://orcid.org/0000-0002-1825-0097>
+    a nfdi:NFDI_0000004 ;                # person
+    rdfs:label "Ebrahim Norouzi" .

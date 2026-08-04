@@ -1,0 +1,82 @@
+# The same block as it was actually written for months — and why it broke.
+#
+# One term differs from shape-data.ttl. The description node is typed
+# nfdi:NFDI_0000018 instead of nfdi:NFDI_0001018. Those two IRIs are one digit
+# apart, both exist, neither is deprecated, and both resolve.
+#
+#   NFDI_0001018   textual description   <- what was meant
+#   NFDI_0000018   academic event        <- what was written
+#
+# Turn on reasoning in the panel above and the graph comes back INCONSISTENT.
+# The chain HermiT follows is short and every link is somebody else's axiom:
+#
+#   denoted by  has range  information content entity
+#   information content entity  is a  generically dependent continuant
+#   generically dependent continuant  is a  continuant
+#   academic event  is an  event  is a  process  is an  occurrent
+#   continuant  is disjoint with  occurrent
+#
+# So the description has to be a continuant and an occurrent at once, which
+# nothing can be. An inconsistent graph is not a graph with one bad triple in it:
+# under OWL semantics everything follows from a contradiction, so every query
+# against it is entitled to return anything at all.
+#
+# Two things are worth noticing about how long this survived. Nothing flagged the
+# IRI, because the IRI was fine. And the tests passed, because they were written
+# from the same misunderstanding as the code — they asserted that the emitter
+# wrote NFDI_0000018, and it did.
+
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix mse:   <https://nfdi.fiz-karlsruhe.de/matwerk/> .
+# the graph this block describes; `ctg:` on its own is that IRI
+@prefix ctg:   <https://nfdi.fiz-karlsruhe.de/matwerk/graph/creep-testing-ontology> .
+
+obo:IAO_0000235 a owl:ObjectProperty .   # denoted by — declared, or none of this is checked
+obo:RO_0002353  a owl:ObjectProperty .
+obo:RO_0000057  a owl:ObjectProperty .
+obo:BFO_0000199 a owl:ObjectProperty .
+obo:BFO_0000222 a owl:ObjectProperty .
+obo:BFO_0000224 a owl:ObjectProperty .
+
+ctg:
+    a nfdi:NFDI_0000009 ,                # deprecated — see the shape
+      void:Dataset ;
+    rdfs:label "creep · testing-ontology" ;
+    obo:IAO_0000235 ctg:_desc ;
+    obo:RO_0002353  ctg:_load .
+
+ctg:_desc
+    a nfdi:NFDI_0000018 ;                # academic event  <-- THE BUG
+    nfdi:NFDI_0001007 "Creep testing ontology, harvested from the project repository." .
+
+ctg:_load
+    a obo:BFO_0000015 ;
+    rdfs:label "graph load of \"creep · testing-ontology\"" ;
+    obo:RO_0000057  <https://orcid.org/0000-0002-1825-0097> ;
+    obo:BFO_0000199 ctg:_tr .
+
+ctg:_tr
+    a obo:BFO_0000038 ;
+    obo:BFO_0000222 ctg:_begin ;
+    obo:BFO_0000224 ctg:_end .
+
+# Typed as the parent class rather than `temporal instant`. The reasoner accepts
+# this without a word, which is the second, quieter defect on this page.
+ctg:_begin
+    a obo:BFO_0000148 ;                  # zero-dimensional temporal region
+    time:inXSDDateTimeStamp "2026-07-22T07:22:59Z"^^xsd:dateTimeStamp .
+
+ctg:_end
+    a obo:BFO_0000148 ;
+    time:inXSDDateTimeStamp "2026-07-22T07:23:14Z"^^xsd:dateTimeStamp .
+
+<https://orcid.org/0000-0002-1825-0097>
+    a nfdi:NFDI_0000004 ;
+    rdfs:label "Ebrahim Norouzi" .

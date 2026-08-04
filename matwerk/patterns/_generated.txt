@@ -1,0 +1,25 @@
+agent	agent	591
+role	role	650
+process	process	683
+city	city	38
+people	people	60
+organization	organization	56
+dataset	dataset	30
+publication	publication	231
+software	software	202
+dataportal	dataportal	62
+instrument	instrument	11
+largescalefacility	largescalefacility	8
+metadata	metadata	20
+matwerkta	matwerkta	11
+matwerkiuc	matwerkiuc	34
+matwerkpp	matwerkpp	41
+temporal	temporal	173
+event	event	148
+collaboration	collaboration	25
+service	service	65
+sparql_endpoints	sparql_endpoints	23
+fdos	fdos	5
+ontologies	ontologies	109
+materials	materials	25
+value-nfdi-matwerk-consortium	nfdi matwerk consortium	38
