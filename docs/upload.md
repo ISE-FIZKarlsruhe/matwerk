@@ -12,6 +12,7 @@ Adding more data benefits us all. Depending on **your data type** and **how your
 |---|---|
 | I have a spreadsheet or other tabular data | [Scenario 1](#scenario-1-unstructured-data-eg-spreadsheet-not-represented-with-ontology) or [Scenario 4](#scenario-4-data-type-already-supported-in-mse-kg-eg-person-software) |
 | I already have RDF | [Scenario 2](#scenario-2-rdf-data-already-represented-with-ontology) |
+| I have RDF but **nowhere to host it** | [Scenario 2](#scenario-2-rdf-data-already-represented-with-ontology) — Route A (we harvest it) or Route B (data portal + federation) |
 | I run my own SPARQL endpoint | [Scenario 3](#scenario-3-rdf-data-in-a-triple-store-graph-database) |
 | I want to add FDOs | [Scenario 5](#scenario-5-fair-digital-objects-fdos) |
 
@@ -77,15 +78,79 @@ This is still a valid way to contribute to the MSE KG ecosystem.
 
 ### Scenario 2: RDF Data Already Represented with Ontology
 
-You already have **RDF data** and it is properly represented using an ontology. This allows direct integration into the MSE KG.
+You already have **RDF data**, properly represented using an ontology, and you **cannot
+or do not want to host it yourself**. There are two routes, and they differ in one
+thing: who stores the data.
 
-**What to do**
+#### Route A — we harvest it from where it already lives (GitHub or Zenodo)
 
+Best if your RDF is already published in a repository or a Zenodo record. We fetch the
+files on a schedule and load each one into **its own named graph** in the MSE KG, so it
+is queryable alongside everything else and stays linked to the repository it came from.
 
-1. Upload your repository to **Zenodo**:  
-   <a href="https://zenodo.org/communities/nfdi-matwerk/" target="_blank" rel="noopener noreferrer">NFDI MatWerk Community on Zenodo</a>
-2. Ensure that the **RDF files are included in the repository**.
-3. Your RDF will be integrated into the MSE KG in a **separate named graph**.
+1. Publish the RDF where we can reach it:
+    * a **GitHub release** — <a href="https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository" target="_blank" rel="noopener noreferrer">how to create a release</a>; or
+    * a **Zenodo record** — <a href="https://zenodo.org/communities/nfdi-matwerk/" target="_blank" rel="noopener noreferrer">NFDI-MatWerk community on Zenodo</a>.
+2. Register it in the **Semantic Dataset Sheet**:
+   <a href="https://docs.google.com/spreadsheets/d/1tiB4IZTCsjcw5QxBWk70XpRcwfw5-gs7CW2QTM5ZBiI/edit" target="_blank" rel="noopener noreferrer">Semantic Dataset Sheet</a> — one row, and only `url` is mandatory:
+
+    | column | what to put | needed |
+    |---|---|---|
+    | `Label` | a name for the dataset | yes |
+    | `url` | the repository URL, Zenodo record URL, or a DOI | **yes** |
+    | `source` | `github` or `zenodo` | no — inferred from the URL |
+    | `files` | which RDF files to load | no — the released artefacts are picked automatically |
+    | `Re-sync` | `weekly`, `monthly` or `none` | no |
+    | `License`, `Creator(s)` | as in the other sheets | recommended |
+
+3. Leave `files` empty unless you need to override the choice. The harvester takes the
+   **release assets** if the release has any, otherwise the **root-level RDF** of the
+   repository at the release tag, and collapses OBO-style variants
+   (`x.ttl`, `x-base.ttl`, `x-full.ttl`, `x-simple.ttl` + the `.owl` of each) to the
+   **full Turtle**. Name files explicitly only to pin a different variant, or to load
+   several data files that are not variants of one another.
+4. Open a <a href="https://github.com/ISE-FIZKarlsruhe/matwerk/issues" target="_blank" rel="noopener noreferrer">GitHub issue</a> so we can
+   discuss federated queries, mappings and schema alignment.
+
+After the next run your row is filled in with the **graph IRI** and a **query link**.
+See [How harvested RDF is modelled](pipeline/rdf-files-modelling.md) for what is
+created, and [the design patterns](patterns/index.md) for how it is shaped.
+
+#### Route B — publish it yourself on a data portal, and we federate
+
+Best if you want a citable landing page and your own SPARQL endpoint. The
+**MaterialDigital Data Portal** hosts the dataset and gives you a public Fuseki
+endpoint; we then federate that endpoint rather than copying your data.
+
+1. Register your dataset at
+   <a href="https://dataportal.material-digital.de/" target="_blank" rel="noopener noreferrer">dataportal.material-digital.de</a>
+   (a single RDF file or a whole repository).
+2. Copy the **public SPARQL endpoint** the portal gives you.
+3. Add it to the
+   <a href="https://docs.google.com/spreadsheets/d/1tiB4IZTCsjcw5QxBWk70XpRcwfw5-gs7CW2QTM5ZBiI/edit?gid=85394968#gid=85394968" target="_blank" rel="noopener noreferrer">SPARQL Endpoint Integration Sheet</a>.
+4. Open a <a href="https://github.com/ISE-FIZKarlsruhe/matwerk/issues" target="_blank" rel="noopener noreferrer">GitHub issue</a> to request federation.
+
+!!! example "A real one, end to end"
+    **Creep Literature Knowledge Graph (CreepLitKG)** took Route B — see
+    <a href="https://github.com/ISE-FIZKarlsruhe/matwerk/issues/17" target="_blank" rel="noopener noreferrer">issue #17</a>:
+
+    * source — <a href="https://github.com/HosseinBeygiNasrabadi/Creep_Literature_Knowledge_Graph" target="_blank" rel="noopener noreferrer">GitHub repository</a>
+    * landing page — <a href="https://dataportal.material-digital.de/dataset/creep_literature_knowledge_graph" target="_blank" rel="noopener noreferrer">MaterialDigital Data Portal</a>
+    * endpoint — `https://dataportal.material-digital.de/dataset/a5b4edc4-43ef-44ff-a386-5d1f6fbbc439/fuseki/$/sparql`
+    * registered in the SPARQL Endpoint Sheet, then federation requested by issue.
+
+#### Which route?
+
+| | Route A (we harvest) | Route B (portal + federation) |
+|---|---|---|
+| Who stores the data | the MSE KG, in its own named graph | you / the data portal |
+| You need to run a server | no | no (the portal runs it) |
+| Queryable in the MSE KG | yes, directly | yes, by federation |
+| Stays in step with your source | automatically, on a schedule | whenever you update the portal |
+| Citable landing page + DOI | via Zenodo | via the portal |
+
+Both are fine. Choose **A** if the RDF already lives in a repository and you want it
+inside the KG; choose **B** if you want your own endpoint and landing page.
 
 [⬆ Back to scenario selection](#choose-your-contribution-scenario)
 

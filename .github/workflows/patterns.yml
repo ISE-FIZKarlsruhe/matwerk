@@ -1,0 +1,175 @@
+name: Design patterns
+
+# Regenerate the ontology-design-pattern documentation from the live workbook and
+# the live ontology, and refuse anything a reasoner calls inconsistent.
+#
+# The patterns are generated, not written, so they can only stay correct if they are
+# regenerated when their inputs change. This runs weekly (the workbook is edited
+# continuously), on demand, and on every pull request that touches the generator, the
+# patterns themselves or the reasoning setup — so a change that breaks a pattern is
+# caught in review rather than in the published docs.
+
+on:
+  workflow_dispatch:
+    inputs:
+      mwo_version:
+        description: 'MWO version to generate against'
+        default: '3.0.1'
+      commit:
+        description: 'Commit the regenerated patterns'
+        type: boolean
+        default: true
+  pull_request:
+    paths:
+      - 'scripts/gen_patterns.py'
+      - 'docs/patterns/**'
+      - '.github/workflows/patterns.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patterns:
+    runs-on: ubuntu-latest
+    env:
+      MWO_VERSION: ${{ github.event.inputs.mwo_version || '3.0.1' }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '11'
+
+      - name: Install dependencies
+        run: pip install rdflib requests
+
+      - name: Fetch ROBOT
+        run: |
+          curl -sSL -o robot.jar \
+            https://github.com/ontodev/robot/releases/latest/download/robot.jar
+          java -jar robot.jar --version
+
+      - name: Fetch the ontology
+        run: |
+          curl -sSL -o mwo-full.ttl \
+            "https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v${MWO_VERSION}/mwo-full.ttl"
+          wc -c mwo-full.ttl
+
+      - name: Fetch nfdicore (extra labels)
+        run: |
+          curl -sSL -o nfdicore.ttl \
+            https://raw.githubusercontent.com/ISE-FIZKarlsruhe/nfdicore/main/nfdicore.ttl || true
+
+      - name: Regenerate the patterns from the live workbook
+        # --kg is not optional in practice: ten of the properties the workbook uses
+        # (has license, has identifier, has discipline, associated organisation …) are
+        # declared in NO published ontology file, only in the deployed merged ontology.
+        # Without it, module extraction leaves them undeclared and every statement
+        # using them is silently downgraded to an annotation.
+        run: |
+          python scripts/gen_patterns.py --fetch \
+            --sheets-dir .sheets \
+            --mwo mwo-full.ttl \
+            --labels nfdicore.ttl \
+            --kg server/data-main/all_NotReasoned.owl \
+            --robot robot.jar \
+            --mwo-version "${MWO_VERSION}" \
+            --out docs/patterns \
+            | tee gen.log
+          # the generator warns when a pattern's ODP unit test does not match its own
+          # example; that is a defect, not a note.
+          if grep -q "WARNING" gen.log; then
+            echo "::error::a generated pattern disagrees with its own unit test"
+            grep "WARNING" gen.log
+            exit 1
+          fi
+
+      - name: Every pattern and module must parse
+        run: |
+          python - <<'PY'
+          import glob, sys
+          from rdflib import Graph
+          files = sorted(glob.glob("docs/patterns/*/pattern.ttl")
+                         + glob.glob("docs/patterns/*/module.ttl"))
+          bad = []
+          for f in files:
+              try:
+                  Graph().parse(f, format="turtle")
+              except Exception as e:
+                  bad.append(f"{f}: {e}")
+          print(f"parsed {len(files)} files, {len(bad)} broken")
+          for b in bad:
+              print("  ", b)
+          sys.exit(1 if bad else 0)
+          PY
+
+      - name: No pattern may ship an undeclared property
+        # The whole point of extracting a module is that the building block stands
+        # alone. If a property used by the example is not declared in its module, an
+        # OWL parser treats the statement as an annotation and the reasoner cannot see
+        # it — which is exactly the failure this pipeline exists to prevent.
+        run: |
+          python - <<'PY'
+          import glob, os, sys
+          from rdflib import Graph, RDF, OWL, URIRef
+          PROP = (OWL.ObjectProperty, OWL.DatatypeProperty, OWL.AnnotationProperty)
+          bad = []
+          for mod in sorted(glob.glob("docs/patterns/*/module.ttl")):
+              g = Graph(); g.parse(mod, format="turtle")
+              declared = {s for s, _, o in g.triples((None, RDF.type, None)) if o in PROP}
+              # rdf/rdfs/owl and SWRL are W3C built-ins: an ontology carrying SWRL
+              # rules uses swrl:body/head/argument1… without declaring them, and that
+              # is correct. Everything else must be declared in the module.
+              BUILTIN = ("http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+                         "http://www.w3.org/2000/01/rdf-schema#",
+                         "http://www.w3.org/2002/07/owl#",
+                         "http://www.w3.org/2003/11/swrl#")
+              used = {p for _, p, _ in g if isinstance(p, URIRef)
+                      and not str(p).startswith(BUILTIN)}
+              missing = sorted(str(p) for p in used - declared)
+              if missing:
+                  bad.append((os.path.basename(os.path.dirname(mod)), missing))
+          for name, missing in bad:
+              print(f"::error::{name}: undeclared {', '.join(missing[:5])}")
+          print(f"{len(glob.glob('docs/patterns/*/module.ttl')) - len(bad)} modules fully declared")
+          sys.exit(1 if bad else 0)
+          PY
+
+      - name: Every pattern must be consistent with the ontology
+        run: |
+          fail=0
+          for f in docs/patterns/*/pattern.ttl docs/pipeline/examples/*.ttl; do
+            name=$(echo "$f" | tr '/' '_')
+            java -Xmx3g -jar robot.jar merge -i mwo-full.ttl -i "$f" \
+              explain --reasoner hermit -M inconsistency \
+              --explanation "/tmp/$name.md" > "/tmp/$name.log" 2>&1 || {
+                echo "::error file=$f::ROBOT failed to run"; fail=1; continue; }
+            # `explain` writes "No explanations found." when the merged ontology is
+            # consistent; anything else is a real explanation of a contradiction.
+            if grep -q "No explanations found" "/tmp/$name.md"; then
+              echo "consistent   $f"
+            else
+              echo "::error file=$f::inconsistent against MWO ${MWO_VERSION}"
+              sed 's/^/    /' "/tmp/$name.md"
+              fail=1
+            fi
+          done
+          exit $fail
+
+      - name: Commit the regenerated patterns
+        if: github.event_name != 'pull_request' && github.event.inputs.commit != 'false'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/patterns
+          if git diff --cached --quiet; then
+            echo "patterns unchanged"
+          else
+            git commit -m "docs: regenerate design patterns (MWO ${MWO_VERSION})"
+            git push
+          fi

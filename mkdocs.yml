@@ -40,17 +40,47 @@ nav:
       - Named Graphs Statistics: namedgraphsstatistics.md
   - Pipeline:
       - Overview: pipeline/index.md
+      - Pipeline Graph: pipeline/pipeline-graph.md
       - Template Processing: pipeline/process-spreadsheets.md
       - Merge: pipeline/merge.md
       - Reasoning: pipeline/reason.md
       - Validation: pipeline/validation.md
       - Harvesters: pipeline/harvesters.md
+      - Harvested RDF modelling: pipeline/rdf-files-modelling.md
       - Publish to Virtuoso: pipeline/publish.md
       - Dashboard DAG: pipeline/dashboard.md
       - Dump & Archive: pipeline/dump-and-archive.md
       - CQ Tester: pipeline/cq-tester.md
+  - Patterns:
+      - Overview: patterns/index.md
+      - agent: patterns/agent/pattern.md
+      - city: patterns/city/pattern.md
+      - collaboration: patterns/collaboration/pattern.md
+      - dataportal: patterns/dataportal/pattern.md
+      - dataset: patterns/dataset/pattern.md
+      - event: patterns/event/pattern.md
+      - fdos: patterns/fdos/pattern.md
+      - instrument: patterns/instrument/pattern.md
+      - largescalefacility: patterns/largescalefacility/pattern.md
+      - materials: patterns/materials/pattern.md
+      - matwerkiuc: patterns/matwerkiuc/pattern.md
+      - matwerkpp: patterns/matwerkpp/pattern.md
+      - matwerkta: patterns/matwerkta/pattern.md
+      - metadata: patterns/metadata/pattern.md
+      - ontologies: patterns/ontologies/pattern.md
+      - organization: patterns/organization/pattern.md
+      - people: patterns/people/pattern.md
+      - process: patterns/process/pattern.md
+      - publication: patterns/publication/pattern.md
+      - role: patterns/role/pattern.md
+      - service: patterns/service/pattern.md
+      - software: patterns/software/pattern.md
+      - sparql endpoints: patterns/sparql_endpoints/pattern.md
+      - temporal: patterns/temporal/pattern.md
+      - nfdi matwerk consortium: patterns/value-nfdi-matwerk-consortium/pattern.md
   - Shapes:
       - Overview: shapes/index.md
+      - Graph Metadata: shapes/graph-metadata/pattern.md
       - Textual Entity: shapes/textual-entity/pattern.md
       - No Punning: shapes/no-punning/pattern.md
       - Role Bearer: shapes/role-bearer/pattern.md

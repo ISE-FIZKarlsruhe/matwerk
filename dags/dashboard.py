@@ -23,11 +23,21 @@ NFDI_EVENT = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018"
 NFDI_ORG = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000003"
 NFDI_PERSON = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"
 
+# Dataset classes to count. Both the MWO 3.0.1 IRIs and their 3.0.2 replacements
+# are listed: MWO 3.0.2 deprecates NFDI_0000009 in favour of obo:IAO_0001000 (and
+# NFDI_0000190 in favour of obo:IAO_0000311). Counting both keeps the statistics
+# correct while graphs published before and after the ontology upgrade coexist —
+# a graph is not re-written when the ontology moves on.
 DATASET_TYPES = [
-    "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009",  # Dataset
+    "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009",  # dataset      (MWO <=3.0.1)
+    "http://purl.obolibrary.org/obo/IAO_0001000",           # data set     (MWO >=3.0.2)
     "http://purls.helmholtz-metadaten.de/mwo/MWO_0001058",
     "http://purls.helmholtz-metadaten.de/mwo/MWO_0001056",
     "http://purls.helmholtz-metadaten.de/mwo/MWO_0001057",
+]
+PUBLICATION_TYPES = [
+    NFDI_PUBLICATION,                                       # NFDI_0000190 (MWO <=3.0.1)
+    "http://purl.obolibrary.org/obo/IAO_0000311",           # publication  (MWO >=3.0.2)
 ]
 
 
@@ -544,6 +554,10 @@ def dashboard():
         rows = []
 
         for i, g in enumerate(graphs, start=1):
+            # VALUES (not a single class IRI) so both the MWO 3.0.1 classes and
+            # their 3.0.2 replacements are counted — see DATASET_TYPES above.
+            ds_values = " ".join(f"<{t}>" for t in DATASET_TYPES)
+            pub_values = " ".join(f"<{t}>" for t in PUBLICATION_TYPES)
             q = f"""
             SELECT
               (COUNT(DISTINCT ?ds) AS ?datasets)
@@ -551,8 +565,8 @@ def dashboard():
               (COUNT(DISTINCT ?ev) AS ?events)
             WHERE {{
               GRAPH <{g}> {{
-                OPTIONAL {{ ?ds a <{NFDI_DATASET}> . }}
-                OPTIONAL {{ ?pub a <{NFDI_PUBLICATION}> . }}
+                OPTIONAL {{ VALUES ?dsClass {{ {ds_values} }}  ?ds a ?dsClass . }}
+                OPTIONAL {{ VALUES ?pubClass {{ {pub_values} }} ?pub a ?pubClass . }}
                 OPTIONAL {{ ?ev a <{NFDI_EVENT}> . }}
               }}
             }}
@@ -596,11 +610,19 @@ def dashboard():
                 VALUES ?class {{ {types_values} }}
                 ?dataset a ?class .
 
+                # Titles come in three shapes and all three must be read, or a
+                # source silently lists with an empty title:
+                #  1. a title NODE (spreadsheet pipeline: denoted by -> title -> label)
+                #  2. a literal title (zenodo harvest: OBI_0002135)
+                #  3. the plain rdfs:label (harvested RDF-file graphs)
                 OPTIONAL {{
                   ?dataset <http://purl.obolibrary.org/obo/IAO_0000235> ?titleNode .
                   ?titleNode a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019> .
-                  ?titleNode rdfs:label ?title .
+                  ?titleNode rdfs:label ?nodeTitle .
                 }}
+                OPTIONAL {{ ?dataset <http://purl.obolibrary.org/obo/OBI_0002135> ?litTitle . }}
+                OPTIONAL {{ ?dataset rdfs:label ?labelTitle . }}
+                BIND(COALESCE(?nodeTitle, ?litTitle, ?labelTitle) AS ?title)
 
                 OPTIONAL {{
                   ?dataset <http://purl.obolibrary.org/obo/BFO_0000178> ?creator .

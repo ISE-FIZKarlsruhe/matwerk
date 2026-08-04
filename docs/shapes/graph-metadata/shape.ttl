@@ -1,0 +1,102 @@
+# Graph metadata shape.
+#
+# A reasoner answers one question — "does this contradict itself?" — about the
+# whole graph at once. It will not tell you that a description is missing, that a
+# class has been deprecated, or which node was at fault. This shape covers what
+# the reasoner structurally cannot, and the two together are the check.
+
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix void:  <http://rdfs.org/ns/void#> .
+@prefix time:  <http://www.w3.org/2006/time#> .
+@prefix ex:    <http://www.example.org/#> .
+
+# --- the graph node ---------------------------------------------------------
+ex:GraphMetadataShape
+    a sh:NodeShape ;
+    sh:targetClass void:Dataset ;
+    rdfs:label "A published named graph describes itself" ;
+
+    sh:property [
+        sh:path rdfs:label ;
+        sh:minCount 1 ; sh:minLength 1 ;
+        sh:message "A published graph must carry a human-readable label." ] ;
+
+    # The description must be a TEXTUAL DESCRIPTION. nfdi:NFDI_0000018 is
+    # "academic event" and sits one digit away; using it here is the mistake this
+    # shape exists to catch, and it makes the graph inconsistent rather than
+    # merely odd, because `denoted by` requires an information content entity.
+    sh:property [
+        sh:path obo:IAO_0000235 ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ;
+        sh:qualifiedValueShape [
+            sh:class nfdi:NFDI_0001018 ;
+            sh:property [
+                sh:path nfdi:NFDI_0001007 ;
+                sh:minCount 1 ; sh:minLength 1 ] ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:message "A published graph must be denoted by (obo:IAO_0000235) a textual description (nfdi:NFDI_0001018) carrying a non-empty value (nfdi:NFDI_0001007). NOT nfdi:NFDI_0000018, which is 'academic event'." ] ;
+
+    # The load process: exactly one, and it must be a process.
+    sh:property [
+        sh:path obo:RO_0002353 ;
+        sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+        sh:class obo:BFO_0000015 ;
+        sh:message "A published graph must be the output of (obo:RO_0002353) exactly one load process (obo:BFO_0000015)." ] ;
+    .
+
+# --- the load process -------------------------------------------------------
+ex:GraphLoadProcessShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf obo:RO_0002353 ;
+    rdfs:label "The load records who did it and when" ;
+
+    sh:property [
+        sh:path obo:RO_0000057 ;
+        sh:minCount 1 ; sh:nodeKind sh:IRI ;
+        sh:message "A load process must record at least one participant (obo:RO_0000057)." ] ;
+
+    sh:property [
+        sh:path obo:BFO_0000199 ;
+        sh:minCount 1 ; sh:maxCount 1 ; sh:nodeKind sh:IRI ;
+        sh:qualifiedValueShape [
+            sh:class obo:BFO_0000038 ;
+            sh:property [ sh:path obo:BFO_0000222 ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ;
+            sh:property [ sh:path obo:BFO_0000224 ; sh:minCount 1 ; sh:nodeKind sh:IRI ] ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:message "A load process must occupy exactly one 1D temporal region (obo:BFO_0000038) with a first (obo:BFO_0000222) and last (obo:BFO_0000224) instant." ] ;
+    .
+
+# --- the instants -----------------------------------------------------------
+# obo:BFO_0000203 "temporal instant" is the declared RANGE of has first/last
+# instant. Its parent obo:BFO_0000148 is accepted by a reasoner without complaint
+# because 203 is a subclass of 148 — so only a shape like this one notices that
+# the weaker type has been used and the precision thrown away.
+ex:GraphLoadInstantShape
+    a sh:NodeShape ;
+    sh:targetClass obo:BFO_0000203 ;
+    rdfs:label "Each instant carries a real timestamp" ;
+    sh:property [
+        sh:path time:inXSDDateTimeStamp ;
+        sh:minCount 1 ; sh:maxCount 1 ; sh:datatype xsd:dateTimeStamp ;
+        sh:message "A temporal instant (obo:BFO_0000203) must record its time via time:inXSDDateTimeStamp typed xsd:dateTimeStamp." ] ;
+    .
+
+# --- deprecated classes -----------------------------------------------------
+# Deprecation contradicts nothing, so no reasoner will ever raise it. Nine
+# deprecated nfdicore classes were found in live use across the stack; eight name
+# their replacement in the ontology itself. These are the ones that turn up in
+# graph metadata.
+ex:NoDeprecatedGraphClassShape
+    a sh:NodeShape ;
+    sh:targetClass void:Dataset ;
+    rdfs:label "No deprecated classes on a published graph" ;
+    sh:property [
+        sh:path rdf:type ;
+        sh:not [ sh:in ( nfdi:NFDI_0000009 nfdi:NFDI_0000014 nfdi:NFDI_0001054 ) ] ;
+        sh:message "Deprecated class. Use obo:IAO_0001000 'data collection' instead of nfdi:NFDI_0000009 'dataset', and obo:IAO_0000444 'publishing process' instead of nfdi:NFDI_0000014." ] ;
+    .

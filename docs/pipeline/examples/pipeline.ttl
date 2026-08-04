@@ -1,0 +1,111 @@
+# The MatWerk pipeline, modelled as RDF.
+#
+# Each Airflow DAG is a BFO process; each artefact it reads or writes is a file
+# data item. Modelling the pipeline rather than drawing it means the picture on
+# the Pipeline Overview page and the answer to "which DAG produces this file?"
+# come from the same source, and cannot drift apart.
+#
+# Property declarations are not decoration: an OWL parser that does not see a
+# property declared treats the statement as an annotation, which carries no
+# logical meaning — a reasoner would then call any nonsense "consistent".
+#
+# Ontology version: MWO 3.0.1 (http://purls.helmholtz-metadaten.de/mwo/mwo.owl/3.0.1)
+
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix dag:   <https://nfdi.fiz-karlsruhe.de/matwerk/pipeline/> .
+
+# --- TBox: the terms this pattern uses -------------------------------------
+obo:BFO_0000015 a owl:Class ;         rdfs:label "process" .
+nfdi:NFDI_0000027 a owl:Class ;       rdfs:label "file data item" .
+obo:RO_0002233  a owl:ObjectProperty ; rdfs:label "has input" .
+obo:RO_0002234  a owl:ObjectProperty ; rdfs:label "has output" .
+obo:BFO_0000063 a owl:ObjectProperty ; rdfs:label "precedes" .
+
+# --- ABox: the DAGs ---------------------------------------------------------
+dag:process_spreadsheets a obo:BFO_0000015 ;
+    rdfs:label "process_spreadsheets" ;
+    obo:RO_0002233 dag:google-sheet ;
+    obo:RO_0002234 dag:spreadsheets_asserted.ttl ;
+    obo:BFO_0000063 dag:merge .
+
+dag:harvester_rdf_files a obo:BFO_0000015 ;
+    rdfs:label "harvester_rdf_files" ;
+    obo:RO_0002233 dag:registration-tab , dag:spreadsheets_asserted.ttl ;
+    obo:RO_0002234 dag:rdf_files.ttl ;
+    obo:BFO_0000063 dag:publish_to_virtuoso .
+
+dag:semantic_dataset_resync a obo:BFO_0000015 ;
+    rdfs:label "semantic_dataset_resync" ;
+    obo:RO_0002233 dag:registration-tab ;
+    obo:RO_0002234 dag:rdf_files.ttl ;
+    obo:BFO_0000063 dag:publish_to_virtuoso .
+
+dag:harvester_zenodo a obo:BFO_0000015 ;
+    rdfs:label "harvester_zenodo" ;
+    obo:RO_0002233 dag:spreadsheets_asserted.ttl ;
+    obo:RO_0002234 dag:zenodo.ttl ;
+    obo:BFO_0000063 dag:publish_to_virtuoso .
+
+dag:harvester_endpoints a obo:BFO_0000015 ;
+    rdfs:label "harvester_endpoints" ;
+    obo:RO_0002233 dag:spreadsheets_asserted.ttl ;
+    obo:RO_0002234 dag:endpoints_merged_for_validation.ttl ;
+    obo:BFO_0000063 dag:publish_to_virtuoso .
+
+dag:merge a obo:BFO_0000015 ;
+    rdfs:label "merge" ;
+    obo:RO_0002233 dag:spreadsheets_asserted.ttl ;
+    obo:RO_0002234 dag:spreadsheets_asserted.ttl ;
+    obo:BFO_0000063 dag:reason_koncludix .
+
+dag:reason_koncludix a obo:BFO_0000015 ;
+    rdfs:label "reason_koncludix" ;
+    obo:RO_0002233 dag:spreadsheets_asserted.ttl ;
+    obo:RO_0002234 dag:spreadsheets_inferences.ttl ;
+    obo:BFO_0000063 dag:validation_checks .
+
+dag:validation_checks a obo:BFO_0000015 ;
+    rdfs:label "validation_checks" ;
+    obo:RO_0002233 dag:spreadsheets_inferences.ttl ;
+    obo:RO_0002234 dag:spreadsheets_merged_for_validation.ttl ;
+    obo:BFO_0000063 dag:publish_to_virtuoso .
+
+dag:publish_to_virtuoso a obo:BFO_0000015 ;
+    rdfs:label "publish_to_virtuoso" ;
+    obo:RO_0002233 dag:spreadsheets_merged_for_validation.ttl , dag:rdf_files.ttl ,
+                   dag:zenodo.ttl , dag:endpoints_merged_for_validation.ttl ;
+    obo:RO_0002234 dag:virtuoso-named-graphs ;
+    obo:BFO_0000063 dag:dashboard , dag:dump_and_archive .
+
+dag:dashboard a obo:BFO_0000015 ;
+    rdfs:label "dashboard" ;
+    obo:RO_0002233 dag:virtuoso-named-graphs ;
+    obo:RO_0002234 dag:superset-tables .
+
+dag:dump_and_archive a obo:BFO_0000015 ;
+    rdfs:label "dump_and_archive" ;
+    obo:RO_0002233 dag:virtuoso-named-graphs ;
+    obo:RO_0002234 dag:rdf-dumps .
+
+dag:cq-test a obo:BFO_0000015 ;
+    rdfs:label "cq-test" ;
+    obo:RO_0002233 dag:virtuoso-named-graphs ;
+    obo:RO_0002234 dag:cq-report .
+
+# --- ABox: the artefacts ----------------------------------------------------
+dag:google-sheet                       a nfdi:NFDI_0000027 ; rdfs:label "Google Sheet (26 template tabs)" .
+dag:registration-tab                   a nfdi:NFDI_0000027 ; rdfs:label "rdf_data registration tab" .
+dag:spreadsheets_asserted.ttl          a nfdi:NFDI_0000027 ; rdfs:label "spreadsheets_asserted.ttl" .
+dag:spreadsheets_inferences.ttl        a nfdi:NFDI_0000027 ; rdfs:label "spreadsheets_inferences.ttl" .
+dag:spreadsheets_merged_for_validation.ttl a nfdi:NFDI_0000027 ; rdfs:label "spreadsheets_merged_for_validation.ttl" .
+dag:rdf_files.ttl                      a nfdi:NFDI_0000027 ; rdfs:label "rdf_files.ttl (TriG)" .
+dag:zenodo.ttl                         a nfdi:NFDI_0000027 ; rdfs:label "zenodo.ttl" .
+dag:endpoints_merged_for_validation.ttl a nfdi:NFDI_0000027 ; rdfs:label "endpoints_merged_for_validation.ttl" .
+dag:virtuoso-named-graphs              a nfdi:NFDI_0000027 ; rdfs:label "Virtuoso named graphs" .
+dag:superset-tables                    a nfdi:NFDI_0000027 ; rdfs:label "Superset statistics tables" .
+dag:rdf-dumps                          a nfdi:NFDI_0000027 ; rdfs:label "RDF dumps (Zenodo deposit)" .
+dag:cq-report                          a nfdi:NFDI_0000027 ; rdfs:label "competency-question report" .

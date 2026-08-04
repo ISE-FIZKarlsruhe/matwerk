@@ -155,7 +155,7 @@ def build_metadata_ttl(f: GraphPublishFacts) -> str:
         "",
         
         # description node (denoted by)
-        f"<{desc_iri}> a nfdicore:NFDI_0000018 ; nfdicore:NFDI_0001007 {json.dumps(desc_value)} .",
+        f"<{desc_iri}> a nfdicore:NFDI_0001018 ; nfdicore:NFDI_0001007 {json.dumps(desc_value)} .",
         "",
 
         # url node (denoted by)
@@ -231,7 +231,7 @@ def build_graph_provenance_ttl(facts: GraphProvenanceFacts) -> str:
 
     Class/predicate choices align with build_metadata_ttl above:
       - nfdicore:NFDI_0000027  (file)
-      - nfdicore:NFDI_0000018  (description)
+      - nfdicore:NFDI_0001018  (textual description)
       - nfdicore:NFDI_0001007  (has value)
       - nfdicore:NFDI_0001008  (has url, anyURI)
       - obo:BFO_0000050        (part of)
@@ -276,7 +276,7 @@ def build_graph_provenance_ttl(facts: GraphProvenanceFacts) -> str:
 
     lines += [
         f"<{desc_iri}>",
-        f"  a nfdicore:NFDI_0000018 ;",
+        f"  a nfdicore:NFDI_0001018 ;",
         f"  rdfs:label \"description\" ;",
         f"  nfdicore:NFDI_0001007 {_ttl_str(desc_value)} .",
         "",
@@ -287,7 +287,7 @@ def build_graph_provenance_ttl(facts: GraphProvenanceFacts) -> str:
         val_text = "status: pending\nValidation will be filled in by the reasoner step."
         val_lines = [
             f"<{val_iri}>",
-            f"  a nfdicore:NFDI_0000018 ;",
+            f"  a nfdicore:NFDI_0001018 ;",
             f"  rdfs:label \"validation\" ;",
             f"  nfdicore:NFDI_0001007 {_ttl_str(val_text)} .",
             "",
@@ -303,7 +303,7 @@ def build_graph_provenance_ttl(facts: GraphProvenanceFacts) -> str:
             val_text += "\nfull_log:\n" + val.full_log
         val_lines = [
             f"<{val_iri}>",
-            f"  a nfdicore:NFDI_0000018 ;",
+            f"  a nfdicore:NFDI_0001018 ;",
             f"  rdfs:label \"validation\" ;",
             f"  nfdicore:NFDI_0001007 {_ttl_str(val_text)}"
             + (" ;" if not val.consistent else " ."),

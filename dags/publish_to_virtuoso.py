@@ -53,7 +53,88 @@ PUBLISH_TRIG_SOURCES = [
         "trig_name": "zenodo.ttl",
         "default_graph_iri": f"{GRAPH_ROOT}/zenodo_metadata",
     },
+    # RDF files registered in the Google Sheet (GitHub releases / Zenodo records):
+    # each file becomes its own Virtuoso graph; the TriG's default graph (source ->
+    # file has-part links + version/provenance + the stat: view the sheet's Apps
+    # Script queries) is loaded into `rdf_files_metadata`, so the connection to the
+    # registered repository/record stays queryable.
+    {
+        "stage": "rdf_files_per_graph",
+        "variable": "matwerk_last_successful_harvester_rdf_files_run",
+        "trig_name": "rdf_files.ttl",
+        "default_graph_iri": f"{GRAPH_ROOT}/rdf_files_metadata",
+    },
 ]
+
+
+def _publish_default_graph_metadata(
+    *,
+    default_graph_iri: str,
+    stage: str,
+    run_dir: str,
+    pg_graphs: list[dict],
+    started_iso: str,
+    ended_iso: str,
+) -> dict:
+    """Write a graph_metadata.py self-description INTO the TriG default graph
+    (zenodo_metadata / rdf_files_metadata).
+
+    The single-graph sources above append a build_metadata_ttl() block to their
+    own graph, so the portal's /graphs panel can show DAG / run / timestamps /
+    statistics / creator / license for them. The per-graph TriG path did not do
+    this for its default graph, so zenodo_metadata / rdf_files_metadata carried no
+    self-description and the panel had nothing to render.
+
+    `publish_trig_per_graph` already materialised the default graph's contents to
+    a TTL on disk; we reuse that file for stats, build the same metadata block
+    (graph_root = the default graph IRI, so the triples are about the graph
+    itself) and append it to the same Virtuoso graph (delete_first=False — the
+    registry is already loaded there and must not be cleared).
+
+    Non-fatal: if this step fails the registry itself is still published.
+    """
+    dg = next(
+        (
+            g for g in pg_graphs
+            if g.get("from_default_graph")
+            and g.get("status") == "published"
+            and g.get("ttl_path")
+            and os.path.exists(g["ttl_path"])
+        ),
+        None,
+    )
+    if not dg:
+        return {"status": "skipped", "reason": "no published default-graph ttl"}
+
+    ctx = get_current_context()
+    task = ctx.get("task")
+    ti = ctx.get("ti")
+
+    facts = GraphPublishFacts(
+        graph_root=default_graph_iri,
+        stage=stage,
+        dag_id=DAG_ID,
+        run_id=ctx["dag_run"].run_id,
+        data_graph_uri=default_graph_iri,
+        ttl_path=dg["ttl_path"],
+        started_at=started_iso,
+        ended_at=ended_iso,
+        task_id=getattr(task, "task_id", None),
+        operator=task.__class__.__name__ if task else None,
+        log_url=getattr(ti, "log_url", None),
+        hostname=socket.gethostname(),
+        stats=compute_rdf_stats(dg["ttl_path"]),
+    )
+
+    meta_ttl = build_metadata_ttl(facts)
+    meta_path = os.path.join(run_dir, f"{stage}__default_metadata.ttl")
+    with open(meta_path, "w", encoding="utf-8") as f:
+        f.write(meta_ttl)
+
+    # Append the self-description to the default graph (do NOT drop it first —
+    # the harvester's registry/provenance is already loaded there).
+    upload_ttl_file(graph=default_graph_iri, ttl_path=meta_path, delete_first=False)
+    return {"status": "published", "graph": default_graph_iri, "meta_path": meta_path}
 
 
 @dag(
@@ -239,12 +320,14 @@ def publish_to_virtuoso():
                     print(f"[INFO] default_graph_iri={default_graph_iri}")
 
                 workdir = os.path.join(run_dir, f"{stage}__per_graph")
+                trig_started_iso = utc_now_iso_seconds()
                 pg_report = publish_trig_per_graph(
                     trig_path,
                     workdir=workdir,
                     delete_first=True,
                     default_graph_iri=default_graph_iri,
                 )
+                trig_ended_iso = utc_now_iso_seconds()
                 entry["graphs"] = pg_report.get("graphs", [])
 
                 pub = sum(1 for g in entry["graphs"] if g.get("status") == "published")
@@ -257,6 +340,23 @@ def publish_to_virtuoso():
                     failures.append(f"{stage}:{fail}_graph_uploads_failed")
                 else:
                     entry["status"] = "published"
+
+                # Give the TriG default graph (zenodo_metadata / rdf_files_metadata)
+                # the same self-description block the single-graph sources get,
+                # so the portal's /graphs panel can show its publish metadata.
+                if default_graph_iri:
+                    try:
+                        entry["default_metadata"] = _publish_default_graph_metadata(
+                            default_graph_iri=default_graph_iri,
+                            stage=stage,
+                            run_dir=run_dir,
+                            pg_graphs=entry["graphs"],
+                            started_iso=trig_started_iso,
+                            ended_iso=trig_ended_iso,
+                        )
+                    except Exception as e:  # non-fatal: registry already published
+                        print(f"[WARN] default-graph metadata failed for {stage}: {e!r}")
+                        entry["default_metadata"] = {"status": "failed", "error": repr(e)}
             except Exception as e:
                 entry["status"] = "failed"
                 entry["error"] = repr(e)

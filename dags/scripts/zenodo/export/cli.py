@@ -402,7 +402,7 @@ def main():
             if doi:
                 g.add((fid, URIRef("https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006"), URIRef(to_doi_iri(str(doi)))))
                 doi_url = (rec.get("links", {}) or {}).get("doi") or (f"https://doi.org/{doi}" if not str(doi).startswith("http") else str(doi))
-                g.add((fid, URIRef("http://purl.org/dc/terms/isPartOf"), URIRef(doi_url)))
+                g.add((fid, URIRef("http://purl.obolibrary.org/obo/BFO_0000050"), URIRef(doi_url)))
                 g.add((fid, RDFS.seeAlso, URIRef(doi_url)))
 
             for local_path, content_type, inner_name in downloaded_map.get(file_key, []):
