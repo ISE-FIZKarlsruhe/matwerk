@@ -6,7 +6,7 @@
 
 ## What It Does
 
-Computes Knowledge Graph statistics by executing SPARQL queries against the Virtuoso triplestore and stores the results in a SQLite database. This database powers the [Apache Superset](https://superset.apache.org/) analytics dashboard, which provides interactive visualisations of MSE-KG content without requiring SPARQL expertise.
+Computes Knowledge Graph statistics by executing SPARQL queries against the Virtuoso triplestore and stores the results in a SQLite database. This database powers the [Apache Superset](https://superset.apache.org/) analytics dashboard, which provides interactive visualisations of MatWerk KG content without requiring SPARQL expertise.
 
 The DAG performs a daily snapshot of the graph's state, enabling time-series tracking of growth, content distribution, and structural evolution.
 
@@ -32,7 +32,7 @@ graph LR
 ```mermaid
 graph LR
     A["preflight"] --> B["ensure_tables"]
-    B --> C["list_mse_graphs"]
+    B --> C["list_matwerk_graphs"]
     C --> D["11 parallel<br/>write tasks"]
     D --> E["ensure_latest_views"]
 
@@ -45,7 +45,7 @@ graph LR
 
 ## SPARQL Queries
 
-The DAG executes 13 distinct SPARQL query patterns against Virtuoso, each targeting the 5 MSE-KG named graphs. Queries use HTTP Digest authentication and return JSON results.
+The DAG executes 13 distinct SPARQL query patterns against Virtuoso, each targeting the 5 MatWerk KG named graphs. Queries use HTTP Digest authentication and return JSON results.
 
 ### Graph Discovery
 

@@ -1,9 +1,9 @@
 <div class="hero-banner" markdown>
 <div class="hero-content" markdown>
 
-<span class="hero-eyebrow">MSE-KG · v[[ kg_version ]]</span>
+<span class="hero-eyebrow">MatWerk KG · v[[ kg_version ]]</span>
 
-# The Materials Science and Engineering (MSE) Knowledge Graph
+# The MatWerk Knowledge Graph
 
 **Semantic integration of distributed materials science resources** — enabling structured discovery, cross-resource linkage, and machine-actionable reuse across datasets, publications, software, and domain actors.
 
@@ -17,7 +17,7 @@ Aligned with **BFO** and domain ontologies for full semantic interoperability.
 </div>
 
 </div>
-![MSE-KG Visualization](img/matwerkBox.png)
+![MatWerk KG Visualization](img/matwerkBox.png)
 </div>
 
 
@@ -109,7 +109,7 @@ Lectures, workshops, lecture notes
 
 ## Ontological Foundation
 
-The MSE KG is grounded in explicit ontological modeling using formal vocabularies that ensure logical interpretability across heterogeneous sources.
+The MatWerk KG is grounded in explicit ontological modeling using formal vocabularies that ensure logical interpretability across heterogeneous sources.
 
 <div class="ontology-grid" markdown>
 
@@ -138,7 +138,7 @@ The MatWerk Ontology — domain-specific extensions for materials science and en
 ## Contribute Your Data
 
 !!! tip "Grow the graph"
-    The MSE KG improves with community contributions. Adding your data increases visibility and enables new connections across the materials science ecosystem.
+    The MatWerk KG improves with community contributions. Adding your data increases visibility and enables new connections across the materials science ecosystem.
 <div style="text-align:center; margin-top: 1.5rem;" markdown>
 
 <a href="https://nfdi.fiz-karlsruhe.de/matwerk/upload/" class="md-button md-button--primary">How to Contribute?</a>
@@ -196,17 +196,16 @@ Broader consortium context and programme information.
 
 ## How to Cite
 
-If you use the MSE-KG in your research, please cite it using the metadata in our [`CITATION.cff`](https://github.com/ISE-FIZKarlsruhe/matwerk/blob/main/CITATION.cff):
+If you use the MatWerk KG in your research, please cite it using the metadata in our [`CITATION.cff`](https://github.com/ISE-FIZKarlsruhe/matwerk/blob/main/CITATION.cff):
 
 ```bibtex
 @software{matwerk_kg,
   author    = {Norouzi, Ebrahim and Beygi Nasrabadi, Hossein
                and Singh, Gunjan and Algergawy, Alsayed
                and Waitelonis, J{\"o}rg and Sack, Harald},
-  title     = {The Materials Science and Engineering
-               Knowledge Graph (MSE KG)},
+  title     = {The MatWerk Knowledge Graph (MatWerk KG)},
   url       = {https://github.com/ISE-FIZKarlsruhe/matwerk},
-  version   = {2.1.1},
+  version   = {2.1.2},
   date      = {2026-04-07},
 }
 ```

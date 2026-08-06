@@ -136,7 +136,7 @@ init_data_dir -> generate_dumps -> upload_to_zenodo -> update_manifest
 
 Each Zenodo release contains:
 
-- **Title:** Materials Science and Engineering (MSE) Knowledge Graph - RDF Dumps (v{version})
+- **Title:** MatWerk Knowledge Graph - RDF Dumps (v{version})
 - **Authors:** Sack, Waitelonis, Norouzi, Beygi Nasrabadi (from MWO ontology)
 - **Contributors:** NFDI-MatWerk Community
 - **Community:** nfdi-matwerk

@@ -53,7 +53,7 @@ These value-node types live in the workbook's shared `req_2` tab but belong to t
 
 ## Query it
 
-Retrieve instances of this pattern from the MSE Knowledge Graph ([SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql)):
+Retrieve instances of this pattern from the MatWerk Knowledge Graph ([SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql)):
 
 ```sparql
 SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10
@@ -79,14 +79,14 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Name** | dataset |
 | **Submitted by** | the NFDI-MatWerk consortium |
 | **Also Known As** | the `dataset` template tab of the NFDI-MatWerk workbook |
-| **Intent** | To represent a dataset in the MSE Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
+| **Intent** | To represent a dataset in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
 | **Domains** | research data management; NFDI consortium structure |
 | **Competency Questions** | Which datasets does NFDI-MatWerk provide, and under which licence?; Who created a given dataset, and at which organisation?; Which dataset is described by a given metadata standard?; Which datasets relate to a given material or academic discipline? |
 | **Solution description** | An entity individual typed `nfdi:NFDI_0000009` carries identity and label; each descriptive value is a separate *value node* individual reached by `obo:IAO_0000235` (denoted by); links to other patterns are object properties onto those entities. Identity is a minted IRI `msekg:<epoch_ms><counter>`, so re-running the pipeline is idempotent. |
 | **Reusable OWL Building Block** | [`module.ttl`](module.ttl) — the example together with the axioms of every term it uses, extracted from the ontology, so the file stands alone |
 | **Consequences** | Values become reusable and independently addressable, and a value may be shared by many entities. The cost: every `I` reference resolves **by label**, so labels must be unique and a typo yields a silently missing relation rather than an error. |
 | **Scenarios** | “Datasets for the analysis of dislocations at grain boundaries and during vein formation in cyclically deformed Ni micropillars” is a dataset, with title “Datasets for the analysis of dislocations at grain boundaries and during vein formation in cyclically deformed Ni micropillars”; field of research “Computational analysis, Dislocations, Grain boundaries, Vein structures”; dataset participates in publishing process “dataset publishing process 1”. |
-| **Known Uses** | the MSE Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
+| **Known Uses** | the MatWerk Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
 | **Web References** | <https://nfdi-matwerk.de> · <https://ise-fizkarlsruhe.github.io/mwo/> |
 | **Other References** | https://doi.org/10.1002/adem.202502331 |
 | **Examples (OWL files)** | [`pattern.ttl`](pattern.ttl) — one real row of the tab, with its value nodes resolved |

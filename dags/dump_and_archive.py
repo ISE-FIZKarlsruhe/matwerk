@@ -334,7 +334,7 @@ def dump_and_archive():
             )
 
         desc_html = (
-            f"<p>RDF dumps of the Materials Science and Engineering (MSE) Knowledge Graph (v{version}).</p>"
+            f"<p>RDF dumps of the MatWerk Knowledge Graph (v{version}).</p>"
             f"<p>Semantic integration of distributed materials science resources — enabling structured "
             f"discovery, cross-resource linkage, and machine-actionable reuse across datasets, "
             f"publications, software, and domain actors.</p>"

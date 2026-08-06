@@ -2,7 +2,7 @@
 
 ## Introduction
 
-The MSE-KG validation pipeline includes a set of SPARQL verification queries that
+The MatWerk KG validation pipeline includes a set of SPARQL verification queries that
 act as automated quality gates. Each query is designed to detect a specific class of
 data-quality or ontology-conformance issue **before** new triples are published to the
 production knowledge graph.
@@ -40,7 +40,7 @@ pipeline.
 **What it checks:**
 Detects triples where an ORCID identifier (`https://orcid.org/...`) is used as a
 plain literal value instead of as an IRI resource, but only for subjects within the
-MSE-KG namespace (`https://purls.helmholtz-metadaten.de/msekg`).
+MatWerk KG namespace (`https://purls.helmholtz-metadaten.de/msekg`).
 
 **Why it matters:**
 ORCIDs are globally unique researcher identifiers and must be represented as IRIs so
@@ -83,7 +83,7 @@ declared as `owl:ObjectProperty` in the approved BFO profile
 they are permitted.
 
 **Why it matters:**
-The MSE-KG adopts BFO 2020 in a temporally-neutral profile that deliberately omits
+The MatWerk KG adopts BFO 2020 in a temporally-neutral profile that deliberately omits
 time-indexed predicates. Using a forbidden temporal predicate would introduce
 inconsistencies with the chosen ontological commitment and could break reasoning.
 

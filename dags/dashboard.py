@@ -238,7 +238,7 @@ def dashboard():
         log.info("Ensured metric tables exist")
 
     @task
-    def list_mse_graphs(limit: int = 2000) -> list[str]:
+    def list_matwerk_graphs(limit: int = 2000) -> list[str]:
         q = f"""
         SELECT DISTINCT ?g
         WHERE {{
@@ -961,7 +961,7 @@ def dashboard():
                 cx.execute(text(stmt))
         log.info("Ensured *_latest views exist (SQLite)")
 
-    graphs = list_mse_graphs()
+    graphs = list_matwerk_graphs()
     preflight_task = preflight()
     tables_task = ensure_tables()
 

@@ -119,7 +119,7 @@ def build_zenodo_metadata(
     Build the metadata dict for a Zenodo deposit.
     """
     return {
-        "title": f"Materials Science and Engineering (MSE) Knowledge Graph - RDF Dumps (v{version})",
+        "title": f"MatWerk Knowledge Graph - RDF Dumps (v{version})",
         "upload_type": "dataset",
         "description": description_html,
         "creators": [
@@ -138,7 +138,7 @@ def build_zenodo_metadata(
         "keywords": [
             "NFDI", "NFDI-MatWerk", "knowledge graph", "RDF",
             "materials science and engineering", "linked data",
-            "ontology", "MSE-KG", "SPARQL",
+            "ontology", "MatWerk KG", "SPARQL",
         ],
         "related_identifiers": [
             {

@@ -84,7 +84,7 @@ ORDER BY DESC(?beginTS)
 
 ---
 
-### What are the Zenodo file graphs imported into the MSE-KG?
+### What are the Zenodo file graphs imported into the MatWerk KG?
 
 ```sparql
 PREFIX zenodo_metadata: <https://nfdi.fiz-karlsruhe.de/matwerk/zenodo_metadata>

@@ -4,14 +4,14 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo:   <http://purl.obolibrary.org/obo/> .
 @prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@prefix mse:   <https://nfdi.fiz-karlsruhe.de/matwerk/> .
+@prefix matwerk: <https://nfdi.fiz-karlsruhe.de/matwerk/> .
 
-mse:nfdicore_homepage_url
+matwerk:nfdicore_homepage_url
     a nfdi:NFDI_0000223 ;
     rdfs:label "NFDIcore ontology homepage" ;
     nfdi:NFDI_0001008 "https://nfdi.fiz-karlsruhe.de/ontology/nfdicore"^^xsd:anyURI .
 
-mse:matwerk_sparql_endpoint_url
+matwerk:matwerk_sparql_endpoint_url
     a nfdi:NFDI_0000223 ;
     rdfs:label "MatWerk SPARQL endpoint" ;
     nfdi:NFDI_0001008 "https://matwerk.2e7.2f.2d.2e.2f.2d.2e.2f/sparql"^^xsd:anyURI .

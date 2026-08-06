@@ -126,7 +126,7 @@ skos:scopeNote a owl:AnnotationProperty .
         ns3:NFDI_0000107,
         ns3:NFDI_0001019 ;
     ns4:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
-    ns4:hasIntent "To represent a conference in the MSE Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
+    ns4:hasIntent "To represent a conference in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
     ns4:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010020> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
     ns4:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
     ns4:reengineeredFrom "ROBOT template directives, row 2 of the event tab" ;

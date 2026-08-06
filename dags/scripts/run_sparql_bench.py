@@ -68,9 +68,9 @@ def gather_queries(dirpath: Path):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--kg1", required=True)
-    ap.add_argument("--name1", default="BFO_MSE")
+    ap.add_argument("--name1", default="BFO_MATWERK")
     ap.add_argument("--kg2", required=True)
-    ap.add_argument("--name2", default="SCHEMA_MSE")
+    ap.add_argument("--name2", default="SCHEMA_MATWERK")
     ap.add_argument("--out", default="out_bench")
     ap.add_argument("--runs", type=int, default=3)
     ap.add_argument("--reasoner", choices=["none","rdfs","owlrl"], default="none")
@@ -81,8 +81,8 @@ def main():
     g1 = load_graph(args.kg1); reason(g1, args.reasoner)
     g2 = load_graph(args.kg2); reason(g2, args.reasoner)
 
-    bfo = gather_queries(Path("data")/"compare_kgs"/"sparql"/"BFO_MSE")
-    schema = gather_queries(Path("data")/"compare_kgs"/"sparql"/"SCHEMA_MSE")
+    bfo = gather_queries(Path("data")/"compare_kgs"/"sparql"/"BFO_MATWERK")
+    schema = gather_queries(Path("data")/"compare_kgs"/"sparql"/"SCHEMA_MATWERK")
 
     bmap = {qid:(path, desc, txt) for qid, path, desc, txt in bfo}
     smap = {qid:(path, desc, txt) for qid, path, desc, txt in schema}

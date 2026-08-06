@@ -35,7 +35,7 @@ reasoning: false
 
 ## Query it
 
-Retrieve instances of this pattern from the MSE Knowledge Graph ([SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql)):
+Retrieve instances of this pattern from the MatWerk Knowledge Graph ([SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql)):
 
 ```sparql
 SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10
@@ -47,7 +47,7 @@ The rows behind it are curated in the [`metadata` tab of the workbook](https://d
 
 The questions this pattern exists to answer. Each is answerable against the published graphs.
 
-1. Which metadata standards are used in MSE research data management?
+1. Which metadata standards are used in MatWerk research data management?
 2. Where is a given metadata standard documented, and who maintains it?
 3. Which datasets or repositories conform to a given metadata standard?
 
@@ -60,14 +60,14 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Name** | metadata |
 | **Submitted by** | the NFDI-MatWerk consortium |
 | **Also Known As** | the `metadata` template tab of the NFDI-MatWerk workbook |
-| **Intent** | To represent a metadata specification in the MSE Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
+| **Intent** | To represent a metadata specification in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
 | **Domains** | research data management; NFDI consortium structure |
-| **Competency Questions** | Which metadata standards are used in MSE research data management?; Where is a given metadata standard documented, and who maintains it?; Which datasets or repositories conform to a given metadata standard? |
+| **Competency Questions** | Which metadata standards are used in MatWerk research data management?; Where is a given metadata standard documented, and who maintains it?; Which datasets or repositories conform to a given metadata standard? |
 | **Solution description** | An entity individual typed `nfdi:NFDI_0001054` carries identity and label; each descriptive value is a separate *value node* individual reached by `obo:IAO_0000235` (denoted by); links to other patterns are object properties onto those entities. Identity is a minted IRI `msekg:<epoch_ms><counter>`, so re-running the pipeline is idempotent. |
 | **Reusable OWL Building Block** | [`module.ttl`](module.ttl) — the example together with the axioms of every term it uses, extracted from the ontology, so the file stands alone |
 | **Consequences** | Values become reusable and independently addressable, and a value may be shared by many entities. The cost: every `I` reference resolves **by label**, so labels must be unique and a typo yields a silently missing relation rather than an error. |
 | **Scenarios** | “Metadata schemes for materials science data” is a metadata specification, with name “Metadata schemes for materials science data”; repository link “url 560”; short description “Metadata schemes for materials science data in JSON representation as implemented in TTL representation in the application profiles in the version from 01.05.2022 of the research data management platform CoScInE. The schema are actively developed in the SFB1394 with the aim to construct defect phase diagrams in an automated fashion using all data from advanced experimental characterization and computer simulations produced in this Project collabration.”. |
-| **Known Uses** | the MSE Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
+| **Known Uses** | the MatWerk Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
 | **Web References** | <https://nfdi-matwerk.de> · <https://ise-fizkarlsruhe.github.io/mwo/> |
 | **Other References** | https://doi.org/10.1002/adem.202502331 |
 | **Examples (OWL files)** | [`pattern.ttl`](pattern.ttl) — one real row of the tab, with its value nodes resolved |

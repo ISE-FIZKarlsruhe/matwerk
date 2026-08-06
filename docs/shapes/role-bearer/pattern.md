@@ -56,19 +56,19 @@ ex:RoleBearerShape
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo:   <http://purl.obolibrary.org/obo/> .
 @prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@prefix mse:   <https://nfdi.fiz-karlsruhe.de/matwerk/> .
+@prefix matwerk: <https://nfdi.fiz-karlsruhe.de/matwerk/> .
 
-mse:principal_investigator_role_01
+matwerk:principal_investigator_role_01
     a obo:BFO_0000023 ;
     rdfs:label "Principal Investigator role of Dr. Mueller" ;
-    obo:RO_0000081 mse:researcher_mueller ;
-    obo:BFO_0000054 mse:process_fatigue_study .
+    obo:RO_0000081 matwerk:researcher_mueller ;
+    obo:BFO_0000054 matwerk:process_fatigue_study .
 
-mse:researcher_mueller
+matwerk:researcher_mueller
     a obo:BFO_0000040 ;
     rdfs:label "Dr. Anna Mueller" .
 
-mse:process_fatigue_study
+matwerk:process_fatigue_study
     a obo:BFO_0000015 ;
     rdfs:label "Fatigue characterisation study of titanium alloys" .
 ```

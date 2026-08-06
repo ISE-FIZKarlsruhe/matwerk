@@ -1,6 +1,6 @@
-# 🌐 Add Your Data to the MSE Knowledge Graph (MSE KG)
+# 🌐 Add Your Data to the MatWerk Knowledge Graph (MatWerk KG)
 
-The **MSE Knowledge Graph (MSE KG)** improves **data visibility** and serves as an **indexing and discovery layer** for materials science and engineering resources. It helps people **find, connect, and reuse data** more easily.
+The **MatWerk Knowledge Graph (MatWerk KG)** improves **data visibility** and serves as an **indexing and discovery layer** for materials science and engineering resources. It helps people **find, connect, and reuse data** more easily.
 
 Adding more data benefits us all. Depending on **your data type** and **how your data is currently stored**, choose the scenario below that best matches your case.
 
@@ -10,7 +10,7 @@ Adding more data benefits us all. Depending on **your data type** and **how your
 
 | Your situation | Recommended scenario |
 |---|---|
-| I have a spreadsheet or other tabular data | [Scenario 1](#scenario-1-unstructured-data-eg-spreadsheet-not-represented-with-ontology) or [Scenario 4](#scenario-4-data-type-already-supported-in-mse-kg-eg-person-software) |
+| I have a spreadsheet or other tabular data | [Scenario 1](#scenario-1-unstructured-data-eg-spreadsheet-not-represented-with-ontology) or [Scenario 4](#scenario-4-data-type-already-supported-in-matwerk-kg-eg-person-software) |
 | I already have RDF | [Scenario 2](#scenario-2-rdf-data-already-represented-with-ontology) |
 | I have RDF but **nowhere to host it** | [Scenario 2](#scenario-2-rdf-data-already-represented-with-ontology) — Route A (we harvest it) or Route B (data portal + federation) |
 | I run my own SPARQL endpoint | [Scenario 3](#scenario-3-rdf-data-in-a-triple-store-graph-database) |
@@ -22,7 +22,7 @@ Adding more data benefits us all. Depending on **your data type** and **how your
 
 ## 📚 Supported Data Types
 
-The MSE KG currently supports the following resource types:
+The MatWerk KG currently supports the following resource types:
 
 <div class="datatype-grid">
   <div class="dtype">🏙️ City</div>
@@ -60,7 +60,7 @@ The MSE KG currently supports the following resource types:
 
 You have unstructured data such as a spreadsheet, but you do not want — or do not currently have the time — to model it using an ontology.
 
-This is still a valid way to contribute to the MSE KG ecosystem.
+This is still a valid way to contribute to the MatWerk KG ecosystem.
 
 > ⚠️ **Please note:** We cannot structure the data for you.
 
@@ -70,7 +70,7 @@ This is still a valid way to contribute to the MSE KG ecosystem.
 1. Upload your spreadsheet to **Zenodo**:  
    <a href="https://zenodo.org/communities/nfdi-matwerk/" target="_blank" rel="noopener noreferrer">NFDI MatWerk Community on Zenodo</a>
 2. Provide **ROR IDs** for organizations and **ORCID IDs** for people, where applicable.
-3. Your data can then be **automatically harvested** and added to the MSE KG.
+3. Your data can then be **automatically harvested** and added to the MatWerk KG.
 
 [⬆ Back to scenario selection](#choose-your-contribution-scenario)
 
@@ -85,7 +85,7 @@ thing: who stores the data.
 #### Route A — we harvest it from where it already lives (GitHub or Zenodo)
 
 Best if your RDF is already published in a repository or a Zenodo record. We fetch the
-files on a schedule and load each one into **its own named graph** in the MSE KG, so it
+files on a schedule and load each one into **its own named graph** in the MatWerk KG, so it
 is queryable alongside everything else and stays linked to the repository it came from.
 
 1. Publish the RDF where we can reach it:
@@ -143,9 +143,9 @@ endpoint; we then federate that endpoint rather than copying your data.
 
 | | Route A (we harvest) | Route B (portal + federation) |
 |---|---|---|
-| Who stores the data | the MSE KG, in its own named graph | you / the data portal |
+| Who stores the data | the MatWerk KG, in its own named graph | you / the data portal |
 | You need to run a server | no | no (the portal runs it) |
-| Queryable in the MSE KG | yes, directly | yes, by federation |
+| Queryable in the MatWerk KG | yes, directly | yes, by federation |
 | Stays in step with your source | automatically, on a schedule | whenever you update the portal |
 | Citable landing page + DOI | via Zenodo | via the portal |
 
@@ -158,14 +158,14 @@ inside the KG; choose **B** if you want your own endpoint and landing page.
 
 ### Scenario 3: RDF Data in a Triple Store (Graph Database)
 
-You already maintain your own **triple store** and provide a **SPARQL endpoint**. In this case, we can connect your graph to the MSE KG so users can query it more seamlessly.
+You already maintain your own **triple store** and provide a **SPARQL endpoint**. In this case, we can connect your graph to the MatWerk KG so users can query it more seamlessly.
 
 **What to do**
 
 
 1. Add your SPARQL endpoint to the integration sheet:  
    <a href="https://docs.google.com/spreadsheets/d/1tiB4IZTCsjcw5QxBWk70XpRcwfw5-gs7CW2QTM5ZBiI/edit?gid=85394968#gid=85394968" target="_blank" rel="noopener noreferrer">SPARQL Endpoint Integration Sheet</a>
-2. Your endpoint can then be **automatically integrated** into the MSE KG.
+2. Your endpoint can then be **automatically integrated** into the MatWerk KG.
 3. Optionally, open a GitHub issue to discuss:
    - mappings  
    - schema alignment  
@@ -177,9 +177,9 @@ You already maintain your own **triple store** and provide a **SPARQL endpoint**
 
 ---
 
-### Scenario 4: Data Type Already Supported in MSE KG (e.g., Person, Software)
+### Scenario 4: Data Type Already Supported in MatWerk KG (e.g., Person, Software)
 
-You want to contribute data about entities that are already supported in the MSE KG, such as **people**, **software**, or **organizations**.
+You want to contribute data about entities that are already supported in the MatWerk KG, such as **people**, **software**, or **organizations**.
 
 **What to do**
 
@@ -198,7 +198,7 @@ You want to contribute data about entities that are already supported in the MSE
 
 ### Scenario 5: FAIR Digital Objects (FDOs)
 
-You want to add your **FAIR Digital Objects (FDOs)** to the MSE KG.  
+You want to add your **FAIR Digital Objects (FDOs)** to the MatWerk KG.  
 We provide a simple, semi-automated process so your registered FDOs can be harvested and integrated directly into the graph.
 
 **What to do**
@@ -211,7 +211,7 @@ We provide a simple, semi-automated process so your registered FDOs can be harve
    - **type**
    - **related dataset or publication**
    - **persistent URL**
-3. Your FDOs will then be **automatically harvested** and integrated into the MSE KG via the **FAIR Digital Object Harvester** pipeline.
+3. Your FDOs will then be **automatically harvested** and integrated into the MatWerk KG via the **FAIR Digital Object Harvester** pipeline.
 4. Optionally, open a GitHub issue if you would like to discuss:
    - custom FDO mappings  
    - schema alignment  

@@ -1,6 +1,6 @@
 # Pipeline Overview
 
-The MSE-KG is constructed, validated, and published through an automated pipeline orchestrated by [Apache Airflow](https://airflow.apache.org/). The pipeline comprises eleven Directed Acyclic Graphs (DAGs) organised into three architectural tiers: a core processing chain, a parallel harvester tier, and a release tier.
+The MatWerk KG is constructed, validated, and published through an automated pipeline orchestrated by [Apache Airflow](https://airflow.apache.org/). The pipeline comprises eleven Directed Acyclic Graphs (DAGs) organised into three architectural tiers: a core processing chain, a parallel harvester tier, and a release tier.
 
 Ontology transformations throughout the pipeline rely on [ROBOT](https://robot.obolibrary.org/), an open-source command-line tool for automating OWL ontology development tasks including template processing, merging, reasoning, module extraction, and quality reporting.
 

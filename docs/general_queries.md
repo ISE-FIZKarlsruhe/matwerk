@@ -1,6 +1,6 @@
 ## General questions with the corresponding SPARQL queries
 
-### What are the submitted records in NFDI-MatWerk Zenodo community present in the MSE-KG?
+### What are the submitted records in NFDI-MatWerk Zenodo community present in the MatWerk KG?
 
 ```sparql
 PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
@@ -22,7 +22,7 @@ LIMIT 999
 
 ---
 
-### What are the Fair Digital Objects present in the MSE-KG?
+### What are the Fair Digital Objects present in the MatWerk KG?
 
 ```sparql
 PREFIX nfdicore_fdo:     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001037>
@@ -42,7 +42,7 @@ LIMIT 999
 
 ---
 
-### What are the softwares present in the MSE-KG? What are the license, programming language, repository URL and publication of these softwares?
+### What are the softwares present in the MatWerk KG? What are the license, programming language, repository URL and publication of these softwares?
 
 ```sparql
 PREFIX nfdicore_software:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121>
@@ -99,7 +99,7 @@ LIMIT 999
 
 ---
 
-### What are the services present in the MSE-KG? What are the service URL, documentation URL and code URL of these services?
+### What are the services present in the MatWerk KG? What are the service URL, documentation URL and code URL of these services?
 
 ```sparql
 PREFIX nfdicore_service:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232>
@@ -139,7 +139,7 @@ LIMIT 999
 
 ---
 
-### What are the organizations present in the MSE-KG? What are the acronym, city, rorID of these organizations?
+### What are the organizations present in the MatWerk KG? What are the acronym, city, rorID of these organizations?
 
 ```sparql
 PREFIX organization: <http://purl.obolibrary.org/obo/OBI_0000245>
@@ -171,7 +171,7 @@ LIMIT 999
 
 ---
 
-### What are the people present in the MSE-KG? What are the email addresses and ORCID IDs of these people?
+### What are the people present in the MatWerk KG? What are the email addresses and ORCID IDs of these people?
 
 ```sparql
 PREFIX nfdicore_person:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>
@@ -201,7 +201,7 @@ LIMIT 999
 
 ---
 
-### What are the events present in the MSE-KG? What are the URL, associated organization and participating consortia of these events?
+### What are the events present in the MatWerk KG? What are the URL, associated organization and participating consortia of these events?
 
 ```sparql
 PREFIX nfdicore_event:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000018>
@@ -249,7 +249,7 @@ LIMIT 999
 
 ---
 
-### What are the SPARQL endpoints in the MSE-KG that are about "process"?
+### What are the SPARQL endpoints in the MatWerk KG that are about "process"?
 
 ```sparql
 PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
@@ -286,7 +286,7 @@ ORDER BY ?dataset ?term_class
 
 ---
 
-### What are the datasets present in the MSE-KG? What are creators, creator's affiliations and link of these datasets?
+### What are the datasets present in the MatWerk KG? What are creators, creator's affiliations and link of these datasets?
 
 ```sparql
 PREFIX nfdicore_dataset:            <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
@@ -332,7 +332,7 @@ LIMIT 999
 
 ---
 
-### What are the data portals present in the MSE-KG? What are the links, repositories and contactpoint names or email addresses of these data portals?
+### What are the data portals present in the MatWerk KG? What are the links, repositories and contactpoint names or email addresses of these data portals?
 
 ```sparql
 PREFIX nfdicore_dataportal:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123>
@@ -386,7 +386,7 @@ LIMIT 999
 
 ---
 
-### What are the instruments present in the MSE-KG? What are the contactpoint names or email addresses or websites of these instruments?
+### What are the instruments present in the MatWerk KG? What are the contactpoint names or email addresses or websites of these instruments?
 
 ```sparql
 PREFIX pmd_instrument:    <https://w3id.org/pmd/co/PMD_0000602>
@@ -439,7 +439,7 @@ LIMIT 999
 
 ---
 
-### What are the large scale facilities present in the MSE-KG? What are the acronyms, organization or email or website of providers of these large scale facilities?
+### What are the large scale facilities present in the MatWerk KG? What are the acronyms, organization or email or website of providers of these large scale facilities?
 
 ```sparql
 PREFIX nfdicore_large_scale_facility:          <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001206>
@@ -497,7 +497,7 @@ LIMIT 999
 
 ---
 
-### What are the present metadata in the MSE-KG? What are the names and repository links of these metadata?
+### What are the present metadata in the MatWerk KG? What are the names and repository links of these metadata?
 
 ```sparql
 PREFIX nfdicore_metadata_specification: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054>
@@ -530,7 +530,7 @@ WHERE {
 
 ---
 
-### What are the ontologies present in the MSE-KG? What are the name and links of these ontologies?
+### What are the ontologies present in the MatWerk KG? What are the name and links of these ontologies?
 
 ```sparql
 PREFIX nfdicore_ontology: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023>
@@ -561,7 +561,7 @@ LIMIT 999
 
 ---
 
-### What are the international collaborations present in the MSE-KG? What are the names of these international collaborations?
+### What are the international collaborations present in the MatWerk KG? What are the names of these international collaborations?
 
 ```sparql
 PREFIX mwo_collaboration: <http://purls.helmholtz-metadaten.de/mwo/MWO_0001003>
@@ -584,7 +584,7 @@ LIMIT 999
 
 ---
 
-### What are the publications present in the MSE-KG? What are the DOI, authors and authors affiliations of these publications?
+### What are the publications present in the MatWerk KG? What are the DOI, authors and authors affiliations of these publications?
 
 ```sparql
 PREFIX nfdicore_publication:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190>
@@ -623,7 +623,7 @@ LIMIT 999
 
 ---
 
-### What are the Task Areas in MatWerk which are present in the MSE-KG?
+### What are the Task Areas in MatWerk which are present in the MatWerk KG?
 
 ```sparql
 PREFIX mwo_nfdi_matwerk_consortium:     <http://purls.helmholtz-metadaten.de/mwo/MWO_0001022>
@@ -648,7 +648,7 @@ LIMIT 999
 
 ---
 
-### What are the Infrastructure Use Cases in MatWerk which are present in the MSE-KG?
+### What are the Infrastructure Use Cases in MatWerk which are present in the MatWerk KG?
 
 ```sparql
 PREFIX mwo_iuc:       <http://purls.helmholtz-metadaten.de/mwo/MWO_0001026>
@@ -671,7 +671,7 @@ LIMIT 999
 
 ---
 
-### What are the Participant Projects in MatWerk which are present in the MSE-KG?
+### What are the Participant Projects in MatWerk which are present in the MatWerk KG?
 
 ```sparql
 PREFIX mwo_pp:        <http://purls.helmholtz-metadaten.de/mwo/MWO_0001029>
@@ -694,7 +694,7 @@ WHERE {
 
 ---
 
-### What are the SPARQL endpoints in the MSE-KG?
+### What are the SPARQL endpoints in the MatWerk KG?
 
 ```sparql
 PREFIX nfdicore_sparql_endpoint:     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095>

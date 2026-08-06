@@ -1,6 +1,6 @@
 # SHACL Shape Constraints
 
-The MSE-KG enforces structural integrity through SHACL (Shapes Constraint Language) validation. Each shape defines mandatory patterns that instances must satisfy to be included in a published release.
+The MatWerk KG enforces structural integrity through SHACL (Shapes Constraint Language) validation. Each shape defines mandatory patterns that instances must satisfy to be included in a published release.
 
 These shapes are executed automatically during every build cycle by the [validation pipeline](../pipeline/validation.md).
 

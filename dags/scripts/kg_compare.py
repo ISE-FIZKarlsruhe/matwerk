@@ -10,7 +10,7 @@ Adds to the original features:
 
 Example:
 
-python3 scripts/kg_compare.py --kg1 data/all_NotReasoned.ttl --name1 BFO_MSE --kg2 data/MSE_KG_old/mse_v1.ttl --name2 SCHEMA_MSE --label "Ebrahim Norouzi" --type schema:Person --out data/compare_kgs
+python3 scripts/kg_compare.py --kg1 data/all_NotReasoned.ttl --name1 BFO_MATWERK --kg2 data/MatWerk_KG_old/matwerk_v1.ttl --name2 SCHEMA_MATWERK --label "Ebrahim Norouzi" --type schema:Person --out data/compare_kgs
 
 Notes
 - CURIEs are supported if declared in the KG or provided with --prefix (e.g., --prefix schema=https://schema.org/).

@@ -1,6 +1,6 @@
 # Textual Entity
 
-Every textual entity in the MSE-KG must be *about* something. This shape enforces that any instance of `IAO_0000300` (Textual Entity) carries at least one `IAO_0000136` (is about) link to the resource it describes. Without this constraint, orphaned textual entities would lack semantic grounding and could not be discovered through topic-based queries.
+Every textual entity in the MatWerk KG must be *about* something. This shape enforces that any instance of `IAO_0000300` (Textual Entity) carries at least one `IAO_0000136` (is about) link to the resource it describes. Without this constraint, orphaned textual entities would lack semantic grounding and could not be discovered through topic-based queries.
 
 ## Visualization
 
@@ -51,14 +51,14 @@ ex:TextualEntityShape
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo:   <http://purl.obolibrary.org/obo/> .
 @prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@prefix mse:   <https://nfdi.fiz-karlsruhe.de/matwerk/> .
+@prefix matwerk: <https://nfdi.fiz-karlsruhe.de/matwerk/> .
 
-mse:publication_tensile_test_steel
+matwerk:publication_tensile_test_steel
     a obo:IAO_0000300 ;
     rdfs:label "Tensile Testing of High-Strength Steel Alloys" ;
-    obo:IAO_0000136 mse:dataset_tensile_results .
+    obo:IAO_0000136 matwerk:dataset_tensile_results .
 
-mse:dataset_tensile_results
+matwerk:dataset_tensile_results
     a obo:IAO_0000100 ;
     rdfs:label "Tensile test results for X80 pipeline steel" .
 ```

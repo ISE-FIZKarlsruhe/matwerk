@@ -1,6 +1,6 @@
-## General questions related to the statistics of the MSE KG with the corresponding SPARQL queries
+## General questions related to the statistics of the MatWerk KG with the corresponding SPARQL queries
 
-### What are the entity types (concepts) present in the MSE-KG?
+### What are the entity types (concepts) present in the MatWerk KG?
 
 ```sparql
 SELECT DISTINCT ?Concept ?label
@@ -12,7 +12,7 @@ LIMIT 999
 ```
 
 ---
-### How many entities exist for each concept in the MSE-KG?
+### How many entities exist for each concept in the MatWerk KG?
 
 ```sparql
 SELECT ?Concept ?label (COUNT(?entity) AS ?count)

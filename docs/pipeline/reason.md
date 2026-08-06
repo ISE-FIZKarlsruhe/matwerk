@@ -7,7 +7,7 @@
 
 ## What It Does
 
-Performs OWL 2 DL reasoning over the MSE-KG to materialise implicit knowledge that is only derivable from the ontological axioms defined in MWO, NFDIcore, and BFO. The reasoner computes the deductive closure of the ABox with respect to the TBox, generating inferred class assertions, subclass relationships, property assertions, and inverse-property entailments that are not explicitly stated in the input graph but are logically entailed by the ontology.
+Performs OWL 2 DL reasoning over the MatWerk KG to materialise implicit knowledge that is only derivable from the ontological axioms defined in MWO, NFDIcore, and BFO. The reasoner computes the deductive closure of the ABox with respect to the TBox, generating inferred class assertions, subclass relationships, property assertions, and inverse-property entailments that are not explicitly stated in the input graph but are logically entailed by the ontology.
 
 The pipeline uses [Konclude](https://github.com/konclude/Konclude), a high-performance OWL 2 reasoner that supports the $\mathcal{SROIQ}(\mathcal{D})$ description logic. Konclude is invoked through the [Koncludix](https://github.com/ISE-FIZKarlsruhe/Koncludix) Python wrapper, which drives Konclude through a small set of SPARQL extraction jobs (classes, object/datatype properties, sub-property hierarchies, class assertions) and recombines the XML results into a single inferences Turtle file.
 
@@ -62,7 +62,7 @@ robot remove --input input.ttl \
 
 ## Step 2: Merge with NFDIcore Extension
 
-In parallel to the pre-filter step, the pipeline fetches the current NFDIcore extension ontology from the URL stored in the Airflow Variable `nfdicore_extension` and writes it next to the filtered input. ROBOT is then used to merge the filtered MSE-KG with the NFDIcore extension and to expand any macro axioms:
+In parallel to the pre-filter step, the pipeline fetches the current NFDIcore extension ontology from the URL stored in the Airflow Variable `nfdicore_extension` and writes it next to the filtered input. ROBOT is then used to merge the filtered MatWerk KG with the NFDIcore extension and to expand any macro axioms:
 
 ```bash
 robot merge \

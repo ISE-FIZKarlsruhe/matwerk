@@ -66,7 +66,7 @@ TABS: List[Tuple[str, str]] = [
 NFDI = "https://nfdi.fiz-karlsruhe.de/ontology/"
 OBO = "http://purl.obolibrary.org/obo/"
 MWO = "http://purls.helmholtz-metadaten.de/mwo/"
-MSEKG = "https://nfdi.fiz-karlsruhe.de/matwerk/msekg/"
+MATWERK_KG = "https://nfdi.fiz-karlsruhe.de/matwerk/msekg/"
 # The ODP community's annotation vocabulary, used to annotate the formalisation
 # itself (odpa/patterns-repository ships it inside pattern directories).
 CPA = "http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#"
@@ -77,7 +77,7 @@ PREFIXES = [
     ("rdfs", "http://www.w3.org/2000/01/rdf-schema#"),
     ("owl", "http://www.w3.org/2002/07/owl#"),
     ("xsd", "http://www.w3.org/2001/XMLSchema#"),
-    ("obo", OBO), ("nfdi", NFDI), ("mwo", MWO), ("msekg", MSEKG),
+    ("obo", OBO), ("nfdi", NFDI), ("mwo", MWO), ("msekg", MATWERK_KG),
 ]
 # req_1 and req_2 are not patterns. They are the workbook's shared pool of *value
 # nodes* — titles, names, websites, roles — that every other tab's `I` columns point
@@ -123,7 +123,7 @@ MWO_LICENCE = "CC BY 4.0 (repository); CC0 1.0 declared in the ontology header"
 # researchers, organizations), the NFDI resources (software, workflows, ontologies,
 # publications, datasets, metadata schemas, instruments, facilities, educational
 # material) and the services, academic events and collaborations — so each question is
-# one the MSE Knowledge Graph is meant to answer, not an invented illustration.
+# one the MatWerk Knowledge Graph is meant to answer, not an invented illustration.
 CQS: Dict[str, List[str]] = {
     "people": [
         "Which researchers are involved in NFDI-MatWerk, and in which task area?",
@@ -166,7 +166,7 @@ CQS: Dict[str, List[str]] = {
         "Which measurement methods does an instrument support?",
     ],
     "largescalefacility": [
-        "Which large-scale facilities are available to the MSE community?",
+        "Which large-scale facilities are available to the MatWerk community?",
         "Which organisation hosts a given facility, and which instruments does it house?",
     ],
     "service": [
@@ -200,12 +200,12 @@ CQS: Dict[str, List[str]] = {
         "Which data formats and PID systems does a given repository support?",
     ],
     "sparql_endpoints": [
-        "Which SPARQL endpoints can the MSE Knowledge Graph be federated with?",
+        "Which SPARQL endpoints can the MatWerk Knowledge Graph be federated with?",
         "What is the endpoint URL of a given knowledge graph, and under which licence is it offered?",
         "Who created and maintains a given endpoint's dataset?",
     ],
     "metadata": [
-        "Which metadata standards are used in MSE research data management?",
+        "Which metadata standards are used in MatWerk research data management?",
         "Where is a given metadata standard documented, and who maintains it?",
         "Which datasets or repositories conform to a given metadata standard?",
     ],
@@ -547,7 +547,7 @@ def pattern_meta(tab: str, entity_type: str, cols: List[dict], labels: Dict[str,
     strings, produced once.
     """
     entity_label = labels.get(entity_type, "") or (curie(entity_type) if entity_type else "entity")
-    intent = (f"To represent a {entity_label} in the MSE Knowledge Graph: its identity, the "
+    intent = (f"To represent a {entity_label} in the MatWerk Knowledge Graph: its identity, the "
               f"value nodes that describe it, and its links to the other entities the "
               f"NFDI-MatWerk consortium records.")
 
@@ -906,7 +906,7 @@ def write_md(tab: str, cols: List[dict], labels: Dict[str, str], out_dir: str,
         lines += [
             "## Query it",
             "",
-            "Retrieve instances of this pattern from the MSE Knowledge Graph "
+            "Retrieve instances of this pattern from the MatWerk Knowledge Graph "
             "([SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql)):",
             "",
             "```sparql",
@@ -973,7 +973,7 @@ def write_md(tab: str, cols: List[dict], labels: Dict[str, str], out_dir: str,
         f"label**, so labels must be unique and a typo yields a silently missing relation "
         f"rather than an error. |",
         f"| **Scenarios** | {scenario} |",
-        f"| **Known Uses** | the MSE Knowledge Graph "
+        f"| **Known Uses** | the MatWerk Knowledge Graph "
         f"(`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |",
         f"| **Web References** | <https://nfdi-matwerk.de> · "
         f"<https://ise-fizkarlsruhe.github.io/mwo/> |",

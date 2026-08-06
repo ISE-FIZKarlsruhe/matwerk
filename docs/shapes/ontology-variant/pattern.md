@@ -51,14 +51,14 @@ ex:OntoVariantShape
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo:   <http://purl.obolibrary.org/obo/> .
 @prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@prefix mse:   <https://nfdi.fiz-karlsruhe.de/matwerk/> .
+@prefix matwerk: <https://nfdi.fiz-karlsruhe.de/matwerk/> .
 
-mse:nfdicore_variant_full
+matwerk:nfdicore_variant_full
     a nfdi:NFDI_0000024 ;
     rdfs:label "NFDIcore Full Variant" ;
-    obo:BFO_0000050 mse:nfdicore_ontology .
+    obo:BFO_0000050 matwerk:nfdicore_ontology .
 
-mse:nfdicore_ontology
+matwerk:nfdicore_ontology
     a nfdi:NFDI_0000023 ;
     rdfs:label "NFDIcore Ontology" .
 ```

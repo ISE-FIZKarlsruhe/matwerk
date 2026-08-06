@@ -1,6 +1,6 @@
 ## RDF Dumps
 
-Versioned RDF dumps of the MSE Knowledge Graph named graphs, archived on Zenodo with persistent DOIs.
+Versioned RDF dumps of the MatWerk Knowledge Graph named graphs, archived on Zenodo with persistent DOIs.
 
 Each release includes one Turtle (`.ttl`) file per named graph plus a metadata file describing the dump using the [MWO ontology](https://ise-fizkarlsruhe.github.io/mwo/) (v[[ dumps.releases[0].mwo_version if dumps.releases else "–" ]]).
 

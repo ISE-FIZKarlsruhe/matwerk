@@ -44,7 +44,7 @@ These value-node types live in the workbook's shared `req_2` tab but belong to t
 
 ## Query it
 
-Retrieve instances of this pattern from the MSE Knowledge Graph ([SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql)):
+Retrieve instances of this pattern from the MatWerk Knowledge Graph ([SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql)):
 
 ```sparql
 SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10
@@ -70,14 +70,14 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Name** | publication |
 | **Submitted by** | the NFDI-MatWerk consortium |
 | **Also Known As** | the `publication` template tab of the NFDI-MatWerk workbook |
-| **Intent** | To represent a publication in the MSE Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
+| **Intent** | To represent a publication in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
 | **Domains** | research data management; NFDI consortium structure |
 | **Competency Questions** | Which publications resulted from a given task area or infrastructure use case?; What is the DOI of a given publication, and who are its authors in order?; Which publications describe a given software, dataset or instrument?; In which year and through which publishing process did a publication appear? |
 | **Solution description** | An entity individual typed `nfdi:NFDI_0000190` carries identity and label; each descriptive value is a separate *value node* individual reached by `obo:IAO_0000235` (denoted by); links to other patterns are object properties onto those entities. Identity is a minted IRI `msekg:<epoch_ms><counter>`, so re-running the pipeline is idempotent. |
 | **Reusable OWL Building Block** | [`module.ttl`](module.ttl) — the example together with the axioms of every term it uses, extracted from the ontology, so the file stands alone |
 | **Consequences** | Values become reusable and independently addressable, and a value may be shared by many entities. The cost: every `I` reference resolves **by label**, so labels must be unique and a typo yields a silently missing relation rather than an error. |
 | **Scenarios** | “Automated free-energy calculation from atomistic simulations” is a publication, with denoted by title “Automated free-energy calculation from atomistic simulations __name__”; author(s) “Sarath Menon, Yury Lysogorskiy, Jutta Rogal, Ralf Drautz”; author(s) affiliation “Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation”. |
-| **Known Uses** | the MSE Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
+| **Known Uses** | the MatWerk Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
 | **Web References** | <https://nfdi-matwerk.de> · <https://ise-fizkarlsruhe.github.io/mwo/> |
 | **Other References** | https://doi.org/10.1002/adem.202502331 |
 | **Examples (OWL files)** | [`pattern.ttl`](pattern.ttl) — one real row of the tab, with its value nodes resolved |

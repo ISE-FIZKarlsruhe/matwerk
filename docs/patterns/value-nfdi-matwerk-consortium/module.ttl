@@ -96,7 +96,7 @@ skos:scopeNote a owl:AnnotationProperty .
     dcterms:license "CC BY 4.0 (repository); CC0 1.0 declared in the ontology header" ;
     ns4:extractedFrom "the nfdi matwerk consortium tab of the NFDI-MatWerk curation workbook" ;
     ns4:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
-    ns4:hasIntent "To represent a nfdi matwerk consortium in the MSE Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
+    ns4:hasIntent "To represent a nfdi matwerk consortium in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
     ns4:hasUnitTest "SELECT ?x ?label WHERE { ?x a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001022> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
     ns4:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
     ns4:reengineeredFrom "ROBOT template directives, row 2 of the nfdi matwerk consortium tab" ;

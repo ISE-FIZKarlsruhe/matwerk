@@ -1,6 +1,6 @@
 ## Federated queries
 
-### atomRDF KG <-> MSE KG: Which atomistic samples in AtomRDF correspond to a specific dataset entry in MSE-KG, and what are their segregation energies for Fe–Au Σ5 grain boundaries?
+### atomRDF KG <-> MatWerk KG: Which atomistic samples in AtomRDF correspond to a specific dataset entry in MatWerk KG, and what are their segregation energies for Fe–Au Σ5 grain boundaries?
 
 ```sparql
 PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
@@ -16,7 +16,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT DISTINCT ?dataset ?link ?doi ?sample ?E_seg ?unit
 WHERE {
 
-  # --- Step 1: Select dataset from MSE-KG ---
+  # --- Step 1: Select dataset from MatWerk KG ---
   ?dataset a nfdicore_dataset: .
   ?dataset denoted_by: ?linkNode .
   ?linkNode has_url: ?link .
@@ -60,7 +60,7 @@ ORDER BY ?E_seg
 
 ---
 
-### atomRDF KG <-> MSE KG: Who created datasets that are linked to atomistic segregation energy calculations?
+### atomRDF KG <-> MatWerk KG: Who created datasets that are linked to atomistic segregation energy calculations?
 
 ```sparql
 PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
@@ -78,7 +78,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT DISTINCT ?dataset ?creatorLabel ?affiliation ?E_seg
 WHERE {
 
-  # --- MSE-KG ---
+  # --- MatWerk KG ---
   ?dataset denoted_by: ?linkNode .
   ?linkNode has_url: ?link .
 
@@ -112,7 +112,7 @@ WHERE {
 
 ---
 
-### atomRDF KG <-> MSE KG: Which chemical elements are studied in datasets linked to AtomRDF simulations?
+### atomRDF KG <-> MatWerk KG: Which chemical elements are studied in datasets linked to AtomRDF simulations?
 
 ```sparql
 PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
@@ -125,7 +125,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 SELECT DISTINCT ?dataset ?element
 WHERE {
 
-  # --- MSE-KG ---
+  # --- MatWerk KG ---
   ?dataset denoted_by: ?linkNode .
   ?linkNode has_url: ?link .
 
@@ -148,7 +148,7 @@ WHERE {
 
 ---
 
-### WikiData <-> MSE KG: Which organizations in the MSE-KG can be linked to Wikidata via their ROR ID, and what are their city, acronym, and country?
+### WikiData <-> MatWerk KG: Which organizations in the MatWerk KG can be linked to Wikidata via their ROR ID, and what are their city, acronym, and country?
 
 ```sparql
 PREFIX organization: <http://purl.obolibrary.org/obo/OBI_0000245>
@@ -203,7 +203,7 @@ LIMIT 100
 
 ---
 
-### WikiData <-> MSE KG: Which people in the MSE-KG are linked to Wikidata through ORCID, and what are their employers and countries?
+### WikiData <-> MatWerk KG: Which people in the MatWerk KG are linked to Wikidata through ORCID, and what are their employers and countries?
 
 ```sparql
 PREFIX nfdicore_person:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>

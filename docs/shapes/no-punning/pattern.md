@@ -1,6 +1,6 @@
 # No Punning
 
-OWL 2 punning allows the same IRI to denote both a class and an individual, but the MSE-KG deliberately prohibits this practice to keep the ABox and TBox cleanly separated. This shape ensures that no `owl:NamedIndividual` ever carries an `rdfs:subClassOf` statement, which would signal conflation of instance-level and class-level identity.
+OWL 2 punning allows the same IRI to denote both a class and an individual, but the MatWerk KG deliberately prohibits this practice to keep the ABox and TBox cleanly separated. This shape ensures that no `owl:NamedIndividual` ever carries an `rdfs:subClassOf` statement, which would signal conflation of instance-level and class-level identity.
 
 ## Visualization
 
@@ -55,14 +55,14 @@ ex:MyNamedShape1
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo:   <http://purl.obolibrary.org/obo/> .
 @prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@prefix mse:   <https://nfdi.fiz-karlsruhe.de/matwerk/> .
+@prefix matwerk: <https://nfdi.fiz-karlsruhe.de/matwerk/> .
 
 # Valid: a named individual without rdfs:subClassOf
-mse:researcher_mueller
+matwerk:researcher_mueller
     a owl:NamedIndividual , obo:BFO_0000040 ;
     rdfs:label "Dr. Anna Mueller" .
 
-mse:lab_instrument_sem_01
+matwerk:lab_instrument_sem_01
     a owl:NamedIndividual , obo:BFO_0000040 ;
     rdfs:label "Scanning Electron Microscope FEI Quanta 650" .
 ```

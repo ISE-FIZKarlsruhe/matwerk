@@ -31,7 +31,7 @@ reasoning: false
 
 ## Query it
 
-Retrieve instances of this pattern from the MSE Knowledge Graph ([SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql)):
+Retrieve instances of this pattern from the MatWerk Knowledge Graph ([SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql)):
 
 ```sparql
 SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001206> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10
@@ -43,7 +43,7 @@ The rows behind it are curated in the [`largescalefacility` tab of the workbook]
 
 The questions this pattern exists to answer. Each is answerable against the published graphs.
 
-1. Which large-scale facilities are available to the MSE community?
+1. Which large-scale facilities are available to the MatWerk community?
 2. Which organisation hosts a given facility, and which instruments does it house?
 
 ## Pattern metadata
@@ -55,14 +55,14 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Name** | largescalefacility |
 | **Submitted by** | the NFDI-MatWerk consortium |
 | **Also Known As** | the `largescalefacility` template tab of the NFDI-MatWerk workbook |
-| **Intent** | To represent a large scale facility in the MSE Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
+| **Intent** | To represent a large scale facility in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
 | **Domains** | research data management; NFDI consortium structure |
-| **Competency Questions** | Which large-scale facilities are available to the MSE community?; Which organisation hosts a given facility, and which instruments does it house? |
+| **Competency Questions** | Which large-scale facilities are available to the MatWerk community?; Which organisation hosts a given facility, and which instruments does it house? |
 | **Solution description** | An entity individual typed `nfdi:NFDI_0001206` carries identity and label; each descriptive value is a separate *value node* individual reached by `obo:IAO_0000235` (denoted by); links to other patterns are object properties onto those entities. Identity is a minted IRI `msekg:<epoch_ms><counter>`, so re-running the pipeline is idempotent. |
 | **Reusable OWL Building Block** | [`module.ttl`](module.ttl) — the example together with the axioms of every term it uses, extracted from the ontology, so the file stands alone |
 | **Consequences** | Values become reusable and independently addressable, and a value may be shared by many entities. The cost: every `I` reference resolves **by label**, so labels must be unique and a typo yields a silently missing relation rather than an error. |
 | **Scenarios** | “DEuropetsches Elektronen-Synchrotron” is a large scale facility, with name “DEuropetsches Elektronen-Synchrotron”; acronym “DESY”; description “It conducts a broad spectrum of inter-disciplinary scientific research in three main areas: particle and high energy physics; photon science; and the development, construction and operation of particle accelerators. Its name refers to its first Project collabration, an electron synchrotron. DESY is Publicly financed by the Federal RePublic of Germany, the States of Germany, and the German Research Foundation (DFG). DESY is a member of the Helmholtz Association and operates at sites in Hamburg and ZEuropethen.”. |
-| **Known Uses** | the MSE Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
+| **Known Uses** | the MatWerk Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
 | **Web References** | <https://nfdi-matwerk.de> · <https://ise-fizkarlsruhe.github.io/mwo/> |
 | **Other References** | https://doi.org/10.1002/adem.202502331 |
 | **Examples (OWL files)** | [`pattern.ttl`](pattern.ttl) — one real row of the tab, with its value nodes resolved |

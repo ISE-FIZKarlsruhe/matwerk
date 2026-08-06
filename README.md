@@ -1,6 +1,6 @@
-# MSE Knowledge Graph
+# MatWerk Knowledge Graph
 
-This repository contains the ontology and data that form the **MSE Knowledge Graph** for [NFDI-MatWerk](https://nfdi-matwerk.de/), a consortium of the National Research Data Infrastructure (NFDI) focused on materials science and engineering.
+This repository contains the ontology and data that form the **MatWerk Knowledge Graph** for [NFDI-MatWerk](https://nfdi-matwerk.de/), a consortium of the National Research Data Infrastructure (NFDI) focused on materials science and engineering.
 
 ---
 
@@ -19,9 +19,9 @@ If you use this software or data, please cite it as:
 ```bibtex
 @software{matwerk_kg,
   author    = {Norouzi, Ebrahim and Beygi Nasrabadi, Hossein and Singh, Gunjan and Algergawy, Alsayed and Waitelonis, J{\"o}rg and Sack, Harald},
-  title     = {The Materials Science and Engineering Knowledge Graph (MSE KG)},
+  title     = {The MatWerk Knowledge Graph (MatWerk KG)},
   url       = {https://github.com/ISE-FIZKarlsruhe/matwerk},
-  version   = {2.1.0},
+  version   = {2.1.2},
   date      = {2026-03-11},
 }
 ```

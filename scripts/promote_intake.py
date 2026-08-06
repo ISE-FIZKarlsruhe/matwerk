@@ -48,7 +48,7 @@ import re
 import time
 from typing import Dict, List, Optional, Tuple
 
-MSEKG = "https://nfdi.fiz-karlsruhe.de/matwerk/msekg/"
+MATWERK_KG = "https://nfdi.fiz-karlsruhe.de/matwerk/msekg/"
 NFDI = "https://nfdi.fiz-karlsruhe.de/ontology/"
 OBO = "http://purl.obolibrary.org/obo/"
 
@@ -77,7 +77,7 @@ class Minter:
 
     def mint(self) -> str:
         self._n += 1
-        return f"{MSEKG}{int(time.time() * 1000)}{self._n}"
+        return f"{MATWERK_KG}{int(time.time() * 1000)}{self._n}"
 
 
 def read_csv(path: str) -> List[List[str]]:

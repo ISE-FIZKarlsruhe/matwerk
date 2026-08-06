@@ -51,15 +51,15 @@ ex:EmailAddressShape
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo:   <http://purl.obolibrary.org/obo/> .
 @prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@prefix mse:   <https://nfdi.fiz-karlsruhe.de/matwerk/> .
+@prefix matwerk: <https://nfdi.fiz-karlsruhe.de/matwerk/> .
 
-mse:email_mueller
+matwerk:email_mueller
     a obo:IAO_0000300 ;
     rdfs:label "Email address of Dr. Anna Mueller" ;
-    obo:IAO_0000136 mse:researcher_mueller ;
+    obo:IAO_0000136 matwerk:researcher_mueller ;
     nfdi:NFDI_0001007 "anna.mueller@kit.edu" .
 
-mse:researcher_mueller
+matwerk:researcher_mueller
     a obo:BFO_0000040 ;
     rdfs:label "Dr. Anna Mueller" .
 ```

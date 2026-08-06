@@ -1,6 +1,6 @@
 # Role Realization
 
-Every role must be realised in at least one process. This shape enforces that each instance of `BFO_0000023` (Role) carries a `BFO_0000054` (realized in) link to the process that brings the role into actuality. In the MSE-KG this ensures that roles such as "principal investigator" or "reviewer" are never recorded without the process they participate in.
+Every role must be realised in at least one process. This shape enforces that each instance of `BFO_0000023` (Role) carries a `BFO_0000054` (realized in) link to the process that brings the role into actuality. In the MatWerk KG this ensures that roles such as "principal investigator" or "reviewer" are never recorded without the process they participate in.
 
 ## Visualization
 
@@ -51,14 +51,14 @@ ex:RoleRealizaionShape
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix obo:   <http://purl.obolibrary.org/obo/> .
 @prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@prefix mse:   <https://nfdi.fiz-karlsruhe.de/matwerk/> .
+@prefix matwerk: <https://nfdi.fiz-karlsruhe.de/matwerk/> .
 
-mse:reviewer_role_01
+matwerk:reviewer_role_01
     a obo:BFO_0000023 ;
     rdfs:label "Peer reviewer role" ;
-    obo:BFO_0000054 mse:process_peer_review .
+    obo:BFO_0000054 matwerk:process_peer_review .
 
-mse:process_peer_review
+matwerk:process_peer_review
     a obo:BFO_0000015 ;
     rdfs:label "Peer review of corrosion resistance dataset" .
 ```
