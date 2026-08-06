@@ -1,6 +1,6 @@
 document$.subscribe(() => {
   document
-    .querySelectorAll('a[href="https://superset.ise.fiz-karlsruhe.de/superset/dashboard/mse-kg-dashboard/"]')
+    .querySelectorAll('a[href="https://superset.ise.fiz-karlsruhe.de/superset/dashboard/matwerk-kg-dashboard/"]')
     .forEach(link => {
       link.target = "_blank";
       link.rel = "noopener noreferrer";
