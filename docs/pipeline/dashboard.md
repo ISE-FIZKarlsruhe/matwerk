@@ -145,7 +145,7 @@ This enables Superset charts to always display current data while preserving his
 
 - 12 SQLite tables with timestamped rows
 - 12 `*_latest` views for current-state dashboards
-- Consumed by [Apache Superset](https://superset.apache.org/) at [`superset.ise.fiz-karlsruhe.de`](https://superset.ise.fiz-karlsruhe.de/superset/dashboard/mse-kg-dashboard/)
+- Consumed by [Apache Superset](https://superset.apache.org/) at [`superset.ise.fiz-karlsruhe.de`](https://superset.ise.fiz-karlsruhe.de/superset/dashboard/matwerk-kg-dashboard/)
 
 ## Downstream
 

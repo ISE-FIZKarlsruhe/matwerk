@@ -32,7 +32,7 @@ Aligned with **BFO** and domain ontologies for full semantic interoperability.
 
 Visualizations, statistics, and interactive views of the graph's content, structure, and evolution over time.
 
-<a href="https://superset.ise.fiz-karlsruhe.de/superset/dashboard/mse-kg-dashboard/" target="_blank" class="card-btn">Open Dashboard </a>
+<a href="https://superset.ise.fiz-karlsruhe.de/superset/dashboard/matwerk-kg-dashboard/" target="_blank" class="card-btn">Open Dashboard </a>
 </div>
 
 <div class="access-card card-sparql" markdown>
