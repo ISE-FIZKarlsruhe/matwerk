@@ -34,7 +34,7 @@
 @prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix void:  <http://rdfs.org/ns/void#> .
 @prefix time:  <http://www.w3.org/2006/time#> .
-@prefix mse:   <https://nfdi.fiz-karlsruhe.de/matwerk/> .
+@prefix matwerk: <https://nfdi.fiz-karlsruhe.de/matwerk/> .
 # the graph this block describes; `ctg:` on its own is that IRI
 @prefix ctg:   <https://nfdi.fiz-karlsruhe.de/matwerk/graph/creep-testing-ontology> .
 

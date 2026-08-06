@@ -3082,7 +3082,7 @@
 
 
 <h1 id="harvesters">Harvesters</h1>
-<p>Three harvester DAGs collect data from external sources, transform it into ontology-aligned RDF, and automatically trigger reasoning and validation. Each harvester produces deterministic, provenance-aware named graphs that are integrated into the MSE-KG.</p>
+<p>Three harvester DAGs collect data from external sources, transform it into ontology-aligned RDF, and automatically trigger reasoning and validation. Each harvester produces deterministic, provenance-aware named graphs that are integrated into the MatWerk KG.</p>
 <div class="admonition info">
 <p class="admonition-title">Scheduling</p>
 <p>All three harvesters run on a <code>@weekly</code> schedule and automatically trigger <code>reason_openllet_new</code> followed by <code>validation_checks</code> on completion.</p>
@@ -3126,7 +3126,7 @@
 <h2 id="harvester_zenodo">harvester_zenodo</h2>
 <p><strong>DAG ID:</strong> <code>harvester_zenodo</code> · <strong>Schedule:</strong> <code>@weekly</code> · <strong>File:</strong> <code>dags/harvester_zenodo.py</code></p>
 <h3 id="what-it-does">What It Does</h3>
-<p>The Zenodo harvester converts records from the <a href="https://zenodo.org/communities/nfdi-matwerk/">NFDI-MatWerk Zenodo community</a> into ontology-aligned RDF. It operates in two phases: first exporting community records as RDF triples, then harvesting individual datasets referenced in the MSE-KG that point to Zenodo DOIs.</p>
+<p>The Zenodo harvester converts records from the <a href="https://zenodo.org/communities/nfdi-matwerk/">NFDI-MatWerk Zenodo community</a> into ontology-aligned RDF. It operates in two phases: first exporting community records as RDF triples, then harvesting individual datasets referenced in the MatWerk KG that point to Zenodo DOIs.</p>
 <h3 id="task-chain">Task Chain</h3>
 <pre class="mermaid"><code>graph LR
     A["init_data_dir"] --&gt; B["run_harvester"]
@@ -3142,7 +3142,7 @@
 <p>The <code>run_harvester</code> task performs two operations:</p>
 <ol>
 <li><strong><code>export_zenodo.run()</code></strong> — Fetches all records from the Zenodo community via REST API and converts them to RDF</li>
-<li><strong><code>fetch_zenodo.run()</code></strong> — Queries the merged MSE-KG for datasets with Zenodo URLs, then harvests each individually</li>
+<li><strong><code>fetch_zenodo.run()</code></strong> — Queries the merged MatWerk KG for datasets with Zenodo URLs, then harvests each individually</li>
 </ol>
 <h3 id="rdf-modelling">RDF Modelling</h3>
 <p>Each Zenodo record is converted to a network of ontology-aligned individuals:</p>
@@ -3252,7 +3252,7 @@
 </tbody>
 </table>
 <h4 id="dataset-url-discovery">Dataset URL Discovery</h4>
-<p>The harvester also queries the merged MSE-KG to find datasets referencing Zenodo:</p>
+<p>The harvester also queries the merged MatWerk KG to find datasets referencing Zenodo:</p>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?dataset</span> <span class="nv">?url</span> <span class="k">WHERE</span> <span class="p">{</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="k">VALUES</span> <span class="nv">?class</span> <span class="p">{</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009&gt;</span>
@@ -3333,7 +3333,7 @@
 <h2 id="harvester_endpoints">harvester_endpoints</h2>
 <p><strong>DAG ID:</strong> <code>harvester_endpoints</code> · <strong>Schedule:</strong> <code>@weekly</code> · <strong>File:</strong> <code>dags/harvester_endpoints.py</code></p>
 <h3 id="what-it-does_1">What It Does</h3>
-<p>The SPARQL endpoint harvester discovers endpoints registered in the MSE-KG, extracts their schema-level structure, computes VoID statistics, and measures ontology reuse against MWO. This enables the MSE-KG to serve as a federated catalogue of distributed MSE data sources.</p>
+<p>The SPARQL endpoint harvester discovers endpoints registered in the MatWerk KG, extracts their schema-level structure, computes VoID statistics, and measures ontology reuse against MWO. This enables the MatWerk KG to serve as a federated catalogue of distributed MatWerk data sources.</p>
 <h3 id="task-chain_1">Task Chain</h3>
 <pre class="mermaid"><code>graph LR
     A["init_data_dir"] --&gt; B["run_harvester"]
@@ -3347,14 +3347,14 @@
     style D fill:#f3e5f5,stroke:#6a1b9a
     style E fill:#fce4ec,stroke:#b71c1c</code></pre>
 <h3 id="endpoint-discovery">Endpoint Discovery</h3>
-<p>Endpoints are discovered from the merged MSE-KG by querying for instances of <code>NFDI_0001095</code> (SPARQL Endpoint):</p>
+<p>Endpoints are discovered from the merged MatWerk KG by querying for instances of <code>NFDI_0001095</code> (SPARQL Endpoint):</p>
 <pre class="mermaid"><code>graph LR
-    MSE["MSE-KG&lt;br/&gt;(merged TTL)"] --&gt;|"query for&lt;br/&gt;NFDI_0001095"| DISC["Discover&lt;br/&gt;endpoint URLs"]
+    MATWERK["MatWerk KG&lt;br/&gt;(merged TTL)"] --&gt;|"query for&lt;br/&gt;NFDI_0001095"| DISC["Discover&lt;br/&gt;endpoint URLs"]
     DISC --&gt; EP1["Endpoint 1"]
     DISC --&gt; EP2["Endpoint 2"]
     DISC --&gt; EP3["Endpoint N"]
 
-    style MSE fill:#e3f2fd,stroke:#1565c0
+    style MATWERK fill:#e3f2fd,stroke:#1565c0
     style DISC fill:#fff3e0,stroke:#e65100
     style EP1 fill:#e8f5e9,stroke:#2e7d32
     style EP2 fill:#e8f5e9,stroke:#2e7d32
@@ -3441,7 +3441,7 @@
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Why Reuse Analysis Matters</p>
-<p>By quantifying how much each external endpoint aligns with MWO, the MSE-KG can identify which endpoints are most suitable for federated queries, guide ontology mapping efforts, and track adoption of shared vocabularies across the NFDI-MatWerk ecosystem.</p>
+<p>By quantifying how much each external endpoint aligns with MWO, the MatWerk KG can identify which endpoints are most suitable for federated queries, guide ontology mapping efforts, and track adoption of shared vocabularies across the NFDI-MatWerk ecosystem.</p>
 </div>
 <h3 id="statistics-annotation">Statistics Annotation</h3>
 <p>All statistics are stored as structured <code>rdfs:comment</code> annotations on the endpoint individual:</p>

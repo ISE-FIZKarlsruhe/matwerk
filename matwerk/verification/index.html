@@ -2627,7 +2627,7 @@
 
 <h1 id="sparql-verification-queries">SPARQL Verification Queries</h1>
 <h2 id="introduction">Introduction</h2>
-<p>The MSE-KG validation pipeline includes a set of SPARQL verification queries that
+<p>The MatWerk KG validation pipeline includes a set of SPARQL verification queries that
 act as automated quality gates. Each query is designed to detect a specific class of
 data-quality or ontology-conformance issue <strong>before</strong> new triples are published to the
 production knowledge graph.</p>
@@ -2687,7 +2687,7 @@ alone.</p>
 <p><strong>What it checks:</strong>
 Detects triples where an ORCID identifier (<code>https://orcid.org/...</code>) is used as a
 plain literal value instead of as an IRI resource, but only for subjects within the
-MSE-KG namespace (<code>https://purls.helmholtz-metadaten.de/msekg</code>).</p>
+MatWerk KG namespace (<code>https://purls.helmholtz-metadaten.de/msekg</code>).</p>
 <p><strong>Why it matters:</strong>
 ORCIDs are globally unique researcher identifiers and must be represented as IRIs so
 that they can be dereferenced, linked across datasets, and matched by standard
@@ -2724,7 +2724,7 @@ declared as <code>owl:ObjectProperty</code> in the approved BFO profile
 <code>has_part</code> (<code>BFO_0000051</code>) relations are explicitly excluded from this check because
 they are permitted.</p>
 <p><strong>Why it matters:</strong>
-The MSE-KG adopts BFO 2020 in a temporally-neutral profile that deliberately omits
+The MatWerk KG adopts BFO 2020 in a temporally-neutral profile that deliberately omits
 time-indexed predicates. Using a forbidden temporal predicate would introduce
 inconsistencies with the chosen ontological commitment and could break reasoning.</p>
 <div class="admonition warning">

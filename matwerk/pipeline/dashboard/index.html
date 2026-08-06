@@ -2732,7 +2732,7 @@
 <strong>Schedule:</strong> Daily at 00:00 UTC (<code>0 0 * * *</code>)
 <strong>File:</strong> <code>dags/dashboard.py</code></p>
 <h2 id="what-it-does">What It Does</h2>
-<p>Computes Knowledge Graph statistics by executing SPARQL queries against the Virtuoso triplestore and stores the results in a SQLite database. This database powers the <a href="https://superset.apache.org/">Apache Superset</a> analytics dashboard, which provides interactive visualisations of MSE-KG content without requiring SPARQL expertise.</p>
+<p>Computes Knowledge Graph statistics by executing SPARQL queries against the Virtuoso triplestore and stores the results in a SQLite database. This database powers the <a href="https://superset.apache.org/">Apache Superset</a> analytics dashboard, which provides interactive visualisations of MatWerk KG content without requiring SPARQL expertise.</p>
 <p>The DAG performs a daily snapshot of the graph's state, enabling time-series tracking of growth, content distribution, and structural evolution.</p>
 <div class="admonition info">
 <p class="admonition-title">Automatic scheduling</p>
@@ -2751,7 +2751,7 @@
 <h2 id="task-chain">Task Chain</h2>
 <pre class="mermaid"><code>graph LR
     A["preflight"] --&gt; B["ensure_tables"]
-    B --&gt; C["list_mse_graphs"]
+    B --&gt; C["list_matwerk_graphs"]
     C --&gt; D["11 parallel&lt;br/&gt;write tasks"]
     D --&gt; E["ensure_latest_views"]
 
@@ -2761,7 +2761,7 @@
     style D fill:#f3e5f5,stroke:#6a1b9a
     style E fill:#e8f5e9,stroke:#2e7d32</code></pre>
 <h2 id="sparql-queries">SPARQL Queries</h2>
-<p>The DAG executes 13 distinct SPARQL query patterns against Virtuoso, each targeting the 5 MSE-KG named graphs. Queries use HTTP Digest authentication and return JSON results.</p>
+<p>The DAG executes 13 distinct SPARQL query patterns against Virtuoso, each targeting the 5 MatWerk KG named graphs. Queries use HTTP Digest authentication and return JSON results.</p>
 <h3 id="graph-discovery">Graph Discovery</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?g</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">WHERE</span> <span class="p">{</span>

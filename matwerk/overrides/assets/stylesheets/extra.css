@@ -61,32 +61,32 @@ a[href*="superset.ise.fiz-karlsruhe.de"]::after {
 }
 
 /* ============================================================
-   MatWerk MSE KG — Extra CSS
+   MatWerk KG — Extra CSS
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap');
 
 /* ── Brand Tokens ────────────────────────────────────────── */
 :root {
-  --mse-navy: #0d1f3c;
-  --mse-blue: #1a5fa8;
-  --mse-sky: #3b9edd;
-  --mse-teal: #0f9e8e;
-  --mse-amber: #e8a020;
-  --mse-light-bg: #f5f8fc;
-  --mse-border: #d8e4f0;
-  --mse-text: #1a2a3a;
-  --mse-muted: #6b7f96;
+  --matwerk-navy: #0d1f3c;
+  --matwerk-blue: #1a5fa8;
+  --matwerk-sky: #3b9edd;
+  --matwerk-teal: #0f9e8e;
+  --matwerk-amber: #e8a020;
+  --matwerk-light-bg: #f5f8fc;
+  --matwerk-border: #d8e4f0;
+  --matwerk-text: #1a2a3a;
+  --matwerk-muted: #6b7f96;
   --card-radius: 12px;
   --card-shadow: 0 2px 12px rgba(13, 31, 60, 0.08), 0 1px 3px rgba(13, 31, 60, 0.05);
   --card-hover: 0 8px 32px rgba(13, 31, 60, 0.14), 0 2px 8px rgba(13, 31, 60, 0.08);
 }
 
 [data-md-color-scheme="slate"] {
-  --mse-light-bg: #1a2535;
-  --mse-border: #2a3a50;
-  --mse-text: #d8e8f8;
-  --mse-muted: #7a9ab8;
+  --matwerk-light-bg: #1a2535;
+  --matwerk-border: #2a3a50;
+  --matwerk-text: #d8e8f8;
+  --matwerk-muted: #7a9ab8;
   --card-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
   --card-hover: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
@@ -233,8 +233,8 @@ code,
 }
 
 .access-card {
-  background: var(--mse-light-bg);
-  border: 1px solid var(--mse-border);
+  background: var(--matwerk-light-bg);
+  border: 1px solid var(--matwerk-border);
   border-radius: var(--card-radius);
   padding: 1rem 1.1rem;
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
@@ -254,25 +254,25 @@ code,
 }
 
 .card-dashboard::before {
-  background: var(--mse-amber);
+  background: var(--matwerk-amber);
 }
 
 .card-sparql::before {
-  background: var(--mse-blue);
+  background: var(--matwerk-blue);
 }
 
 .card-search::before {
-  background: var(--mse-teal);
+  background: var(--matwerk-teal);
 }
 
 .card-sparklis::before {
-  background: var(--mse-sky);
+  background: var(--matwerk-sky);
 }
 
 .access-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--card-hover);
-  border-color: var(--mse-sky);
+  border-color: var(--matwerk-sky);
 }
 
 .card-icon {
@@ -286,13 +286,13 @@ code,
   font-family: 'DM Sans', sans-serif;
   font-size: 0.92rem;
   font-weight: 600;
-  color: var(--mse-text);
+  color: var(--matwerk-text);
   margin-bottom: 0.25rem;
 }
 
 .access-card p {
   font-size: 0.8rem !important;
-  color: var(--mse-muted);
+  color: var(--matwerk-muted);
   line-height: 1.5;
   margin-bottom: 0.75rem;
 }
@@ -302,16 +302,16 @@ code,
   font-family: 'DM Sans', sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
-  color: var(--mse-blue) !important;
+  color: var(--matwerk-blue) !important;
   text-decoration: none !important;
-  border: 1px solid var(--mse-blue);
+  border: 1px solid var(--matwerk-blue);
   border-radius: 5px;
   padding: 0.28em 0.7em;
   transition: background 0.15s, color 0.15s;
 }
 
 .card-btn:hover {
-  background: var(--mse-blue);
+  background: var(--matwerk-blue);
   color: #fff !important;
 }
 
@@ -328,8 +328,8 @@ code,
   flex-direction: column;
   align-items: flex-start;
   gap: 0.4rem;
-  background: var(--mse-light-bg);
-  border: 1px solid var(--mse-border);
+  background: var(--matwerk-light-bg);
+  border: 1px solid var(--matwerk-border);
   border-radius: 10px;
   padding: 1rem 1.1rem;
 }
@@ -344,13 +344,13 @@ code,
   display: block;
   font-size: 0.9rem;
   font-weight: 600;
-  color: var(--mse-text);
+  color: var(--matwerk-text);
   margin-bottom: 0.2rem;
 }
 
 .scope-item p {
   font-size: 0.82rem !important;
-  color: var(--mse-muted);
+  color: var(--matwerk-muted);
   margin: 0 !important;
 }
 
@@ -363,8 +363,8 @@ code,
 }
 
 .ontology-card {
-  background: var(--mse-light-bg);
-  border: 1px solid var(--mse-border);
+  background: var(--matwerk-light-bg);
+  border: 1px solid var(--matwerk-border);
   border-radius: var(--card-radius);
   padding: 1.4rem 1.5rem;
   box-shadow: var(--card-shadow);
@@ -389,14 +389,14 @@ code,
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  background: var(--mse-blue);
+  background: var(--matwerk-blue);
   color: #fff;
   border-radius: 4px;
   padding: 0.15em 0.55em;
 }
 
 .ont-badge.ont-domain {
-  background: var(--mse-teal);
+  background: var(--matwerk-teal);
 }
 
 .ontology-card strong {
@@ -407,14 +407,14 @@ code,
 
 .ontology-card p {
   font-size: 0.88rem !important;
-  color: var(--mse-muted);
+  color: var(--matwerk-muted);
   margin-bottom: 0.9rem;
 }
 
 .ontology-card a {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--mse-blue) !important;
+  color: var(--matwerk-blue) !important;
 }
 
 /* ── Contribute Row ──────────────────────────────────────── */
@@ -426,25 +426,25 @@ code,
 }
 
 .contribute-item {
-  background: var(--mse-light-bg);
-  border: 1px solid var(--mse-border);
+  background: var(--matwerk-light-bg);
+  border: 1px solid var(--matwerk-border);
   border-radius: 10px;
   padding: 1rem 1.1rem;
   font-size: 0.88rem;
   line-height: 1.55;
-  color: var(--mse-muted);
+  color: var(--matwerk-muted);
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .contribute-item:hover {
-  border-color: var(--mse-teal);
+  border-color: var(--matwerk-teal);
   box-shadow: 0 3px 12px rgba(15, 158, 142, 0.1);
 }
 
 .contribute-item strong {
   display: block;
   font-weight: 600;
-  color: var(--mse-text);
+  color: var(--matwerk-text);
   margin-bottom: 0.2rem;
   font-size: 0.9rem;
 }
@@ -458,9 +458,9 @@ code,
 }
 
 .community-card {
-  background: var(--mse-light-bg);
-  border: 1px solid var(--mse-border);
-  border-left: 4px solid var(--mse-teal);
+  background: var(--matwerk-light-bg);
+  border: 1px solid var(--matwerk-border);
+  border-left: 4px solid var(--matwerk-teal);
   border-radius: var(--card-radius);
   padding: 1.25rem 1.4rem;
   box-shadow: var(--card-shadow);
@@ -473,25 +473,25 @@ code,
   font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
-  color: var(--mse-text);
+  color: var(--matwerk-text);
 }
 
 .community-card p {
   font-size: 0.87rem !important;
-  color: var(--mse-muted);
+  color: var(--matwerk-muted);
   margin-bottom: 0.7rem;
 }
 
 .community-card a {
   font-size: 0.84rem;
   font-weight: 600;
-  color: var(--mse-teal) !important;
+  color: var(--matwerk-teal) !important;
 }
 
 /* ── Section Dividers ────────────────────────────────────── */
 .md-typeset hr {
   border: none;
-  border-top: 1px solid var(--mse-border);
+  border-top: 1px solid var(--matwerk-border);
   margin: 2.5rem 0;
 }
 
@@ -518,18 +518,18 @@ code,
 }
 
 .dtype {
-  background: var(--mse-light-bg, #f5f8fc);
-  border: 1px solid var(--mse-border, #d8e4f0);
+  background: var(--matwerk-light-bg, #f5f8fc);
+  border: 1px solid var(--matwerk-border, #d8e4f0);
   border-radius: 6px;
   padding: 0.35rem 0.65rem;
   font-size: 0.78rem;
   font-weight: 500;
-  color: var(--mse-muted, #6b7f96);
+  color: var(--matwerk-muted, #6b7f96);
   transition: border-color 0.15s, color 0.15s, background 0.15s;
 }
 
 .dtype:hover {
-  border-color: var(--mse-teal, #0f9e8e);
-  color: var(--mse-teal, #0f9e8e);
+  border-color: var(--matwerk-teal, #0f9e8e);
+  color: var(--matwerk-teal, #0f9e8e);
   background: rgba(15, 158, 142, 0.06);
 }
