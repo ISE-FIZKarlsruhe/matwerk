@@ -42,8 +42,9 @@ nav:
           - CreepLit KG: federated_queries/creeplitkg.md
           - Creep Reference Datasets KG: federated_queries/iuc02.md
           - MiMeDat KG: federated_queries/iuc07.md
-      - Statistics: statistics.md
-      - Named Graphs Statistics: namedgraphsstatistics.md
+      - Statistics:
+          - Whole Graph: statistics.md
+          - Per Named Graph: namedgraphsstatistics.md
   - Pipeline:
       - Overview: pipeline/index.md
       - Template Processing: pipeline/process-spreadsheets.md

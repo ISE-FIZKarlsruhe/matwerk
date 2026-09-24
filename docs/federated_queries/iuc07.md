@@ -25,90 +25,35 @@ The graph is produced by the **[RML4MSE-KG](https://github.com/HosseinBeygiNasra
 | **RDF dataset** | [MaterialDigital Dataportal](https://dataportal.material-digital.de/dataset/microstructure-sensitive-mechanical-data-knowledge-graph-mimedat-kg-nfdi-matwerk-iuc07) |
 | **Guided query UI** | [Sparklis](https://dataportal.material-digital.de/sparklis/?title=microstructure-sensitive-mechanical-data-knowledge-graph-mimedat-kg-nfdi-matwerk-iuc07&endpoint=https%3A//dataportal.material-digital.de/dataset/9dc27507-bf47-4425-877d-1e5249e9db05/fuseki/%24/sparql&entity_lexicon_select=http%3A//www.w3.org/2000/01/rdf-schema%23label&concept_lexicons_select=http%3A//www.w3.org/2000/01/rdf-schema%23label) |
 
-## Vocabularies
-
-| Prefix | Namespace | Covers |
-|---|---|---|
-| `nfdi:` | `https://nfdi.fiz-karlsruhe.de/ontology/` | simulation dataset, person, title, affiliation, creator/contributor roles, values |
-| `mwo:` | `http://purls.helmholtz-metadaten.de/mwo/` | institute role, research group role, funding identifier, licence holder role |
-| `obo:` | `http://purl.obolibrary.org/obo/` | BFO/RO/IAO/OBI relations, identifiers, personal names, ORCID |
-| `swo:` | `http://www.ebi.ac.uk/swo/` | licences |
-
-Key classes: `nfdi:NFDI_0001205` simulation dataset · `nfdi:NFDI_0000004` person · `nfdi:NFDI_0001019` title · `nfdi:NFDI_0001102` affiliation · `nfdi:NFDI_0001026` creator role · `nfdi:NFDI_0000118` contributor role · `obo:IAO_0020000` identifier · `obo:IAO_0000708` ORCID identifier.
-
 ## Locate it in the MatWerk KG
 
 ```sparql
 PREFIX nfdicore_dataset:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
 PREFIX nfdicore_sparql_endpoint: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095>
+PREFIX textual_entity:           <http://purl.obolibrary.org/obo/IAO_0000300>
 PREFIX denoted_by:               <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX has_url:                  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
 PREFIX has_license:              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142>
 PREFIX has_part:                 <http://purl.obolibrary.org/obo/BFO_0000051>
 PREFIX rdfs:                     <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?label ?description ?sparqlURL ?licence ?creator
+SELECT
+  (SAMPLE(?label) AS ?kgLabel)
+  (SAMPLE(?url)   AS ?sparqlEndpoint)
+  (SAMPLE(?lic)   AS ?licence)
+  (GROUP_CONCAT(DISTINCT ?part; SEPARATOR=" · ") AS ?creditedParts)
+  (SAMPLE(?desc)  AS ?shortDescription)
 WHERE {
   BIND(<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17902496761672> AS ?kg)
 
   ?kg a nfdicore_dataset: ;
       rdfs:label ?label .
 
-  OPTIONAL {
-    ?kg denoted_by: ?endpoint .
-    ?endpoint a nfdicore_sparql_endpoint: ;
-              has_url: ?sparqlURL .
-  }
-  OPTIONAL {
-    ?kg denoted_by: ?desc .
-    ?desc a <http://purl.obolibrary.org/obo/IAO_0000300> ;
-          rdfs:label ?description .
-  }
-  OPTIONAL { ?kg has_license: ?lic  . ?lic  rdfs:label ?licence }
-  OPTIONAL { ?kg has_part:    ?crea . ?crea rdfs:label ?creator }
+  OPTIONAL { ?kg denoted_by:  ?e . ?e a nfdicore_sparql_endpoint: ; has_url: ?url }
+  OPTIONAL { ?kg denoted_by:  ?d . ?d a textual_entity: ; rdfs:label ?desc }
+  OPTIONAL { ?kg has_license: ?l . ?l rdfs:label ?lic }
+  OPTIONAL { ?kg has_part:    ?p . ?p rdfs:label ?part }
 }
-```
-
-## Federating with MSE-KG
-
-Like IUC02, the RML pipeline mints subject IRIs **directly in the `msekg:` namespace** — the dataset `a46fde6c` is `msekg:a46fde6c`, its identifier node `msekg:identifier_a46fde6c`, and so on. MSE-KG and MiMeDat-KG therefore refer to the same individuals by the same IRIs, and a federated query joins on the subject itself.
-
-### Which simulation datasets does MSE-KG know about, and who created them according to MiMeDat-KG?
-
-```sparql
-PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
-PREFIX obo:  <http://purl.obolibrary.org/obo/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?dataset ?title ?creatorName ?affiliation
-WHERE {
-  # --- remote: MiMeDat-KG holds the simulation metadata ---
-  SERVICE <https://dataportal.material-digital.de/dataset/9dc27507-bf47-4425-877d-1e5249e9db05/fuseki/$/sparql> {
-    ?dataset a nfdi:NFDI_0001205 .             # 🔗 same IRI on both sides
-
-    ?titleEntity a nfdi:NFDI_0001019 ;
-                 obo:IAO_0000219 ?dataset ;
-                 nfdi:NFDI_0001007 ?title .
-
-    ?dataset obo:OBI_0000312 ?process .
-
-    ?person obo:RO_0000056 ?process ;
-            obo:RO_0000087 ?roleInst .
-    ?roleInst a nfdi:NFDI_0001026 .             # creator role
-
-    OPTIONAL {
-      ?nameEnt a obo:IAO_0020015 ;
-               obo:IAO_0000219 ?roleInst ;
-               nfdi:NFDI_0001007 ?creatorName .
-    }
-    OPTIONAL {
-      ?affEnt a nfdi:NFDI_0001102 ;
-              obo:IAO_0000219 ?roleInst ;
-              nfdi:NFDI_0001007 ?affiliation .
-    }
-  }
-}
-ORDER BY ?dataset
 ```
 
 ## Competency questions
@@ -119,7 +64,7 @@ The three competency questions below are taken **verbatim** from [`MiMeDat (IUC0
 
 [`01_datasets_title_and_identifier.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/MiMeDat%20(IUC07)/queries/01_datasets_title_and_identifier.rq)
 
-```sparql
+```turtle
 PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
 PREFIX obo:  <http://purl.obolibrary.org/obo/>
 
@@ -142,7 +87,7 @@ ORDER BY ?dataset
 
 [`02_creators_and_contributors_for_dataset.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/MiMeDat%20(IUC07)/queries/02_creators_and_contributors_for_dataset.rq)
 
-```sparql
+```turtle
 PREFIX msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/>
 PREFIX nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/>
 PREFIX mwo:   <http://purls.helmholtz-metadaten.de/mwo/>
@@ -199,7 +144,7 @@ ORDER BY ?role ?person
 
 [`03_funding_publisher_licence_rightsholder.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/MiMeDat%20(IUC07)/queries/03_funding_publisher_licence_rightsholder.rq)
 
-```sparql
+```turtle
 PREFIX msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/>
 PREFIX nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/>
 PREFIX mwo:   <http://purls.helmholtz-metadaten.de/mwo/>
@@ -251,18 +196,6 @@ WHERE {
   }
 }
 ```
-
-## Reproducing the graph
-
-```bash
-git clone https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG
-cd "RML4MSE-KG/MiMeDat (IUC07)"
-# drop new JSON files into "JSON datasets/"
-bash MiMeDat_map.sh
-# → MiMeDat_rdf.ttl, ready for Zenodo / the PMD data portal
-```
-
-SHACL shapes under [`shape/`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/MiMeDat%20(IUC07)/shape) validate that every dataset is the output of a process, carries an identifier and title, and that every person holds a creator or contributor role.
 
 ## How to cite
 

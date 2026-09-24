@@ -61,58 +61,29 @@ curl -X POST \
 ```sparql
 PREFIX nfdicore_dataset:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
 PREFIX nfdicore_sparql_endpoint: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095>
+PREFIX textual_entity:           <http://purl.obolibrary.org/obo/IAO_0000300>
 PREFIX denoted_by:               <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX has_url:                  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
 PREFIX has_license:              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142>
+PREFIX has_part:                 <http://purl.obolibrary.org/obo/BFO_0000051>
 PREFIX rdfs:                     <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?label ?description ?sparqlURL ?licence
+SELECT
+  (SAMPLE(?label) AS ?kgLabel)
+  (SAMPLE(?url)   AS ?sparqlEndpoint)
+  (SAMPLE(?lic)   AS ?licence)
+  (GROUP_CONCAT(DISTINCT ?part; SEPARATOR=" · ") AS ?creditedParts)
+  (SAMPLE(?desc)  AS ?shortDescription)
 WHERE {
   BIND(<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17858428366781> AS ?kg)
 
   ?kg a nfdicore_dataset: ;
       rdfs:label ?label .
 
-  OPTIONAL {
-    ?kg denoted_by: ?endpoint .
-    ?endpoint a nfdicore_sparql_endpoint: ;
-              has_url: ?sparqlURL .
-  }
-  OPTIONAL {
-    ?kg denoted_by: ?desc .
-    ?desc a <http://purl.obolibrary.org/obo/IAO_0000300> ;
-          rdfs:label ?description .
-  }
-  OPTIONAL { ?kg has_license: ?lic . ?lic rdfs:label ?licence }
-}
-```
-
-## Federating with MSE-KG
-
-The mapping mints subject IRIs **directly in the `msekg:` namespace** (`https://nfdi.fiz-karlsruhe.de/matwerk/msekg/`), derived from the source DOI and heat-treatment condition — for example `msekg:creep_reference_dataset_10.1016_j.msea.2008.04.097_HT1`. MSE-KG and CreepLitKG therefore refer to the same individuals by the same IRIs, so a federated query joins on the subject itself rather than on a string-matched identifier.
-
-### Which creep datasets from the literature does MSE-KG label, and what elongation was measured for them?
-
-```sparql
-PREFIX cto:  <https://w3id.org/pmd/cto/>
-PREFIX obo:  <http://purl.obolibrary.org/obo/>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-
-SELECT ?dataset ?datasetLabel ?elongation
-WHERE {
-  # --- local: MSE-KG ---
-  ?dataset rdfs:label ?datasetLabel .
-
-  # --- remote: CreepLitKG holds the measurements ---
-  SERVICE <https://dataportal.material-digital.de/dataset/a5b4edc4-43ef-44ff-a386-5d1f6fbbc439/fuseki/$/sparql> {
-    ?dataset a cto:CTO_0000009 ;              # 🔗 same IRI on both sides
-             obo:OBI_0000312 ?process .
-
-    ?q a cto:CTO_0000005 ;                    # % elongation after creep fracture
-       obo:BFO_0000054 ?process .
-    ?spec obo:OBI_0001927 ?q ;
-          obo:OBI_0002135 ?elongation .
-  }
+  OPTIONAL { ?kg denoted_by:  ?e . ?e a nfdicore_sparql_endpoint: ; has_url: ?url }
+  OPTIONAL { ?kg denoted_by:  ?d . ?d a textual_entity: ; rdfs:label ?desc }
+  OPTIONAL { ?kg has_license: ?l . ?l rdfs:label ?lic }
+  OPTIONAL { ?kg has_part:    ?p . ?p rdfs:label ?part }
 }
 ```
 
@@ -122,7 +93,7 @@ The eight competency questions below are taken **verbatim** from the project's o
 
 Prefixes used throughout:
 
-```sparql
+```turtle
 PREFIX co:   <https://w3id.org/pmd/co/>
 PREFIX cto:  <https://w3id.org/pmd/cto/>
 PREFIX mwo:  <http://purls.helmholtz-metadaten.de/mwo/>
@@ -133,7 +104,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 ### CQ1 — From which literature sources (publications) does the creep data originate?
 
-```sparql
+```turtle
 SELECT DISTINCT ?doi WHERE {
   ?d a nfdi:NFDI_0001037 ;   # digital object identifier
      co:PMD_0000006 ?doi .   # has value
@@ -142,7 +113,7 @@ SELECT DISTINCT ?doi WHERE {
 
 ### CQ2 — Which materials have been creep tested?
 
-```sparql
+```turtle
 SELECT DISTINCT ?material WHERE {
   ?id a mwo:MWO_0001099 ;        # material identifier
       co:PMD_0000006 ?material .
@@ -151,7 +122,7 @@ SELECT DISTINCT ?material WHERE {
 
 ### CQ3 — Which testing standards have been used for creep testing Inconel materials?
 
-```sparql
+```turtle
 SELECT DISTINCT ?material ?standard WHERE {
   ?mid a mwo:MWO_0001099 ;
        obo:IAO_0000219 ?piece ;        # denotes creep test piece
@@ -167,7 +138,7 @@ SELECT DISTINCT ?material ?standard WHERE {
 
 ### CQ4 — At what temperature and applied stress was each creep test performed?
 
-```sparql
+```turtle
 SELECT ?process ?temperature ?tempUnit ?stress ?stressUnit WHERE {
   ?process a co:PMD_0000589 ;          # creep testing process
            co:PMD_0025013 ?tq .        # changes quality (temperature)
@@ -184,7 +155,7 @@ SELECT ?process ?temperature ?tempUnit ?stress ?stressUnit WHERE {
 
 ### CQ5 — What heat treatment steps (solutionizing, aging) were applied to a test piece before creep testing?
 
-```sparql
+```turtle
 SELECT ?process ?step ?condition WHERE {
   ?ht obo:BFO_0000062 ?process .       # heat treatment preceded by creep test
   ?desc obo:IAO_0000219 ?ht ;          # description denotes the treatment
@@ -196,7 +167,7 @@ ORDER BY ?process ?step
 
 ### CQ6 — What is the grain size of the material for each heat treatment condition?
 
-```sparql
+```turtle
 SELECT ?piece ?grainSize ?unit ?agingCondition WHERE {
   ?gs a co:PMD_0020243 ;               # grain size
       obo:RO_0000080 ?cryst .          # quality of crystallite
@@ -215,7 +186,7 @@ SELECT ?piece ?grainSize ?unit ?agingCondition WHERE {
 
 ### CQ7 — What percentage elongation after creep fracture was observed for each test?
 
-```sparql
+```turtle
 SELECT ?process ?elongation WHERE {
   ?q a cto:CTO_0000005 ;               # % elongation after creep fracture
      obo:BFO_0000054 ?process .
@@ -226,7 +197,7 @@ SELECT ?process ?elongation WHERE {
 
 ### CQ8 — What are the stress rupture time and steady-state creep rate measured for Inconel 718?
 
-```sparql
+```turtle
 SELECT ?sample ?ruptureTime ?creepRate WHERE {
   ?mid a mwo:MWO_0001099 ;
        obo:IAO_0000219 ?piece ;

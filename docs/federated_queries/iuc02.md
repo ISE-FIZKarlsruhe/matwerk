@@ -22,82 +22,35 @@ The graph is produced by the **[RML4MSE-KG](https://github.com/HosseinBeygiNasra
 | **RDF dataset** | [MaterialDigital Dataportal](https://dataportal.material-digital.de/dataset/knowledge-graph-for-creep-reference-datasets-nfdi-matwerk-iuc02) |
 | **Guided query UI** | [Sparklis](https://dataportal.material-digital.de/sparklis/?title=knowledge-graph-for-creep-reference-datasets-nfdi-matwerk-iuc02&endpoint=https%3A//dataportal.material-digital.de/dataset/bb5b86d3-ade4-4b63-9e84-783de85a4abd/fuseki/%24/sparql&entity_lexicon_select=http%3A//www.w3.org/2000/01/rdf-schema%23label&concept_lexicons_select=http%3A//www.w3.org/2000/01/rdf-schema%23label) |
 
-## Vocabularies
-
-| Prefix | Namespace | Covers |
-|---|---|---|
-| `cto:` | `https://w3id.org/pmd/cto/` | creep datasets, test pieces, rupture time, elongation, mechanical stress |
-| `pmdco:` | `https://w3id.org/pmd/co/` | materials, machines, extensometers, chemical composition, values |
-| `obo:` | `http://purl.obolibrary.org/obo/` | BFO/RO/IAO/OBI relations |
-| `unit:` | `http://qudt.org/vocab/unit/` | measurement units |
-
-Key classes: `cto:CTO_0000009` creep reference dataset · `cto:CTO_0000008` creep test piece · `cto:CTO_0000013` stress rupture time · `cto:CTO_0000005` percentage elongation after creep fracture · `pmdco:PMD_0000588` creep testing machine · `pmdco:PMD_0000636` extensometer.
-
 ## Locate it in the MatWerk KG
 
 ```sparql
 PREFIX nfdicore_dataset:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
 PREFIX nfdicore_sparql_endpoint: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095>
+PREFIX textual_entity:           <http://purl.obolibrary.org/obo/IAO_0000300>
 PREFIX denoted_by:               <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX has_url:                  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
 PREFIX has_license:              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142>
 PREFIX has_part:                 <http://purl.obolibrary.org/obo/BFO_0000051>
 PREFIX rdfs:                     <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?label ?description ?sparqlURL ?licence ?creator
+SELECT
+  (SAMPLE(?label) AS ?kgLabel)
+  (SAMPLE(?url)   AS ?sparqlEndpoint)
+  (SAMPLE(?lic)   AS ?licence)
+  (GROUP_CONCAT(DISTINCT ?part; SEPARATOR=" · ") AS ?creditedParts)
+  (SAMPLE(?desc)  AS ?shortDescription)
 WHERE {
   BIND(<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17902496761671> AS ?kg)
 
   ?kg a nfdicore_dataset: ;
       rdfs:label ?label .
 
-  OPTIONAL {
-    ?kg denoted_by: ?endpoint .
-    ?endpoint a nfdicore_sparql_endpoint: ;
-              has_url: ?sparqlURL .
-  }
-  OPTIONAL {
-    ?kg denoted_by: ?desc .
-    ?desc a <http://purl.obolibrary.org/obo/IAO_0000300> ;
-          rdfs:label ?description .
-  }
-  OPTIONAL { ?kg has_license: ?lic  . ?lic  rdfs:label ?licence }
-  OPTIONAL { ?kg has_part:    ?crea . ?crea rdfs:label ?creator }
+  OPTIONAL { ?kg denoted_by:  ?e . ?e a nfdicore_sparql_endpoint: ; has_url: ?url }
+  OPTIONAL { ?kg denoted_by:  ?d . ?d a textual_entity: ; rdfs:label ?desc }
+  OPTIONAL { ?kg has_license: ?l . ?l rdfs:label ?lic }
+  OPTIONAL { ?kg has_part:    ?p . ?p rdfs:label ?part }
 }
-```
-
-## Federating with MSE-KG
-
-The RML pipeline mints its subject IRIs **directly in the `msekg:` namespace** (`https://nfdi.fiz-karlsruhe.de/matwerk/msekg/`) — for example `msekg:Vh5205_C-78-MD-TR_translated`. The two graphs therefore share IRIs outright, and a federated query can join on the subject itself rather than on a string-matched identifier.
-
-### Which creep datasets registered in MSE-KG have rupture-time measurements, and how long did they last?
-
-```sparql
-PREFIX cto:   <https://w3id.org/pmd/cto/>
-PREFIX pmdco: <https://w3id.org/pmd/co/>
-PREFIX obo:   <http://purl.obolibrary.org/obo/>
-PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX xsd:   <http://www.w3.org/2001/XMLSchema#>
-
-SELECT ?dataset ?datasetLabel ?ruptureTime_h
-WHERE {
-  # --- local: MSE-KG knows the dataset and its label ---
-  ?dataset rdfs:label ?datasetLabel .
-
-  # --- remote: the IUC02 graph knows the measurements ---
-  SERVICE <https://dataportal.material-digital.de/dataset/bb5b86d3-ade4-4b63-9e84-783de85a4abd/fuseki/$/sparql> {
-    ?dataset a cto:CTO_0000009 ;              # 🔗 same IRI on both sides
-             obo:OBI_0000312 ?process .
-
-    ?process obo:BFO_0000199 ?srt .
-    ?srt a cto:CTO_0000013 .                   # stress rupture time
-    ?spec obo:OBI_0001927 ?srt ;
-          pmdco:PMD_0000006 ?ruptureStr .
-
-    BIND(xsd:double(?ruptureStr) AS ?ruptureTime_h)
-  }
-}
-ORDER BY DESC(?ruptureTime_h)
 ```
 
 ## Competency questions
@@ -108,7 +61,7 @@ The eight competency questions below are taken **verbatim** from [`Creep referen
 
 [`01_datasets_test_piece_and_material.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/01_datasets_test_piece_and_material.rq)
 
-```sparql
+```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
 PREFIX pmdco: <https://w3id.org/pmd/co/>
 PREFIX obo:   <http://purl.obolibrary.org/obo/>
@@ -137,7 +90,7 @@ ORDER BY ?dataset
 
 [`02_initial_stress_and_temperature.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/02_initial_stress_and_temperature.rq)
 
-```sparql
+```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
 PREFIX pmdco: <https://w3id.org/pmd/co/>
 PREFIX obo:   <http://purl.obolibrary.org/obo/>
@@ -170,7 +123,7 @@ ORDER BY ?dataset
 
 [`03_rank_by_creep_rupture_time.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/03_rank_by_creep_rupture_time.rq)
 
-```sparql
+```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
 PREFIX pmdco: <https://w3id.org/pmd/co/>
 PREFIX obo:   <http://purl.obolibrary.org/obo/>
@@ -196,7 +149,7 @@ ORDER BY DESC(?ruptureTime_h)
 
 [`04_datasets_in_temperature_range.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/04_datasets_in_temperature_range.rq)
 
-```sparql
+```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
 PREFIX pmdco: <https://w3id.org/pmd/co/>
 PREFIX obo:   <http://purl.obolibrary.org/obo/>
@@ -224,7 +177,7 @@ ORDER BY ?dataset
 
 [`05_chemical_composition_for_test_piece.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/05_chemical_composition_for_test_piece.rq)
 
-```sparql
+```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
 PREFIX pmdco: <https://w3id.org/pmd/co/>
 PREFIX obo:   <http://purl.obolibrary.org/obo/>
@@ -252,7 +205,7 @@ ORDER BY ?element
 
 [`06_compare_percentage_elongation.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/06_compare_percentage_elongation.rq)
 
-```sparql
+```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
 PREFIX pmdco: <https://w3id.org/pmd/co/>
 PREFIX obo:   <http://purl.obolibrary.org/obo/>
@@ -278,7 +231,7 @@ ORDER BY DESC(?elongation_pct)
 
 [`07_test_duration_soak_time_heating_time.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/07_test_duration_soak_time_heating_time.rq)
 
-```sparql
+```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
 PREFIX pmdco: <https://w3id.org/pmd/co/>
 PREFIX obo:   <http://purl.obolibrary.org/obo/>
@@ -314,7 +267,7 @@ ORDER BY ?dataset
 
 [`08_machines_and_extensometers_per_dataset.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/08_machines_and_extensometers_per_dataset.rq)
 
-```sparql
+```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
 PREFIX pmdco: <https://w3id.org/pmd/co/>
 PREFIX obo:   <http://purl.obolibrary.org/obo/>
@@ -335,18 +288,6 @@ WHERE {
 }
 ORDER BY ?dataset
 ```
-
-## Reproducing the graph
-
-```bash
-git clone https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG
-cd "RML4MSE-KG/Creep reference dataset (IUC02)"
-# drop new JSON files into "JSON datasets/"
-bash creep_reference_dataset_map.sh
-# → creep_reference_dataset_rdf.ttl, ready for Zenodo / the PMD data portal
-```
-
-SHACL shapes under [`shape/`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/Creep%20reference%20dataset%20(IUC02)/shape) validate dataset output, test-piece participation and identity, equipment participation, quality linkage, and occupied temporal regions.
 
 ## How to cite
 
