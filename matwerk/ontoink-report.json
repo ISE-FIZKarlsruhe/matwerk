@@ -1,0 +1,1055 @@
+{
+  "ontoink": "0.7.8",
+  "summary": {
+    "graphs": 38,
+    "minScore": 28,
+    "meanScore": 44,
+    "violations": 2,
+    "conforms": false,
+    "inconsistent": 0,
+    "smells": {
+      "errors": 0,
+      "warnings": 186,
+      "info": 90
+    },
+    "shapeDrift": 0
+  },
+  "graphs": [
+    {
+      "graph_id": "ontoink-graph-0",
+      "source": "patterns/agent/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 2,
+        "individualCount": 2,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-1",
+      "source": "patterns/city/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 2,
+        "individualCount": 2,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-2",
+      "source": "patterns/collaboration/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 7,
+        "individualCount": 11,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-3",
+      "source": "patterns/dataportal/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 7,
+        "individualCount": 7,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-4",
+      "source": "patterns/dataset/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 10,
+        "individualCount": 11,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-5",
+      "source": "patterns/event/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 7,
+        "individualCount": 7,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-6",
+      "source": "patterns/fdos/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 2,
+        "individualCount": 2,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-7",
+      "source": "patterns/instrument/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 8,
+        "individualCount": 8,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-8",
+      "source": "patterns/largescalefacility/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 4,
+        "individualCount": 5,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-9",
+      "source": "patterns/materials/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 1,
+        "individualCount": 1,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-10",
+      "source": "patterns/matwerkiuc/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 9,
+        "individualCount": 9,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-11",
+      "source": "patterns/matwerkpp/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 5,
+        "individualCount": 5,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-12",
+      "source": "patterns/matwerkta/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 5,
+        "individualCount": 6,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-13",
+      "source": "patterns/metadata/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 8,
+        "individualCount": 8,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-14",
+      "source": "patterns/ontologies/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 6,
+        "individualCount": 6,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-15",
+      "source": "patterns/organization/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 7,
+        "individualCount": 8,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-16",
+      "source": "patterns/people/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 6,
+        "individualCount": 7,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-17",
+      "source": "patterns/process/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 4,
+        "individualCount": 4,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-18",
+      "source": "patterns/publication/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 6,
+        "individualCount": 6,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-19",
+      "source": "patterns/role/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 4,
+        "individualCount": 4,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-20",
+      "source": "patterns/service/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 7,
+        "individualCount": 9,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-21",
+      "source": "patterns/software/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 12,
+        "individualCount": 12,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-22",
+      "source": "patterns/sparql_endpoints/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 6,
+        "individualCount": 6,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-23",
+      "source": "patterns/temporal/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 2,
+        "individualCount": 3,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-24",
+      "source": "patterns/value-nfdi-matwerk-consortium/pattern.ttl",
+      "shape": null,
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 1,
+        "individualCount": 1,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-25",
+      "source": "pipeline/examples/pipeline.ttl",
+      "shape": null,
+      "smells": {
+        "total": 6,
+        "errors": 0,
+        "warnings": 2,
+        "info": 4,
+        "score": 68
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 2,
+        "individualCount": 27,
+        "objectPropertyCount": 3,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 3,
+        "propsWithoutRange": 3
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-26",
+      "source": "pipeline/examples/harvested-graph-metadata.ttl",
+      "shape": null,
+      "smells": {
+        "total": 10,
+        "errors": 0,
+        "warnings": 5,
+        "info": 5,
+        "score": 35
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 7,
+        "individualCount": 6,
+        "objectPropertyCount": 6,
+        "dataPropertyCount": 4,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 10,
+        "propsWithoutRange": 10
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-27",
+      "source": "pipeline/examples/rdf-files-registry.ttl",
+      "shape": null,
+      "smells": {
+        "total": 10,
+        "errors": 0,
+        "warnings": 6,
+        "info": 4,
+        "score": 28
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 5,
+        "individualCount": 8,
+        "objectPropertyCount": 3,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 3,
+        "propsWithoutRange": 3
+      },
+      "validation": {
+        "status": "not-run",
+        "violations": 0
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-28",
+      "source": "shapes/email-address/shape-data.ttl",
+      "shape": "shapes/email-address/shape.ttl",
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 2,
+        "individualCount": 2,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 1,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "conforms",
+        "violations": 0,
+        "inference": "none"
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-29",
+      "source": "shapes/graph-metadata/shape-data.ttl",
+      "shape": "shapes/graph-metadata/shape.ttl",
+      "smells": {
+        "total": 10,
+        "errors": 0,
+        "warnings": 5,
+        "info": 5,
+        "score": 35
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 7,
+        "individualCount": 7,
+        "objectPropertyCount": 6,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 2,
+        "propsWithoutDomain": 6,
+        "propsWithoutRange": 6
+      },
+      "validation": {
+        "status": "conforms",
+        "violations": 0,
+        "inference": "none"
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-30",
+      "source": "shapes/graph-metadata/broken-data.ttl",
+      "shape": "shapes/graph-metadata/shape.ttl",
+      "smells": {
+        "total": 11,
+        "errors": 0,
+        "warnings": 5,
+        "info": 6,
+        "score": 32
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 7,
+        "individualCount": 7,
+        "objectPropertyCount": 6,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 2,
+        "propsWithoutDomain": 6,
+        "propsWithoutRange": 6
+      },
+      "validation": {
+        "status": "violations",
+        "violations": 2,
+        "inference": "none"
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-31",
+      "source": "shapes/no-punning/shape-data.ttl",
+      "shape": "shapes/no-punning/shape.ttl",
+      "smells": {
+        "total": 6,
+        "errors": 0,
+        "warnings": 4,
+        "info": 2,
+        "score": 54
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 1,
+        "individualCount": 2,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 1,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "conforms",
+        "violations": 0,
+        "inference": "none"
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-32",
+      "source": "shapes/ontology-variant/shape-data.ttl",
+      "shape": "shapes/ontology-variant/shape.ttl",
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 2,
+        "individualCount": 2,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 1,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "conforms",
+        "violations": 0,
+        "inference": "none"
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-33",
+      "source": "shapes/ontology-version-complex/shape-data.ttl",
+      "shape": "shapes/ontology-version-complex/shape.ttl",
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 3,
+        "individualCount": 3,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 0,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "conforms",
+        "violations": 0,
+        "inference": "none"
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-34",
+      "source": "shapes/role-bearer/shape-data.ttl",
+      "shape": "shapes/role-bearer/shape.ttl",
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 3,
+        "individualCount": 3,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 1,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "conforms",
+        "violations": 0,
+        "inference": "none"
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-35",
+      "source": "shapes/role-realization/shape-data.ttl",
+      "shape": "shapes/role-realization/shape.ttl",
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 2,
+        "individualCount": 2,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 1,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "conforms",
+        "violations": 0,
+        "inference": "none"
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-36",
+      "source": "shapes/textual-entity/shape-data.ttl",
+      "shape": "shapes/textual-entity/shape.ttl",
+      "smells": {
+        "total": 7,
+        "errors": 0,
+        "warnings": 5,
+        "info": 2,
+        "score": 44
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 2,
+        "individualCount": 2,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 1,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "conforms",
+        "violations": 0,
+        "inference": "none"
+      }
+    },
+    {
+      "graph_id": "ontoink-graph-37",
+      "source": "shapes/url-instance/shape-data.ttl",
+      "shape": "shapes/url-instance/shape.ttl",
+      "smells": {
+        "total": 6,
+        "errors": 0,
+        "warnings": 4,
+        "info": 2,
+        "score": 54
+      },
+      "consistency": "consistent",
+      "metrics": {
+        "classCount": 1,
+        "individualCount": 2,
+        "objectPropertyCount": 0,
+        "dataPropertyCount": 0,
+        "subclassAxioms": 0,
+        "shaclCoveredClasses": 1,
+        "propsWithoutDomain": 0,
+        "propsWithoutRange": 0
+      },
+      "validation": {
+        "status": "conforms",
+        "violations": 0,
+        "inference": "none"
+      }
+    }
+  ]
+}

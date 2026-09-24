@@ -839,9 +839,25 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../Federated_queries/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
         
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
@@ -855,7 +871,191 @@
   
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Federated Queries
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Federated_queries/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federated_queries/wikidata/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    WikiData
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federated_queries/atomrdf/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    atomRDF KG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federated_queries/creeplitkg/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CreepLit KG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federated_queries/iuc02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Creep Reference Datasets KG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../federated_queries/iuc07/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MiMeDat KG
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -991,34 +1191,6 @@
     
   
     Overview
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../pipeline/pipeline-graph/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Pipeline Graph
   
 
     
@@ -2745,7 +2917,7 @@
 </tr>
 <tr>
 <td>I have RDF but <strong>nowhere to host it</strong></td>
-<td><a href="#scenario-2-rdf-data-already-represented-with-ontology">Scenario 2</a> — Route A (we harvest it) or Route B (data portal + federation)</td>
+<td><a href="#scenario-2-rdf-data-already-represented-with-ontology">Scenario 2</a> — Route A (we harvest it, <em>test phase</em>) or Route B (data portal + federation)</td>
 </tr>
 <tr>
 <td>I run my own SPARQL endpoint</td>
@@ -2813,6 +2985,15 @@
 or do not want to host it yourself</strong>. There are two routes, and they differ in one
 thing: who stores the data.</p>
 <h4 id="route-a-we-harvest-it-from-where-it-already-lives-github-or-zenodo">Route A — we harvest it from where it already lives (GitHub or Zenodo)</h4>
+<div class="admonition warning">
+<p class="admonition-title">Test phase</p>
+<p>Route A is currently <strong>in a test phase</strong>. The harvester runs and the steps below are
+accurate, but the pipeline is still being validated — graph IRIs, re-sync behaviour
+and the set of files picked up may change, and a run may need to be repeated. Please
+open a <a href="https://github.com/ISE-FIZKarlsruhe/matwerk/issues" target="_blank" rel="noopener noreferrer">GitHub issue</a>
+when you register a dataset so we can follow it through. If you need a stable route
+today, use <a href="#route-b-publish-it-yourself-on-a-data-portal-and-we-federate">Route B</a>.</p>
+</div>
 <p>Best if your RDF is already published in a repository or a Zenodo record. We fetch the
 files on a schedule and load each one into <strong>its own named graph</strong> in the MatWerk KG, so it
 is queryable alongside everything else and stays linked to the repository it came from.</p>
@@ -2916,6 +3097,11 @@ endpoint; we then federate that endpoint rather than copying your data.</p>
 </thead>
 <tbody>
 <tr>
+<td>Status</td>
+<td><strong>test phase</strong></td>
+<td>available</td>
+</tr>
+<tr>
 <td>Who stores the data</td>
 <td>the MatWerk KG, in its own named graph</td>
 <td>you / the data portal</td>
@@ -2942,8 +3128,9 @@ endpoint; we then federate that endpoint rather than copying your data.</p>
 </tr>
 </tbody>
 </table>
-<p>Both are fine. Choose <strong>A</strong> if the RDF already lives in a repository and you want it
-inside the KG; choose <strong>B</strong> if you want your own endpoint and landing page.</p>
+<p>Choose <strong>A</strong> if the RDF already lives in a repository and you want it inside the KG —
+bearing in mind it is still in a test phase; choose <strong>B</strong> if you want your own endpoint
+and landing page, or if you need something stable right now.</p>
 <p><a href="#choose-your-contribution-scenario">⬆ Back to scenario selection</a></p>
 <hr />
 <h3 id="scenario-3-rdf-data-in-a-triple-store-graph-database">Scenario 3: RDF Data in a Triple Store (Graph Database)</h3>
