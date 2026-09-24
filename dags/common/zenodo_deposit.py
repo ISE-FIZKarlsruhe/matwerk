@@ -22,6 +22,29 @@ def _headers(token: str) -> dict:
     return {"Authorization": f"Bearer {token}"}
 
 
+def _resolve_latest_deposition_id(base_url: str, token: str, concept_id: str) -> str:
+    """
+    Resolve a concept id to the deposition id of its latest published version.
+
+    The deposit API is keyed on a *deposition* id — one concrete version — not on
+    a concept id, so POSTing .../depositions/<conceptrecid>/actions/newversion
+    returns 404. The records API resolves either kind of id to the newest version.
+    """
+    url = f"{base_url}/records/{concept_id}/versions/latest"
+    r = requests.get(url, headers=_headers(token), timeout=60, allow_redirects=True)
+    if r.status_code != 200:
+        raise AirflowFailException(
+            f"Zenodo could not resolve id {concept_id} to a latest version "
+            f"({r.status_code}): {r.text[:500]}"
+        )
+    latest_id = r.json().get("id")
+    if not latest_id:
+        raise AirflowFailException(
+            f"Zenodo returned no record id for concept {concept_id}: {r.text[:500]}"
+        )
+    return str(latest_id)
+
+
 def get_or_create_deposit(concept_id: str | None) -> dict:
     """
     If concept_id is set, create a new version of that deposit.
@@ -33,7 +56,8 @@ def get_or_create_deposit(concept_id: str | None) -> dict:
 
     if concept_id:
         # Create new version from latest published record under this concept
-        url = f"{base_url}/deposit/depositions/{concept_id}/actions/newversion"
+        deposition_id = _resolve_latest_deposition_id(base_url, token, str(concept_id))
+        url = f"{base_url}/deposit/depositions/{deposition_id}/actions/newversion"
         r = requests.post(url, headers=hdrs, timeout=60)
         if r.status_code not in (200, 201):
             raise AirflowFailException(
