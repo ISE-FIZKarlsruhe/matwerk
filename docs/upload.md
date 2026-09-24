@@ -12,7 +12,7 @@ Adding more data benefits us all. Depending on **your data type** and **how your
 |---|---|
 | I have a spreadsheet or other tabular data | [Scenario 1](#scenario-1-unstructured-data-eg-spreadsheet-not-represented-with-ontology) or [Scenario 4](#scenario-4-data-type-already-supported-in-matwerk-kg-eg-person-software) |
 | I already have RDF | [Scenario 2](#scenario-2-rdf-data-already-represented-with-ontology) |
-| I have RDF but **nowhere to host it** | [Scenario 2](#scenario-2-rdf-data-already-represented-with-ontology) — Route A (we harvest it) or Route B (data portal + federation) |
+| I have RDF but **nowhere to host it** | [Scenario 2](#scenario-2-rdf-data-already-represented-with-ontology) — Route A (we harvest it, *test phase*) or Route B (data portal + federation) |
 | I run my own SPARQL endpoint | [Scenario 3](#scenario-3-rdf-data-in-a-triple-store-graph-database) |
 | I want to add FDOs | [Scenario 5](#scenario-5-fair-digital-objects-fdos) |
 
@@ -84,6 +84,14 @@ thing: who stores the data.
 
 #### Route A — we harvest it from where it already lives (GitHub or Zenodo)
 
+!!! warning "Test phase"
+    Route A is currently **in a test phase**. The harvester runs and the steps below are
+    accurate, but the pipeline is still being validated — graph IRIs, re-sync behaviour
+    and the set of files picked up may change, and a run may need to be repeated. Please
+    open a <a href="https://github.com/ISE-FIZKarlsruhe/matwerk/issues" target="_blank" rel="noopener noreferrer">GitHub issue</a>
+    when you register a dataset so we can follow it through. If you need a stable route
+    today, use [Route B](#route-b-publish-it-yourself-on-a-data-portal-and-we-federate).
+
 Best if your RDF is already published in a repository or a Zenodo record. We fetch the
 files on a schedule and load each one into **its own named graph** in the MatWerk KG, so it
 is queryable alongside everything else and stays linked to the repository it came from.
@@ -143,14 +151,16 @@ endpoint; we then federate that endpoint rather than copying your data.
 
 | | Route A (we harvest) | Route B (portal + federation) |
 |---|---|---|
+| Status | **test phase** | available |
 | Who stores the data | the MatWerk KG, in its own named graph | you / the data portal |
 | You need to run a server | no | no (the portal runs it) |
 | Queryable in the MatWerk KG | yes, directly | yes, by federation |
 | Stays in step with your source | automatically, on a schedule | whenever you update the portal |
 | Citable landing page + DOI | via Zenodo | via the portal |
 
-Both are fine. Choose **A** if the RDF already lives in a repository and you want it
-inside the KG; choose **B** if you want your own endpoint and landing page.
+Choose **A** if the RDF already lives in a repository and you want it inside the KG —
+bearing in mind it is still in a test phase; choose **B** if you want your own endpoint
+and landing page, or if you need something stable right now.
 
 [⬆ Back to scenario selection](#choose-your-contribution-scenario)
 

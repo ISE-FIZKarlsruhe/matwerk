@@ -35,12 +35,17 @@ nav:
   - RDF Dumps: dumps.md
   - Sample Queries:
       - General Queries: general_queries.md
-      - Federated Queries: Federated_queries.md
+      - Federated Queries:
+          - Overview: Federated_queries.md
+          - WikiData: federated_queries/wikidata.md
+          - atomRDF KG: federated_queries/atomrdf.md
+          - CreepLit KG: federated_queries/creeplitkg.md
+          - Creep Reference Datasets KG: federated_queries/iuc02.md
+          - MiMeDat KG: federated_queries/iuc07.md
       - Statistics: statistics.md
       - Named Graphs Statistics: namedgraphsstatistics.md
   - Pipeline:
       - Overview: pipeline/index.md
-      - Pipeline Graph: pipeline/pipeline-graph.md
       - Template Processing: pipeline/process-spreadsheets.md
       - Merge: pipeline/merge.md
       - Reasoning: pipeline/reason.md
