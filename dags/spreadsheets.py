@@ -271,7 +271,7 @@ def process_spreadsheets():
     robot_service_valid = PythonOperator(task_id="robot_service_valid", python_callable=isvalid, op_kwargs={"filename": f"service.md"})
     [robot_organization_valid, robot_temporal_valid, robot_process_valid] >> robot_service >> robot_service_valid >> teardown
 
-    robot_sparql_endpoints = BashOperator(task_id="robot_sparql_endpoints", bash_command=robotCmdTemplate(["organization", "temporal", "process"], "sparql_endpoints"))
+    robot_sparql_endpoints = BashOperator(task_id="robot_sparql_endpoints", bash_command=robotCmdTemplate(["people", "organization", "temporal", "process"], "sparql_endpoints"))
     robot_sparql_endpoints_valid = PythonOperator(task_id="robot_sparql_endpoints_valid", python_callable=isvalid, op_kwargs={"filename": f"sparql_endpoints.md"})
     [robot_organization_valid, robot_temporal_valid, robot_process_valid] >> robot_sparql_endpoints >> robot_sparql_endpoints_valid  >> teardown
 
