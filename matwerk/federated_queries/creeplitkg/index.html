@@ -899,34 +899,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#federating-with-mse-kg" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Federating with MSE-KG
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Federating with MSE-KG">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#which-creep-datasets-from-the-literature-does-mse-kg-label-and-what-elongation-was-measured-for-them" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Which creep datasets from the literature does MSE-KG label, and what elongation was measured for them?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#competency-questions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1132,6 +1104,61 @@
   
   
   
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Statistics
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Statistics
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../statistics/" class="md-nav__link">
         
@@ -1140,7 +1167,7 @@
   <span class="md-ellipsis">
     
   
-    Statistics
+    Whole Graph
   
 
     
@@ -1168,7 +1195,7 @@
   <span class="md-ellipsis">
     
   
-    Named Graphs Statistics
+    Per Named Graph
   
 
     
@@ -1177,6 +1204,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2840,34 +2875,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#federating-with-mse-kg" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Federating with MSE-KG
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Federating with MSE-KG">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#which-creep-datasets-from-the-literature-does-mse-kg-label-and-what-elongation-was-measured-for-them" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Which creep datasets from the literature does MSE-KG label, and what elongation was measured for them?
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#competency-questions" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3125,168 +3132,144 @@
 <h2 id="locate-it-in-the-matwerk-kg">Locate it in the MatWerk KG</h2>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">PREFIX</span> <span class="nn">nfdicore_dataset</span><span class="p">:</span>         <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">PREFIX</span> <span class="nn">nfdicore_sparql_endpoint</span><span class="p">:</span> <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095&gt;</span>
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">PREFIX</span> <span class="nn">denoted_by</span><span class="p">:</span>               <span class="nl">&lt;http://purl.obolibrary.org/obo/IAO_0000235&gt;</span>
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">PREFIX</span> <span class="nn">has_url</span><span class="p">:</span>                  <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008&gt;</span>
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">PREFIX</span> <span class="nn">has_license</span><span class="p">:</span>              <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142&gt;</span>
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">PREFIX</span> <span class="nn">rdfs</span><span class="p">:</span>                     <span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">SELECT</span> <span class="nv">?label</span> <span class="nv">?description</span> <span class="nv">?sparqlURL</span> <span class="nv">?licence</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">WHERE</span> <span class="p">{</span>
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  <span class="k">BIND</span><span class="p">(</span><span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17858428366781&gt;</span> <span class="k">AS</span> <span class="nv">?kg</span><span class="p">)</span>
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>  <span class="nv">?kg</span> <span class="k">a</span> <span class="nn">nfdicore_dataset</span><span class="p">:</span> <span class="p">;</span>
-</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>      <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?label</span> <span class="p">.</span>
-</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
-</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span>
-</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="nv">?kg</span> <span class="nn">denoted_by</span><span class="p">:</span> <span class="nv">?endpoint</span> <span class="p">.</span>
-</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="nv">?endpoint</span> <span class="k">a</span> <span class="nn">nfdicore_sparql_endpoint</span><span class="p">:</span> <span class="p">;</span>
-</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>              <span class="nn">has_url</span><span class="p">:</span> <span class="nv">?sparqlURL</span> <span class="p">.</span>
-</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>  <span class="p">}</span>
-</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span>
-</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="nv">?kg</span> <span class="nn">denoted_by</span><span class="p">:</span> <span class="nv">?desc</span> <span class="p">.</span>
-</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    <span class="nv">?desc</span> <span class="k">a</span> <span class="nl">&lt;http://purl.obolibrary.org/obo/IAO_0000300&gt;</span> <span class="p">;</span>
-</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>          <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?description</span> <span class="p">.</span>
-</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>  <span class="p">}</span>
-</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?kg</span> <span class="nn">has_license</span><span class="p">:</span> <span class="nv">?lic</span> <span class="p">.</span> <span class="nv">?lic</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?licence</span> <span class="p">}</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">PREFIX</span> <span class="nn">textual_entity</span><span class="p">:</span>           <span class="nl">&lt;http://purl.obolibrary.org/obo/IAO_0000300&gt;</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="k">PREFIX</span> <span class="nn">denoted_by</span><span class="p">:</span>               <span class="nl">&lt;http://purl.obolibrary.org/obo/IAO_0000235&gt;</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">PREFIX</span> <span class="nn">has_url</span><span class="p">:</span>                  <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008&gt;</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">PREFIX</span> <span class="nn">has_license</span><span class="p">:</span>              <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142&gt;</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">PREFIX</span> <span class="nn">has_part</span><span class="p">:</span>                 <span class="nl">&lt;http://purl.obolibrary.org/obo/BFO_0000051&gt;</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="k">PREFIX</span> <span class="nn">rdfs</span><span class="p">:</span>                     <span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="k">SELECT</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  <span class="p">(</span><span class="nf">SAMPLE</span><span class="p">(</span><span class="nv">?label</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?kgLabel</span><span class="p">)</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>  <span class="p">(</span><span class="nf">SAMPLE</span><span class="p">(</span><span class="nv">?url</span><span class="p">)</span>   <span class="k">AS</span> <span class="nv">?sparqlEndpoint</span><span class="p">)</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  <span class="p">(</span><span class="nf">SAMPLE</span><span class="p">(</span><span class="nv">?lic</span><span class="p">)</span>   <span class="k">AS</span> <span class="nv">?licence</span><span class="p">)</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>  <span class="p">(</span><span class="nf">GROUP_CONCAT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="nv">?part</span><span class="p">;</span> <span class="nf">SEPARATOR</span><span class="o">=</span><span class="s">" · "</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?creditedParts</span><span class="p">)</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>  <span class="p">(</span><span class="nf">SAMPLE</span><span class="p">(</span><span class="nv">?desc</span><span class="p">)</span>  <span class="k">AS</span> <span class="nv">?shortDescription</span><span class="p">)</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="k">WHERE</span> <span class="p">{</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>  <span class="k">BIND</span><span class="p">(</span><span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17858428366781&gt;</span> <span class="k">AS</span> <span class="nv">?kg</span><span class="p">)</span>
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>  <span class="nv">?kg</span> <span class="k">a</span> <span class="nn">nfdicore_dataset</span><span class="p">:</span> <span class="p">;</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>      <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?label</span> <span class="p">.</span>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?kg</span> <span class="nn">denoted_by</span><span class="p">:</span>  <span class="nv">?e</span> <span class="p">.</span> <span class="nv">?e</span> <span class="k">a</span> <span class="nn">nfdicore_sparql_endpoint</span><span class="p">:</span> <span class="p">;</span> <span class="nn">has_url</span><span class="p">:</span> <span class="nv">?url</span> <span class="p">}</span>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?kg</span> <span class="nn">denoted_by</span><span class="p">:</span>  <span class="nv">?d</span> <span class="p">.</span> <span class="nv">?d</span> <span class="k">a</span> <span class="nn">textual_entity</span><span class="p">:</span> <span class="p">;</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?desc</span> <span class="p">}</span>
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?kg</span> <span class="nn">has_license</span><span class="p">:</span> <span class="nv">?l</span> <span class="p">.</span> <span class="nv">?l</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?lic</span> <span class="p">}</span>
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?kg</span> <span class="nn">has_part</span><span class="p">:</span>    <span class="nv">?p</span> <span class="p">.</span> <span class="nv">?p</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?part</span> <span class="p">}</span>
 </span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="p">}</span>
-</span></code></pre></div>
-<h2 id="federating-with-mse-kg">Federating with MSE-KG</h2>
-<p>The mapping mints subject IRIs <strong>directly in the <code>msekg:</code> namespace</strong> (<code>https://nfdi.fiz-karlsruhe.de/matwerk/msekg/</code>), derived from the source DOI and heat-treatment condition — for example <code>msekg:creep_reference_dataset_10.1016_j.msea.2008.04.097_HT1</code>. MSE-KG and CreepLitKG therefore refer to the same individuals by the same IRIs, so a federated query joins on the subject itself rather than on a string-matched identifier.</p>
-<h3 id="which-creep-datasets-from-the-literature-does-mse-kg-label-and-what-elongation-was-measured-for-them">Which creep datasets from the literature does MSE-KG label, and what elongation was measured for them?</h3>
-<div class="language-sparql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">PREFIX</span> <span class="nn">cto</span><span class="p">:</span>  <span class="nl">&lt;https://w3id.org/pmd/cto/&gt;</span>
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">PREFIX</span> <span class="nn">obo</span><span class="p">:</span>  <span class="nl">&lt;http://purl.obolibrary.org/obo/&gt;</span>
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">PREFIX</span> <span class="nn">rdfs</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
-</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
-</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">SELECT</span> <span class="nv">?dataset</span> <span class="nv">?datasetLabel</span> <span class="nv">?elongation</span>
-</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">WHERE</span> <span class="p">{</span>
-</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  <span class="c"># --- local: MSE-KG ---</span>
-</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>  <span class="nv">?dataset</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?datasetLabel</span> <span class="p">.</span>
-</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  <span class="c"># --- remote: CreepLitKG holds the measurements ---</span>
-</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  <span class="k">SERVICE</span> <span class="nl">&lt;https://dataportal.material-digital.de/dataset/a5b4edc4-43ef-44ff-a386-5d1f6fbbc439/fuseki/$/sparql&gt;</span> <span class="p">{</span>
-</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="nv">?dataset</span> <span class="k">a</span> <span class="nn">cto</span><span class="p">:</span><span class="nt">CTO_0000009</span> <span class="p">;</span>              <span class="c"># 🔗 same IRI on both sides</span>
-</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>             <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0000312</span> <span class="nv">?process</span> <span class="p">.</span>
-</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
-</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    <span class="nv">?q</span> <span class="k">a</span> <span class="nn">cto</span><span class="p">:</span><span class="nt">CTO_0000005</span> <span class="p">;</span>                    <span class="c"># % elongation after creep fracture</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>       <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="nv">?process</span> <span class="p">.</span>
-</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    <span class="nv">?spec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001927</span> <span class="nv">?q</span> <span class="p">;</span>
-</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>          <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0002135</span> <span class="nv">?elongation</span> <span class="p">.</span>
-</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>  <span class="p">}</span>
-</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="competency-questions">Competency questions</h2>
 <p>The eight competency questions below are taken <strong>verbatim</strong> from the project's own <a href="https://github.com/HosseinBeygiNasrabadi/Creep_Literature_Knowledge_Graph/blob/main/docs/sparql.md"><code>docs/sparql.md</code></a>. Run them against the Fuseki endpoint, or wrap them in a <code>SERVICE</code> clause to combine them with MSE-KG.</p>
 <p>Prefixes used throughout:</p>
-<div class="language-sparql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">PREFIX</span> <span class="nn">co</span><span class="p">:</span>   <span class="nl">&lt;https://w3id.org/pmd/co/&gt;</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">PREFIX</span> <span class="nn">cto</span><span class="p">:</span>  <span class="nl">&lt;https://w3id.org/pmd/cto/&gt;</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">PREFIX</span> <span class="nn">mwo</span><span class="p">:</span>  <span class="nl">&lt;http://purls.helmholtz-metadaten.de/mwo/&gt;</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">PREFIX</span> <span class="nn">nfdi</span><span class="p">:</span> <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/&gt;</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">PREFIX</span> <span class="nn">obo</span><span class="p">:</span>  <span class="nl">&lt;http://purl.obolibrary.org/obo/&gt;</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">PREFIX</span> <span class="nn">rdfs</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
+<div class="language-turtle highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">co:</span><span class="w">   </span><span class="nv">&lt;https://w3id.org/pmd/co/&gt;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">cto:</span><span class="w">  </span><span class="nv">&lt;https://w3id.org/pmd/cto/&gt;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">mwo:</span><span class="w">  </span><span class="nv">&lt;http://purls.helmholtz-metadaten.de/mwo/&gt;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">nfdi:</span><span class="w"> </span><span class="nv">&lt;https://nfdi.fiz-karlsruhe.de/ontology/&gt;</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">obo:</span><span class="w">  </span><span class="nv">&lt;http://purl.obolibrary.org/obo/&gt;</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span>
 </span></code></pre></div>
 <h3 id="cq1-from-which-literature-sources-publications-does-the-creep-data-originate">CQ1 — From which literature sources (publications) does the creep data originate?</h3>
-<div class="language-sparql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?doi</span> <span class="k">WHERE</span> <span class="p">{</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  <span class="nv">?d</span> <span class="k">a</span> <span class="nn">nfdi</span><span class="p">:</span><span class="nt">NFDI_0001037</span> <span class="p">;</span>   <span class="c"># digital object identifier</span>
-</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>     <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="nv">?doi</span> <span class="p">.</span>   <span class="c"># has value</span>
-</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">}</span>
+<div class="language-turtle highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="err">SELECT</span> <span class="err">DISTINCT</span> <span class="err">?doi</span> <span class="err">WHERE</span> <span class="p">{</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  <span class="err">?d</span> <span class="kt">a</span> <span class="nn">nfdi</span><span class="p">:</span><span class="nt">NFDI_0001037</span> <span class="p">;</span>   <span class="c"># digital object identifier</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>     <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="err">?doi</span> <span class="p">.</span>   <span class="c"># has value</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="cq2-which-materials-have-been-creep-tested">CQ2 — Which materials have been creep tested?</h3>
-<div class="language-sparql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?material</span> <span class="k">WHERE</span> <span class="p">{</span>
-</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  <span class="nv">?id</span> <span class="k">a</span> <span class="nn">mwo</span><span class="p">:</span><span class="nt">MWO_0001099</span> <span class="p">;</span>        <span class="c"># material identifier</span>
-</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>      <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="nv">?material</span> <span class="p">.</span>
-</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="p">}</span>
+<div class="language-turtle highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="err">SELECT</span> <span class="err">DISTINCT</span> <span class="err">?material</span> <span class="err">WHERE</span> <span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  <span class="err">?id</span> <span class="kt">a</span> <span class="nn">mwo</span><span class="p">:</span><span class="nt">MWO_0001099</span> <span class="p">;</span>        <span class="c"># material identifier</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>      <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="err">?material</span> <span class="p">.</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="cq3-which-testing-standards-have-been-used-for-creep-testing-inconel-materials">CQ3 — Which testing standards have been used for creep testing Inconel materials?</h3>
-<div class="language-sparql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="nv">?material</span> <span class="nv">?standard</span> <span class="k">WHERE</span> <span class="p">{</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  <span class="nv">?mid</span> <span class="k">a</span> <span class="nn">mwo</span><span class="p">:</span><span class="nt">MWO_0001099</span> <span class="p">;</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>       <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000219</span> <span class="nv">?piece</span> <span class="p">;</span>        <span class="c"># denotes creep test piece</span>
-</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>       <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="nv">?material</span> <span class="p">.</span>
-</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  <span class="nv">?piece</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">.</span>     <span class="c"># participates in</span>
-</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  <span class="nv">?process</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">COB_0000081</span> <span class="nv">?plan</span> <span class="p">.</span>     <span class="c"># intended to realize</span>
-</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  <span class="nv">?std</span> <span class="k">a</span> <span class="nn">nfdi</span><span class="p">:</span><span class="nt">NFDI_0000206</span> <span class="p">;</span>           <span class="c"># standard</span>
-</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>       <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000058</span> <span class="nv">?plan</span> <span class="p">;</span>          <span class="c"># is concretized as</span>
-</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>       <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="nv">?standard</span> <span class="p">.</span>
-</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>  <span class="k">FILTER</span><span class="p">(</span><span class="nf">CONTAINS</span><span class="p">(</span><span class="nv">?material</span><span class="p">,</span> <span class="s">"Inconel"</span><span class="p">))</span>
-</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">}</span>
+<div class="language-turtle highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="err">SELECT</span> <span class="err">DISTINCT</span> <span class="err">?material</span> <span class="err">?standard</span> <span class="err">WHERE</span> <span class="p">{</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  <span class="err">?mid</span> <span class="kt">a</span> <span class="nn">mwo</span><span class="p">:</span><span class="nt">MWO_0001099</span> <span class="p">;</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>       <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000219</span> <span class="err">?piece</span> <span class="p">;</span>        <span class="c"># denotes creep test piece</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>       <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="err">?material</span> <span class="p">.</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>  <span class="err">?piece</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="err">?process</span> <span class="p">.</span>     <span class="c"># participates in</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  <span class="err">?process</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">COB_0000081</span> <span class="err">?plan</span> <span class="p">.</span>     <span class="c"># intended to realize</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>  <span class="err">?std</span> <span class="kt">a</span> <span class="nn">nfdi</span><span class="p">:</span><span class="nt">NFDI_0000206</span> <span class="p">;</span>           <span class="c"># standard</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>       <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000058</span> <span class="err">?plan</span> <span class="p">;</span>          <span class="c"># is concretized as</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>       <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="err">?standard</span> <span class="p">.</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  <span class="err">FILTER</span><span class="p">(</span><span class="err">CONTAINS</span><span class="p">(</span><span class="err">?material</span><span class="p">,</span> <span class="s">"Inconel"</span><span class="p">))</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="cq4-at-what-temperature-and-applied-stress-was-each-creep-test-performed">CQ4 — At what temperature and applied stress was each creep test performed?</h3>
-<div class="language-sparql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span> <span class="nv">?process</span> <span class="nv">?temperature</span> <span class="nv">?tempUnit</span> <span class="nv">?stress</span> <span class="nv">?stressUnit</span> <span class="k">WHERE</span> <span class="p">{</span>
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  <span class="nv">?process</span> <span class="k">a</span> <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000589</span> <span class="p">;</span>          <span class="c"># creep testing process</span>
-</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>           <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0025013</span> <span class="nv">?tq</span> <span class="p">.</span>        <span class="c"># changes quality (temperature)</span>
-</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  <span class="nv">?tSpec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000058</span> <span class="nv">?tq</span> <span class="p">;</span>
-</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>         <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001937</span> <span class="nv">?temperature</span> <span class="p">;</span>
-</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>         <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000039</span> <span class="nv">?tempUnit</span> <span class="p">.</span>
-</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>  <span class="nv">?sq</span> <span class="k">a</span> <span class="nn">cto</span><span class="p">:</span><span class="nt">CTO_1000304</span> <span class="p">;</span>              <span class="c"># mechanical stress</span>
-</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>      <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="nv">?process</span> <span class="p">.</span>       <span class="c"># realized in</span>
-</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>  <span class="nv">?sSpec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000058</span> <span class="nv">?sq</span> <span class="p">;</span>
-</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>         <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001937</span> <span class="nv">?stress</span> <span class="p">;</span>
-</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>         <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000039</span> <span class="nv">?stressUnit</span> <span class="p">.</span>
-</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="p">}</span>
+<div class="language-turtle highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="err">SELECT</span> <span class="err">?process</span> <span class="err">?temperature</span> <span class="err">?tempUnit</span> <span class="err">?stress</span> <span class="err">?stressUnit</span> <span class="err">WHERE</span> <span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  <span class="err">?process</span> <span class="kt">a</span> <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000589</span> <span class="p">;</span>          <span class="c"># creep testing process</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>           <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0025013</span> <span class="err">?tq</span> <span class="p">.</span>        <span class="c"># changes quality (temperature)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>  <span class="err">?tSpec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000058</span> <span class="err">?tq</span> <span class="p">;</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>         <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001937</span> <span class="err">?temperature</span> <span class="p">;</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>         <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000039</span> <span class="err">?tempUnit</span> <span class="p">.</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  <span class="err">?sq</span> <span class="kt">a</span> <span class="nn">cto</span><span class="p">:</span><span class="nt">CTO_1000304</span> <span class="p">;</span>              <span class="c"># mechanical stress</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>      <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="err">?process</span> <span class="p">.</span>       <span class="c"># realized in</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  <span class="err">?sSpec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000058</span> <span class="err">?sq</span> <span class="p">;</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>         <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001937</span> <span class="err">?stress</span> <span class="p">;</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>         <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000039</span> <span class="err">?stressUnit</span> <span class="p">.</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="cq5-what-heat-treatment-steps-solutionizing-aging-were-applied-to-a-test-piece-before-creep-testing">CQ5 — What heat treatment steps (solutionizing, aging) were applied to a test piece before creep testing?</h3>
-<div class="language-sparql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span> <span class="nv">?process</span> <span class="nv">?step</span> <span class="nv">?condition</span> <span class="k">WHERE</span> <span class="p">{</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  <span class="nv">?ht</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000062</span> <span class="nv">?process</span> <span class="p">.</span>       <span class="c"># heat treatment preceded by creep test</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>  <span class="nv">?desc</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000219</span> <span class="nv">?ht</span> <span class="p">;</span>          <span class="c"># description denotes the treatment</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="nv">?condition</span> <span class="p">.</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?desc</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?step</span> <span class="p">}</span>  <span class="c"># "Solutionizing" / "Aging"</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="p">}</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="k">ORDER BY</span> <span class="nv">?process</span> <span class="nv">?step</span>
+<div class="language-turtle highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="err">SELECT</span> <span class="err">?process</span> <span class="err">?step</span> <span class="err">?condition</span> <span class="err">WHERE</span> <span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  <span class="err">?ht</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000062</span> <span class="err">?process</span> <span class="p">.</span>       <span class="c"># heat treatment preceded by creep test</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>  <span class="err">?desc</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000219</span> <span class="err">?ht</span> <span class="p">;</span>          <span class="c"># description denotes the treatment</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>        <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="err">?condition</span> <span class="p">.</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>  <span class="err">OPTIONAL</span> <span class="p">{</span> <span class="err">?desc</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="err">?step</span> <span class="p">}</span>  <span class="c"># "Solutionizing" / "Aging"</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="p">}</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="err">ORDER</span> <span class="err">BY</span> <span class="err">?process</span> <span class="err">?step</span>
 </span></code></pre></div>
 <h3 id="cq6-what-is-the-grain-size-of-the-material-for-each-heat-treatment-condition">CQ6 — What is the grain size of the material for each heat treatment condition?</h3>
-<div class="language-sparql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span> <span class="nv">?piece</span> <span class="nv">?grainSize</span> <span class="nv">?unit</span> <span class="nv">?agingCondition</span> <span class="k">WHERE</span> <span class="p">{</span>
-</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  <span class="nv">?gs</span> <span class="k">a</span> <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0020243</span> <span class="p">;</span>               <span class="c"># grain size</span>
-</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>      <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000080</span> <span class="nv">?cryst</span> <span class="p">.</span>          <span class="c"># quality of crystallite</span>
-</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  <span class="nv">?spec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001927</span> <span class="nv">?gs</span> <span class="p">;</span>
-</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001937</span> <span class="nv">?grainSize</span> <span class="p">;</span>
-</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000039</span> <span class="nv">?unit</span> <span class="p">.</span>
-</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>  <span class="nv">?cryst</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0002350</span> <span class="nv">?micro</span> <span class="p">.</span>       <span class="c"># member of microstructure</span>
-</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>  <span class="nv">?micro</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?piece</span> <span class="p">.</span>      <span class="c"># part of test piece</span>
-</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>  <span class="nv">?piece</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">.</span>
-</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>  <span class="nv">?aging</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000062</span> <span class="nv">?process</span> <span class="p">;</span>
-</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>         <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">"aging process"</span> <span class="p">.</span>
-</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>  <span class="nv">?desc</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000219</span> <span class="nv">?aging</span> <span class="p">;</span>
-</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>        <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="nv">?agingCondition</span> <span class="p">.</span>
-</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="p">}</span>
+<div class="language-turtle highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="err">SELECT</span> <span class="err">?piece</span> <span class="err">?grainSize</span> <span class="err">?unit</span> <span class="err">?agingCondition</span> <span class="err">WHERE</span> <span class="p">{</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  <span class="err">?gs</span> <span class="kt">a</span> <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0020243</span> <span class="p">;</span>               <span class="c"># grain size</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>      <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000080</span> <span class="err">?cryst</span> <span class="p">.</span>          <span class="c"># quality of crystallite</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>  <span class="err">?spec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001927</span> <span class="err">?gs</span> <span class="p">;</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001937</span> <span class="err">?grainSize</span> <span class="p">;</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>        <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000039</span> <span class="err">?unit</span> <span class="p">.</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>  <span class="err">?cryst</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0002350</span> <span class="err">?micro</span> <span class="p">.</span>       <span class="c"># member of microstructure</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>  <span class="err">?micro</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="err">?piece</span> <span class="p">.</span>      <span class="c"># part of test piece</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>  <span class="err">?piece</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="err">?process</span> <span class="p">.</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>  <span class="err">?aging</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000062</span> <span class="err">?process</span> <span class="p">;</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>         <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">"aging process"</span> <span class="p">.</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>  <span class="err">?desc</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000219</span> <span class="err">?aging</span> <span class="p">;</span>
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>        <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="err">?agingCondition</span> <span class="p">.</span>
+</span><span id="__span-9-14"><a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="cq7-what-percentage-elongation-after-creep-fracture-was-observed-for-each-test">CQ7 — What percentage elongation after creep fracture was observed for each test?</h3>
-<div class="language-sparql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">SELECT</span> <span class="nv">?process</span> <span class="nv">?elongation</span> <span class="k">WHERE</span> <span class="p">{</span>
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  <span class="nv">?q</span> <span class="k">a</span> <span class="nn">cto</span><span class="p">:</span><span class="nt">CTO_0000005</span> <span class="p">;</span>               <span class="c"># % elongation after creep fracture</span>
-</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>     <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="nv">?process</span> <span class="p">.</span>
-</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  <span class="nv">?spec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001927</span> <span class="nv">?q</span> <span class="p">;</span>
-</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>        <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0002135</span> <span class="nv">?elongation</span> <span class="p">.</span>  <span class="c"># text value incl. uncertainty</span>
-</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="p">}</span>
+<div class="language-turtle highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="err">SELECT</span> <span class="err">?process</span> <span class="err">?elongation</span> <span class="err">WHERE</span> <span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>  <span class="err">?q</span> <span class="kt">a</span> <span class="nn">cto</span><span class="p">:</span><span class="nt">CTO_0000005</span> <span class="p">;</span>               <span class="c"># % elongation after creep fracture</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>     <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000054</span> <span class="err">?process</span> <span class="p">.</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  <span class="err">?spec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001927</span> <span class="err">?q</span> <span class="p">;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0002135</span> <span class="err">?elongation</span> <span class="p">.</span>  <span class="c"># text value incl. uncertainty</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="p">}</span>
 </span></code></pre></div>
 <h3 id="cq8-what-are-the-stress-rupture-time-and-steady-state-creep-rate-measured-for-inconel-718">CQ8 — What are the stress rupture time and steady-state creep rate measured for Inconel 718?</h3>
-<div class="language-sparql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">SELECT</span> <span class="nv">?sample</span> <span class="nv">?ruptureTime</span> <span class="nv">?creepRate</span> <span class="k">WHERE</span> <span class="p">{</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>  <span class="nv">?mid</span> <span class="k">a</span> <span class="nn">mwo</span><span class="p">:</span><span class="nt">MWO_0001099</span> <span class="p">;</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>       <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000219</span> <span class="nv">?piece</span> <span class="p">;</span>
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>       <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="s">"Inconel 718"</span> <span class="p">.</span>
-</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>  <span class="nv">?oid</span> <span class="k">a</span> <span class="nn">mwo</span><span class="p">:</span><span class="nt">MWO_0001015</span> <span class="p">;</span>             <span class="c"># sample identifier</span>
-</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>       <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000219</span> <span class="nv">?piece</span> <span class="p">;</span>
-</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>       <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="nv">?sample</span> <span class="p">.</span>
-</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>  <span class="nv">?piece</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="nv">?process</span> <span class="p">.</span>
-</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>
-</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>  <span class="nv">?load</span> <span class="k">a</span> <span class="nn">cto</span><span class="p">:</span><span class="nt">CTO_0000011</span> <span class="p">;</span>            <span class="c"># loading process</span>
-</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>        <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="nv">?process</span> <span class="p">;</span>
-</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>        <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000199</span> <span class="nv">?rt</span> <span class="p">.</span>          <span class="c"># occupies temporal region</span>
-</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>  <span class="nv">?rtSpec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001927</span> <span class="nv">?rt</span> <span class="p">;</span>
-</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>          <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0002135</span> <span class="nv">?ruptureTime</span> <span class="p">.</span>
-</span><span id="__span-12-15"><a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>
-</span><span id="__span-12-16"><a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>  <span class="nv">?cr</span> <span class="k">a</span> <span class="nn">cto</span><span class="p">:</span><span class="nt">CTO_1000035</span> <span class="p">;</span>              <span class="c"># creep rate</span>
-</span><span id="__span-12-17"><a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>      <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0025006</span> <span class="nv">?process</span> <span class="p">.</span>        <span class="c"># process attribute of</span>
-</span><span id="__span-12-18"><a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>  <span class="nv">?crSpec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001927</span> <span class="nv">?cr</span> <span class="p">;</span>
-</span><span id="__span-12-19"><a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>          <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0002135</span> <span class="nv">?creepRate</span> <span class="p">.</span>
-</span><span id="__span-12-20"><a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a><span class="p">}</span>
+<div class="language-turtle highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="err">SELECT</span> <span class="err">?sample</span> <span class="err">?ruptureTime</span> <span class="err">?creepRate</span> <span class="err">WHERE</span> <span class="p">{</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  <span class="err">?mid</span> <span class="kt">a</span> <span class="nn">mwo</span><span class="p">:</span><span class="nt">MWO_0001099</span> <span class="p">;</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>       <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000219</span> <span class="err">?piece</span> <span class="p">;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>       <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="s">"Inconel 718"</span> <span class="p">.</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>  <span class="err">?oid</span> <span class="kt">a</span> <span class="nn">mwo</span><span class="p">:</span><span class="nt">MWO_0001015</span> <span class="p">;</span>             <span class="c"># sample identifier</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>       <span class="nn">obo</span><span class="p">:</span><span class="nt">IAO_0000219</span> <span class="err">?piece</span> <span class="p">;</span>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>       <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0000006</span> <span class="err">?sample</span> <span class="p">.</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>  <span class="err">?piece</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">RO_0000056</span> <span class="err">?process</span> <span class="p">.</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>  <span class="err">?load</span> <span class="kt">a</span> <span class="nn">cto</span><span class="p">:</span><span class="nt">CTO_0000011</span> <span class="p">;</span>            <span class="c"># loading process</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>        <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000050</span> <span class="err">?process</span> <span class="p">;</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>        <span class="nn">obo</span><span class="p">:</span><span class="nt">BFO_0000199</span> <span class="err">?rt</span> <span class="p">.</span>          <span class="c"># occupies temporal region</span>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>  <span class="err">?rtSpec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001927</span> <span class="err">?rt</span> <span class="p">;</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>          <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0002135</span> <span class="err">?ruptureTime</span> <span class="p">.</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>  <span class="err">?cr</span> <span class="kt">a</span> <span class="nn">cto</span><span class="p">:</span><span class="nt">CTO_1000035</span> <span class="p">;</span>              <span class="c"># creep rate</span>
+</span><span id="__span-11-17"><a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>      <span class="nn">co</span><span class="p">:</span><span class="nt">PMD_0025006</span> <span class="err">?process</span> <span class="p">.</span>        <span class="c"># process attribute of</span>
+</span><span id="__span-11-18"><a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>  <span class="err">?crSpec</span> <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0001927</span> <span class="err">?cr</span> <span class="p">;</span>
+</span><span id="__span-11-19"><a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>          <span class="nn">obo</span><span class="p">:</span><span class="nt">OBI_0002135</span> <span class="err">?creepRate</span> <span class="p">.</span>
+</span><span id="__span-11-20"><a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="how-to-cite">How to cite</h2>
-<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nc">@software</span><span class="p">{</span><span class="nl">CreepLitKG</span><span class="p">,</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="na">author</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">{Beygi Nasrabadi, Hossein and Molaei, Soheil and Bayani, AmirHossein</span>
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="s">             and Norouzi, Ebrahim and Waitelonis, J{\"o}rg and Sack, Harald}</span><span class="p">,</span>
-</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="na">title</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{Creep Literature Knowledge Graph (CreepLitKG)}</span><span class="p">,</span>
-</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">  </span><span class="na">url</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{https://github.com/HosseinBeygiNasrabadi/Creep_Literature_Knowledge_Graph}</span><span class="p">,</span>
-</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">  </span><span class="na">version</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1.0.0}</span><span class="p">,</span>
-</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">  </span><span class="na">date</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{2026-07-20}</span><span class="p">,</span>
-</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="p">}</span>
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nc">@software</span><span class="p">{</span><span class="nl">CreepLitKG</span><span class="p">,</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="na">author</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">{Beygi Nasrabadi, Hossein and Molaei, Soheil and Bayani, AmirHossein</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="s">             and Norouzi, Ebrahim and Waitelonis, J{\"o}rg and Sack, Harald}</span><span class="p">,</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="w">  </span><span class="na">title</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{Creep Literature Knowledge Graph (CreepLitKG)}</span><span class="p">,</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="w">  </span><span class="na">url</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{https://github.com/HosseinBeygiNasrabadi/Creep_Literature_Knowledge_Graph}</span><span class="p">,</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="w">  </span><span class="na">version</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1.0.0}</span><span class="p">,</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">  </span><span class="na">date</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{2026-07-20}</span><span class="p">,</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="sources">Sources</h2>
 <ul>
