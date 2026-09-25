@@ -14,7 +14,7 @@ on:
     inputs:
       mwo_version:
         description: 'MWO version to generate against'
-        default: '3.0.1'
+        default: '3.0.2'
       commit:
         description: 'Commit the regenerated patterns'
         type: boolean
@@ -32,7 +32,7 @@ jobs:
   patterns:
     runs-on: ubuntu-latest
     env:
-      MWO_VERSION: ${{ github.event.inputs.mwo_version || '3.0.1' }}
+      MWO_VERSION: ${{ github.event.inputs.mwo_version || '3.0.2' }}
     steps:
       - uses: actions/checkout@v4
 

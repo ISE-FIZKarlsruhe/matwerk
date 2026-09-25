@@ -1033,7 +1033,7 @@ def main(argv: Optional[List[str]] = None) -> None:
     ap.add_argument("--mwo", required=True)
     ap.add_argument("--labels", action="append", default=[],
                     help="extra ontology file(s) for labels/declarations (repeatable)")
-    ap.add_argument("--mwo-version", default="3.0.1")
+    ap.add_argument("--mwo-version", default="3.0.2")
     ap.add_argument("--out", default="docs/patterns")
     ap.add_argument("--robot", default="", help="path to robot.jar (enables metrics + modules)")
     ap.add_argument("--kg", default="",
