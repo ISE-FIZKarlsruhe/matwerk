@@ -2,7 +2,7 @@
 
 The `materials` tab of the MatWerk workbook currently holds **25 rows**. Every row follows the same shape, and that shape is the pattern below: a **entity** instance carrying the row's identity, denoted by **value node** nodes that hold its values, and object properties pointing at entities in other tabs.
 
-*Generated from the live sheet and MWO 3.0.1 by `scripts/gen_patterns.py` — regenerate it rather than editing it by hand.*
+*Generated from the live sheet and MWO 3.0.2 by `scripts/gen_patterns.py` — regenerate it rather than editing it by hand.*
 
 ## The pattern
 
@@ -23,7 +23,7 @@ reasoning: false
 
 ## How to read it
 
-* The **entity** is typed `mwo:MWO_0001099` (material designation) and carries only its identity, its label, and links.
+* The **entity** is typed `mwo:MWO_0001099` (material identifier) and carries only its identity, its label, and links.
 * A column marked `I` does **not** contain a value — it contains the *label of another instance*, which ROBOT resolves at build time. That is why every value node needs a unique label, and why a typo produces a silently missing relation rather than an error.
 * Columns marked `A` are literals on the entity itself.
 
@@ -52,14 +52,14 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 |---|---|
 | **Name** | materials |
 | **Submitted by** | the NFDI-MatWerk consortium |
-| **Also Known As** | the `materials` template tab of the NFDI-MatWerk workbook |
-| **Intent** | To represent a material designation in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
+| **Also Known As** | material designation |
+| **Intent** | To represent a material identifier in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
 | **Domains** | research data management; NFDI consortium structure |
 | **Competency Questions** | Which materials are described in the knowledge graph?; Which datasets, publications or instruments concern a given material? |
 | **Solution description** | An entity individual typed `mwo:MWO_0001099` carries identity and label; each descriptive value is a separate *value node* individual reached by `obo:IAO_0000235` (denoted by); links to other patterns are object properties onto those entities. Identity is a minted IRI `msekg:<epoch_ms><counter>`, so re-running the pipeline is idempotent. |
 | **Reusable OWL Building Block** | [`module.ttl`](module.ttl) — the example together with the axioms of every term it uses, extracted from the ontology, so the file stands alone |
 | **Consequences** | Values become reusable and independently addressable, and a value may be shared by many entities. The cost: every `I` reference resolves **by label**, so labels must be unique and a typo yields a silently missing relation rather than an error. |
-| **Scenarios** | “Nickel” is a material designation. |
+| **Scenarios** | “Nickel” is a material identifier. |
 | **Known Uses** | the MatWerk Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
 | **Web References** | <https://nfdi-matwerk.de> · <https://ise-fizkarlsruhe.github.io/mwo/> |
 | **Other References** | https://doi.org/10.1002/adem.202502331 |
@@ -75,22 +75,22 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | Field | Value |
 |---|---|
 | **Pattern version** | 1.0.0 |
-| **Authors** | [Harald Sack](https://orcid.org/0000-0001-7069-9804) · [Jörg Waitelonis](https://orcid.org/0000-0001-7192-7143) · [Ebrahim Norouzi](https://orcid.org/0000-0002-2691-6995) · [Hossein Beygi Nasrabadi](https://orcid.org/0000-0002-3092-0532) — the authors of the ontology these patterns are derived from (`dcterms:creator` of MWO 3.0.1) |
-| **Derived from ontology** | MatWerk Ontology (MWO) **3.0.1** — `http://purls.helmholtz-metadaten.de/mwo/mwo.owl/3.0.1` |
+| **Authors** | [Harald Sack](https://orcid.org/0000-0001-7069-9804) · [Jörg Waitelonis](https://orcid.org/0000-0001-7192-7143) · [Ebrahim Norouzi](https://orcid.org/0000-0002-2691-6995) · [Hossein Beygi Nasrabadi](https://orcid.org/0000-0002-3092-0532) — the authors of the ontology these patterns are derived from (`dcterms:creator` of MWO 3.0.2) |
+| **Derived from ontology** | MatWerk Ontology (MWO) **3.0.2** — `http://purls.helmholtz-metadaten.de/mwo/mwo.owl/3.0.2` |
 | **Reused ontologies** | BFO 2020 (`http://purl.obolibrary.org/obo/bfo.owl`), NFDIcore (`https://nfdi.fiz-karlsruhe.de/ontology/`), IAO (`http://purl.obolibrary.org/obo/iao.owl`), RO (`http://purl.obolibrary.org/obo/ro.owl`) |
 | **Ontology licence** | CC BY 4.0 (repository); CC0 1.0 declared in the ontology header |
-| **Cite the ontology as** | Hossein Beygi Nasrabadi, Jörg Waitelonis, Ebrahim Norouzi, Kostiantyn Hubaiev, Harald Sack. NFDI MatWerk Ontology (mwo). Revision: v3.0.1. Retrieved from: http://purls.helmholtz-metadaten.de/mwo/3.0.1 |
-| **Generated** | `scripts/gen_patterns.py`, 2026-08-04 |
+| **Cite the ontology as** | Hossein Beygi Nasrabadi, Jörg Waitelonis, Ebrahim Norouzi, Kostiantyn Hubaiev, Harald Sack. NFDI MatWerk Ontology (mwo). Revision: v3.0.2. Retrieved from: http://purls.helmholtz-metadaten.de/mwo/3.0.2 |
+| **Generated** | `scripts/gen_patterns.py`, 2026-09-25 |
 
 ### Formal characterisation
 
 | Measure | Value |
 |---|---|
-| **Consistency** | **consistent** — ROBOT 1.9.10, reasoner HermiT, merged with MWO 3.0.1 |
+| **Consistency** | **consistent** — ROBOT 1.9.10, reasoner HermiT, merged with MWO 3.0.2 |
 | **DL expressivity** | `RRESTRCUCINTUNIVRESTREROIF` — measured on the pattern together with a STAR module of exactly the terms it uses, so the figure describes this pattern rather than the whole ontology |
 | **Axioms / logical axioms** | 3 / 1 |
 | **Classes / individuals** | 1 / 1 |
 
 ## Consistency
 
-`pattern.ttl` is checked against MWO 3.0.1 with ROBOT (`--reasoner hermit`) — the same reasoner `process_spreadsheets` runs over every generated module. A pattern that contradicts the ontology fails the documentation build.
+`pattern.ttl` is checked against MWO 3.0.2 with ROBOT (`--reasoner hermit`) — the same reasoner `process_spreadsheets` runs over every generated module. A pattern that contradicts the ontology fails the documentation build.

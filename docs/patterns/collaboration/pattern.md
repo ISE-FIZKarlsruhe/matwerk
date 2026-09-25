@@ -2,7 +2,7 @@
 
 The `collaboration` tab of the MatWerk workbook currently holds **25 rows**. Every row follows the same shape, and that shape is the pattern below: a **entity** instance carrying the row's identity, denoted by **value node** nodes that hold its values, and object properties pointing at entities in other tabs.
 
-*Generated from the live sheet and MWO 3.0.1 by `scripts/gen_patterns.py` — regenerate it rather than editing it by hand.*
+*Generated from the live sheet and MWO 3.0.2 by `scripts/gen_patterns.py` — regenerate it rather than editing it by hand.*
 
 ## The pattern
 
@@ -89,22 +89,22 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | Field | Value |
 |---|---|
 | **Pattern version** | 1.0.0 |
-| **Authors** | [Harald Sack](https://orcid.org/0000-0001-7069-9804) · [Jörg Waitelonis](https://orcid.org/0000-0001-7192-7143) · [Ebrahim Norouzi](https://orcid.org/0000-0002-2691-6995) · [Hossein Beygi Nasrabadi](https://orcid.org/0000-0002-3092-0532) — the authors of the ontology these patterns are derived from (`dcterms:creator` of MWO 3.0.1) |
-| **Derived from ontology** | MatWerk Ontology (MWO) **3.0.1** — `http://purls.helmholtz-metadaten.de/mwo/mwo.owl/3.0.1` |
+| **Authors** | [Harald Sack](https://orcid.org/0000-0001-7069-9804) · [Jörg Waitelonis](https://orcid.org/0000-0001-7192-7143) · [Ebrahim Norouzi](https://orcid.org/0000-0002-2691-6995) · [Hossein Beygi Nasrabadi](https://orcid.org/0000-0002-3092-0532) — the authors of the ontology these patterns are derived from (`dcterms:creator` of MWO 3.0.2) |
+| **Derived from ontology** | MatWerk Ontology (MWO) **3.0.2** — `http://purls.helmholtz-metadaten.de/mwo/mwo.owl/3.0.2` |
 | **Reused ontologies** | BFO 2020 (`http://purl.obolibrary.org/obo/bfo.owl`), NFDIcore (`https://nfdi.fiz-karlsruhe.de/ontology/`), IAO (`http://purl.obolibrary.org/obo/iao.owl`), RO (`http://purl.obolibrary.org/obo/ro.owl`) |
 | **Ontology licence** | CC BY 4.0 (repository); CC0 1.0 declared in the ontology header |
-| **Cite the ontology as** | Hossein Beygi Nasrabadi, Jörg Waitelonis, Ebrahim Norouzi, Kostiantyn Hubaiev, Harald Sack. NFDI MatWerk Ontology (mwo). Revision: v3.0.1. Retrieved from: http://purls.helmholtz-metadaten.de/mwo/3.0.1 |
-| **Generated** | `scripts/gen_patterns.py`, 2026-08-04 |
+| **Cite the ontology as** | Hossein Beygi Nasrabadi, Jörg Waitelonis, Ebrahim Norouzi, Kostiantyn Hubaiev, Harald Sack. NFDI MatWerk Ontology (mwo). Revision: v3.0.2. Retrieved from: http://purls.helmholtz-metadaten.de/mwo/3.0.2 |
+| **Generated** | `scripts/gen_patterns.py`, 2026-09-25 |
 
 ### Formal characterisation
 
 | Measure | Value |
 |---|---|
-| **Consistency** | **consistent** — ROBOT 1.9.10, reasoner HermiT, merged with MWO 3.0.1 |
+| **Consistency** | **consistent** — ROBOT 1.9.10, reasoner HermiT, merged with MWO 3.0.2 |
 | **DL expressivity** | `RRESTRCUCINTUNIVRESTREROIF` — measured on the pattern together with a STAR module of exactly the terms it uses, so the figure describes this pattern rather than the whole ontology |
 | **Axioms / logical axioms** | 31 / 10 |
 | **Classes / individuals** | 7 / 11 |
 
 ## Consistency
 
-`pattern.ttl` is checked against MWO 3.0.1 with ROBOT (`--reasoner hermit`) — the same reasoner `process_spreadsheets` runs over every generated module. A pattern that contradicts the ontology fails the documentation build.
+`pattern.ttl` is checked against MWO 3.0.2 with ROBOT (`--reasoner hermit`) — the same reasoner `process_spreadsheets` runs over every generated module. A pattern that contradicts the ontology fails the documentation build.
