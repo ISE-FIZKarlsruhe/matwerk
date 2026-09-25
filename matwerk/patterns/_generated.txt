@@ -18,7 +18,7 @@ temporal	temporal	173
 event	event	148
 collaboration	collaboration	25
 service	service	65
-sparql_endpoints	sparql_endpoints	23
+sparql_endpoints	sparql_endpoints	26
 fdos	fdos	5
 ontologies	ontologies	109
 materials	materials	25

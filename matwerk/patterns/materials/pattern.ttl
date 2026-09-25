@@ -4,7 +4,7 @@
 # and the links between them. Declarations, provenance and the ODP annotations
 # live in module.ttl so that this file draws cleanly.
 #
-# Ontology version: MWO 3.0.1
+# Ontology version: MWO 3.0.2
 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
