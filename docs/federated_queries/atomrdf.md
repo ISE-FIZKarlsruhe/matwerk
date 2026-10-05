@@ -11,7 +11,7 @@ The graph is produced with [**atomRDF**](https://github.com/pyscal/atomRDF), a P
 | **IRI in MSE-KG** | [`msekg:176113442890318`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890318) |
 | **`rdfs:label`** | atomRDF Knowledge Graph v0.0.1 |
 | **Type** | `nfdi:NFDI_0000009` — dataset |
-| **SPARQL endpoint** | `https://atomrdf.fair-workflows.org/sparql` |
+| **SPARQL endpoint** | `https://atomkg.pyscal.org/sparql` |
 | **Endpoint node** | [`msekg:17611350506671`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506671) (`nfdi:NFDI_0001095`) |
 | **Licence** | CC BY 4.0 |
 | **Creator(s)** | Abril Azocar Guzman, Sarath Menon, Stefan Sandfeld |
@@ -81,7 +81,7 @@ WHERE {
   ?linkNode has_url: ?link .
 
   # --- Step 2: Query AtomRDF for scientific data ---
-  SERVICE <https://atomrdf.fair-workflows.org/sparql> {
+  SERVICE <https://atomkg.pyscal.org/sparql> {
 
     # Atomic sample
     ?sample a cmso:AtomicScaleSample .
@@ -154,7 +154,7 @@ WHERE {
   }
 
   # --- AtomRDF ---
-  SERVICE <https://atomrdf.fair-workflows.org/sparql> {
+  SERVICE <https://atomkg.pyscal.org/sparql> {
 
     # 🔗 JOIN
     ?sample dcterms:isPartOf ?ds .
@@ -189,7 +189,7 @@ WHERE {
   ?linkNode has_url: ?link .
 
   # --- AtomRDF ---
-  SERVICE <https://atomrdf.fair-workflows.org/sparql> {
+  SERVICE <https://atomkg.pyscal.org/sparql> {
 
     # 🔗 JOIN
     ?sample dcterms:isPartOf ?ds .
@@ -207,7 +207,7 @@ WHERE {
 
 ## Sources
 
-- atomRDF KG SPARQL endpoint — <https://atomrdf.fair-workflows.org/sparql>
+- atomRDF KG SPARQL endpoint — <https://atomkg.pyscal.org/sparql>
 - atomRDF tool — Menon, S., Azócar Guzmán, A., Sandfeld, S. *atomRDF: a python tool for ontology-based creation, manipulation, and querying of atomic structures.* <https://github.com/pyscal/atomRDF> (MIT)
 - CMSO / ASMO / CDCO / PLDO — Helmholtz Metadata Collaboration, <http://purls.helmholtz-metadaten.de/>
 - Registration in MSE-KG — [`sparql_endpoints` pattern](../patterns/sparql_endpoints/pattern.md)
