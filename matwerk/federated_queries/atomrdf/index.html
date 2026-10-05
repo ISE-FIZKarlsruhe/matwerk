@@ -2893,7 +2893,7 @@
 </tr>
 <tr>
 <td><strong>SPARQL endpoint</strong></td>
-<td><code>https://atomrdf.fair-workflows.org/sparql</code></td>
+<td><code>https://atomkg.pyscal.org/sparql</code></td>
 </tr>
 <tr>
 <td><strong>Endpoint node</strong></td>
@@ -3000,7 +3000,7 @@
 </span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  <span class="nv">?linkNode</span> <span class="nn">has_url</span><span class="p">:</span> <span class="nv">?link</span> <span class="p">.</span>
 </span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
 </span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  <span class="c"># --- Step 2: Query AtomRDF for scientific data ---</span>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>  <span class="k">SERVICE</span> <span class="nl">&lt;https://atomrdf.fair-workflows.org/sparql&gt;</span> <span class="p">{</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>  <span class="k">SERVICE</span> <span class="nl">&lt;https://atomkg.pyscal.org/sparql&gt;</span> <span class="p">{</span>
 </span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
 </span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="c"># Atomic sample</span>
 </span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    <span class="nv">?sample</span> <span class="k">a</span> <span class="nn">cmso</span><span class="p">:</span><span class="nt">AtomicScaleSample</span> <span class="p">.</span>
@@ -3069,7 +3069,7 @@
 </span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>  <span class="p">}</span>
 </span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
 </span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>  <span class="c"># --- AtomRDF ---</span>
-</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>  <span class="k">SERVICE</span> <span class="nl">&lt;https://atomrdf.fair-workflows.org/sparql&gt;</span> <span class="p">{</span>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>  <span class="k">SERVICE</span> <span class="nl">&lt;https://atomkg.pyscal.org/sparql&gt;</span> <span class="p">{</span>
 </span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>
 </span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>    <span class="c"># 🔗 JOIN</span>
 </span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>    <span class="nv">?sample</span> <span class="nn">dcterms</span><span class="p">:</span><span class="nt">isPartOf</span> <span class="nv">?ds</span> <span class="p">.</span>
@@ -3100,7 +3100,7 @@
 </span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>  <span class="nv">?linkNode</span> <span class="nn">has_url</span><span class="p">:</span> <span class="nv">?link</span> <span class="p">.</span>
 </span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
 </span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>  <span class="c"># --- AtomRDF ---</span>
-</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>  <span class="k">SERVICE</span> <span class="nl">&lt;https://atomrdf.fair-workflows.org/sparql&gt;</span> <span class="p">{</span>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>  <span class="k">SERVICE</span> <span class="nl">&lt;https://atomkg.pyscal.org/sparql&gt;</span> <span class="p">{</span>
 </span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    <span class="c"># 🔗 JOIN</span>
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    <span class="nv">?sample</span> <span class="nn">dcterms</span><span class="p">:</span><span class="nt">isPartOf</span> <span class="nv">?ds</span> <span class="p">.</span>
@@ -3117,7 +3117,7 @@
 </span></code></pre></div>
 <h2 id="sources">Sources</h2>
 <ul>
-<li>atomRDF KG SPARQL endpoint — <a href="https://atomrdf.fair-workflows.org/sparql">https://atomrdf.fair-workflows.org/sparql</a></li>
+<li>atomRDF KG SPARQL endpoint — <a href="https://atomkg.pyscal.org/sparql">https://atomkg.pyscal.org/sparql</a></li>
 <li>atomRDF tool — Menon, S., Azócar Guzmán, A., Sandfeld, S. <em>atomRDF: a python tool for ontology-based creation, manipulation, and querying of atomic structures.</em> <a href="https://github.com/pyscal/atomRDF">https://github.com/pyscal/atomRDF</a> (MIT)</li>
 <li>CMSO / ASMO / CDCO / PLDO — Helmholtz Metadata Collaboration, <a href="http://purls.helmholtz-metadaten.de/">http://purls.helmholtz-metadaten.de/</a></li>
 <li>Registration in MSE-KG — <a href="../../patterns/sparql_endpoints/pattern/"><code>sparql_endpoints</code> pattern</a></li>
