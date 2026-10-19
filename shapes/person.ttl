@@ -36,12 +36,6 @@ ex:PersonShape
         sh:message "a person must be denoted by at least a name" ;
     ] ;
     sh:property [
-        sh:path obo:RO_0000056 ;        # participates in
-        sh:class obo:BFO_0000015 ;        # process
-        sh:minCount 1 ;
-        sh:message "a person must participate in a process; 'the matwerk project' is a project, and project is a subclass of process, so it satisfies this via the hierarchy" ;
-    ] ;
-    sh:property [
         sh:path obo:RO_0002350 ;        # member of
         sh:class obo:OBI_0000245 ;        # organization
         sh:message "if a person states a member-of, the target must be an organization" ;

@@ -30,7 +30,7 @@ DEFAULT_ARTIFACT = "spreadsheets"
 SHAPES_BY_ARTIFACT: dict[str, tuple[str, ...] | None] = {
     "spreadsheets": None,
     "zenodo": (
-        "publication.ttl", "dataset.ttl", "software.ttl",
+        "publication.ttl", "dataset.ttl",
         "shape1.ttl", "shape2.ttl", "shape3.ttl", "shape4.ttl",
         "shape5.ttl", "shape7.ttl", "shape8.ttl", "shape9.ttl",
     ),

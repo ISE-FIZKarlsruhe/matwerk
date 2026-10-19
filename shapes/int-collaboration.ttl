@@ -35,11 +35,6 @@ ex:IntCollaborationShape
     ] ;
     sh:property [
         sh:path obo:BFO_0000199 ;       # occupies temporal region
-        sh:minCount 1 ;
-        sh:message "a collaboration must occupy a temporal region" ;
-    ] ;
-    sh:property [
-        sh:path obo:BFO_0000199 ;       # occupies temporal region
         sh:node ex:NonEmptyTemporalRegion ;
         sh:message "the temporal region a collaboration occupies must state a date" ;
     ] ;

@@ -38,13 +38,7 @@ ex:EventShape
     ] ;
     sh:property [
         sh:path obo:BFO_0000199 ;       # occupies temporal region
-        sh:minCount 1 ;
-        sh:message "an event must occupy a temporal region" ;
-    ] ;
-    sh:property [
-        sh:path obo:BFO_0000199 ;       # occupies temporal region
-        sh:class obo:BFO_0000038 ;        # one-dimensional temporal region
-        sh:minCount 1 ;
+        sh:class obo:BFO_0000038 ;      # one-dimensional temporal region
         sh:message "what an event occupies must be a 1D temporal region" ;
     ] ;
     sh:property [

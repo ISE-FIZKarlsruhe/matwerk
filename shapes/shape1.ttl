@@ -12,9 +12,11 @@
 ex:TextualEntityShape
     a sh:NodeShape ;
     sh:targetClass <http://purl.obolibrary.org/obo/IAO_0000300> ;    # "Textual Entity"
-    sh:property [
-        sh:path <http://purl.obolibrary.org/obo/IAO_0000136> ;       # is about
-        sh:minCount 1 ;
-        sh:message "a 'textual entity' (IAO_0000300) must always 'be/is about' (IAO_0000136) something"
-    ] ;
+    sh:or (
+        [ sh:property [ sh:path <http://purl.obolibrary.org/obo/IAO_0000136> ;   # is about
+                        sh:minCount 1 ] ]
+        [ sh:property [ sh:path [ sh:inversePath <http://purl.obolibrary.org/obo/IAO_0000235> ] ;
+                        sh:minCount 1 ] ]                            # ... is denoted by this
+    ) ;
+    sh:message "a 'textual entity' (IAO_0000300) must be connected to a resource: either it 'is about' (IAO_0000136) something, or something is 'denoted by' (IAO_0000235) it" ;
     .
