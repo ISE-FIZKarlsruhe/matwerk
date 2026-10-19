@@ -20,8 +20,10 @@ ex:NonEmptyValueNode
                         sh:minCount 1 ] ]
         [ sh:property [ sh:path pmd:PMD_0000006 ;       # has value (PMDco)
                         sh:minCount 1 ] ]
+        [ sh:property [ sh:path obo:OBI_0002135 ;    # has specified value
+                        sh:minCount 1 ] ]
     ) ;
-    sh:message "Empty value node: no literal attached (has value / has url / PMDco has value)." ;
+    sh:message "Empty value node: no literal attached (has value / has url / PMDco has value / has specified value)." ;
     .
 
 ex:MatwerkStructureShape

@@ -48,6 +48,8 @@ REPLACEMENTS_3_0_2: dict[str, str | None] = {
     NFDI + "NFDI_0000140": OBO + "IAO_0000593",   # software library     ( 19 rows)
     NFDI + "NFDI_0010040": OBO + "IAO_0000592",   # software module      ( 18 rows)
     NFDI + "NFDI_0010039": OBO + "IAO_0000591",   # software method      ( 17 rows)
+    NFDI + "NFDI_0000198": OBO + "IAO_0000010",   # software  (zenodo harvester;
+                                                  # 3.0.2 label: "obsolete software")
     # The ontology states no successor for this one. The project's own choice —
     # nfdi:NFDI_0000206 'standard' — is recorded in _V302 below, deliberately not
     # here, so this map stays a faithful reading of IAO_0100001.

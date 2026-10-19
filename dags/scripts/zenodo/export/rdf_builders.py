@@ -6,7 +6,9 @@ from rdflib.term import Literal, URIRef
 NFDI_DATASET      = "http://purl.obolibrary.org/obo/IAO_0001000"
 NFDI_PUBLICATION  = "http://purl.obolibrary.org/obo/IAO_0000311"
 NFDI_LECTURE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010022"
-NFDI_SOFTWARE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"
+# MWO 3.0.2 deprecated nfdi:NFDI_0000198 ("obsolete software") and states
+# obo:IAO_0000010 "software" as its successor via IAO_0100001.
+NFDI_SOFTWARE = "http://purl.obolibrary.org/obo/IAO_0000010"
 IAO_0000308_figure = "http://purl.obolibrary.org/obo/IAO_0000308"
 
 IAO_0000235 = "http://purl.obolibrary.org/obo/IAO_0000235"

@@ -112,7 +112,7 @@ Zenodo `resource_type` values are mapped to MWO/NFDIcore classes:
 |------------|-----------|-----|
 | `dataset`, `image` | `nfdicore:Dataset` | `IAO_0001000` |
 | `publication`, `article`, `book`, `thesis`, `report`, `preprint` | `nfdicore:Publication` | `IAO_0000311` |
-| `software` | `nfdicore:Software` | `NFDI_0000198` |
+| `software` | `nfdicore:Software` | `IAO_0000010` |
 | `lesson`, `presentation` | `nfdicore:Lecture` | `NFDI_0010022` |
 | `image` (also typed as) | `iao:Figure` | `IAO_0000308` |
 
