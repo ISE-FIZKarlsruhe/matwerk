@@ -25,7 +25,7 @@ void:triples a owl:DatatypeProperty .
 time:inXSDDateTimeStamp a owl:DatatypeProperty .
 
 cto:cto-full.ttl a void:Dataset,
-        nfdi:NFDI_0000009 ;
+        obo:IAO_0001000 ;
     rdfs:label "HosseinBeygiNasrabadi/creep-testing-ontology — cto-full.ttl" ;
     obo:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#desc> ;
     obo:RO_0002353 <https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/cto-full.ttl#load> ;

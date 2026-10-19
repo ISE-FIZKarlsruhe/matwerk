@@ -1,5 +1,5 @@
 {
-  "ontoink": "0.7.8",
+  "ontoink": "0.7.9",
   "summary": {
     "graphs": 38,
     "minScore": 28,
@@ -704,7 +704,7 @@
       "consistency": "consistent",
       "metrics": {
         "classCount": 2,
-        "individualCount": 27,
+        "individualCount": 24,
         "objectPropertyCount": 3,
         "dataPropertyCount": 0,
         "subclassAxioms": 0,

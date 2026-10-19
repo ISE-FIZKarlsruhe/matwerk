@@ -36,7 +36,7 @@ obo:IAO_0000235 a owl:ObjectProperty .
 <https://nfdi.fiz-karlsruhe.de/matwerk/github/HosseinBeygiNasrabadi/creep-testing-ontology/landing> a nfdi:NFDI_0000223 ;
     nfdi:NFDI_0001008 "https://github.com/HosseinBeygiNasrabadi/creep-testing-ontology/releases/tag/1.0.0"^^xsd:anyURI .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/zenodo/18297457> a nfdi:NFDI_0000009 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/zenodo/18297457> a obo:IAO_0001000 ;
     rdfs:label "18297457" ;
     obo:BFO_0000051 <https://nfdi.fiz-karlsruhe.de/matwerk/zenodo/18297457/dimensionless_fan_quantity_kinds.ttl> ;
     obo:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/zenodo/18297457/landing> .
