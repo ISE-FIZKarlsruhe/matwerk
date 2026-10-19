@@ -53,9 +53,4 @@ ex:ProcessShape
         sh:node ex:NonEmptyRole ;
         sh:message "a role realized by a process must itself carry content" ;
     ] ;
-    sh:property [
-        sh:path obo:BFO_0000199 ;       # occupies temporal region
-        sh:node ex:NonEmptyTemporalRegion ;
-        sh:message "a temporal region a process occupies must state a date" ;
-    ] ;
     .

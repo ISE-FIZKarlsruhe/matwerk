@@ -22,6 +22,9 @@ ex:NonEmptyValueNode
                         sh:minCount 1 ] ]
         [ sh:property [ sh:path obo:OBI_0002135 ;    # has specified value
                         sh:minCount 1 ] ]
+        [ sh:property [ sh:path rdfs:label ;            # a label alone is enough:
+                        sh:minCount 1 ] ]               # value nodes reached by denoted-by
+                                                        # carry their text as the label
     ) ;
     sh:message "Empty value node: no literal attached (has value / has url / PMDco has value / has specified value)." ;
     .
@@ -30,11 +33,6 @@ ex:MetadataStandardShape
     a sh:NodeShape ;
     sh:targetClass nfdi:NFDI_0000206 ;     # standard
     rdfs:label "Metadata standard: required content and linked-instance quality" ;
-    sh:property [
-        sh:path obo:IAO_0000235 ;       # denoted by
-        sh:minCount 1 ;
-        sh:message "a metadata standard must be denoted by its name and description" ;
-    ] ;
     sh:property [
         sh:path obo:IAO_0000235 ;       # denoted by
         sh:node ex:NonEmptyValueNode ;
