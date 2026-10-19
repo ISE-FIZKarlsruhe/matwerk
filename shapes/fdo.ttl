@@ -19,13 +19,7 @@ ex:FdoShape
     ] ;
     sh:property [
         sh:path obo:BFO_0000050 ;       # part of
-        sh:minCount 1 ;
-        sh:message "an FDO must be part of a dataset" ;
-    ] ;
-    sh:property [
-        sh:path obo:BFO_0000050 ;       # part of
-        sh:class obo:IAO_0001000 ;        # data collection
-        sh:minCount 1 ;
-        sh:message "the thing an FDO is part of must be a data collection" ;
+        sh:class obo:IAO_0001000 ;      # data collection
+        sh:message "if an FDO states what it is part of, that must be a data collection" ;
     ] ;
     .

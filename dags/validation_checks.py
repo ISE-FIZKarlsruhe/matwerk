@@ -25,6 +25,41 @@ INFERENCES_FILE = "spreadsheets_inferences.ttl"
 
 DEFAULT_ARTIFACT = "spreadsheets"
 
+# Which SHACL shapes apply to which source.
+
+SHAPES_BY_ARTIFACT: dict[str, tuple[str, ...] | None] = {
+    "spreadsheets": None,
+    "zenodo": (
+        "publication.ttl", "dataset.ttl", "software.ttl",
+        "shape1.ttl", "shape2.ttl", "shape3.ttl", "shape4.ttl",
+        "shape5.ttl", "shape7.ttl", "shape8.ttl", "shape9.ttl",
+    ),
+    "pmd": (
+        "dataset.ttl", "material.ttl",
+        "shape1.ttl", "shape2.ttl", "shape3.ttl", "shape4.ttl",
+        "shape5.ttl", "shape7.ttl", "shape8.ttl", "shape9.ttl",
+    ),
+    "endpoints": (
+        "sparql-endpoint.ttl", "dataportal.ttl",
+        "shape1.ttl", "shape2.ttl", "shape3.ttl", "shape4.ttl",
+        "shape5.ttl", "shape7.ttl", "shape8.ttl", "shape9.ttl",
+    ),
+}
+# A source not listed above gets the source-agnostic shapes only, rather than
+# everything -- a new harvester should not fail on the workbook's rules before
+# anyone has decided which of them it ought to meet.
+GENERIC_SHAPES = ("shape1.ttl", "shape2.ttl", "shape3.ttl", "shape4.ttl",
+                  "shape5.ttl", "shape7.ttl", "shape8.ttl", "shape9.ttl")
+
+
+def shapes_for(artifact: str, available: list[str]) -> list[str]:
+    if artifact == DEFAULT_ARTIFACT:
+        return available
+    wanted = SHAPES_BY_ARTIFACT.get(artifact, GENERIC_SHAPES)
+    if wanted is None:
+        return available
+    return [s for s in available if s in wanted]
+
 @dag(
     schedule=None,
     catchup=False,
@@ -263,10 +298,59 @@ def validation_checks():
         from pyshacl import validate
 
         data_dir = ti.xcom_pull(task_ids="init_data_dir", key="datadir")
-        shape_files = ti.xcom_pull(task_ids="fetch_shapes", key="shape_files")
+        available = ti.xcom_pull(task_ids="fetch_shapes", key="shape_files")
+        artifact = ti.xcom_pull(task_ids="init_data_dir", key="artifact")
 
+        shape_files = shapes_for(artifact, available)
+        skipped = [s for s in available if s not in shape_files]
+        print(f"SHACL for artifact {artifact!r}: running {len(shape_files)} shape(s)")
+        if skipped:
+            print("  not applicable to this source, skipped: " + ", ".join(skipped))
+
+        # SHACL checks what the CURATOR ASSERTED, so it runs on the asserted
+        # graph, not on asserted+inferences.
+        #
+        # Reasoning invents focus nodes. In the 2026-10-19 spreadsheets run the
+        # data portal shape reported 142 violations of "must be denoted by its
+        # name" against a sheet holding 62 data portals, all 62 of which carry
+        # the name in dataportal.owl: the extra targets were individuals the
+        # reasoner had typed NFDI_0000123 through a property range, never
+        # entered as data portals by anyone. The reasoned graph is already
+        # covered -- HermiT checks consistency and the verify queries check
+        # disjointness -- so validating it again here only manufactures noise.
         merged_name = ti.xcom_pull(task_ids="init_data_dir", key="merged_for_validation_ttl")
+        asserted_name = ti.xcom_pull(task_ids="init_data_dir", key="asserted_ttl")
         merged_ttl = os.path.join(data_dir, merged_name)
+        if asserted_name and os.path.exists(os.path.join(data_dir, asserted_name)):
+            merged_ttl = os.path.join(data_dir, asserted_name)
+            print(f"SHACL input: {asserted_name} (asserted only, no inferences)")
+        else:
+            print(f"SHACL input: {merged_name} (asserted graph not found)")
+
+        # The merged graph carries the ontology, whose own named individuals --
+        # mwo:MWO_0001017 "matwerk participant project organization" and
+        # MWO_0001018 -- then get validated as if they were harvested data and
+        # reported for lacking an institution name. SHACL here is meant to
+        # police what WE assert, so the ontology's terms are taken back out.
+        ont_path = os.path.join(data_dir, "ontology.owl")
+        data_for_shacl = merged_ttl
+        if os.path.exists(ont_path):
+            import rdflib
+
+            data_g = rdflib.Graph()
+            data_g.parse(merged_ttl, format="turtle")
+            before = len(data_g)
+            ont_g = rdflib.Graph()
+            try:
+                ont_g.parse(ont_path)
+                for triple in ont_g:
+                    data_g.remove(triple)
+                data_for_shacl = os.path.join(data_dir, "_shacl_data.ttl")
+                data_g.serialize(destination=data_for_shacl, format="turtle")
+                print(f"  ontology subtracted for SHACL: {before} -> {len(data_g)} triples")
+            except Exception as exc:                      # noqa: BLE001
+                print(f"  could not subtract the ontology ({exc}); validating the merge as is")
+                data_for_shacl = merged_ttl
 
         out_dir = os.path.join(data_dir, "validation", "shacl")
         os.makedirs(out_dir, exist_ok=True)
@@ -279,7 +363,7 @@ def validation_checks():
             print("Running SHACL:", shp)
 
             conforms, _, results_text = validate(
-                data_graph=merged_ttl,
+                data_graph=data_for_shacl,
                 shacl_graph=shp,
                 data_graph_format="turtle",
                 shacl_graph_format="turtle",
