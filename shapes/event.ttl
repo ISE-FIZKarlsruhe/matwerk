@@ -1,0 +1,55 @@
+##### Event: required content, target types, and linked-instance quality
+
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix mwo:   <http://purls.helmholtz-metadaten.de/mwo/> .
+@prefix pmd:   <https://w3id.org/pmd/co/> .
+@prefix ex:    <https://nfdi.fiz-karlsruhe.de/matwerk/shapes/> .
+
+
+# A temporal region is only meaningful if it says WHEN.
+ex:NonEmptyTemporalRegion
+    a sh:NodeShape ;
+    rdfs:label "temporal region states at least one date" ;
+    sh:or (
+        [ sh:property [ sh:path obo:IAO_0000235 ;       # denoted by
+                        sh:minCount 1 ] ]
+        [ sh:property [ sh:path obo:BFO_0000222 ;       # has first instant
+                        sh:minCount 1 ] ]
+        [ sh:property [ sh:path obo:BFO_0000224 ;       # has last instant
+                        sh:minCount 1 ] ]
+    ) ;
+    sh:message "Empty temporal region: no denoted-by text, no first instant, no last instant." ;
+    .
+
+ex:EventShape
+    a sh:NodeShape ;
+    sh:targetClass nfdi:NFDI_0000018 ;     # academic event
+    sh:targetClass nfdi:NFDI_0001043 ;     # academic workshop
+    sh:targetClass nfdi:NFDI_0010019 ;     # academic conference
+    sh:targetClass nfdi:NFDI_0010020 ;     # academic seminar
+    rdfs:label "Event: required content and linked-instance quality" ;
+    sh:property [
+        sh:path obo:IAO_0000235 ;       # denoted by
+        sh:minCount 1 ;
+        sh:message "an event must be denoted by its contribution name" ;
+    ] ;
+    sh:property [
+        sh:path obo:BFO_0000199 ;       # occupies temporal region
+        sh:minCount 1 ;
+        sh:message "an event must occupy a temporal region" ;
+    ] ;
+    sh:property [
+        sh:path obo:BFO_0000199 ;       # occupies temporal region
+        sh:class obo:BFO_0000038 ;        # one-dimensional temporal region
+        sh:minCount 1 ;
+        sh:message "what an event occupies must be a 1D temporal region" ;
+    ] ;
+    sh:property [
+        sh:path obo:BFO_0000199 ;       # occupies temporal region
+        sh:node ex:NonEmptyTemporalRegion ;
+        sh:message "THE CROSS-SHEET CHECK: the temporal region an event occupies must state a date" ;
+    ] ;
+    .

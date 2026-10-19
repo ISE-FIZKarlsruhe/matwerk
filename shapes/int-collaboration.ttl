@@ -1,0 +1,46 @@
+##### International collaboration: required content, target types, and linked-instance quality
+
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix mwo:   <http://purls.helmholtz-metadaten.de/mwo/> .
+@prefix pmd:   <https://w3id.org/pmd/co/> .
+@prefix ex:    <https://nfdi.fiz-karlsruhe.de/matwerk/shapes/> .
+
+
+# A temporal region is only meaningful if it says WHEN.
+ex:NonEmptyTemporalRegion
+    a sh:NodeShape ;
+    rdfs:label "temporal region states at least one date" ;
+    sh:or (
+        [ sh:property [ sh:path obo:IAO_0000235 ;       # denoted by
+                        sh:minCount 1 ] ]
+        [ sh:property [ sh:path obo:BFO_0000222 ;       # has first instant
+                        sh:minCount 1 ] ]
+        [ sh:property [ sh:path obo:BFO_0000224 ;       # has last instant
+                        sh:minCount 1 ] ]
+    ) ;
+    sh:message "Empty temporal region: no denoted-by text, no first instant, no last instant." ;
+    .
+
+ex:IntCollaborationShape
+    a sh:NodeShape ;
+    sh:targetClass mwo:MWO_0001004 ;       # international collaboration
+    rdfs:label "International collaboration: required content and linked-instance quality" ;
+    sh:property [
+        sh:path obo:IAO_0000235 ;       # denoted by
+        sh:minCount 1 ;
+        sh:message "a collaboration must be denoted by its title" ;
+    ] ;
+    sh:property [
+        sh:path obo:BFO_0000199 ;       # occupies temporal region
+        sh:minCount 1 ;
+        sh:message "a collaboration must occupy a temporal region" ;
+    ] ;
+    sh:property [
+        sh:path obo:BFO_0000199 ;       # occupies temporal region
+        sh:node ex:NonEmptyTemporalRegion ;
+        sh:message "the temporal region a collaboration occupies must state a date" ;
+    ] ;
+    .

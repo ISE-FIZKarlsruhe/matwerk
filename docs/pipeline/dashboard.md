@@ -83,7 +83,7 @@ SELECT DISTINCT ?dataset
   (SAMPLE(?link) AS ?link)
 WHERE {
   GRAPH <{graph}> {
-    ?dataset a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> .
+    ?dataset a <http://purl.obolibrary.org/obo/IAO_0001000> .
     OPTIONAL {
       ?dataset <http://purl.obolibrary.org/obo/IAO_0000235> ?titleNode .
       ?titleNode <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008> ?title .

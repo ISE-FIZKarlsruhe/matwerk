@@ -13,7 +13,7 @@ The graph is produced by the **[RML4MSE-KG](https://github.com/HosseinBeygiNasra
 |---|---|
 | **IRI in MSE-KG** | [`msekg:17902496761672`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17902496761672) |
 | **`rdfs:label`** | Microstructure-Sensitive Mechanical Data Knowledge Graph (MiMeDat-KG, NFDI MatWerk IUC07) |
-| **Type** | `nfdi:NFDI_0000009` — dataset |
+| **Type** | `obo:IAO_0001000` — dataset |
 | **SPARQL endpoint** | `https://dataportal.material-digital.de/dataset/9dc27507-bf47-4425-877d-1e5249e9db05/fuseki/$/sparql` |
 | **Endpoint node** | [`msekg:17902496761674`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17902496761674) (`nfdi:NFDI_0001095`) |
 | **Licence** | CC0 1.0 |
@@ -28,7 +28,7 @@ The graph is produced by the **[RML4MSE-KG](https://github.com/HosseinBeygiNasra
 ## Locate it in the MatWerk KG
 
 ```sparql
-PREFIX nfdicore_dataset:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX nfdicore_dataset:         <http://purl.obolibrary.org/obo/IAO_0001000>
 PREFIX nfdicore_sparql_endpoint: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095>
 PREFIX textual_entity:           <http://purl.obolibrary.org/obo/IAO_0000300>
 PREFIX denoted_by:               <http://purl.obolibrary.org/obo/IAO_0000235>

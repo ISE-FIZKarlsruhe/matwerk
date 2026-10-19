@@ -1,6 +1,6 @@
 # Federated queries
 
-The MatWerk Knowledge Graph (MSE-KG) does not copy the data of its partner graphs. It **registers** them: every partner graph appears in MSE-KG as a `nfdi:NFDI_0000009` (dataset) individual carrying its label, licence, creators — and the URL of its public SPARQL endpoint. A federated query then reaches that endpoint live with SPARQL 1.1 `SERVICE`, so the answer is always computed against the partner's current data.
+The MatWerk Knowledge Graph (MSE-KG) does not copy the data of its partner graphs. It **registers** them: every partner graph appears in MSE-KG as a `obo:IAO_0001000` (dataset) individual carrying its label, licence, creators — and the URL of its public SPARQL endpoint. A federated query then reaches that endpoint live with SPARQL 1.1 `SERVICE`, so the answer is always computed against the partner's current data.
 
 ```sparql
 SELECT ... WHERE {
@@ -41,7 +41,7 @@ You do not have to hard-code a partner endpoint. MSE-KG knows all of them — th
 
 ```sparql
 PREFIX nfdicore_sparql_endpoint: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095>
-PREFIX nfdicore_dataset:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX nfdicore_dataset:         <http://purl.obolibrary.org/obo/IAO_0001000>
 PREFIX denoted_by:               <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX has_url:                  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
 PREFIX rdfs:                     <http://www.w3.org/2000/01/rdf-schema#>

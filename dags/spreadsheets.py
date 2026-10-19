@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import csv
+import io
 import os
 import requests
 
@@ -27,6 +29,35 @@ def _un_mojibake(text: str, max_passes: int = 3) -> str:
             return text
         text = repaired
     return text
+
+
+def _assert_robot_can_read_every_row(name: str, text: str) -> None:
+    """Refuse a TSV that ROBOT would silently read short.
+
+    ROBOT's TSV reader honours the double quote as a field delimiter, so a cell
+    holding an ODD number of them opens a field that swallows every following
+    line until the next quote. Those rows never become individuals, ROBOT still
+    exits 0, and the only visible symptom is a later template dying with
+    "object cannot be null" on a label whose defining row was eaten.
+
+    Google's /pub?gid=...&output=tsv emits a cell's quotes raw and unescaped, so
+    nothing on the way in balances them. The sheets are clean today; this keeps a
+    single clipped title from quietly costing hundreds of rows later. A local
+    replay lost 861 of req_2's 4534 rows to exactly one such cell.
+    """
+    offenders = []
+    rows = csv.reader(io.StringIO(text), delimiter="\t", quoting=csv.QUOTE_NONE)
+    for n, row in enumerate(rows, 1):
+        for col, value in enumerate(row, 1):
+            if value.count('"') % 2:
+                offenders.append((n, col, value[:80]))
+    if offenders:
+        detail = "; ".join(f"row {r} col {c}: {v!r}" for r, c, v in offenders[:5])
+        raise RuntimeError(
+            f"{name}.tsv has {len(offenders)} cell(s) with an unbalanced double "
+            f"quote, which makes ROBOT read the file short. Fix the cell(s) in "
+            f"the sheet (close the quotation or remove it). {detail}"
+        )
 
 """
 Airflow DAG: process_spreadsheets
@@ -112,6 +143,7 @@ def process_spreadsheets():
         r = requests.get(url, timeout=60)
         r.raise_for_status()
         repaired = _un_mojibake(r.content.decode("utf-8"))
+        _assert_robot_can_read_every_row(name, repaired)
         with open(out_path, "w", encoding="utf-8", newline="") as f:
             f.write(repaired)
         if not os.path.exists(out_path) or os.path.getsize(out_path) == 0:

@@ -1,0 +1,61 @@
+##### Process: required content, target types, and linked-instance quality
+
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix mwo:   <http://purls.helmholtz-metadaten.de/mwo/> .
+@prefix pmd:   <https://w3id.org/pmd/co/> .
+@prefix ex:    <https://nfdi.fiz-karlsruhe.de/matwerk/shapes/> .
+
+
+# A role exists to carry an email, a website or a written name, all reached by
+# 'denoted by'. Without one it states nothing.
+ex:NonEmptyRole
+    a sh:NodeShape ;
+    rdfs:label "role carries an email, a website or a written name" ;
+    sh:property [
+        sh:path obo:IAO_0000235 ;       # denoted by
+        sh:minCount 1 ;
+    ] ;
+    sh:message "Empty role: nothing denotes it (no email, website or written name)." ;
+    .
+
+
+# A temporal region is only meaningful if it says WHEN.
+ex:NonEmptyTemporalRegion
+    a sh:NodeShape ;
+    rdfs:label "temporal region states at least one date" ;
+    sh:or (
+        [ sh:property [ sh:path obo:IAO_0000235 ;       # denoted by
+                        sh:minCount 1 ] ]
+        [ sh:property [ sh:path obo:BFO_0000222 ;       # has first instant
+                        sh:minCount 1 ] ]
+        [ sh:property [ sh:path obo:BFO_0000224 ;       # has last instant
+                        sh:minCount 1 ] ]
+    ) ;
+    sh:message "Empty temporal region: no denoted-by text, no first instant, no last instant." ;
+    .
+
+ex:ProcessShape
+    a sh:NodeShape ;
+    sh:targetClass obo:BFO_0000015 ;       # process
+    sh:targetClass nfdi:NFDI_0000101 ;     # service process
+    sh:targetClass nfdi:NFDI_0000111 ;     # contacting process
+    sh:targetClass obo:IAO_0000444 ;       # publishing process
+    rdfs:label "Process: required content and linked-instance quality" ;
+    sh:property [
+        sh:path obo:RO_0000057 ;        # has participant
+        sh:message "has-participant points at an agent or organization" ;
+    ] ;
+    sh:property [
+        sh:path obo:BFO_0000055 ;       # realizes
+        sh:node ex:NonEmptyRole ;
+        sh:message "a role realized by a process must itself carry content" ;
+    ] ;
+    sh:property [
+        sh:path obo:BFO_0000199 ;       # occupies temporal region
+        sh:node ex:NonEmptyTemporalRegion ;
+        sh:message "a temporal region a process occupies must state a date" ;
+    ] ;
+    .

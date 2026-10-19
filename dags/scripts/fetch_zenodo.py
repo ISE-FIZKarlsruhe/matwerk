@@ -17,7 +17,7 @@ PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
 
 SELECT DISTINCT ?dataset ?url WHERE {
   VALUES ?class {
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+    <http://purl.obolibrary.org/obo/IAO_0001000>
     <http://purls.helmholtz-metadaten.de/mwo/MWO_0001058>
     <http://purls.helmholtz-metadaten.de/mwo/MWO_0001056>
     <http://purls.helmholtz-metadaten.de/mwo/MWO_0001057>

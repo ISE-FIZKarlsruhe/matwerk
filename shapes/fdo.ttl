@@ -1,0 +1,31 @@
+##### FAIR Digital Object: required content, target types, and linked-instance quality
+
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix mwo:   <http://purls.helmholtz-metadaten.de/mwo/> .
+@prefix pmd:   <https://w3id.org/pmd/co/> .
+@prefix ex:    <https://nfdi.fiz-karlsruhe.de/matwerk/shapes/> .
+
+ex:FdoShape
+    a sh:NodeShape ;
+    sh:targetClass nfdi:NFDI_0001037 ;     # digital object identifier
+    rdfs:label "FAIR Digital Object: required content and linked-instance quality" ;
+    sh:property [
+        sh:path nfdi:NFDI_0001008 ;     # has url
+        sh:minCount 1 ;
+        sh:message "an FDO must state its URL" ;
+    ] ;
+    sh:property [
+        sh:path obo:BFO_0000050 ;       # part of
+        sh:minCount 1 ;
+        sh:message "an FDO must be part of a dataset" ;
+    ] ;
+    sh:property [
+        sh:path obo:BFO_0000050 ;       # part of
+        sh:class obo:IAO_0001000 ;        # data collection
+        sh:minCount 1 ;
+        sh:message "the thing an FDO is part of must be a data collection" ;
+    ] ;
+    .

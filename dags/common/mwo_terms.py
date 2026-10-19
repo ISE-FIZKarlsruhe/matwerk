@@ -15,21 +15,24 @@ Usage::
                                 # 3.0.2 -> obo:IAO_0001000
 
 ``matwerk_mwo_version`` (Airflow Variable) selects the vocabulary; it defaults to
-``3.0.1``, which is what the server currently runs, so behaviour is unchanged until
-the variable is set.
+``3.0.2``, which is what the curation workbook now uses — all ten deprecated classes
+were retyped to their stated replacements, so writing 3.0.1 terms would contradict
+the sheet. Set the variable to ``3.0.1`` only to reproduce an older release.
 
 Verified against mwo-full.ttl v3.0.1 and v3.0.2 (see REPLACEMENTS below: every entry
 was read from the ontology's own ``owl:deprecated`` + ``IAO_0100001`` assertions).
 """
 from __future__ import annotations
 
+import os
 from dataclasses import dataclass
 
 NFDI = "https://nfdi.fiz-karlsruhe.de/ontology/"
 OBO = "http://purl.obolibrary.org/obo/"
 MWO = "http://purls.helmholtz-metadaten.de/mwo/"
 
-DEFAULT_MWO_VERSION = "3.0.1"
+DEFAULT_MWO_VERSION = "3.0.2"
+LEGACY_MWO_VERSION = "3.0.1"
 MWO_ONTOLOGY_IRI = "http://purls.helmholtz-metadaten.de/mwo/mwo.owl"
 
 # Classes deprecated in 3.0.2 -> their stated replacement (IAO_0100001).
@@ -45,9 +48,25 @@ REPLACEMENTS_3_0_2: dict[str, str | None] = {
     NFDI + "NFDI_0000140": OBO + "IAO_0000593",   # software library     ( 19 rows)
     NFDI + "NFDI_0010040": OBO + "IAO_0000592",   # software module      ( 18 rows)
     NFDI + "NFDI_0010039": OBO + "IAO_0000591",   # software method      ( 17 rows)
-    NFDI + "NFDI_0001054": None,                  # metadata specification (20 rows) — NO
+    # The ontology states no successor for this one. The project's own choice —
+    # nfdi:NFDI_0000206 'standard' — is recorded in _V302 below, deliberately not
+    # here, so this map stays a faithful reading of IAO_0100001.
+    NFDI + "NFDI_0001054": None,                  # metadata specification — NO
                                                   # replacement stated; needs a curation
                                                   # decision before upgrading.
+}
+
+# Curation decisions for terms the ontology deprecated WITHOUT stating a
+# successor. These are the project's own choices, not IAO_0100001 assertions, so
+# they live apart from REPLACEMENTS_3_0_2 — which stays a faithful reading of the
+# ontology and must still say None for these, or a future ontology diff would be
+# compared against our opinion instead of its own text.
+LOCAL_DECISIONS_3_0_2: dict[str, str] = {
+    # nfdi:NFDI_0001054 'metadata specification' -> nfdi:NFDI_0000206 'standard',
+    # which is live in 3.0.2 and a subclass of 'document'. That fits what the
+    # Metadata tab holds: OPTIMADE, MatML, CIF2, ESCDF and other published
+    # metadata standards.
+    NFDI + "NFDI_0001054": NFDI + "NFDI_0000206",
 }
 
 # Terms REMOVED outright in 3.0.2 (not merely deprecated).
@@ -64,9 +83,20 @@ class Terms:
     version: str
 
     # --- classes that CHANGE between versions ---
+    # One field per class deprecated in 3.0.2, so a writer never has to spell a
+    # version-dependent IRI itself. METADATA_SPECIFICATION resolves to the
+    # project's own choice (see LOCAL_DECISIONS_3_0_2) because the ontology
+    # deprecated it without naming a successor.
     DATASET: str
     PUBLICATION: str
     SOFTWARE_APPLICATION: str
+    PUBLISHING_PROCESS: str
+    DOCUMENT: str
+    SOFTWARE_LIBRARY: str
+    SOFTWARE_MODULE: str
+    SOFTWARE_METHOD: str
+    SOFTWARE_SCRIPT: str
+    METADATA_SPECIFICATION: str
 
     # --- classes stable across 3.0.1 / 3.0.2 (verified present in both) ---
     # The description node is `textual description`. It is emphatically NOT
@@ -107,32 +137,76 @@ class Terms:
         return f"{MWO_ONTOLOGY_IRI}/{self.version}"
 
     def migrate(self, iri: str) -> str:
-        """Map a 3.0.1 class onto its 3.0.2 replacement when running 3.0.2."""
-        if self.version == DEFAULT_MWO_VERSION:
+        """Map a 3.0.1 class onto its 3.0.2 replacement when running 3.0.2.
+
+        Compares against LEGACY_MWO_VERSION, not DEFAULT_MWO_VERSION: the guard
+        exists to leave terms alone while running the *old* vocabulary, and the
+        default is now the new one, so keying it off the default would invert it.
+        """
+        if self.version.startswith(LEGACY_MWO_VERSION):
             return iri
-        return REPLACEMENTS_3_0_2.get(iri) or iri
+        return (REPLACEMENTS_3_0_2.get(iri)
+                or LOCAL_DECISIONS_3_0_2.get(iri)
+                or iri)
 
 
 _V301 = dict(
     DATASET=NFDI + "NFDI_0000009",
     PUBLICATION=NFDI + "NFDI_0000190",
     SOFTWARE_APPLICATION=NFDI + "NFDI_0000218",
+    PUBLISHING_PROCESS=NFDI + "NFDI_0000014",
+    DOCUMENT=NFDI + "NFDI_0000022",
+    SOFTWARE_LIBRARY=NFDI + "NFDI_0000140",
+    SOFTWARE_MODULE=NFDI + "NFDI_0010040",
+    SOFTWARE_METHOD=NFDI + "NFDI_0010039",
+    SOFTWARE_SCRIPT=NFDI + "NFDI_0010041",
+    METADATA_SPECIFICATION=NFDI + "NFDI_0001054",
 )
 _V302 = dict(
     DATASET=OBO + "IAO_0001000",
     PUBLICATION=OBO + "IAO_0000311",
     SOFTWARE_APPLICATION=OBO + "IAO_0000594",
+    PUBLISHING_PROCESS=OBO + "IAO_0000444",
+    DOCUMENT=OBO + "IAO_0000310",
+    SOFTWARE_LIBRARY=OBO + "IAO_0000593",
+    SOFTWARE_MODULE=OBO + "IAO_0000592",
+    SOFTWARE_METHOD=OBO + "IAO_0000591",
+    SOFTWARE_SCRIPT=OBO + "IAO_0000595",
+    # nfdi:NFDI_0001054 'metadata specification' is deprecated in 3.0.2 with NO
+    # successor stated by the ontology, so this mapping is a CURATION DECISION, not
+    # an IAO_0100001 assertion — which is why it lives here and not in
+    # REPLACEMENTS_3_0_2 (that map stays a faithful reading of the ontology).
+    # nfdi:NFDI_0000206 'standard' is live in 3.0.2 and a subclass of 'document',
+    # which fits what the Metadata tab holds: OPTIMADE, MatML, CIF2, ESCDF and
+    # other published metadata standards.
+    METADATA_SPECIFICATION=NFDI + "NFDI_0000206",
 )
 
 
 def terms(version: str | None = None) -> Terms:
-    """Resolve the vocabulary for ``version`` (default: the Airflow Variable)."""
+    """Resolve the vocabulary for ``version``.
+
+    Precedence, highest first:
+
+    1. the explicit ``version`` argument (a DAG threading its own dag_run conf);
+    2. the ``MATWERK_MWO_VERSION`` environment variable — this is what lets the
+       standalone scripts under ``dags/scripts/`` follow the same setting without
+       importing Airflow: the DAG exports it in the operator's ``env=``;
+    3. the ``matwerk_mwo_version`` Airflow Variable;
+    4. ``DEFAULT_MWO_VERSION``.
+
+    Steps 1-3 are all runtime inputs, so switching ontology version is a
+    configuration change, not a code change.
+    """
     if version is None:
-        version = _version_from_airflow()
+        version = _resolve_version()
     return Terms(version=version, **(_V302 if version.startswith("3.0.2") else _V301))
 
 
-def _version_from_airflow() -> str:
+def _resolve_version() -> str:
+    from_env = os.environ.get("MATWERK_MWO_VERSION", "").strip()
+    if from_env:
+        return from_env
     try:
         from airflow.sdk import Variable
 

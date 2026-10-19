@@ -8,6 +8,11 @@ from typing import Optional
 
 import json
 
+try:                                    # normal Airflow layout: dags/ is on sys.path
+    from common.mwo_terms import terms
+except ImportError:                     # imported as part of the common package
+    from .mwo_terms import terms
+
 
 def utc_now_iso_seconds() -> str:
     return datetime.now(timezone.utc).isoformat(timespec="seconds").replace("+00:00", "Z")
@@ -81,12 +86,19 @@ class GraphPublishFacts:
     operator: str | None = None
     log_url: str | None = None
     hostname: str | None = None
-    
+
     # rdf stats
     stats: RdfStats | None = None
 
+    # Ontology version whose vocabulary is written. None = resolve from the
+    # matwerk_mwo_version Airflow Variable (see common/mwo_terms.py), so existing
+    # call sites need no change and one Variable governs the class written here.
+    mwo_version: str | None = None
+
 
 def build_metadata_ttl(f: GraphPublishFacts) -> str:
+
+    T = terms(f.mwo_version)
 
     inst_begin = f"{f.graph_root}/begin"
     inst_end = f"{f.graph_root}/end"
@@ -144,7 +156,7 @@ def build_metadata_ttl(f: GraphPublishFacts) -> str:
         
         # dataset
         f"<{dataset_iri}>",
-        f"  a nfdicore:NFDI_0000009 ;",
+        f"  a <{T.DATASET}> ;",
         f"  nfdicore:NFDI_0000191 <{pub_iri}> ;",
         f"  nfdicore:NFDI_0000142 <{license_iri}> ;",
         f"  nfdicore:NFDI_0001027 <{creator_iri}> ;",

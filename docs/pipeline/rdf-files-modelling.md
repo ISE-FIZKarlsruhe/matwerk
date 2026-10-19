@@ -20,7 +20,7 @@ a harvested graph is indistinguishable from a curated one to the dashboard, to
 
 ```turtle
 cto:cto-full.ttl
-    a void:Dataset , nfdi:NFDI_0000009 ;
+    a void:Dataset , obo:IAO_0001000 ;
     rdfs:label "HosseinBeygiNasrabadi/creep-testing-ontology — cto-full.ttl" ;
     void:triples          13057 ;
     void:distinctSubjects  3694 ;

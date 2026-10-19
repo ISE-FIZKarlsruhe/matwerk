@@ -56,7 +56,7 @@ PREFIX nfdicore: <https://nfdi.fiz-karlsruhe.de/ontology/>
 SELECT DISTINCT ?graph ?descriptionText
 WHERE {
   GRAPH ?provGraph {
-    ?graph a nfdicore:NFDI_0000009 ;
+    ?graph a obo:IAO_0001000 ;
            obo:IAO_0000235 ?descNode .
 
     ?descNode a nfdicore:NFDI_0001018 ;
@@ -78,7 +78,7 @@ PREFIX time:     <http://www.w3.org/2006/time#>
 SELECT DISTINCT ?graph ?beginTS ?endTS
 WHERE {
   GRAPH ?provGraph {
-    ?graph a nfdicore:NFDI_0000009 ;
+    ?graph a obo:IAO_0001000 ;
            obo:RO_0002353 ?process .
 
     ?process obo:BFO_0000199 ?temporalRegion .

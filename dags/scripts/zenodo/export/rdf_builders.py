@@ -3,8 +3,8 @@ from rdflib.graph import Graph
 from rdflib.namespace import RDF, RDFS
 from rdflib.term import Literal, URIRef
 
-NFDI_DATASET      = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"
-NFDI_PUBLICATION  = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190"
+NFDI_DATASET      = "http://purl.obolibrary.org/obo/IAO_0001000"
+NFDI_PUBLICATION  = "http://purl.obolibrary.org/obo/IAO_0000311"
 NFDI_LECTURE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0010022"
 NFDI_SOFTWARE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000198"
 IAO_0000308_figure = "http://purl.obolibrary.org/obo/IAO_0000308"

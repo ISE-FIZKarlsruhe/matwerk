@@ -168,7 +168,7 @@ def build_metadata_ttl(graph_name: str, version: str, publish_date: str, stats: 
         '@prefix rdfs:     <http://www.w3.org/2000/01/rdf-schema#> .',
         '',
         f'<{dataset_iri}>',
-        f'  a nfdicore:NFDI_0000009 ;',
+        f'  a obo:IAO_0001000 ;',
         f'  nfdicore:NFDI_0000142 <{license_iri}> ;',
         f'  nfdicore:NFDI_0001027 <{creator_iri}> ;',
         f'  nfdicore:NFDI_0001006 <{id_iri}> ;',

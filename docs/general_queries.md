@@ -3,7 +3,7 @@
 ### What are the submitted records in NFDI-MatWerk Zenodo community present in the MatWerk KG?
 
 ```sparql
-PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX nfdicore_dataset: <http://purl.obolibrary.org/obo/IAO_0001000>
 PREFIX has_part:         <http://purl.obolibrary.org/obo/BFO_0000051>
 PREFIX rdfs:             <http://www.w3.org/2000/01/rdf-schema#>
 
@@ -48,7 +48,7 @@ LIMIT 999
 PREFIX nfdicore_software:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121>
 PREFIX has_license:             <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142>
 PREFIX has_programming_language:<https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000187>
-PREFIX nfdicore_publication:    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190>
+PREFIX nfdicore_publication:    <http://purl.obolibrary.org/obo/IAO_0000311>
 PREFIX denoted_by:            <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX has_value:           <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
 PREFIX has_url:               <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
@@ -252,7 +252,7 @@ LIMIT 999
 ### What are the SPARQL endpoints in the MatWerk KG that are about "process"?
 
 ```sparql
-PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX nfdicore_dataset: <http://purl.obolibrary.org/obo/IAO_0001000>
 PREFIX denoted_by:     <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX has_url:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
 PREFIX bfo_process:      <http://purl.obolibrary.org/obo/BFO_0000015>
@@ -289,7 +289,7 @@ ORDER BY ?dataset ?term_class
 ### What are the datasets present in the MatWerk KG? What are creators, creator's affiliations and link of these datasets?
 
 ```sparql
-PREFIX nfdicore_dataset:            <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX nfdicore_dataset:            <http://purl.obolibrary.org/obo/IAO_0001000>
 PREFIX denoted_by:                <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX nfdicore_title:              <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019>
 PREFIX has_part:             <http://purl.obolibrary.org/obo/BFO_0000051>
@@ -500,7 +500,7 @@ LIMIT 999
 ### What are the present metadata in the MatWerk KG? What are the names and repository links of these metadata?
 
 ```sparql
-PREFIX nfdicore_metadata_specification: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054>
+PREFIX nfdicore_standard: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000206>
 PREFIX denoted_by:      <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX written_name:        <http://purl.obolibrary.org/obo/IAO_0000590>
 PREFIX has_url:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
@@ -508,7 +508,7 @@ PREFIX rdfs:              <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT DISTINCT ?metadata ?name ?repoLink
 WHERE {
-  ?metadata a nfdicore_metadata_specification: .
+  ?metadata a nfdicore_standard: .
 
   OPTIONAL {
     ?metadata denoted_by: ?metadataNode .
@@ -587,7 +587,7 @@ LIMIT 999
 ### What are the publications present in the MatWerk KG? What are the DOI, authors and authors affiliations of these publications?
 
 ```sparql
-PREFIX nfdicore_publication:       <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190>
+PREFIX nfdicore_publication:       <http://purl.obolibrary.org/obo/IAO_0000311>
 PREFIX has_external_identifier:             <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001006>
 PREFIX has_url:                  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
 PREFIX has_part:            <http://purl.obolibrary.org/obo/BFO_0000051>
@@ -699,7 +699,7 @@ WHERE {
 ```sparql
 PREFIX nfdicore_sparql_endpoint:     <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095>
 PREFIX has_url:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
-PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX nfdicore_dataset: <http://purl.obolibrary.org/obo/IAO_0001000>
 PREFIX denoted_by:     <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX rdfs:             <http://www.w3.org/2000/01/rdf-schema#>
 

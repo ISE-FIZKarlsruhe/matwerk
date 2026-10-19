@@ -110,8 +110,8 @@ Zenodo `resource_type` values are mapped to MWO/NFDIcore classes:
 
 | Zenodo Type | OWL Class | IRI |
 |------------|-----------|-----|
-| `dataset`, `image` | `nfdicore:Dataset` | `NFDI_0000009` |
-| `publication`, `article`, `book`, `thesis`, `report`, `preprint` | `nfdicore:Publication` | `NFDI_0000190` |
+| `dataset`, `image` | `nfdicore:Dataset` | `IAO_0001000` |
+| `publication`, `article`, `book`, `thesis`, `report`, `preprint` | `nfdicore:Publication` | `IAO_0000311` |
 | `software` | `nfdicore:Software` | `NFDI_0000198` |
 | `lesson`, `presentation` | `nfdicore:Lecture` | `NFDI_0010022` |
 | `image` (also typed as) | `iao:Figure` | `IAO_0000308` |
@@ -152,7 +152,7 @@ The harvester also queries the merged MatWerk KG to find datasets referencing Ze
 ```sparql
 SELECT DISTINCT ?dataset ?url WHERE {
   VALUES ?class {
-    <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+    <http://purl.obolibrary.org/obo/IAO_0001000>
     <https://nfdi.fiz-karlsruhe.de/ontology/MWO_0001058>
     <https://nfdi.fiz-karlsruhe.de/ontology/MWO_0001056>
     <https://nfdi.fiz-karlsruhe.de/ontology/MWO_0001057>

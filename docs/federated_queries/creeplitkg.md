@@ -10,7 +10,7 @@ Every entity is typed with classes from the **[Creep Testing Ontology (CTO)](htt
 |---|---|
 | **IRI in MSE-KG** | [`msekg:17858428366781`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17858428366781) |
 | **`rdfs:label`** | Creep Literature Knowledge Graph (CreepLitKG) |
-| **Type** | `nfdi:NFDI_0000009` — dataset |
+| **Type** | `obo:IAO_0001000` — dataset |
 | **SPARQL endpoint** | `https://dataportal.material-digital.de/dataset/a5b4edc4-43ef-44ff-a386-5d1f6fbbc439/fuseki/$/sparql` |
 | **Endpoint node** | [`msekg:17858430496111`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17858430496111) (`nfdi:NFDI_0001095`) |
 | **Licence** | CC0 1.0 |
@@ -59,7 +59,7 @@ curl -X POST \
 ## Locate it in the MatWerk KG
 
 ```sparql
-PREFIX nfdicore_dataset:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX nfdicore_dataset:         <http://purl.obolibrary.org/obo/IAO_0001000>
 PREFIX nfdicore_sparql_endpoint: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095>
 PREFIX textual_entity:           <http://purl.obolibrary.org/obo/IAO_0000300>
 PREFIX denoted_by:               <http://purl.obolibrary.org/obo/IAO_0000235>

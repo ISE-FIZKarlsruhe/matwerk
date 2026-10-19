@@ -97,6 +97,17 @@ ex:NoDeprecatedGraphClassShape
     rdfs:label "No deprecated classes on a published graph" ;
     sh:property [
         sh:path rdf:type ;
-        sh:not [ sh:in ( nfdi:NFDI_0000009 nfdi:NFDI_0000014 nfdi:NFDI_0001054 ) ] ;
-        sh:message "Deprecated class. Use obo:IAO_0001000 'data collection' instead of nfdi:NFDI_0000009 'dataset', and obo:IAO_0000444 'publishing process' instead of nfdi:NFDI_0000014." ] ;
+        sh:not [ sh:in (
+            nfdi:NFDI_0000009    # dataset               -> obo:IAO_0001000
+            nfdi:NFDI_0000014    # publishing process    -> obo:IAO_0000444
+            nfdi:NFDI_0000022    # document              -> obo:IAO_0000310
+            nfdi:NFDI_0000140    # software library      -> obo:IAO_0000593
+            nfdi:NFDI_0000190    # publication           -> obo:IAO_0000311
+            nfdi:NFDI_0000218    # software application  -> obo:IAO_0000594
+            nfdi:NFDI_0010039    # software method       -> obo:IAO_0000591
+            nfdi:NFDI_0010040    # software module       -> obo:IAO_0000592
+            nfdi:NFDI_0010041    # software script       -> obo:IAO_0000595
+            nfdi:NFDI_0001054    # metadata specification-> nfdi:NFDI_0000206 (local decision)
+        ) ] ;
+        sh:message "Deprecated class. Use obo:IAO_0001000 'data collection' instead of nfdi:NFDI_0000009 'dataset', obo:IAO_0000444 'publishing process' instead of nfdi:NFDI_0000014, and nfdi:NFDI_0000206 'standard' instead of nfdi:NFDI_0001054 'metadata specification' (the ontology states no successor for that one; 'standard' is this project's choice)." ] ;
     .

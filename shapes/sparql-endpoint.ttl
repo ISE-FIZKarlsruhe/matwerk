@@ -1,0 +1,20 @@
+##### SPARQL endpoint: required content, target types, and linked-instance quality
+
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix mwo:   <http://purls.helmholtz-metadaten.de/mwo/> .
+@prefix pmd:   <https://w3id.org/pmd/co/> .
+@prefix ex:    <https://nfdi.fiz-karlsruhe.de/matwerk/shapes/> .
+
+ex:SparqlEndpointShape
+    a sh:NodeShape ;
+    sh:targetClass nfdi:NFDI_0001095 ;     # sparql endpoint
+    rdfs:label "SPARQL endpoint: required content and linked-instance quality" ;
+    sh:property [
+        sh:path nfdi:NFDI_0001008 ;     # has url
+        sh:minCount 1 ;
+        sh:message "a sparql endpoint node must state its URL" ;
+    ] ;
+    .

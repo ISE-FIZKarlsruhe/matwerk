@@ -15,12 +15,15 @@ import requests
 from airflow.sdk import dag, task, Variable, get_current_context
 from airflow.exceptions import AirflowFailException
 from common.graph_metadata import compute_rdf_stats
+from common.mwo_terms import (
+    DEFAULT_MWO_VERSION,
+    MWO_ONTOLOGY_IRI,
+    terms as mwo_terms,
+)
 
 
 DAG_ID = "dump_and_archive"
 GRAPH_ROOT = "https://nfdi.fiz-karlsruhe.de/matwerk"
-MWO_ONTOLOGY_IRI = "http://purls.helmholtz-metadaten.de/mwo/mwo.owl"
-DEFAULT_MWO_VERSION = "3.0.1"
 
 # Same sources as publish_to_virtuoso
 DUMP_SOURCES = [
@@ -80,7 +83,7 @@ def _build_dump_metadata_ttl(
         '@prefix dcat:     <http://www.w3.org/ns/dcat#> .',
         '',
         f'<{dataset_iri}>',
-        f'  a nfdicore:NFDI_0000009 ;',
+        f'  a <{mwo_terms(mwo_version).DATASET}> ;',
         f'  nfdicore:NFDI_0000142 <{license_iri}> ;',
         f'  nfdicore:NFDI_0001027 <{creator_iri}> ;',
         f'  nfdicore:NFDI_0001006 <{id_iri}> ;',

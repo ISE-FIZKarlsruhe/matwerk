@@ -39,7 +39,7 @@ ENDPOINT_PREDICATE = URIRef(
     os.environ.get("ENDPOINT_PREDICATE", "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008")
 )  # xsd:anyURI endpoint URL
 DATASET_TYPE = URIRef(
-    os.environ.get("DATASET_TYPE", "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009")
+    os.environ.get("DATASET_TYPE", "http://purl.obolibrary.org/obo/IAO_0001000")
 )  # Graph database (dataset)
 IAO_0000235 = URIRef(os.environ.get("IAO_0000235", "http://purl.obolibrary.org/obo/IAO_0000235"))  # denotes
 HAS_GRAPH_PRED = URIRef(os.environ.get("HAS_GRAPH_PRED", "http://purl.obolibrary.org/obo/BFO_0000051"))

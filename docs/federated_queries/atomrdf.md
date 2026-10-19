@@ -10,7 +10,7 @@ The graph is produced with [**atomRDF**](https://github.com/pyscal/atomRDF), a P
 |---|---|
 | **IRI in MSE-KG** | [`msekg:176113442890318`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890318) |
 | **`rdfs:label`** | atomRDF Knowledge Graph v0.0.1 |
-| **Type** | `nfdi:NFDI_0000009` — dataset |
+| **Type** | `obo:IAO_0001000` — dataset |
 | **SPARQL endpoint** | `https://atomkg.pyscal.org/sparql` |
 | **Endpoint node** | [`msekg:17611350506671`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17611350506671) (`nfdi:NFDI_0001095`) |
 | **Licence** | CC BY 4.0 |
@@ -31,7 +31,7 @@ The graph is produced with [**atomRDF**](https://github.com/pyscal/atomRDF), a P
 ## Locate it in the MatWerk KG
 
 ```sparql
-PREFIX nfdicore_dataset:         <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX nfdicore_dataset:         <http://purl.obolibrary.org/obo/IAO_0001000>
 PREFIX nfdicore_sparql_endpoint: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095>
 PREFIX denoted_by:               <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX has_url:                  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
@@ -62,7 +62,7 @@ The join key is the **DOI**: MSE-KG records the DOI of a published dataset via i
 ### Which atomistic samples correspond to a dataset entry in MSE-KG, and what are their segregation energies for Fe–Au Σ5 grain boundaries?
 
 ```sparql
-PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX nfdicore_dataset: <http://purl.obolibrary.org/obo/IAO_0001000>
 PREFIX denoted_by: <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX has_url: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
 
@@ -122,7 +122,7 @@ ORDER BY ?E_seg
 ### Who created datasets that are linked to atomistic segregation energy calculations?
 
 ```sparql
-PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX nfdicore_dataset: <http://purl.obolibrary.org/obo/IAO_0001000>
 PREFIX denoted_by: <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX has_part: <http://purl.obolibrary.org/obo/BFO_0000051>
 PREFIX nfdicore_creator_role: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001032>
@@ -174,7 +174,7 @@ WHERE {
 ### Which chemical elements are studied in datasets linked to AtomRDF simulations?
 
 ```sparql
-PREFIX nfdicore_dataset: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009>
+PREFIX nfdicore_dataset: <http://purl.obolibrary.org/obo/IAO_0001000>
 PREFIX denoted_by: <http://purl.obolibrary.org/obo/IAO_0000235>
 PREFIX has_url: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001008>
 

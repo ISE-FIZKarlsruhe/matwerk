@@ -148,7 +148,7 @@ Each Zenodo release contains:
 
 Each dump file has a companion `_metadata.ttl` describing it using:
 
-- `nfdicore:NFDI_0000009` (Dataset)
+- `obo:IAO_0001000` (Dataset)
 - `nfdicore:NFDI_0000027` (File Data Item)
 - `nfdicore:NFDI_0001053` (Ontology Version IRI)
 - `dct:conformsTo` pointing to MWO version IRI

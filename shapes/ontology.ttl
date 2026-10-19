@@ -1,0 +1,41 @@
+##### Ontology: required content, target types, and linked-instance quality
+
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix mwo:   <http://purls.helmholtz-metadaten.de/mwo/> .
+@prefix pmd:   <https://w3id.org/pmd/co/> .
+@prefix ex:    <https://nfdi.fiz-karlsruhe.de/matwerk/shapes/> .
+
+
+# A value node exists to hold a literal.
+ex:NonEmptyValueNode
+    a sh:NodeShape ;
+    rdfs:label "value node carries a literal" ;
+    sh:or (
+        [ sh:property [ sh:path nfdi:NFDI_0001007 ;     # has value
+                        sh:minCount 1 ] ]
+        [ sh:property [ sh:path nfdi:NFDI_0001008 ;     # has url
+                        sh:minCount 1 ] ]
+        [ sh:property [ sh:path pmd:PMD_0000006 ;       # has value (PMDco)
+                        sh:minCount 1 ] ]
+    ) ;
+    sh:message "Empty value node: no literal attached (has value / has url / PMDco has value)." ;
+    .
+
+ex:OntologyShape
+    a sh:NodeShape ;
+    sh:targetClass nfdi:NFDI_0000023 ;     # ontology
+    rdfs:label "Ontology: required content and linked-instance quality" ;
+    sh:property [
+        sh:path obo:IAO_0000235 ;       # denoted by
+        sh:minCount 1 ;
+        sh:message "an ontology must be denoted by its name and repository link" ;
+    ] ;
+    sh:property [
+        sh:path obo:IAO_0000235 ;       # denoted by
+        sh:node ex:NonEmptyValueNode ;
+        sh:message "name / link / description nodes must carry a value" ;
+    ] ;
+    .

@@ -8,6 +8,12 @@ import re
 import uuid
 from datetime import datetime
 
+from common.mwo_terms import terms as _mwo_terms
+
+# Version-dependent classes come from the single source of truth, so the
+# matwerk_mwo_version Airflow Variable governs what this builder writes.
+_T = _mwo_terms()
+
 
 # defaults (can be overridden by args)
 DEFAULT_BASE_IRI = "https://nfdi.fiz-karlsruhe.de/matwerk/msekg/"
@@ -33,7 +39,7 @@ BFO_REALISES = "http://purl.obolibrary.org/obo/BFO_0000055"
 BFO_OCCUPIES_TEMPORAL_REGION = "http://purl.obolibrary.org/obo/BFO_0000199"
 ROLE_OF = "http://purl.obolibrary.org/obo/RO_0000081"
 
-NFDI_DATASET = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009"
+NFDI_DATASET = _T.DATASET
 NFDI_TITLE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001019"
 NFDI_PERSON = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004"
 NFDI_HAS_VALUE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007"
@@ -43,7 +49,7 @@ NFDI_WEBSITE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223"
 NFDI_HAS_LICENSE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000142"
 SWO_LICENSE = "http://www.ebi.ac.uk/swo/SWO_0000002"
 
-NFDI_DATASET_PUBLISHING_PROCESS = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014"
+NFDI_DATASET_PUBLISHING_PROCESS = _T.PUBLISHING_PROCESS
 NFDI_CONTACT_POINT = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102"
 NFDI_CONTACT_POINT_ROLE = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114"
 NFDI_STANDARD_PROP = "https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000207"

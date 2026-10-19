@@ -1,0 +1,24 @@
+##### Website / ROR / DOI node: required content, target types, and linked-instance quality
+
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:   <http://purl.obolibrary.org/obo/> .
+@prefix nfdi:  <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix mwo:   <http://purls.helmholtz-metadaten.de/mwo/> .
+@prefix pmd:   <https://w3id.org/pmd/co/> .
+@prefix ex:    <https://nfdi.fiz-karlsruhe.de/matwerk/shapes/> .
+
+ex:WebsiteShape
+    a sh:NodeShape ;
+    sh:targetClass nfdi:NFDI_0000223 ;     # website
+    sh:targetClass nfdi:NFDI_0001013 ;     # ROR identifier
+    sh:targetClass nfdi:NFDI_0001037 ;     # digital object identifier
+    rdfs:label "Website / ROR / DOI node: required content and linked-instance quality" ;
+    sh:or (
+        [ sh:property [ sh:path nfdi:NFDI_0001008 ;   # carries a url
+                        sh:minCount 1 ] ]
+        [ sh:property [ sh:path nfdi:NFDI_0001007 ;   # carries a value
+                        sh:minCount 1 ] ]
+    ) ;
+    sh:message "Website / ROR / DOI node carries none of the alternatives above." ;
+    .
