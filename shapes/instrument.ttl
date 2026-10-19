@@ -34,11 +34,6 @@ ex:InstrumentShape
     sh:targetClass pmd:PMD_0000602 ;       # instrument
     rdfs:label "Instrument: required content and linked-instance quality" ;
     sh:property [
-        sh:path nfdi:NFDI_0000240 ;     # associated organisation (deployed ontology only)
-        sh:minCount 1 ;
-        sh:message "an instrument must state a manufacturer or owner" ;
-    ] ;
-    sh:property [
         sh:path obo:IAO_0000235 ;       # denoted by
         sh:node ex:NonEmptyValueNode ;
         sh:message "name / model / description nodes must carry a value" ;

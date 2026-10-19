@@ -264,7 +264,7 @@ def process_spreadsheets():
     robot_dataportal_valid = PythonOperator(task_id="robot_dataportal_valid", python_callable=isvalid, op_kwargs={"filename": f"dataportal.md"})
     [robot_organization_valid, robot_process_valid, robot_publication_valid] >> robot_dataportal >> robot_dataportal_valid >> teardown
 
-    robot_instrument = BashOperator(task_id="robot_instrument", bash_command=robotCmdTemplate(["organization", "publication"], "instrument"))
+    robot_instrument = BashOperator(task_id="robot_instrument", bash_command=robotCmdTemplate(["agent", "role", "process", "organization", "publication"], "instrument"))
     robot_instrument_valid = PythonOperator(task_id="robot_instrument_valid", python_callable=isvalid, op_kwargs={"filename": f"instrument.md"})
     [robot_organization_valid, robot_publication_valid] >> robot_instrument >> robot_instrument_valid >> teardown
 
