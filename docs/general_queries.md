@@ -201,6 +201,86 @@ LIMIT 999
 
 ---
 
+### Which organization is each person a member of?
+
+```sparql
+PREFIX nfdicore_person:  <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004>
+PREFIX organization:     <http://purl.obolibrary.org/obo/OBI_0000245>
+PREFIX member_of:        <http://purl.obolibrary.org/obo/RO_0002350>
+PREFIX denoted_by:       <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX has_value:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001007>
+PREFIX rdfs:             <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?person ?personLabel ?organization ?organizationName WHERE {
+
+  ?person a nfdicore_person: ;
+          rdfs:label ?personLabel ;
+          member_of: ?organization .
+
+  ?organization a organization: .
+
+  OPTIONAL { ?organization rdfs:label ?organizationName }
+
+  OPTIONAL {
+    ?organization denoted_by: ?nameNode .
+    ?nameNode has_value: ?organizationName .
+  }
+}
+ORDER BY ?organizationName ?personLabel
+LIMIT 999
+```
+
+---
+
+### Who manufactures each instrument, and who owns it?
+
+```sparql
+PREFIX pmd_instrument:   <https://w3id.org/pmd/co/PMD_0000602>
+PREFIX manufacturing:    <https://w3id.org/pmd/co/PMD_0000833>
+PREFIX manufacturer_role: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001060>
+PREFIX participates_in:  <http://purl.obolibrary.org/obo/RO_0000056>
+PREFIX has_participant:  <http://purl.obolibrary.org/obo/RO_0000057>
+PREFIX realizes:         <http://purl.obolibrary.org/obo/BFO_0000055>
+PREFIX has_agent:        <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000240>
+PREFIX denoted_by:       <http://purl.obolibrary.org/obo/IAO_0000235>
+PREFIX rdfs:             <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?instrument ?name ?manufacturer ?owner WHERE {
+
+  ?instrument a pmd_instrument: .
+
+  OPTIONAL {
+    ?instrument denoted_by: ?nameNode .
+    ?nameNode rdfs:label ?name .
+  }
+
+  # the manufacturer: the agent bearing a manufacturer role in the
+  # manufacturing process this instrument participates in
+  OPTIONAL {
+    ?instrument participates_in: ?process .
+    ?process a manufacturing: ;
+             has_participant: ?manufacturerAgent ;
+             realizes: ?role .
+    ?role a manufacturer_role: .
+    ?manufacturerAgent rdfs:label ?manufacturer .
+  }
+
+  # the owner: a plain has-agent link that bears no manufacturer role
+  OPTIONAL {
+    ?instrument has_agent: ?ownerAgent .
+    ?ownerAgent rdfs:label ?owner .
+    FILTER NOT EXISTS {
+      ?ownerRole a manufacturer_role: ;
+                 <http://purl.obolibrary.org/obo/RO_0000081> ?ownerAgent .
+    }
+  }
+}
+ORDER BY ?name
+LIMIT 999
+```
+
+---
+
 ### What are the events present in the MatWerk KG? What are the URL, associated organization and participating consortia of these events?
 
 ```sparql
