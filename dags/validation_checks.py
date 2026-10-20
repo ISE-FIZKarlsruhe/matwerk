@@ -345,14 +345,9 @@ def validation_checks():
                 ont_g.parse(ont_path)
                 for triple in ont_g:
                     data_g.remove(triple)
-                hierarchy = 0
-                for s, o in ont_g.subject_objects(rdflib.RDFS.subClassOf):
-                    data_g.add((s, rdflib.RDFS.subClassOf, o))
-                    hierarchy += 1
                 data_for_shacl = os.path.join(data_dir, "_shacl_data.ttl")
                 data_g.serialize(destination=data_for_shacl, format="turtle")
-                print(f"  ontology subtracted for SHACL: {before} -> {len(data_g)} "
-                      f"triples ({hierarchy} rdfs:subClassOf kept for sh:class closure)")
+                print(f"  ontology subtracted for SHACL: {before} -> {len(data_g)} triples")
             except Exception as exc:                      # noqa: BLE001
                 print(f"  could not subtract the ontology ({exc}); validating the merge as is")
                 data_for_shacl = merged_ttl

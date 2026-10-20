@@ -19,7 +19,10 @@ ex:FdoShape
     ] ;
     sh:property [
         sh:path obo:BFO_0000050 ;       # part of
-        sh:class obo:IAO_0001000 ;      # data collection
-        sh:message "if an FDO states what it is part of, that must be a data collection" ;
+        sh:or (
+            [ sh:class obo:IAO_0001000 ]      # data collection
+            [ sh:class nfdi:NFDI_0001204 ]    # reference dataset
+        ) ;
+        sh:message "if an FDO states what it is part of, that must be a data collection or a reference dataset" ;
     ] ;
     .
