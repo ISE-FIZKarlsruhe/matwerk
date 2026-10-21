@@ -17,8 +17,5 @@
 
 msekg:17453329995091 a nfdi:NFDI_0001037 ;
     rdfs:label "BCR425-280-1.LIS" ;
-    obo:BFO_0000050 msekg:17451474931969 ;
     nfdi:NFDI_0001008 "https://hdl.handle.net/21.11152/253e0f2a-4d4a-4916-a45a-ef7cd8ad1f9b"^^xsd:anyURI .
 
-msekg:17451474931969 a nfdi:NFDI_0001019 ;
-    rdfs:label "BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy_v1.1" .

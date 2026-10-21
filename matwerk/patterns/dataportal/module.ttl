@@ -2,8 +2,8 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ns1: <http://purl.obolibrary.org/obo/> .
 @prefix ns2: <http://www.w3.org/2003/11/swrl#> .
-@prefix ns3: <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@prefix ns4: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
+@prefix ns4: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -30,8 +30,6 @@ ns1:IAO_0000116 a owl:AnnotationProperty .
 ns1:IAO_0000118 a owl:AnnotationProperty .
 
 ns1:IAO_0000119 a owl:AnnotationProperty .
-
-ns1:IAO_0100001 a owl:AnnotationProperty .
 
 ns1:OBI_0001948 a owl:Class ;
     rdfs:label "sequence assembly name"@en ;
@@ -118,25 +116,25 @@ dcterms:license a owl:AnnotationProperty .
                         owl:someValuesFrom ns1:OBI_0000260 ] ) ] ;
     skos:definition "Protocol is a plan specification that prescribes the steps, conditions, rules, or procedures for carrying out a process, experiment, workflow, or activity." .
 
-ns4:coversRequirements a owl:AnnotationProperty .
+ns3:coversRequirements a owl:AnnotationProperty .
 
-ns4:extractedFrom a owl:AnnotationProperty .
+ns3:extractedFrom a owl:AnnotationProperty .
 
-ns4:hasComponent a owl:AnnotationProperty .
+ns3:hasComponent a owl:AnnotationProperty .
 
-ns4:hasConsequences a owl:AnnotationProperty .
+ns3:hasConsequences a owl:AnnotationProperty .
 
-ns4:hasIntent a owl:AnnotationProperty .
+ns3:hasIntent a owl:AnnotationProperty .
 
-ns4:hasUnitTest a owl:AnnotationProperty .
+ns3:hasUnitTest a owl:AnnotationProperty .
 
-ns4:isSpecializationOf a owl:AnnotationProperty .
+ns3:isSpecializationOf a owl:AnnotationProperty .
 
-ns4:reengineeredFrom a owl:AnnotationProperty .
+ns3:reengineeredFrom a owl:AnnotationProperty .
 
-ns4:relatedCPs a owl:AnnotationProperty .
+ns3:relatedCPs a owl:AnnotationProperty .
 
-ns4:scenarios a owl:AnnotationProperty .
+ns3:scenarios a owl:AnnotationProperty .
 
 skos:altLabel a owl:AnnotationProperty .
 
@@ -148,14 +146,14 @@ skos:example a owl:AnnotationProperty .
 
 skos:scopeNote a owl:AnnotationProperty .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453070103083> a ns3:NFDI_0000123 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453070103083> a ns4:NFDI_0000123 ;
     ns1:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174532023265315>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174532124622713>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453256104575> ;
     ns1:RO_0000056 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/1746117452994218> ;
-    ns3:NFDI_0000142 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453223663963> ;
-    ns3:NFDI_0000207 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453220784731> ;
-    ns3:NFDI_0001008 "http://www.crystallography.net/cod/"^^xsd:anyURI .
+    ns4:NFDI_0000142 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453223663963> ;
+    ns4:NFDI_0000207 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453220784731> ;
+    ns4:NFDI_0001008 "http://www.crystallography.net/cod/"^^xsd:anyURI .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/dataportal> a owl:Ontology ;
     rdfs:label "dataportal — NFDI-MatWerk ontology design pattern" ;
@@ -166,41 +164,41 @@ skos:scopeNote a owl:AnnotationProperty .
         <https://orcid.org/0000-0002-2691-6995>,
         <https://orcid.org/0000-0002-3092-0532> ;
     dcterms:license "CC BY 4.0 (repository); CC0 1.0 declared in the ontology header" ;
-    ns4:coversRequirements "Which data formats and PID systems does a given repository support?",
+    ns3:coversRequirements "Which data formats and PID systems does a given repository support?",
         "Which data portals and repositories does NFDI-MatWerk reference?",
         "Which organisation hosts a given portal, and what access conditions apply?" ;
-    ns4:extractedFrom "the dataportal tab of the NFDI-MatWerk curation workbook" ;
-    ns4:hasComponent ns1:IAO_0000098,
-        ns3:NFDI_0000206,
-        ns3:NFDI_0001202 ;
-    ns4:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
-    ns4:hasIntent "To represent a data portal in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
-    ns4:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
-    ns4:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
-    ns4:reengineeredFrom "ROBOT template directives, row 2 of the dataportal tab" ;
-    ns4:scenarios "“Crystallography Open Database Software (COD)” is a data portal, with name “Crystallography Open Database Software (COD)”; short description “Open-access collection of crystal structures of organic, inorganic, metal-organic compounds and minerals, excluding biopolymers.”; file formats “CIF, csv”." ;
+    ns3:extractedFrom "the dataportal tab of the NFDI-MatWerk curation workbook" ;
+    ns3:hasComponent ns1:IAO_0000098,
+        ns4:NFDI_0000206,
+        ns4:NFDI_0001202 ;
+    ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
+    ns3:hasIntent "To represent a data portal in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
+    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000123> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
+    ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
+    ns3:reengineeredFrom "ROBOT template directives, row 2 of the dataportal tab" ;
+    ns3:scenarios "“Crystallography Open Database Software (COD)” is a data portal, with name “Crystallography Open Database Software (COD)”; short description “Open-access collection of crystal structures of organic, inorganic, metal-organic compounds and minerals, excluding biopolymers.”; file formats “CIF, csv”." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.2/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/dataportal/1.0.0> ;
     owl:versionInfo "1.0.0" .
 
-ns3:NFDI_0000012 a owl:AnnotationProperty .
+ns4:NFDI_0000012 a owl:AnnotationProperty .
 
-ns3:NFDI_0000132 a owl:ObjectProperty ;
+ns4:NFDI_0000132 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000132" .
 
-ns3:NFDI_0000142 a owl:ObjectProperty ;
+ns4:NFDI_0000142 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000142" .
 
-ns3:NFDI_0000207 a owl:ObjectProperty ;
+ns4:NFDI_0000207 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000207" .
 
-ns3:NFDI_0001008 a owl:DatatypeProperty ;
+ns4:NFDI_0001008 a owl:DatatypeProperty ;
     rdfs:label "has url",
         "has url"@en ;
     rdfs:range xsd:anyURI ;
     skos:definition "A relation between an information content entity and its specific url."@en .
 
-ns3:NFDI_0010013 a owl:AnnotationProperty .
+ns4:NFDI_0010013 a owl:AnnotationProperty .
 
 <https://w3id.org/pmd/co/PMD_0000833> a owl:Class ;
     rdfs:label "Herstellungsprozess"@de,
@@ -266,10 +264,11 @@ ns1:IAO_0000235 a owl:ObjectProperty ;
     ns1:IAO_0000115 "inverse of the relation 'denotes'"@en ;
     rdfs:domain ns1:BFO_0000001 ;
     rdfs:range ns1:IAO_0000030 ;
-    rdfs:subPropertyOf ns3:NFDI_0000226 .
+    rdfs:subPropertyOf ns4:NFDI_0000226 .
 
 ns1:IAO_0000311 a owl:Class ;
-    rdfs:label "publication"@en ;
+    rdfs:label "publication",
+        "publication"@en ;
     ns1:IAO_0000112 "journal article, newspaper story, book, etc."@en ;
     ns1:IAO_0000115 "A document that is the output of a publishing process."@en ;
     ns1:IAO_0000118 "published document"@en ;
@@ -376,84 +375,75 @@ ns1:SO_0001410 a owl:Class ;
     ns1:IAO_0000119 "Modified from http://en.wikipedia.org/wiki/Software_license" ;
     rdfs:subClassOf ns1:IAO_0000030 .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174532023265315> a ns3:NFDI_0001019 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174532023265315> a ns4:NFDI_0001019 ;
     rdfs:label "Crystallography Open Database Software (COD)" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174532124622713> a ns3:NFDI_0001018 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174532124622713> a ns4:NFDI_0001018 ;
     rdfs:label "Open-access collection of crystal structures of organic, inorganic, metal-organic compounds and minerals, excluding biopolymers." .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453220784731> a ns3:NFDI_0000206 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453220784731> a ns4:NFDI_0000206 ;
     rdfs:label "OPTIMADE" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453223663963> a <http://www.ebi.ac.uk/swo/SWO_0000002> ;
     rdfs:label "https://creativecommons.org/Publicdomain/zero/1.0/" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453256104575> a ns3:NFDI_0000190 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453256104575> a ns1:IAO_0000311 ;
     rdfs:label "GraÅ¾ulis, S., DaÅ¡keviÄ, A., Merkys, A., Chateigner, D., Lutterotti, L., QuirÃ³s, M., Serebryanaya, N. R., Moeck, P., Downs, R. T. & LeBail, A. (2012). Crystallography Open Database Software (COD): an open-access collection of crystal structures and platform for world-wide collaboration. Nucleic Acids Research, 40, D420-D427. doi: 10.1093/nar/gkr900 (BibTeX, EndNote/Refer, plain text)  Grazulis, S., Chateigner, D., Downs, R. T., Yokochi, A. T., Quiros, M., Lutterotti, L., Manakova, E., Butkus, J., Moeck, P. & Le Bail, A. (2009). Crystallography Open Database Software â an open-access collection of crystal structures. Journal of Applied Crystallography, 42, 726-729. doi: 10.1107/S0021889809016690 (BibTeX, EndNote/Refer, plain text)" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/1746117452994218> a ns3:NFDI_0000111 ;
-    rdfs:label "ContactingProcess 218" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/1746117452994218> a ns4:NFDI_0000111 ;
+    rdfs:label "contacting Crystallography Open Database Software (COD)" .
 
-ns3:NFDI_0000004 a owl:Class ;
+ns4:NFDI_0000004 a owl:Class ;
     rdfs:label "person"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000030 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ],
-        ns3:NFDI_0000102 ;
+                        owl:someValuesFrom ns4:NFDI_0000229 ] ) ],
+        ns4:NFDI_0000102 ;
     skos:definition "An object that represents a single human individual."@en ;
     skos:editorialNote "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en ;
     skos:example "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" .
 
-ns3:NFDI_0000111 a owl:Class ;
+ns4:NFDI_0000111 a owl:Class ;
     rdfs:label "contacting process",
         "contacting process"@en ;
     rdfs:subClassOf ns1:BFO_0000015 ;
     skos:definition "A process in which the contact information of an entity is provided."@en ;
-    ns3:NFDI_0000012 "Contacting" .
+    ns4:NFDI_0000012 "Contacting" .
 
-ns3:NFDI_0000123 a owl:Class ;
+ns4:NFDI_0000123 a owl:Class ;
     rdfs:label "data portal",
         "data portal"@en ;
-    rdfs:subClassOf ns3:NFDI_0000223 ;
+    rdfs:subClassOf ns4:NFDI_0000223 ;
     skos:definition "A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain."@en ;
     skos:editorialNote "An online platform that provides access to datasets."@en ;
     skos:example "Bach digital, KultSam, MusiXplora"@en .
 
-ns3:NFDI_0000190 a owl:Class ;
-    rdfs:label "obsolete publication",
-        "obsolete publication"@en ;
-    ns1:IAO_0100001 ns1:IAO_0000311 ;
-    owl:deprecated true ;
-    skos:definition "A publication that is the output of a publishing process and a creative process."@en ;
-    skos:editorialNote "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
-    skos:example "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten" .
-
-ns3:NFDI_0000223 a owl:Class ;
+ns4:NFDI_0000223 a owl:Class ;
     rdfs:label "website"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:IAO_0000030 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0002353 ;
-                        owl:someValuesFrom ns3:NFDI_0000224 ] ) ] ;
+                        owl:someValuesFrom ns4:NFDI_0000224 ] ) ] ;
     skos:definition "An information content entity that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web."@en ;
     skos:editorialNote "A collection of webpages contributed by an organization or a person."@en ;
     skos:example "https:\\/\\/opac.rism.info" .
 
-ns3:NFDI_0000224 a owl:Class ;
+ns4:NFDI_0000224 a owl:Class ;
     rdfs:label "creative process"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000015 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000057 ;
-                        owl:someValuesFrom ns3:NFDI_0000004 ] ) ] ;
+                        owl:someValuesFrom ns4:NFDI_0000004 ] ) ] ;
     skos:definition "A process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields."@en .
 
-ns3:NFDI_0001018 a owl:Class ;
+ns4:NFDI_0001018 a owl:Class ;
     rdfs:label "textual description",
         "textual description"@en ;
     rdfs:subClassOf ns1:IAO_0000300 ;
     skos:definition "A textual entity that describe some resource."@en .
 
-ns3:NFDI_0001019 a owl:Class ;
+ns4:NFDI_0001019 a owl:Class ;
     rdfs:label "title",
         "title"@en ;
     rdfs:subClassOf ns1:IAO_0000300 ;
@@ -579,31 +569,31 @@ ns1:RO_0002353 a owl:ObjectProperty ;
     ns1:IAO_0000115 "inverse of has output" ;
     rdfs:subPropertyOf ns1:RO_0000056 .
 
-ns3:NFDI_0000102 a owl:Class ;
+ns4:NFDI_0000102 a owl:Class ;
     rdfs:label "agent"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty ns1:RO_0000087 ;
-            owl:someValuesFrom ns3:NFDI_0000229 ],
+            owl:someValuesFrom ns4:NFDI_0000229 ],
         ns1:BFO_0000004 ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000004 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ] ;
+                        owl:someValuesFrom ns4:NFDI_0000229 ] ) ] ;
     skos:definition "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en ;
     skos:editorialNote "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en ;
     skos:example "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en .
 
-ns3:NFDI_0000206 a owl:Class ;
+ns4:NFDI_0000206 a owl:Class ;
     rdfs:label "standard",
         "standard"@en ;
     rdfs:subClassOf ns1:IAO_0000310 ;
     skos:definition "A specification that establishes a set of guidelines, criteria, or norms recognized and adopted by internationational community."@en ;
     skos:editorialNote "An international standard and norm that can be used to evaluate or create a resource."@en ;
     skos:example "ISO 15511, DINI-Zertifikat" ;
-    ns3:NFDI_0010013 """https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/131
+    ns4:NFDI_0010013 """https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/131
 https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/133""" .
 
-ns3:NFDI_0000226 a owl:ObjectProperty ;
+ns4:NFDI_0000226 a owl:ObjectProperty ;
     rdfs:label "is subject of"@en ;
     skos:altLabel "is described by" ;
     skos:definition "inverse of the relation 'is about'" .
@@ -708,12 +698,12 @@ ns1:RO_0000056 a owl:ObjectProperty ;
     rdfs:range ns1:BFO_0000003 ;
     owl:inverseOf ns1:RO_0000057 .
 
-ns3:NFDI_0000229 a owl:Class ;
+ns4:NFDI_0000229 a owl:Class ;
     rdfs:label "agent role"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000023 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000081 ;
-                        owl:someValuesFrom ns3:NFDI_0000102 ] ) ] ;
+                        owl:someValuesFrom ns4:NFDI_0000102 ] ) ] ;
     skos:definition "Role of an independent continuant that is realized through an agent's actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context."@en .
 
 ns1:BFO_0000027 a owl:Class ;
@@ -799,7 +789,7 @@ We will try to build it back up by elaborating the various subproperties that ar
 Some currently missing phenomena that should be considered "about" are predications - "The only person who knows the answer is sitting beside me" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
     ns1:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
     rdfs:domain ns1:IAO_0000030 ;
-    owl:inverseOf ns3:NFDI_0000226 .
+    owl:inverseOf ns4:NFDI_0000226 .
 
 ns1:RO_0000052 a owl:FunctionalProperty,
         owl:ObjectProperty ;

@@ -25,9 +25,9 @@ msekg:17453296469553 a nfdi:NFDI_0000023 ;
 msekg:174532987657423 a obo:IAO_0000590 ;
     rdfs:label "Dislocation Ontology (DISO)" .
 msekg:17453306512862 a nfdi:NFDI_0000030 ;
-    rdfs:label "url 570" .
-msekg:17453307829846 a nfdi:NFDI_0000022 ;
-    rdfs:label "url 666" .
+    rdfs:label "repository of “Dislocation Ontology (DISO)”" .
+msekg:17453307829846 a obo:IAO_0000310 ;
+    rdfs:label "documentation of “Dislocation Ontology (DISO)”" .
 msekg:174533026528323 a nfdi:NFDI_0001018 ;
     rdfs:label "DISO is a domain ontology that defines the linear defect, in particular dislocation concepts and relations between them in crystalline materials. Moreover, Crystal Structure Ontology (CSO) and Crystallographic Defect Ontology (CDO), which ontologies define the concepts of crystal structureand crystalline defect, respectively, are also introduced in this repository." .
 msekg:174516196088818 a <http://www.ebi.ac.uk/swo/SWO_0000002> ;

@@ -1,14 +1,13 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ns1: <http://purl.obolibrary.org/obo/> .
-@prefix ns2: <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@prefix ns3: <http://www.w3.org/2003/11/swrl#> .
+@prefix ns2: <http://www.w3.org/2003/11/swrl#> .
+@prefix ns3: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix ns4: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ns1:BFO_0000054 a owl:ObjectProperty ;
     rdfs:label "has realization"@en,
@@ -30,8 +29,6 @@ ns1:IAO_0000116 a owl:AnnotationProperty .
 ns1:IAO_0000118 a owl:AnnotationProperty .
 
 ns1:IAO_0000119 a owl:AnnotationProperty .
-
-ns1:IAO_0100001 a owl:AnnotationProperty .
 
 ns1:OBI_0001948 a owl:Class ;
     rdfs:label "sequence assembly name"@en ;
@@ -148,7 +145,7 @@ skos:example a owl:AnnotationProperty .
 
 skos:scopeNote a owl:AnnotationProperty .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451592331711> a ns2:NFDI_0000121 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451592331711> a ns3:NFDI_0000121 ;
     ns1:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451594912141>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451606549521>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451614886141>,
@@ -156,11 +153,11 @@ skos:scopeNote a owl:AnnotationProperty .
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451617627761>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451635324071> ;
     ns1:RO_0000056 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17461174529941> ;
-    ns2:NFDI_0000142 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451619608881> ;
-    ns2:NFDI_0000187 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451628516963> ;
-    ns2:NFDI_0000211 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467208847624> ;
-    ns2:NFDI_0000226 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451615716571> ;
-    ns2:NFDI_0000240 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451394390861> .
+    ns3:NFDI_0000142 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451619608881> ;
+    ns3:NFDI_0000187 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451628516963> ;
+    ns3:NFDI_0000211 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467208847624> ;
+    ns3:NFDI_0000226 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451615716571> ;
+    ns3:NFDI_0000240 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451394390861> .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/software> a owl:Ontology ;
     rdfs:label "software — NFDI-MatWerk ontology design pattern" ;
@@ -178,17 +175,17 @@ skos:scopeNote a owl:AnnotationProperty .
     ns4:extractedFrom "the software tab of the NFDI-MatWerk curation workbook" ;
     ns4:hasComponent ns1:IAO_0000025,
         ns1:IAO_0000129,
+        ns1:IAO_0000310,
+        ns1:IAO_0000311,
         <http://www.ebi.ac.uk/swo/SWO_0000002>,
-        ns2:NFDI_0000022,
-        ns2:NFDI_0000100,
-        ns2:NFDI_0000111,
-        ns2:NFDI_0000190,
-        ns2:NFDI_0000215,
-        ns2:NFDI_0000223,
-        ns2:NFDI_0001000,
-        ns2:NFDI_0001018,
-        ns2:NFDI_0001047,
-        ns2:NFDI_0001210 ;
+        ns3:NFDI_0000100,
+        ns3:NFDI_0000111,
+        ns3:NFDI_0000215,
+        ns3:NFDI_0000223,
+        ns3:NFDI_0001000,
+        ns3:NFDI_0001018,
+        ns3:NFDI_0001047,
+        ns3:NFDI_0001210 ;
     ns4:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
     ns4:hasIntent "To represent a database software in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
     ns4:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000121> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
@@ -199,27 +196,27 @@ skos:scopeNote a owl:AnnotationProperty .
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/software/1.0.0> ;
     owl:versionInfo "1.0.0" .
 
-ns2:NFDI_0000012 a owl:AnnotationProperty .
+ns3:NFDI_0000012 a owl:AnnotationProperty .
 
-ns2:NFDI_0000142 a owl:ObjectProperty ;
+ns3:NFDI_0000142 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000142" .
 
-ns2:NFDI_0000187 a owl:ObjectProperty ;
+ns3:NFDI_0000187 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000187" .
 
-ns2:NFDI_0000194 a owl:ObjectProperty ;
+ns3:NFDI_0000194 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000194" .
 
-ns2:NFDI_0000211 a owl:ObjectProperty ;
+ns3:NFDI_0000211 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000211" .
 
-ns2:NFDI_0000216 a owl:ObjectProperty ;
+ns3:NFDI_0000216 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000216" .
 
-ns2:NFDI_0000240 a owl:ObjectProperty ;
+ns3:NFDI_0000240 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000240" .
 
-ns2:NFDI_0010013 a owl:AnnotationProperty .
+ns3:NFDI_0010013 a owl:AnnotationProperty .
 
 <https://w3id.org/pmd/co/PMD_0000833> a owl:Class ;
     rdfs:label "Herstellungsprozess"@de,
@@ -281,7 +278,13 @@ ns1:IAO_0000235 a owl:ObjectProperty ;
     ns1:IAO_0000115 "inverse of the relation 'denotes'"@en ;
     rdfs:domain ns1:BFO_0000001 ;
     rdfs:range ns1:IAO_0000030 ;
-    rdfs:subPropertyOf ns2:NFDI_0000226 .
+    rdfs:subPropertyOf ns3:NFDI_0000226 .
+
+ns1:IAO_0000444 a owl:Class ;
+    rdfs:label "publishing process"@en ;
+    ns1:IAO_0000115 "A planned process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en ;
+    ns1:IAO_0000119 "https://en.wikipedia.org/wiki/Publishing" ;
+    rdfs:subClassOf ns1:BFO_0000015 .
 
 ns1:OBI_0000245 a owl:Class ;
     rdfs:label "organization",
@@ -319,8 +322,8 @@ for now."""@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000040 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns2:NFDI_0000229 ] ) ],
-        ns2:NFDI_0000102 .
+                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ],
+        ns3:NFDI_0000102 .
 
 ns1:OBI_0000295 a owl:ObjectProperty ;
     rdfs:label "is specified input of"@en ;
@@ -408,17 +411,17 @@ ns1:SO_0001410 a owl:Class ;
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451394390861> a ns1:OBI_0000245 ;
     rdfs:label "Max Planck Institute for Iron Research" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451594912141> a ns2:NFDI_0001000 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451594912141> a ns3:NFDI_0001000 ;
     rdfs:label "Calphy" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451606549521> a ns2:NFDI_0001018 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451606549521> a ns3:NFDI_0001018 ;
     rdfs:label "Python library and command line tool for calculation of free energies" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451614886141> a ns1:IAO_0000129 ;
     rdfs:label "1.1.4" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451617627761> a ns2:NFDI_0001210 ;
-    rdfs:label "url 194" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451617627761> a ns3:NFDI_0001210 ;
+    rdfs:label "repository of “Calphy”" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451619608881> a <http://www.ebi.ac.uk/swo/SWO_0000002> ;
     rdfs:label "ASL/ BSD-3" .
@@ -426,49 +429,49 @@ ns1:SO_0001410 a owl:Class ;
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451628516963> a ns1:IAO_0000025 ;
     rdfs:label "python" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451635324071> a ns2:NFDI_0000190 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451635324071> a ns1:IAO_0000311 ;
     rdfs:label "Automated free-energy calculation from atomistic simulations" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17461174529941> a ns2:NFDI_0000111 ;
-    rdfs:label "ContactingProcess 1" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17461174529941> a ns3:NFDI_0000111 ;
+    rdfs:label "contacting Calphy" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467208847624> a ns2:NFDI_0000100 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467208847624> a ns3:NFDI_0000100 ;
     rdfs:label "Data Driven Material Science" .
 
-ns2:NFDI_0000004 a owl:Class ;
+ns3:NFDI_0000004 a owl:Class ;
     rdfs:label "person"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000030 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns2:NFDI_0000229 ] ) ],
-        ns2:NFDI_0000102 ;
+                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ],
+        ns3:NFDI_0000102 ;
     skos:definition "An object that represents a single human individual."@en ;
     skos:editorialNote "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en ;
     skos:example "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" .
 
-ns2:NFDI_0000121 a owl:Class ;
+ns3:NFDI_0000121 a owl:Class ;
     rdfs:label "database software",
         "database software"@en ;
     ns1:IAO_0000119 <https://doi.org/10.5281/zenodo.10101412> ;
     rdfs:subClassOf ns1:IAO_0000010 ;
     skos:definition "Software that provides large amounts of structured data from repositories and archives to the user. Usually the data can be uploaded, accessed, searched and/or downloaded via a web browser."@en .
 
-ns2:NFDI_0000123 a owl:Class ;
+ns3:NFDI_0000123 a owl:Class ;
     rdfs:label "data portal"@en ;
-    rdfs:subClassOf ns2:NFDI_0000223 ;
+    rdfs:subClassOf ns3:NFDI_0000223 ;
     skos:definition "A website that serves as a centralized platform for accessing, managing, and sharing datasets, information, or resources related to a specific topic, theme, or domain."@en ;
     skos:editorialNote "An online platform that provides access to datasets."@en ;
     skos:example "Bach digital, KultSam, MusiXplora"@en .
 
-ns2:NFDI_0000224 a owl:Class ;
+ns3:NFDI_0000224 a owl:Class ;
     rdfs:label "creative process"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000015 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000057 ;
-                        owl:someValuesFrom ns2:NFDI_0000004 ] ) ] ;
+                        owl:someValuesFrom ns3:NFDI_0000004 ] ) ] ;
     skos:definition "A process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields."@en .
 
-ns2:NFDI_0001019 a owl:Class ;
+ns3:NFDI_0001019 a owl:Class ;
     rdfs:label "title"@en ;
     rdfs:subClassOf ns1:IAO_0000300 ;
     skos:definition "A textual entity that denotes some resource."@en .
@@ -529,6 +532,18 @@ every c that is a concretization of g specifically denotes r"""@en ;
     rdfs:range ns1:BFO_0000001 ;
     rdfs:subPropertyOf ns1:IAO_0000136 ;
     owl:inverseOf ns1:IAO_0000235 .
+
+ns1:IAO_0000311 a owl:Class ;
+    rdfs:label "publication",
+        "publication"@en ;
+    ns1:IAO_0000112 "journal article, newspaper story, book, etc."@en ;
+    ns1:IAO_0000115 "A document that is the output of a publishing process."@en ;
+    ns1:IAO_0000118 "published document"@en ;
+    rdfs:subClassOf ns1:IAO_0000310 ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( ns1:IAO_0000310 [ a owl:Restriction ;
+                        owl:allValuesFrom ns1:IAO_0000444 ;
+                        owl:onProperty ns1:OBI_0000312 ] ) ] .
 
 ns1:OBI_0000112 a owl:Class ;
     rdfs:label "specimen role"@en ;
@@ -640,10 +655,10 @@ ns1:RO_0002353 a owl:ObjectProperty ;
     ns1:IAO_0000119 "Modified from http://en.wikipedia.org/wiki/Software_license" ;
     rdfs:subClassOf ns1:IAO_0000030 .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451615716571> a ns2:NFDI_0000223 ;
-    rdfs:label "url 58" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451615716571> a ns3:NFDI_0000223 ;
+    rdfs:label "website of “Calphy”" .
 
-ns2:NFDI_0000100 a owl:Class ;
+ns3:NFDI_0000100 a owl:Class ;
     rdfs:label "academic discipline",
         "academic discipline"@en ;
     rdfs:subClassOf ns1:IAO_0000030 ;
@@ -652,52 +667,43 @@ ns2:NFDI_0000100 a owl:Class ;
         "2024-12-16: TT & JW: An academic discipline is not a quality, as assumed before, but an ICE. A discipline like philosophy or chemistry consists of structured knowledge, theories, and practices. These are abstract entities that represent and encode information."@en ;
     skos:example <https://www.wikidata.org/entity/Q12271>,
         "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en ;
-    ns2:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/80"@en .
+    ns3:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/80"@en .
 
-ns2:NFDI_0000111 a owl:Class ;
+ns3:NFDI_0000111 a owl:Class ;
     rdfs:label "contacting process",
         "contacting process"@en ;
     rdfs:subClassOf ns1:BFO_0000015 ;
     skos:definition "A process in which the contact information of an entity is provided."@en ;
-    ns2:NFDI_0000012 "Contacting" .
+    ns3:NFDI_0000012 "Contacting" .
 
-ns2:NFDI_0000190 a owl:Class ;
-    rdfs:label "obsolete publication",
-        "obsolete publication"@en ;
-    ns1:IAO_0100001 ns1:IAO_0000311 ;
-    owl:deprecated true ;
-    skos:definition "A publication that is the output of a publishing process and a creative process."@en ;
-    skos:editorialNote "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
-    skos:example "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten" .
-
-ns2:NFDI_0000226 a owl:ObjectProperty ;
+ns3:NFDI_0000226 a owl:ObjectProperty ;
     rdfs:label "is subject of",
         "is subject of"@en ;
     skos:altLabel "is described by" ;
     skos:definition "inverse of the relation 'is about'" .
 
-ns2:NFDI_0001000 a owl:Class ;
+ns3:NFDI_0001000 a owl:Class ;
     rdfs:label "software title",
         "software title"@en ;
     rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( ns2:NFDI_0001019 [ a owl:Restriction ;
+            owl:intersectionOf ( ns3:NFDI_0001019 [ a owl:Restriction ;
                         owl:onProperty ns1:IAO_0000219 ;
                         owl:someValuesFrom ns1:IAO_0000010 ] ) ] ;
     skos:definition "A textual entity that uniquely identifies a specific software application, program, or system, often used for branding, categorization, and reference in documentation, licensing, and distribution." .
 
-ns2:NFDI_0001018 a owl:Class ;
+ns3:NFDI_0001018 a owl:Class ;
     rdfs:label "textual description",
         "textual description"@en ;
     rdfs:subClassOf ns1:IAO_0000300 ;
     skos:definition "A textual entity that describe some resource."@en .
 
-ns2:NFDI_0001210 a owl:Class ;
+ns3:NFDI_0001210 a owl:Class ;
     rdfs:label "software repository",
         "software repository"@en ;
-    rdfs:subClassOf ns2:NFDI_0000123 ;
+    rdfs:subClassOf ns3:NFDI_0000123 ;
     skos:definition "A Software Repository is a data portal designed to store, manage, and distribute software packages, source code, and related documentation for research, development, and deployment purposes." ;
     skos:example "GitHub, GitLab, Apache Software Foundation repositories" ;
-    ns2:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
+    ns3:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/119" .
 
 ns1:BFO_0000016 a owl:Class ;
     rdfs:label "disposition"@en ;
@@ -736,6 +742,12 @@ ns1:IAO_0000033 a owl:Class ;
             owl:someValuesFrom ns1:BFO_0000017 ],
         ns1:IAO_0000030 .
 
+ns1:IAO_0000310 a owl:Class ;
+    rdfs:label "document"@en ;
+    ns1:IAO_0000112 "A journal article, patent application, laboratory notebook, or a book"@en ;
+    ns1:IAO_0000115 "A collection of information content entities intended to be understood together as a whole"@en ;
+    rdfs:subClassOf ns1:IAO_0000030 .
+
 ns1:OBI_0000260 a owl:Class ;
     rdfs:label "plan"@en ;
     ns1:IAO_0000112 "The plan of researcher X to perform an experiment according to a protocol." ;
@@ -764,12 +776,6 @@ ns1:OBI_0000299 a owl:ObjectProperty ;
     owl:equivalentProperty [ owl:inverseOf ns1:OBI_0000312 ] ;
     owl:inverseOf ns1:OBI_0000312 .
 
-ns1:OBI_0000312 a owl:ObjectProperty ;
-    rdfs:label "is specified output of"@en ;
-    ns1:IAO_0000115 "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en ;
-    rdfs:range ns1:COB_0000035 ;
-    rdfs:subPropertyOf ns1:RO_0000056 .
-
 ns1:RO_0000056 a owl:ObjectProperty ;
     rdfs:label "participates in",
         "participates in"@en ;
@@ -781,27 +787,27 @@ ns1:RO_0000056 a owl:ObjectProperty ;
     rdfs:range ns1:BFO_0000003 ;
     owl:inverseOf ns1:RO_0000057 .
 
-ns2:NFDI_0000102 a owl:Class ;
+ns3:NFDI_0000102 a owl:Class ;
     rdfs:label "agent"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty ns1:RO_0000087 ;
-            owl:someValuesFrom ns2:NFDI_0000229 ],
+            owl:someValuesFrom ns3:NFDI_0000229 ],
         ns1:BFO_0000004 ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000004 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns2:NFDI_0000229 ] ) ] ;
+                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ] ;
     skos:definition "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en ;
     skos:editorialNote "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en ;
     skos:example "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en .
 
-ns2:NFDI_0000223 a owl:Class ;
+ns3:NFDI_0000223 a owl:Class ;
     rdfs:label "website",
         "website"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:IAO_0000030 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0002353 ;
-                        owl:someValuesFrom ns2:NFDI_0000224 ] ) ] ;
+                        owl:someValuesFrom ns3:NFDI_0000224 ] ) ] ;
     skos:definition "An information content entity that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web."@en ;
     skos:editorialNote "A collection of webpages contributed by an organization or a person."@en ;
     skos:example "https:\\/\\/opac.rism.info" .
@@ -836,12 +842,18 @@ ns1:IAO_0000300 a owl:Class ;
     ns1:IAO_0000118 "text"@en ;
     rdfs:subClassOf ns1:IAO_0000030 .
 
-ns2:NFDI_0000229 a owl:Class ;
+ns1:OBI_0000312 a owl:ObjectProperty ;
+    rdfs:label "is specified output of"@en ;
+    ns1:IAO_0000115 "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en ;
+    rdfs:range ns1:COB_0000035 ;
+    rdfs:subPropertyOf ns1:RO_0000056 .
+
+ns3:NFDI_0000229 a owl:Class ;
     rdfs:label "agent role"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000023 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000081 ;
-                        owl:someValuesFrom ns2:NFDI_0000102 ] ) ] ;
+                        owl:someValuesFrom ns3:NFDI_0000102 ] ) ] ;
     skos:definition "Role of an independent continuant that is realized through an agent's actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context."@en .
 
 ns1:BFO_0000001 a owl:Class ;
@@ -909,7 +921,7 @@ We will try to build it back up by elaborating the various subproperties that ar
 Some currently missing phenomena that should be considered "about" are predications - "The only person who knows the answer is sitting beside me" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
     ns1:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
     rdfs:domain ns1:IAO_0000030 ;
-    owl:inverseOf ns2:NFDI_0000226 .
+    owl:inverseOf ns3:NFDI_0000226 .
 
 ns1:RO_0000052 a owl:FunctionalProperty,
         owl:ObjectProperty ;
@@ -1081,7 +1093,16 @@ ns1:RO_0000087 a owl:ObjectProperty ;
     rdfs:range ns1:BFO_0000023 ;
     rdfs:subPropertyOf ns1:RO_0000053 .
 
-<urn:swrl:var#e> a ns3:Variable .
+<urn:swrl:var#e> a ns2:Variable .
+
+ns1:RO_0000053 a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has characteristic"@en ;
+    ns1:IAO_0000112 "this apple is bearer of this red color"@en,
+        "this vase is bearer of this fragility"@en ;
+    ns1:IAO_0000115 "Inverse of characteristic_of"@en ;
+    ns1:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
+    rdfs:range ns1:BFO_0000020 .
 
 ns1:BFO_0000015 a owl:Class ;
     rdfs:label "process"@en ;
@@ -1099,34 +1120,6 @@ ns1:BFO_0000015 a owl:Class ;
     skos:altLabel "event"@en ;
     skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
     skos:example "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
-
-ns1:IAO_0000030 a owl:Class ;
-    rdfs:label "information content entity",
-        "information content entity"@en ;
-    ns1:IAO_0000112 "Examples of information content entites include journal articles, data, graphical layouts, and graphs.",
-        "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en ;
-    ns1:IAO_0000115 "An information content entity is an entity that is generically dependent on some artifact and stands in relation of aboutness to some entity.",
-        "A generically dependent continuant that is about some thing."@en ;
-    ns1:IAO_0000116 "2014-03-10: The use of \"thing\" is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ)."@en,
-        "Pier: 'data, information or knowledge'. OR 'representation'"@en,
-        """information_content_entity 'is_encoded_in' some digital_entity in obi before split (040907). information_content_entity 'is_encoded_in' some physical_document in obi before split (040907).
-
-Previous. An information content entity is a non-realizable information entity that 'is encoded in' some digital or physical entity."""@en ;
-    ns1:IAO_0000119 "IAO",
-        "OBI_0000142"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty ns1:IAO_0000136 ;
-            owl:someValuesFrom ns1:BFO_0000001 ],
-        ns1:BFO_0000031 .
-
-ns1:RO_0000053 a owl:InverseFunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "has characteristic"@en ;
-    ns1:IAO_0000112 "this apple is bearer of this red color"@en,
-        "this vase is bearer of this fragility"@en ;
-    ns1:IAO_0000115 "Inverse of characteristic_of"@en ;
-    ns1:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
-    rdfs:range ns1:BFO_0000020 .
 
 ns1:BFO_0000040 a owl:Class ;
     rdfs:label "material entity"@en ;
@@ -1160,80 +1153,99 @@ ns1:COB_0000035 a owl:Class ;
             owl:someValuesFrom ns1:OBI_0000260 ],
         ns1:COB_0000082 .
 
-<urn:swrl:var#d> a ns3:Variable .
+ns1:IAO_0000030 a owl:Class ;
+    rdfs:label "information content entity",
+        "information content entity"@en ;
+    ns1:IAO_0000112 "Examples of information content entites include journal articles, data, graphical layouts, and graphs.",
+        "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en ;
+    ns1:IAO_0000115 "An information content entity is an entity that is generically dependent on some artifact and stands in relation of aboutness to some entity.",
+        "A generically dependent continuant that is about some thing."@en ;
+    ns1:IAO_0000116 "2014-03-10: The use of \"thing\" is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ)."@en,
+        "Pier: 'data, information or knowledge'. OR 'representation'"@en,
+        """information_content_entity 'is_encoded_in' some digital_entity in obi before split (040907). information_content_entity 'is_encoded_in' some physical_document in obi before split (040907).
+
+Previous. An information content entity is a non-realizable information entity that 'is encoded in' some digital or physical entity."""@en ;
+    ns1:IAO_0000119 "IAO",
+        "OBI_0000142"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns1:IAO_0000136 ;
+            owl:someValuesFrom ns1:BFO_0000001 ],
+        ns1:BFO_0000031 .
+
+<urn:swrl:var#d> a ns2:Variable .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( ns1:BFO_0000004 ns1:BFO_0000020 ns1:BFO_0000031 ) .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000016 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000016 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000091 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000091 ] ;
             rdf:rest () ] .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000019 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000019 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000086 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000086 ] ;
             rdf:rest () ] .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000023 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000023 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000087 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000087 ] ;
             rdf:rest () ] .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000034 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000034 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000085 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000085 ] ;
             rdf:rest () ] .
 

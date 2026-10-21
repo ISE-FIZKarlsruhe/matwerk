@@ -28,7 +28,7 @@ msekg:17454187282297 a mwo:MWO_0001007 ;
     obo:IAO_0000235 msekg:17461139278281 .
 
 msekg:17461150345788 a nfdi:NFDI_0001019 ;
-    rdfs:label "DFT code integration__name__" .
+    rdfs:label "title “DFT code integration”" .
 msekg:174611503457838 a nfdi:NFDI_0000006 ;
     rdfs:label "University College London (UCL)" .
 msekg:17461154901201 a nfdi:NFDI_0000006 ;
@@ -44,6 +44,6 @@ msekg:174611559180615 a nfdi:NFDI_0000107 ;
 nfdi:NFDI_0001070 a owl:NamedIndividual ;
     rdfs:label "active status" .
 msekg:17461157333128 a obo:BFO_0000038 ;
-    rdfs:label "temporal region 156" .
+    rdfs:label "time span of “DFT code integration”" .
 msekg:17461139278281 a nfdi:NFDI_0001036 ;
     rdfs:label "Integration of DFT code CONQUEST into Integrated Development Environment pyiron (which is a MatWerk service)" .

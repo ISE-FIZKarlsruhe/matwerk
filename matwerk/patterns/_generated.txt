@@ -1,6 +1,6 @@
-agent	agent	591
-role	role	650
-process	process	683
+agent	agent	119
+role	role	119
+process	process	140
 city	city	38
 people	people	60
 organization	organization	56
@@ -12,14 +12,14 @@ instrument	instrument	11
 largescalefacility	largescalefacility	8
 metadata	metadata	20
 matwerkta	matwerkta	11
-matwerkiuc	matwerkiuc	34
-matwerkpp	matwerkpp	41
-temporal	temporal	173
+matwerkiuc	matwerkiuc	40
+matwerkpp	matwerkpp	63
+temporal	temporal	19
 event	event	148
-collaboration	collaboration	25
+collaboration	collaboration	23
 service	service	65
 sparql_endpoints	sparql_endpoints	26
 fdos	fdos	5
 ontologies	ontologies	109
 materials	materials	25
-value-nfdi-matwerk-consortium	nfdi matwerk consortium	38
+value-nfdi-matwerk-consortium	nfdi matwerk consortium	52

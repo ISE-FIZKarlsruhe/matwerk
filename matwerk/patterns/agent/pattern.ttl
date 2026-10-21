@@ -16,8 +16,8 @@
 @prefix msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/> .
 
 msekg:17451651928121 a nfdi:NFDI_0000102 ;
-    rdfs:label "ContactPoint 1" ;
+    rdfs:label "contact point of Calphy" ;
     obo:IAO_0000235 msekg:17463591412431 .
 
 msekg:17463591412431 a obo:IAO_0000590 ;
-    rdfs:label "WrittenName 1" .
+    rdfs:label "written name of Calphy" .

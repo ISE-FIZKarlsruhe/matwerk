@@ -15,7 +15,7 @@
 @prefix mwo: <http://purls.helmholtz-metadaten.de/mwo/> .
 @prefix msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/> .
 
-msekg:17451425229671 a nfdi:NFDI_0000009 ;
+msekg:17451425229671 a obo:IAO_0001000 ;
     obo:IAO_0000235 msekg:17451474931961 ;
     obo:RO_0000056 msekg:17451490640421 ;
     nfdi:NFDI_0000216 msekg:17451494466961 ;
@@ -29,12 +29,12 @@ msekg:17451425229671 a nfdi:NFDI_0000009 ;
 
 msekg:17451474931961 a nfdi:NFDI_0001019 ;
     rdfs:label "Datasets for the analysis of dislocations at grain boundaries and during vein formation in cyclically deformed Ni micropillars" .
-msekg:17451490640421 a nfdi:NFDI_0000014 ;
-    rdfs:label "dataset publishing process 1" .
+msekg:17451490640421 a obo:IAO_0000444 ;
+    rdfs:label "publishing of dataset “Datasets for the analysis of dislocations at grain boundaries and during”" .
 msekg:17451494466961 a nfdi:NFDI_0000215 ;
     rdfs:label "Transmission electron microscopy" .
 msekg:17451497688931 a <https://w3id.org/pmd/co/PMD_0000001> ;
-    rdfs:label "PortionOfMatter 1" .
+    rdfs:label "material studied in “Datasets for the analysis of dislocations at grain boundaries”" .
 msekg:17451508444811 a obo:IAO_0000300 ;
     rdfs:label "The data consists of two parts: the simulation data that was used to analyze the effect of a particular grain boundary on curved dislocations and the precession electron diffraction (PED) strain maps together with post-processed data for analyzing details of the observed dislocation vein structures." .
 msekg:17451558370461 a <http://www.ebi.ac.uk/swo/SWO_0000002> ;
@@ -44,6 +44,6 @@ msekg:17451559943771 a nfdi:NFDI_0001032 ;
 msekg:17451561013681 a nfdi:NFDI_0001033 ;
     rdfs:label "(a) Micromechanical Materials Modelling (MiMM), Institute of Mechanics and Fluid Dynamics, TU Bergakademie Freiberg (TUBAF), Lampadiusstr. 4, 09596, Freiberg, Germany; (b) Electron Microscopy for Materials Science (EMAT), Department of Physics, University of Antwerp, Belgium; (c) Institute of Mechanics, Materials and Civil Engineering, UCLouvain, Belgium; (d) Institute for Applied Materials (IAM), Karlsruhe Institute of Technology (KIT), Hermann-von- Helmholtz-Platz 1, 76344, Eggenstein-Leopoldshafen, Germany; (e) JoannEuropem Research, Graz, Austria" .
 msekg:17451563212711 a nfdi:NFDI_0001037 ;
-    rdfs:label "url 28" .
+    rdfs:label "link of “Datasets for the analysis of dislocations at grain boundaries”" .
 msekg:17451567752591 a nfdi:NFDI_0001037 ;
-    rdfs:label "url 50" .
+    rdfs:label "related publication of “Datasets for the analysis of dislocations at grain boundaries”" .

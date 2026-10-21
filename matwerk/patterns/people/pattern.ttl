@@ -22,7 +22,7 @@ msekg:17451394578441 a nfdi:NFDI_0000004 ;
     obo:IAO_0000235 msekg:174513918613714 ;
     obo:IAO_0000235 msekg:17451391999331 ;
     nfdi:NFDI_0001006 <https://orcid.org/0000-0002-6776-1213> ;
-    obo:RO_0000056 msekg:17467757423621 .
+    obo:RO_0002350 msekg:17451394390861 .
 
 nfdi:NFDI_0001072 a owl:NamedIndividual ;
     rdfs:label "Dr." .
@@ -33,6 +33,6 @@ msekg:174513918613714 a obo:IAO_0020017 ;
 msekg:17451391999331 a obo:IAO_0000429 ;
     rdfs:label "s.menon@mpie.de" .
 <https://orcid.org/0000-0002-6776-1213> a obo:IAO_0000708 ;
-    rdfs:label "orcid 1" .
-msekg:17467757423621 a nfdi:NFDI_0000002 ;
-    rdfs:label "project process 1" .
+    rdfs:label "ORCID of “Dr. Sarath Menon”" .
+msekg:17451394390861 a obo:OBI_0000245 ;
+    rdfs:label "Max Planck Institute for Iron Research" .

@@ -165,6 +165,7 @@ skos:scopeNote a owl:AnnotationProperty .
     ns3:coversRequirements "Which large-scale facilities are available to the MatWerk community?",
         "Which organisation hosts a given facility, and which instruments does it house?" ;
     ns3:extractedFrom "the largescalefacility tab of the NFDI-MatWerk curation workbook" ;
+    ns3:hasComponent ns4:NFDI_0000101 ;
     ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
     ns3:hasIntent "To represent a large scale facility in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
     ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001206> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
@@ -343,17 +344,7 @@ ns1:SO_0001410 a owl:Class ;
     rdfs:label "DESY" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467092718061> a ns4:NFDI_0000101 ;
-    rdfs:label "InstrumentServiceProcess 1" .
-
-ns4:NFDI_0000101 a owl:Class ;
-    rdfs:label "service process",
-        "service process"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( ns1:BFO_0000015 [ a owl:Restriction ;
-                        owl:onProperty ns1:RO_0002234 ;
-                        owl:someValuesFrom ns4:NFDI_0000232 ] ) ] ;
-    skos:definition "A process that organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals."@en ;
-    ns4:NFDI_0010013 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75" .
+    rdfs:label "service provision of DEuropetsches Elektronen-Synchrotron" .
 
 ns4:NFDI_0001018 a owl:Class ;
     rdfs:label "textual description",
@@ -491,6 +482,16 @@ ns1:RO_0002351 a owl:IrreflexiveProperty,
     ns1:IAO_0000115 "has member is a mereological relation between a collection and an item." ;
     ns1:IAO_0000119 "SIO" ;
     rdfs:subPropertyOf ns1:BFO_0000051 .
+
+ns4:NFDI_0000101 a owl:Class ;
+    rdfs:label "service process",
+        "service process"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( ns1:BFO_0000015 [ a owl:Restriction ;
+                        owl:onProperty ns1:RO_0002234 ;
+                        owl:someValuesFrom ns4:NFDI_0000232 ] ) ] ;
+    skos:definition "A process that organizes activities and resources to deliver a specific service, ensuring its efficiency, reliability, and alignment with intended goals."@en ;
+    ns4:NFDI_0010013 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75" .
 
 ns4:NFDI_0000226 a owl:ObjectProperty ;
     rdfs:label "is subject of"@en ;

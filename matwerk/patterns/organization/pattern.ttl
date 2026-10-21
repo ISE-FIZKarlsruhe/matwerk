@@ -28,7 +28,7 @@ msekg:17451394390861 a obo:OBI_0000245 ;
     nfdi:NFDI_0001006 msekg:17451392793301 .
 
 msekg:17466192215831 a obo:IAO_0000303 ;
-    rdfs:label "Max Planck Institute for Iron Research_name_" .
+    rdfs:label "institutional name “Max Planck Institute for Iron Research”" .
 msekg:17451393742191 a nfdi:NFDI_0000106 ;
     rdfs:label "Dusseldorf" .
 msekg:17451392557111 a nfdi:NFDI_0001042 ;
@@ -36,8 +36,8 @@ msekg:17451392557111 a nfdi:NFDI_0001042 ;
 msekg:17451392359571 a nfdi:NFDI_0000119 ;
     rdfs:label "Germany" .
 msekg:17451392697731 a nfdi:NFDI_0000223 ;
-    rdfs:label "url 1" .
+    rdfs:label "institute website of “Max Planck Institute for Iron Research”" .
 msekg:174513943908628 a obo:OBI_0000245 ;
     rdfs:label "Max-Planck-Gesellschaft" .
 msekg:17451392793301 a nfdi:NFDI_0001013 ;
-    rdfs:label "ror 1" .
+    rdfs:label "ROR ID of “Max Planck Institute for Iron Research”" .

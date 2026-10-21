@@ -2,12 +2,23 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ns1: <http://purl.obolibrary.org/obo/> .
 @prefix ns2: <http://www.w3.org/2003/11/swrl#> .
-@prefix ns3: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
-@prefix ns4: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix ns3: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+ns1:BFO_0000054 a owl:ObjectProperty ;
+    rdfs:label "has realization"@en,
+        "realized in"@en ;
+    dc:identifier "206-BFO" ;
+    rdfs:domain ns1:BFO_0000017 ;
+    rdfs:range ns1:BFO_0000015 ;
+    owl:inverseOf ns1:BFO_0000055 ;
+    skos:altLabel "realized in"@en ;
+    skos:definition "b has realization c =Def c realizes b"@en ;
+    skos:example "As for realizes"@en .
 
 ns1:IAO_0000112 a owl:AnnotationProperty .
 
@@ -51,6 +62,15 @@ ns1:RO_0000080 a owl:ObjectProperty ;
     rdfs:subPropertyOf ns1:RO_0000052 ;
     owl:inverseOf ns1:RO_0000086 .
 
+ns1:RO_0002350 a owl:ObjectProperty ;
+    rdfs:label "member of",
+        "member of"@en ;
+    ns1:IAO_0000112 "An organism that is a member of a population of organisms" ;
+    ns1:IAO_0000115 "is member of is a mereological relation between a item and a collection." ;
+    ns1:IAO_0000119 "SIO" ;
+    rdfs:subPropertyOf ns1:BFO_0000050 ;
+    owl:inverseOf ns1:RO_0002351 .
+
 dc:identifier a owl:AnnotationProperty .
 
 dcterms:bibliographicCitation a owl:AnnotationProperty .
@@ -75,17 +95,17 @@ dcterms:license a owl:AnnotationProperty .
                         owl:someValuesFrom ns1:BFO_0000030 ] ) ] ;
     skos:definition "Object identifier is an identifier that uniquely designates a specific object." .
 
-<http://purls.helmholtz-metadaten.de/mwo/MWO_0001205> a owl:Class ;
-    rdfs:label "project identifier"@en ;
+<http://purls.helmholtz-metadaten.de/mwo/MWO_0001204> a owl:Class ;
+    rdfs:label "process identifier"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty ns1:IAO_0000219 ;
-            owl:someValuesFrom ns4:NFDI_0000002 ],
-        <http://purls.helmholtz-metadaten.de/mwo/MWO_0001204> ;
+            owl:someValuesFrom ns1:BFO_0000015 ],
+        ns1:IAO_0020000 ;
     owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( <http://purls.helmholtz-metadaten.de/mwo/MWO_0001204> [ a owl:Restriction ;
+            owl:intersectionOf ( ns1:IAO_0020000 [ a owl:Restriction ;
                         owl:onProperty ns1:IAO_0000219 ;
-                        owl:someValuesFrom ns4:NFDI_0000002 ] ) ] ;
-    skos:definition "an identifier that denotes a project and is used to uniquely reference, distinguish, or track that project within a given organizational, administrative, or information system context." .
+                        owl:someValuesFrom ns1:BFO_0000015 ] ) ] ;
+    skos:definition "an identifier that denotes a process and is used to uniquely reference, distinguish, or track that process within a given information system, workflow, or representational context." .
 
 <http://purls.helmholtz-metadaten.de/mwo/MWO_0001220> a owl:Class ;
     rdfs:label "protocol"@en ;
@@ -104,25 +124,25 @@ dcterms:license a owl:AnnotationProperty .
                         owl:someValuesFrom ns1:OBI_0000260 ] ) ] ;
     skos:definition "Protocol is a plan specification that prescribes the steps, conditions, rules, or procedures for carrying out a process, experiment, workflow, or activity." .
 
-ns3:coversRequirements a owl:AnnotationProperty .
+ns4:coversRequirements a owl:AnnotationProperty .
 
-ns3:extractedFrom a owl:AnnotationProperty .
+ns4:extractedFrom a owl:AnnotationProperty .
 
-ns3:hasComponent a owl:AnnotationProperty .
+ns4:hasComponent a owl:AnnotationProperty .
 
-ns3:hasConsequences a owl:AnnotationProperty .
+ns4:hasConsequences a owl:AnnotationProperty .
 
-ns3:hasIntent a owl:AnnotationProperty .
+ns4:hasIntent a owl:AnnotationProperty .
 
-ns3:hasUnitTest a owl:AnnotationProperty .
+ns4:hasUnitTest a owl:AnnotationProperty .
 
-ns3:isSpecializationOf a owl:AnnotationProperty .
+ns4:isSpecializationOf a owl:AnnotationProperty .
 
-ns3:reengineeredFrom a owl:AnnotationProperty .
+ns4:reengineeredFrom a owl:AnnotationProperty .
 
-ns3:relatedCPs a owl:AnnotationProperty .
+ns4:relatedCPs a owl:AnnotationProperty .
 
-ns3:scenarios a owl:AnnotationProperty .
+ns4:scenarios a owl:AnnotationProperty .
 
 skos:altLabel a owl:AnnotationProperty .
 
@@ -134,14 +154,14 @@ skos:example a owl:AnnotationProperty .
 
 skos:scopeNote a owl:AnnotationProperty .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451394578441> a ns4:NFDI_0000004 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451394578441> a ns3:NFDI_0000004 ;
     rdfs:label "Dr. Sarath Menon" ;
     ns1:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451391861361>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513918613714>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451391999331>,
-        ns4:NFDI_0001072 ;
-    ns1:RO_0000056 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467757423621> ;
-    ns4:NFDI_0001006 <https://orcid.org/0000-0002-6776-1213> .
+        ns3:NFDI_0001072 ;
+    ns1:RO_0002350 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451394390861> ;
+    ns3:NFDI_0001006 <https://orcid.org/0000-0002-6776-1213> .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/people> a owl:Ontology ;
     rdfs:label "people — NFDI-MatWerk ontology design pattern" ;
@@ -152,32 +172,30 @@ skos:scopeNote a owl:AnnotationProperty .
         <https://orcid.org/0000-0002-2691-6995>,
         <https://orcid.org/0000-0002-3092-0532> ;
     dcterms:license "CC BY 4.0 (repository); CC0 1.0 declared in the ontology header" ;
-    ns3:coversRequirements "What is the ORCID iD of a given researcher, and which organisation are they affiliated with?",
+    ns4:coversRequirements "What is the ORCID iD of a given researcher, and which organisation are they affiliated with?",
         "Which academic disciplines does a researcher work in?",
         "Which datasets, software or publications is a given researcher a creator of?",
         "Which researchers are involved in NFDI-MatWerk, and in which task area?" ;
-    ns3:extractedFrom "the people tab of the NFDI-MatWerk curation workbook" ;
-    ns3:hasComponent ns1:IAO_0000708,
+    ns4:extractedFrom "the people tab of the NFDI-MatWerk curation workbook" ;
+    ns4:hasComponent ns1:IAO_0000708,
         ns1:IAO_0020016,
         ns1:IAO_0020017,
-        ns4:NFDI_0000002 ;
-    ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
-    ns3:hasIntent "To represent a person in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
-    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
-    ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
-    ns3:reengineeredFrom "ROBOT template directives, row 2 of the people tab" ;
-    ns3:scenarios "“Dr. Sarath Menon” is a person, with title “Dr.”; first name “Sarath”; last name “Menon”." ;
+        ns1:OBI_0000245 ;
+    ns4:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
+    ns4:hasIntent "To represent a person in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
+    ns4:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
+    ns4:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
+    ns4:reengineeredFrom "ROBOT template directives, row 2 of the people tab" ;
+    ns4:scenarios "“Dr. Sarath Menon” is a person, with title “Dr.”; first name “Sarath”; last name “Menon”." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.2/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/people/1.0.0> ;
     owl:versionInfo "1.0.0" .
 
-ns4:NFDI_0000211 a owl:ObjectProperty ;
+ns3:NFDI_0000211 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000211" .
 
-ns4:NFDI_0001006 a owl:ObjectProperty ;
+ns3:NFDI_0001006 a owl:ObjectProperty ;
     rdfs:label "NFDI_0001006" .
-
-ns4:NFDI_0010013 a owl:AnnotationProperty .
 
 <https://w3id.org/pmd/co/PMD_0000833> a owl:Class ;
     rdfs:label "Herstellungsprozess"@de,
@@ -239,7 +257,7 @@ ns1:IAO_0000235 a owl:ObjectProperty ;
     ns1:IAO_0000115 "inverse of the relation 'denotes'"@en ;
     rdfs:domain ns1:BFO_0000001 ;
     rdfs:range ns1:IAO_0000030 ;
-    rdfs:subPropertyOf ns4:NFDI_0000226 .
+    rdfs:subPropertyOf ns3:NFDI_0000226 .
 
 ns1:IAO_0000429 a owl:Class ;
     rdfs:label "email address",
@@ -325,6 +343,14 @@ ns1:OBI_0000833 a owl:ObjectProperty ;
     rdfs:domain ns1:IAO_0000005 ;
     rdfs:range ns1:COB_0000035 .
 
+ns1:RO_0000081 a owl:ObjectProperty ;
+    rdfs:label "role of"@en ;
+    ns1:IAO_0000112 "this investigator role is a role of this person"@en ;
+    ns1:IAO_0000115 "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"@en ;
+    ns1:IAO_0000116 "A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists."@en ;
+    rdfs:subPropertyOf ns1:RO_0000052 ;
+    owl:inverseOf ns1:RO_0000087 .
+
 ns1:RO_0000091 a owl:ObjectProperty ;
     rdfs:label "has disposition"@en ;
     ns1:IAO_0000115 "a relation between an independent continuant (the bearer) and a disposition, in which the disposition specifically depends on the bearer for its existence"@en ;
@@ -338,14 +364,6 @@ ns1:RO_0000092 a owl:ObjectProperty ;
     ns1:IAO_0000115 "inverse of has disposition" ;
     rdfs:subPropertyOf ns1:RO_0000052 .
 
-ns1:RO_0002350 a owl:ObjectProperty ;
-    rdfs:label "member of"@en ;
-    ns1:IAO_0000112 "An organism that is a member of a population of organisms" ;
-    ns1:IAO_0000115 "is member of is a mereological relation between a item and a collection." ;
-    ns1:IAO_0000119 "SIO" ;
-    rdfs:subPropertyOf ns1:BFO_0000050 ;
-    owl:inverseOf ns1:RO_0002351 .
-
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451391861361> a ns1:IAO_0020016 ;
     rdfs:label "Sarath" .
 
@@ -355,34 +373,22 @@ ns1:RO_0002350 a owl:ObjectProperty ;
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451391999331> a ns1:IAO_0000429 ;
     rdfs:label "s.menon@mpie.de" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467757423621> a ns4:NFDI_0000002 ;
-    rdfs:label "project process 1" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451394390861> a ns1:OBI_0000245 ;
+    rdfs:label "Max Planck Institute for Iron Research" .
 
-ns4:NFDI_0000004 a owl:Class ;
+ns3:NFDI_0000004 a owl:Class ;
     rdfs:label "person",
         "person"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000030 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns4:NFDI_0000229 ] ) ],
-        ns4:NFDI_0000102 ;
+                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ],
+        ns3:NFDI_0000102 ;
     skos:definition "An object that represents a single human individual."@en ;
     skos:editorialNote "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en ;
     skos:example "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" .
 
-ns4:NFDI_0000006 a owl:Class ;
-    rdfs:label "consortium"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( ns1:OBI_0000245 [ a owl:Restriction ;
-                        owl:onProperty ns1:RO_0002351 ;
-                        owl:someValuesFrom [ a owl:Restriction ;
-                                owl:onProperty ns1:RO_0000087 ;
-                                owl:someValuesFrom ns4:NFDI_0000110 ] ] ) ] ;
-    skos:definition "An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal."@en ;
-    skos:editorialNote "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en ;
-    skos:example "NFDI4Culture, NFDI-MatWerk, DataPLANT." .
-
-ns4:NFDI_0001072 a owl:NamedIndividual ;
+ns3:NFDI_0001072 a owl:NamedIndividual ;
     rdfs:label "Dr." .
 
 <https://orcid.org/0000-0001-7069-9804> rdfs:label "Harald Sack" .
@@ -394,18 +400,7 @@ ns4:NFDI_0001072 a owl:NamedIndividual ;
 <https://orcid.org/0000-0002-3092-0532> rdfs:label "Hossein Beygi Nasrabadi" .
 
 <https://orcid.org/0000-0002-6776-1213> a ns1:IAO_0000708 ;
-    rdfs:label "orcid 1" .
-
-ns1:BFO_0000054 a owl:ObjectProperty ;
-    rdfs:label "has realization"@en,
-        "realized in"@en ;
-    dc:identifier "206-BFO" ;
-    rdfs:domain ns1:BFO_0000017 ;
-    rdfs:range ns1:BFO_0000015 ;
-    owl:inverseOf ns1:BFO_0000055 ;
-    skos:altLabel "realized in"@en ;
-    skos:definition "b has realization c =Def c realizes b"@en ;
-    skos:example "As for realizes"@en .
+    rdfs:label "ORCID of “Dr. Sarath Menon”" .
 
 ns1:BFO_0000055 a owl:ObjectProperty ;
     rdfs:label "realizes"@en ;
@@ -488,7 +483,8 @@ specimen can later be subject."""@en ;
         ns1:BFO_0000023 .
 
 ns1:OBI_0000245 a owl:Class ;
-    rdfs:label "organization"@en ;
+    rdfs:label "organization",
+        "organization"@en ;
     ns1:IAO_0000112 "PMID: 16353909.AAPS J. 2005 Sep 22;7(2):E274-80. Review. The joint food and agriculture organization of the United Nations/World Health Organization Expert Committee on Food Additives and its role in the evaluation of the safety of veterinary drug residues in foods."@en ;
     ns1:IAO_0000115 "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members."@en ;
     ns1:IAO_0000116 """BP: The definition summarizes long email discussions on the OBI developer, roles, biomaterial and denrie branches. It leaves open if an organization is a material entity or a dependent continuant, as no consensus was reached on that.  The current placement as material is therefore temporary, in order to move forward with development. Here is the entire email summary, on which the definition is based:
@@ -522,8 +518,8 @@ for now."""@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000040 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns4:NFDI_0000229 ] ) ],
-        ns4:NFDI_0000102 .
+                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ],
+        ns3:NFDI_0000102 .
 
 ns1:OBI_0000417 a owl:ObjectProperty ;
     rdfs:label "achieves_planned_objective" ;
@@ -588,14 +584,6 @@ ns1:RO_0000059 a owl:ObjectProperty ;
             owl:unionOf ( ns1:BFO_0000015 ns1:BFO_0000020 ) ] ;
     rdfs:range ns1:BFO_0000031 .
 
-ns1:RO_0000081 a owl:ObjectProperty ;
-    rdfs:label "role of"@en ;
-    ns1:IAO_0000112 "this investigator role is a role of this person"@en ;
-    ns1:IAO_0000115 "a relation between a role and an independent continuant (the bearer), in which the role specifically depends on the bearer for its existence"@en ;
-    ns1:IAO_0000116 "A role inheres in its bearer at all times for which the role exists, however the role need not be realized at all the times that the role exists."@en ;
-    rdfs:subPropertyOf ns1:RO_0000052 ;
-    owl:inverseOf ns1:RO_0000087 .
-
 ns1:RO_0000085 a owl:ObjectProperty ;
     rdfs:label "has function"@en ;
     ns1:IAO_0000112 "this enzyme has function this catalysis function (more colloquially: this enzyme has this catalysis function)"@en ;
@@ -613,33 +601,14 @@ ns1:RO_0000086 a owl:ObjectProperty ;
     rdfs:range ns1:BFO_0000019 ;
     rdfs:subPropertyOf ns1:RO_0000053 .
 
-<http://purls.helmholtz-metadaten.de/mwo/MWO_0001204> a owl:Class ;
-    rdfs:label "process identifier"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty ns1:IAO_0000219 ;
-            owl:someValuesFrom ns1:BFO_0000015 ],
-        ns1:IAO_0020000 ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( ns1:IAO_0020000 [ a owl:Restriction ;
-                        owl:onProperty ns1:IAO_0000219 ;
-                        owl:someValuesFrom ns1:BFO_0000015 ] ) ] ;
-    skos:definition "an identifier that denotes a process and is used to uniquely reference, distinguish, or track that process within a given information system, workflow, or representational context." .
+ns1:RO_0002351 a owl:IrreflexiveProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has member"@en ;
+    ns1:IAO_0000115 "has member is a mereological relation between a collection and an item." ;
+    ns1:IAO_0000119 "SIO" ;
+    rdfs:subPropertyOf ns1:BFO_0000051 .
 
-ns4:NFDI_0000110 a owl:Class ;
-    rdfs:label "consortium member role"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty ns1:BFO_0000054 ;
-            owl:someValuesFrom ns4:NFDI_0000002 ],
-        ns4:NFDI_0000229 ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( ns4:NFDI_0000229 [ a owl:Restriction ;
-                        owl:onProperty ns1:BFO_0000054 ;
-                        owl:someValuesFrom ns4:NFDI_0000002 ] [ a owl:Restriction ;
-                        owl:allValuesFrom ns1:OBI_0000245 ;
-                        owl:onProperty ns1:RO_0000081 ] ) ] ;
-    skos:definition "A role inherent in an organization that is realized when the organization is a member of a consortium."@en .
-
-ns4:NFDI_0000226 a owl:ObjectProperty ;
+ns3:NFDI_0000226 a owl:ObjectProperty ;
     rdfs:label "is subject of"@en ;
     skos:altLabel "is described by" ;
     skos:definition "inverse of the relation 'is about'" .
@@ -733,23 +702,16 @@ ns1:OBI_0000312 a owl:ObjectProperty ;
     rdfs:range ns1:COB_0000035 ;
     rdfs:subPropertyOf ns1:RO_0000056 .
 
-ns1:RO_0002351 a owl:IrreflexiveProperty,
-        owl:ObjectProperty ;
-    rdfs:label "has member"@en ;
-    ns1:IAO_0000115 "has member is a mereological relation between a collection and an item." ;
-    ns1:IAO_0000119 "SIO" ;
-    rdfs:subPropertyOf ns1:BFO_0000051 .
-
-ns4:NFDI_0000102 a owl:Class ;
+ns3:NFDI_0000102 a owl:Class ;
     rdfs:label "agent"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty ns1:RO_0000087 ;
-            owl:someValuesFrom ns4:NFDI_0000229 ],
+            owl:someValuesFrom ns3:NFDI_0000229 ],
         ns1:BFO_0000004 ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000004 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns4:NFDI_0000229 ] ) ] ;
+                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ] ;
     skos:definition "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en ;
     skos:editorialNote "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en ;
     skos:example "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en .
@@ -785,6 +747,14 @@ ns1:RO_0000057 a owl:ObjectProperty ;
     rdfs:domain ns1:BFO_0000003 ;
     rdfs:range ns1:BFO_0000002 ;
     owl:propertyChainAxiom ( ns1:BFO_0000051 ns1:RO_0000057 ) .
+
+ns3:NFDI_0000229 a owl:Class ;
+    rdfs:label "agent role"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:intersectionOf ( ns1:BFO_0000023 [ a owl:Restriction ;
+                        owl:onProperty ns1:RO_0000081 ;
+                        owl:someValuesFrom ns3:NFDI_0000102 ] ) ] ;
+    skos:definition "Role of an independent continuant that is realized through an agent's actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context."@en .
 
 ns1:BFO_0000001 a owl:Class ;
     rdfs:label "entity"@en ;
@@ -825,7 +795,22 @@ We will try to build it back up by elaborating the various subproperties that ar
 Some currently missing phenomena that should be considered "about" are predications - "The only person who knows the answer is sitting beside me" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
     ns1:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
     rdfs:domain ns1:IAO_0000030 ;
-    owl:inverseOf ns4:NFDI_0000226 .
+    owl:inverseOf ns3:NFDI_0000226 .
+
+ns1:IAO_0000219 a owl:ObjectProperty ;
+    rdfs:label "denotes"@en ;
+    ns1:IAO_0000112 "A person's name denotes the person. A variable name in a computer program denotes some piece of memory. Lexically equivalent strings can denote different things, for instance \"Alan\" can denote different people. In each case of use, there is a case of the denotation relation obtaining, between \"Alan\" and the person that is being named."@en ;
+    ns1:IAO_0000115 "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"@en ;
+    ns1:IAO_0000116 """2009-11-10 Alan Ruttenberg. Old definition said the following to emphasize the generic nature of this relation. We no longer have 'specifically denotes', which would have been primitive, so make this relation primitive.
+g denotes r =def 
+r is a portion of reality
+there is some c that is a concretization of g 
+every c that is a concretization of g specifically denotes r"""@en ;
+    ns1:IAO_0000119 "Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan"@en ;
+    rdfs:domain ns1:IAO_0000030 ;
+    rdfs:range ns1:BFO_0000001 ;
+    rdfs:subPropertyOf ns1:IAO_0000136 ;
+    owl:inverseOf ns1:IAO_0000235 .
 
 ns1:RO_0000052 a owl:FunctionalProperty,
         owl:ObjectProperty ;
@@ -866,31 +851,6 @@ ns1:BFO_0000019 a owl:Class ;
         ns1:BFO_0000020 ;
     skos:definition "(Elucidation) A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized"@en ;
     skos:example "The colour of a tomato; the ambient temperature of this portion of air; the length of the circumference of your waist; the shape of your nose; the shape of your nostril; the mass of this piece of gold"@en .
-
-ns4:NFDI_0000002 a owl:Class ;
-    rdfs:label "project",
-        "project"@en ;
-    rdfs:subClassOf ns1:BFO_0000015 ;
-    skos:definition "A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
-    skos:editorialNote """Why "project" as an occurrent:
-- A project typically has a start and end time.
-- It involves a sequence of activities, such as planning, conducting experiments, analyzing data, and publishing results.
-- It has temporal parts (e.g., Phase 1, Phase 2, review stages).
-So, it aligns well with the occurrent category - more precisely, it can be considered a complex process made up of various subprocesses.
-
-But what about the organization or plan behind it?
-- The institution running or participating the project would be a continuant (consortium).
-- The project plan might be a generically dependent continuant (a kind of information content entity).
-- But the project as executed over time is an occurrent."""@en ;
-    ns4:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/50" .
-
-ns4:NFDI_0000229 a owl:Class ;
-    rdfs:label "agent role"@en ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf ( ns1:BFO_0000023 [ a owl:Restriction ;
-                        owl:onProperty ns1:RO_0000081 ;
-                        owl:someValuesFrom ns4:NFDI_0000102 ] ) ] ;
-    skos:definition "Role of an independent continuant that is realized through an agent's actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context."@en .
 
 ns1:BFO_0000002 a owl:Class ;
     rdfs:label "continuant"@en ;
@@ -947,21 +907,6 @@ ns1:BFO_0000031 a owl:Class ;
     skos:altLabel "g-dependent continuant"@en ;
     skos:definition "(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share"@en ;
     skos:example "The pdf file on your laptop; the pdf file that is a copy thereof on my laptop; the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule; the content that is shared by a string of dots and dashes written on a page and the transmitted Morse code signal; the content of a sentence; an engineering blueprint"@en .
-
-ns1:IAO_0000219 a owl:ObjectProperty ;
-    rdfs:label "denotes"@en ;
-    ns1:IAO_0000112 "A person's name denotes the person. A variable name in a computer program denotes some piece of memory. Lexically equivalent strings can denote different things, for instance \"Alan\" can denote different people. In each case of use, there is a case of the denotation relation obtaining, between \"Alan\" and the person that is being named."@en ;
-    ns1:IAO_0000115 "A primitive, instance-level, relation obtaining between an information content entity and some portion of reality. Denotation is what happens when someone creates an information content entity E in order to specifically refer to something. The only relation between E and the thing is that E can be used to 'pick out' the thing. This relation connects those two together. Freedictionary.com sense 3: To signify directly; refer to specifically"@en ;
-    ns1:IAO_0000116 """2009-11-10 Alan Ruttenberg. Old definition said the following to emphasize the generic nature of this relation. We no longer have 'specifically denotes', which would have been primitive, so make this relation primitive.
-g denotes r =def 
-r is a portion of reality
-there is some c that is a concretization of g 
-every c that is a concretization of g specifically denotes r"""@en ;
-    ns1:IAO_0000119 "Conversations with Barry Smith, Werner Ceusters, Bjoern Peters, Michel Dumontier, Melanie Courtot, James Malone, Bill Hogan"@en ;
-    rdfs:domain ns1:IAO_0000030 ;
-    rdfs:range ns1:BFO_0000001 ;
-    rdfs:subPropertyOf ns1:IAO_0000136 ;
-    owl:inverseOf ns1:IAO_0000235 .
 
 ns1:BFO_0000004 a owl:Class ;
     rdfs:label "independent continuant"@en ;
@@ -1035,7 +980,33 @@ ns1:IAO_0020000 a owl:Class ;
     ns1:IAO_0000118 "proper name"@en ;
     rdfs:subClassOf ns1:IAO_0000030 .
 
+ns1:RO_0000087 a owl:ObjectProperty ;
+    rdfs:label "has role"@en ;
+    ns1:IAO_0000112 "this person has role this investigator role (more colloquially: this person has this role of investigator)"@en ;
+    ns1:IAO_0000115 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en ;
+    ns1:IAO_0000116 "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists."@en ;
+    rdfs:domain ns1:BFO_0000004 ;
+    rdfs:range ns1:BFO_0000023 ;
+    rdfs:subPropertyOf ns1:RO_0000053 .
+
 <urn:swrl:var#e> a ns2:Variable .
+
+ns1:BFO_0000015 a owl:Class ;
+    rdfs:label "process"@en ;
+    ns1:IAO_0000112 "a process of cell-division, \\ a beating of the heart"@en,
+        "a process of meiosis"@en,
+        "a process of sleeping"@en,
+        "the course of a disease"@en,
+        "the flight of a bird"@en,
+        "the life of an organism"@en,
+        "your process of aging."@en ;
+    ns1:IAO_0000115 "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])"@en ;
+    ns1:IAO_0000116 "BFO 2 Reference: The realm of occurrents is less pervasively marked by the presence of natural units than is the case in the realm of independent continuants. Thus there is here no counterpart of ‘object’. In BFO 1.0 ‘process’ served as such a counterpart. In BFO 2.0 ‘process’ is, rather, the occurrent counterpart of ‘material entity’. Those natural – as contrasted with engineered, which here means: deliberately executed – units which do exist in the realm of occurrents are typically either parasitic on the existence of natural units on the continuant side, or they are fiat in nature. Thus we can count lives; we can count football games; we can count chemical reactions performed in experiments or in chemical manufacturing. We cannot count the processes taking place, for instance, in an episode of insect mating behavior.Even where natural units are identifiable, for example cycles in a cyclical process such as the beating of a heart or an organism’s sleep/wake cycle, the processes in question form a sequence with no discontinuities (temporal gaps) of the sort that we find for instance where billiard balls or zebrafish or planets are separated by clear spatial gaps. Lives of organisms are process units, but they too unfold in a continuous series from other, prior processes such as fertilization, and they unfold in turn in continuous series of post-life processes such as post-mortem decay. Clear examples of boundaries of processes are almost always of the fiat sort (midnight, a time of death as declared in an operating theater or on a death certificate, the initiation of a state of war)"@en ;
+    dc:identifier "083-BFO" ;
+    rdfs:subClassOf ns1:BFO_0000003 ;
+    skos:altLabel "event"@en ;
+    skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
+    skos:example "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
 
 ns1:BFO_0000040 a owl:Class ;
     rdfs:label "material entity"@en ;
@@ -1070,38 +1041,12 @@ ns1:RO_0000053 a owl:InverseFunctionalProperty,
     ns1:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
     rdfs:range ns1:BFO_0000020 .
 
-ns1:BFO_0000015 a owl:Class ;
-    rdfs:label "process"@en ;
-    ns1:IAO_0000112 "a process of cell-division, \\ a beating of the heart"@en,
-        "a process of meiosis"@en,
-        "a process of sleeping"@en,
-        "the course of a disease"@en,
-        "the flight of a bird"@en,
-        "the life of an organism"@en,
-        "your process of aging."@en ;
-    ns1:IAO_0000115 "p is a process = Def. p is an occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t. (axiom label in BFO2 Reference: [083-003])"@en ;
-    ns1:IAO_0000116 "BFO 2 Reference: The realm of occurrents is less pervasively marked by the presence of natural units than is the case in the realm of independent continuants. Thus there is here no counterpart of ‘object’. In BFO 1.0 ‘process’ served as such a counterpart. In BFO 2.0 ‘process’ is, rather, the occurrent counterpart of ‘material entity’. Those natural – as contrasted with engineered, which here means: deliberately executed – units which do exist in the realm of occurrents are typically either parasitic on the existence of natural units on the continuant side, or they are fiat in nature. Thus we can count lives; we can count football games; we can count chemical reactions performed in experiments or in chemical manufacturing. We cannot count the processes taking place, for instance, in an episode of insect mating behavior.Even where natural units are identifiable, for example cycles in a cyclical process such as the beating of a heart or an organism’s sleep/wake cycle, the processes in question form a sequence with no discontinuities (temporal gaps) of the sort that we find for instance where billiard balls or zebrafish or planets are separated by clear spatial gaps. Lives of organisms are process units, but they too unfold in a continuous series from other, prior processes such as fertilization, and they unfold in turn in continuous series of post-life processes such as post-mortem decay. Clear examples of boundaries of processes are almost always of the fiat sort (midnight, a time of death as declared in an operating theater or on a death certificate, the initiation of a state of war)"@en ;
-    dc:identifier "083-BFO" ;
-    rdfs:subClassOf ns1:BFO_0000003 ;
-    skos:altLabel "event"@en ;
-    skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
-    skos:example "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
-
 ns1:COB_0000035 a owl:Class ;
     rdfs:label "completely executed planned process"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty ns1:BFO_0000055 ;
             owl:someValuesFrom ns1:OBI_0000260 ],
         ns1:COB_0000082 .
-
-ns1:RO_0000087 a owl:ObjectProperty ;
-    rdfs:label "has role"@en ;
-    ns1:IAO_0000112 "this person has role this investigator role (more colloquially: this person has this role of investigator)"@en ;
-    ns1:IAO_0000115 "a relation between an independent continuant (the bearer) and a role, in which the role specifically depends on the bearer for its existence"@en ;
-    ns1:IAO_0000116 "A bearer can have many roles, and its roles can exist for different periods of time, but none of its roles can exist when the bearer does not exist. A role need not be realized at all the times that the role exists."@en ;
-    rdfs:domain ns1:BFO_0000004 ;
-    rdfs:range ns1:BFO_0000023 ;
-    rdfs:subPropertyOf ns1:RO_0000053 .
 
 ns1:BFO_0000050 a owl:ObjectProperty,
         owl:TransitiveProperty ;
@@ -1120,13 +1065,6 @@ A continuant cannot be part of an occurrent: use 'participates in'. An occurrent
     owl:inverseOf ns1:BFO_0000051 .
 
 <urn:swrl:var#d> a ns2:Variable .
-
-[] a owl:Restriction ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty ns1:RO_0002350 ;
-            owl:someValuesFrom ns4:NFDI_0000006 ] ;
-    owl:onProperty ns1:RO_0000087 ;
-    owl:someValuesFrom ns4:NFDI_0000110 .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( ns1:BFO_0000004 ns1:BFO_0000020 ns1:BFO_0000031 ) .

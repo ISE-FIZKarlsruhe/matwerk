@@ -31,8 +31,8 @@ msekg:174532124622713 a nfdi:NFDI_0001018 ;
 msekg:17453220784731 a nfdi:NFDI_0000206 ;
     rdfs:label "OPTIMADE" .
 msekg:1746117452994218 a nfdi:NFDI_0000111 ;
-    rdfs:label "ContactingProcess 218" .
-msekg:17453256104575 a nfdi:NFDI_0000190 ;
+    rdfs:label "contacting Crystallography Open Database Software (COD)" .
+msekg:17453256104575 a obo:IAO_0000311 ;
     rdfs:label "GraÅ¾ulis, S., DaÅ¡keviÄ, A., Merkys, A., Chateigner, D., Lutterotti, L., QuirÃ³s, M., Serebryanaya, N. R., Moeck, P., Downs, R. T. & LeBail, A. (2012). Crystallography Open Database Software (COD): an open-access collection of crystal structures and platform for world-wide collaboration. Nucleic Acids Research, 40, D420-D427. doi: 10.1093/nar/gkr900 (BibTeX, EndNote/Refer, plain text)  Grazulis, S., Chateigner, D., Downs, R. T., Yokochi, A. T., Quiros, M., Lutterotti, L., Manakova, E., Butkus, J., Moeck, P. & Le Bail, A. (2009). Crystallography Open Database Software â an open-access collection of crystal structures. Journal of Applied Crystallography, 42, 726-729. doi: 10.1107/S0021889809016690 (BibTeX, EndNote/Refer, plain text)" .
 msekg:17453223663963 a <http://www.ebi.ac.uk/swo/SWO_0000002> ;
     rdfs:label "https://creativecommons.org/Publicdomain/zero/1.0/" .

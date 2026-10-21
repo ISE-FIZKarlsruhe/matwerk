@@ -139,7 +139,7 @@ skos:example a owl:AnnotationProperty .
 skos:scopeNote a owl:AnnotationProperty .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451651928121> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102> ;
-    rdfs:label "ContactPoint 1" ;
+    rdfs:label "contact point of Calphy" ;
     ns1:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17463591412431> .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/agent> a owl:Ontology ;
@@ -159,7 +159,7 @@ skos:scopeNote a owl:AnnotationProperty .
     ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
     ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
     ns3:reengineeredFrom "ROBOT template directives, row 2 of the agent tab" ;
-    ns3:scenarios "“ContactPoint 1” is a agent, with denoted by written name “WrittenName 1”." ;
+    ns3:scenarios "“contact point of Calphy” is a agent, with denoted by written name “written name of Calphy”." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.2/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/agent/1.0.0> ;
     owl:versionInfo "1.0.0" .
@@ -317,7 +317,7 @@ ns1:SO_0001410 a owl:Class ;
     rdfs:subClassOf ns1:SO_0000001 .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17463591412431> a ns1:IAO_0000590 ;
-    rdfs:label "WrittenName 1" .
+    rdfs:label "written name of Calphy" .
 
 <https://orcid.org/0000-0001-7069-9804> rdfs:label "Harald Sack" .
 
