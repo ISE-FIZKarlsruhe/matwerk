@@ -27,6 +27,7 @@ on:
 
 permissions:
   contents: write
+  actions: write        # to start docs.yml after committing (see the last step)
 
 jobs:
   patterns:
@@ -162,6 +163,7 @@ jobs:
           exit $fail
 
       - name: Commit the regenerated patterns
+        id: commit
         if: github.event_name != 'pull_request' && github.event.inputs.commit != 'false'
         run: |
           git config user.name  "github-actions[bot]"
@@ -169,7 +171,23 @@ jobs:
           git add docs/patterns
           if git diff --cached --quiet; then
             echo "patterns unchanged"
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
           else
             git commit -m "docs: regenerate design patterns (MWO ${MWO_VERSION})"
             git push
+            echo "pushed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # The commit above is made with GITHUB_TOKEN, and GitHub does not start
+      # workflows from such a push -- it is how it stops a workflow triggering
+      # itself. docs.yml only runs "on: push, paths: docs/**", so it never saw
+      # the regenerated patterns: the files were correct in the repo and the
+      # published site kept serving the previous build. The deploy is therefore
+      # requested explicitly.
+      - name: Deploy the docs so the new patterns are published
+        if: steps.commit.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh workflow run docs.yml --ref "${GITHUB_REF_NAME}"
+          echo "requested a docs.yml run on ${GITHUB_REF_NAME}"
