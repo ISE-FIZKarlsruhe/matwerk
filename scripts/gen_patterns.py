@@ -40,6 +40,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import io
 import os
 import re
 from typing import Dict, List, Optional, Tuple
@@ -259,16 +260,71 @@ DIRECTIVE_RE = re.compile(r"^(ID|TYPE|A|I|AI|AT|C|DOMAIN|RANGE)\b\s*(.*)$")
 # --------------------------------------------------------------------------- #
 # input
 # --------------------------------------------------------------------------- #
+def tabs_from_dag() -> List[Tuple[str, str]]:
+    """The tab list the DAG actually fetches, read out of dags/spreadsheets.py.
+
+    The gids below in TABS are a SECOND copy of that list, and the two drifted:
+    the workbook was replaced, spreadsheets.py was updated and this file was
+    not, so all 26 gids pointed at tabs of the old workbook. The generator kept
+    succeeding and kept publishing patterns built from stale rows -- the failure
+    mode of a duplicated constant.
+
+    So the DAG is the single source of truth and this parses it. If the parse
+    fails the run stops instead of quietly falling back to TABS, because a
+    silent fallback is exactly what produced the stale patterns.
+    """
+    dag = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                       "dags", "spreadsheets.py")
+    src = open(dag, encoding="utf-8").read()
+    block = re.search(r"tsv_gids\s*=\s*\[(.*?)\n\s*\]", src, re.S)
+    if not block:
+        raise SystemExit(f"could not find tsv_gids in {dag}")
+    pairs = re.findall(r'\(\s*"(\w+)"\s*,\s*"(\d+)"\s*\)', block.group(1))
+    if not pairs:
+        raise SystemExit(f"tsv_gids in {dag} parsed to nothing")
+
+    seen: Dict[str, str] = {}
+    for name, gid in pairs:
+        if gid in seen:
+            # Two tabs cannot share a gid: one of them is being fetched twice
+            # and the other never. Loud, because the graph would be built from
+            # the wrong rows.
+            raise SystemExit(
+                f"{dag}: tabs {seen[gid]!r} and {name!r} share gid {gid}. "
+                f"Fix the gid in the DAG before regenerating the patterns.")
+        seen[gid] = name
+    print(f"[tabs] {len(pairs)} tabs from dags/spreadsheets.py")
+    return pairs
+
+
+def publish_url_from_dag() -> str:
+    """The published-to-web URL the DAG downloads, so both read the same bytes."""
+    dag = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                       "dags", "spreadsheets.py")
+    src = open(dag, encoding="utf-8").read()
+    m = re.search(r'"(https://docs\.google\.com/spreadsheets/d/e/)"\s*\n\s*"([\w-]+)"', src)
+    if not m:
+        raise SystemExit(f"could not find the published sheet URL in {dag}")
+    return m.group(1) + m.group(2) + "/pub?gid={gid}&single=true&output=tsv"
+
+
 def fetch_tabs(out_dir: str) -> None:
     import requests
 
     os.makedirs(out_dir, exist_ok=True)
-    for name, gid in TABS:
-        r = requests.get(EXPORT.format(sid=PROD_SHEET_ID, gid=gid), timeout=90)
+    url = publish_url_from_dag()
+    for name, gid in tabs_from_dag():
+        r = requests.get(url.format(gid=gid), timeout=90)
         r.raise_for_status()
-        with open(os.path.join(out_dir, f"{name}.csv"), "wb") as fh:
-            fh.write(r.content)
-        print(f"[fetch] {name}.csv ({len(r.content)} bytes)")
+        # The DAG gets TSV; read_tab() expects CSV. Converting through csv also
+        # escapes any double quote in a cell, which a raw TSV does not.
+        text = r.content.decode("utf-8")
+        rows = list(csv.reader(io.StringIO(text), delimiter="\t",
+                               quoting=csv.QUOTE_NONE))
+        path = os.path.join(out_dir, f"{name}.csv")
+        with open(path, "w", encoding="utf-8", newline="") as fh:
+            csv.writer(fh).writerows(rows)
+        print(f"[fetch] {name}.csv ({len(rows)} rows)")
 
 
 def read_tab(path: str) -> Tuple[List[str], List[str], List[List[str]]]:

@@ -91,7 +91,7 @@ def process_spreadsheets():
         ("dataportal", "1800795081"),
         ("instrument", "1858141391"),
         ("largescalefacility", "654626178"),
-        ("metadata", "105519848"),
+        ("metadata", "791491225"),
         ("matwerkta", "105519848"),
         ("matwerkiuc", "1036633700"),
         ("matwerkpp", "752868171"),
