@@ -48,7 +48,7 @@ Retrieve instances of this pattern from the MatWerk Knowledge Graph ([SPARQL end
 SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10
 ```
 
-The rows behind it are curated in the [`ontologies` tab of the workbook](https://docs.google.com/spreadsheets/d/1OyoWwcX4zUtrJilwXdtTooavELw278nQSNW2oniBBsk/edit#gid=2006199416).
+The rows behind it are curated in the [`ontologies` tab of the workbook](https://docs.google.com/spreadsheets/d/1OyoWwcX4zUtrJilwXdtTooavELw278nQSNW2oniBBsk/edit#gid=866054536).
 
 ## Competency questions
 

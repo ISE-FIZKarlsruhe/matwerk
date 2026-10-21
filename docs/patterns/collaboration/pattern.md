@@ -50,7 +50,7 @@ Retrieve instances of this pattern from the MatWerk Knowledge Graph ([SPARQL end
 SELECT ?x ?label WHERE { ?x a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001007> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10
 ```
 
-The rows behind it are curated in the [`collaboration` tab of the workbook](https://docs.google.com/spreadsheets/d/1OyoWwcX4zUtrJilwXdtTooavELw278nQSNW2oniBBsk/edit#gid=266847052).
+The rows behind it are curated in the [`collaboration` tab of the workbook](https://docs.google.com/spreadsheets/d/1OyoWwcX4zUtrJilwXdtTooavELw278nQSNW2oniBBsk/edit#gid=983873413).
 
 ## Competency questions
 

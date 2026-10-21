@@ -45,7 +45,7 @@ Retrieve instances of this pattern from the MatWerk Knowledge Graph ([SPARQL end
 SELECT ?x ?label WHERE { ?x a <http://purl.obolibrary.org/obo/BFO_0000038> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10
 ```
 
-The rows behind it are curated in the [`temporal` tab of the workbook](https://docs.google.com/spreadsheets/d/1OyoWwcX4zUtrJilwXdtTooavELw278nQSNW2oniBBsk/edit#gid=1265818056).
+The rows behind it are curated in the [`temporal` tab of the workbook](https://docs.google.com/spreadsheets/d/1OyoWwcX4zUtrJilwXdtTooavELw278nQSNW2oniBBsk/edit#gid=1266970464).
 
 ## Competency questions
 

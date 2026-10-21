@@ -53,7 +53,7 @@ Retrieve instances of this pattern from the MatWerk Knowledge Graph ([SPARQL end
 SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10
 ```
 
-The rows behind it are curated in the [`people` tab of the workbook](https://docs.google.com/spreadsheets/d/1OyoWwcX4zUtrJilwXdtTooavELw278nQSNW2oniBBsk/edit#gid=1666156492).
+The rows behind it are curated in the [`people` tab of the workbook](https://docs.google.com/spreadsheets/d/1OyoWwcX4zUtrJilwXdtTooavELw278nQSNW2oniBBsk/edit#gid=1105511548).
 
 ## Competency questions
 
