@@ -46,23 +46,66 @@ import re
 from typing import Dict, List, Optional, Tuple
 
 PROD_SHEET_ID = "1OyoWwcX4zUtrJilwXdtTooavELw278nQSNW2oniBBsk"
-EXPORT = "https://docs.google.com/spreadsheets/d/{sid}/export?format=csv&gid={gid}"
 
 # tab -> gid, mirroring dags/spreadsheets.py: tsv_gids
-TABS: List[Tuple[str, str]] = [
-    ("req_1", "394894036"), ("req_2", "0"), ("agent", "2077140060"),
-    ("role", "1425127117"), ("process", "1169992315"), ("city", "1469482382"),
-    ("people", "1666156492"), ("organization", "447157523"),
-    ("dataset", "1079878268"), ("publication", "1747331228"),
-    ("software", "1275685399"), ("dataportal", "923160190"),
-    ("instrument", "2015927839"), ("largescalefacility", "370181939"),
-    ("metadata", "278046522"), ("matwerkta", "1489640604"),
-    ("matwerkiuc", "281962521"), ("matwerkpp", "606786541"),
-    ("temporal", "1265818056"), ("event", "638946284"),
-    ("collaboration", "266847052"), ("service", "130394813"),
-    ("sparql_endpoints", "1732373290"), ("fdos", "152649677"),
-    ("ontologies", "2006199416"), ("materials", "497166822"),
-]
+def _dag_path() -> str:
+    """The spreadsheets DAG whose gids decide what gets harvested."""
+    p = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                     "dags", "spreadsheets.py")
+    if not os.path.exists(p):
+        raise SystemExit(f"no spreadsheets DAG at {p}")
+    return p
+
+
+def tabs_from_dag() -> List[Tuple[str, str]]:
+    """The tab list the DAG actually fetches, read out of dags/spreadsheets.py.
+
+    This used to be duplicated in a TABS literal here, and the two drifted:
+    the workbook was replaced, spreadsheets.py was updated and this file was
+    not, so all 26 gids pointed at tabs of the old workbook. The generator kept
+    succeeding and kept publishing patterns built from stale rows -- the failure
+    mode of a duplicated constant.
+
+    So the DAG is the single source of truth and this parses it. If the parse
+    fails the run stops, because a silent fallback is exactly what produced
+    the stale patterns.
+    """
+    dag = _dag_path()
+    src = open(dag, encoding="utf-8").read()
+    block = re.search(r"tsv_gids\s*=\s*\[(.*?)\n\s*\]", src, re.S)
+    if not block:
+        raise SystemExit(f"could not find tsv_gids in {dag}")
+    pairs = re.findall(r'\(\s*"(\w+)"\s*,\s*"(\d+)"\s*\)', block.group(1))
+    if not pairs:
+        raise SystemExit(f"tsv_gids in {dag} parsed to nothing")
+
+    seen: Dict[str, str] = {}
+    for name, gid in pairs:
+        if gid in seen:
+            # Two tabs cannot share a gid: one of them is being fetched twice
+            # and the other never. Loud, because the graph would be built from
+            # the wrong rows.
+            raise SystemExit(
+                f"{dag}: tabs {seen[gid]!r} and {name!r} share gid {gid}. "
+                f"Fix the gid in the DAG before regenerating the patterns.")
+        seen[gid] = name
+    print(f"[tabs] {len(pairs)} tabs from {os.path.relpath(dag)}")
+    return pairs
+
+def publish_url_from_dag() -> str:
+    """The published-to-web URL the DAG downloads, so both read the same bytes."""
+    dag = _dag_path()
+    src = open(dag, encoding="utf-8").read()
+    m = re.search(r'"(https://docs\.google\.com/spreadsheets/d/e/)"\s*\n\s*"([\w-]+)"', src)
+    if not m:
+        raise SystemExit(f"could not find the published sheet URL in {dag}")
+    return m.group(1) + m.group(2) + "/pub?gid={gid}&single=true&output=tsv"
+
+# The tab list is NOT kept here. It was, and it drifted: the workbook was
+# replaced, the DAG was updated, this copy was not, and the generator went on
+# publishing patterns built from the old tabs without ever failing. It is read
+# from the DAG on every run instead, so the two cannot disagree.
+TABS: List[Tuple[str, str]] = tabs_from_dag()
 
 NFDI = "https://nfdi.fiz-karlsruhe.de/ontology/"
 OBO = "http://purl.obolibrary.org/obo/"
@@ -260,52 +303,10 @@ DIRECTIVE_RE = re.compile(r"^(ID|TYPE|A|I|AI|AT|C|DOMAIN|RANGE)\b\s*(.*)$")
 # --------------------------------------------------------------------------- #
 # input
 # --------------------------------------------------------------------------- #
-def tabs_from_dag() -> List[Tuple[str, str]]:
-    """The tab list the DAG actually fetches, read out of dags/spreadsheets.py.
-
-    The gids below in TABS are a SECOND copy of that list, and the two drifted:
-    the workbook was replaced, spreadsheets.py was updated and this file was
-    not, so all 26 gids pointed at tabs of the old workbook. The generator kept
-    succeeding and kept publishing patterns built from stale rows -- the failure
-    mode of a duplicated constant.
-
-    So the DAG is the single source of truth and this parses it. If the parse
-    fails the run stops instead of quietly falling back to TABS, because a
-    silent fallback is exactly what produced the stale patterns.
-    """
-    dag = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                       "dags", "spreadsheets.py")
-    src = open(dag, encoding="utf-8").read()
-    block = re.search(r"tsv_gids\s*=\s*\[(.*?)\n\s*\]", src, re.S)
-    if not block:
-        raise SystemExit(f"could not find tsv_gids in {dag}")
-    pairs = re.findall(r'\(\s*"(\w+)"\s*,\s*"(\d+)"\s*\)', block.group(1))
-    if not pairs:
-        raise SystemExit(f"tsv_gids in {dag} parsed to nothing")
-
-    seen: Dict[str, str] = {}
-    for name, gid in pairs:
-        if gid in seen:
-            # Two tabs cannot share a gid: one of them is being fetched twice
-            # and the other never. Loud, because the graph would be built from
-            # the wrong rows.
-            raise SystemExit(
-                f"{dag}: tabs {seen[gid]!r} and {name!r} share gid {gid}. "
-                f"Fix the gid in the DAG before regenerating the patterns.")
-        seen[gid] = name
-    print(f"[tabs] {len(pairs)} tabs from dags/spreadsheets.py")
-    return pairs
 
 
-def publish_url_from_dag() -> str:
-    """The published-to-web URL the DAG downloads, so both read the same bytes."""
-    dag = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                       "dags", "spreadsheets.py")
-    src = open(dag, encoding="utf-8").read()
-    m = re.search(r'"(https://docs\.google\.com/spreadsheets/d/e/)"\s*\n\s*"([\w-]+)"', src)
-    if not m:
-        raise SystemExit(f"could not find the published sheet URL in {dag}")
-    return m.group(1) + m.group(2) + "/pub?gid={gid}&single=true&output=tsv"
+
+
 
 
 def fetch_tabs(out_dir: str) -> None:
