@@ -15,15 +15,15 @@
 @prefix mwo: <http://purls.helmholtz-metadaten.de/mwo/> .
 @prefix msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/> .
 
-msekg:17463579651201 a nfdi:NFDI_0000014 ;
-    rdfs:label "publication publishing process 1" ;
-    obo:RO_0000057 msekg:17463573258441 ;
-    obo:BFO_0000055 msekg:17463580882851 ;
-    obo:BFO_0000199 msekg:17463583154311 .
+msekg:17463803564081 a obo:BFO_0000015 ;
+    rdfs:label "work of TA-SD_organization" ;
+    obo:RO_0000057 msekg:17463804524161 ;
+    obo:BFO_0000055 msekg:17463805354951 ;
+    obo:RO_0000059 msekg:17454032279921 .
 
-msekg:17463573258441 a nfdi:NFDI_0000102 ;
-    rdfs:label "Publisher 1" .
-msekg:17463580882851 a nfdi:NFDI_0000193 ;
-    rdfs:label "PublisherRole 1" .
-msekg:17463583154311 a obo:BFO_0000008 ;
-    rdfs:label "DocumentPublishingDate 1" .
+msekg:17463804524161 a nfdi:NFDI_0000102 ;
+    rdfs:label "TACoSpokesperson 1" .
+msekg:17463805354951 a nfdi:NFDI_0001058 ;
+    rdfs:label "co-spokesperson role for work of TA-SD_organization" .
+msekg:17454032279921 a obo:IAO_0000005 ;
+    rdfs:label "TA-SD" .

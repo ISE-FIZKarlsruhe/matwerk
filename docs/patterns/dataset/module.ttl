@@ -8,7 +8,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ns1:IAO_0000112 a owl:AnnotationProperty .
 
@@ -19,8 +18,6 @@ ns1:IAO_0000116 a owl:AnnotationProperty .
 ns1:IAO_0000118 a owl:AnnotationProperty .
 
 ns1:IAO_0000119 a owl:AnnotationProperty .
-
-ns1:IAO_0100001 a owl:AnnotationProperty .
 
 ns1:OBI_0001948 a owl:Class ;
     rdfs:label "sequence assembly name"@en ;
@@ -151,7 +148,7 @@ skos:example a owl:AnnotationProperty .
 
 skos:scopeNote a owl:AnnotationProperty .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451425229671> a ns4:NFDI_0000009 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451425229671> a ns1:IAO_0001000 ;
     ns1:BFO_0000051 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451559943771>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451561013681> ;
     ns1:IAO_0000136 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451497688931> ;
@@ -178,16 +175,16 @@ skos:scopeNote a owl:AnnotationProperty .
         "Who created a given dataset, and at which organisation?" ;
     ns3:extractedFrom "the dataset tab of the NFDI-MatWerk curation workbook" ;
     ns3:hasComponent ns1:IAO_0000027,
-        ns1:IAO_0000300,
+        ns1:IAO_0000444,
         ns4:NFDI_0001032,
         ns4:NFDI_0001033,
         <https://w3id.org/pmd/co/PMD_0000001> ;
     ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
-    ns3:hasIntent "To represent a obsolete dataset in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
-    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
+    ns3:hasIntent "To represent a data collection in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
+    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <http://purl.obolibrary.org/obo/IAO_0001000> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
     ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
     ns3:reengineeredFrom "ROBOT template directives, row 2 of the dataset tab" ;
-    ns3:scenarios "“Datasets for the analysis of dislocations at grain boundaries and during vein formation in cyclically deformed Ni micropillars” is a obsolete dataset, with title “Datasets for the analysis of dislocations at grain boundaries and during vein formation in cyclically deformed Ni micropillars”; field of research “Computational analysis, Dislocations, Grain boundaries, Vein structures”; dataset participates in publishing process “dataset publishing process 1”." ;
+    ns3:scenarios "“Datasets for the analysis of dislocations at grain boundaries and during vein formation in cyclically deformed Ni micropillars” is a data collection, with title “Datasets for the analysis of dislocations at grain boundaries and during vein formation in cyclically deformed Ni micropillars”; field of research “Computational analysis, Dislocations, Grain boundaries, Vein structures”; dataset participates in publishing process “publishing of dataset “Datasets for the analysis of dislocations at grain boundaries and during””." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.2/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/dataset/1.0.0> ;
     owl:versionInfo "1.0.0" .
@@ -270,6 +267,13 @@ ns1:IAO_0000579 a owl:Class ;
     ns1:IAO_0000118 "CRID registry" ;
     ns1:IAO_0000119 "Original proposal from Bjoern, discussions at IAO calls"@en ;
     rdfs:subClassOf ns1:IAO_0020020 .
+
+ns1:IAO_0001000 a owl:Class ;
+    rdfs:label "data collection",
+        "data collection"@en ;
+    ns1:IAO_0000115 "A data entity that consists of multiple data entities."@en ;
+    ns1:IAO_0000118 "data set"@en ;
+    rdfs:subClassOf ns1:IAO_0000027 .
 
 ns1:IAO_0020020 a owl:Class ;
     rdfs:label "code set"@en ;
@@ -387,14 +391,14 @@ ns1:SO_0001410 a owl:Class ;
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451474931961> a ns4:NFDI_0001019 ;
     rdfs:label "Datasets for the analysis of dislocations at grain boundaries and during vein formation in cyclically deformed Ni micropillars" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451490640421> a ns4:NFDI_0000014 ;
-    rdfs:label "dataset publishing process 1" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451490640421> a ns1:IAO_0000444 ;
+    rdfs:label "publishing of dataset “Datasets for the analysis of dislocations at grain boundaries and during”" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451494466961> a ns4:NFDI_0000215 ;
     rdfs:label "Transmission electron microscopy" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451497688931> a <https://w3id.org/pmd/co/PMD_0000001> ;
-    rdfs:label "PortionOfMatter 1" .
+    rdfs:label "material studied in “Datasets for the analysis of dislocations at grain boundaries”" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451508444811> a ns1:IAO_0000300 ;
     rdfs:label "The data consists of two parts: the simulation data that was used to analyze the effect of a particular grain boundary on curved dislocations and the precession electron diffraction (PED) strain maps together with post-processed data for analyzing details of the observed dislocation vein structures." .
@@ -409,27 +413,10 @@ ns1:SO_0001410 a owl:Class ;
     rdfs:label "(a) Micromechanical Materials Modelling (MiMM), Institute of Mechanics and Fluid Dynamics, TU Bergakademie Freiberg (TUBAF), Lampadiusstr. 4, 09596, Freiberg, Germany; (b) Electron Microscopy for Materials Science (EMAT), Department of Physics, University of Antwerp, Belgium; (c) Institute of Mechanics, Materials and Civil Engineering, UCLouvain, Belgium; (d) Institute for Applied Materials (IAM), Karlsruhe Institute of Technology (KIT), Hermann-von- Helmholtz-Platz 1, 76344, Eggenstein-Leopoldshafen, Germany; (e) JoannEuropem Research, Graz, Austria" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451563212711> a ns4:NFDI_0001037 ;
-    rdfs:label "url 28" .
+    rdfs:label "link of “Datasets for the analysis of dislocations at grain boundaries”" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451567752591> a ns4:NFDI_0001037 ;
-    rdfs:label "url 50" .
-
-ns4:NFDI_0000009 a owl:Class ;
-    rdfs:label "obsolete dataset",
-        "obsolete dataset"@en ;
-    ns1:IAO_0100001 ns1:IAO_0001000 ;
-    owl:deprecated true ;
-    skos:definition "An information content entity that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference. Dataset is structured information about a resource provided by an organization or a person."@en ;
-    skos:editorialNote "2024-04-10. Sasha Bruns: nfdicore:dataset and ioa:data set are not equivalent, due to their differing conceptualizations of what constitutes a iao:data item, which is a superclass of iao:data set. In the nfdicore ontology, a dataset may not necessarily align perfectly with the definition of a data item, since this definition implies a level of accuracy that may not always apply to datasets in their entirety. While a nfdicore:dataset may contain data items, it doesn't necessarily qualify as a data item itself under the strict definition provided by ioa:dataset. This differentiation helps us avoid ambiguity and ensures that our modeling aligns with the intended semantics."@en ;
-    skos:example "Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)" .
-
-ns4:NFDI_0000014 a owl:Class ;
-    rdfs:label "obsolete publishing process",
-        "obsolete publishing process"@en ;
-    ns1:IAO_0000119 "http://purl.obolibrary.org/obo/IAO_0000444" ;
-    ns1:IAO_0100001 ns1:IAO_0000444 ;
-    owl:deprecated true ;
-    skos:definition "A process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en .
+    rdfs:label "related publication of “Datasets for the analysis of dislocations at grain boundaries”" .
 
 ns4:NFDI_0000215 a owl:Class ;
     rdfs:label "technological method specification",
@@ -473,6 +460,34 @@ ns4:NFDI_0001019 a owl:Class ;
                                             owl:onProperty ns1:RO_0000052 ;
                                             owl:someValuesFrom <https://w3id.org/pmd/co/PMD_0000001> ] ) ] ] ) ] ;
     skos:definition "The stimulating process is a process describing the application of an external influence, such as force, heat, or radiation, to study material response."@en .
+
+ns1:IAO_0000027 a owl:Class ;
+    rdfs:label "data entity"@en,
+        "data item"@en ;
+    ns1:IAO_0000112 "Data items include counts of things, analyte concentrations, and statistical summaries."@en ;
+    ns1:IAO_0000115 "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en,
+        "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en ;
+    ns1:IAO_0000116 "2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/",
+        "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers."@en,
+        "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum."@en,
+        "2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym."@en,
+        """JAR: datum     -- well, this will be very tricky to define, but maybe some 
+information-like stuff that might be put into a computer and that is 
+meant, by someone, to denote and/or to be interpreted by some 
+process... I would include lists, tables, sentences... I think I might 
+defer to Barry, or to Brian Cantwell Smith
+
+JAR: A data item is an approximately justified approximately true approximate belief"""@en ;
+    ns1:IAO_0000118 "data"@en,
+        "data item"@en ;
+    rdfs:subClassOf ns1:IAO_0000030 .
+
+ns1:IAO_0000444 a owl:Class ;
+    rdfs:label "publishing process",
+        "publishing process"@en ;
+    ns1:IAO_0000115 "A planned process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en ;
+    ns1:IAO_0000119 "https://en.wikipedia.org/wiki/Publishing" ;
+    rdfs:subClassOf ns1:BFO_0000015 .
 
 ns1:IAO_0000578 a owl:Class ;
     rdfs:label "centrally registered identifier"@en ;
@@ -760,6 +775,16 @@ every c that is a concretization of g specifically denotes r"""@en ;
     rdfs:subPropertyOf ns1:IAO_0000136 ;
     owl:inverseOf ns1:IAO_0000235 .
 
+ns1:IAO_0000300 a owl:Class ;
+    rdfs:label "textual entity",
+        "textual entity"@en ;
+    ns1:IAO_0000112 "Words, sentences, paragraphs, and the written (non-figure) parts of publications are all textual entities"@en ;
+    ns1:IAO_0000115 "A textual entity is a part of a manifestation (FRBR sense), a generically dependent continuant whose concretizations are patterns of glyphs intended to be interpreted as words, formulas, etc."@en ;
+    ns1:IAO_0000116 "AR, (IAO call 2009-09-01): a document as a whole is not typically a textual entity, because it has pictures in it - rather there are parts of it that are textual entities. Examples: The title, paragraph 2 sentence 7, etc."@en,
+        "MC, 2009-09-14 (following IAO call 2009-09-01): textual entities live at the FRBR (http://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records) manifestation level. Everything is significant: line break, pdf and html versions of same document are different textual entities."@en ;
+    ns1:IAO_0000118 "text"@en ;
+    rdfs:subClassOf ns1:IAO_0000030 .
+
 ns1:IAO_0020000 a owl:Class ;
     rdfs:label "identifier"@en ;
     ns1:IAO_0000115 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en ;
@@ -810,16 +835,6 @@ Some currently missing phenomena that should be considered "about" are predicati
     ns1:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
     rdfs:domain ns1:IAO_0000030 ;
     owl:inverseOf ns4:NFDI_0000226 .
-
-ns1:IAO_0000300 a owl:Class ;
-    rdfs:label "textual entity",
-        "textual entity"@en ;
-    ns1:IAO_0000112 "Words, sentences, paragraphs, and the written (non-figure) parts of publications are all textual entities"@en ;
-    ns1:IAO_0000115 "A textual entity is a part of a manifestation (FRBR sense), a generically dependent continuant whose concretizations are patterns of glyphs intended to be interpreted as words, formulas, etc."@en ;
-    ns1:IAO_0000116 "AR, (IAO call 2009-09-01): a document as a whole is not typically a textual entity, because it has pictures in it - rather there are parts of it that are textual entities. Examples: The title, paragraph 2 sentence 7, etc."@en,
-        "MC, 2009-09-14 (following IAO call 2009-09-01): textual entities live at the FRBR (http://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records) manifestation level. Everything is significant: line break, pdf and html versions of same document are different textual entities."@en ;
-    ns1:IAO_0000118 "text"@en ;
-    rdfs:subClassOf ns1:IAO_0000030 .
 
 <https://w3id.org/pmd/co/PMD_0000001> a owl:Class ;
     rdfs:label "portion of matter",
@@ -1019,6 +1034,22 @@ ns1:RO_0000053 a owl:InverseFunctionalProperty,
     ns1:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
     rdfs:range ns1:BFO_0000020 .
 
+ns1:BFO_0000050 a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "part of",
+        "part of"@en ;
+    ns1:IAO_0000112 "my brain is part of my body (continuant parthood, two material entities)"@en,
+        "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)"@en,
+        "this day is part of this year (occurrent parthood)"@en ;
+    ns1:IAO_0000115 "a core relation that holds between a part and its whole"@en ;
+    ns1:IAO_0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other."@en,
+        "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en,
+        """Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
+
+A continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'."""@en ;
+    ns1:IAO_0000118 "part_of"@en ;
+    owl:inverseOf ns1:BFO_0000051 .
+
 ns1:IAO_0000030 a owl:Class ;
     rdfs:label "information content entity",
         "information content entity"@en ;
@@ -1038,21 +1069,7 @@ Previous. An information content entity is a non-realizable information entity t
             owl:someValuesFrom ns1:BFO_0000001 ],
         ns1:BFO_0000031 .
 
-ns1:BFO_0000050 a owl:ObjectProperty,
-        owl:TransitiveProperty ;
-    rdfs:label "part of",
-        "part of"@en ;
-    ns1:IAO_0000112 "my brain is part of my body (continuant parthood, two material entities)"@en,
-        "my stomach cavity is part of my stomach (continuant parthood, immaterial entity is part of material entity)"@en,
-        "this day is part of this year (occurrent parthood)"@en ;
-    ns1:IAO_0000115 "a core relation that holds between a part and its whole"@en ;
-    ns1:IAO_0000116 "Everything is part of itself. Any part of any part of a thing is itself part of that thing. Two distinct things cannot be part of each other."@en,
-        "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en,
-        """Parthood requires the part and the whole to have compatible classes: only an occurrent can be part of an occurrent; only a process can be part of a process; only a continuant can be part of a continuant; only an independent continuant can be part of an independent continuant; only an immaterial entity can be part of an immaterial entity; only a specifically dependent continuant can be part of a specifically dependent continuant; only a generically dependent continuant can be part of a generically dependent continuant. (This list is not exhaustive.)
-
-A continuant cannot be part of an occurrent: use 'participates in'. An occurrent cannot be part of a continuant: use 'has participant'. A material entity cannot be part of an immaterial entity: use 'has location'. A specifically dependent continuant cannot be part of an independent continuant: use 'inheres in'. An independent continuant cannot be part of a specifically dependent continuant: use 'bearer of'."""@en ;
-    ns1:IAO_0000118 "part_of"@en ;
-    owl:inverseOf ns1:BFO_0000051 .
+<urn:swrl:var#d> a ns2:Variable .
 
 ns1:BFO_0000015 a owl:Class ;
     rdfs:label "process"@en ;
@@ -1070,8 +1087,6 @@ ns1:BFO_0000015 a owl:Class ;
     skos:altLabel "event"@en ;
     skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
     skos:example "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
-
-<urn:swrl:var#d> a ns2:Variable .
 
 [] a ns2:Imp ;
     ns2:body [ a ns2:AtomList ;

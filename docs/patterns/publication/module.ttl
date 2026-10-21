@@ -8,7 +8,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ns1:BFO_0000054 a owl:ObjectProperty ;
     rdfs:label "has realization"@en,
@@ -30,8 +29,6 @@ ns1:IAO_0000116 a owl:AnnotationProperty .
 ns1:IAO_0000118 a owl:AnnotationProperty .
 
 ns1:IAO_0000119 a owl:AnnotationProperty .
-
-ns1:IAO_0100001 a owl:AnnotationProperty .
 
 ns1:OBI_0001948 a owl:Class ;
     rdfs:label "sequence assembly name"@en ;
@@ -156,13 +153,11 @@ skos:altLabel a owl:AnnotationProperty .
 
 skos:definition a owl:AnnotationProperty .
 
-skos:editorialNote a owl:AnnotationProperty .
-
 skos:example a owl:AnnotationProperty .
 
 skos:scopeNote a owl:AnnotationProperty .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451635324071> a ns4:NFDI_0000190 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451635324071> a ns1:IAO_0000311 ;
     rdfs:label "Automated free-energy calculation from atomistic simulations" ;
     ns1:BFO_0000051 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451661339551>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17463627669451> ;
@@ -185,15 +180,14 @@ skos:scopeNote a owl:AnnotationProperty .
         "Which publications resulted from a given task area or infrastructure use case?" ;
     ns3:extractedFrom "the publication tab of the NFDI-MatWerk curation workbook" ;
     ns3:hasComponent ns1:IAO_0000305,
-        ns4:NFDI_0000014,
         ns4:NFDI_0001030,
         ns4:NFDI_0001037 ;
     ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
-    ns3:hasIntent "To represent a obsolete publication in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
-    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
+    ns3:hasIntent "To represent a publication in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
+    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <http://purl.obolibrary.org/obo/IAO_0000311> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
     ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
     ns3:reengineeredFrom "ROBOT template directives, row 2 of the publication tab" ;
-    ns3:scenarios "“Automated free-energy calculation from atomistic simulations” is a obsolete publication, with denoted by title “Automated free-energy calculation from atomistic simulations __name__”; author(s) “Sarath Menon, Yury Lysogorskiy, Jutta Rogal, Ralf Drautz”; author(s) affiliation “Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation”." ;
+    ns3:scenarios "“Automated free-energy calculation from atomistic simulations” is a publication, with denoted by title “document title “Automated free-energy calculation from atomistic simulations””; author(s) “Sarath Menon, Yury Lysogorskiy, Jutta Rogal, Ralf Drautz”; author(s) affiliation “Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation”." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.2/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/publication/1.0.0> ;
     owl:versionInfo "1.0.0" .
@@ -238,6 +232,18 @@ ns1:IAO_0000235 a owl:ObjectProperty ;
     rdfs:domain ns1:BFO_0000001 ;
     rdfs:range ns1:IAO_0000030 ;
     rdfs:subPropertyOf ns4:NFDI_0000226 .
+
+ns1:IAO_0000311 a owl:Class ;
+    rdfs:label "publication",
+        "publication"@en ;
+    ns1:IAO_0000112 "journal article, newspaper story, book, etc."@en ;
+    ns1:IAO_0000115 "A document that is the output of a publishing process."@en ;
+    ns1:IAO_0000118 "published document"@en ;
+    rdfs:subClassOf ns1:IAO_0000310 ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( ns1:IAO_0000310 [ a owl:Restriction ;
+                        owl:allValuesFrom ns1:IAO_0000444 ;
+                        owl:onProperty ns1:OBI_0000312 ] ) ] .
 
 ns1:IAO_0000577 a owl:Class ;
     rdfs:label "centrally registered identifier symbol"@en ;
@@ -364,28 +370,19 @@ ns1:SO_0001410 a owl:Class ;
     rdfs:subClassOf ns1:SO_0000001 .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451643360461> a ns1:IAO_0000305 ;
-    rdfs:label "Automated free-energy calculation from atomistic simulations __name__" .
+    rdfs:label "document title “Automated free-energy calculation from atomistic simulations”" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451658846301> a ns4:NFDI_0001037 ;
-    rdfs:label "url 400" .
+    rdfs:label "DOI of “Automated free-energy calculation from atomistic simulations”" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451661339551> a ns4:NFDI_0001033 ;
     rdfs:label "Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17463579651201> a ns4:NFDI_0000014 ;
-    rdfs:label "publication publishing process 1" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17463579651201> a ns1:IAO_0000444 ;
+    rdfs:label "publishing of “Automated free-energy calculation from atomistic simulations”" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17463627669451> a ns4:NFDI_0001030 ;
     rdfs:label "Sarath Menon, Yury Lysogorskiy, Jutta Rogal, Ralf Drautz" .
-
-ns4:NFDI_0000190 a owl:Class ;
-    rdfs:label "obsolete publication",
-        "obsolete publication"@en ;
-    ns1:IAO_0100001 ns1:IAO_0000311 ;
-    owl:deprecated true ;
-    skos:definition "A publication that is the output of a publishing process and a creative process."@en ;
-    skos:editorialNote "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
-    skos:example "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten" .
 
 ns4:NFDI_0001033 a owl:Class ;
     rdfs:label "institution list",
@@ -418,6 +415,19 @@ ns1:IAO_0000305 a owl:Class ;
     ns1:IAO_0000112 "Textual characteristics of traditional and Open Access scientific journals are similar"@en ;
     ns1:IAO_0000115 "A textual entity that names a document"@en ;
     rdfs:subClassOf ns1:IAO_0000300 .
+
+ns1:IAO_0000310 a owl:Class ;
+    rdfs:label "document"@en ;
+    ns1:IAO_0000112 "A journal article, patent application, laboratory notebook, or a book"@en ;
+    ns1:IAO_0000115 "A collection of information content entities intended to be understood together as a whole"@en ;
+    rdfs:subClassOf ns1:IAO_0000030 .
+
+ns1:IAO_0000444 a owl:Class ;
+    rdfs:label "publishing process",
+        "publishing process"@en ;
+    ns1:IAO_0000115 "A planned process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en ;
+    ns1:IAO_0000119 "https://en.wikipedia.org/wiki/Publishing" ;
+    rdfs:subClassOf ns1:BFO_0000015 .
 
 ns1:IAO_0000578 a owl:Class ;
     rdfs:label "centrally registered identifier"@en ;
@@ -546,14 +556,6 @@ ns1:RO_0002351 a owl:IrreflexiveProperty,
     ns1:IAO_0000119 "SIO" ;
     rdfs:subPropertyOf ns1:BFO_0000051 .
 
-ns4:NFDI_0000014 a owl:Class ;
-    rdfs:label "obsolete publishing process",
-        "obsolete publishing process"@en ;
-    ns1:IAO_0000119 "http://purl.obolibrary.org/obo/IAO_0000444" ;
-    ns1:IAO_0100001 ns1:IAO_0000444 ;
-    owl:deprecated true ;
-    skos:definition "A process of making information, such as literature, music, and software etc., available to the public for sale or for free."@en .
-
 ns4:NFDI_0000226 a owl:ObjectProperty ;
     rdfs:label "is subject of"@en ;
     skos:altLabel "is described by" ;
@@ -656,12 +658,6 @@ ns1:OBI_0000260 a owl:Class ;
             owl:someValuesFrom ns1:IAO_0000104 ],
         ns1:BFO_0000017 .
 
-ns1:OBI_0000312 a owl:ObjectProperty ;
-    rdfs:label "is specified output of"@en ;
-    ns1:IAO_0000115 "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en ;
-    rdfs:range ns1:COB_0000035 ;
-    rdfs:subPropertyOf ns1:RO_0000056 .
-
 ns1:BFO_0000023 a owl:Class ;
     rdfs:label "role"@en ;
     ns1:IAO_0000112 "John’s role of husband to Mary is dependent on Mary’s role of wife to John, and both are dependent on the object aggregate comprising John and Mary as member parts joined together through the relational quality of being married."@en,
@@ -711,6 +707,12 @@ ns1:IAO_0020000 a owl:Class ;
     ns1:IAO_0000115 "An information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity."@en ;
     ns1:IAO_0000118 "proper name"@en ;
     rdfs:subClassOf ns1:IAO_0000030 .
+
+ns1:OBI_0000312 a owl:ObjectProperty ;
+    rdfs:label "is specified output of"@en ;
+    ns1:IAO_0000115 "A relation between a completely executed planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en ;
+    rdfs:range ns1:COB_0000035 ;
+    rdfs:subPropertyOf ns1:RO_0000056 .
 
 ns1:RO_0000057 a owl:ObjectProperty ;
     rdfs:label "has participant"@en ;
@@ -909,6 +911,31 @@ ns1:COB_0000035 a owl:Class ;
 
 <urn:swrl:var#e> a ns2:Variable .
 
+ns1:BFO_0000051 a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "has part",
+        "has part"@en ;
+    ns1:IAO_0000112 "my body has part my brain (continuant parthood, two material entities)"@en,
+        "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en,
+        "this year has part this day (occurrent parthood)"@en ;
+    ns1:IAO_0000115 "a core relation that holds between a whole and its part"@en ;
+    ns1:IAO_0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."@en,
+        "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en,
+        """Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
+
+A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."""@en ;
+    ns1:IAO_0000118 "has_part"@en ;
+    rdfs:subPropertyOf ns1:BFO_0000051 .
+
+ns1:RO_0000053 a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has characteristic"@en ;
+    ns1:IAO_0000112 "this apple is bearer of this red color"@en,
+        "this vase is bearer of this fragility"@en ;
+    ns1:IAO_0000115 "Inverse of characteristic_of"@en ;
+    ns1:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
+    rdfs:range ns1:BFO_0000020 .
+
 ns1:BFO_0000015 a owl:Class ;
     rdfs:label "process"@en ;
     ns1:IAO_0000112 "a process of cell-division, \\ a beating of the heart"@en,
@@ -925,22 +952,6 @@ ns1:BFO_0000015 a owl:Class ;
     skos:altLabel "event"@en ;
     skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
     skos:example "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
-
-ns1:BFO_0000051 a owl:ObjectProperty,
-        owl:TransitiveProperty ;
-    rdfs:label "has part",
-        "has part"@en ;
-    ns1:IAO_0000112 "my body has part my brain (continuant parthood, two material entities)"@en,
-        "my stomach has part my stomach cavity (continuant parthood, material entity has part immaterial entity)"@en,
-        "this year has part this day (occurrent parthood)"@en ;
-    ns1:IAO_0000115 "a core relation that holds between a whole and its part"@en ;
-    ns1:IAO_0000116 "Everything has itself as a part. Any part of any part of a thing is itself part of that thing. Two distinct things cannot have each other as a part."@en,
-        "Occurrents are not subject to change and so parthood between occurrents holds for all the times that the part exists. Many continuants are subject to change, so parthood between continuants will only hold at certain times, but this is difficult to specify in OWL. See http://purl.obolibrary.org/obo/ro/docs/temporal-semantics/"@en,
-        """Parthood requires the part and the whole to have compatible classes: only an occurrent have an occurrent as part; only a process can have a process as part; only a continuant can have a continuant as part; only an independent continuant can have an independent continuant as part; only a specifically dependent continuant can have a specifically dependent continuant as part; only a generically dependent continuant can have a generically dependent continuant as part. (This list is not exhaustive.)
-
-A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."""@en ;
-    ns1:IAO_0000118 "has_part"@en ;
-    rdfs:subPropertyOf ns1:BFO_0000051 .
 
 ns1:IAO_0000030 a owl:Class ;
     rdfs:label "information content entity",
@@ -961,15 +972,6 @@ Previous. An information content entity is a non-realizable information entity t
             owl:someValuesFrom ns1:BFO_0000001 ],
         ns1:BFO_0000031 .
 
-ns1:RO_0000053 a owl:InverseFunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "has characteristic"@en ;
-    ns1:IAO_0000112 "this apple is bearer of this red color"@en,
-        "this vase is bearer of this fragility"@en ;
-    ns1:IAO_0000115 "Inverse of characteristic_of"@en ;
-    ns1:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
-    rdfs:range ns1:BFO_0000020 .
-
 ns1:BFO_0000050 a owl:ObjectProperty,
         owl:TransitiveProperty ;
     rdfs:label "part of",
@@ -988,8 +990,44 @@ A continuant cannot be part of an occurrent: use 'participates in'. An occurrent
 
 <urn:swrl:var#d> a ns2:Variable .
 
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000023 ] ;
+                    rdf:rest () ] ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000087 ] ;
+            rdf:rest () ] .
+
 [] a owl:AllDisjointClasses ;
     owl:members ( ns1:BFO_0000004 ns1:BFO_0000020 ns1:BFO_0000031 ) .
+
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000034 ] ;
+                    rdf:rest () ] ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000085 ] ;
+            rdf:rest () ] .
 
 [] a ns2:Imp ;
     ns2:body [ a ns2:AtomList ;
@@ -1025,41 +1063,5 @@ A continuant cannot be part of an occurrent: use 'participates in'. An occurrent
                     ns2:argument1 <urn:swrl:var#e> ;
                     ns2:argument2 <urn:swrl:var#d> ;
                     ns2:propertyPredicate ns1:RO_0000086 ] ;
-            rdf:rest () ] .
-
-[] a ns2:Imp ;
-    ns2:body [ a ns2:AtomList ;
-            rdf:first [ a ns2:IndividualPropertyAtom ;
-                    ns2:argument1 <urn:swrl:var#e> ;
-                    ns2:argument2 <urn:swrl:var#d> ;
-                    ns2:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns2:AtomList ;
-                    rdf:first [ a ns2:ClassAtom ;
-                            ns2:argument1 <urn:swrl:var#d> ;
-                            ns2:classPredicate ns1:BFO_0000023 ] ;
-                    rdf:rest () ] ] ;
-    ns2:head [ a ns2:AtomList ;
-            rdf:first [ a ns2:IndividualPropertyAtom ;
-                    ns2:argument1 <urn:swrl:var#e> ;
-                    ns2:argument2 <urn:swrl:var#d> ;
-                    ns2:propertyPredicate ns1:RO_0000087 ] ;
-            rdf:rest () ] .
-
-[] a ns2:Imp ;
-    ns2:body [ a ns2:AtomList ;
-            rdf:first [ a ns2:IndividualPropertyAtom ;
-                    ns2:argument1 <urn:swrl:var#e> ;
-                    ns2:argument2 <urn:swrl:var#d> ;
-                    ns2:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns2:AtomList ;
-                    rdf:first [ a ns2:ClassAtom ;
-                            ns2:argument1 <urn:swrl:var#d> ;
-                            ns2:classPredicate ns1:BFO_0000034 ] ;
-                    rdf:rest () ] ] ;
-    ns2:head [ a ns2:AtomList ;
-            rdf:first [ a ns2:IndividualPropertyAtom ;
-                    ns2:argument1 <urn:swrl:var#e> ;
-                    ns2:argument2 <urn:swrl:var#d> ;
-                    ns2:propertyPredicate ns1:RO_0000085 ] ;
             rdf:rest () ] .
 

@@ -8,7 +8,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ns1:BFO_0000054 a owl:ObjectProperty ;
     rdfs:label "has realization"@en,
@@ -30,8 +29,6 @@ ns1:IAO_0000116 a owl:AnnotationProperty .
 ns1:IAO_0000118 a owl:AnnotationProperty .
 
 ns1:IAO_0000119 a owl:AnnotationProperty .
-
-ns1:IAO_0100001 a owl:AnnotationProperty .
 
 ns1:OBI_0001948 a owl:Class ;
     rdfs:label "sequence assembly name"@en ;
@@ -144,13 +141,11 @@ skos:altLabel a owl:AnnotationProperty .
 
 skos:definition a owl:AnnotationProperty .
 
-skos:editorialNote a owl:AnnotationProperty .
-
 skos:example a owl:AnnotationProperty .
 
 skos:scopeNote a owl:AnnotationProperty .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890318> a ns4:NFDI_0000009 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890318> a ns1:IAO_0001000 ;
     rdfs:label "atomRDF Knowledge Graph v0.0.1" ;
     ns1:BFO_0000051 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17748599699361>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17748599699362> ;
@@ -173,11 +168,11 @@ skos:scopeNote a owl:AnnotationProperty .
     ns3:extractedFrom "the sparql_endpoints tab of the NFDI-MatWerk curation workbook" ;
     ns3:hasComponent ns4:NFDI_0001095 ;
     ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
-    ns3:hasIntent "To represent a obsolete dataset in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
-    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000009> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
+    ns3:hasIntent "To represent a data collection in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
+    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <http://purl.obolibrary.org/obo/IAO_0001000> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
     ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
     ns3:reengineeredFrom "ROBOT template directives, row 2 of the sparql_endpoints tab" ;
-    ns3:scenarios "“atomRDF Knowledge Graph v0.0.1” is a obsolete dataset, with short description “atomRDF KG is a FAIR, RDF-based knowledge graph for atomistic simulation data in metals. It integrates seven published datasets covering materials such as Al, Cu, Fe, W, and Mg, and includes results from molecular statics, molecular dynamics, and DFT calculations. The graph represents grain boundary energies, work of separation, segregation and defect formation energies, elastic constants, and structural data using established materials science ontologies and provenance standards, and is accessible through a SPARQL endpoint.”; sparql endpoint “sparql endpoint of atomRDF Knowledge Graph v0.0.1”; license “CC BY 4.0”." ;
+    ns3:scenarios "“atomRDF Knowledge Graph v0.0.1” is a data collection, with short description “atomRDF KG is a FAIR, RDF-based knowledge graph for atomistic simulation data in metals. It integrates seven published datasets covering materials such as Al, Cu, Fe, W, and Mg, and includes results from molecular statics, molecular dynamics, and DFT calculations. The graph represents grain boundary energies, work of separation, segregation and defect formation energies, elastic constants, and structural data using established materials science ontologies and provenance standards, and is accessible through a SPARQL endpoint.”; sparql endpoint “sparql endpoint of atomRDF Knowledge Graph v0.0.1”; license “CC BY 4.0”." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.2/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/sparql-endpoints/1.0.0> ;
     owl:versionInfo "1.0.0" .
@@ -212,6 +207,27 @@ interpreted by or directly executed by a processing unit."""@en ;
     ns1:IAO_0000119 "GROUP: OBI"@en ;
     rdfs:subClassOf ns1:IAO_0000104 .
 
+ns1:IAO_0000027 a owl:Class ;
+    rdfs:label "data entity"@en,
+        "data item"@en ;
+    ns1:IAO_0000112 "Data items include counts of things, analyte concentrations, and statistical summaries."@en ;
+    ns1:IAO_0000115 "An information content entity that is intended to be a truthful statement about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en,
+        "An information content entity that is intended to be one or more truthful statement(s) about something (modulo, e.g., measurement precision or other systematic errors) and is constructed/acquired by a method which reliably tends to produce (approximately) truthful statements."@en ;
+    ns1:IAO_0000116 "2014-03-31: See discussion at http://odontomachus.wordpress.com/2014/03/30/aboutness-objects-propositions/",
+        "2/2/2009 Alan and Bjoern discussing FACS run output data. This is a data item because it is about the cell population. Each element records an event and is typically further composed a set of measurment data items that record the fluorescent intensity stimulated by one of the lasers."@en,
+        "2009-03-16: data item deliberatly ambiguous: we merged data set and datum to be one entity, not knowing how to define singular versus plural. So data item is more general than datum."@en,
+        "2009-03-16: removed datum as alternative term as datum specifically refers to singular form, and is thus not an exact synonym."@en,
+        """JAR: datum     -- well, this will be very tricky to define, but maybe some 
+information-like stuff that might be put into a computer and that is 
+meant, by someone, to denote and/or to be interpreted by some 
+process... I would include lists, tables, sentences... I think I might 
+defer to Barry, or to Brian Cantwell Smith
+
+JAR: A data item is an approximately justified approximately true approximate belief"""@en ;
+    ns1:IAO_0000118 "data"@en,
+        "data item"@en ;
+    rdfs:subClassOf ns1:IAO_0000030 .
+
 ns1:IAO_0000219 a owl:ObjectProperty ;
     rdfs:label "denotes"@en ;
     ns1:IAO_0000112 "A person's name denotes the person. A variable name in a computer program denotes some piece of memory. Lexically equivalent strings can denote different things, for instance \"Alan\" can denote different people. In each case of use, there is a case of the denotation relation obtaining, between \"Alan\" and the person that is being named."@en ;
@@ -234,6 +250,13 @@ ns1:IAO_0000235 a owl:ObjectProperty ;
     rdfs:domain ns1:BFO_0000001 ;
     rdfs:range ns1:IAO_0000030 ;
     rdfs:subPropertyOf ns4:NFDI_0000226 .
+
+ns1:IAO_0001000 a owl:Class ;
+    rdfs:label "data collection",
+        "data collection"@en ;
+    ns1:IAO_0000115 "A data entity that consists of multiple data entities."@en ;
+    ns1:IAO_0000118 "data set"@en ;
+    rdfs:subClassOf ns1:IAO_0000027 .
 
 ns1:OBI_0000293 a owl:ObjectProperty ;
     rdfs:label "has specified input"@en ;
@@ -349,15 +372,6 @@ ns1:SO_0001410 a owl:Class ;
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17748599699362> a ns4:NFDI_0001033 ;
     rdfs:label "IAS-9, Forschungszentrum Jülich GmbH  ICAMS, Ruhr-Universitaet Bochum" .
-
-ns4:NFDI_0000009 a owl:Class ;
-    rdfs:label "obsolete dataset",
-        "obsolete dataset"@en ;
-    ns1:IAO_0100001 ns1:IAO_0001000 ;
-    owl:deprecated true ;
-    skos:definition "An information content entity that refers to a structured collection of data, organized typically for a specific goal such as analysis, research, or reference. Dataset is structured information about a resource provided by an organization or a person."@en ;
-    skos:editorialNote "2024-04-10. Sasha Bruns: nfdicore:dataset and ioa:data set are not equivalent, due to their differing conceptualizations of what constitutes a iao:data item, which is a superclass of iao:data set. In the nfdicore ontology, a dataset may not necessarily align perfectly with the definition of a data item, since this definition implies a level of accuracy that may not always apply to datasets in their entirety. While a nfdicore:dataset may contain data items, it doesn't necessarily qualify as a data item itself under the strict definition provided by ioa:dataset. This differentiation helps us avoid ambiguity and ensures that our modeling aligns with the intended semantics."@en ;
-    skos:example "Fotothek Bibliotheca Hertziana Max-Planck-Institut für Kunstgeschichte 320px static derivates research dataset (https://doi.org/10.17617/3.SVH2BT)" .
 
 ns4:NFDI_0000222 a owl:Class ;
     rdfs:label "web application software"@en ;
@@ -830,25 +844,6 @@ ns1:BFO_0000040 a owl:Class ;
     skos:definition "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"@en ;
     skos:example "A human being; the undetached arm of a human being; an aggregate of human beings"@en .
 
-ns1:IAO_0000030 a owl:Class ;
-    rdfs:label "information content entity",
-        "information content entity"@en ;
-    ns1:IAO_0000112 "Examples of information content entites include journal articles, data, graphical layouts, and graphs.",
-        "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en ;
-    ns1:IAO_0000115 "An information content entity is an entity that is generically dependent on some artifact and stands in relation of aboutness to some entity.",
-        "A generically dependent continuant that is about some thing."@en ;
-    ns1:IAO_0000116 "2014-03-10: The use of \"thing\" is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ)."@en,
-        "Pier: 'data, information or knowledge'. OR 'representation'"@en,
-        """information_content_entity 'is_encoded_in' some digital_entity in obi before split (040907). information_content_entity 'is_encoded_in' some physical_document in obi before split (040907).
-
-Previous. An information content entity is a non-realizable information entity that 'is encoded in' some digital or physical entity."""@en ;
-    ns1:IAO_0000119 "IAO",
-        "OBI_0000142"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty ns1:IAO_0000136 ;
-            owl:someValuesFrom ns1:BFO_0000001 ],
-        ns1:BFO_0000031 .
-
 ns1:BFO_0000020 a owl:Class ;
     rdfs:label "specifically dependent continuant"@en ;
     ns1:IAO_0000112 "Reciprocal specifically dependent continuants: the function of this key to open this lock and the mutually dependent disposition of this lock: to be opened by this key"@en,
@@ -879,6 +874,25 @@ ns1:COB_0000035 a owl:Class ;
             owl:onProperty ns1:BFO_0000055 ;
             owl:someValuesFrom ns1:OBI_0000260 ],
         ns1:COB_0000082 .
+
+ns1:IAO_0000030 a owl:Class ;
+    rdfs:label "information content entity",
+        "information content entity"@en ;
+    ns1:IAO_0000112 "Examples of information content entites include journal articles, data, graphical layouts, and graphs.",
+        "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en ;
+    ns1:IAO_0000115 "An information content entity is an entity that is generically dependent on some artifact and stands in relation of aboutness to some entity.",
+        "A generically dependent continuant that is about some thing."@en ;
+    ns1:IAO_0000116 "2014-03-10: The use of \"thing\" is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ)."@en,
+        "Pier: 'data, information or knowledge'. OR 'representation'"@en,
+        """information_content_entity 'is_encoded_in' some digital_entity in obi before split (040907). information_content_entity 'is_encoded_in' some physical_document in obi before split (040907).
+
+Previous. An information content entity is a non-realizable information entity that 'is encoded in' some digital or physical entity."""@en ;
+    ns1:IAO_0000119 "IAO",
+        "OBI_0000142"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns1:IAO_0000136 ;
+            owl:someValuesFrom ns1:BFO_0000001 ],
+        ns1:BFO_0000031 .
 
 <urn:swrl:var#e> a ns2:Variable .
 

@@ -1,6 +1,6 @@
 # process
 
-The `process` tab of the MatWerk workbook currently holds **683 rows**. Every row follows the same shape, and that shape is the pattern below: a **entity** instance carrying the row's identity, denoted by **value node** nodes that hold its values, and object properties pointing at entities in other tabs.
+The `process` tab of the MatWerk workbook currently holds **140 rows**. Every row follows the same shape, and that shape is the pattern below: a **entity** instance carrying the row's identity, denoted by **value node** nodes that hold its values, and object properties pointing at entities in other tabs.
 
 *Generated from the live sheet and MWO 3.0.2 by `scripts/gen_patterns.py` — regenerate it rather than editing it by hand.*
 
@@ -27,7 +27,7 @@ reasoning: false
 
 ## How to read it
 
-* The **entity** is typed `nfdi:NFDI_0000014` (obsolete publishing process) and carries only its identity, its label, and links.
+* The **entity** is typed `obo:BFO_0000015` (process) and carries only its identity, its label, and links.
 * A column marked `I` does **not** contain a value — it contains the *label of another instance*, which ROBOT resolves at build time. That is why every value node needs a unique label, and why a typo produces a silently missing relation rather than an error.
 * Columns marked `A` are literals on the entity itself.
 
@@ -37,12 +37,10 @@ These value-node types live in the workbook's shared `req_2` tab but belong to t
 
 | Component | Class | References |
 |---|---|---|
-| contact point role | `nfdi:NFDI_0000114` | 316 |
-| publisher role | `nfdi:NFDI_0000193` | 235 |
-| organization | `obo:OBI_0000245` | 74 |
-| contributor role | `nfdi:NFDI_0000118` | 60 |
+| contact point role | `nfdi:NFDI_0000114` | 78 |
 | temporal region | `obo:BFO_0000008` | 19 |
-| service product role | `nfdi:NFDI_0000228` | 18 |
+| manufacturer role | `nfdi:NFDI_0001060` | 10 |
+| service provider role | `nfdi:NFDI_0000230` | 8 |
 | co spokesperson role | `nfdi:NFDI_0001058` | 5 |
 
 ## Query it
@@ -50,7 +48,7 @@ These value-node types live in the workbook's shared `req_2` tab but belong to t
 Retrieve instances of this pattern from the MatWerk Knowledge Graph ([SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql)):
 
 ```sparql
-SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000014> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10
+SELECT ?x ?label WHERE { ?x a <http://purl.obolibrary.org/obo/BFO_0000015> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10
 ```
 
 The rows behind it are curated in the [`process` tab of the workbook](https://docs.google.com/spreadsheets/d/1OyoWwcX4zUtrJilwXdtTooavELw278nQSNW2oniBBsk/edit#gid=1169992315).
@@ -70,23 +68,23 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 |---|---|
 | **Name** | process |
 | **Submitted by** | the NFDI-MatWerk consortium |
-| **Also Known As** | the `process` template tab of the NFDI-MatWerk workbook |
-| **Intent** | To represent a obsolete publishing process in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
+| **Also Known As** | event; event |
+| **Intent** | To represent a process in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
 | **Domains** | research data management; NFDI consortium structure |
 | **Competency Questions** | Which processes are recorded in the knowledge graph, and who participates in them?; Which role is realised in a given process, and over which period? |
-| **Solution description** | An entity individual typed `nfdi:NFDI_0000014` carries identity and label; each descriptive value is a separate *value node* individual reached by `obo:IAO_0000235` (denoted by); links to other patterns are object properties onto those entities. Identity is a minted IRI `msekg:<epoch_ms><counter>`, so re-running the pipeline is idempotent. |
+| **Solution description** | An entity individual typed `obo:BFO_0000015` carries identity and label; each descriptive value is a separate *value node* individual reached by `obo:IAO_0000235` (denoted by); links to other patterns are object properties onto those entities. Identity is a minted IRI `msekg:<epoch_ms><counter>`, so re-running the pipeline is idempotent. |
 | **Reusable OWL Building Block** | [`module.ttl`](module.ttl) — the example together with the axioms of every term it uses, extracted from the ontology, so the file stands alone |
 | **Consequences** | Values become reusable and independently addressable, and a value may be shared by many entities. The cost: every `I` reference resolves **by label**, so labels must be unique and a typo yields a silently missing relation rather than an error. |
-| **Scenarios** | “publication publishing process 1” is a obsolete publishing process, with has participant “Publisher 1”; realizes role “PublisherRole 1”; occupies temporal region “DocumentPublishingDate 1”. |
+| **Scenarios** | “work of TA-SD_organization” is a process, with has participant “TACoSpokesperson 1”; realizes role “co-spokesperson role for work of TA-SD_organization”; concretizes “TA-SD”. |
 | **Known Uses** | the MatWerk Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
 | **Web References** | <https://nfdi-matwerk.de> · <https://ise-fizkarlsruhe.github.io/mwo/> |
 | **Other References** | https://doi.org/10.1002/adem.202502331 |
 | **Examples (OWL files)** | [`pattern.ttl`](pattern.ttl) — one real row of the tab, with its value nodes resolved |
-| **Extracted From** | the `process` tab of the NFDI-MatWerk curation workbook (683 rows at generation time) |
+| **Extracted From** | the `process` tab of the NFDI-MatWerk curation workbook (140 rows at generation time) |
 | **Reengineered From** | the ROBOT template directives in row 2 of that tab |
-| **Has Components** | contact point role, publisher role, organization, contributor role, temporal region, service product role |
+| **Has Components** | contact point role, temporal region, manufacturer role, service provider role, co spokesperson role |
 | **Specialization Of** | the entity-and-value-node pattern shared by every tab ([overview](../index.md)) |
-| **Related CPs** | [agent](../agent/pattern.md) |
+| **Related CPs** | [agent](../agent/pattern.md), [matwerkta](../matwerkta/pattern.md) |
 
 ### Provenance and versioning
 
@@ -98,7 +96,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Reused ontologies** | BFO 2020 (`http://purl.obolibrary.org/obo/bfo.owl`), NFDIcore (`https://nfdi.fiz-karlsruhe.de/ontology/`), IAO (`http://purl.obolibrary.org/obo/iao.owl`), RO (`http://purl.obolibrary.org/obo/ro.owl`) |
 | **Ontology licence** | CC BY 4.0 (repository); CC0 1.0 declared in the ontology header |
 | **Cite the ontology as** | Hossein Beygi Nasrabadi, Jörg Waitelonis, Ebrahim Norouzi, Kostiantyn Hubaiev, Harald Sack. NFDI MatWerk Ontology (mwo). Revision: v3.0.2. Retrieved from: http://purls.helmholtz-metadaten.de/mwo/3.0.2 |
-| **Generated** | `scripts/gen_patterns.py`, 2026-09-25 |
+| **Generated** | `scripts/gen_patterns.py`, 2026-10-21 |
 
 ### Formal characterisation
 

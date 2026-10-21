@@ -16,7 +16,7 @@
 @prefix msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/> .
 
 msekg:174611573331210 a obo:BFO_0000038 ;
-    rdfs:label "temporal region 158" ;
+    rdfs:label "time span of “NFDI-MatWerk Advisoy Board”" ;
     obo:BFO_0000222 msekg:17461158610614 ;
     obo:BFO_0000224 msekg:17461158610616 .
 

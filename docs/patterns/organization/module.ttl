@@ -2,8 +2,8 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ns1: <http://purl.obolibrary.org/obo/> .
 @prefix ns2: <http://www.w3.org/2003/11/swrl#> .
-@prefix ns3: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
-@prefix ns4: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix ns3: <https://nfdi.fiz-karlsruhe.de/ontology/> .
+@prefix ns4: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -139,25 +139,25 @@ dcterms:license a owl:AnnotationProperty .
                         owl:someValuesFrom ns1:OBI_0000260 ] ) ] ;
     skos:definition "Protocol is a plan specification that prescribes the steps, conditions, rules, or procedures for carrying out a process, experiment, workflow, or activity." .
 
-ns3:coversRequirements a owl:AnnotationProperty .
+ns4:coversRequirements a owl:AnnotationProperty .
 
-ns3:extractedFrom a owl:AnnotationProperty .
+ns4:extractedFrom a owl:AnnotationProperty .
 
-ns3:hasComponent a owl:AnnotationProperty .
+ns4:hasComponent a owl:AnnotationProperty .
 
-ns3:hasConsequences a owl:AnnotationProperty .
+ns4:hasConsequences a owl:AnnotationProperty .
 
-ns3:hasIntent a owl:AnnotationProperty .
+ns4:hasIntent a owl:AnnotationProperty .
 
-ns3:hasUnitTest a owl:AnnotationProperty .
+ns4:hasUnitTest a owl:AnnotationProperty .
 
-ns3:isSpecializationOf a owl:AnnotationProperty .
+ns4:isSpecializationOf a owl:AnnotationProperty .
 
-ns3:reengineeredFrom a owl:AnnotationProperty .
+ns4:reengineeredFrom a owl:AnnotationProperty .
 
-ns3:relatedCPs a owl:AnnotationProperty .
+ns4:relatedCPs a owl:AnnotationProperty .
 
-ns3:scenarios a owl:AnnotationProperty .
+ns4:scenarios a owl:AnnotationProperty .
 
 skos:altLabel a owl:AnnotationProperty .
 
@@ -177,9 +177,9 @@ skos:scopeNote a owl:AnnotationProperty .
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17466192215831> ;
     ns1:RO_0001025 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451392359571>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451393742191> ;
-    ns4:NFDI_0000182 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513943908628> ;
-    ns4:NFDI_0001006 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451392793301> ;
-    ns4:NFDI_0010015 "MPIE" .
+    ns3:NFDI_0000182 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513943908628> ;
+    ns3:NFDI_0001006 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451392793301> ;
+    ns3:NFDI_0010015 "MPIE" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/organization> a owl:Ontology ;
     rdfs:label "organization — NFDI-MatWerk ontology design pattern" ;
@@ -190,34 +190,34 @@ skos:scopeNote a owl:AnnotationProperty .
         <https://orcid.org/0000-0002-2691-6995>,
         <https://orcid.org/0000-0002-3092-0532> ;
     dcterms:license "CC BY 4.0 (repository); CC0 1.0 declared in the ontology header" ;
-    ns3:coversRequirements "What is an organisation's ROR identifier, and in which city is it located?",
+    ns4:coversRequirements "What is an organisation's ROR identifier, and in which city is it located?",
         "Which organisation is the parent of a given institute?",
         "Which organisations participate in NFDI-MatWerk?",
         "Which researchers, instruments and facilities belong to a given organisation?" ;
-    ns3:extractedFrom "the organization tab of the NFDI-MatWerk curation workbook" ;
-    ns3:hasComponent ns1:IAO_0000303,
-        ns4:NFDI_0000119,
-        ns4:NFDI_0001013,
-        ns4:NFDI_0001042 ;
-    ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
-    ns3:hasIntent "To represent a organization in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
-    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <http://purl.obolibrary.org/obo/OBI_0000245> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
-    ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
-    ns3:reengineeredFrom "ROBOT template directives, row 2 of the organization tab" ;
-    ns3:scenarios "“Max Planck Institute for Iron Research” is a organization, with institution name “Max Planck Institute for Iron Research_name_”; city “Dusseldorf”; zip code “40237”." ;
+    ns4:extractedFrom "the organization tab of the NFDI-MatWerk curation workbook" ;
+    ns4:hasComponent ns1:IAO_0000303,
+        ns3:NFDI_0000119,
+        ns3:NFDI_0001013,
+        ns3:NFDI_0001042 ;
+    ns4:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
+    ns4:hasIntent "To represent a organization in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
+    ns4:hasUnitTest "SELECT ?x ?label WHERE { ?x a <http://purl.obolibrary.org/obo/OBI_0000245> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
+    ns4:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
+    ns4:reengineeredFrom "ROBOT template directives, row 2 of the organization tab" ;
+    ns4:scenarios "“Max Planck Institute for Iron Research” is a organization, with institution name “institutional name “Max Planck Institute for Iron Research””; city “Dusseldorf”; zip code “40237”." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.2/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/organization/1.0.0> ;
     owl:versionInfo "1.0.0" .
 
-ns4:NFDI_0000182 a owl:ObjectProperty ;
+ns3:NFDI_0000182 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000182" .
 
-ns4:NFDI_0001006 a owl:ObjectProperty ;
+ns3:NFDI_0001006 a owl:ObjectProperty ;
     rdfs:label "NFDI_0001006" .
 
-ns4:NFDI_0010013 a owl:AnnotationProperty .
+ns3:NFDI_0010013 a owl:AnnotationProperty .
 
-ns4:NFDI_0010015 a owl:AnnotationProperty,
+ns3:NFDI_0010015 a owl:AnnotationProperty,
         owl:DatatypeProperty ;
     rdfs:label "has acronym",
         "has acronym"@en ;
@@ -290,7 +290,7 @@ ns1:IAO_0000235 a owl:ObjectProperty ;
     ns1:IAO_0000115 "inverse of the relation 'denotes'"@en ;
     rdfs:domain ns1:BFO_0000001 ;
     rdfs:range ns1:IAO_0000030 ;
-    rdfs:subPropertyOf ns4:NFDI_0000226 .
+    rdfs:subPropertyOf ns3:NFDI_0000226 .
 
 ns1:IAO_0000577 a owl:Class ;
     rdfs:label "centrally registered identifier symbol"@en ;
@@ -426,66 +426,66 @@ ns1:SO_0001410 a owl:Class ;
     ns1:IAO_0000115 "A region which is the result of some arbitrary experimental procedure. The procedure may be carried out with biological material or inside a computer." ;
     rdfs:subClassOf ns1:SO_0000001 .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451392359571> a ns4:NFDI_0000119 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451392359571> a ns3:NFDI_0000119 ;
     rdfs:label "Germany" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451392557111> a ns4:NFDI_0001042 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451392557111> a ns3:NFDI_0001042 ;
     rdfs:label "40237" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451392697731> a ns4:NFDI_0000223 ;
-    rdfs:label "url 1" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451392697731> a ns3:NFDI_0000223 ;
+    rdfs:label "institute website of “Max Planck Institute for Iron Research”" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451392793301> a ns4:NFDI_0001013 ;
-    rdfs:label "ror 1" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451392793301> a ns3:NFDI_0001013 ;
+    rdfs:label "ROR ID of “Max Planck Institute for Iron Research”" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451393742191> a ns4:NFDI_0000106 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451393742191> a ns3:NFDI_0000106 ;
     rdfs:label "Dusseldorf" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513943908628> a ns1:OBI_0000245 ;
     rdfs:label "Max-Planck-Gesellschaft" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17466192215831> a ns1:IAO_0000303 ;
-    rdfs:label "Max Planck Institute for Iron Research_name_" .
+    rdfs:label "institutional name “Max Planck Institute for Iron Research”" .
 
-ns4:NFDI_0000004 a owl:Class ;
+ns3:NFDI_0000004 a owl:Class ;
     rdfs:label "person"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000030 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns4:NFDI_0000229 ] ) ],
-        ns4:NFDI_0000102 ;
+                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ],
+        ns3:NFDI_0000102 ;
     skos:definition "An object that represents a single human individual."@en ;
     skos:editorialNote "2024-03-24. Sasha Bruns - the class is not mapped to NCBITaxon_9606 (homo sapiens) due to different scope of the ontologies. \"Person\" in nfdicore represents entities with specific roles, responsibilities, and attributes within an organization, and is not limited to its biological characteristics."@en ;
     skos:example "Harald Sack, Tabea Tietz, Sasha Bruns, Etienne Posthumus" .
 
-ns4:NFDI_0000106 a owl:Class ;
+ns3:NFDI_0000106 a owl:Class ;
     rdfs:label "city",
         "city"@en ;
-    rdfs:subClassOf ns4:NFDI_0000005 ;
+    rdfs:subClassOf ns3:NFDI_0000005 ;
     skos:definition "A place that refers to a densely populated urban area."@en ;
     skos:editorialNote "A city or a town where the thing is located."@en ;
     skos:example "Berlin, Hannover, Kyiv"@en .
 
-ns4:NFDI_0000223 a owl:Class ;
+ns3:NFDI_0000223 a owl:Class ;
     rdfs:label "website",
         "website"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:IAO_0000030 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0002353 ;
-                        owl:someValuesFrom ns4:NFDI_0000224 ] ) ] ;
+                        owl:someValuesFrom ns3:NFDI_0000224 ] ) ] ;
     skos:definition "An information content entity that represents a collection of interconnected web pages, multimedia content, and digital resources accessible via the World Wide Web."@en ;
     skos:editorialNote "A collection of webpages contributed by an organization or a person."@en ;
     skos:example "https:\\/\\/opac.rism.info" .
 
-ns4:NFDI_0000224 a owl:Class ;
+ns3:NFDI_0000224 a owl:Class ;
     rdfs:label "creative process"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000015 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000057 ;
-                        owl:someValuesFrom ns4:NFDI_0000004 ] ) ] ;
+                        owl:someValuesFrom ns3:NFDI_0000004 ] ) ] ;
     skos:definition "A process that involves generating, developing, and refining original ideas or concepts through exploration, experimentation, and problem-solving, aiming to produce innovative or expressive outcomes in artistic, scientific, or other creative fields."@en .
 
-ns4:NFDI_0001041 a owl:Class ;
+ns3:NFDI_0001041 a owl:Class ;
     rdfs:label "postal code"@en ;
     rdfs:isDefinedBy "http://purl.obolibrary.org/obo/IAO_0000646" ;
     rdfs:subClassOf ns1:IAO_0020000 ;
@@ -599,8 +599,8 @@ for now."""@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000040 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns4:NFDI_0000229 ] ) ],
-        ns4:NFDI_0000102 .
+                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ],
+        ns3:NFDI_0000102 .
 
 ns1:OBI_0000417 a owl:ObjectProperty ;
     rdfs:label "achieves_planned_objective" ;
@@ -683,41 +683,41 @@ ns1:RO_0002353 a owl:ObjectProperty ;
     ns1:IAO_0000115 "inverse of has output" ;
     rdfs:subPropertyOf ns1:RO_0000056 .
 
-ns4:NFDI_0000005 a owl:Class ;
+ns3:NFDI_0000005 a owl:Class ;
     rdfs:label "place"@en ;
     rdfs:subClassOf ns1:BFO_0000029 ;
     skos:definition "A site that refers to geographical locations, such as cities, countries, landmarks, and natural environments."@en ;
     skos:editorialNote "A spatial region, e.g. country, city or district."@en ;
     skos:example "Hessen, Berlin, Schweiz" ;
-    ns4:NFDI_0010013 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75" .
+    ns3:NFDI_0010013 "Issue: https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/75" .
 
-ns4:NFDI_0000119 a owl:Class ;
+ns3:NFDI_0000119 a owl:Class ;
     rdfs:label "country",
         "country"@en ;
-    rdfs:subClassOf ns4:NFDI_0000005 ;
+    rdfs:subClassOf ns3:NFDI_0000005 ;
     skos:definition "A place that refers to a defined geographical area distinguished by its territorial boundaries, governance structure, and sovereignty."@en ;
     skos:editorialNote "A country where the thing is located."@en .
 
-ns4:NFDI_0000226 a owl:ObjectProperty ;
+ns3:NFDI_0000226 a owl:ObjectProperty ;
     rdfs:label "is subject of"@en ;
     skos:altLabel "is described by" ;
     skos:definition "inverse of the relation 'is about'" .
 
-ns4:NFDI_0001013 a owl:Class ;
+ns3:NFDI_0001013 a owl:Class ;
     rdfs:label "ROR identifier",
         "ROR identifier"@en ;
     ns1:IAO_0000119 "https://ror.org/" ;
     rdfs:subClassOf ns1:IAO_0000578 ;
     skos:definition "ROR (Research Organization Registry) is a global, open, and community-driven registry of research organizations. It provides unique identifiers for institutions involved in research, enabling better data integration, disambiguation, and interoperability across scholarly communication systems."@en ;
     skos:example "https://ror.org/01kdxra28" ;
-    ns4:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
-    ns4:NFDI_0010015 "ROR"@en .
+    ns3:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/61" ;
+    ns3:NFDI_0010015 "ROR"@en .
 
-ns4:NFDI_0001042 a owl:Class ;
+ns3:NFDI_0001042 a owl:Class ;
     rdfs:label "zone improvement plan code",
         "zone improvement plan code"@en ;
     rdfs:isDefinedBy "http://purl.obolibrary.org/obo/IAO_0000648" ;
-    rdfs:subClassOf ns4:NFDI_0001041 ;
+    rdfs:subClassOf ns3:NFDI_0001041 ;
     skos:definition "A postal code that is used in the United States for the purpose of sorting and delivering mail, and that denotes some postal delivery route or some aggregate of postal delivery routes." .
 
 ns1:BFO_0000006 a owl:Class ;
@@ -835,16 +835,16 @@ ns1:RO_0000056 a owl:ObjectProperty ;
     rdfs:range ns1:BFO_0000003 ;
     owl:inverseOf ns1:RO_0000057 .
 
-ns4:NFDI_0000102 a owl:Class ;
+ns3:NFDI_0000102 a owl:Class ;
     rdfs:label "agent"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty ns1:RO_0000087 ;
-            owl:someValuesFrom ns4:NFDI_0000229 ],
+            owl:someValuesFrom ns3:NFDI_0000229 ],
         ns1:BFO_0000004 ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000004 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns4:NFDI_0000229 ] ) ] ;
+                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ] ;
     skos:definition "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en ;
     skos:editorialNote "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en ;
     skos:example "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en .
@@ -877,12 +877,12 @@ ns1:IAO_0000005 a owl:Class ;
         "OBI_0000217"@en ;
     rdfs:subClassOf ns1:IAO_0000033 .
 
-ns4:NFDI_0000229 a owl:Class ;
+ns3:NFDI_0000229 a owl:Class ;
     rdfs:label "agent role"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000023 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000081 ;
-                        owl:someValuesFrom ns4:NFDI_0000102 ] ) ] ;
+                        owl:someValuesFrom ns3:NFDI_0000102 ] ) ] ;
     skos:definition "Role of an independent continuant that is realized through an agent's actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context."@en .
 
 ns1:BFO_0000001 a owl:Class ;
@@ -924,7 +924,7 @@ We will try to build it back up by elaborating the various subproperties that ar
 Some currently missing phenomena that should be considered "about" are predications - "The only person who knows the answer is sitting beside me" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
     ns1:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
     rdfs:domain ns1:IAO_0000030 ;
-    owl:inverseOf ns4:NFDI_0000226 .
+    owl:inverseOf ns3:NFDI_0000226 .
 
 ns1:RO_0000052 a owl:FunctionalProperty,
         owl:ObjectProperty ;

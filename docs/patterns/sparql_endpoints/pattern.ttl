@@ -15,7 +15,7 @@
 @prefix mwo: <http://purls.helmholtz-metadaten.de/mwo/> .
 @prefix msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/> .
 
-msekg:176113442890318 a nfdi:NFDI_0000009 ;
+msekg:176113442890318 a obo:IAO_0001000 ;
     rdfs:label "atomRDF Knowledge Graph v0.0.1" ;
     obo:IAO_0000235 msekg:17748598787021 ;
     obo:IAO_0000235 msekg:17611350506671 ;

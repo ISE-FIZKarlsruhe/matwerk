@@ -47,17 +47,17 @@ These value-node types live in the workbook's shared `req_2` tab but belong to t
 
 | Component | Class | References |
 |---|---|---|
-| software title | `nfdi:NFDI_0001000` | 209 |
-| contacting process | `nfdi:NFDI_0000111` | 202 |
+| software title | `nfdi:NFDI_0001000` | 206 |
 | academic discipline | `nfdi:NFDI_0000100` | 146 |
 | website | `nfdi:NFDI_0000223` | 140 |
 | textual description | `nfdi:NFDI_0001018` | 140 |
 | software repository | `nfdi:NFDI_0001210` | 124 |
 | licence | `<http://www.ebi.ac.uk/swo/SWO_0000002>` | 116 |
 | version number | `obo:IAO_0000129` | 85 |
-| obsolete document | `nfdi:NFDI_0000022` | 67 |
-| obsolete publication | `nfdi:NFDI_0000190` | 64 |
+| document | `obo:IAO_0000310` | 67 |
+| publication | `obo:IAO_0000311` | 64 |
 | programming language | `obo:IAO_0000025` | 51 |
+| contacting process | `nfdi:NFDI_0000111` | 49 |
 | technological method specification | `nfdi:NFDI_0000215` | 34 |
 | operating system | `nfdi:NFDI_0001047` | 5 |
 
@@ -102,7 +102,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Examples (OWL files)** | [`pattern.ttl`](pattern.ttl) — one real row of the tab, with its value nodes resolved |
 | **Extracted From** | the `software` tab of the NFDI-MatWerk curation workbook (202 rows at generation time) |
 | **Reengineered From** | the ROBOT template directives in row 2 of that tab |
-| **Has Components** | software title, contacting process, academic discipline, website, textual description, software repository |
+| **Has Components** | software title, academic discipline, website, textual description, software repository, licence |
 | **Specialization Of** | the entity-and-value-node pattern shared by every tab ([overview](../index.md)) |
 | **Related CPs** | [organization](../organization/pattern.md), [publication](../publication/pattern.md) |
 
@@ -116,7 +116,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Reused ontologies** | BFO 2020 (`http://purl.obolibrary.org/obo/bfo.owl`), NFDIcore (`https://nfdi.fiz-karlsruhe.de/ontology/`), IAO (`http://purl.obolibrary.org/obo/iao.owl`), RO (`http://purl.obolibrary.org/obo/ro.owl`) |
 | **Ontology licence** | CC BY 4.0 (repository); CC0 1.0 declared in the ontology header |
 | **Cite the ontology as** | Hossein Beygi Nasrabadi, Jörg Waitelonis, Ebrahim Norouzi, Kostiantyn Hubaiev, Harald Sack. NFDI MatWerk Ontology (mwo). Revision: v3.0.2. Retrieved from: http://purls.helmholtz-metadaten.de/mwo/3.0.2 |
-| **Generated** | `scripts/gen_patterns.py`, 2026-09-25 |
+| **Generated** | `scripts/gen_patterns.py`, 2026-10-21 |
 
 ### Formal characterisation
 

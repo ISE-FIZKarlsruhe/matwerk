@@ -15,23 +15,17 @@
 @prefix mwo: <http://purls.helmholtz-metadaten.de/mwo/> .
 @prefix msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/> .
 
-msekg:174533357974332 a nfdi:NFDI_0010020 ;
-    obo:IAO_0000235 msekg:174539966243326 ;
-    obo:BFO_0000199 msekg:174540032054615 ;
-    obo:RO_0002233 msekg:17454023638643 ;
-    obo:IAO_0000235 msekg:17454008233431 ;
-    obo:RO_0000057 msekg:17454020843733 ;
-    obo:RO_0000057 msekg:17454012367762 .
+msekg:174533279098811 a nfdi:NFDI_0000018 ;
+    obo:IAO_0000235 msekg:174539966243210 ;
+    obo:IAO_0000235 msekg:174539971046311 ;
+    obo:IAO_0000235 msekg:174539986560710 ;
+    obo:BFO_0000199 msekg:174540032054511 .
 
-msekg:174539966243326 a nfdi:NFDI_0001019 ;
-    rdfs:label "2nd Materials Science Colloquium 2023 (Universität Leoben)" .
-msekg:174540032054615 a obo:BFO_0000038 ;
-    rdfs:label "temporal region 46" .
-msekg:17454023638643 a obo:BFO_0000019 ;
-    rdfs:label "Gruppen (11-50)" .
-msekg:17454008233431 a mwo:MWO_0001001 ;
-    rdfs:label "einmalig" .
-msekg:17454020843733 a nfdi:NFDI_0000006 ;
-    rdfs:label "FAIRmat" .
-msekg:17454012367762 a nfdi:NFDI_0000107 ;
-    rdfs:label "Forschende" .
+msekg:174539966243210 a nfdi:NFDI_0001019 ;
+    rdfs:label "Workshop: From Electrons to Phase Diagrams" .
+msekg:174539971046311 a nfdi:NFDI_0001018 ;
+    rdfs:label "Jupyter notebooks and video recordings of the workshop. The three-day workshop focussed hands-on classes that cover the complete chain from high-throughput electronic structure calculations to the computation of phase diagrams." .
+msekg:174539986560710 a nfdi:NFDI_0000223 ;
+    rdfs:label "link of “Workshop: From Electrons to Phase Diagrams”" .
+msekg:174540032054511 a obo:BFO_0000038 ;
+    rdfs:label "time span of “Workshop: From Electrons to Phase Diagrams”" .

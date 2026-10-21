@@ -60,7 +60,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Solution description** | An entity individual typed `nfdi:NFDI_0001037` carries identity and label; each descriptive value is a separate *value node* individual reached by `obo:IAO_0000235` (denoted by); links to other patterns are object properties onto those entities. Identity is a minted IRI `msekg:<epoch_ms><counter>`, so re-running the pipeline is idempotent. |
 | **Reusable OWL Building Block** | [`module.ttl`](module.ttl) — the example together with the axioms of every term it uses, extracted from the ontology, so the file stands alone |
 | **Consequences** | Values become reusable and independently addressable, and a value may be shared by many entities. The cost: every `I` reference resolves **by label**, so labels must be unique and a typo yields a silently missing relation rather than an error. |
-| **Scenarios** | “BCR425-280-1.LIS” is a digital object identifier, with part of dataset “BAM reference data: results of ASTM E139 -11 creep tests on a reference material of Nimonic 75 nickel-base alloy_v1.1”. |
+| **Scenarios** | “BCR425-280-1.LIS” is a digital object identifier, with part of dataset “https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451425229679”. |
 | **Known Uses** | the MatWerk Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
 | **Web References** | <https://nfdi-matwerk.de> · <https://ise-fizkarlsruhe.github.io/mwo/> |
 | **Other References** | https://doi.org/10.1002/adem.202502331 |
@@ -81,7 +81,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Reused ontologies** | BFO 2020 (`http://purl.obolibrary.org/obo/bfo.owl`), NFDIcore (`https://nfdi.fiz-karlsruhe.de/ontology/`), IAO (`http://purl.obolibrary.org/obo/iao.owl`), RO (`http://purl.obolibrary.org/obo/ro.owl`) |
 | **Ontology licence** | CC BY 4.0 (repository); CC0 1.0 declared in the ontology header |
 | **Cite the ontology as** | Hossein Beygi Nasrabadi, Jörg Waitelonis, Ebrahim Norouzi, Kostiantyn Hubaiev, Harald Sack. NFDI MatWerk Ontology (mwo). Revision: v3.0.2. Retrieved from: http://purls.helmholtz-metadaten.de/mwo/3.0.2 |
-| **Generated** | `scripts/gen_patterns.py`, 2026-09-25 |
+| **Generated** | `scripts/gen_patterns.py`, 2026-10-21 |
 
 ### Formal characterisation
 
@@ -89,8 +89,8 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 |---|---|
 | **Consistency** | **consistent** — ROBOT 1.9.10, reasoner HermiT, merged with MWO 3.0.2 |
 | **DL expressivity** | `RRESTRCUCINTUNIVRESTREROIF(D)` — measured on the pattern together with a STAR module of exactly the terms it uses, so the figure describes this pattern rather than the whole ontology |
-| **Axioms / logical axioms** | 6 / 2 |
-| **Classes / individuals** | 2 / 2 |
+| **Axioms / logical axioms** | 3 / 1 |
+| **Classes / individuals** | 1 / 1 |
 
 ## Consistency
 

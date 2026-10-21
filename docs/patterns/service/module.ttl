@@ -1,8 +1,8 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ns1: <http://purl.obolibrary.org/obo/> .
-@prefix ns2: <https://nfdi.fiz-karlsruhe.de/ontology/> .
-@prefix ns3: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
+@prefix ns2: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
+@prefix ns3: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix ns4: <http://www.w3.org/2003/11/swrl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -78,7 +78,7 @@ dcterms:license a owl:AnnotationProperty .
     rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( <https://w3id.org/pmd/co/PMD_0060009> [ a owl:Restriction ;
-                        owl:allValuesFrom ns2:NFDI_0000131 ;
+                        owl:allValuesFrom ns3:NFDI_0000131 ;
                         owl:onProperty ns1:IAO_0000219 ] ) ] ;
     skos:definition "Event frequency datum describes how often an events occurs within a given time interval" ;
     skos:editorialNote "HBN: Concerning the content of ‘Events’ datasheet and its related knowledge graph, the ‘event frequency’ class was created to respond to competency questions like which frequency ab event take places?" ;
@@ -101,25 +101,25 @@ dcterms:license a owl:AnnotationProperty .
                         owl:someValuesFrom ns1:OBI_0000260 ] ) ] ;
     skos:definition "Protocol is a plan specification that prescribes the steps, conditions, rules, or procedures for carrying out a process, experiment, workflow, or activity." .
 
-ns3:coversRequirements a owl:AnnotationProperty .
+ns2:coversRequirements a owl:AnnotationProperty .
 
-ns3:extractedFrom a owl:AnnotationProperty .
+ns2:extractedFrom a owl:AnnotationProperty .
 
-ns3:hasComponent a owl:AnnotationProperty .
+ns2:hasComponent a owl:AnnotationProperty .
 
-ns3:hasConsequences a owl:AnnotationProperty .
+ns2:hasConsequences a owl:AnnotationProperty .
 
-ns3:hasIntent a owl:AnnotationProperty .
+ns2:hasIntent a owl:AnnotationProperty .
 
-ns3:hasUnitTest a owl:AnnotationProperty .
+ns2:hasUnitTest a owl:AnnotationProperty .
 
-ns3:isSpecializationOf a owl:AnnotationProperty .
+ns2:isSpecializationOf a owl:AnnotationProperty .
 
-ns3:reengineeredFrom a owl:AnnotationProperty .
+ns2:reengineeredFrom a owl:AnnotationProperty .
 
-ns3:relatedCPs a owl:AnnotationProperty .
+ns2:relatedCPs a owl:AnnotationProperty .
 
-ns3:scenarios a owl:AnnotationProperty .
+ns2:scenarios a owl:AnnotationProperty .
 
 skos:altLabel a owl:AnnotationProperty .
 
@@ -131,14 +131,14 @@ skos:example a owl:AnnotationProperty .
 
 skos:scopeNote a owl:AnnotationProperty .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174582959914619> a ns2:NFDI_0000232 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174582959914619> a ns3:NFDI_0000232 ;
     ns1:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174611193416712>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174611211704710>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174637702929819> ;
-    ns2:NFDI_0000211 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17461112069582> ;
-    ns2:NFDI_0000226 ns2:NFDI_0001070,
-        ns2:NFDI_0001092 ;
-    ns2:NFDI_0000240 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513943908640>,
+    ns3:NFDI_0000211 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17461112069582> ;
+    ns3:NFDI_0000226 ns3:NFDI_0001070,
+        ns3:NFDI_0001092 ;
+    ns3:NFDI_0000240 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513943908640>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17454020843736> .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/service> a owl:Ontology ;
@@ -150,31 +150,30 @@ skos:scopeNote a owl:AnnotationProperty .
         <https://orcid.org/0000-0002-2691-6995>,
         <https://orcid.org/0000-0002-3092-0532> ;
     dcterms:license "CC BY 4.0 (repository); CC0 1.0 declared in the ontology header" ;
-    ns3:coversRequirements "How is a given service accessed, and by whom is it maintained?",
+    ns2:coversRequirements "How is a given service accessed, and by whom is it maintained?",
         "Which service supports a given infrastructure use case?",
         "Which services does NFDI-MatWerk offer, and who provides them?" ;
-    ns3:extractedFrom "the service tab of the NFDI-MatWerk curation workbook" ;
-    ns3:hasComponent <http://purls.helmholtz-metadaten.de/mwo/MWO_0001034>,
+    ns2:extractedFrom "the service tab of the NFDI-MatWerk curation workbook" ;
+    ns2:hasComponent <http://purls.helmholtz-metadaten.de/mwo/MWO_0001034>,
         <http://purls.helmholtz-metadaten.de/mwo/MWO_0001035>,
-        ns2:NFDI_0000101,
-        ns2:NFDI_0000244 ;
-    ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
-    ns3:hasIntent "To represent a service product in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
-    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
-    ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
-    ns3:reengineeredFrom "ROBOT template directives, row 2 of the service tab" ;
-    ns3:scenarios "“KIT Data Manager Base Repo” is a service product, with service name “KIT Data Manager Base Repo”; consortium partner “Karlsruhe Institute of Technology”; participating consortia “NFDI4Ing”." ;
+        ns3:NFDI_0000244 ;
+    ns2:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
+    ns2:hasIntent "To represent a service product in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
+    ns2:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000232> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
+    ns2:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
+    ns2:reengineeredFrom "ROBOT template directives, row 2 of the service tab" ;
+    ns2:scenarios "“KIT Data Manager Base Repo” is a service product, with service name “KIT Data Manager Base Repo”; consortium partner “Karlsruhe Institute of Technology”; participating consortia “NFDI4Ing”." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.2/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/service/1.0.0> ;
     owl:versionInfo "1.0.0" .
 
-ns2:NFDI_0000211 a owl:ObjectProperty ;
+ns3:NFDI_0000211 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000211" .
 
-ns2:NFDI_0000240 a owl:ObjectProperty ;
+ns3:NFDI_0000240 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000240" .
 
-ns2:NFDI_0010013 a owl:AnnotationProperty .
+ns3:NFDI_0010013 a owl:AnnotationProperty .
 
 ns1:BFO_0000145 a owl:Class ;
     rdfs:label "relational quality"@en ;
@@ -201,7 +200,7 @@ ns1:IAO_0000235 a owl:ObjectProperty ;
     ns1:IAO_0000115 "inverse of the relation 'denotes'"@en ;
     rdfs:domain ns1:BFO_0000001 ;
     rdfs:range ns1:IAO_0000030 ;
-    rdfs:subPropertyOf ns2:NFDI_0000226 .
+    rdfs:subPropertyOf ns3:NFDI_0000226 .
 
 ns1:IAO_0000590 a owl:Class ;
     rdfs:label "written name",
@@ -316,10 +315,10 @@ ns1:SO_0001410 a owl:Class ;
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513943908640> a ns1:OBI_0000245 ;
     rdfs:label "Karlsruhe Institute of Technology" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17454020843736> a ns2:NFDI_0000006 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17454020843736> a ns3:NFDI_0000006 ;
     rdfs:label "NFDI4Ing" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17461112069582> a ns2:NFDI_0000100 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17461112069582> a ns3:NFDI_0000100 ;
     rdfs:label "Interdisciplinary" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174611193416712> a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001034> ;
@@ -331,7 +330,7 @@ ns1:SO_0001410 a owl:Class ;
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174637702929819> a ns1:IAO_0000590 ;
     rdfs:label "KIT Data Manager Base Repo" .
 
-ns2:NFDI_0000100 a owl:Class ;
+ns3:NFDI_0000100 a owl:Class ;
     rdfs:label "academic discipline",
         "academic discipline"@en ;
     rdfs:subClassOf ns1:IAO_0000030 ;
@@ -340,25 +339,25 @@ ns2:NFDI_0000100 a owl:Class ;
         "2024-12-16: TT & JW: An academic discipline is not a quality, as assumed before, but an ICE. A discipline like philosophy or chemistry consists of structured knowledge, theories, and practices. These are abstract entities that represent and encode information."@en ;
     skos:example <https://www.wikidata.org/entity/Q12271>,
         "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en ;
-    ns2:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/80"@en .
+    ns3:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/80"@en .
 
-ns2:NFDI_0000131 a owl:Class ;
+ns3:NFDI_0000131 a owl:Class ;
     rdfs:label "event"@en ;
     rdfs:subClassOf ns1:BFO_0000015 ;
     skos:definition "An process that represents an organized happening that unfolds in time."@en ;
     skos:editorialNote "A class that represents entities that occur or unfold in time, typically characterized by a specific organized happening or occurrence with temporal properties."@en ;
     skos:example "conferences, celebrations, workshops, meetings, or any other specific incident or happening that has been planned somehow."@en .
 
-ns2:NFDI_0000232 a owl:Class ;
+ns3:NFDI_0000232 a owl:Class ;
     rdfs:label "service product",
         "service product"@en ;
     rdfs:subClassOf ns1:BFO_0000141 ;
     skos:definition "An immaterial entity that provides value through a service offering, delivering intangible benefits or functionality designed to fulfill specific needs or requirements, often in a structured process."@en .
 
-ns2:NFDI_0001070 a owl:NamedIndividual ;
+ns3:NFDI_0001070 a owl:NamedIndividual ;
     rdfs:label "active status" .
 
-ns2:NFDI_0001092 a owl:NamedIndividual ;
+ns3:NFDI_0001092 a owl:NamedIndividual ;
     rdfs:label "self funding" .
 
 <https://orcid.org/0000-0001-7069-9804> rdfs:label "Harald Sack" .
@@ -535,7 +534,7 @@ ns1:RO_0000086 a owl:ObjectProperty ;
     rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0060009> ;
     skos:definition "Data storage capacity datum represents the maximum amount of digital information it can hold, typically measured in bytes (e.g., GB, TB, PB)." .
 
-ns2:NFDI_0000002 a owl:Class ;
+ns3:NFDI_0000002 a owl:Class ;
     rdfs:label "project"@en ;
     rdfs:subClassOf ns1:BFO_0000015 ;
     skos:definition "A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
@@ -549,9 +548,9 @@ But what about the organization or plan behind it?
 - The institution running or participating the project would be a continuant (consortium).
 - The project plan might be a generically dependent continuant (a kind of information content entity).
 - But the project as executed over time is an occurrent."""@en ;
-    ns2:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/50" .
+    ns3:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/50" .
 
-ns2:NFDI_0000006 a owl:Class ;
+ns3:NFDI_0000006 a owl:Class ;
     rdfs:label "consortium",
         "consortium"@en ;
     rdfs:subClassOf [ a owl:Class ;
@@ -559,40 +558,40 @@ ns2:NFDI_0000006 a owl:Class ;
                         owl:onProperty ns1:RO_0002351 ;
                         owl:someValuesFrom [ a owl:Restriction ;
                                 owl:onProperty ns1:RO_0000087 ;
-                                owl:someValuesFrom ns2:NFDI_0000110 ] ] ) ] ;
+                                owl:someValuesFrom ns3:NFDI_0000110 ] ] ) ] ;
     skos:definition "An organisation that consists of multiple independent groups and individuals, who join together to collaborate on a specific goal."@en ;
     skos:editorialNote "A consortium of autonomous organizations collaborating towards a shared goal, operating within the framework of an agreement."@en ;
     skos:example "NFDI4Culture, NFDI-MatWerk, DataPLANT." .
 
-ns2:NFDI_0000102 a owl:Class ;
+ns3:NFDI_0000102 a owl:Class ;
     rdfs:label "agent"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty ns1:RO_0000087 ;
-            owl:someValuesFrom ns2:NFDI_0000229 ],
+            owl:someValuesFrom ns3:NFDI_0000229 ],
         ns1:BFO_0000004 ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000004 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns2:NFDI_0000229 ] ) ] ;
+                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ] ;
     skos:definition "An independent continuant that acts autonomously and is entrusted with the authority to represent, negotiate, or act on behalf of another agent."@en ;
     skos:editorialNote "A class that represents entities that are capable of autonomous actions, decision-making, or interaction within a given environment, e.g. persons or organizations."@en ;
     skos:example "Torsten Schrade, Linnaea Söhn, Academy of Sciences and Literature Mainz"@en .
 
-ns2:NFDI_0000110 a owl:Class ;
+ns3:NFDI_0000110 a owl:Class ;
     rdfs:label "consortium member role"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty ns1:BFO_0000054 ;
-            owl:someValuesFrom ns2:NFDI_0000002 ],
-        ns2:NFDI_0000229 ;
+            owl:someValuesFrom ns3:NFDI_0000002 ],
+        ns3:NFDI_0000229 ;
     owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( ns2:NFDI_0000229 [ a owl:Restriction ;
+            owl:intersectionOf ( ns3:NFDI_0000229 [ a owl:Restriction ;
                         owl:onProperty ns1:BFO_0000054 ;
-                        owl:someValuesFrom ns2:NFDI_0000002 ] [ a owl:Restriction ;
+                        owl:someValuesFrom ns3:NFDI_0000002 ] [ a owl:Restriction ;
                         owl:allValuesFrom ns1:OBI_0000245 ;
                         owl:onProperty ns1:RO_0000081 ] ) ] ;
     skos:definition "A role inherent in an organization that is realized when the organization is a member of a consortium."@en .
 
-ns2:NFDI_0000226 a owl:ObjectProperty ;
+ns3:NFDI_0000226 a owl:ObjectProperty ;
     rdfs:label "is subject of",
         "is subject of"@en ;
     skos:altLabel "is described by" ;
@@ -686,8 +685,8 @@ for now."""@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000040 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000087 ;
-                        owl:someValuesFrom ns2:NFDI_0000229 ] ) ],
-        ns2:NFDI_0000102 .
+                        owl:someValuesFrom ns3:NFDI_0000229 ] ) ],
+        ns3:NFDI_0000102 .
 
 ns1:OBI_0000260 a owl:Class ;
     rdfs:label "plan"@en ;
@@ -793,7 +792,7 @@ We will try to build it back up by elaborating the various subproperties that ar
 Some currently missing phenomena that should be considered "about" are predications - "The only person who knows the answer is sitting beside me" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
     ns1:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
     rdfs:domain ns1:IAO_0000030 ;
-    owl:inverseOf ns2:NFDI_0000226 .
+    owl:inverseOf ns3:NFDI_0000226 .
 
 ns1:RO_0000052 a owl:FunctionalProperty,
         owl:ObjectProperty ;
@@ -803,12 +802,12 @@ ns1:RO_0000052 a owl:FunctionalProperty,
     ns1:IAO_0000115 "a relation between a specifically dependent continuant (the characteristic) and any other entity (the bearer), in which the characteristic depends on the bearer for its existence."@en ;
     owl:inverseOf ns1:RO_0000053 .
 
-ns2:NFDI_0000229 a owl:Class ;
+ns3:NFDI_0000229 a owl:Class ;
     rdfs:label "agent role"@en ;
     rdfs:subClassOf [ a owl:Class ;
             owl:intersectionOf ( ns1:BFO_0000023 [ a owl:Restriction ;
                         owl:onProperty ns1:RO_0000081 ;
-                        owl:someValuesFrom ns2:NFDI_0000102 ] ) ] ;
+                        owl:someValuesFrom ns3:NFDI_0000102 ] ) ] ;
     skos:definition "Role of an independent continuant that is realized through an agent's actions, enabling the agent to perform specific functions or achieve particular outcomes within a system or context."@en .
 
 ns1:BFO_0000003 a owl:Class ;
@@ -1101,9 +1100,9 @@ A continuant cannot be part of an occurrent: use 'participates in'. An occurrent
 [] a owl:Restriction ;
     owl:equivalentClass [ a owl:Restriction ;
             owl:onProperty ns1:RO_0002350 ;
-            owl:someValuesFrom ns2:NFDI_0000006 ] ;
+            owl:someValuesFrom ns3:NFDI_0000006 ] ;
     owl:onProperty ns1:RO_0000087 ;
-    owl:someValuesFrom ns2:NFDI_0000110 .
+    owl:someValuesFrom ns3:NFDI_0000110 .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( ns1:BFO_0000004 ns1:BFO_0000020 ns1:BFO_0000031 ) .

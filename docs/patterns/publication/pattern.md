@@ -27,7 +27,7 @@ reasoning: false
 
 ## How to read it
 
-* The **entity** is typed `nfdi:NFDI_0000190` (obsolete publication) and carries only its identity, its label, and links.
+* The **entity** is typed `obo:IAO_0000311` (publication) and carries only its identity, its label, and links.
 * A column marked `I` does **not** contain a value — it contains the *label of another instance*, which ROBOT resolves at build time. That is why every value node needs a unique label, and why a typo produces a silently missing relation rather than an error.
 * Columns marked `A` are literals on the entity itself.
 
@@ -37,9 +37,8 @@ These value-node types live in the workbook's shared `req_2` tab but belong to t
 
 | Component | Class | References |
 |---|---|---|
-| obsolete publishing process | `nfdi:NFDI_0000014` | 231 |
 | document title | `obo:IAO_0000305` | 230 |
-| author list | `nfdi:NFDI_0001030` | 150 |
+| author list | `nfdi:NFDI_0001030` | 145 |
 | digital object identifier | `nfdi:NFDI_0001037` | 139 |
 
 ## Query it
@@ -47,7 +46,7 @@ These value-node types live in the workbook's shared `req_2` tab but belong to t
 Retrieve instances of this pattern from the MatWerk Knowledge Graph ([SPARQL endpoint](https://nfdi.fiz-karlsruhe.de/matwerk/sparql)):
 
 ```sparql
-SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000190> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10
+SELECT ?x ?label WHERE { ?x a <http://purl.obolibrary.org/obo/IAO_0000311> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10
 ```
 
 The rows behind it are curated in the [`publication` tab of the workbook](https://docs.google.com/spreadsheets/d/1OyoWwcX4zUtrJilwXdtTooavELw278nQSNW2oniBBsk/edit#gid=1747331228).
@@ -69,23 +68,23 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 |---|---|
 | **Name** | publication |
 | **Submitted by** | the NFDI-MatWerk consortium |
-| **Also Known As** | the `publication` template tab of the NFDI-MatWerk workbook |
-| **Intent** | To represent a obsolete publication in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
+| **Also Known As** | published document; published document |
+| **Intent** | To represent a publication in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records. |
 | **Domains** | research data management; NFDI consortium structure |
 | **Competency Questions** | Which publications resulted from a given task area or infrastructure use case?; What is the DOI of a given publication, and who are its authors in order?; Which publications describe a given software, dataset or instrument?; In which year and through which publishing process did a publication appear? |
-| **Solution description** | An entity individual typed `nfdi:NFDI_0000190` carries identity and label; each descriptive value is a separate *value node* individual reached by `obo:IAO_0000235` (denoted by); links to other patterns are object properties onto those entities. Identity is a minted IRI `msekg:<epoch_ms><counter>`, so re-running the pipeline is idempotent. |
+| **Solution description** | An entity individual typed `obo:IAO_0000311` carries identity and label; each descriptive value is a separate *value node* individual reached by `obo:IAO_0000235` (denoted by); links to other patterns are object properties onto those entities. Identity is a minted IRI `msekg:<epoch_ms><counter>`, so re-running the pipeline is idempotent. |
 | **Reusable OWL Building Block** | [`module.ttl`](module.ttl) — the example together with the axioms of every term it uses, extracted from the ontology, so the file stands alone |
 | **Consequences** | Values become reusable and independently addressable, and a value may be shared by many entities. The cost: every `I` reference resolves **by label**, so labels must be unique and a typo yields a silently missing relation rather than an error. |
-| **Scenarios** | “Automated free-energy calculation from atomistic simulations” is a obsolete publication, with denoted by title “Automated free-energy calculation from atomistic simulations __name__”; author(s) “Sarath Menon, Yury Lysogorskiy, Jutta Rogal, Ralf Drautz”; author(s) affiliation “Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation”. |
+| **Scenarios** | “Automated free-energy calculation from atomistic simulations” is a publication, with denoted by title “document title “Automated free-energy calculation from atomistic simulations””; author(s) “Sarath Menon, Yury Lysogorskiy, Jutta Rogal, Ralf Drautz”; author(s) affiliation “Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation”. |
 | **Known Uses** | the MatWerk Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
 | **Web References** | <https://nfdi-matwerk.de> · <https://ise-fizkarlsruhe.github.io/mwo/> |
 | **Other References** | https://doi.org/10.1002/adem.202502331 |
 | **Examples (OWL files)** | [`pattern.ttl`](pattern.ttl) — one real row of the tab, with its value nodes resolved |
 | **Extracted From** | the `publication` tab of the NFDI-MatWerk curation workbook (231 rows at generation time) |
 | **Reengineered From** | the ROBOT template directives in row 2 of that tab |
-| **Has Components** | obsolete publishing process, document title, author list, digital object identifier |
+| **Has Components** | document title, author list, digital object identifier |
 | **Specialization Of** | the entity-and-value-node pattern shared by every tab ([overview](../index.md)) |
-| **Related CPs** | [process](../process/pattern.md), [fdos](../fdos/pattern.md) |
+| **Related CPs** | [fdos](../fdos/pattern.md) |
 
 ### Provenance and versioning
 
@@ -97,7 +96,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Reused ontologies** | BFO 2020 (`http://purl.obolibrary.org/obo/bfo.owl`), NFDIcore (`https://nfdi.fiz-karlsruhe.de/ontology/`), IAO (`http://purl.obolibrary.org/obo/iao.owl`), RO (`http://purl.obolibrary.org/obo/ro.owl`) |
 | **Ontology licence** | CC BY 4.0 (repository); CC0 1.0 declared in the ontology header |
 | **Cite the ontology as** | Hossein Beygi Nasrabadi, Jörg Waitelonis, Ebrahim Norouzi, Kostiantyn Hubaiev, Harald Sack. NFDI MatWerk Ontology (mwo). Revision: v3.0.2. Retrieved from: http://purls.helmholtz-metadaten.de/mwo/3.0.2 |
-| **Generated** | `scripts/gen_patterns.py`, 2026-09-25 |
+| **Generated** | `scripts/gen_patterns.py`, 2026-10-21 |
 
 ### Formal characterisation
 

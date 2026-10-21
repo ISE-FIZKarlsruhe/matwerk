@@ -139,14 +139,15 @@ skos:example a owl:AnnotationProperty .
 
 skos:scopeNote a owl:AnnotationProperty .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453262143199> a <https://w3id.org/pmd/co/PMD_0000602> ;
-    ns1:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453266100515>,
-        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453266931258>,
-        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453275064407> ;
-    ns1:RO_0000056 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/1746117452994274> ;
-    ns4:NFDI_0000216 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453271009199> ;
-    ns4:NFDI_0000240 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451394390863>,
-        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467062556508> .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453262143191> a <https://w3id.org/pmd/co/PMD_0000602> ;
+    ns1:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453266100511>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453266931251>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453275064401> ;
+    ns1:RO_0000056 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/1746117452994266>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17924294180139> ;
+    ns4:NFDI_0000216 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513921413984> ;
+    ns4:NFDI_0000240 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513943908642>,
+        <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17924307049041> .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/instrument> a owl:Ontology ;
     rdfs:label "instrument — NFDI-MatWerk ontology design pattern" ;
@@ -162,13 +163,14 @@ skos:scopeNote a owl:AnnotationProperty .
         "Which measurement methods does an instrument support?" ;
     ns3:extractedFrom "the instrument tab of the NFDI-MatWerk curation workbook" ;
     ns3:hasComponent ns1:IAO_0000017,
-        ns1:IAO_0000131 ;
+        ns1:IAO_0000131,
+        <https://w3id.org/pmd/co/PMD_0000833> ;
     ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
     ns3:hasIntent "To represent a Gerät in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
     ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://w3id.org/pmd/co/PMD_0000602> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
     ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
     ns3:reengineeredFrom "ROBOT template directives, row 2 of the instrument tab" ;
-    ns3:scenarios "“Extensometer” is a Gerät, with instrument name “Extensometer”; description “Displacement measurement during tensile testing”; manufacturer “HBM”." ;
+    ns3:scenarios "“Procon CT-alpha” is a Gerät, with instrument name “Procon CT-alpha”; description “X-ray micro computed tomography (micro-CT)”; manufacturer “ProCon X-ray”." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.2/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/instrument/1.0.0> ;
     owl:versionInfo "1.0.0" .
@@ -181,29 +183,7 @@ ns4:NFDI_0000216 a owl:ObjectProperty ;
 ns4:NFDI_0000240 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000240" .
 
-<https://w3id.org/pmd/co/PMD_0000833> a owl:Class ;
-    rdfs:label "Herstellungsprozess"@de,
-        "manufacturing process"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty ns1:OBI_0000293 ;
-            owl:someValuesFrom [ a owl:Class ;
-                    owl:unionOf ( ns1:BFO_0000027 ns1:BFO_0000030 ) ] ],
-        [ a owl:Restriction ;
-            owl:onProperty ns1:OBI_0000299 ;
-            owl:someValuesFrom [ a owl:Class ;
-                    owl:unionOf ( ns1:BFO_0000027 ns1:BFO_0000030 ) ] ],
-        ns1:COB_0000035 ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( ns1:COB_0000035 [ a owl:Restriction ;
-                        owl:onProperty ns1:OBI_0000293 ;
-                        owl:someValuesFrom [ a owl:Class ;
-                                owl:unionOf ( ns1:BFO_0000027 ns1:BFO_0000030 ) ] ] [ a owl:Restriction ;
-                        owl:onProperty ns1:OBI_0000299 ;
-                        owl:someValuesFrom [ a owl:Class ;
-                                owl:unionOf ( ns1:BFO_0000027 ns1:BFO_0000030 ) ] ] ) ] ;
-    skos:definition "Ein geplannter Prozess, der von der primären Absicht angetrieben wird, Objekte zu transformieren. Ein Herstellungsprozess ist immer ein Transformationsprozess."@de,
-        """A planned process that is driven by the primary intent to transform objects
-A manufacturing process is always a transformative process."""@en .
+ns4:NFDI_0010013 a owl:AnnotationProperty .
 
 ns1:BFO_0000145 a owl:Class ;
     rdfs:label "relational quality"@en ;
@@ -390,26 +370,40 @@ ns1:SO_0001410 a owl:Class ;
     ns1:IAO_0000115 "A region which is the result of some arbitrary experimental procedure. The procedure may be carried out with biological material or inside a computer." ;
     rdfs:subClassOf ns1:SO_0000001 .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451394390863> a ns1:OBI_0000245 ;
-    rdfs:label "Federal Institute For Materials Research and Testing" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513921413984> a ns4:NFDI_0000100 ;
+    rdfs:label "X-ray computed tomography" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453266100515> a ns4:NFDI_0001018 ;
-    rdfs:label "Displacement measurement during tensile testing" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174513943908642> a ns1:OBI_0000245 ;
+    rdfs:label "Saarland University" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453266931258> a ns1:IAO_0000590 ;
-    rdfs:label "Extensometer" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453266100511> a ns4:NFDI_0001018 ;
+    rdfs:label "X-ray micro computed tomography (micro-CT)" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453271009199> a ns4:NFDI_0000215 ;
-    rdfs:label "Displacement measurement" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453266931251> a ns1:IAO_0000590 ;
+    rdfs:label "Procon CT-alpha" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453275064407> a ns1:IAO_0000017 ;
-    rdfs:label "two-sided LVDTs" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453275064401> a ns1:IAO_0000017 ;
+    rdfs:label "CT-alpha" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/1746117452994274> a ns4:NFDI_0000111 ;
-    rdfs:label "ContactingProcess 274" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/1746117452994266> a ns4:NFDI_0000111 ;
+    rdfs:label "contacting Procon CT-alpha" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17467062556508> a ns4:NFDI_0000102 ;
-    rdfs:label "HBM" .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17924294180139> a <https://w3id.org/pmd/co/PMD_0000833> ;
+    rdfs:label "manufacturing of Procon CT-alpha by ProCon X-ray" .
+
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17924307049041> a ns4:NFDI_0000102 ;
+    rdfs:label "ProCon X-ray" .
+
+ns4:NFDI_0000100 a owl:Class ;
+    rdfs:label "academic discipline",
+        "academic discipline"@en ;
+    rdfs:subClassOf ns1:IAO_0000030 ;
+    skos:definition "An information content entity that specifies the subject area, domain or academic discipline of an entity. An academic discipline, a research field or domain of an entity, e.g. a domain of a data portal or a field of study of a person."@en ;
+    skos:editorialNote "2024-03-26: SB & JW: Following the OMIT Ontology, the academy discilpine is defined as a subclass of bfo:quality (see e.g. http://purl.obolibrary.org/obo/OMIT_0001008)"@en,
+        "2024-12-16: TT & JW: An academic discipline is not a quality, as assumed before, but an ICE. A discipline like philosophy or chemistry consists of structured knowledge, theories, and practices. These are abstract entities that represent and encode information."@en ;
+    skos:example <https://www.wikidata.org/entity/Q12271>,
+        "Architecture, Art History, Musicology, Media Studies, Performing Arts"@en ;
+    ns4:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/80"@en .
 
 ns4:NFDI_0000111 a owl:Class ;
     rdfs:label "contacting process",
@@ -417,15 +411,6 @@ ns4:NFDI_0000111 a owl:Class ;
     rdfs:subClassOf ns1:BFO_0000015 ;
     skos:definition "A process in which the contact information of an entity is provided."@en ;
     ns4:NFDI_0000012 "Contacting" .
-
-ns4:NFDI_0000215 a owl:Class ;
-    rdfs:label "technological method specification",
-        "technological method specification"@en ;
-    rdfs:subClassOf ns1:IAO_0000104 ;
-    skos:definition "A plan specification that refers to a technology method employed for the creation, management, utilization, or control of a digital resource."@en ;
-    skos:editorialNote "A technology, e.g. a web application or a programming framework used in a resource."@en ;
-    skos:example "Groovy on Grails, Angular"@en ;
-    ns4:NFDI_0000012 "TechnologicalMeans" .
 
 ns4:NFDI_0001018 a owl:Class ;
     rdfs:label "textual description",
@@ -579,6 +564,31 @@ ns4:NFDI_0000226 a owl:ObjectProperty ;
     skos:altLabel "is described by" ;
     skos:definition "inverse of the relation 'is about'" .
 
+<https://w3id.org/pmd/co/PMD_0000833> a owl:Class ;
+    rdfs:label "Herstellungsprozess",
+        "Herstellungsprozess"@de,
+        "manufacturing process"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns1:OBI_0000293 ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf ( ns1:BFO_0000027 ns1:BFO_0000030 ) ] ],
+        [ a owl:Restriction ;
+            owl:onProperty ns1:OBI_0000299 ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf ( ns1:BFO_0000027 ns1:BFO_0000030 ) ] ],
+        ns1:COB_0000035 ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( ns1:COB_0000035 [ a owl:Restriction ;
+                        owl:onProperty ns1:OBI_0000293 ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( ns1:BFO_0000027 ns1:BFO_0000030 ) ] ] [ a owl:Restriction ;
+                        owl:onProperty ns1:OBI_0000299 ;
+                        owl:someValuesFrom [ a owl:Class ;
+                                owl:unionOf ( ns1:BFO_0000027 ns1:BFO_0000030 ) ] ] ) ] ;
+    skos:definition "Ein geplannter Prozess, der von der primären Absicht angetrieben wird, Objekte zu transformieren. Ein Herstellungsprozess ist immer ein Transformationsprozess."@de,
+        """A planned process that is driven by the primary intent to transform objects
+A manufacturing process is always a transformative process."""@en .
+
 ns1:BFO_0000016 a owl:Class ;
     rdfs:label "disposition"@en ;
     ns1:IAO_0000112 "an atom of element X has the disposition to decay to an atom of element Y"@en,
@@ -615,6 +625,24 @@ ns1:IAO_0000033 a owl:Class ;
             owl:onProperty ns1:IAO_0000136 ;
             owl:someValuesFrom ns1:BFO_0000017 ],
         ns1:IAO_0000030 .
+
+ns1:IAO_0000104 a owl:Class ;
+    rdfs:label "plan specification"@en ;
+    ns1:IAO_0000112 "PMID: 18323827.Nat Med. 2008 Mar;14(3):226.New plan proposed to help resolve conflicting medical advice."@en ;
+    ns1:IAO_0000115 "A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified."@en ;
+    ns1:IAO_0000116 "2009-03-16: provenance: a term a plan was proposed for OBI (OBI_0000344) , edited by the PlanAndPlannedProcess branch. Original definition was \" a plan is a specification of a process that is realized by an actor to achieve the objective specified as part of the plan\". It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term."@en,
+        "2014-03-31: A plan specification can have other parts, such as conditional specifications."@en,
+        "2022-01-16 Updated definition to that proposed by Clint Dowloand, IAO Issue 231."@en,
+        "Alternative previous definition: a plan is a set of instructions that specify how an objective should be achieved"@en ;
+    ns1:IAO_0000119 "OBI Plan and Planned Process branch"@en,
+        "OBI_0000344"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns1:BFO_0000051 ;
+            owl:someValuesFrom ns1:IAO_0000005 ],
+        [ a owl:Restriction ;
+            owl:onProperty ns1:BFO_0000051 ;
+            owl:someValuesFrom ns1:IAO_0000007 ],
+        ns1:IAO_0000033 .
 
 ns1:OBI_0000260 a owl:Class ;
     rdfs:label "plan"@en ;
@@ -693,24 +721,6 @@ ns1:IAO_0000005 a owl:Class ;
     ns1:IAO_0000119 "OBI Plan and Planned Process/Roles Branch"@en,
         "OBI_0000217"@en ;
     rdfs:subClassOf ns1:IAO_0000033 .
-
-ns1:IAO_0000104 a owl:Class ;
-    rdfs:label "plan specification"@en ;
-    ns1:IAO_0000112 "PMID: 18323827.Nat Med. 2008 Mar;14(3):226.New plan proposed to help resolve conflicting medical advice."@en ;
-    ns1:IAO_0000115 "A directive information entity with action specifications and objective specifications as parts, and that may be concretized as a realizable entity that, if realized, is realized in a process in which the bearer tries to achieve the objectives by taking the actions specified."@en ;
-    ns1:IAO_0000116 "2009-03-16: provenance: a term a plan was proposed for OBI (OBI_0000344) , edited by the PlanAndPlannedProcess branch. Original definition was \" a plan is a specification of a process that is realized by an actor to achieve the objective specified as part of the plan\". It has been subsequently moved to IAO where the objective for which the original term was defined was satisfied with the definitionof this, different, term."@en,
-        "2014-03-31: A plan specification can have other parts, such as conditional specifications."@en,
-        "2022-01-16 Updated definition to that proposed by Clint Dowloand, IAO Issue 231."@en,
-        "Alternative previous definition: a plan is a set of instructions that specify how an objective should be achieved"@en ;
-    ns1:IAO_0000119 "OBI Plan and Planned Process branch"@en,
-        "OBI_0000344"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty ns1:BFO_0000051 ;
-            owl:someValuesFrom ns1:IAO_0000005 ],
-        [ a owl:Restriction ;
-            owl:onProperty ns1:BFO_0000051 ;
-            owl:someValuesFrom ns1:IAO_0000007 ],
-        ns1:IAO_0000033 .
 
 ns1:IAO_0000300 a owl:Class ;
     rdfs:label "textual entity"@en ;
@@ -836,25 +846,6 @@ A continuant cannot have an occurrent as part: use 'participates in'. An occurre
     ns1:IAO_0000118 "has_part"@en ;
     rdfs:subPropertyOf ns1:BFO_0000051 .
 
-ns1:IAO_0000030 a owl:Class ;
-    rdfs:label "information content entity",
-        "information content entity"@en ;
-    ns1:IAO_0000112 "Examples of information content entites include journal articles, data, graphical layouts, and graphs.",
-        "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en ;
-    ns1:IAO_0000115 "An information content entity is an entity that is generically dependent on some artifact and stands in relation of aboutness to some entity.",
-        "A generically dependent continuant that is about some thing."@en ;
-    ns1:IAO_0000116 "2014-03-10: The use of \"thing\" is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ)."@en,
-        "Pier: 'data, information or knowledge'. OR 'representation'"@en,
-        """information_content_entity 'is_encoded_in' some digital_entity in obi before split (040907). information_content_entity 'is_encoded_in' some physical_document in obi before split (040907).
-
-Previous. An information content entity is a non-realizable information entity that 'is encoded in' some digital or physical entity."""@en ;
-    ns1:IAO_0000119 "IAO",
-        "OBI_0000142"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty ns1:IAO_0000136 ;
-            owl:someValuesFrom ns1:BFO_0000001 ],
-        ns1:BFO_0000031 .
-
 ns1:BFO_0000002 a owl:Class ;
     rdfs:label "continuant"@en ;
     ns1:IAO_0000115 "An entity that exists in full at any time in which it exists at all, persists through time while maintaining its identity and has no temporal parts."@en ;
@@ -902,6 +893,25 @@ ns1:BFO_0000031 a owl:Class ;
     skos:altLabel "g-dependent continuant"@en ;
     skos:definition "(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share"@en ;
     skos:example "The pdf file on your laptop; the pdf file that is a copy thereof on my laptop; the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule; the content that is shared by a string of dots and dashes written on a page and the transmitted Morse code signal; the content of a sentence; an engineering blueprint"@en .
+
+ns1:IAO_0000030 a owl:Class ;
+    rdfs:label "information content entity",
+        "information content entity"@en ;
+    ns1:IAO_0000112 "Examples of information content entites include journal articles, data, graphical layouts, and graphs.",
+        "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en ;
+    ns1:IAO_0000115 "An information content entity is an entity that is generically dependent on some artifact and stands in relation of aboutness to some entity.",
+        "A generically dependent continuant that is about some thing."@en ;
+    ns1:IAO_0000116 "2014-03-10: The use of \"thing\" is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ)."@en,
+        "Pier: 'data, information or knowledge'. OR 'representation'"@en,
+        """information_content_entity 'is_encoded_in' some digital_entity in obi before split (040907). information_content_entity 'is_encoded_in' some physical_document in obi before split (040907).
+
+Previous. An information content entity is a non-realizable information entity that 'is encoded in' some digital or physical entity."""@en ;
+    ns1:IAO_0000119 "IAO",
+        "OBI_0000142"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns1:IAO_0000136 ;
+            owl:someValuesFrom ns1:BFO_0000001 ],
+        ns1:BFO_0000031 .
 
 ns1:RO_0000087 a owl:ObjectProperty ;
     rdfs:label "has role"@en ;

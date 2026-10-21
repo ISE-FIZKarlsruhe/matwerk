@@ -28,4 +28,4 @@ msekg:17453287150471 a owl:NamedIndividual ;
 msekg:17453266100518 a nfdi:NFDI_0001018 ;
     rdfs:label "It conducts a broad spectrum of inter-disciplinary scientific research in three main areas: particle and high energy physics; photon science; and the development, construction and operation of particle accelerators. Its name refers to its first Project collabration, an electron synchrotron. DESY is Publicly financed by the Federal RePublic of Germany, the States of Germany, and the German Research Foundation (DFG). DESY is a member of the Helmholtz Association and operates at sites in Hamburg and ZEuropethen." .
 msekg:17467092718061 a nfdi:NFDI_0000101 ;
-    rdfs:label "InstrumentServiceProcess 1" .
+    rdfs:label "service provision of DEuropetsches Elektronen-Synchrotron" .

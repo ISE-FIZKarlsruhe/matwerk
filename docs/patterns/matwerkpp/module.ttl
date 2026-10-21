@@ -167,6 +167,10 @@ skos:scopeNote a owl:AnnotationProperty .
         "Which participant projects are part of NFDI-MatWerk?",
         "Which resources has a participant project contributed to the knowledge graph?" ;
     ns3:extractedFrom "the matwerkpp tab of the NFDI-MatWerk curation workbook" ;
+    ns3:hasComponent ns1:IAO_0000005,
+        ns1:IAO_0000300,
+        <http://purls.helmholtz-metadaten.de/mwo/MWO_0001029>,
+        ns4:NFDI_0000002 ;
     ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
     ns3:hasIntent "To represent a matwerk participant project in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
     ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <http://purls.helmholtz-metadaten.de/mwo/MWO_0001029> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
@@ -322,19 +326,6 @@ ns1:SO_0001410 a owl:Class ;
     rdfs:label "experimental_feature" ;
     ns1:IAO_0000115 "A region which is the result of some arbitrary experimental procedure. The procedure may be carried out with biological material or inside a computer." ;
     rdfs:subClassOf ns1:SO_0000001 .
-
-<http://purls.helmholtz-metadaten.de/mwo/MWO_0001029> a owl:Class ;
-    rdfs:label "matwerk participant project",
-        "matwerk participant project"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty ns1:BFO_0000132 ;
-            owl:someValuesFrom <http://purls.helmholtz-metadaten.de/mwo/MWO_0001002> ],
-        ns4:NFDI_0000002 ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( ns4:NFDI_0000002 [ a owl:Restriction ;
-                        owl:onProperty ns1:BFO_0000132 ;
-                        owl:someValuesFrom <http://purls.helmholtz-metadaten.de/mwo/MWO_0001002> ] ) ] ;
-    skos:definition "Participant Projects (PPs) are projects by NFDI-MatWerk partners that address specific scientific and technological challenges, providing practical examples and feedback for the development and validation of the infrastructure." .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/174541626986223> a ns1:IAO_0000590 ;
     rdfs:label "From atoms to turbine blades" .
@@ -515,6 +506,19 @@ ns1:RO_0002351 a owl:IrreflexiveProperty,
     rdfs:subClassOf ns4:NFDI_0000002 ;
     skos:definition "A MatWerk project is a project within the NFDI MatWerk consortium that involves coordinated research, development, or infrastructure activities aimed at advancing materials science and engineering through data-driven methodologies and digitalization." .
 
+<http://purls.helmholtz-metadaten.de/mwo/MWO_0001029> a owl:Class ;
+    rdfs:label "matwerk participant project",
+        "matwerk participant project"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty ns1:BFO_0000132 ;
+            owl:someValuesFrom <http://purls.helmholtz-metadaten.de/mwo/MWO_0001002> ],
+        ns4:NFDI_0000002 ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( ns4:NFDI_0000002 [ a owl:Restriction ;
+                        owl:onProperty ns1:BFO_0000132 ;
+                        owl:someValuesFrom <http://purls.helmholtz-metadaten.de/mwo/MWO_0001002> ] ) ] ;
+    skos:definition "Participant Projects (PPs) are projects by NFDI-MatWerk partners that address specific scientific and technological challenges, providing practical examples and feedback for the development and validation of the infrastructure." .
+
 ns4:NFDI_0000226 a owl:ObjectProperty ;
     rdfs:label "is subject of"@en ;
     skos:altLabel "is described by" ;
@@ -592,22 +596,6 @@ ns1:OBI_0000312 a owl:ObjectProperty ;
     rdfs:range ns1:COB_0000035 ;
     rdfs:subPropertyOf ns1:RO_0000056 .
 
-ns4:NFDI_0000002 a owl:Class ;
-    rdfs:label "project"@en ;
-    rdfs:subClassOf ns1:BFO_0000015 ;
-    skos:definition "A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
-    skos:editorialNote """Why "project" as an occurrent:
-- A project typically has a start and end time.
-- It involves a sequence of activities, such as planning, conducting experiments, analyzing data, and publishing results.
-- It has temporal parts (e.g., Phase 1, Phase 2, review stages).
-So, it aligns well with the occurrent category - more precisely, it can be considered a complex process made up of various subprocesses.
-
-But what about the organization or plan behind it?
-- The institution running or participating the project would be a continuant (consortium).
-- The project plan might be a generically dependent continuant (a kind of information content entity).
-- But the project as executed over time is an occurrent."""@en ;
-    ns4:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/50" .
-
 ns1:BFO_0000023 a owl:Class ;
     rdfs:label "role"@en ;
     ns1:IAO_0000112 "John’s role of husband to Mary is dependent on Mary’s role of wife to John, and both are dependent on the object aggregate comprising John and Mary as member parts joined together through the relational quality of being married."@en,
@@ -660,6 +648,22 @@ ns1:RO_0000087 a owl:ObjectProperty ;
     rdfs:range ns1:BFO_0000023 ;
     rdfs:subPropertyOf ns1:RO_0000053 .
 
+ns4:NFDI_0000002 a owl:Class ;
+    rdfs:label "project"@en ;
+    rdfs:subClassOf ns1:BFO_0000015 ;
+    skos:definition "A process of a scientific or business endeavor that aims to conclude an investigation or to answer a research question."@en ;
+    skos:editorialNote """Why "project" as an occurrent:
+- A project typically has a start and end time.
+- It involves a sequence of activities, such as planning, conducting experiments, analyzing data, and publishing results.
+- It has temporal parts (e.g., Phase 1, Phase 2, review stages).
+So, it aligns well with the occurrent category - more precisely, it can be considered a complex process made up of various subprocesses.
+
+But what about the organization or plan behind it?
+- The institution running or participating the project would be a continuant (consortium).
+- The project plan might be a generically dependent continuant (a kind of information content entity).
+- But the project as executed over time is an occurrent."""@en ;
+    ns4:NFDI_0010013 "https://github.com/ISE-FIZKarlsruhe/nfdicore/issues/50" .
+
 ns1:BFO_0000001 a owl:Class ;
     rdfs:label "entity"@en ;
     ns1:IAO_0000112 "Julius Caesar"@en,
@@ -670,19 +674,6 @@ ns1:BFO_0000001 a owl:Class ;
     dc:identifier "001-BFO" ;
     skos:definition "(Elucidation) An entity is anything that exists or has existed or will exist"@en ;
     skos:example "Julius Caesar; the Second World War; your body mass index; Verdi's Requiem"@en .
-
-ns1:IAO_0000005 a owl:Class ;
-    rdfs:label "objective specification",
-        "objective specification"@en ;
-    ns1:IAO_0000112 "In the protocol of a ChIP assay the objective specification says to identify protein and DNA interaction."@en ;
-    ns1:IAO_0000115 "A directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved."@en ;
-    ns1:IAO_0000116 "2009-03-16: original definition when imported from OBI read: \"objective is an non realizable information entity which can serve as that  proper part of a plan towards which the realization of the plan is directed.\""@en,
-        "2014-03-31: In the example of usage (\"In the protocol of a ChIP assay the objective specification says to identify protein and DNA interaction\") there is a protocol which is the ChIP assay protocol. In addition to being concretized on paper, the protocol can be concretized as a realizable entity, such as a plan that inheres in a person. The objective specification is the part that says that some protein and DNA interactions are identified. This is a specification of a process endpoint: the boundary in the process before which they are not identified and after which they are. During the realization of the plan, the goal is to get to the point of having the interactions, and participants in the realization of the plan try to do that."@en,
-        "Answers the question, why did you do this experiment?"@en ;
-    ns1:IAO_0000118 "goal specification"@en ;
-    ns1:IAO_0000119 "OBI Plan and Planned Process/Roles Branch"@en,
-        "OBI_0000217"@en ;
-    rdfs:subClassOf ns1:IAO_0000033 .
 
 ns1:IAO_0000030 a owl:Class ;
     rdfs:label "information content entity",
@@ -715,16 +706,6 @@ Some currently missing phenomena that should be considered "about" are predicati
     ns1:IAO_0000119 "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
     rdfs:domain ns1:IAO_0000030 ;
     owl:inverseOf ns4:NFDI_0000226 .
-
-ns1:IAO_0000300 a owl:Class ;
-    rdfs:label "textual entity",
-        "textual entity"@en ;
-    ns1:IAO_0000112 "Words, sentences, paragraphs, and the written (non-figure) parts of publications are all textual entities"@en ;
-    ns1:IAO_0000115 "A textual entity is a part of a manifestation (FRBR sense), a generically dependent continuant whose concretizations are patterns of glyphs intended to be interpreted as words, formulas, etc."@en ;
-    ns1:IAO_0000116 "AR, (IAO call 2009-09-01): a document as a whole is not typically a textual entity, because it has pictures in it - rather there are parts of it that are textual entities. Examples: The title, paragraph 2 sentence 7, etc."@en,
-        "MC, 2009-09-14 (following IAO call 2009-09-01): textual entities live at the FRBR (http://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records) manifestation level. Everything is significant: line break, pdf and html versions of same document are different textual entities."@en ;
-    ns1:IAO_0000118 "text"@en ;
-    rdfs:subClassOf ns1:IAO_0000030 .
 
 ns1:RO_0000052 a owl:FunctionalProperty,
         owl:ObjectProperty ;
@@ -787,6 +768,29 @@ ns1:BFO_0000051 a owl:ObjectProperty,
 A continuant cannot have an occurrent as part: use 'participates in'. An occurrent cannot have a continuant as part: use 'has participant'. An immaterial entity cannot have a material entity as part: use 'location of'. An independent continuant cannot have a specifically dependent continuant as part: use 'bearer of'. A specifically dependent continuant cannot have an independent continuant as part: use 'inheres in'."""@en ;
     ns1:IAO_0000118 "has_part"@en ;
     rdfs:subPropertyOf ns1:BFO_0000051 .
+
+ns1:IAO_0000005 a owl:Class ;
+    rdfs:label "objective specification",
+        "objective specification"@en ;
+    ns1:IAO_0000112 "In the protocol of a ChIP assay the objective specification says to identify protein and DNA interaction."@en ;
+    ns1:IAO_0000115 "A directive information entity that describes an intended process endpoint. When part of a plan specification the concretization is realized in a planned process in which the bearer tries to effect the world so that the process endpoint is achieved."@en ;
+    ns1:IAO_0000116 "2009-03-16: original definition when imported from OBI read: \"objective is an non realizable information entity which can serve as that  proper part of a plan towards which the realization of the plan is directed.\""@en,
+        "2014-03-31: In the example of usage (\"In the protocol of a ChIP assay the objective specification says to identify protein and DNA interaction\") there is a protocol which is the ChIP assay protocol. In addition to being concretized on paper, the protocol can be concretized as a realizable entity, such as a plan that inheres in a person. The objective specification is the part that says that some protein and DNA interactions are identified. This is a specification of a process endpoint: the boundary in the process before which they are not identified and after which they are. During the realization of the plan, the goal is to get to the point of having the interactions, and participants in the realization of the plan try to do that."@en,
+        "Answers the question, why did you do this experiment?"@en ;
+    ns1:IAO_0000118 "goal specification"@en ;
+    ns1:IAO_0000119 "OBI Plan and Planned Process/Roles Branch"@en,
+        "OBI_0000217"@en ;
+    rdfs:subClassOf ns1:IAO_0000033 .
+
+ns1:IAO_0000300 a owl:Class ;
+    rdfs:label "textual entity",
+        "textual entity"@en ;
+    ns1:IAO_0000112 "Words, sentences, paragraphs, and the written (non-figure) parts of publications are all textual entities"@en ;
+    ns1:IAO_0000115 "A textual entity is a part of a manifestation (FRBR sense), a generically dependent continuant whose concretizations are patterns of glyphs intended to be interpreted as words, formulas, etc."@en ;
+    ns1:IAO_0000116 "AR, (IAO call 2009-09-01): a document as a whole is not typically a textual entity, because it has pictures in it - rather there are parts of it that are textual entities. Examples: The title, paragraph 2 sentence 7, etc."@en,
+        "MC, 2009-09-14 (following IAO call 2009-09-01): textual entities live at the FRBR (http://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records) manifestation level. Everything is significant: line break, pdf and html versions of same document are different textual entities."@en ;
+    ns1:IAO_0000118 "text"@en ;
+    rdfs:subClassOf ns1:IAO_0000030 .
 
 ns1:BFO_0000002 a owl:Class ;
     rdfs:label "continuant"@en ;

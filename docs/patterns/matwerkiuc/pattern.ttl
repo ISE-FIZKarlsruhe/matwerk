@@ -22,9 +22,7 @@ msekg:17454033706371 a mwo:MWO_0001026 ;
     obo:IAO_0000235 msekg:17454174716691 ;
     obo:IAO_0000235 msekg:17454164125046 ;
     obo:IAO_0000235 msekg:17454173240411 ;
-    obo:IAO_0000235 msekg:17454173859641 ;
-    obo:RO_0002353 msekg:17465359709961 ;
-    obo:RO_0000087 msekg:17465361576751 .
+    obo:IAO_0000235 msekg:17454173859641 .
 
 msekg:17454162698626 a obo:IAO_0000590 ;
     rdfs:label "Web-based demonstration and teaching framework for MSE research data infrastructure" .
@@ -38,7 +36,3 @@ msekg:17454173240411 a mwo:MWO_0001101 ;
     rdfs:label "Students can experience the the full functionality of the DME and learn to use workflows with pre-existing datasets and ontologies." .
 msekg:17454173859641 a nfdi:NFDI_0001101 ;
     rdfs:label "teaching personnel can tailor the demo framework as well as datasets and workflows to match their study courses." .
-msekg:17465359709961 a nfdi:NFDI_0000101 ;
-    rdfs:label "IUCProcess 1" .
-msekg:17465361576751 a nfdi:NFDI_0000228 ;
-    rdfs:label "IUCRole 1" .

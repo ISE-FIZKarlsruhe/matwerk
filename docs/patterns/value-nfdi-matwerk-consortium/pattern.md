@@ -1,6 +1,6 @@
 # nfdi matwerk consortium
 
-The `value-nfdi-matwerk-consortium` tab of the MatWerk workbook currently holds **38 rows**. Every row follows the same shape, and that shape is the pattern below: a **entity** instance carrying the row's identity, denoted by **value node** nodes that hold its values, and object properties pointing at entities in other tabs.
+The `value-nfdi-matwerk-consortium` tab of the MatWerk workbook currently holds **52 rows**. Every row follows the same shape, and that shape is the pattern below: a **entity** instance carrying the row's identity, denoted by **value node** nodes that hold its values, and object properties pointing at entities in other tabs.
 
 *Generated from the live sheet and MWO 3.0.2 by `scripts/gen_patterns.py` — regenerate it rather than editing it by hand.*
 
@@ -63,7 +63,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Web References** | <https://nfdi-matwerk.de> · <https://ise-fizkarlsruhe.github.io/mwo/> |
 | **Other References** | https://doi.org/10.1002/adem.202502331 |
 | **Examples (OWL files)** | [`pattern.ttl`](pattern.ttl) — one real row of the tab, with its value nodes resolved |
-| **Extracted From** | the `value-nfdi-matwerk-consortium` tab of the NFDI-MatWerk curation workbook (38 rows at generation time) |
+| **Extracted From** | the `value-nfdi-matwerk-consortium` tab of the NFDI-MatWerk curation workbook (52 rows at generation time) |
 | **Reengineered From** | the ROBOT template directives in row 2 of that tab |
 | **Has Components** | — |
 | **Specialization Of** | the entity-and-value-node pattern shared by every tab ([overview](../index.md)) |
@@ -79,7 +79,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Reused ontologies** | BFO 2020 (`http://purl.obolibrary.org/obo/bfo.owl`), NFDIcore (`https://nfdi.fiz-karlsruhe.de/ontology/`), IAO (`http://purl.obolibrary.org/obo/iao.owl`), RO (`http://purl.obolibrary.org/obo/ro.owl`) |
 | **Ontology licence** | CC BY 4.0 (repository); CC0 1.0 declared in the ontology header |
 | **Cite the ontology as** | Hossein Beygi Nasrabadi, Jörg Waitelonis, Ebrahim Norouzi, Kostiantyn Hubaiev, Harald Sack. NFDI MatWerk Ontology (mwo). Revision: v3.0.2. Retrieved from: http://purls.helmholtz-metadaten.de/mwo/3.0.2 |
-| **Generated** | `scripts/gen_patterns.py`, 2026-09-25 |
+| **Generated** | `scripts/gen_patterns.py`, 2026-10-21 |
 
 ### Formal characterisation
 

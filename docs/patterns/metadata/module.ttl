@@ -1,8 +1,8 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix ns1: <http://purl.obolibrary.org/obo/> .
-@prefix ns2: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
-@prefix ns3: <http://www.w3.org/2003/11/swrl#> .
+@prefix ns2: <http://www.w3.org/2003/11/swrl#> .
+@prefix ns3: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
 @prefix ns4: <https://nfdi.fiz-karlsruhe.de/ontology/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -30,8 +30,6 @@ ns1:IAO_0000116 a owl:AnnotationProperty .
 ns1:IAO_0000118 a owl:AnnotationProperty .
 
 ns1:IAO_0000119 a owl:AnnotationProperty .
-
-ns1:IAO_0100001 a owl:AnnotationProperty .
 
 ns1:OBI_0001948 a owl:Class ;
     rdfs:label "sequence assembly name"@en ;
@@ -120,25 +118,25 @@ dcterms:license a owl:AnnotationProperty .
                         owl:someValuesFrom ns1:OBI_0000260 ] ) ] ;
     skos:definition "Protocol is a plan specification that prescribes the steps, conditions, rules, or procedures for carrying out a process, experiment, workflow, or activity." .
 
-ns2:coversRequirements a owl:AnnotationProperty .
+ns3:coversRequirements a owl:AnnotationProperty .
 
-ns2:extractedFrom a owl:AnnotationProperty .
+ns3:extractedFrom a owl:AnnotationProperty .
 
-ns2:hasComponent a owl:AnnotationProperty .
+ns3:hasComponent a owl:AnnotationProperty .
 
-ns2:hasConsequences a owl:AnnotationProperty .
+ns3:hasConsequences a owl:AnnotationProperty .
 
-ns2:hasIntent a owl:AnnotationProperty .
+ns3:hasIntent a owl:AnnotationProperty .
 
-ns2:hasUnitTest a owl:AnnotationProperty .
+ns3:hasUnitTest a owl:AnnotationProperty .
 
-ns2:isSpecializationOf a owl:AnnotationProperty .
+ns3:isSpecializationOf a owl:AnnotationProperty .
 
-ns2:reengineeredFrom a owl:AnnotationProperty .
+ns3:reengineeredFrom a owl:AnnotationProperty .
 
-ns2:relatedCPs a owl:AnnotationProperty .
+ns3:relatedCPs a owl:AnnotationProperty .
 
-ns2:scenarios a owl:AnnotationProperty .
+ns3:scenarios a owl:AnnotationProperty .
 
 skos:altLabel a owl:AnnotationProperty .
 
@@ -155,7 +153,6 @@ skos:scopeNote a owl:AnnotationProperty .
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453302652831>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453306512851>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453315869421> ;
-    ns1:RO_0000056 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/1746117452994277> ;
     ns4:NFDI_0000142 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451558370462> ;
     ns4:NFDI_0000194 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453319483821> .
 
@@ -168,21 +165,19 @@ skos:scopeNote a owl:AnnotationProperty .
         <https://orcid.org/0000-0002-2691-6995>,
         <https://orcid.org/0000-0002-3092-0532> ;
     dcterms:license "CC BY 4.0 (repository); CC0 1.0 declared in the ontology header" ;
-    ns2:coversRequirements "Where is a given metadata standard documented, and who maintains it?",
+    ns3:coversRequirements "Where is a given metadata standard documented, and who maintains it?",
         "Which datasets or repositories conform to a given metadata standard?",
         "Which metadata standards are used in MatWerk research data management?" ;
-    ns2:extractedFrom "the metadata tab of the NFDI-MatWerk curation workbook" ;
-    ns2:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
-    ns2:hasIntent "To represent a obsolete metadata specification in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
-    ns2:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
-    ns2:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
-    ns2:reengineeredFrom "ROBOT template directives, row 2 of the metadata tab" ;
-    ns2:scenarios "“Metadata schemes for materials science data” is a obsolete metadata specification, with name “Metadata schemes for materials science data”; repository link “url 560”; short description “Metadata schemes for materials science data in JSON representation as implemented in TTL representation in the application profiles in the version from 01.05.2022 of the research data management platform CoScInE. The schema are actively developed in the SFB1394 with the aim to construct defect phase diagrams in an automated fashion using all data from advanced experimental characterization and computer simulations produced in this Project collabration.”." ;
+    ns3:extractedFrom "the metadata tab of the NFDI-MatWerk curation workbook" ;
+    ns3:hasConsequences "Values become reusable and independently addressable, and one value may be shared by many entities. The cost: every `I` reference resolves by label, so labels must be unique and a typo yields a silently missing relation rather than an error." ;
+    ns3:hasIntent "To represent a obsolete metadata specification in the MatWerk Knowledge Graph: its identity, the value nodes that describe it, and its links to the other entities the NFDI-MatWerk consortium records." ;
+    ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001054> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
+    ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
+    ns3:reengineeredFrom "ROBOT template directives, row 2 of the metadata tab" ;
+    ns3:scenarios "“Metadata schemes for materials science data” is a obsolete metadata specification, with name “Metadata schemes for materials science data”; repository link “repository of “Metadata schemes for materials science data””; short description “Metadata schemes for materials science data in JSON representation as implemented in TTL representation in the application profiles in the version from 01.05.2022 of the research data management platform CoScInE. The schema are actively developed in the SFB1394 with the aim to construct defect phase diagrams in an automated fashion using all data from advanced experimental characterization and computer simulations produced in this Project collabration.”." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.2/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/metadata/1.0.0> ;
     owl:versionInfo "1.0.0" .
-
-ns4:NFDI_0000012 a owl:AnnotationProperty .
 
 ns4:NFDI_0000142 a owl:ObjectProperty ;
     rdfs:label "NFDI_0000142" .
@@ -235,7 +230,8 @@ ns1:IAO_0000235 a owl:ObjectProperty ;
     rdfs:subPropertyOf ns4:NFDI_0000226 .
 
 ns1:IAO_0000311 a owl:Class ;
-    rdfs:label "publication"@en ;
+    rdfs:label "publication",
+        "publication"@en ;
     ns1:IAO_0000112 "journal article, newspaper story, book, etc."@en ;
     ns1:IAO_0000115 "A document that is the output of a publishing process."@en ;
     ns1:IAO_0000118 "published document"@en ;
@@ -371,16 +367,13 @@ ns1:SO_0001410 a owl:Class ;
     rdfs:label "Metadata schemes for materials science data in JSON representation as implemented in TTL representation in the application profiles in the version from 01.05.2022 of the research data management platform CoScInE. The schema are actively developed in the SFB1394 with the aim to construct defect phase diagrams in an automated fashion using all data from advanced experimental characterization and computer simulations produced in this Project collabration." .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453306512851> a ns4:NFDI_0000030 ;
-    rdfs:label "url 560" .
+    rdfs:label "repository of “Metadata schemes for materials science data”" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453315869421> a ns4:NFDI_0000190 ;
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453315869421> a ns1:IAO_0000311 ;
     rdfs:label "https://doi.org/10.5281/zenodo.6513745" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453319483821> a ns4:NFDI_0000002 ;
     rdfs:label "SFB1394" .
-
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/1746117452994277> a ns4:NFDI_0000111 ;
-    rdfs:label "ContactingProcess 277" .
 
 ns4:NFDI_0000002 a owl:Class ;
     rdfs:label "project",
@@ -405,22 +398,6 @@ ns4:NFDI_0000030 a owl:Class ;
     rdfs:subClassOf ns1:IAO_0000310 ;
     skos:definition "A document that organizes and stores source code files, associated metadata, and version history to facilitate the management, sharing, and collaborative development of software projects. It serves as a structured collection of information that tracks changes, maintains integrity, and supports workflows such as version control, branching, and merging." ;
     skos:editorialNote "The source code repository stands for the CONTENT of the repository, which, e.g., you can copy to your hard drive. This distinguishes it from the website class which e.g. is used to publish the content."@en .
-
-ns4:NFDI_0000111 a owl:Class ;
-    rdfs:label "contacting process",
-        "contacting process"@en ;
-    rdfs:subClassOf ns1:BFO_0000015 ;
-    skos:definition "A process in which the contact information of an entity is provided."@en ;
-    ns4:NFDI_0000012 "Contacting" .
-
-ns4:NFDI_0000190 a owl:Class ;
-    rdfs:label "obsolete publication",
-        "obsolete publication"@en ;
-    ns1:IAO_0100001 ns1:IAO_0000311 ;
-    owl:deprecated true ;
-    skos:definition "A publication that is the output of a publishing process and a creative process."@en ;
-    skos:editorialNote "A published scholarly work that reports on ongoing activity about or within a resource, e.g. a dataset."@en ;
-    skos:example "MusiXplora: Visual analysis of a musicological encyclopedia, Textkategorien in kompositorischen Werkstattdokumenten" .
 
 ns4:NFDI_0001018 a owl:Class ;
     rdfs:label "textual description",
@@ -508,8 +485,7 @@ ns1:OBI_0100051 a owl:Class ;
                         owl:someValuesFrom ns1:OBI_0000112 ] ) ] .
 
 ns1:RO_0000056 a owl:ObjectProperty ;
-    rdfs:label "participates in",
-        "participates in"@en ;
+    rdfs:label "participates in"@en ;
     ns1:IAO_0000112 "this blood clot participates in this blood coagulation"@en,
         "this input material (or this output material) participates in this process"@en,
         "this investigator participates in this investigation"@en ;
@@ -913,16 +889,7 @@ ns1:COB_0000035 a owl:Class ;
             owl:someValuesFrom ns1:OBI_0000260 ],
         ns1:COB_0000082 .
 
-<urn:swrl:var#e> a ns3:Variable .
-
-ns1:RO_0000053 a owl:InverseFunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "has characteristic"@en ;
-    ns1:IAO_0000112 "this apple is bearer of this red color"@en,
-        "this vase is bearer of this fragility"@en ;
-    ns1:IAO_0000115 "Inverse of characteristic_of"@en ;
-    ns1:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
-    rdfs:range ns1:BFO_0000020 .
+<urn:swrl:var#e> a ns2:Variable .
 
 ns1:BFO_0000015 a owl:Class ;
     rdfs:label "process"@en ;
@@ -941,6 +908,15 @@ ns1:BFO_0000015 a owl:Class ;
     skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
     skos:example "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
 
+ns1:RO_0000053 a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "has characteristic"@en ;
+    ns1:IAO_0000112 "this apple is bearer of this red color"@en,
+        "this vase is bearer of this fragility"@en ;
+    ns1:IAO_0000115 "Inverse of characteristic_of"@en ;
+    ns1:IAO_0000116 "A bearer can have many dependents, and its dependents can exist for different periods of time, but none of its dependents can exist when the bearer does not exist."@en ;
+    rdfs:range ns1:BFO_0000020 .
+
 ns1:BFO_0000050 a owl:ObjectProperty,
         owl:TransitiveProperty ;
     rdfs:label "part of",
@@ -957,80 +933,80 @@ A continuant cannot be part of an occurrent: use 'participates in'. An occurrent
     ns1:IAO_0000118 "part_of"@en ;
     owl:inverseOf ns1:BFO_0000051 .
 
-<urn:swrl:var#d> a ns3:Variable .
+<urn:swrl:var#d> a ns2:Variable .
 
 [] a owl:AllDisjointClasses ;
     owl:members ( ns1:BFO_0000004 ns1:BFO_0000020 ns1:BFO_0000031 ) .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000016 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000016 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000091 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000091 ] ;
             rdf:rest () ] .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000019 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000019 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000086 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000086 ] ;
             rdf:rest () ] .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000023 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000023 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000087 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000087 ] ;
             rdf:rest () ] .
 
-[] a ns3:Imp ;
-    ns3:body [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000053 ] ;
-            rdf:rest [ a ns3:AtomList ;
-                    rdf:first [ a ns3:ClassAtom ;
-                            ns3:argument1 <urn:swrl:var#d> ;
-                            ns3:classPredicate ns1:BFO_0000034 ] ;
+[] a ns2:Imp ;
+    ns2:body [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000053 ] ;
+            rdf:rest [ a ns2:AtomList ;
+                    rdf:first [ a ns2:ClassAtom ;
+                            ns2:argument1 <urn:swrl:var#d> ;
+                            ns2:classPredicate ns1:BFO_0000034 ] ;
                     rdf:rest () ] ] ;
-    ns3:head [ a ns3:AtomList ;
-            rdf:first [ a ns3:IndividualPropertyAtom ;
-                    ns3:argument1 <urn:swrl:var#e> ;
-                    ns3:argument2 <urn:swrl:var#d> ;
-                    ns3:propertyPredicate ns1:RO_0000085 ] ;
+    ns2:head [ a ns2:AtomList ;
+            rdf:first [ a ns2:IndividualPropertyAtom ;
+                    ns2:argument1 <urn:swrl:var#e> ;
+                    ns2:argument2 <urn:swrl:var#d> ;
+                    ns2:propertyPredicate ns1:RO_0000085 ] ;
             rdf:rest () ] .
 

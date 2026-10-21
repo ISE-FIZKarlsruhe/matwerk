@@ -16,7 +16,7 @@
 @prefix msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/> .
 
 msekg:17461177496088 a nfdi:NFDI_0000114 ;
-    rdfs:label "ContactPointRole 9" ;
+    rdfs:label "contact point role for ParaView" ;
     obo:IAO_0000235 msekg:17451655907096 ;
     obo:IAO_0000235 msekg:17451656738511 ;
     obo:RO_0000081 msekg:17451651928129 .
@@ -24,6 +24,6 @@ msekg:17461177496088 a nfdi:NFDI_0000114 ;
 msekg:17451655907096 a obo:IAO_0000429 ;
     rdfs:label "support@kitware.com" .
 msekg:17451656738511 a nfdi:NFDI_0000223 ;
-    rdfs:label "url 384" .
+    rdfs:label "role website of ParaView" .
 msekg:17451651928129 a nfdi:NFDI_0000102 ;
-    rdfs:label "ContactPoint 9" .
+    rdfs:label "contact point of ParaView" .

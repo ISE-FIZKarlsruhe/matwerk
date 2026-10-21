@@ -1,6 +1,6 @@
 # matwerkiuc
 
-The `matwerkiuc` tab of the MatWerk workbook currently holds **34 rows**. Every row follows the same shape, and that shape is the pattern below: a **entity** instance carrying the row's identity, denoted by **value node** nodes that hold its values, and object properties pointing at entities in other tabs.
+The `matwerkiuc` tab of the MatWerk workbook currently holds **40 rows**. Every row follows the same shape, and that shape is the pattern below: a **entity** instance carrying the row's identity, denoted by **value node** nodes that hold its values, and object properties pointing at entities in other tabs.
 
 *Generated from the live sheet and MWO 3.0.2 by `scripts/gen_patterns.py` — regenerate it rather than editing it by hand.*
 
@@ -43,7 +43,6 @@ These value-node types live in the workbook's shared `req_2` tab but belong to t
 
 | Component | Class | References |
 |---|---|---|
-| objective specification | `obo:IAO_0000005` | 24 |
 | measure textual entity | `mwo:MWO_0001101` | 17 |
 | requirements textual entity | `obo:IAO_0000642` | 17 |
 | added value textual entity | `nfdi:NFDI_0001101` | 17 |
@@ -81,14 +80,14 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Solution description** | An entity individual typed `mwo:MWO_0001026` carries identity and label; each descriptive value is a separate *value node* individual reached by `obo:IAO_0000235` (denoted by); links to other patterns are object properties onto those entities. Identity is a minted IRI `msekg:<epoch_ms><counter>`, so re-running the pipeline is idempotent. |
 | **Reusable OWL Building Block** | [`module.ttl`](module.ttl) — the example together with the axioms of every term it uses, extracted from the ontology, so the file stands alone |
 | **Consequences** | Values become reusable and independently addressable, and a value may be shared by many entities. The cost: every `I` reference resolves **by label**, so labels must be unique and a typo yields a silently missing relation rather than an error. |
-| **Scenarios** | “IUC1” is a infrastructure use case, with iuc name “Web-based demonstration and teaching framework for MSE research data infrastructure”; main task area “TA-CI”; related task area “TA-MDI,TA-WSD”. |
+| **Scenarios** | “IUC1” is a infrastructure use case, with iuc name “Web-based demonstration and teaching framework for MSE research data infrastructure”; main task area “TA-CI”; related task area “TA-MDI,TA-WLE”. |
 | **Known Uses** | the MatWerk Knowledge Graph (`https://nfdi.fiz-karlsruhe.de/matwerk`), published as Virtuoso named graphs |
 | **Web References** | <https://nfdi-matwerk.de> · <https://ise-fizkarlsruhe.github.io/mwo/> |
 | **Other References** | https://doi.org/10.1002/adem.202502331 |
 | **Examples (OWL files)** | [`pattern.ttl`](pattern.ttl) — one real row of the tab, with its value nodes resolved |
-| **Extracted From** | the `matwerkiuc` tab of the NFDI-MatWerk curation workbook (34 rows at generation time) |
+| **Extracted From** | the `matwerkiuc` tab of the NFDI-MatWerk curation workbook (40 rows at generation time) |
 | **Reengineered From** | the ROBOT template directives in row 2 of that tab |
-| **Has Components** | objective specification, measure textual entity, requirements textual entity, added value textual entity |
+| **Has Components** | measure textual entity, requirements textual entity, added value textual entity |
 | **Specialization Of** | the entity-and-value-node pattern shared by every tab ([overview](../index.md)) |
 | **Related CPs** | [matwerkta](../matwerkta/pattern.md) |
 
@@ -102,7 +101,7 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 | **Reused ontologies** | BFO 2020 (`http://purl.obolibrary.org/obo/bfo.owl`), NFDIcore (`https://nfdi.fiz-karlsruhe.de/ontology/`), IAO (`http://purl.obolibrary.org/obo/iao.owl`), RO (`http://purl.obolibrary.org/obo/ro.owl`) |
 | **Ontology licence** | CC BY 4.0 (repository); CC0 1.0 declared in the ontology header |
 | **Cite the ontology as** | Hossein Beygi Nasrabadi, Jörg Waitelonis, Ebrahim Norouzi, Kostiantyn Hubaiev, Harald Sack. NFDI MatWerk Ontology (mwo). Revision: v3.0.2. Retrieved from: http://purls.helmholtz-metadaten.de/mwo/3.0.2 |
-| **Generated** | `scripts/gen_patterns.py`, 2026-09-25 |
+| **Generated** | `scripts/gen_patterns.py`, 2026-10-21 |
 
 ### Formal characterisation
 
@@ -110,8 +109,8 @@ The [Ontology Design Patterns](http://ontologydesignpatterns.org) content-ODP an
 |---|---|
 | **Consistency** | **consistent** — ROBOT 1.9.10, reasoner HermiT, merged with MWO 3.0.2 |
 | **DL expressivity** | `RRESTRCUCINTUNIVRESTREROIF` — measured on the pattern together with a STAR module of exactly the terms it uses, so the figure describes this pattern rather than the whole ontology |
-| **Axioms / logical axioms** | 26 / 9 |
-| **Classes / individuals** | 9 / 9 |
+| **Axioms / logical axioms** | 20 / 7 |
+| **Classes / individuals** | 7 / 7 |
 
 ## Consistency
 

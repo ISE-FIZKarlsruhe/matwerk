@@ -15,7 +15,7 @@
 @prefix mwo: <http://purls.helmholtz-metadaten.de/mwo/> .
 @prefix msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/> .
 
-msekg:17451635324071 a nfdi:NFDI_0000190 ;
+msekg:17451635324071 a obo:IAO_0000311 ;
     rdfs:label "Automated free-energy calculation from atomistic simulations" ;
     obo:IAO_0000235 msekg:17451643360461 ;
     obo:BFO_0000051 msekg:17463627669451 ;
@@ -24,12 +24,12 @@ msekg:17451635324071 a nfdi:NFDI_0000190 ;
     obo:RO_0000056 msekg:17463579651201 .
 
 msekg:17451643360461 a obo:IAO_0000305 ;
-    rdfs:label "Automated free-energy calculation from atomistic simulations __name__" .
+    rdfs:label "document title “Automated free-energy calculation from atomistic simulations”" .
 msekg:17463627669451 a nfdi:NFDI_0001030 ;
     rdfs:label "Sarath Menon, Yury Lysogorskiy, Jutta Rogal, Ralf Drautz" .
 msekg:17451661339551 a nfdi:NFDI_0001033 ;
     rdfs:label "Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation, Interdisciplinary Centre for Advanced Materials Simulation" .
 msekg:17451658846301 a nfdi:NFDI_0001037 ;
-    rdfs:label "url 400" .
-msekg:17463579651201 a nfdi:NFDI_0000014 ;
-    rdfs:label "publication publishing process 1" .
+    rdfs:label "DOI of “Automated free-energy calculation from atomistic simulations”" .
+msekg:17463579651201 a obo:IAO_0000444 ;
+    rdfs:label "publishing of “Automated free-energy calculation from atomistic simulations”" .

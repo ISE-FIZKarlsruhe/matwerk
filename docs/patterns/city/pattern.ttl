@@ -20,4 +20,4 @@ msekg:17451393742191 a nfdi:NFDI_0000106 ;
     obo:IAO_0000235 msekg:174513931522919 .
 
 msekg:174513931522919 a obo:IAO_0000303 ;
-    rdfs:label "Dusseldorf_" .
+    rdfs:label "city name “Dusseldorf”" .

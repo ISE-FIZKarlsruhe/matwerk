@@ -150,7 +150,7 @@ skos:example a owl:AnnotationProperty .
 skos:scopeNote a owl:AnnotationProperty .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17461177496088> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114> ;
-    rdfs:label "ContactPointRole 9" ;
+    rdfs:label "contact point role for ParaView" ;
     ns1:IAO_0000235 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451655907096>,
         <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451656738511> ;
     ns1:RO_0000081 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451651928129> .
@@ -174,7 +174,7 @@ skos:scopeNote a owl:AnnotationProperty .
     ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000114> ; <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
     ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
     ns3:reengineeredFrom "ROBOT template directives, row 2 of the role tab" ;
-    ns3:scenarios "“ContactPointRole 9” is a contact point role, with role email “support@kitware.com”; role website “url 384”; role of “ContactPoint 9”." ;
+    ns3:scenarios "“contact point role for ParaView” is a contact point role, with role email “support@kitware.com”; role website “role website of ParaView”; role of “contact point of ParaView”." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.2/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/role/1.0.0> ;
     owl:versionInfo "1.0.0" .
@@ -293,13 +293,13 @@ ns1:RO_0000092 a owl:ObjectProperty ;
     rdfs:subPropertyOf ns1:RO_0000052 .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451651928129> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000102> ;
-    rdfs:label "ContactPoint 9" .
+    rdfs:label "contact point of ParaView" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451655907096> a ns1:IAO_0000429 ;
     rdfs:label "support@kitware.com" .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17451656738511> a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000223> ;
-    rdfs:label "url 384" .
+    rdfs:label "role website of ParaView" .
 
 <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000004> a owl:Class ;
     rdfs:label "person"@en ;

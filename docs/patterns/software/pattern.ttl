@@ -38,16 +38,16 @@ msekg:17467208847624 a nfdi:NFDI_0000100 ;
 msekg:17451614886141 a obo:IAO_0000129 ;
     rdfs:label "1.1.4" .
 msekg:17451615716571 a nfdi:NFDI_0000223 ;
-    rdfs:label "url 58" .
+    rdfs:label "website of “Calphy”" .
 msekg:17451617627761 a nfdi:NFDI_0001210 ;
-    rdfs:label "url 194" .
+    rdfs:label "repository of “Calphy”" .
 msekg:17461174529941 a nfdi:NFDI_0000111 ;
-    rdfs:label "ContactingProcess 1" .
+    rdfs:label "contacting Calphy" .
 msekg:17451619608881 a <http://www.ebi.ac.uk/swo/SWO_0000002> ;
     rdfs:label "ASL/ BSD-3" .
 msekg:17451628516963 a obo:IAO_0000025 ;
     rdfs:label "python" .
 msekg:17451394390861 a obo:OBI_0000245 ;
     rdfs:label "Max Planck Institute for Iron Research" .
-msekg:17451635324071 a nfdi:NFDI_0000190 ;
+msekg:17451635324071 a obo:IAO_0000311 ;
     rdfs:label "Automated free-energy calculation from atomistic simulations" .

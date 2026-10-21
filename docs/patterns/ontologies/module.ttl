@@ -8,7 +8,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ns1:BFO_0000054 a owl:ObjectProperty ;
     rdfs:label "has realization"@en,
@@ -41,8 +40,6 @@ ns1:IAO_0000311 a owl:Class ;
             owl:intersectionOf ( ns1:IAO_0000310 [ a owl:Restriction ;
                         owl:allValuesFrom ns1:IAO_0000444 ;
                         owl:onProperty ns1:OBI_0000312 ] ) ] .
-
-ns1:IAO_0100001 a owl:AnnotationProperty .
 
 ns1:OBI_0001948 a owl:Class ;
     rdfs:label "sequence assembly name"@en ;
@@ -188,7 +185,7 @@ skos:scopeNote a owl:AnnotationProperty .
     ns3:hasUnitTest "SELECT ?x ?label WHERE { ?x a <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0000023> ; <http://purl.obolibrary.org/obo/IAO_0000235> ?d . ?d <http://www.w3.org/2000/01/rdf-schema#label> ?label } LIMIT 10" ;
     ns3:isSpecializationOf <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/entity-and-value-node> ;
     ns3:reengineeredFrom "ROBOT template directives, row 2 of the ontologies tab" ;
-    ns3:scenarios "“Dislocation Ontology (DISO)” is a ontology, with name “Dislocation Ontology (DISO)”; link (url / pid) to repository “url 570”; link (url / pid) to documentation “url 666”." ;
+    ns3:scenarios "“Dislocation Ontology (DISO)” is a ontology, with name “Dislocation Ontology (DISO)”; link (url / pid) to repository “repository of “Dislocation Ontology (DISO)””; link (url / pid) to documentation “documentation of “Dislocation Ontology (DISO)””." ;
     rdfs:isDefinedBy <https://raw.githubusercontent.com/ISE-FIZKarlsruhe/mwo/v3.0.2/mwo-full.ttl> ;
     owl:versionIRI <https://nfdi.fiz-karlsruhe.de/matwerk/pattern/ontologies/1.0.0> ;
     owl:versionInfo "1.0.0" .
@@ -375,19 +372,10 @@ ns1:SO_0001410 a owl:Class ;
     rdfs:label "DISO is a domain ontology that defines the linear defect, in particular dislocation concepts and relations between them in crystalline materials. Moreover, Crystal Structure Ontology (CSO) and Crystallographic Defect Ontology (CDO), which ontologies define the concepts of crystal structureand crystalline defect, respectively, are also introduced in this repository." .
 
 <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453306512862> a ns4:NFDI_0000030 ;
-    rdfs:label "url 570" .
+    rdfs:label "repository of “Dislocation Ontology (DISO)”" .
 
-<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453307829846> a ns4:NFDI_0000022 ;
-    rdfs:label "url 666" .
-
-ns4:NFDI_0000022 a owl:Class ;
-    rdfs:label "obsolete document",
-        "obsolete document"@en ;
-    ns1:IAO_0000112 "A journal article, patent application, laboratory notebook, or a book" ;
-    ns1:IAO_0000119 "http://purl.obolibrary.org/obo/IAO_0000310" ;
-    ns1:IAO_0100001 ns1:IAO_0000310 ;
-    owl:deprecated true ;
-    skos:definition "A collection of information content entities intended to be understood together as a whole"@en .
+<https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17453307829846> a ns1:IAO_0000310 ;
+    rdfs:label "documentation of “Dislocation Ontology (DISO)”" .
 
 ns4:NFDI_0000023 a owl:Class ;
     rdfs:label "ontology",
@@ -653,7 +641,8 @@ ns1:IAO_0000300 a owl:Class ;
     rdfs:subClassOf ns1:IAO_0000030 .
 
 ns1:IAO_0000310 a owl:Class ;
-    rdfs:label "document"@en ;
+    rdfs:label "document",
+        "document"@en ;
     ns1:IAO_0000112 "A journal article, patent application, laboratory notebook, or a book"@en ;
     ns1:IAO_0000115 "A collection of information content entities intended to be understood together as a whole"@en ;
     rdfs:subClassOf ns1:IAO_0000030 .

@@ -15,26 +15,29 @@
 @prefix mwo: <http://purls.helmholtz-metadaten.de/mwo/> .
 @prefix msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/> .
 
-msekg:17453262143199 a <https://w3id.org/pmd/co/PMD_0000602> ;
-    obo:IAO_0000235 msekg:17453266931258 ;
-    obo:IAO_0000235 msekg:17453266100515 ;
-    nfdi:NFDI_0000240 msekg:17467062556508 ;
-    obo:IAO_0000235 msekg:17453275064407 ;
-    nfdi:NFDI_0000216 msekg:17453271009199 ;
-    nfdi:NFDI_0000240 msekg:17451394390863 ;
-    obo:RO_0000056 msekg:1746117452994274 .
+msekg:17453262143191 a <https://w3id.org/pmd/co/PMD_0000602> ;
+    obo:IAO_0000235 msekg:17453266931251 ;
+    obo:IAO_0000235 msekg:17453266100511 ;
+    nfdi:NFDI_0000240 msekg:17924307049041 ;
+    obo:IAO_0000235 msekg:17453275064401 ;
+    nfdi:NFDI_0000216 msekg:174513921413984 ;
+    nfdi:NFDI_0000240 msekg:174513943908642 ;
+    obo:RO_0000056 msekg:1746117452994266 ;
+    obo:RO_0000056 msekg:17924294180139 .
 
-msekg:17453266931258 a obo:IAO_0000590 ;
-    rdfs:label "Extensometer" .
-msekg:17453266100515 a nfdi:NFDI_0001018 ;
-    rdfs:label "Displacement measurement during tensile testing" .
-msekg:17467062556508 a nfdi:NFDI_0000102 ;
-    rdfs:label "HBM" .
-msekg:17453275064407 a obo:IAO_0000017 ;
-    rdfs:label "two-sided LVDTs" .
-msekg:17453271009199 a nfdi:NFDI_0000215 ;
-    rdfs:label "Displacement measurement" .
-msekg:17451394390863 a obo:OBI_0000245 ;
-    rdfs:label "Federal Institute For Materials Research and Testing" .
-msekg:1746117452994274 a nfdi:NFDI_0000111 ;
-    rdfs:label "ContactingProcess 274" .
+msekg:17453266931251 a obo:IAO_0000590 ;
+    rdfs:label "Procon CT-alpha" .
+msekg:17453266100511 a nfdi:NFDI_0001018 ;
+    rdfs:label "X-ray micro computed tomography (micro-CT)" .
+msekg:17924307049041 a nfdi:NFDI_0000102 ;
+    rdfs:label "ProCon X-ray" .
+msekg:17453275064401 a obo:IAO_0000017 ;
+    rdfs:label "CT-alpha" .
+msekg:174513921413984 a nfdi:NFDI_0000100 ;
+    rdfs:label "X-ray computed tomography" .
+msekg:174513943908642 a obo:OBI_0000245 ;
+    rdfs:label "Saarland University" .
+msekg:1746117452994266 a nfdi:NFDI_0000111 ;
+    rdfs:label "contacting Procon CT-alpha" .
+msekg:17924294180139 a <https://w3id.org/pmd/co/PMD_0000833> ;
+    rdfs:label "manufacturing of Procon CT-alpha by ProCon X-ray" .
