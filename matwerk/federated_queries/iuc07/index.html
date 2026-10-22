@@ -2873,7 +2873,7 @@
 <p class="admonition-title">Mapping status</p>
 <p>Currently mapped: <strong>dataset and provenance metadata</strong>. The simulation parameters themselves — RVE geometry, mechanical boundary conditions, constitutive model, crystallographic orientation, stress–strain results — are planned next, pending their ontology mapping. The competency questions below reflect what is queryable today.</p>
 </div>
-<p>The graph is produced by the <strong><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG">RML4MSE-KG</a></strong> pipeline, grounded in the <a href="https://github.com/ISE-FIZKarlsruhe/mwo">MatWerk Ontology (MWO)</a> and NFDIcore.</p>
+<p>The graph is produced by the <strong><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG">RML4MatWerk KG</a></strong> pipeline, grounded in the <a href="https://github.com/ISE-FIZKarlsruhe/mwo">MatWerk Ontology (MWO)</a> and NFDIcore.</p>
 <h2 id="at-a-glance">At a glance</h2>
 <table>
 <thead>
@@ -2884,7 +2884,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>IRI in MSE-KG</strong></td>
+<td><strong>IRI in MatWerk KG</strong></td>
 <td><a href="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17902496761672"><code>msekg:17902496761672</code></a></td>
 </tr>
 <tr>
@@ -2925,7 +2925,7 @@
 </tr>
 <tr>
 <td><strong>Pipeline</strong></td>
-<td><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/MiMeDat%20(IUC07)"><code>MiMeDat (IUC07)</code></a> in RML4MSE-KG</td>
+<td><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/MiMeDat%20(IUC07)"><code>MiMeDat (IUC07)</code></a> in RML4MatWerk KG</td>
 </tr>
 <tr>
 <td><strong>RDF dataset</strong></td>
@@ -2966,9 +2966,9 @@
 </span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="competency-questions">Competency questions</h2>
-<p>The three competency questions below are taken <strong>verbatim</strong> from <a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/MiMeDat%20(IUC07)/queries"><code>MiMeDat (IUC07)/queries/</code></a> in the RML4MSE-KG repository. CQ2 and CQ3 are written against the example dataset <code>msekg:a46fde6c</code> — change that <code>BIND</code> to target another dataset.</p>
+<p>The three competency questions below are taken <strong>verbatim</strong> from <a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/MiMeDat%20(IUC07)/queries"><code>MiMeDat (IUC07)/queries/</code></a> in the RML4MatWerk KG repository. CQ2 and CQ3 are written against the example dataset <code>msekg:a46fde6c</code> — change that <code>BIND</code> to target another dataset.</p>
 <h3 id="cq1-list-all-simulation-datasets-together-with-their-title-and-identifier">CQ1 — List all simulation datasets together with their title and identifier</h3>
-<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/MiMeDat%20(IUC07)/queries/01_datasets_title_and_identifier.rq"><code>01_datasets_title_and_identifier.rq</code></a></p>
+<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/MiMeDat%20(IUC07)/queries/01_datasets_title_and_identifier.rq"><code>01_datasets_title_and_identifier.rq</code></a></p>
 <div class="language-turtle highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">nfdi:</span><span class="w"> </span><span class="nv">&lt;https://nfdi.fiz-karlsruhe.de/ontology/&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">obo:</span><span class="w">  </span><span class="nv">&lt;http://purl.obolibrary.org/obo/&gt;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
@@ -2987,7 +2987,7 @@
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="err">ORDER</span> <span class="err">BY</span> <span class="err">?dataset</span>
 </span></code></pre></div>
 <h3 id="cq2-retrieve-the-full-creator-and-contributor-list-name-orcid-affiliation-institute-research-group-for-a-dataset">CQ2 — Retrieve the full creator and contributor list (name, ORCID, affiliation, institute, research group) for a dataset</h3>
-<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/MiMeDat%20(IUC07)/queries/02_creators_and_contributors_for_dataset.rq"><code>02_creators_and_contributors_for_dataset.rq</code></a></p>
+<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/MiMeDat%20(IUC07)/queries/02_creators_and_contributors_for_dataset.rq"><code>02_creators_and_contributors_for_dataset.rq</code></a></p>
 <div class="language-turtle highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">msekg:</span><span class="w"> </span><span class="nv">&lt;https://nfdi.fiz-karlsruhe.de/matwerk/msekg/&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">nfdi:</span><span class="w">  </span><span class="nv">&lt;https://nfdi.fiz-karlsruhe.de/ontology/&gt;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">mwo:</span><span class="w">   </span><span class="nv">&lt;http://purls.helmholtz-metadaten.de/mwo/&gt;</span>
@@ -3040,7 +3040,7 @@
 </span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a><span class="err">ORDER</span> <span class="err">BY</span> <span class="err">?role</span> <span class="err">?person</span>
 </span></code></pre></div>
 <h3 id="cq3-retrieve-the-funding-organization-publisher-licence-and-rights-holder-for-a-dataset">CQ3 — Retrieve the funding organization, publisher, licence, and rights holder for a dataset</h3>
-<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/MiMeDat%20(IUC07)/queries/03_funding_publisher_licence_rightsholder.rq"><code>03_funding_publisher_licence_rightsholder.rq</code></a></p>
+<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/MiMeDat%20(IUC07)/queries/03_funding_publisher_licence_rightsholder.rq"><code>03_funding_publisher_licence_rightsholder.rq</code></a></p>
 <div class="language-turtle highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">msekg:</span><span class="w"> </span><span class="nv">&lt;https://nfdi.fiz-karlsruhe.de/matwerk/msekg/&gt;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">nfdi:</span><span class="w">  </span><span class="nv">&lt;https://nfdi.fiz-karlsruhe.de/ontology/&gt;</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">mwo:</span><span class="w">   </span><span class="nv">&lt;http://purls.helmholtz-metadaten.de/mwo/&gt;</span>
@@ -3093,18 +3093,18 @@
 </span><span id="__span-3-50"><a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="how-to-cite">How to cite</h2>
-<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nc">@software</span><span class="p">{</span><span class="nl">RML4MSE-KG</span><span class="p">,</span>
-</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="na">author</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">{Beygi Nasrabadi, Hossein and Norouzi, Ebrahim and Waitelonis, J{\"o}rg and Sack, Harald}</span><span class="p">,</span>
-</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="na">title</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{RML pipelines for integrating NFDI MatWerk community datasets to MSE-KG (RML4MSE-KG)}</span><span class="p">,</span>
-</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="na">url</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG}</span><span class="p">,</span>
-</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="na">version</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1.0.0}</span><span class="p">,</span>
-</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="na">date</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{2026-07-22}</span><span class="p">,</span>
-</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">}</span>
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nc">@software</span><span class="p">{</span><span class="nl">RML4MatWerk</span><span class="w"> </span><span class="err">KG,</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="err">author</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">{Beygi</span><span class="w"> </span><span class="err">Nasrabadi,</span><span class="w"> </span><span class="err">Hossein</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">Norouzi,</span><span class="w"> </span><span class="err">Ebrahim</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">Waitelonis,</span><span class="w"> </span><span class="err">J{\"o</span><span class="p">}</span><span class="c">rg and Sack, Harald},</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="c">title   = {RML pipelines for integrating NFDI MatWerk community datasets to MatWerk KG (RML4MatWerk KG)},</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="c">url     = {https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG},</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="c">version = {1.0.0},</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="c">date    = {2026-07-22},</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="c">}</span>
 </span></code></pre></div>
 <h2 id="sources">Sources</h2>
 <ul>
-<li>Competency questions — <a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/MiMeDat%20(IUC07)/queries"><code>MiMeDat (IUC07)/queries/</code></a>, RML4MSE-KG repository</li>
-<li>Pipeline, endpoint and citation — <a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG">RML4MSE-KG README</a></li>
+<li>Competency questions — <a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/MiMeDat%20(IUC07)/queries"><code>MiMeDat (IUC07)/queries/</code></a>, RML4MatWerk KG repository</li>
+<li>Pipeline, endpoint and citation — <a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG">RML4MatWerk KG README</a></li>
 <li>Source data — <a href="https://github.com/Ronakshoghi/MiMeDat">MiMeDat: Metadata Datasets for Microstructure-Sensitive Mechanical Data</a></li>
 <li>MatWerk Ontology (MWO) — <a href="https://github.com/ISE-FIZKarlsruhe/mwo">https://github.com/ISE-FIZKarlsruhe/mwo</a></li>
 </ul>

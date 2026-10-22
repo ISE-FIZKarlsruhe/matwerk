@@ -3022,7 +3022,7 @@
 
 
 <h1 id="creep-literature-knowledge-graph-creeplitkg">Creep Literature Knowledge Graph (CreepLitKG)</h1>
-<p><strong>CreepLitKG</strong> is an LLM + ontology-driven pipeline and knowledge graph that converts creep test metadata <strong>extracted from scientific literature</strong> into ontology-grounded RDF. It makes experimental creep data reported in publications — material identity, chemical composition, heat treatment history, microstructural features, test conditions and creep results — findable, machine-readable and queryable through a public SPARQL endpoint, and federates it into MSE-KG.</p>
+<p><strong>CreepLitKG</strong> is an LLM + ontology-driven pipeline and knowledge graph that converts creep test metadata <strong>extracted from scientific literature</strong> into ontology-grounded RDF. It makes experimental creep data reported in publications — material identity, chemical composition, heat treatment history, microstructural features, test conditions and creep results — findable, machine-readable and queryable through a public SPARQL endpoint, and federates it into MatWerk KG.</p>
 <p>Every entity is typed with classes from the <strong><a href="https://github.com/HosseinBeygiNasrabadi/creep-testing-ontology">Creep Testing Ontology (CTO)</a></strong>, derived from <em>ISO 204:2018 — Metallic materials — Uniaxial creep testing in tension</em>, together with the ontologies CTO reuses (BFO, RO, IAO, OBI, PMDco, NFDIcore, MWO) and measurement units from QUDT.</p>
 <h2 id="at-a-glance">At a glance</h2>
 <table>
@@ -3034,7 +3034,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>IRI in MSE-KG</strong></td>
+<td><strong>IRI in MatWerk KG</strong></td>
 <td><a href="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17858428366781"><code>msekg:17858428366781</code></a></td>
 </tr>
 <tr>
@@ -3085,7 +3085,7 @@
 </table>
 <div class="admonition note">
 <p class="admonition-title">Two URLs, two purposes</p>
-<p>The endpoint node registered in MSE-KG points at the <strong>documentation site</strong> (<code>https://hosseinbeyginasrabadi.github.io/Creep_Literature_Knowledge_Graph/</code>). The <strong>queryable</strong> SPARQL endpoint is the Fuseki URL in the table above, as published in the project's own <a href="https://github.com/HosseinBeygiNasrabadi/Creep_Literature_Knowledge_Graph/blob/main/docs/sparql.md">SPARQL access page</a>. Use the Fuseki URL in a <code>SERVICE</code> clause.</p>
+<p>The endpoint node registered in MatWerk KG points at the <strong>documentation site</strong> (<code>https://hosseinbeyginasrabadi.github.io/Creep_Literature_Knowledge_Graph/</code>). The <strong>queryable</strong> SPARQL endpoint is the Fuseki URL in the table above, as published in the project's own <a href="https://github.com/HosseinBeygiNasrabadi/Creep_Literature_Knowledge_Graph/blob/main/docs/sparql.md">SPARQL access page</a>. Use the Fuseki URL in a <code>SERVICE</code> clause.</p>
 </div>
 <h2 id="how-the-graph-is-built">How the graph is built</h2>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>new creep paper
@@ -3094,7 +3094,7 @@
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   → ./map.sh                    (xlsm → JSON → YARRRML/RML → RDF → pySHACL)
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>   → creep_literature_rdf.ttl
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>   → MaterialDigital Dataportal → public SPARQL endpoint
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>   → harvested into MSE-KG
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>   → harvested into MatWerk KG
 </span></code></pre></div>
 <p>The mapping lives entirely in the YARRRML file, IRIs are derived deterministically from record IDs (so re-runs are idempotent), and the pipeline exits non-zero on any SHACL violation.</p>
 <h2 id="query-interfaces">Query interfaces</h2>
@@ -3158,7 +3158,7 @@
 </span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="competency-questions">Competency questions</h2>
-<p>The eight competency questions below are taken <strong>verbatim</strong> from the project's own <a href="https://github.com/HosseinBeygiNasrabadi/Creep_Literature_Knowledge_Graph/blob/main/docs/sparql.md"><code>docs/sparql.md</code></a>. Run them against the Fuseki endpoint, or wrap them in a <code>SERVICE</code> clause to combine them with MSE-KG.</p>
+<p>The eight competency questions below are taken <strong>verbatim</strong> from the project's own <a href="https://github.com/HosseinBeygiNasrabadi/Creep_Literature_Knowledge_Graph/blob/main/docs/sparql.md"><code>docs/sparql.md</code></a>. Run them against the Fuseki endpoint, or wrap them in a <code>SERVICE</code> clause to combine them with MatWerk KG.</p>
 <p>Prefixes used throughout:</p>
 <div class="language-turtle highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">co:</span><span class="w">   </span><span class="nv">&lt;https://w3id.org/pmd/co/&gt;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">cto:</span><span class="w">  </span><span class="nv">&lt;https://w3id.org/pmd/cto/&gt;</span>

@@ -2724,7 +2724,7 @@
 
 
 <h1 id="federated-queries">Federated queries</h1>
-<p>The MatWerk Knowledge Graph (MSE-KG) does not copy the data of its partner graphs. It <strong>registers</strong> them: every partner graph appears in MSE-KG as a <code>obo:IAO_0001000</code> (dataset) individual carrying its label, licence, creators — and the URL of its public SPARQL endpoint. A federated query then reaches that endpoint live with SPARQL 1.1 <code>SERVICE</code>, so the answer is always computed against the partner's current data.</p>
+<p>The MatWerk Knowledge Graph (MatWerk KG) does not copy the data of its partner graphs. It <strong>registers</strong> them: every partner graph appears in MatWerk KG as a <code>obo:IAO_0001000</code> (dataset) individual carrying its label, licence, creators — and the URL of its public SPARQL endpoint. A federated query then reaches that endpoint live with SPARQL 1.1 <code>SERVICE</code>, so the answer is always computed against the partner's current data.</p>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">SELECT</span> <span class="p">...</span> <span class="k">WHERE</span> <span class="p">{</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  <span class="c"># ---- local: the MatWerk KG --------------------------------</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  <span class="nv">?dataset</span> <span class="k">a</span> <span class="nn">nfdicore_dataset</span><span class="p">:</span> <span class="p">;</span> <span class="p">...</span> <span class="p">.</span>
@@ -2759,7 +2759,7 @@
 <tr>
 <td>A shared <strong>IRI</strong> in the <code>msekg:</code> namespace</td>
 <td><a href="../federated_queries/creeplitkg/">CreepLitKG</a>, <a href="../federated_queries/iuc02/">IUC02</a>, <a href="../federated_queries/iuc07/">IUC07</a></td>
-<td>The RML pipelines mint their IRIs directly in the MSE-KG namespace, so subject IRIs are literally identical</td>
+<td>The RML pipelines mint their IRIs directly in the MatWerk KG namespace, so subject IRIs are literally identical</td>
 </tr>
 </tbody>
 </table>
@@ -2768,7 +2768,7 @@
 <thead>
 <tr>
 <th>Graph</th>
-<th>Registered in MSE-KG as</th>
+<th>Registered in MatWerk KG as</th>
 <th>Join key</th>
 </tr>
 </thead>
@@ -2802,7 +2802,7 @@
 </table>
 <p>Pick a graph from the navigation on the left for its endpoint, its modelling, and its competency questions.</p>
 <h2 id="discovering-endpoints-from-the-graph-itself">Discovering endpoints from the graph itself</h2>
-<p>You do not have to hard-code a partner endpoint. MSE-KG knows all of them — this query returns every registered endpoint together with the dataset it belongs to:</p>
+<p>You do not have to hard-code a partner endpoint. MatWerk KG knows all of them — this query returns every registered endpoint together with the dataset it belongs to:</p>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">PREFIX</span> <span class="nn">nfdicore_sparql_endpoint</span><span class="p">:</span> <span class="nl">&lt;https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">PREFIX</span> <span class="nn">nfdicore_dataset</span><span class="p">:</span>         <span class="nl">&lt;http://purl.obolibrary.org/obo/IAO_0001000&gt;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">PREFIX</span> <span class="nn">denoted_by</span><span class="p">:</span>               <span class="nl">&lt;http://purl.obolibrary.org/obo/IAO_0000235&gt;</span>

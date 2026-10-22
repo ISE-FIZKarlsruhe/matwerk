@@ -2979,7 +2979,7 @@
 
 <h1 id="creep-reference-datasets-knowledge-graph-nfdi-matwerk-iuc02">Creep Reference Datasets Knowledge Graph (NFDI MatWerk IUC02)</h1>
 <p>An RDF repository for <strong>BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6</strong>. The RDF-converted sources semantically describe the creep testing process, test pieces, materials and chemical composition, test machines and extensometers, input specifications (stress, temperature), and primary/secondary test results (rupture time, gauge lengths, durations, elongation/extension percentages).</p>
-<p>The graph is produced by the <strong><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG">RML4MSE-KG</a></strong> pipeline: a YARRRML mapping describes how the source JSON maps to RDF grounded in the <a href="https://github.com/HosseinBeygiNasrabadi/creep-testing-ontology">Creep Testing Ontology (CTO)</a>; a driver script compiles that mapping to RML and runs it over every JSON file, producing one combined, idempotent <code>.ttl</code>.</p>
+<p>The graph is produced by the <strong><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG">RML4MatWerk KG</a></strong> pipeline: a YARRRML mapping describes how the source JSON maps to RDF grounded in the <a href="https://github.com/HosseinBeygiNasrabadi/creep-testing-ontology">Creep Testing Ontology (CTO)</a>; a driver script compiles that mapping to RML and runs it over every JSON file, producing one combined, idempotent <code>.ttl</code>.</p>
 <h2 id="at-a-glance">At a glance</h2>
 <table>
 <thead>
@@ -2990,7 +2990,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>IRI in MSE-KG</strong></td>
+<td><strong>IRI in MatWerk KG</strong></td>
 <td><a href="https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17902496761671"><code>msekg:17902496761671</code></a></td>
 </tr>
 <tr>
@@ -3031,7 +3031,7 @@
 </tr>
 <tr>
 <td><strong>Pipeline</strong></td>
-<td><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/Creep%20reference%20dataset%20(IUC02)"><code>Creep reference dataset (IUC02)</code></a> in RML4MSE-KG</td>
+<td><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/Creep%20reference%20dataset%20(IUC02)"><code>Creep reference dataset (IUC02)</code></a> in RML4MatWerk KG</td>
 </tr>
 <tr>
 <td><strong>RDF dataset</strong></td>
@@ -3072,9 +3072,9 @@
 </span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">}</span>
 </span></code></pre></div>
 <h2 id="competency-questions">Competency questions</h2>
-<p>The eight competency questions below are taken <strong>verbatim</strong> from <a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/Creep%20reference%20dataset%20(IUC02)/queries"><code>Creep reference dataset (IUC02)/queries/</code></a> in the RML4MSE-KG repository.</p>
+<p>The eight competency questions below are taken <strong>verbatim</strong> from <a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/Creep%20reference%20dataset%20(IUC02)/queries"><code>Creep reference dataset (IUC02)/queries/</code></a> in the RML4MatWerk KG repository.</p>
 <h3 id="cq1-list-all-creep-datasets-together-with-their-test-piece-ids-and-material-identifiers">CQ1 — List all creep datasets together with their test piece IDs and material identifiers</h3>
-<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/01_datasets_test_piece_and_material.rq"><code>01_datasets_test_piece_and_material.rq</code></a></p>
+<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/01_datasets_test_piece_and_material.rq"><code>01_datasets_test_piece_and_material.rq</code></a></p>
 <div class="language-turtle highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">cto:</span><span class="w">   </span><span class="nv">&lt;https://w3id.org/pmd/cto/&gt;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">pmdco:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/pmd/co/&gt;</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">obo:</span><span class="w">   </span><span class="nv">&lt;http://purl.obolibrary.org/obo/&gt;</span>
@@ -3099,7 +3099,7 @@
 </span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="err">ORDER</span> <span class="err">BY</span> <span class="err">?dataset</span>
 </span></code></pre></div>
 <h3 id="cq2-retrieve-the-initial-stress-and-temperature-used-for-each-creep-test">CQ2 — Retrieve the initial stress and temperature used for each creep test</h3>
-<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/02_initial_stress_and_temperature.rq"><code>02_initial_stress_and_temperature.rq</code></a></p>
+<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/02_initial_stress_and_temperature.rq"><code>02_initial_stress_and_temperature.rq</code></a></p>
 <div class="language-turtle highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">cto:</span><span class="w">   </span><span class="nv">&lt;https://w3id.org/pmd/cto/&gt;</span>
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">pmdco:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/pmd/co/&gt;</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">obo:</span><span class="w">   </span><span class="nv">&lt;http://purl.obolibrary.org/obo/&gt;</span>
@@ -3128,7 +3128,7 @@
 </span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="err">ORDER</span> <span class="err">BY</span> <span class="err">?dataset</span>
 </span></code></pre></div>
 <h3 id="cq3-rank-datasets-by-creep-rupture-time-longest-to-shortest">CQ3 — Rank datasets by creep rupture time, longest to shortest</h3>
-<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/03_rank_by_creep_rupture_time.rq"><code>03_rank_by_creep_rupture_time.rq</code></a></p>
+<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/03_rank_by_creep_rupture_time.rq"><code>03_rank_by_creep_rupture_time.rq</code></a></p>
 <div class="language-turtle highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">cto:</span><span class="w">   </span><span class="nv">&lt;https://w3id.org/pmd/cto/&gt;</span>
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">pmdco:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/pmd/co/&gt;</span>
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">obo:</span><span class="w">   </span><span class="nv">&lt;http://purl.obolibrary.org/obo/&gt;</span>
@@ -3150,7 +3150,7 @@
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="err">ORDER</span> <span class="err">BY</span> <span class="err">DESC</span><span class="p">(</span><span class="err">?ruptureTime_h</span><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="cq4-find-all-datasets-tested-at-the-temperature-range-9001000-c">CQ4 — Find all datasets tested at the temperature range 900–1000 °C</h3>
-<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/04_datasets_in_temperature_range.rq"><code>04_datasets_in_temperature_range.rq</code></a></p>
+<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/04_datasets_in_temperature_range.rq"><code>04_datasets_in_temperature_range.rq</code></a></p>
 <div class="language-turtle highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">cto:</span><span class="w">   </span><span class="nv">&lt;https://w3id.org/pmd/cto/&gt;</span>
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">pmdco:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/pmd/co/&gt;</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">obo:</span><span class="w">   </span><span class="nv">&lt;http://purl.obolibrary.org/obo/&gt;</span>
@@ -3174,7 +3174,7 @@
 </span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="err">ORDER</span> <span class="err">BY</span> <span class="err">?dataset</span>
 </span></code></pre></div>
 <h3 id="cq5-retrieve-the-full-chemical-composition-all-elements-wt-and-ppm-for-the-vh5205_c-78-test-piece">CQ5 — Retrieve the full chemical composition (all elements, wt.% and ppm) for the <code>Vh5205_C-78</code> test piece</h3>
-<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/05_chemical_composition_for_test_piece.rq"><code>05_chemical_composition_for_test_piece.rq</code></a></p>
+<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/05_chemical_composition_for_test_piece.rq"><code>05_chemical_composition_for_test_piece.rq</code></a></p>
 <div class="language-turtle highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">cto:</span><span class="w">   </span><span class="nv">&lt;https://w3id.org/pmd/cto/&gt;</span>
 </span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">pmdco:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/pmd/co/&gt;</span>
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">obo:</span><span class="w">   </span><span class="nv">&lt;http://purl.obolibrary.org/obo/&gt;</span>
@@ -3198,7 +3198,7 @@
 </span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a><span class="err">ORDER</span> <span class="err">BY</span> <span class="err">?element</span>
 </span></code></pre></div>
 <h3 id="cq6-compare-percentage-elongation-after-creep-fracture-across-all-datasets">CQ6 — Compare percentage elongation after creep fracture across all datasets</h3>
-<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/06_compare_percentage_elongation.rq"><code>06_compare_percentage_elongation.rq</code></a></p>
+<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/06_compare_percentage_elongation.rq"><code>06_compare_percentage_elongation.rq</code></a></p>
 <div class="language-turtle highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">cto:</span><span class="w">   </span><span class="nv">&lt;https://w3id.org/pmd/cto/&gt;</span>
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">pmdco:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/pmd/co/&gt;</span>
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">obo:</span><span class="w">   </span><span class="nv">&lt;http://purl.obolibrary.org/obo/&gt;</span>
@@ -3220,7 +3220,7 @@
 </span><span id="__span-6-19"><a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="err">ORDER</span> <span class="err">BY</span> <span class="err">DESC</span><span class="p">(</span><span class="err">?elongation_pct</span><span class="p">)</span>
 </span></code></pre></div>
 <h3 id="cq7-retrieve-test-duration-soak-time-and-heating-time-together-for-each-creep-testing-process">CQ7 — Retrieve test duration, soak time, and heating time together for each creep testing process</h3>
-<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/07_test_duration_soak_time_heating_time.rq"><code>07_test_duration_soak_time_heating_time.rq</code></a></p>
+<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/07_test_duration_soak_time_heating_time.rq"><code>07_test_duration_soak_time_heating_time.rq</code></a></p>
 <div class="language-turtle highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">cto:</span><span class="w">   </span><span class="nv">&lt;https://w3id.org/pmd/cto/&gt;</span>
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">pmdco:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/pmd/co/&gt;</span>
 </span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">obo:</span><span class="w">   </span><span class="nv">&lt;http://purl.obolibrary.org/obo/&gt;</span>
@@ -3252,7 +3252,7 @@
 </span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="err">ORDER</span> <span class="err">BY</span> <span class="err">?dataset</span>
 </span></code></pre></div>
 <h3 id="cq8-list-all-creep-testing-machines-and-extensometers-together-with-the-datasets-that-used-them">CQ8 — List all creep testing machines and extensometers together with the datasets that used them</h3>
-<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/08_machines_and_extensometers_per_dataset.rq"><code>08_machines_and_extensometers_per_dataset.rq</code></a></p>
+<p><a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/08_machines_and_extensometers_per_dataset.rq"><code>08_machines_and_extensometers_per_dataset.rq</code></a></p>
 <div class="language-turtle highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">cto:</span><span class="w">   </span><span class="nv">&lt;https://w3id.org/pmd/cto/&gt;</span>
 </span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">pmdco:</span><span class="w"> </span><span class="nv">&lt;https://w3id.org/pmd/co/&gt;</span>
 </span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="k">PREFIX</span><span class="w"> </span><span class="nn">obo:</span><span class="w">   </span><span class="nv">&lt;http://purl.obolibrary.org/obo/&gt;</span>
@@ -3274,18 +3274,18 @@
 </span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="err">ORDER</span> <span class="err">BY</span> <span class="err">?dataset</span>
 </span></code></pre></div>
 <h2 id="how-to-cite">How to cite</h2>
-<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nc">@software</span><span class="p">{</span><span class="nl">RML4MSE-KG</span><span class="p">,</span>
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="na">author</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">{Beygi Nasrabadi, Hossein and Norouzi, Ebrahim and Waitelonis, J{\"o}rg and Sack, Harald}</span><span class="p">,</span>
-</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="na">title</span><span class="w">   </span><span class="p">=</span><span class="w"> </span><span class="s">{RML pipelines for integrating NFDI MatWerk community datasets to MSE-KG (RML4MSE-KG)}</span><span class="p">,</span>
-</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="na">url</span><span class="w">     </span><span class="p">=</span><span class="w"> </span><span class="s">{https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG}</span><span class="p">,</span>
-</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="na">version</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">{1.0.0}</span><span class="p">,</span>
-</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="na">date</span><span class="w">    </span><span class="p">=</span><span class="w"> </span><span class="s">{2026-07-22}</span><span class="p">,</span>
-</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="p">}</span>
+<div class="language-bibtex highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nc">@software</span><span class="p">{</span><span class="nl">RML4MatWerk</span><span class="w"> </span><span class="err">KG,</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="err">author</span><span class="w">  </span><span class="err">=</span><span class="w"> </span><span class="err">{Beygi</span><span class="w"> </span><span class="err">Nasrabadi,</span><span class="w"> </span><span class="err">Hossein</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">Norouzi,</span><span class="w"> </span><span class="err">Ebrahim</span><span class="w"> </span><span class="err">and</span><span class="w"> </span><span class="err">Waitelonis,</span><span class="w"> </span><span class="err">J{\"o</span><span class="p">}</span><span class="c">rg and Sack, Harald},</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="c">title   = {RML pipelines for integrating NFDI MatWerk community datasets to MatWerk KG (RML4MatWerk KG)},</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">  </span><span class="c">url     = {https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG},</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="c">version = {1.0.0},</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="c">date    = {2026-07-22},</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c">}</span>
 </span></code></pre></div>
 <h2 id="sources">Sources</h2>
 <ul>
-<li>Competency questions — <a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/Creep%20reference%20dataset%20(IUC02)/queries"><code>Creep reference dataset (IUC02)/queries/</code></a>, RML4MSE-KG repository</li>
-<li>Pipeline, endpoint and citation — <a href="https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG">RML4MSE-KG README</a></li>
+<li>Competency questions — <a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/Creep%20reference%20dataset%20(IUC02)/queries"><code>Creep reference dataset (IUC02)/queries/</code></a>, RML4MatWerk KG repository</li>
+<li>Pipeline, endpoint and citation — <a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG">RML4MatWerk KG README</a></li>
 <li>Source data — <a href="https://zenodo.org/records/20132712">BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6</a></li>
 <li>Creep Testing Ontology (CTO) — <a href="https://github.com/HosseinBeygiNasrabadi/creep-testing-ontology">https://github.com/HosseinBeygiNasrabadi/creep-testing-ontology</a></li>
 </ul>

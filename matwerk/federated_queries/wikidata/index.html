@@ -2824,8 +2824,8 @@
 
 
 <h1 id="wikidata">Wikidata</h1>
-<p><a href="https://www.wikidata.org"><strong>Wikidata</strong></a> is the free, collaborative knowledge base of the Wikimedia Foundation. For MSE-KG it is the <em>reference hub</em>: it holds authority records for the organisations and people that also appear in the MatWerk graph, together with everything the wider web has said about them — country, parent institution, employer, coordinates, sitelinks.</p>
-<p>Unlike the other partners on these pages, Wikidata is <strong>not registered as a dataset in MSE-KG</strong>. It is queried directly at the public Wikidata Query Service (WDQS).</p>
+<p><a href="https://www.wikidata.org"><strong>Wikidata</strong></a> is the free, collaborative knowledge base of the Wikimedia Foundation. For MatWerk KG it is the <em>reference hub</em>: it holds authority records for the organisations and people that also appear in the MatWerk graph, together with everything the wider web has said about them — country, parent institution, employer, coordinates, sitelinks.</p>
+<p>Unlike the other partners on these pages, Wikidata is <strong>not registered as a dataset in MatWerk KG</strong>. It is queried directly at the public Wikidata Query Service (WDQS).</p>
 <h2 id="at-a-glance">At a glance</h2>
 <table>
 <thead>
@@ -2836,7 +2836,7 @@
 </thead>
 <tbody>
 <tr>
-<td><strong>IRI in MSE-KG</strong></td>
+<td><strong>IRI in MatWerk KG</strong></td>
 <td><em>not registered — Wikidata is an external authority, not a MatWerk dataset</em></td>
 </tr>
 <tr>
@@ -2858,12 +2858,12 @@
 </tbody>
 </table>
 <h2 id="join-keys">Join keys</h2>
-<p>MSE-KG and Wikidata share no IRIs, so federation runs through <strong>external authority identifiers</strong> that both sides record:</p>
+<p>MatWerk KG and Wikidata share no IRIs, so federation runs through <strong>external authority identifiers</strong> that both sides record:</p>
 <table>
 <thead>
 <tr>
 <th>Identifier</th>
-<th>In MSE-KG</th>
+<th>In MatWerk KG</th>
 <th>In Wikidata</th>
 <th>Links</th>
 </tr>
@@ -2883,7 +2883,7 @@
 </tr>
 </tbody>
 </table>
-<p>Both queries below extract the bare identifier from the MSE-KG URL with <code>REPLACE(...)</code>, because Wikidata stores the identifier as a plain string rather than a URL.</p>
+<p>Both queries below extract the bare identifier from the MatWerk KG URL with <code>REPLACE(...)</code>, because Wikidata stores the identifier as a plain string rather than a URL.</p>
 <div class="admonition warning">
 <p class="admonition-title">WDQS requires a User-Agent</p>
 <p>The Wikidata Query Service rejects requests that do not send a descriptive <code>User-Agent</code> header identifying the client and a contact. A default <code>curl</code>/library agent will fail. WDQS also enforces a query timeout (60 s) — keep the remote pattern selective and use <code>LIMIT</code>.</p>
