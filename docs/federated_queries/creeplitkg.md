@@ -1,6 +1,6 @@
 # Creep Literature Knowledge Graph (CreepLitKG)
 
-**CreepLitKG** is an LLM + ontology-driven pipeline and knowledge graph that converts creep test metadata **extracted from scientific literature** into ontology-grounded RDF. It makes experimental creep data reported in publications — material identity, chemical composition, heat treatment history, microstructural features, test conditions and creep results — findable, machine-readable and queryable through a public SPARQL endpoint, and federates it into MSE-KG.
+**CreepLitKG** is an LLM + ontology-driven pipeline and knowledge graph that converts creep test metadata **extracted from scientific literature** into ontology-grounded RDF. It makes experimental creep data reported in publications — material identity, chemical composition, heat treatment history, microstructural features, test conditions and creep results — findable, machine-readable and queryable through a public SPARQL endpoint, and federates it into MatWerk KG.
 
 Every entity is typed with classes from the **[Creep Testing Ontology (CTO)](https://github.com/HosseinBeygiNasrabadi/creep-testing-ontology)**, derived from *ISO 204:2018 — Metallic materials — Uniaxial creep testing in tension*, together with the ontologies CTO reuses (BFO, RO, IAO, OBI, PMDco, NFDIcore, MWO) and measurement units from QUDT.
 
@@ -8,7 +8,7 @@ Every entity is typed with classes from the **[Creep Testing Ontology (CTO)](htt
 
 | | |
 |---|---|
-| **IRI in MSE-KG** | [`msekg:17858428366781`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17858428366781) |
+| **IRI in MatWerk KG** | [`msekg:17858428366781`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17858428366781) |
 | **`rdfs:label`** | Creep Literature Knowledge Graph (CreepLitKG) |
 | **Type** | `obo:IAO_0001000` — dataset |
 | **SPARQL endpoint** | `https://dataportal.material-digital.de/dataset/a5b4edc4-43ef-44ff-a386-5d1f6fbbc439/fuseki/$/sparql` |
@@ -22,7 +22,7 @@ Every entity is typed with classes from the **[Creep Testing Ontology (CTO)](htt
 | **RDF dataset** | [MaterialDigital Dataportal](https://dataportal.material-digital.de/dataset/creep_literature_knowledge_graph) |
 
 !!! note "Two URLs, two purposes"
-    The endpoint node registered in MSE-KG points at the **documentation site** (`https://hosseinbeyginasrabadi.github.io/Creep_Literature_Knowledge_Graph/`). The **queryable** SPARQL endpoint is the Fuseki URL in the table above, as published in the project's own [SPARQL access page](https://github.com/HosseinBeygiNasrabadi/Creep_Literature_Knowledge_Graph/blob/main/docs/sparql.md). Use the Fuseki URL in a `SERVICE` clause.
+    The endpoint node registered in MatWerk KG points at the **documentation site** (`https://hosseinbeyginasrabadi.github.io/Creep_Literature_Knowledge_Graph/`). The **queryable** SPARQL endpoint is the Fuseki URL in the table above, as published in the project's own [SPARQL access page](https://github.com/HosseinBeygiNasrabadi/Creep_Literature_Knowledge_Graph/blob/main/docs/sparql.md). Use the Fuseki URL in a `SERVICE` clause.
 
 ## How the graph is built
 
@@ -33,7 +33,7 @@ new creep paper
    → ./map.sh                    (xlsm → JSON → YARRRML/RML → RDF → pySHACL)
    → creep_literature_rdf.ttl
    → MaterialDigital Dataportal → public SPARQL endpoint
-   → harvested into MSE-KG
+   → harvested into MatWerk KG
 ```
 
 The mapping lives entirely in the YARRRML file, IRIs are derived deterministically from record IDs (so re-runs are idempotent), and the pipeline exits non-zero on any SHACL violation.
@@ -89,7 +89,7 @@ WHERE {
 
 ## Competency questions
 
-The eight competency questions below are taken **verbatim** from the project's own [`docs/sparql.md`](https://github.com/HosseinBeygiNasrabadi/Creep_Literature_Knowledge_Graph/blob/main/docs/sparql.md). Run them against the Fuseki endpoint, or wrap them in a `SERVICE` clause to combine them with MSE-KG.
+The eight competency questions below are taken **verbatim** from the project's own [`docs/sparql.md`](https://github.com/HosseinBeygiNasrabadi/Creep_Literature_Knowledge_Graph/blob/main/docs/sparql.md). Run them against the Fuseki endpoint, or wrap them in a `SERVICE` clause to combine them with MatWerk KG.
 
 Prefixes used throughout:
 

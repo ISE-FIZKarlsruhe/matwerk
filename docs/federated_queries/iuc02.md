@@ -2,13 +2,13 @@
 
 An RDF repository for **BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6**. The RDF-converted sources semantically describe the creep testing process, test pieces, materials and chemical composition, test machines and extensometers, input specifications (stress, temperature), and primary/secondary test results (rupture time, gauge lengths, durations, elongation/extension percentages).
 
-The graph is produced by the **[RML4MSE-KG](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG)** pipeline: a YARRRML mapping describes how the source JSON maps to RDF grounded in the [Creep Testing Ontology (CTO)](https://github.com/HosseinBeygiNasrabadi/creep-testing-ontology); a driver script compiles that mapping to RML and runs it over every JSON file, producing one combined, idempotent `.ttl`.
+The graph is produced by the **[RML4MatWerk KG](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG)** pipeline: a YARRRML mapping describes how the source JSON maps to RDF grounded in the [Creep Testing Ontology (CTO)](https://github.com/HosseinBeygiNasrabadi/creep-testing-ontology); a driver script compiles that mapping to RML and runs it over every JSON file, producing one combined, idempotent `.ttl`.
 
 ## At a glance
 
 | | |
 |---|---|
-| **IRI in MSE-KG** | [`msekg:17902496761671`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17902496761671) |
+| **IRI in MatWerk KG** | [`msekg:17902496761671`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17902496761671) |
 | **`rdfs:label`** | Knowledge Graph for Creep Reference Datasets (NFDI MatWerk IUC02) |
 | **Type** | `obo:IAO_0001000` — dataset |
 | **SPARQL endpoint** | `https://dataportal.material-digital.de/dataset/bb5b86d3-ade4-4b63-9e84-783de85a4abd/fuseki/$/sparql` |
@@ -18,7 +18,7 @@ The graph is produced by the **[RML4MSE-KG](https://github.com/HosseinBeygiNasra
 | **Affiliation** | FIZ Karlsruhe – Leibniz Institute for Information Infrastructure |
 | **NFDI-MatWerk IUC** | IUC02 |
 | **Source data** | [BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6](https://zenodo.org/records/20132712) (Zenodo) |
-| **Pipeline** | [`Creep reference dataset (IUC02)`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/Creep%20reference%20dataset%20(IUC02)) in RML4MSE-KG |
+| **Pipeline** | [`Creep reference dataset (IUC02)`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/Creep%20reference%20dataset%20(IUC02)) in RML4MatWerk KG |
 | **RDF dataset** | [MaterialDigital Dataportal](https://dataportal.material-digital.de/dataset/knowledge-graph-for-creep-reference-datasets-nfdi-matwerk-iuc02) |
 | **Guided query UI** | [Sparklis](https://dataportal.material-digital.de/sparklis/?title=knowledge-graph-for-creep-reference-datasets-nfdi-matwerk-iuc02&endpoint=https%3A//dataportal.material-digital.de/dataset/bb5b86d3-ade4-4b63-9e84-783de85a4abd/fuseki/%24/sparql&entity_lexicon_select=http%3A//www.w3.org/2000/01/rdf-schema%23label&concept_lexicons_select=http%3A//www.w3.org/2000/01/rdf-schema%23label) |
 
@@ -55,11 +55,11 @@ WHERE {
 
 ## Competency questions
 
-The eight competency questions below are taken **verbatim** from [`Creep reference dataset (IUC02)/queries/`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/Creep%20reference%20dataset%20(IUC02)/queries) in the RML4MSE-KG repository.
+The eight competency questions below are taken **verbatim** from [`Creep reference dataset (IUC02)/queries/`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/Creep%20reference%20dataset%20(IUC02)/queries) in the RML4MatWerk KG repository.
 
 ### CQ1 — List all creep datasets together with their test piece IDs and material identifiers
 
-[`01_datasets_test_piece_and_material.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/01_datasets_test_piece_and_material.rq)
+[`01_datasets_test_piece_and_material.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/01_datasets_test_piece_and_material.rq)
 
 ```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
@@ -88,7 +88,7 @@ ORDER BY ?dataset
 
 ### CQ2 — Retrieve the initial stress and temperature used for each creep test
 
-[`02_initial_stress_and_temperature.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/02_initial_stress_and_temperature.rq)
+[`02_initial_stress_and_temperature.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/02_initial_stress_and_temperature.rq)
 
 ```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
@@ -121,7 +121,7 @@ ORDER BY ?dataset
 
 ### CQ3 — Rank datasets by creep rupture time, longest to shortest
 
-[`03_rank_by_creep_rupture_time.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/03_rank_by_creep_rupture_time.rq)
+[`03_rank_by_creep_rupture_time.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/03_rank_by_creep_rupture_time.rq)
 
 ```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
@@ -147,7 +147,7 @@ ORDER BY DESC(?ruptureTime_h)
 
 ### CQ4 — Find all datasets tested at the temperature range 900–1000 °C
 
-[`04_datasets_in_temperature_range.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/04_datasets_in_temperature_range.rq)
+[`04_datasets_in_temperature_range.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/04_datasets_in_temperature_range.rq)
 
 ```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
@@ -175,7 +175,7 @@ ORDER BY ?dataset
 
 ### CQ5 — Retrieve the full chemical composition (all elements, wt.% and ppm) for the `Vh5205_C-78` test piece
 
-[`05_chemical_composition_for_test_piece.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/05_chemical_composition_for_test_piece.rq)
+[`05_chemical_composition_for_test_piece.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/05_chemical_composition_for_test_piece.rq)
 
 ```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
@@ -203,7 +203,7 @@ ORDER BY ?element
 
 ### CQ6 — Compare percentage elongation after creep fracture across all datasets
 
-[`06_compare_percentage_elongation.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/06_compare_percentage_elongation.rq)
+[`06_compare_percentage_elongation.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/06_compare_percentage_elongation.rq)
 
 ```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
@@ -229,7 +229,7 @@ ORDER BY DESC(?elongation_pct)
 
 ### CQ7 — Retrieve test duration, soak time, and heating time together for each creep testing process
 
-[`07_test_duration_soak_time_heating_time.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/07_test_duration_soak_time_heating_time.rq)
+[`07_test_duration_soak_time_heating_time.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/07_test_duration_soak_time_heating_time.rq)
 
 ```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
@@ -265,7 +265,7 @@ ORDER BY ?dataset
 
 ### CQ8 — List all creep testing machines and extensometers together with the datasets that used them
 
-[`08_machines_and_extensometers_per_dataset.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/08_machines_and_extensometers_per_dataset.rq)
+[`08_machines_and_extensometers_per_dataset.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/Creep%20reference%20dataset%20(IUC02)/queries/08_machines_and_extensometers_per_dataset.rq)
 
 ```turtle
 PREFIX cto:   <https://w3id.org/pmd/cto/>
@@ -292,10 +292,10 @@ ORDER BY ?dataset
 ## How to cite
 
 ```bibtex
-@software{RML4MSE-KG,
+@software{RML4MatWerk KG,
   author  = {Beygi Nasrabadi, Hossein and Norouzi, Ebrahim and Waitelonis, J{\"o}rg and Sack, Harald},
-  title   = {RML pipelines for integrating NFDI MatWerk community datasets to MSE-KG (RML4MSE-KG)},
-  url     = {https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG},
+  title   = {RML pipelines for integrating NFDI MatWerk community datasets to MatWerk KG (RML4MatWerk KG)},
+  url     = {https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG},
   version = {1.0.0},
   date    = {2026-07-22},
 }
@@ -303,7 +303,7 @@ ORDER BY ?dataset
 
 ## Sources
 
-- Competency questions — [`Creep reference dataset (IUC02)/queries/`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/Creep%20reference%20dataset%20(IUC02)/queries), RML4MSE-KG repository
-- Pipeline, endpoint and citation — [RML4MSE-KG README](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG)
+- Competency questions — [`Creep reference dataset (IUC02)/queries/`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/Creep%20reference%20dataset%20(IUC02)/queries), RML4MatWerk KG repository
+- Pipeline, endpoint and citation — [RML4MatWerk KG README](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG)
 - Source data — [BAM Reference Data: Creep of Single-Crystal Ni-Based Superalloy CMSX-6](https://zenodo.org/records/20132712)
 - Creep Testing Ontology (CTO) — <https://github.com/HosseinBeygiNasrabadi/creep-testing-ontology>

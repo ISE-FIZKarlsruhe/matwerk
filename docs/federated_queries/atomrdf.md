@@ -8,7 +8,7 @@ The graph is produced with [**atomRDF**](https://github.com/pyscal/atomRDF), a P
 
 | | |
 |---|---|
-| **IRI in MSE-KG** | [`msekg:176113442890318`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890318) |
+| **IRI in MatWerk KG** | [`msekg:176113442890318`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890318) |
 | **`rdfs:label`** | atomRDF Knowledge Graph v0.0.1 |
 | **Type** | `obo:IAO_0001000` — dataset |
 | **SPARQL endpoint** | `https://atomkg.pyscal.org/sparql` |
@@ -57,9 +57,9 @@ WHERE {
 
 ## Federated queries
 
-The join key is the **DOI**: MSE-KG records the DOI of a published dataset via its URL node, and atomRDF records the DOI of the publication a sample belongs to. `FILTER(STR(?link) = STR(?doi))` is what ties the two halves together.
+The join key is the **DOI**: MatWerk KG records the DOI of a published dataset via its URL node, and atomRDF records the DOI of the publication a sample belongs to. `FILTER(STR(?link) = STR(?doi))` is what ties the two halves together.
 
-### Which atomistic samples correspond to a dataset entry in MSE-KG, and what are their segregation energies for Fe–Au Σ5 grain boundaries?
+### Which atomistic samples correspond to a dataset entry in MatWerk KG, and what are their segregation energies for Fe–Au Σ5 grain boundaries?
 
 ```sparql
 PREFIX nfdicore_dataset: <http://purl.obolibrary.org/obo/IAO_0001000>
@@ -210,4 +210,4 @@ WHERE {
 - atomRDF KG SPARQL endpoint — <https://atomkg.pyscal.org/sparql>
 - atomRDF tool — Menon, S., Azócar Guzmán, A., Sandfeld, S. *atomRDF: a python tool for ontology-based creation, manipulation, and querying of atomic structures.* <https://github.com/pyscal/atomRDF> (MIT)
 - CMSO / ASMO / CDCO / PLDO — Helmholtz Metadata Collaboration, <http://purls.helmholtz-metadaten.de/>
-- Registration in MSE-KG — [`sparql_endpoints` pattern](../patterns/sparql_endpoints/pattern.md)
+- Registration in MatWerk KG — [`sparql_endpoints` pattern](../patterns/sparql_endpoints/pattern.md)

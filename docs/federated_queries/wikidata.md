@@ -1,14 +1,14 @@
 # Wikidata
 
-[**Wikidata**](https://www.wikidata.org) is the free, collaborative knowledge base of the Wikimedia Foundation. For MSE-KG it is the *reference hub*: it holds authority records for the organisations and people that also appear in the MatWerk graph, together with everything the wider web has said about them — country, parent institution, employer, coordinates, sitelinks.
+[**Wikidata**](https://www.wikidata.org) is the free, collaborative knowledge base of the Wikimedia Foundation. For MatWerk KG it is the *reference hub*: it holds authority records for the organisations and people that also appear in the MatWerk graph, together with everything the wider web has said about them — country, parent institution, employer, coordinates, sitelinks.
 
-Unlike the other partners on these pages, Wikidata is **not registered as a dataset in MSE-KG**. It is queried directly at the public Wikidata Query Service (WDQS).
+Unlike the other partners on these pages, Wikidata is **not registered as a dataset in MatWerk KG**. It is queried directly at the public Wikidata Query Service (WDQS).
 
 ## At a glance
 
 | | |
 |---|---|
-| **IRI in MSE-KG** | *not registered — Wikidata is an external authority, not a MatWerk dataset* |
+| **IRI in MatWerk KG** | *not registered — Wikidata is an external authority, not a MatWerk dataset* |
 | **SPARQL endpoint** | `https://query.wikidata.org/sparql` |
 | **Query UI** | <https://query.wikidata.org> |
 | **Licence** | CC0 1.0 (Wikidata data) |
@@ -16,14 +16,14 @@ Unlike the other partners on these pages, Wikidata is **not registered as a data
 
 ## Join keys
 
-MSE-KG and Wikidata share no IRIs, so federation runs through **external authority identifiers** that both sides record:
+MatWerk KG and Wikidata share no IRIs, so federation runs through **external authority identifiers** that both sides record:
 
-| Identifier | In MSE-KG | In Wikidata | Links |
+| Identifier | In MatWerk KG | In Wikidata | Links |
 |---|---|---|---|
 | **ROR ID** | `nfdi:NFDI_0001006` → URL node → `nfdi:NFDI_0001008` | `wdt:P6782` | organisations |
 | **ORCID iD** | `nfdi:NFDI_0001006` | `wdt:P496` | people |
 
-Both queries below extract the bare identifier from the MSE-KG URL with `REPLACE(...)`, because Wikidata stores the identifier as a plain string rather than a URL.
+Both queries below extract the bare identifier from the MatWerk KG URL with `REPLACE(...)`, because Wikidata stores the identifier as a plain string rather than a URL.
 
 !!! warning "WDQS requires a User-Agent"
     The Wikidata Query Service rejects requests that do not send a descriptive `User-Agent` header identifying the client and a contact. A default `curl`/library agent will fail. WDQS also enforces a query timeout (60 s) — keep the remote pattern selective and use `LIMIT`.

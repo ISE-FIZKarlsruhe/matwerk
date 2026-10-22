@@ -1,6 +1,6 @@
 # Federated queries
 
-The MatWerk Knowledge Graph (MSE-KG) does not copy the data of its partner graphs. It **registers** them: every partner graph appears in MSE-KG as a `obo:IAO_0001000` (dataset) individual carrying its label, licence, creators — and the URL of its public SPARQL endpoint. A federated query then reaches that endpoint live with SPARQL 1.1 `SERVICE`, so the answer is always computed against the partner's current data.
+The MatWerk Knowledge Graph (MatWerk KG) does not copy the data of its partner graphs. It **registers** them: every partner graph appears in MatWerk KG as a `obo:IAO_0001000` (dataset) individual carrying its label, licence, creators — and the URL of its public SPARQL endpoint. A federated query then reaches that endpoint live with SPARQL 1.1 `SERVICE`, so the answer is always computed against the partner's current data.
 
 ```sparql
 SELECT ... WHERE {
@@ -21,11 +21,11 @@ Everything hinges on the last part — the **join key**. Two graphs only federat
 |---|---|---|
 | A shared **DOI** | [atomRDF KG](federated_queries/atomrdf.md) | Both graphs reference the same published dataset by its DOI |
 | A shared **authority identifier** (ROR, ORCID) | [Wikidata](federated_queries/wikidata.md) | Organisations and people carry the same external ID in both graphs |
-| A shared **IRI** in the `msekg:` namespace | [CreepLitKG](federated_queries/creeplitkg.md), [IUC02](federated_queries/iuc02.md), [IUC07](federated_queries/iuc07.md) | The RML pipelines mint their IRIs directly in the MSE-KG namespace, so subject IRIs are literally identical |
+| A shared **IRI** in the `msekg:` namespace | [CreepLitKG](federated_queries/creeplitkg.md), [IUC02](federated_queries/iuc02.md), [IUC07](federated_queries/iuc07.md) | The RML pipelines mint their IRIs directly in the MatWerk KG namespace, so subject IRIs are literally identical |
 
 ## Partner graphs
 
-| Graph | Registered in MSE-KG as | Join key |
+| Graph | Registered in MatWerk KG as | Join key |
 |---|---|---|
 | [atomRDF KG](federated_queries/atomrdf.md) | [`msekg:176113442890318`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/176113442890318) | DOI |
 | [Wikidata](federated_queries/wikidata.md) | *(not registered — queried directly)* | ROR ID, ORCID |
@@ -37,7 +37,7 @@ Pick a graph from the navigation on the left for its endpoint, its modelling, an
 
 ## Discovering endpoints from the graph itself
 
-You do not have to hard-code a partner endpoint. MSE-KG knows all of them — this query returns every registered endpoint together with the dataset it belongs to:
+You do not have to hard-code a partner endpoint. MatWerk KG knows all of them — this query returns every registered endpoint together with the dataset it belongs to:
 
 ```sparql
 PREFIX nfdicore_sparql_endpoint: <https://nfdi.fiz-karlsruhe.de/ontology/NFDI_0001095>

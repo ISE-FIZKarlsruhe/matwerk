@@ -5,13 +5,13 @@ An RDF repository for **MiMeDat: Metadata Datasets for Microstructure-Sensitive 
 !!! info "Mapping status"
     Currently mapped: **dataset and provenance metadata**. The simulation parameters themselves — RVE geometry, mechanical boundary conditions, constitutive model, crystallographic orientation, stress–strain results — are planned next, pending their ontology mapping. The competency questions below reflect what is queryable today.
 
-The graph is produced by the **[RML4MSE-KG](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG)** pipeline, grounded in the [MatWerk Ontology (MWO)](https://github.com/ISE-FIZKarlsruhe/mwo) and NFDIcore.
+The graph is produced by the **[RML4MatWerk KG](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG)** pipeline, grounded in the [MatWerk Ontology (MWO)](https://github.com/ISE-FIZKarlsruhe/mwo) and NFDIcore.
 
 ## At a glance
 
 | | |
 |---|---|
-| **IRI in MSE-KG** | [`msekg:17902496761672`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17902496761672) |
+| **IRI in MatWerk KG** | [`msekg:17902496761672`](https://nfdi.fiz-karlsruhe.de/matwerk/msekg/17902496761672) |
 | **`rdfs:label`** | Microstructure-Sensitive Mechanical Data Knowledge Graph (MiMeDat-KG, NFDI MatWerk IUC07) |
 | **Type** | `obo:IAO_0001000` — dataset |
 | **SPARQL endpoint** | `https://dataportal.material-digital.de/dataset/9dc27507-bf47-4425-877d-1e5249e9db05/fuseki/$/sparql` |
@@ -21,7 +21,7 @@ The graph is produced by the **[RML4MSE-KG](https://github.com/HosseinBeygiNasra
 | **Affiliation** | FIZ Karlsruhe – Leibniz Institute for Information Infrastructure |
 | **NFDI-MatWerk IUC** | IUC07 |
 | **Source data** | [MiMeDat source repository & JSON schema](https://github.com/Ronakshoghi/MiMeDat) |
-| **Pipeline** | [`MiMeDat (IUC07)`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/MiMeDat%20(IUC07)) in RML4MSE-KG |
+| **Pipeline** | [`MiMeDat (IUC07)`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/MiMeDat%20(IUC07)) in RML4MatWerk KG |
 | **RDF dataset** | [MaterialDigital Dataportal](https://dataportal.material-digital.de/dataset/microstructure-sensitive-mechanical-data-knowledge-graph-mimedat-kg-nfdi-matwerk-iuc07) |
 | **Guided query UI** | [Sparklis](https://dataportal.material-digital.de/sparklis/?title=microstructure-sensitive-mechanical-data-knowledge-graph-mimedat-kg-nfdi-matwerk-iuc07&endpoint=https%3A//dataportal.material-digital.de/dataset/9dc27507-bf47-4425-877d-1e5249e9db05/fuseki/%24/sparql&entity_lexicon_select=http%3A//www.w3.org/2000/01/rdf-schema%23label&concept_lexicons_select=http%3A//www.w3.org/2000/01/rdf-schema%23label) |
 
@@ -58,11 +58,11 @@ WHERE {
 
 ## Competency questions
 
-The three competency questions below are taken **verbatim** from [`MiMeDat (IUC07)/queries/`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/MiMeDat%20(IUC07)/queries) in the RML4MSE-KG repository. CQ2 and CQ3 are written against the example dataset `msekg:a46fde6c` — change that `BIND` to target another dataset.
+The three competency questions below are taken **verbatim** from [`MiMeDat (IUC07)/queries/`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/MiMeDat%20(IUC07)/queries) in the RML4MatWerk KG repository. CQ2 and CQ3 are written against the example dataset `msekg:a46fde6c` — change that `BIND` to target another dataset.
 
 ### CQ1 — List all simulation datasets together with their title and identifier
 
-[`01_datasets_title_and_identifier.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/MiMeDat%20(IUC07)/queries/01_datasets_title_and_identifier.rq)
+[`01_datasets_title_and_identifier.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/MiMeDat%20(IUC07)/queries/01_datasets_title_and_identifier.rq)
 
 ```turtle
 PREFIX nfdi: <https://nfdi.fiz-karlsruhe.de/ontology/>
@@ -85,7 +85,7 @@ ORDER BY ?dataset
 
 ### CQ2 — Retrieve the full creator and contributor list (name, ORCID, affiliation, institute, research group) for a dataset
 
-[`02_creators_and_contributors_for_dataset.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/MiMeDat%20(IUC07)/queries/02_creators_and_contributors_for_dataset.rq)
+[`02_creators_and_contributors_for_dataset.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/MiMeDat%20(IUC07)/queries/02_creators_and_contributors_for_dataset.rq)
 
 ```turtle
 PREFIX msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/>
@@ -142,7 +142,7 @@ ORDER BY ?role ?person
 
 ### CQ3 — Retrieve the funding organization, publisher, licence, and rights holder for a dataset
 
-[`03_funding_publisher_licence_rightsholder.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/blob/main/MiMeDat%20(IUC07)/queries/03_funding_publisher_licence_rightsholder.rq)
+[`03_funding_publisher_licence_rightsholder.rq`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/blob/main/MiMeDat%20(IUC07)/queries/03_funding_publisher_licence_rightsholder.rq)
 
 ```turtle
 PREFIX msekg: <https://nfdi.fiz-karlsruhe.de/matwerk/msekg/>
@@ -200,10 +200,10 @@ WHERE {
 ## How to cite
 
 ```bibtex
-@software{RML4MSE-KG,
+@software{RML4MatWerk KG,
   author  = {Beygi Nasrabadi, Hossein and Norouzi, Ebrahim and Waitelonis, J{\"o}rg and Sack, Harald},
-  title   = {RML pipelines for integrating NFDI MatWerk community datasets to MSE-KG (RML4MSE-KG)},
-  url     = {https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG},
+  title   = {RML pipelines for integrating NFDI MatWerk community datasets to MatWerk KG (RML4MatWerk KG)},
+  url     = {https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG},
   version = {1.0.0},
   date    = {2026-07-22},
 }
@@ -211,7 +211,7 @@ WHERE {
 
 ## Sources
 
-- Competency questions — [`MiMeDat (IUC07)/queries/`](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG/tree/main/MiMeDat%20(IUC07)/queries), RML4MSE-KG repository
-- Pipeline, endpoint and citation — [RML4MSE-KG README](https://github.com/HosseinBeygiNasrabadi/RML4MSE-KG)
+- Competency questions — [`MiMeDat (IUC07)/queries/`](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/MiMeDat%20(IUC07)/queries), RML4MatWerk KG repository
+- Pipeline, endpoint and citation — [RML4MatWerk KG README](https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG)
 - Source data — [MiMeDat: Metadata Datasets for Microstructure-Sensitive Mechanical Data](https://github.com/Ronakshoghi/MiMeDat)
 - MatWerk Ontology (MWO) — <https://github.com/ISE-FIZKarlsruhe/mwo>
