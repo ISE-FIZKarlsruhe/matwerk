@@ -1,4 +1,4 @@
-FROM ghcr.io/epoz/shmarql:v0.69
+FROM ghcr.io/epoz/shmarql:v1.0.1
 
 # ---- App sources ----
 COPY . /app
