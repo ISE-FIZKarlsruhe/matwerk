@@ -94,6 +94,24 @@ NEVER_REWRITE = ("sparql-results", "turtle", "n-triples", "n-quads", "trig",
                  "rdf+xml", "ld+json")
 
 
+# WORKAROUND -- delete this block once the Caddy rule is scoped.
+#
+# The site's reverse proxy answers ANY request whose Accept header mentions
+# text/turtle with "302 Found -> https://ise-fizkarlsruhe.github.io/nfdicore/
+# 3.0.4/ontology.ttl", whatever the path, including POSTs to /matwerk/sparql.
+# The query editor asks for
+#   application/sparql-results+json, text/turtle;q=0.9, */*;q=0.1
+# so every query came back as the NFDIcore ontology instead of its results.
+#
+# Dropping turtle from the Accept the browser sends keeps the request on this
+# host; "*/*;q=0.1" survives and is not matched by the rule. This only helps our
+# own pages -- any other SPARQL client asking for Turtle, and every CONSTRUCT or
+# DESCRIBE query, stays broken until the Caddyfile narrows that rule to the
+# ontology namespace.
+DROP_TURTLE_ACCEPT = os.environ.get("DROP_TURTLE_ACCEPT", "1") != "0"
+_TURTLE_ACCEPT = re.compile(r"text/turtle;q=0\.9,\s*")
+
+
 class PrefixAbsoluteUrls:
     """Rewrite the app's root-absolute URLs so they sit under the mount."""
 
@@ -103,7 +121,10 @@ class PrefixAbsoluteUrls:
 
     def _body(self, raw: bytes) -> bytes:
         text = raw.decode("utf-8", "replace")
-        return _ABSOLUTE.sub(rf"\1{self.prefix}/\2", text).encode("utf-8")
+        text = _ABSOLUTE.sub(rf"\1{self.prefix}/\2", text)
+        if DROP_TURTLE_ACCEPT:
+            text = _TURTLE_ACCEPT.sub("", text)
+        return text.encode("utf-8")
 
     def _location(self, value: str) -> str:
         if value.startswith("/") and not value.startswith(self.prefix + "/"):
