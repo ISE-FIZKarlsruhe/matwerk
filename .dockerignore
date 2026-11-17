@@ -21,6 +21,9 @@ __pycache__/
 
 # Ignore virtual environments
 venv/
+.venv/
+.git/
+*.stackdump
 .env/
 .env
 
