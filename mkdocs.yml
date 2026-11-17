@@ -1,6 +1,13 @@
 site_name: Matwerk
 site_url: https://nfdi.fiz-karlsruhe.de/matwerk/
 repo_url: https://github.com/ISE-FIZKarlsruhe/matwerk
+
+# LODEON data stories live in docs/story/ and are rendered live by shmarql, which
+# runs their SPARQL and visualization fences. mkdocs must NOT build them: the
+# deployment serves the built site first and would hand out a dead static copy
+# with the fences shown as plain code instead.
+exclude_docs: |
+  story/
 theme:
   name: material
   custom_dir: docs/overrides

@@ -81,9 +81,17 @@ APP_ROOTS = ("static", "query", "sparql", "spo", "lodeon", "entity", "api",
 _ABSOLUTE = re.compile(
     r"""(["'(`])/(""" + "|".join(APP_ROOTS) + r""")(?=["'`/?#)]|$)"""
 )
-# Only these are rewritten. SPARQL results must stream through untouched: a
-# literal in someone's data could look like a path and would be corrupted.
-REWRITABLE = ("text/html", "javascript", "text/css")
+# Only these are rewritten. application/json is included for one specific reason:
+# the LODEON editor fetches /api/config and takes URLs straight out of the JSON --
+# welcomeStory.url, previewURL, publishURL, the per-profile sparqlUrl, configURL
+# and expandURL. Those never pass through JavaScript, so leaving JSON alone sent
+# every one of them to the domain root, which is what produced
+# "Welcome Story loading failed ... 404".
+REWRITABLE = ("text/html", "javascript", "text/css", "application/json")
+# ...but never query results or RDF payloads: a literal in someone's data can look
+# like a path, and rewriting it would corrupt the response. Checked first.
+NEVER_REWRITE = ("sparql-results", "turtle", "n-triples", "n-quads", "trig",
+                 "rdf+xml", "ld+json")
 
 
 class PrefixAbsoluteUrls:
@@ -123,7 +131,10 @@ class PrefixAbsoluteUrls:
                     elif name == "content-type":
                         content_type = value.decode("latin-1").lower()
                     headers.append((key, value))
-                rewriting = any(kind in content_type for kind in REWRITABLE)
+                rewriting = (
+                    any(kind in content_type for kind in REWRITABLE)
+                    and not any(kind in content_type for kind in NEVER_REWRITE)
+                )
                 message = {**message, "headers": headers}
                 if not rewriting:
                     await send(message)

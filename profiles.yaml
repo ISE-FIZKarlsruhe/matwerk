@@ -1,0 +1,58 @@
+# SHMARQL SPARQL backend profiles -- MatWerk Knowledge Graph
+#
+# Found via PROFILES_PATH (default "profiles.yaml", resolved from the image's
+# WORKDIR /app, where the Dockerfile's `COPY . /app` puts this file).
+#
+# This replaces configuring the backend with the ENDPOINT environment variable.
+# ENDPOINT, if set, OVERRIDES the `default` entry below and the profile is
+# synthesised with no title or description -- which is why the editor showed
+# "matwerk-virtuoso:8890" with an empty description. Remove ENDPOINT from the
+# deploy script so this file is authoritative.
+
+# The profile served at /sparql, and the one the query editor, entity viewer and
+# data stories use when nothing else is chosen.
+default: matwerk
+
+# Entity-viewer namespaces. Merged into the built-in prefixes (rdf, rdfs, owl,
+# xsd, skos, dcterms, foaf ...) rather than replacing them, and used to shorten
+# IRIs in result tables.
+display:
+  namespaces:
+    obo: http://purl.obolibrary.org/obo/
+    nfdi: https://nfdi.fiz-karlsruhe.de/ontology/
+    mwo: http://purls.helmholtz-metadaten.de/mwo/
+    pmd: https://w3id.org/pmd/co/
+    matwerk: https://nfdi.fiz-karlsruhe.de/matwerk/msekg/
+
+profiles:
+  - name: matwerk
+    title: MatWerk Knowledge Graph
+    description: >-
+      Research data of the NFDI-MatWerk consortium: datasets, publications,
+      software, instruments, facilities, services, people and organisations,
+      modelled with BFO, NFDIcore and MWO.
+    endpoint: http://matwerk-virtuoso:8890/sparql
+
+    # Refuse SPARQL Update with HTTP 403. This is shmarql's own guard and it only
+    # catches *declared* updates (Content-Type application/sparql-update, or an
+    # "update" form field); it does not parse query text, so an INSERT sent as a
+    # "query" parameter still reaches Virtuoso. The real write protection is
+    # Virtuoso's own permissions for the anonymous SPARQL account.
+    allow_update: false
+
+    # Generous, because some curated queries walk several hops.
+    timeout: 60
+
+    # IRIs under these prefixes resolve to the entity viewer rather than being
+    # treated as external links.
+    uri_prefixes:
+      - https://nfdi.fiz-karlsruhe.de/matwerk/msekg/
+      - https://nfdi.fiz-karlsruhe.de/ontology/
+      - http://purls.helmholtz-metadaten.de/mwo/
+
+    # Optional extras, left commented until they are needed:
+    # sparnatural: sparnatural/matwerk.ttl   # SHACL config enabling the visual
+    #                                        # query builder in /lodeon/
+    # graph_explorer:
+    #   maxNodes: 200
+    #   defaultDirection: outgoing
