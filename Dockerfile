@@ -1,4 +1,4 @@
-FROM ghcr.io/epoz/shmarql:v1.0.1
+FROM ghcr.io/epoz/shmarql:latest@sha256:6916b350ec1156c50f6dbb1b5d1219c1314202493b382292ff338d3f860c8df3
 
 # ---- App sources ----
 COPY . /app
