@@ -242,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/matwerk/shmarql/" class="md-tabs__link">
+      <a href="/matwerk/query" class="md-tabs__link">
         
   
   
@@ -515,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/matwerk/shmarql/" class="md-nav__link">
+      <a href="/matwerk/query" class="md-nav__link">
         
   
   
@@ -3071,6 +3071,7 @@
 </span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?kg</span> <span class="nn">has_part</span><span class="p">:</span>    <span class="nv">?p</span> <span class="p">.</span> <span class="nv">?p</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?part</span> <span class="p">}</span>
 </span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">}</span>
 </span></code></pre></div>
+<p><a class="sparql-run-link" href="/matwerk/query?query=PREFIX%20nfdicore_dataset%3A%20%20%20%20%20%20%20%20%20%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FIAO_0001000%3E%0APREFIX%20nfdicore_sparql_endpoint%3A%20%3Chttps%3A%2F%2Fnfdi.fiz-karlsruhe.de%2Fontology%2FNFDI_0001095%3E%0APREFIX%20textual_entity%3A%20%20%20%20%20%20%20%20%20%20%20%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FIAO_0000300%3E%0APREFIX%20denoted_by%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FIAO_0000235%3E%0APREFIX%20has_url%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Chttps%3A%2F%2Fnfdi.fiz-karlsruhe.de%2Fontology%2FNFDI_0001008%3E%0APREFIX%20has_license%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Chttps%3A%2F%2Fnfdi.fiz-karlsruhe.de%2Fontology%2FNFDI_0000142%3E%0APREFIX%20has_part%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FBFO_0000051%3E%0APREFIX%20rdfs%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0ASELECT%0A%20%20%28SAMPLE%28%3Flabel%29%20AS%20%3FkgLabel%29%0A%20%20%28SAMPLE%28%3Furl%29%20%20%20AS%20%3FsparqlEndpoint%29%0A%20%20%28SAMPLE%28%3Flic%29%20%20%20AS%20%3Flicence%29%0A%20%20%28GROUP_CONCAT%28DISTINCT%20%3Fpart%3B%20SEPARATOR%3D%22%20%C2%B7%20%22%29%20AS%20%3FcreditedParts%29%0A%20%20%28SAMPLE%28%3Fdesc%29%20%20AS%20%3FshortDescription%29%0AWHERE%20%7B%0A%20%20BIND%28%3Chttps%3A%2F%2Fnfdi.fiz-karlsruhe.de%2Fmatwerk%2Fmsekg%2F17902496761671%3E%20AS%20%3Fkg%29%0A%0A%20%20%3Fkg%20a%20nfdicore_dataset%3A%20%3B%0A%20%20%20%20%20%20rdfs%3Alabel%20%3Flabel%20.%0A%0A%20%20OPTIONAL%20%7B%20%3Fkg%20denoted_by%3A%20%20%3Fe%20.%20%3Fe%20a%20nfdicore_sparql_endpoint%3A%20%3B%20has_url%3A%20%3Furl%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fkg%20denoted_by%3A%20%20%3Fd%20.%20%3Fd%20a%20textual_entity%3A%20%3B%20rdfs%3Alabel%20%3Fdesc%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fkg%20has_license%3A%20%3Fl%20.%20%3Fl%20rdfs%3Alabel%20%3Flic%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fkg%20has_part%3A%20%20%20%20%3Fp%20.%20%3Fp%20rdfs%3Alabel%20%3Fpart%20%7D%0A%7D">Run this query</a></p>
 <h2 id="competency-questions">Competency questions</h2>
 <p>The eight competency questions below are taken <strong>verbatim</strong> from <a href="https://github.com/HosseinBeygiNasrabadi/RML4MatWerk KG/tree/main/Creep%20reference%20dataset%20(IUC02)/queries"><code>Creep reference dataset (IUC02)/queries/</code></a> in the RML4MatWerk KG repository.</p>
 <h3 id="cq1-list-all-creep-datasets-together-with-their-test-piece-ids-and-material-identifiers">CQ1 — List all creep datasets together with their test piece IDs and material identifiers</h3>

@@ -242,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/matwerk/shmarql/" class="md-tabs__link">
+      <a href="/matwerk/query" class="md-tabs__link">
         
   
   
@@ -515,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/matwerk/shmarql/" class="md-nav__link">
+      <a href="/matwerk/query" class="md-nav__link">
         
   
   
@@ -3499,6 +3499,7 @@
 </span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  <span class="k">FILTER</span><span class="p">(</span><span class="nf">isIRI</span><span class="p">(</span><span class="nv">?dataset</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="nf">CONTAINS</span><span class="p">(</span><span class="nf">LCASE</span><span class="p">(</span><span class="nv">?url</span><span class="p">),</span> <span class="s">"zenodo"</span><span class="p">))</span>
 </span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">}</span>
 </span></code></pre></div>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20DISTINCT%20%3Fdataset%20%3Furl%20WHERE%20%7B%0A%20%20VALUES%20%3Fclass%20%7B%0A%20%20%20%20%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FIAO_0001000%3E%0A%20%20%20%20%3Chttps%3A%2F%2Fnfdi.fiz-karlsruhe.de%2Fontology%2FMWO_0001058%3E%0A%20%20%20%20%3Chttps%3A%2F%2Fnfdi.fiz-karlsruhe.de%2Fontology%2FMWO_0001056%3E%0A%20%20%20%20%3Chttps%3A%2F%2Fnfdi.fiz-karlsruhe.de%2Fontology%2FMWO_0001057%3E%0A%20%20%7D%0A%20%20%3Fdataset%20a%20%3Fclass%20.%0A%20%20%3Fdataset%20%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FIAO_0000235%3E%20%3FurlNode%20.%0A%20%20%3FurlNode%20%3Chttps%3A%2F%2Fnfdi.fiz-karlsruhe.de%2Fontology%2FNFDI_0001008%3E%20%3Fu%20.%0A%20%20BIND%28STR%28%3Fu%29%20AS%20%3Furl%29%0A%20%20FILTER%28isIRI%28%3Fdataset%29%20%26%26%20CONTAINS%28LCASE%28%3Furl%29%2C%20%22zenodo%22%29%29%0A%7D">Run this query</a></p>
 <h3 id="input-output">Input / Output</h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Input</label><label for="__tabbed_1_2">Output</label></div>
 <div class="tabbed-content">
@@ -3671,6 +3672,7 @@
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  <span class="p">{</span> <span class="nv">?c</span> <span class="k">a</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">Class</span> <span class="p">.</span> <span class="p">}</span> <span class="k">UNION</span> <span class="p">{</span> <span class="nv">?x</span> <span class="k">a</span> <span class="nv">?c</span> <span class="p">.</span> <span class="p">}</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
 </span></code></pre></div>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20DISTINCT%20%3Fc%20WHERE%20%7B%0A%20%20VALUES%20%3Fc%20%7B%20%3Cmwo_class_1%3E%20%3Cmwo_class_2%3E%20...%20%7D%0A%20%20%7B%20%3Fc%20a%20owl%3AClass%20.%20%7D%20UNION%20%7B%20%3Fx%20a%20%3Fc%20.%20%7D%0A%7D">Run this query</a></p>
 <div class="admonition info">
 <p class="admonition-title">Why Reuse Analysis Matters</p>
 <p>By quantifying how much each external endpoint aligns with MWO, the MatWerk KG can identify which endpoints are most suitable for federated queries, guide ontology mapping efforts, and track adoption of shared vocabularies across the NFDI-MatWerk ecosystem.</p>

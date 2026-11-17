@@ -242,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/matwerk/shmarql/" class="md-tabs__link">
+      <a href="/matwerk/query" class="md-tabs__link">
         
   
   
@@ -515,7 +515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/matwerk/shmarql/" class="md-nav__link">
+      <a href="/matwerk/query" class="md-nav__link">
         
   
   
@@ -2736,6 +2736,7 @@
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="k">FILTER</span><span class="p">(</span><span class="nf">STR</span><span class="p">(</span><span class="nv">?link</span><span class="p">)</span> <span class="o">=</span> <span class="nf">STR</span><span class="p">(</span><span class="nv">?doi</span><span class="p">))</span>
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
 </span></code></pre></div>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20...%20WHERE%20%7B%0A%20%20%23%20----%20local%3A%20the%20MatWerk%20KG%20--------------------------------%0A%20%20%3Fdataset%20a%20nfdicore_dataset%3A%20%3B%20...%20.%0A%0A%20%20%23%20----%20remote%3A%20evaluated%20at%20the%20partner%20endpoint%20------------%0A%20%20SERVICE%20%3Chttps%3A%2F%2Fpartner.example.org%2Fsparql%3E%20%7B%20...%20%7D%0A%0A%20%20%23%20----%20the%20join%3A%20a%20value%20the%20two%20graphs%20share%20---------------%0A%20%20FILTER%28STR%28%3Flink%29%20%3D%20STR%28%3Fdoi%29%29%0A%7D">Run this query</a></p>
 <p>Everything hinges on the last part — the <strong>join key</strong>. Two graphs only federate usefully where they say something about the same thing. Across the partners below, three kinds of join key are in use:</p>
 <table>
 <thead>
@@ -2820,11 +2821,12 @@
 </span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="p">}</span>
 </span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="k">ORDER BY</span> <span class="nv">?datasetLabel</span>
 </span></code></pre></div>
+<p><a class="sparql-run-link" href="/matwerk/query?query=PREFIX%20nfdicore_sparql_endpoint%3A%20%3Chttps%3A%2F%2Fnfdi.fiz-karlsruhe.de%2Fontology%2FNFDI_0001095%3E%0APREFIX%20nfdicore_dataset%3A%20%20%20%20%20%20%20%20%20%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FIAO_0001000%3E%0APREFIX%20denoted_by%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Chttp%3A%2F%2Fpurl.obolibrary.org%2Fobo%2FIAO_0000235%3E%0APREFIX%20has_url%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Chttps%3A%2F%2Fnfdi.fiz-karlsruhe.de%2Fontology%2FNFDI_0001008%3E%0APREFIX%20rdfs%3A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0ASELECT%20DISTINCT%20%3Fdataset%20%3FdatasetLabel%20%3FsparqlURL%0AWHERE%20%7B%0A%20%20%3Fendpoint%20a%20nfdicore_sparql_endpoint%3A%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20has_url%3A%20%3FsparqlURL%20.%0A%0A%20%20%3Fdataset%20a%20nfdicore_dataset%3A%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20denoted_by%3A%20%3Fendpoint%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20rdfs%3Alabel%20%3FdatasetLabel%20.%0A%7D%0AORDER%20BY%20%3FdatasetLabel">Run this query</a></p>
 <p>The shape behind those rows is documented in the <a href="../patterns/sparql_endpoints/pattern/">sparql endpoints pattern</a>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Running federated queries in practice</p>
 <ul>
-<li><code>SERVICE</code> must be <strong>enabled</strong> on the endpoint you submit the query to. The <a href="/matwerk/shmarql/">MatWerk SPARQL endpoint</a> evaluates the local part; the remote part is executed by the partner.</li>
+<li><code>SERVICE</code> must be <strong>enabled</strong> on the endpoint you submit the query to. The <a href="/matwerk/query">MatWerk SPARQL endpoint</a> evaluates the local part; the remote part is executed by the partner.</li>
 <li>Remote endpoints <strong>time out</strong>. Keep the remote pattern selective and add <code>LIMIT</code> while you develop.</li>
 <li>Some portals restrict browser-based clients via CORS. Server-side clients (<code>curl</code>, Python <code>SPARQLWrapper</code>) and the portals' own query UIs are unaffected.</li>
 <li>The Wikidata Query Service requires a descriptive <code>User-Agent</code> header and rejects anonymous default agents.</li>
