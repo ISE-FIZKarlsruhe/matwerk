@@ -62,7 +62,7 @@ The shape behind those rows is documented in the [sparql endpoints pattern](patt
 
 !!! warning "Running federated queries in practice"
 
-    - `SERVICE` must be **enabled** on the endpoint you submit the query to. The [MatWerk SPARQL endpoint](/matwerk/shmarql/) evaluates the local part; the remote part is executed by the partner.
+    - `SERVICE` must be **enabled** on the endpoint you submit the query to. The [MatWerk SPARQL endpoint](/matwerk/query) evaluates the local part; the remote part is executed by the partner.
     - Remote endpoints **time out**. Keep the remote pattern selective and add `LIMIT` while you develop.
     - Some portals restrict browser-based clients via CORS. Server-side clients (`curl`, Python `SPARQLWrapper`) and the portals' own query UIs are unaffected.
     - The Wikidata Query Service requires a descriptive `User-Agent` header and rejects anonymous default agents.

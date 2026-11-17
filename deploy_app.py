@@ -72,9 +72,14 @@ class StaticThenApp:
 # (e.g. RedirectResponse("/query?..."), src="/static/js/query.js", fetch("/sparql")).
 # Under a mount they point at the domain root, so the page renders but its assets
 # 404 and its forms post nowhere.
-APP_ROOTS = ("static", "query", "sparql", "spo", "lodeon", "entity", "api", "shmarql")
+APP_ROOTS = ("static", "query", "sparql", "spo", "lodeon", "entity", "api",
+             "shmarql", "story")
+# The opening delimiter must include the backtick: the LODEON editor builds its
+# API URLs as template literals, e.g. `/api/sparql/${encodeURIComponent(ref)}`.
+# Missing those sent every story query to the domain root, which is what made
+# the editor report "The SPARQL request failed".
 _ABSOLUTE = re.compile(
-    r"""(["'(])/(""" + "|".join(APP_ROOTS) + r""")(?=["'/?#)]|$)"""
+    r"""(["'(`])/(""" + "|".join(APP_ROOTS) + r""")(?=["'`/?#)]|$)"""
 )
 # Only these are rewritten. SPARQL results must stream through untouched: a
 # literal in someone's data could look like a path and would be corrupted.

@@ -52,7 +52,7 @@ Perform queries, integrate data into workflows, and run federated queries across
 
 Guided semantic search and browse interface for users who want to explore the graph without writing queries.
 
-<a href="https://nfdi.fiz-karlsruhe.de/matwerk/shmarql/" target="_blank" class="card-btn">Search Graph </a>
+<a href="https://nfdi.fiz-karlsruhe.de/matwerk/query" target="_blank" class="card-btn">Search Graph </a>
 </div>
 
 <div class="access-card card-sparklis" markdown>

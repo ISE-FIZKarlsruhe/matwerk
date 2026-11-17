@@ -31,7 +31,7 @@ nav:
   - Home: index.md
   - Dashboard: https://superset.ise.fiz-karlsruhe.de/superset/dashboard/matwerk-kg-dashboard/
   - How to add data?: upload.md
-  - SPARQL Endpoint: /matwerk/shmarql/
+  - SPARQL Endpoint: /matwerk/query
   - RDF Dumps: dumps.md
   - Sample Queries:
       - General Queries: general_queries.md
