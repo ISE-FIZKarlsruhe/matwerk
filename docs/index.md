@@ -1,7 +1,7 @@
 <div class="hero-banner" markdown>
 <div class="hero-content" markdown>
 
-<span class="hero-eyebrow">MatWerk KG · v[[ kg_version ]]</span>
+<span class="hero-eyebrow">MatWerk KG · v[[kg_version]]</span>
 
 # The MatWerk Knowledge Graph
 
@@ -20,7 +20,6 @@ Aligned with **BFO** and domain ontologies for full semantic interoperability.
 ![MatWerk KG Visualization](img/matwerkBox.png)
 </div>
 
-
 ## Explore the Knowledge Graph
 
 <div class="access-grid" markdown>
@@ -33,26 +32,29 @@ Aligned with **BFO** and domain ontologies for full semantic interoperability.
 Visualizations, statistics, and interactive views of the graph's content, structure, and evolution over time.
 
 <a href="https://superset.ise.fiz-karlsruhe.de/superset/dashboard/matwerk-kg-dashboard/" target="_blank" class="card-btn">Open Dashboard </a>
+
 </div>
 
 <div class="access-card card-sparql" markdown>
 <div class="card-icon">🔍</div>
 
-**SPARQL Endpoint**
+**SPARQL Endpoint & Search**
 
-Perform queries, integrate data into workflows, and run federated queries across multiple sources.
+Write and run SPARQL, integrate the graph into workflows and query across federated sources — or browse it entity by entity, without writing a query.
 
-<a href="https://nfdi.fiz-karlsruhe.de/matwerk/sparql?query=SELECT%20*%20WHERE%20%7B%20?s%20?p%20?o%20%7D%20LIMIT%201" target="_blank" class="card-btn">Query Endpoint </a>
+<a href="https://nfdi.fiz-karlsruhe.de/matwerk/query" target="_blank" class="card-btn">Query & Browse </a>
+
 </div>
 
 <div class="access-card card-search" markdown>
-<div class="card-icon">🧭</div>
+<div class="card-icon">📖</div>
 
-**SHMARQL Search**
+**Data Stories**
 
-Guided semantic search and browse interface for users who want to explore the graph without writing queries.
+Narrative pages that run live queries against the graph and draw charts from the answers. Read the [welcome story](https://nfdi.fiz-karlsruhe.de/matwerk/story/welcome/), or build your own in the LODEON editor.
 
-<a href="https://nfdi.fiz-karlsruhe.de/matwerk/query" target="_blank" class="card-btn">Search Graph </a>
+<a href="https://nfdi.fiz-karlsruhe.de/matwerk/lodeon/" target="_blank" class="card-btn">Open Story Editor </a>
+
 </div>
 
 <div class="access-card card-sparklis" markdown>
@@ -63,10 +65,10 @@ Guided semantic search and browse interface for users who want to explore the gr
 Natural language-style faceted exploration — no SPARQL knowledge required.
 
 <a href="https://www.irisa.fr/LIS/ferre/sparklis/osparklis.html?endpoint=https%3A//nfdi.fiz-karlsruhe.de/matwerk/sparql&proxy_url=https%3A//nfdi.fiz-karlsruhe.de/matwerk/sparql&method_get=true" target="_blank" class="card-btn">Explore </a>
-</div>
 
 </div>
 
+</div>
 
 ## Graph Content at a Glance
 
@@ -106,7 +108,6 @@ Lectures, workshops, lecture notes
 
 </div>
 
-
 ## Ontological Foundation
 
 The MatWerk KG is grounded in explicit ontological modeling using formal vocabularies that ensure logical interpretability across heterogeneous sources.
@@ -121,6 +122,7 @@ The MatWerk KG is grounded in explicit ontological modeling using formal vocabul
 The NFDI Core Ontology — provides the shared vocabulary for all NFDI consortia resources.
 
 <a href="https://ise-fizkarlsruhe.github.io/nfdicore/" target="_blank">View Ontology </a>
+
 </div>
 
 <div class="ontology-card" markdown>
@@ -131,6 +133,7 @@ The NFDI Core Ontology — provides the shared vocabulary for all NFDI consortia
 The MatWerk Ontology — domain-specific extensions for materials science and engineering.
 
 <a href="https://ise-fizkarlsruhe.github.io/mwo/" target="_blank">View Ontology </a>
+
 </div>
 
 </div>
@@ -138,10 +141,12 @@ The MatWerk Ontology — domain-specific extensions for materials science and en
 ## Contribute Your Data
 
 !!! tip "Grow the graph"
-    The MatWerk KG improves with community contributions. Adding your data increases visibility and enables new connections across the materials science ecosystem.
+The MatWerk KG improves with community contributions. Adding your data increases visibility and enables new connections across the materials science ecosystem.
+
 <div style="text-align:center; margin-top: 1.5rem;" markdown>
 
 <a href="https://nfdi.fiz-karlsruhe.de/matwerk/upload/" class="md-button md-button--primary">How to Contribute?</a>
+
 </div>
 
 <div class="contribute-row" markdown>
@@ -180,16 +185,18 @@ Modeling decisions, onboarding, and integration strategies across institutions.
 
 <div class="community-card" markdown>
 **🐛 GitHub Issues**  
-Report problems, propose mappings, or request new data types.  
+Report problems, propose mappings, or request new data types.
 
 <a href="https://github.com/ISE-FIZKarlsruhe/matwerk/issues" target="_blank">Open an Issue </a>
+
 </div>
 
 <div class="community-card" markdown>
 **🌍 NFDI-MatWerk**  
-Broader consortium context and programme information.  
+Broader consortium context and programme information.
 
 <a href="https://nfdi-matwerk.de/" target="_blank">Visit Website </a>
+
 </div>
 
 </div>
@@ -211,5 +218,5 @@ If you use the MatWerk KG in your research, please cite it using the metadata in
 ```
 
 [% if kg_zenodo_doi %]
-The latest RDF dump is archived on Zenodo: [DOI: [[ kg_zenodo_doi ]]](https://doi.org/[[ kg_zenodo_doi ]])
+The latest RDF dump is archived on Zenodo: [DOI: [[kg_zenodo_doi]]](https://doi.org/[[ kg_zenodo_doi ]])
 [% endif %]

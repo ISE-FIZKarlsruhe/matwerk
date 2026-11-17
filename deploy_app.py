@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import logging
 import os
 import re
@@ -111,6 +112,16 @@ NEVER_REWRITE = ("sparql-results", "turtle", "n-triples", "n-quads", "trig",
 DROP_TURTLE_ACCEPT = os.environ.get("DROP_TURTLE_ACCEPT", "1") != "0"
 _TURTLE_ACCEPT = re.compile(r"text/turtle;q=0\.9,\s*")
 
+# The site header's two leftmost links are a bare href="/", which the rewrite
+# above cannot help with: there is no path segment to recognise. At the domain
+# root they lead nowhere. The brand sends people to the upstream project, and
+# the first nav item becomes the way back to this site's own home page.
+SHMARQL_HOME = "https://shmarql.com/"
+_NAV_LINKS = (
+    ('<a href="/" class="site-title">', f'<a href="{SHMARQL_HOME}" class="site-title">'),
+    ('<a href="/" class="nav-item">Docs</a>', '<a href="{prefix}/" class="nav-item">MatWerk KG</a>'),
+)
+
 
 class PrefixAbsoluteUrls:
     """Rewrite the app's root-absolute URLs so they sit under the mount."""
@@ -122,6 +133,8 @@ class PrefixAbsoluteUrls:
     def _body(self, raw: bytes) -> bytes:
         text = raw.decode("utf-8", "replace")
         text = _ABSOLUTE.sub(rf"\1{self.prefix}/\2", text)
+        for old, new in _NAV_LINKS:
+            text = text.replace(old, new.replace("{prefix}", self.prefix))
         if DROP_TURTLE_ACCEPT:
             text = _TURTLE_ACCEPT.sub("", text)
         return text.encode("utf-8")
@@ -169,8 +182,17 @@ class PrefixAbsoluteUrls:
                     return
                 body = self._body(b"".join(chunks))
                 assert start is not None
+                # The validators belong to the file on disk, which this rewrite has
+                # just changed. Reusing them makes a browser revalidate with
+                # If-None-Match, get 304, and keep a stale body forever -- which is
+                # how an already-deployed fix kept appearing broken. Replace the
+                # ETag with one derived from what we actually send, and drop
+                # Last-Modified, whose timestamp is now meaningless.
+                drop = ("content-length", "etag", "last-modified")
                 headers = [(k, v) for k, v in start["headers"]
-                           if k.decode("latin-1").lower() != "content-length"]
+                           if k.decode("latin-1").lower() not in drop]
+                digest = hashlib.sha256(body).hexdigest()[:32]
+                headers.append((b"etag", f'"{digest}"'.encode("latin-1")))
                 headers.append((b"content-length", str(len(body)).encode("latin-1")))
                 await send({**start, "headers": headers})
                 await send({"type": "http.response.body", "body": body, "more_body": False})
