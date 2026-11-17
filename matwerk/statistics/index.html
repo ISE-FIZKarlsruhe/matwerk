@@ -3114,7 +3114,7 @@
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="k">LIMIT</span> <span class="mi">999</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20DISTINCT%20%3FConcept%20%3Flabel%0AWHERE%20%7B%0A%20%20%5B%5D%20a%20%3FConcept%20.%0A%20%20OPTIONAL%20%7B%20%3FConcept%20rdfs%3Alabel%20%3Flabel%20.%20%7D%0A%7D%0ALIMIT%20999">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20DISTINCT%20%3FConcept%20%3Flabel%0AWHERE%20%7B%0A%20%20%5B%5D%20a%20%3FConcept%20.%0A%20%20OPTIONAL%20%7B%20%3FConcept%20rdfs%3Alabel%20%3Flabel%20.%20%7D%0A%7D%0ALIMIT%20999">execute query</a></p>
 <hr />
 <h3 id="how-many-entities-exist-for-each-concept-in-the-matwerk-kg">How many entities exist for each concept in the MatWerk KG?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">SELECT</span> <span class="nv">?Concept</span> <span class="nv">?label</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="nv">?entity</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?count</span><span class="p">)</span>
@@ -3128,7 +3128,7 @@
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="k">ORDER BY</span> <span class="k">DESC</span><span class="p">(</span><span class="nv">?count</span><span class="p">)</span>
 </span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">LIMIT</span> <span class="mi">999</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%3FConcept%20%3Flabel%20%28COUNT%28%3Fentity%29%20AS%20%3Fcount%29%0AWHERE%20%7B%0A%20%20%3Fentity%20a%20%3FConcept%20.%0A%20%20optional%20%7B%0A%20%20%20%20%3FConcept%20rdfs%3Alabel%20%3Flabel%20.%20%20%20%20%0A%20%20%7D%0A%7D%0AGROUP%20BY%20%3FConcept%20%3Flabel%0AORDER%20BY%20DESC%28%3Fcount%29%0ALIMIT%20999">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%3FConcept%20%3Flabel%20%28COUNT%28%3Fentity%29%20AS%20%3Fcount%29%0AWHERE%20%7B%0A%20%20%3Fentity%20a%20%3FConcept%20.%0A%20%20optional%20%7B%0A%20%20%20%20%3FConcept%20rdfs%3Alabel%20%3Flabel%20.%20%20%20%20%0A%20%20%7D%0A%7D%0AGROUP%20BY%20%3FConcept%20%3Flabel%0AORDER%20BY%20DESC%28%3Fcount%29%0ALIMIT%20999">execute query</a></p>
 <hr />
 <h3 id="how-many-entities-distinct-subjects-are-in-the-kg">How many entities (distinct subjects) are in the KG?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">SELECT</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="nv">?s</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?entityCount</span><span class="p">)</span>
@@ -3136,7 +3136,7 @@
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="nv">?s</span> <span class="nv">?p</span> <span class="nv">?o</span> <span class="p">.</span>
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28DISTINCT%20%3Fs%29%20AS%20%3FentityCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%7D">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28DISTINCT%20%3Fs%29%20AS%20%3FentityCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%7D">execute query</a></p>
 <hr />
 <h3 id="how-many-triples-are-stored-in-the-kg">How many triples are stored in the KG?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">SELECT</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?tripleCount</span><span class="p">)</span>
@@ -3144,7 +3144,7 @@
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  <span class="nv">?s</span> <span class="nv">?p</span> <span class="nv">?o</span> <span class="p">.</span>
 </span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28%2A%29%20AS%20%3FtripleCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%7D">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28%2A%29%20AS%20%3FtripleCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%7D">execute query</a></p>
 <hr />
 <h3 id="how-many-distinct-classes-types-are-used">How many distinct classes (types) are used?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="nv">?type</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?classCount</span><span class="p">)</span>
@@ -3152,7 +3152,7 @@
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  <span class="nv">?s</span> <span class="k">a</span> <span class="nv">?type</span> <span class="p">.</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28DISTINCT%20%3Ftype%29%20AS%20%3FclassCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20a%20%3Ftype%20.%0A%7D">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28DISTINCT%20%3Ftype%29%20AS%20%3FclassCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20a%20%3Ftype%20.%0A%7D">execute query</a></p>
 <hr />
 <h3 id="how-many-distinct-properties-are-used">How many distinct properties are used?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">SELECT</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="nv">?p</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?propertyCount</span><span class="p">)</span>
@@ -3160,7 +3160,7 @@
 </span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  <span class="nv">?s</span> <span class="nv">?p</span> <span class="nv">?o</span> <span class="p">.</span>
 </span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28DISTINCT%20%3Fp%29%20AS%20%3FpropertyCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%7D">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28DISTINCT%20%3Fp%29%20AS%20%3FpropertyCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%7D">execute query</a></p>
 <hr />
 <h3 id="what-are-the-top-10-most-frequently-used-properties">What are the top 10 most frequently used properties?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">SELECT</span> <span class="nv">?p</span> <span class="nv">?plabel</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?usageCount</span><span class="p">)</span>
@@ -3172,7 +3172,7 @@
 </span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="k">ORDER BY</span> <span class="k">DESC</span><span class="p">(</span><span class="nv">?usageCount</span><span class="p">)</span>
 </span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="k">LIMIT</span> <span class="mi">10</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%3Fp%20%3Fplabel%20%28COUNT%28%2A%29%20AS%20%3FusageCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20OPTIONAL%20%7B%20%3Fp%20rdfs%3Alabel%20%3Fplabel%20.%20%7D%0A%7D%0AGROUP%20BY%20%3Fp%20%3Fplabel%0AORDER%20BY%20DESC%28%3FusageCount%29%0ALIMIT%2010">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%3Fp%20%3Fplabel%20%28COUNT%28%2A%29%20AS%20%3FusageCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20OPTIONAL%20%7B%20%3Fp%20rdfs%3Alabel%20%3Fplabel%20.%20%7D%0A%7D%0AGROUP%20BY%20%3Fp%20%3Fplabel%0AORDER%20BY%20DESC%28%3FusageCount%29%0ALIMIT%2010">execute query</a></p>
 <hr />
 <h3 id="what-is-the-average-number-of-triples-per-entity">What is the average number of triples per entity?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">SELECT</span> <span class="p">(</span><span class="nf">AVG</span><span class="p">(</span><span class="nv">?triplesPerEntity</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?avgTriplesPerEntity</span><span class="p">)</span>
@@ -3186,7 +3186,7 @@
 </span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  <span class="p">}</span>
 </span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28AVG%28%3FtriplesPerEntity%29%20AS%20%3FavgTriplesPerEntity%29%0AWHERE%20%7B%0A%20%20%7B%0A%20%20%20%20SELECT%20%3Fs%20%28COUNT%28%2A%29%20AS%20%3FtriplesPerEntity%29%0A%20%20%20%20WHERE%20%7B%0A%20%20%20%20%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20%20%20%7D%0A%20%20%20%20GROUP%20BY%20%3Fs%0A%20%20%7D%0A%7D">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28AVG%28%3FtriplesPerEntity%29%20AS%20%3FavgTriplesPerEntity%29%0AWHERE%20%7B%0A%20%20%7B%0A%20%20%20%20SELECT%20%3Fs%20%28COUNT%28%2A%29%20AS%20%3FtriplesPerEntity%29%0A%20%20%20%20WHERE%20%7B%0A%20%20%20%20%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20%20%20%7D%0A%20%20%20%20GROUP%20BY%20%3Fs%0A%20%20%7D%0A%7D">execute query</a></p>
 <hr />
 <h3 id="how-many-literal-values-eg-strings-numbers-are-used-as-objects">How many literal values (e.g., strings, numbers) are used as objects?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">SELECT</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="nv">?o</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?literalCount</span><span class="p">)</span>
@@ -3195,7 +3195,7 @@
 </span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  <span class="k">FILTER</span><span class="p">(</span><span class="nf">isLiteral</span><span class="p">(</span><span class="nv">?o</span><span class="p">))</span>
 </span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28%3Fo%29%20AS%20%3FliteralCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%28isLiteral%28%3Fo%29%29%0A%7D">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28%3Fo%29%20AS%20%3FliteralCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%28isLiteral%28%3Fo%29%29%0A%7D">execute query</a></p>
 <hr />
 <h3 id="what-are-the-most-connected-entities-by-outgoing-triples">What are the most connected entities (by outgoing triples)?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">SELECT</span> <span class="nv">?s</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="nv">?p</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?outDegree</span><span class="p">)</span>
@@ -3206,7 +3206,7 @@
 </span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="k">ORDER BY</span> <span class="k">DESC</span><span class="p">(</span><span class="nv">?outDegree</span><span class="p">)</span>
 </span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="k">LIMIT</span> <span class="mi">10</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%3Fs%20%28COUNT%28%3Fp%29%20AS%20%3FoutDegree%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%7D%0AGROUP%20BY%20%3Fs%0AORDER%20BY%20DESC%28%3FoutDegree%29%0ALIMIT%2010">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%3Fs%20%28COUNT%28%3Fp%29%20AS%20%3FoutDegree%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%7D%0AGROUP%20BY%20%3Fs%0AORDER%20BY%20DESC%28%3FoutDegree%29%0ALIMIT%2010">execute query</a></p>
 <hr />
 <h3 id="how-many-entities-have-no-rdftype">How many entities have no rdf:type?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="nv">?s</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?noTypeCount</span><span class="p">)</span>
@@ -3215,7 +3215,7 @@
 </span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>  <span class="k">FILTER</span> <span class="nf">NOT EXISTS</span> <span class="p">{</span> <span class="nv">?s</span> <span class="k">a</span> <span class="nv">?type</span> <span class="p">}</span>
 </span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28DISTINCT%20%3Fs%29%20AS%20%3FnoTypeCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%20NOT%20EXISTS%20%7B%20%3Fs%20a%20%3Ftype%20%7D%0A%7D">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28DISTINCT%20%3Fs%29%20AS%20%3FnoTypeCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%20NOT%20EXISTS%20%7B%20%3Fs%20a%20%3Ftype%20%7D%0A%7D">execute query</a></p>
 <hr />
 <h3 id="how-many-triples-contain-blank-nodes">How many triples contain blank nodes?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">SELECT</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?blankNodeTripleCount</span><span class="p">)</span>
@@ -3224,7 +3224,7 @@
 </span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  <span class="k">FILTER</span><span class="p">(</span><span class="nf">isBlank</span><span class="p">(</span><span class="nv">?s</span><span class="p">)</span> <span class="o">||</span> <span class="nf">isBlank</span><span class="p">(</span><span class="nv">?o</span><span class="p">))</span>
 </span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28%2A%29%20AS%20%3FblankNodeTripleCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%28isBlank%28%3Fs%29%20%7C%7C%20isBlank%28%3Fo%29%29%0A%7D">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28%2A%29%20AS%20%3FblankNodeTripleCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%28isBlank%28%3Fs%29%20%7C%7C%20isBlank%28%3Fo%29%29%0A%7D">execute query</a></p>
 <hr />
 <h3 id="what-is-the-distribution-of-language-tags-in-literals">What is the distribution of language tags in literals?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">SELECT</span> <span class="nv">?lang</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?count</span><span class="p">)</span>
@@ -3236,7 +3236,7 @@
 </span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="k">GROUP BY</span> <span class="nv">?lang</span>
 </span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="k">ORDER BY</span> <span class="k">DESC</span><span class="p">(</span><span class="nv">?count</span><span class="p">)</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%3Flang%20%28COUNT%28%2A%29%20AS%20%3Fcount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%28isLiteral%28%3Fo%29%20%26%26%20lang%28%3Fo%29%20%21%3D%20%22%22%29%0A%20%20BIND%28lang%28%3Fo%29%20AS%20%3Flang%29%0A%7D%0AGROUP%20BY%20%3Flang%0AORDER%20BY%20DESC%28%3Fcount%29">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%3Flang%20%28COUNT%28%2A%29%20AS%20%3Fcount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%28isLiteral%28%3Fo%29%20%26%26%20lang%28%3Fo%29%20%21%3D%20%22%22%29%0A%20%20BIND%28lang%28%3Fo%29%20AS%20%3Flang%29%0A%7D%0AGROUP%20BY%20%3Flang%0AORDER%20BY%20DESC%28%3Fcount%29">execute query</a></p>
 <hr />
 <h3 id="what-datatypes-are-used-in-literals-and-how-often">What datatypes are used in literals and how often?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">SELECT</span> <span class="nv">?datatype</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?count</span><span class="p">)</span>
@@ -3248,7 +3248,7 @@
 </span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="k">GROUP BY</span> <span class="nv">?datatype</span>
 </span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="k">ORDER BY</span> <span class="k">DESC</span><span class="p">(</span><span class="nv">?count</span><span class="p">)</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%3Fdatatype%20%28COUNT%28%2A%29%20AS%20%3Fcount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%28isLiteral%28%3Fo%29%29%0A%20%20BIND%28datatype%28%3Fo%29%20AS%20%3Fdatatype%29%0A%7D%0AGROUP%20BY%20%3Fdatatype%0AORDER%20BY%20DESC%28%3Fcount%29">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%3Fdatatype%20%28COUNT%28%2A%29%20AS%20%3Fcount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%28isLiteral%28%3Fo%29%29%0A%20%20BIND%28datatype%28%3Fo%29%20AS%20%3Fdatatype%29%0A%7D%0AGROUP%20BY%20%3Fdatatype%0AORDER%20BY%20DESC%28%3Fcount%29">execute query</a></p>
 <hr />
 <h3 id="which-classes-are-defined-but-never-used-no-instances">Which classes are defined but never used (no instances)?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">SELECT</span> <span class="nv">?class</span> <span class="nv">?label</span>
@@ -3258,7 +3258,7 @@
 </span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>  <span class="k">OPTIONAL</span> <span class="p">{</span> <span class="nv">?class</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?label</span> <span class="p">.</span> <span class="p">}</span>
 </span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%3Fclass%20%3Flabel%0AWHERE%20%7B%0A%20%20%3Fclass%20a%20owl%3AClass%20.%0A%20%20FILTER%20NOT%20EXISTS%20%7B%20%3Finstance%20a%20%3Fclass%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fclass%20rdfs%3Alabel%20%3Flabel%20.%20%7D%0A%7D">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%3Fclass%20%3Flabel%0AWHERE%20%7B%0A%20%20%3Fclass%20a%20owl%3AClass%20.%0A%20%20FILTER%20NOT%20EXISTS%20%7B%20%3Finstance%20a%20%3Fclass%20.%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fclass%20rdfs%3Alabel%20%3Flabel%20.%20%7D%0A%7D">execute query</a></p>
 <hr />
 <h3 id="how-many-entities-have-no-rdfslabel">How many entities have no rdfs:label?</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">SELECT</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="nv">?s</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?noLabelCount</span><span class="p">)</span>
@@ -3267,7 +3267,7 @@
 </span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>  <span class="k">FILTER</span> <span class="nf">NOT EXISTS</span> <span class="p">{</span> <span class="nv">?s</span> <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="nv">?label</span> <span class="p">}</span>
 </span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28DISTINCT%20%3Fs%29%20AS%20%3FnoLabelCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%20NOT%20EXISTS%20%7B%20%3Fs%20rdfs%3Alabel%20%3Flabel%20%7D%0A%7D">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28DISTINCT%20%3Fs%29%20AS%20%3FnoLabelCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%20NOT%20EXISTS%20%7B%20%3Fs%20rdfs%3Alabel%20%3Flabel%20%7D%0A%7D">execute query</a></p>
 <hr />
 <h3 id="entities-linked-to-external-vocabularies">Entities linked to external vocabularies</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">SELECT</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="k">DISTINCT</span> <span class="nv">?o</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?externalLinks</span><span class="p">)</span>
@@ -3280,7 +3280,7 @@
 </span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>  <span class="p">)</span>
 </span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28DISTINCT%20%3Fo%29%20AS%20%3FexternalLinks%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%28%0A%20%20%20%20isIRI%28%3Fo%29%20%26%26%0A%20%20%20%20STRSTARTS%28STR%28%3Fo%29%2C%20%22http%22%29%20%26%26%0A%20%20%20%20%21STRSTARTS%28STR%28%3Fo%29%2C%20%22https%3A%2F%2Fnfdi.fiz-karlsruhe.de%2F%22%29%0A%20%20%29%0A%7D">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28DISTINCT%20%3Fo%29%20AS%20%3FexternalLinks%29%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fo%20.%0A%20%20FILTER%28%0A%20%20%20%20isIRI%28%3Fo%29%20%26%26%0A%20%20%20%20STRSTARTS%28STR%28%3Fo%29%2C%20%22http%22%29%20%26%26%0A%20%20%20%20%21STRSTARTS%28STR%28%3Fo%29%2C%20%22https%3A%2F%2Fnfdi.fiz-karlsruhe.de%2F%22%29%0A%20%20%29%0A%7D">execute query</a></p>
 <hr />
 <h3 id="number-of-owlsameas-links">Number of owl:sameAs links</h3>
 <div class="language-sparql highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">SELECT</span> <span class="p">(</span><span class="nf">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">AS</span> <span class="nv">?sameAsCount</span><span class="p">)</span>
@@ -3288,7 +3288,7 @@
 </span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>  <span class="nv">?s</span> <span class="nn">owl</span><span class="p">:</span><span class="nt">sameAs</span> <span class="nv">?o</span> <span class="p">.</span>
 </span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="p">}</span>
 </span></code></pre></div>
-<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28%2A%29%20AS%20%3FsameAsCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20owl%3AsameAs%20%3Fo%20.%0A%7D">Run this query</a></p>
+<p><a class="sparql-run-link" href="/matwerk/query?query=SELECT%20%28COUNT%28%2A%29%20AS%20%3FsameAsCount%29%0AWHERE%20%7B%0A%20%20%3Fs%20owl%3AsameAs%20%3Fo%20.%0A%7D">execute query</a></p>
 <hr />
 
 

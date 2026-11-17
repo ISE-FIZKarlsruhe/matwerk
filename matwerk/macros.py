@@ -76,7 +76,7 @@ _FENCE_CLOSE = re.compile(r"^[ \t]*`{3,}[ \t]*$")
 # that fails at the proxy.
 _MAX_URL_CHARS = 6000
 
-RUN_LINK_LABEL = "Run this query"
+RUN_LINK_LABEL = "execute query"
 
 
 def _editor_path(env) -> str:
